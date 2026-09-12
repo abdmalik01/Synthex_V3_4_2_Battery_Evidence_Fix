@@ -9,6 +9,7 @@ from .pipeline import SynthexExtractionPipeline
 from .source_context import SourceBundle, SourceMetadata, SourcePageContext, build_source_bundle, compact_source_context, has_prompt_source_context
 from .catalysis_models import CatalysisDocument
 from .catalysis_extractor import CatalysisGeminiExtractor
+from .catalysis_assembler import assemble_catalysis_archive
 
 __all__ = [
     "DomainGeminiExtractor", "assemble_archive", "ExtractedDocument",
@@ -16,5 +17,5 @@ __all__ = [
     "assemble_battery_archive", "SynthexExtractionPipeline", "SourceBundle",
     "SourceMetadata", "SourcePageContext", "build_source_bundle", "compact_source_context",
     "has_prompt_source_context",
-    "CatalysisDocument", "CatalysisGeminiExtractor",
+    "CatalysisDocument", "CatalysisGeminiExtractor", "assemble_catalysis_archive",
 ]

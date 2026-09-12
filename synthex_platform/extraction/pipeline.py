@@ -4,6 +4,8 @@ from pathlib import Path
 
 from .battery_assembler import assemble_battery_archive
 from .battery_extractor import BatteryGeminiExtractor
+from .catalysis_assembler import assemble_catalysis_archive
+from .catalysis_extractor import CatalysisGeminiExtractor
 from .domain_extractor import DomainGeminiExtractor
 from .router import DomainRoute, DomainRouter
 from .source_context import SourceBundle, build_source_bundle
@@ -69,6 +71,17 @@ class SynthexExtractionPipeline:
                 draft._pdf_parser = parser
                 draft.source.pdf_text_parser = parser
             archive = assemble_battery_archive(draft, model=extractor.model)
+        elif route.domain == "catalysis":
+            extractor = CatalysisGeminiExtractor(api_key=self.api_key, model=self.model)
+            draft = extractor.extract_text(text, source_bundle=source_bundle)
+            if source_bundle is not None:
+                draft.source.pdf_text_parser = source_bundle.primary_native_parser()
+            archive = assemble_catalysis_archive(
+                draft,
+                model=extractor.model,
+                source_text=text,
+                source_bundle=source_bundle,
+            )
         else:
             # Generic manifest-driven path. Gas sensing remains more mature in the legacy V2 UI.
             extractor = DomainGeminiExtractor(api_key=self.api_key, model=self.model)

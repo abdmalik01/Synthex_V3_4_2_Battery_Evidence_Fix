@@ -55,11 +55,16 @@ class CatalysisEvidence(StrictCatalysisModel):
     ] = "unknown"
     table_id: str | None = None
     figure_id: str | None = None
+    row: int | None = Field(default=None, ge=0)
+    column: int | None = Field(default=None, ge=0)
+    cell_id: str | None = None
+    bounding_box: dict[str, float] | None = None
     locator: str | None = None
     verbatim_match: bool | None = None
     confidence: float | None = Field(default=None, ge=0, le=1)
     evidence_strength: Literal["verified_native", "verified_ocr", "estimated_digitized", "unverified"] = "unverified"
     estimated: bool = False
+    admission_status: Literal["not_submitted"] | None = None
     digitization_id: str | None = None
 
 
@@ -77,7 +82,7 @@ class CatalysisConflictValue(StrictCatalysisModel):
 
 class CatalysisConditionConflict(StrictCatalysisModel):
     field: Literal[
-        "catalyst_loading", "temperature", "reference_electrode", "normalization_basis",
+        "catalyst_loading", "temperature", "pressure", "reference_electrode", "normalization_basis",
         "electrolyte_concentration", "reaction_condition", "stability_duration", "other",
     ]
     record_ref: str | None = None
@@ -350,6 +355,9 @@ class StabilityTest(StrictCatalysisModel):
     cycle_count: int | None = Field(default=None, ge=0)
     operating_potential: ElectrochemicalPotential | None = None
     operating_current: CatalysisQuantity | None = None
+    operating_temperature: CatalysisQuantity | None = None
+    reaction_conditions: dict[str, Any] = Field(default_factory=dict)
+    catalyst_state_ref: str | None = None
     retained_metric: HeterogeneousMetric | ElectrocatalyticMetric | None = None
     conversion_loss: CatalysisQuantity | None = None
     structural_changes: list[str] = Field(default_factory=list)

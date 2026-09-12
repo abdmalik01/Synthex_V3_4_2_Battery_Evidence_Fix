@@ -1,8 +1,4 @@
-"""Stage 1 Gemini boundary for Catalysis / Electrocatalysis V1.
-
-This module validates a typed draft only. Canonical archive assembly and
-scientific evidence admission are deliberately deferred to later stages.
-"""
+"""Strict Gemini extraction boundary for Catalysis / Electrocatalysis V1."""
 
 from __future__ import annotations
 
@@ -25,19 +21,25 @@ load_dotenv(override=True)
 
 
 CATALYSIS_RULES = """
-You are Synthex Catalysis / Electrocatalysis V1 Stage 1.
+You are Synthex Catalysis / Electrocatalysis V1 Stage 2.
 Extract only facts explicitly supported by the supplied source. Never invent values, catalyst identities,
 active sites, compositions, products, reactor conditions, reference electrodes, or calculation settings.
 Preserve reported wording separately from canonical fields whenever they differ.
 Assign ownership to every scientific object: focal_work, cited_prior_work, review_summary, comparison_table,
 background, example, or unknown. Review, cited, comparison, and example values are never focal experiments.
 Do not silently convert Ag/AgCl, SCE, SHE, RHE, Hg/HgO, or Hg/Hg2SO4 potentials. Preserve raw potential,
-reference, pH, temperature, and any author-provided conversion formula. Do not convert normalization bases.
+reference, pH, temperature, and any author-provided conversion formula. Populate converted_potential only
+when the paper explicitly reports that converted value, with conversion_status=author_reported. Do not
+claim a deterministic conversion. Do not convert normalization bases; record their exact denominator basis.
 Product-specific FE, selectivity, partial current density, and product-formation rates need a product identity.
 DFT/first-principles adsorption, free-energy, barrier, electronic, and surface values belong in calculations,
 never experimental performance. Digitized graph references are estimated and must not become metrics.
 When structured source context is provided, preserve table/figure IDs, exact locators, and source origin. OCR is
-ocr_extracted and must never be silently corrected. Return one JSON object only; never return a JSON array.
+ocr_extracted and must never be silently corrected. Every quantitative claim needs a short evidence snippet
+that explicitly contains its value. Use table_reported only with the exact row, column and cell ID. Figure
+captions and annotations support values only when explicitly written. Digitized graph references are estimated,
+admission_status=not_submitted, and must never become canonical metrics. Return one JSON object only; never
+return a JSON array.
 """
 
 
@@ -70,7 +72,7 @@ def parse_catalysis_document_json(output_text: str) -> CatalysisDocument:
 
 
 class CatalysisGeminiExtractor:
-    """Typed extraction boundary; it does not assemble a canonical SynthexArchive in Stage 1."""
+    """Typed extraction boundary; postprocessing and assembly remain separate."""
 
     def __init__(self, registry: DomainRegistry | None = None, api_key: str | None = None, model: str | None = None):
         if genai is None:
