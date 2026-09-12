@@ -1,0 +1,4497 @@
+{
+  "corpus": "Synthex Batteries V1 user-supplied validation corpus",
+  "selected_files": [
+    "batteries-11-00142.pdf",
+    "batteries-11-00011.pdf",
+    "1-s2.0-S2666386426002407-main.pdf",
+    "Evaluation_of_Li_Ion_Batteries.pdf",
+    "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+    "Application_of_First_Principles_Computations_Based.pdf",
+    "coatings-16-00912.pdf",
+    "applsci-10-04112.pdf"
+  ],
+  "schema_frozen": true,
+  "serper_disabled": true,
+  "started_at_unix": 1789155809.3076472,
+  "papers": [
+    {
+      "filename": "batteries-11-00142.pdf",
+      "manifest": {
+        "filename": "batteries-11-00142.pdf",
+        "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+        "doi": "10.3390/batteries11040142",
+        "year": 2025,
+        "document_type": "original_research",
+        "subtypes": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "benchmark_priority": "A+",
+        "use": "primary electrode-materials gold benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 15,
+        "prompt_characters": 69776,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 4,
+        "figure_markers": 56
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.933,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 15.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 2.25,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "capacity retention",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst"
+          ],
+          "corrosion": [],
+          "gas_sensing": [
+            "selectivity",
+            "ppm"
+          ],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance",
+          "impedance_eis",
+          "electrode_fabrication",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "materials": 1,
+        "shared_protocols": 1,
+        "battery_groups": 7,
+        "performance_points": 29,
+        "archive_completeness": 1.0,
+        "archive_semantic_warnings": [
+          "Scientific admissibility gate quarantined 21 quantitative value(s); raw values remain in the batteries domain payload.",
+          "1 unresolved experimental-condition conflict(s) remain in the raw domain payload."
+        ],
+        "missing_fields": [
+          "expected paper_type absent: impedance_eis",
+          "no EIS protocol"
+        ]
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 177
+      },
+      "provenance": {
+        "evidence_capable_records": 53,
+        "records_with_evidence": 45,
+        "record_coverage": 0.849,
+        "records_with_verbatim_evidence": 35,
+        "verbatim_record_coverage": 0.66,
+        "snippets_checked": 45,
+        "verbatim_match_coverage": 0.778,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "materials[0].synthesis",
+            "page": 2,
+            "snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures."
+          },
+          {
+            "location": "materials[0].synthesis.steps[2]",
+            "page": 2,
+            "snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h."
+          },
+          {
+            "location": "materials[0].synthesis.steps[3]",
+            "page": 2,
+            "snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained."
+          },
+          {
+            "location": "materials[0].synthesis.steps[4]",
+            "page": 2,
+            "snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h."
+          },
+          {
+            "location": "materials[0].synthesis.steps[5]",
+            "page": 2,
+            "snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures."
+          },
+          {
+            "location": "shared_protocols[0].electrode_fabrication.drying_steps[0]",
+            "page": 3,
+            "snippet": "The coated electrodes were dried at 80°C for 12 h under vacuum to remove residual solvents"
+          },
+          {
+            "location": "shared_protocols[0].electrode_fabrication.drying_steps[2]",
+            "page": 3,
+            "snippet": "The dried electrodes were punched into disks with a diameter of 10 mm and further vacuum-dried at 120°C for 6 h prior to cell assembly."
+          },
+          {
+            "location": "battery_groups[1].performance_points[2]",
+            "page": 11,
+            "snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics."
+          },
+          {
+            "location": "battery_groups[1].performance_points[5]",
+            "page": 11,
+            "snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b)."
+          },
+          {
+            "location": "battery_groups[2].performance_points[0]",
+            "page": 10,
+            "snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance."
+          }
+        ],
+        "records_without_evidence": [
+          "shared_protocols[0]",
+          "battery_groups[0]",
+          "battery_groups[1]",
+          "battery_groups[2]",
+          "battery_groups[3]",
+          "battery_groups[4]",
+          "battery_groups[5]",
+          "battery_groups[6]"
+        ],
+        "source_type_counts": {
+          "text": 38,
+          "table": 7
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [
+        {
+          "group_id": "group_600",
+          "property": "capacity_retention",
+          "value": 77.4,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "Ω",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2 s-1",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "capacity_retention",
+          "value": 79.9,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_800",
+          "property": "capacity_retention",
+          "value": 76.8,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_limtio4_prior",
+          "property": "diffusion_coefficient",
+          "value": 2.71e-14,
+          "unit": "cm2 s-1",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_limtio4_prior",
+          "property": "diffusion_coefficient",
+          "value": 2.91e-14,
+          "unit": "cm2 s-1",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_limtio4_prior",
+          "property": "diffusion_coefficient",
+          "value": 3.05e-14,
+          "unit": "cm2 s-1",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        }
+      ],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 29,
+        "materials_with_synthesis": 1,
+        "manual_review_required": false,
+        "note": null
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 45,
+        "quarantined_quantitative_values": 21,
+        "quarantine": [
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[2].temperature",
+            "property": "temperature",
+            "raw_value": "65 °C",
+            "value": 65.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[2].duration",
+            "property": "duration",
+            "raw_value": "5 h",
+            "value": 5.0,
+            "unit": "h",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[3].temperature",
+            "property": "temperature",
+            "raw_value": "120 °C",
+            "value": 120.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[3].duration",
+            "property": "duration",
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[4].temperature",
+            "property": "temperature",
+            "raw_value": "500 °C",
+            "value": 500.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "materials[mat_li2fetio4].synthesis.steps[4].duration",
+            "property": "duration",
+            "raw_value": "8 h",
+            "value": 8.0,
+            "unit": "h",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_600].calcination_temperature",
+            "property": "calcination_temperature",
+            "raw_value": "600 °C",
+            "value": 600.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_700].calcination_temperature",
+            "property": "calcination_temperature",
+            "raw_value": "700 °C",
+            "value": 700.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_700].performance_points[2]",
+            "property": "charge_transfer_resistance",
+            "raw_value": "1258.6 Ω",
+            "value": 1258.6,
+            "unit": "Ω",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_700].performance_points[5]",
+            "property": "capacity_retention",
+            "raw_value": "89.2%",
+            "value": 89.2,
+            "unit": "%",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b).",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_800].calcination_temperature",
+            "property": "calcination_temperature",
+            "raw_value": "800 °C",
+            "value": 800.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_800].performance_points[0]",
+            "property": "specific_surface_area",
+            "raw_value": "62.92 m2/g",
+            "value": 62.92,
+            "unit": "m2/g",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 10,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_nmc_prior].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "160 mAh/g",
+            "value": 160.0,
+            "unit": "mAh/g",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_nmc_prior].performance_points[1]",
+            "property": "capacity_retention",
+            "raw_value": "25%",
+            "value": 25.0,
+            "unit": "%",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_lno_prior].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "167.5 mAh/g",
+            "value": 167.5,
+            "unit": "mAh/g",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_lno_prior].performance_points[1]",
+            "property": "capacity_retention",
+            "raw_value": "63.8%",
+            "value": 63.8,
+            "unit": "%",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_lco_prior].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "165 mAh/g",
+            "value": 165.0,
+            "unit": "mAh/g",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "LCO 1 C 165 100 61 [38]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_lco_prior].performance_points[1]",
+            "property": "capacity_retention",
+            "raw_value": "61%",
+            "value": 61.0,
+            "unit": "%",
+            "ownership": "comparison_table",
+            "reason": "ownership_comparison_table",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "Table 1",
+                "text_snippet": "LCO 1 C 165 100 61 [38]",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_limtio4_prior].performance_points[0]",
+            "property": "diffusion_coefficient",
+            "raw_value": "2.71 × 10–14 cm2 s−1",
+            "value": 2.71e-14,
+            "unit": "cm2 s-1",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_limtio4_prior].performance_points[1]",
+            "property": "diffusion_coefficient",
+            "raw_value": "2.91 × 10–14 cm2 s−1",
+            "value": 2.91e-14,
+            "unit": "cm2 s-1",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_limtio4_prior].performance_points[2]",
+            "property": "diffusion_coefficient",
+            "raw_value": "3.05 × 10–14 cm2 s−1",
+            "value": 3.05e-14,
+            "unit": "cm2 s-1",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 45,
+        "verbatim_supported_values": 45,
+        "duplicate_measurement_signatures": 18,
+        "duplicate_scientific_output_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 1,
+      "referential_integrity_warnings": [],
+      "manual_gold": {
+        "passed": 16,
+        "total": 20,
+        "score": 0.783,
+        "structural_accuracy": 0.933,
+        "value_accuracy": 1.0,
+        "condition_association_accuracy": 0.6,
+        "provenance_coverage": 0.6,
+        "overall_score": 0.783,
+        "checks": [
+          {
+            "check": "title",
+            "pass": true,
+            "observed": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+            "expected": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method"
+          },
+          {
+            "check": "DOI",
+            "pass": true,
+            "observed": "10.3390/batteries11040142",
+            "expected": "10.3390/batteries11040142"
+          },
+          {
+            "check": "materials_synthesis type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance"
+            ],
+            "expected": true
+          },
+          {
+            "check": "electrode_fabrication type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance"
+            ],
+            "expected": true
+          },
+          {
+            "check": "cell_assembly type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance"
+            ],
+            "expected": true
+          },
+          {
+            "check": "electrochemical_performance type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance"
+            ],
+            "expected": true
+          },
+          {
+            "check": "impedance_eis type",
+            "pass": false,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance"
+            ],
+            "expected": true
+          },
+          {
+            "check": "Li2FeTiO4 material",
+            "pass": true,
+            "observed": "Li2FeTiO4",
+            "expected": "Li2FeTiO4"
+          },
+          {
+            "check": "sol-gel synthesis",
+            "pass": true,
+            "observed": "sol-gel",
+            "expected": "sol-gel"
+          },
+          {
+            "check": "electrode fabrication extracted",
+            "pass": true,
+            "observed": true,
+            "expected": true
+          },
+          {
+            "check": "80 wt% active material",
+            "pass": true,
+            "observed": {
+              "raw_value": "80 wt%",
+              "value": 80.0,
+              "unit": "wt%",
+              "qualifier": "exact"
+            },
+            "expected": 80
+          },
+          {
+            "check": "CR2032 cell assembly",
+            "pass": true,
+            "observed": "CR2032 coin cells",
+            "expected": "CR2032"
+          },
+          {
+            "check": "100 uL electrolyte",
+            "pass": true,
+            "observed": {
+              "raw_value": "100 µL",
+              "value": 100.0,
+              "unit": "µL",
+              "qualifier": "exact"
+            },
+            "expected": 100
+          },
+          {
+            "check": "CV 0.1 mV/s",
+            "pass": true,
+            "observed": {
+              "raw_value": "0.1 mV/s",
+              "value": 0.1,
+              "unit": "mV/s",
+              "qualifier": "exact"
+            },
+            "expected": 0.1
+          },
+          {
+            "check": "100-cycle long-term test",
+            "pass": true,
+            "observed": 100,
+            "expected": 100
+          },
+          {
+            "check": "strict performance specific_capacity=121.3",
+            "pass": true,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance specific_capacity=108.2",
+            "pass": true,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance capacity_retention=89.2",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "capacity_retention",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance charge_transfer_resistance=1258.6",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1258.6,
+              "unit": "Ω",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "charge_transfer_resistance",
+              "value": 1258.6,
+              "unit": "ohm",
+              "method_contains": [
+                "EIS"
+              ]
+            }
+          },
+          {
+            "check": "strict performance diffusion_coefficient=1.096e-12",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1.096e-12,
+              "unit": "cm2 s-1",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "diffusion_coefficient",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "method": "EIS/Warburg",
+              "method_contains": [
+                "EIS"
+              ]
+            }
+          }
+        ],
+        "performance_checks": [
+          {
+            "property": "specific_capacity",
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "value_pass": true,
+            "conditions_pass": true,
+            "provenance_pass": true,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": true,
+            "c_rate_status": "conflicted",
+            "pass": true
+          },
+          {
+            "property": "specific_capacity",
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "value_pass": true,
+            "conditions_pass": true,
+            "provenance_pass": true,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": true,
+            "c_rate_status": "conflicted",
+            "pass": true
+          },
+          {
+            "property": "capacity_retention",
+            "expected": {
+              "variant": "700 °C",
+              "property": "capacity_retention",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "value_pass": true,
+            "conditions_pass": true,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": true,
+            "c_rate_status": "conflicted",
+            "pass": false
+          },
+          {
+            "property": "charge_transfer_resistance",
+            "expected": {
+              "variant": "700 °C",
+              "property": "charge_transfer_resistance",
+              "value": 1258.6,
+              "unit": "ohm",
+              "method_contains": [
+                "EIS"
+              ]
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1258.6,
+              "unit": "Ω",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": false,
+            "c_rate_pass": true,
+            "c_rate_status": "not_required",
+            "pass": false
+          },
+          {
+            "property": "diffusion_coefficient",
+            "expected": {
+              "variant": "700 °C",
+              "property": "diffusion_coefficient",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "method": "EIS/Warburg",
+              "method_contains": [
+                "EIS"
+              ]
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1.096e-12,
+              "unit": "cm2 s-1",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 1
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": true,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": false,
+            "c_rate_pass": true,
+            "c_rate_status": "not_required",
+            "pass": false
+          }
+        ]
+      }
+    },
+    {
+      "filename": "batteries-11-00011.pdf",
+      "manifest": {
+        "filename": "batteries-11-00011.pdf",
+        "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+        "document_type": "original_research",
+        "subtypes": [
+          "impedance_eis",
+          "characterization",
+          "battery_modelling",
+          "temperature",
+          "state_of_charge"
+        ],
+        "benchmark_priority": "A",
+        "use": "EIS protocol/conditions/model benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 17,
+        "prompt_characters": 66510,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 19,
+        "figure_markers": 72
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.978,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 20.75,
+          "biomaterials": 0.0,
+          "catalysis": 0.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 1.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "state of health",
+            "state-of-health",
+            "constant current",
+            "constant voltage",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [
+            "photovoltaic"
+          ],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "impedance_eis",
+          "electrochemical_performance",
+          "degradation_health",
+          "battery_dataset_modelling",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "impedance_eis",
+          "battery_dataset_modelling",
+          "electrochemical_performance"
+        ],
+        "materials": 2,
+        "shared_protocols": 1,
+        "battery_groups": 1,
+        "performance_points": 5,
+        "archive_completeness": 0.875,
+        "archive_semantic_warnings": [
+          "Scientific admissibility gate quarantined 11 quantitative value(s); raw values remain in the batteries domain payload."
+        ],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[0].performance_points[2].voltage_window",
+          "battery_groups[0].performance_points[3].voltage_window",
+          "battery_groups[0].performance_points[4].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 28
+      },
+      "provenance": {
+        "evidence_capable_records": 11,
+        "records_with_evidence": 11,
+        "record_coverage": 1.0,
+        "records_with_verbatim_evidence": 7,
+        "verbatim_record_coverage": 0.636,
+        "snippets_checked": 11,
+        "verbatim_match_coverage": 0.636,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "shared_protocols[0].electrochemical_testing",
+            "page": 4,
+            "snippet": "The temperature chamber is MHW-200 produced by NEWARE in Shenzhen, China, which enables the tested battery to stay in a specific constant-temperature environment. The electrochemical workstation is MULTI AUTOLAB M204, produced by Metrohm in Beijing, China, measuring the battery EIS."
+          },
+          {
+            "location": "battery_groups[0]",
+            "page": 5,
+            "snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters"
+          },
+          {
+            "location": "battery_groups[0].performance_points[3]",
+            "page": 5,
+            "snippet": "R 0 0.11 ± 0.05"
+          },
+          {
+            "location": "battery_groups[0].performance_points[4]",
+            "page": 5,
+            "snippet": "Rct 0.13 ± 0.06"
+          }
+        ],
+        "records_without_evidence": [],
+        "source_type_counts": {
+          "table": 8,
+          "text": 3
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 5,
+        "materials_with_synthesis": 0,
+        "manual_review_required": false,
+        "note": null
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 3,
+        "quarantined_quantitative_values": 11,
+        "quarantine": [
+          {
+            "path": "battery_groups[group_panasonic_18650].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "0.2 C (0.7 A)",
+            "value": 0.2,
+            "unit": "C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2 V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "0.02 C (0.07 A)",
+            "value": 0.02,
+            "unit": "C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "0.2 C",
+            "value": 0.2,
+            "unit": "C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5 V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].electrochemical_testing.test_temperature",
+            "property": "test_temperature",
+            "raw_value": "seven temperatures, ranging from -20 °C to 10 °C (and 20 °C)",
+            "value": -20.0,
+            "unit": "°C to 10 °C (and 20 °C)",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 4,
+                "section": "3. Experiment Method",
+                "text_snippet": "The temperature chamber is MHW-200 produced by NEWARE in Shenzhen, China, which enables the tested battery to stay in a specific constant-temperature environment. The electrochemical workstation is MULTI AUTOLAB M204, produced by Metrohm in Beijing, China, measuring the battery EIS.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].performance_points[3]",
+            "property": "fitting_error",
+            "raw_value": "0.11 ± 0.05 %",
+            "value": 0.11,
+            "unit": "%",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "R 0 0.11 ± 0.05",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].performance_points[4]",
+            "property": "fitting_error",
+            "raw_value": "0.13 ± 0.06 %",
+            "value": 0.13,
+            "unit": "%",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "Rct 0.13 ± 0.06",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].impedance_protocol.frequency_min",
+            "property": "frequency_min",
+            "raw_value": "0.001 Hz",
+            "value": 0.001,
+            "unit": "Hz",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].impedance_protocol.frequency_max",
+            "property": "frequency_max",
+            "raw_value": "10,000 Hz",
+            "value": 10000.0,
+            "unit": "Hz",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_panasonic_18650].impedance_protocol.ac_amplitude",
+            "property": "ac_amplitude",
+            "raw_value": "5 mV",
+            "value": 5.0,
+            "unit": "mV",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 5,
+                "section": "3.2. Experimental Results",
+                "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 3,
+        "verbatim_supported_values": 3,
+        "duplicate_measurement_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 0,
+      "referential_integrity_warnings": []
+    },
+    {
+      "filename": "1-s2.0-S2666386426002407-main.pdf",
+      "manifest": {
+        "filename": "1-s2.0-S2666386426002407-main.pdf",
+        "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+        "document_type": "original_research",
+        "subtypes": [
+          "solid_state_batteries",
+          "impedance_eis",
+          "machine_learning",
+          "diagnostics"
+        ],
+        "benchmark_priority": "A",
+        "use": "EIS/DRT/ML original-research benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 15,
+        "prompt_characters": 73223,
+        "parser": "pymupdf",
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 30
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.98,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 23.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "charge-discharge",
+            "coulombic",
+            "c-rate",
+            "state of health",
+            "constant current",
+            "constant voltage",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "her"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "impedance_eis",
+          "degradation_health",
+          "electrode_fabrication"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "impedance_eis",
+          "degradation_health",
+          "battery_dataset_modelling"
+        ],
+        "materials": 2,
+        "shared_protocols": 1,
+        "battery_groups": 1,
+        "performance_points": 6,
+        "archive_completeness": 1.0,
+        "archive_semantic_warnings": [
+          "Scientific admissibility gate quarantined 8 quantitative value(s); raw values remain in the batteries domain payload."
+        ],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[0].performance_points[2].voltage_window",
+          "battery_groups[0].performance_points[3].voltage_window",
+          "battery_groups[0].performance_points[4].voltage_window",
+          "battery_groups[0].performance_points[5].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 38
+      },
+      "provenance": {
+        "evidence_capable_records": 12,
+        "records_with_evidence": 10,
+        "record_coverage": 0.833,
+        "records_with_verbatim_evidence": 8,
+        "verbatim_record_coverage": 0.667,
+        "snippets_checked": 10,
+        "verbatim_match_coverage": 0.8,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "battery_groups[0].performance_points[0]",
+            "page": 8,
+            "snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%"
+          },
+          {
+            "location": "battery_groups[0].performance_points[1]",
+            "page": 8,
+            "snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%."
+          }
+        ],
+        "records_without_evidence": [
+          "shared_protocols[0]",
+          "battery_groups[0]"
+        ],
+        "source_type_counts": {
+          "text": 10
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 6,
+        "materials_with_synthesis": 0,
+        "manual_review_required": false,
+        "note": null
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 7,
+        "quarantined_quantitative_values": 8,
+        "quarantine": [
+          {
+            "path": "battery_groups[group_ceracharge].temperature",
+            "property": "temperature",
+            "raw_value": "25◦C",
+            "value": 25.0,
+            "unit": "°C",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_ceracharge].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "2.4 V",
+            "value": 2.4,
+            "unit": "V",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_ceracharge].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "0 V",
+            "value": 0.0,
+            "unit": "V",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_ceracharge].performance_points[0]",
+            "property": "mean_absolute_error",
+            "raw_value": "1.6%",
+            "value": 1.6,
+            "unit": "%",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "Performance with DRT-instructed feature selection",
+                "text_snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_ceracharge].performance_points[1]",
+            "property": "mean_absolute_error",
+            "raw_value": "2.4%",
+            "value": 2.4,
+            "unit": "%",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "Performance with DRT-instructed feature selection",
+                "text_snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_min",
+            "property": "frequency_min",
+            "raw_value": "10 mHz",
+            "value": 0.01,
+            "unit": "Hz",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_max",
+            "property": "frequency_max",
+            "raw_value": "10 kHz",
+            "value": 10000.0,
+            "unit": "Hz",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          },
+          {
+            "path": "battery_groups[group_ceracharge].impedance_protocol.ac_amplitude",
+            "property": "ac_amplitude",
+            "raw_value": "5 μA",
+            "value": 5e-06,
+            "unit": "A",
+            "ownership": "focal_work",
+            "reason": "no_verbatim_evidence",
+            "evidence": []
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 7,
+        "verbatim_supported_values": 7,
+        "duplicate_measurement_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 0,
+      "referential_integrity_warnings": []
+    },
+    {
+      "filename": "Evaluation_of_Li_Ion_Batteries.pdf",
+      "manifest": {
+        "filename": "Evaluation_of_Li_Ion_Batteries.pdf",
+        "title": "Analysis and Performance Evaluation of Li-Ion Batteries Using NASA Battery Data Set",
+        "document_type": "technical_report",
+        "subtypes": [
+          "battery_dataset_modelling",
+          "electrochemical_performance",
+          "degradation_health",
+          "impedance_eis"
+        ],
+        "benchmark_priority": "A",
+        "use": "dataset-analysis / protocol / routing regression test"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 11,
+        "prompt_characters": 24102,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 12
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.967,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 13.5,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "charge-discharge",
+            "constant current",
+            "constant voltage",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalysis"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "impedance_eis",
+          "degradation_health"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "electrochemical_performance",
+          "degradation_health",
+          "impedance_eis",
+          "battery_dataset_modelling"
+        ],
+        "materials": 0,
+        "shared_protocols": 1,
+        "battery_groups": 9,
+        "performance_points": 0,
+        "archive_completeness": 0.75,
+        "archive_semantic_warnings": [
+          "Electrochemical-performance paper has no extracted quantitative performance points.",
+          "Scientific admissibility gate quarantined 71 quantitative value(s); raw values remain in the batteries domain payload."
+        ],
+        "missing_fields": [
+          "no quantitative performance points"
+        ]
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 26
+      },
+      "provenance": {
+        "evidence_capable_records": 10,
+        "records_with_evidence": 10,
+        "record_coverage": 1.0,
+        "records_with_verbatim_evidence": 1,
+        "verbatim_record_coverage": 0.1,
+        "snippets_checked": 10,
+        "verbatim_match_coverage": 0.1,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "shared_protocols[0]",
+            "page": 2,
+            "snippet": "Charging Method: Constant Current (CC) at 1.5A until 4.2V followed by Constant Voltage (CV) until the current drops to 20mA.\nDischarge Method: Constant Current (CC) at 4A until the specified stopping voltage is reached.\nImpedance Measurement: Frequency sweep from 0.1Hz to 5kHz."
+          },
+          {
+            "location": "battery_groups[0]",
+            "page": 2,
+            "snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[1]",
+            "page": 2,
+            "snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[2]",
+            "page": 2,
+            "snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[3]",
+            "page": 2,
+            "snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[4]",
+            "page": 2,
+            "snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[5]",
+            "page": 2,
+            "snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[6]",
+            "page": 2,
+            "snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          },
+          {
+            "location": "battery_groups[7]",
+            "page": 2,
+            "snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V"
+          }
+        ],
+        "records_without_evidence": [],
+        "source_type_counts": {
+          "text": 10
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 0,
+        "materials_with_synthesis": 0,
+        "manual_review_required": false,
+        "note": null
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 0,
+        "quarantined_quantitative_values": 71,
+        "quarantine": [
+          {
+            "path": "battery_groups[batteries_25_28].temperature",
+            "property": "temperature",
+            "raw_value": "Ambient 24°C",
+            "value": 24.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_25_28].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.1",
+                "text_snippet": "1) Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].temperature",
+            "property": "temperature",
+            "raw_value": "Elevated ambient temperature (43°C)",
+            "value": 43.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_29_32].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.2",
+                "text_snippet": "2) Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].temperature",
+            "property": "temperature",
+            "raw_value": "Elevated ambient temperature (43°C)",
+            "value": 43.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_33_34_36].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.3",
+                "text_snippet": "3) Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].temperature",
+            "property": "temperature",
+            "raw_value": "Room temperature (24°C)",
+            "value": 24.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_38_40].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.4",
+                "text_snippet": "4) Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].temperature",
+            "property": "temperature",
+            "raw_value": "Operated at 4°C",
+            "value": 4.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_41_44].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.5",
+                "text_snippet": "5) Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].temperature",
+            "property": "temperature",
+            "raw_value": "Room temperature (24°C)",
+            "value": 24.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_45_48].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.6",
+                "text_snippet": "6) Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].temperature",
+            "property": "temperature",
+            "raw_value": "Room temperature (24°C)",
+            "value": 24.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_49_52].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.7",
+                "text_snippet": "7) Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].temperature",
+            "property": "temperature",
+            "raw_value": "Operated at 4°C",
+            "value": 4.0,
+            "unit": "°C",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_53_56].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 2,
+                "section": "II.B.8",
+                "text_snippet": "8) Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].charge_protocol.charge_current",
+            "property": "charge_current",
+            "raw_value": "1.5A",
+            "value": 1.5,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].charge_protocol.charge_voltage_limit",
+            "property": "charge_voltage_limit",
+            "raw_value": "4.2V",
+            "value": 4.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].charge_protocol.charge_cutoff_current",
+            "property": "charge_cutoff_current",
+            "raw_value": "20mA",
+            "value": 20.0,
+            "unit": "mA",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].discharge_protocol.current",
+            "property": "discharge_current",
+            "raw_value": "4A",
+            "value": 4.0,
+            "unit": "A",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].discharge_protocol.cutoff_voltages[0]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].discharge_protocol.cutoff_voltages[1]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[batteries_b0005_b0006_b0007_b0018].discharge_protocol.cutoff_voltages[2]",
+            "property": "discharge_cutoff_voltage",
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "IV. Results and Observations",
+                "text_snippet": "A. Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase. During discharge, the voltage decreases gradually and shows notable drops towards the end of the discharge phase.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 0,
+        "verbatim_supported_values": 0,
+        "duplicate_measurement_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 0,
+      "referential_integrity_warnings": []
+    },
+    {
+      "filename": "applsci-10-04112.pdf",
+      "manifest": {
+        "filename": "applsci-10-04112.pdf",
+        "title": "Cycling Biomechanics and Its Relationship to Performance",
+        "document_type": "non_battery",
+        "subtypes": [
+          "cycling_biomechanics"
+        ],
+        "benchmark_priority": "EXCLUDE",
+        "use": "hard negative routing test for keyword cycling"
+      },
+      "expected_domain": "non_battery",
+      "status": "correctly_rejected_negative_control",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 15,
+        "prompt_characters": 70560,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 25
+      },
+      "routing": {
+        "domain": "mechanical",
+        "confidence": 0.363,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 0.0,
+          "biomaterials": 0.0,
+          "catalysis": 0.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 2.0,
+          "membranes": 1.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [],
+          "biomaterials": [],
+          "catalysis": [],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [
+            "fatigue"
+          ],
+          "membranes": [
+            "membrane"
+          ],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "schema_validation_success": null,
+      "extractor_skipped": "Correct non-battery route; battery extraction is not applicable."
+    },
+    {
+      "filename": "Application_of_First_Principles_Computations_Based.pdf",
+      "manifest": {
+        "filename": "Application_of_First_Principles_Computations_Based.pdf",
+        "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+        "document_type": "perspective_review",
+        "subtypes": [
+          "sodium_ion",
+          "computational_dft",
+          "cathode_review"
+        ],
+        "benchmark_priority": "A",
+        "use": "DFT descriptor vocabulary; review-vs-focal-result discrimination"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 17,
+        "prompt_characters": 60719,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 5,
+        "figure_markers": 11
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.95,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 9.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "materials_synthesis",
+          "computational_dft",
+          "electrode_fabrication"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "computational_dft"
+        ],
+        "materials": 5,
+        "shared_protocols": 0,
+        "battery_groups": 3,
+        "performance_points": 8,
+        "archive_completeness": 1.0,
+        "archive_semantic_warnings": [
+          "Scientific admissibility gate quarantined 8 quantitative value(s); raw values remain in the batteries domain payload."
+        ],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[0].performance_points[2].voltage_window",
+          "battery_groups[0].performance_points[3].voltage_window",
+          "battery_groups[1].performance_points[0].voltage_window",
+          "battery_groups[1].performance_points[1].voltage_window",
+          "battery_groups[2].performance_points[0].voltage_window",
+          "battery_groups[2].performance_points[1].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 35
+      },
+      "provenance": {
+        "evidence_capable_records": 16,
+        "records_with_evidence": 13,
+        "record_coverage": 0.812,
+        "records_with_verbatim_evidence": 7,
+        "verbatim_record_coverage": 0.438,
+        "snippets_checked": 13,
+        "verbatim_match_coverage": 0.538,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "materials[0]",
+            "page": 6,
+            "snippet": "alpha-MnO2"
+          },
+          {
+            "location": "materials[1]",
+            "page": 6,
+            "snippet": "beta-NaMnO2"
+          },
+          {
+            "location": "battery_groups[0].performance_points[1]",
+            "page": 6,
+            "snippet": "α-MnO2 reaction voltages ... 3.23 V"
+          },
+          {
+            "location": "battery_groups[0].performance_points[3]",
+            "page": 6,
+            "snippet": "α-MnO2 electronic band ... 2.23 eV"
+          },
+          {
+            "location": "battery_groups[1].performance_points[1]",
+            "page": 6,
+            "snippet": "β-NaMnO2 migration energy barrier ... 0.27 eV"
+          },
+          {
+            "location": "battery_groups[2].performance_points[1]",
+            "page": 7,
+            "snippet": "Na2FePO4F band gap energy ... 2.80 eV"
+          }
+        ],
+        "records_without_evidence": [
+          "battery_groups[0]",
+          "battery_groups[1]",
+          "battery_groups[2]"
+        ],
+        "source_type_counts": {
+          "table": 13
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": true,
+        "performance_points": 8,
+        "materials_with_synthesis": 0,
+        "manual_review_required": true,
+        "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually.",
+        "canonical_quantitative_values": 0
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 0,
+        "quarantined_quantitative_values": 8,
+        "quarantine": [
+          {
+            "path": "battery_groups[grp_alpha_mno2].performance_points[0]",
+            "property": "reaction_voltage",
+            "raw_value": "3.42 V",
+            "value": 3.42,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "α-MnO2 reaction voltages 3.42 V",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_alpha_mno2].performance_points[1]",
+            "property": "reaction_voltage",
+            "raw_value": "3.23 V",
+            "value": 3.23,
+            "unit": "V",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "α-MnO2 reaction voltages ... 3.23 V",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_alpha_mno2].performance_points[2]",
+            "property": "band_gap",
+            "raw_value": "2.42 eV",
+            "value": 2.42,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "α-MnO2 electronic band 2.42 eV",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_alpha_mno2].performance_points[3]",
+            "property": "band_gap",
+            "raw_value": "2.23 eV",
+            "value": 2.23,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "α-MnO2 electronic band ... 2.23 eV",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_beta_namno2].performance_points[0]",
+            "property": "migration_energy_barrier",
+            "raw_value": "0.3 eV",
+            "value": 0.3,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "β-NaMnO2 migration energy barrier 0.3 eV",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_beta_namno2].performance_points[1]",
+            "property": "migration_energy_barrier",
+            "raw_value": "0.27 eV",
+            "value": 0.27,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 6,
+                "section": "Table 1",
+                "text_snippet": "β-NaMnO2 migration energy barrier ... 0.27 eV",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_na2fepo4f].performance_points[0]",
+            "property": "band_gap",
+            "raw_value": "2.19 eV",
+            "value": 2.19,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 7,
+                "section": "Table 1",
+                "text_snippet": "Na2FePO4F band gap energy 2.19 eV",
+                "source_type": "table",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_na2fepo4f].performance_points[1]",
+            "property": "band_gap",
+            "raw_value": "2.80 eV",
+            "value": 2.8,
+            "unit": "eV",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 7,
+                "section": "Table 1",
+                "text_snippet": "Na2FePO4F band gap energy ... 2.80 eV",
+                "source_type": "table",
+                "verbatim_match": false,
+                "confidence": 0.9
+              }
+            ]
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 0,
+        "verbatim_supported_values": 0,
+        "duplicate_measurement_signatures": 0,
+        "duplicate_scientific_output_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 0,
+      "referential_integrity_warnings": []
+    },
+    {
+      "filename": "coatings-16-00912.pdf",
+      "manifest": {
+        "filename": "coatings-16-00912.pdf",
+        "title": "Anode Materials for Lithium-Ion Batteries, from Conventional Materials to High-Entropy Oxides: A Review of Synthesis Methods, Properties and Sustainability Challenges",
+        "document_type": "review",
+        "subtypes": [
+          "anode_review",
+          "synthesis_review",
+          "high_entropy_oxides"
+        ],
+        "benchmark_priority": "B",
+        "use": "large synthesis-method/alias coverage"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 31,
+        "prompt_characters": 127618,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 4,
+        "figure_markers": 6
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.914,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 18.25,
+          "biomaterials": 0.0,
+          "catalysis": 3.5,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 1.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "coulombic",
+            "capacity retention",
+            "c-rate"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst",
+            "catalysis",
+            "electrocatalysis"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [
+            "membrane"
+          ],
+          "photovoltaics": [],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance",
+          "electrode_fabrication",
+          "degradation_health",
+          "battery_dataset_modelling"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance"
+        ],
+        "materials": 13,
+        "shared_protocols": 0,
+        "battery_groups": 13,
+        "performance_points": 21,
+        "archive_completeness": 0.8571428571428571,
+        "archive_semantic_warnings": [
+          "Scientific admissibility gate quarantined 21 quantitative value(s); raw values remain in the batteries domain payload."
+        ],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[1].performance_points[0].voltage_window",
+          "battery_groups[1].performance_points[1].voltage_window",
+          "battery_groups[1].performance_points[2].voltage_window",
+          "battery_groups[2].performance_points[0].voltage_window",
+          "battery_groups[3].performance_points[0].voltage_window",
+          "battery_groups[4].performance_points[0].voltage_window",
+          "battery_groups[5].performance_points[0].voltage_window",
+          "battery_groups[6].performance_points[0].voltage_window",
+          "battery_groups[6].performance_points[1].voltage_window",
+          "battery_groups[7].performance_points[0].voltage_window",
+          "battery_groups[7].performance_points[1].voltage_window",
+          "battery_groups[8].performance_points[0].voltage_window",
+          "battery_groups[9].performance_points[0].voltage_window",
+          "battery_groups[9].performance_points[1].voltage_window",
+          "battery_groups[10].performance_points[0].voltage_window",
+          "battery_groups[10].performance_points[1].voltage_window",
+          "battery_groups[11].performance_points[0].voltage_window",
+          "battery_groups[11].performance_points[1].voltage_window",
+          "battery_groups[12].performance_points[0].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 116
+      },
+      "provenance": {
+        "evidence_capable_records": 62,
+        "records_with_evidence": 36,
+        "record_coverage": 0.581,
+        "records_with_verbatim_evidence": 28,
+        "verbatim_record_coverage": 0.452,
+        "snippets_checked": 36,
+        "verbatim_match_coverage": 0.778,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "materials[0].synthesis",
+            "page": 10,
+            "snippet": "Yin et al. [78] present the sol–gel synthesis of Al-doped, carbon-coated Li4Ti5O12 (LTO) anodes, leveraging the method's ability to produce homogenous, nano-sized particles with uniform doping and carbon coating."
+          },
+          {
+            "location": "materials[1].synthesis",
+            "page": 10,
+            "snippet": "reports the sol–gel synthesis of Li3VO4/carbon (Li3VO4/C) composites for use as anode materials in lithium-ion batteries."
+          },
+          {
+            "location": "materials[5].synthesis",
+            "page": 12,
+            "snippet": "Gu et al. [85] used in their work the co-precipitation synthesis to obtain MgCo2O4-coated Li4Ti5O12 (LTO) composite anodes for lithium-ion batteries."
+          },
+          {
+            "location": "materials[6].synthesis",
+            "page": 12,
+            "snippet": "Birrozzi et al. [90] explored the use of flame spray pyrolysis (FSP) for the synthesis of Li4Ti5O12 (LTO) nanoparticles"
+          },
+          {
+            "location": "materials[10].synthesis",
+            "page": 8,
+            "snippet": "Researchers have synthesized spinel HEO nanoparticles, (Cr0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4, using a solution combustion method."
+          },
+          {
+            "location": "battery_groups[3].performance_points[0]",
+            "page": 11,
+            "snippet": "Consequently, the N-TiO2/rGO hybrid demonstrated excellent electrochemical performance and cycling stability, retaining 210 mAh/g after 2000 cycles."
+          },
+          {
+            "location": "battery_groups[6].performance_points[0]",
+            "page": 13,
+            "snippet": "offering high surface areas (~100 m2/g) and excellent electrochemical properties, such as a discharge capacity of approximately 160 mAh/g."
+          },
+          {
+            "location": "battery_groups[6].performance_points[1]",
+            "page": 13,
+            "snippet": "offering high surface areas (~100 m2/g)"
+          }
+        ],
+        "records_without_evidence": [
+          "materials[0]",
+          "materials[1]",
+          "materials[2]",
+          "materials[3]",
+          "materials[4]",
+          "materials[5]",
+          "materials[6]",
+          "materials[7]",
+          "materials[8]",
+          "materials[9]",
+          "materials[10]",
+          "materials[11]",
+          "materials[12]",
+          "battery_groups[0]",
+          "battery_groups[1]",
+          "battery_groups[2]",
+          "battery_groups[3]",
+          "battery_groups[4]",
+          "battery_groups[5]",
+          "battery_groups[6]",
+          "battery_groups[7]",
+          "battery_groups[8]",
+          "battery_groups[9]",
+          "battery_groups[10]",
+          "battery_groups[11]",
+          "battery_groups[12]"
+        ],
+        "source_type_counts": {
+          "text": 36
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [
+        {
+          "group_id": "grp_mgco2o4_lto_gu",
+          "property": "specific_capacity",
+          "value": 300.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "grp_lto_fsp_birrozzi",
+          "property": "specific_capacity",
+          "value": 160.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "grp_zno_laurenti",
+          "property": "specific_capacity",
+          "value": 400.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "grp_zno_laurenti",
+          "property": "capacity_retention",
+          "value": 62.0,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "grp_heo_rock_salt_qiu",
+          "property": "specific_capacity",
+          "value": 700.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        }
+      ],
+      "review_contamination": {
+        "is_review": true,
+        "performance_points": 21,
+        "materials_with_synthesis": 13,
+        "manual_review_required": true,
+        "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually.",
+        "canonical_quantitative_values": 0
+      },
+      "admissibility": {
+        "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+        "admitted_quantitative_values": 0,
+        "quarantined_quantitative_values": 21,
+        "quarantine": [
+          {
+            "path": "battery_groups[grp_lto_yin].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "174.1 mAh/g",
+            "value": 174.1,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 10,
+                "section": "3.2. Sol–Gel Synthesis",
+                "text_snippet": "The resulting material exhibited enhanced Li+ diffusion, discharge capacity up to 174.1 mAh/g at 1C",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_lto_yin].performance_points[1]",
+            "property": "capacity_retention",
+            "raw_value": "97%",
+            "value": 97.0,
+            "unit": "%",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 10,
+                "section": "3.2. Sol–Gel Synthesis",
+                "text_snippet": "and excellent cycling stability (97% after 100 cycles at 20C)",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_li3vo4_thauer].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "366.3 mAh/g",
+            "value": 366.3,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.2. Sol–Gel Synthesis",
+                "text_snippet": "the optimized composite delivered a reversible capacity of 366.3 mAh/g at 0.2C",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_li3vo4_thauer].performance_points[1]",
+            "property": "specific_capacity",
+            "raw_value": "270.6 mAh/g",
+            "value": 270.6,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.2. Sol–Gel Synthesis",
+                "text_snippet": "maintained 270.6 mAh/g after 200 cycles at 1C",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_li3vo4_thauer].performance_points[2]",
+            "property": "specific_capacity",
+            "raw_value": "175.3 mAh/g",
+            "value": 175.3,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.2. Sol–Gel Synthesis",
+                "text_snippet": "and showed excellent rate capability (175.3 mAh/g at 5C).",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_znmn2o4_courtel].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "430 mAh/g",
+            "value": 430.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+                "text_snippet": "Electrochemical testing showed a stable reversible capacity of 430 mAh/g after 100 cycles at C/10.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_ntio2_li].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "210 mAh/g",
+            "value": 210.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 11,
+                "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+                "text_snippet": "Consequently, the N-TiO2/rGO hybrid demonstrated excellent electrochemical performance and cycling stability, retaining 210 mAh/g after 2000 cycles.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_znopc_shen].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "653.7 mAh/g",
+            "value": 653.7,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 12,
+                "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+                "text_snippet": "mitigating electrode degradation and contributing to superior cycling performance (high reversible capacity of 653.7 mAh/g after 100 cycles).",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_mgco2o4_lto_gu].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "300 mAh/g",
+            "value": 300.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 12,
+                "section": "3.4. Co-Precipitation Synthesis",
+                "text_snippet": "the composite exhibited improved electrochemical performance, including higher specific capacity and rate capability (300 mAh/g, two times higher than that achieved by pristine LTO)",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_lto_fsp_birrozzi].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "160 mAh/g",
+            "value": 160.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "3.5. Spray Pyrolysis Synthesis",
+                "text_snippet": "offering high surface areas (~100 m2/g) and excellent electrochemical properties, such as a discharge capacity of approximately 160 mAh/g.",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_lto_fsp_birrozzi].performance_points[1]",
+            "property": "specific_surface_area",
+            "raw_value": "~100 m2/g",
+            "value": 100.0,
+            "unit": "m2/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "3.5. Spray Pyrolysis Synthesis",
+                "text_snippet": "offering high surface areas (~100 m2/g)",
+                "source_type": "text",
+                "verbatim_match": false,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_zno_laurenti].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "~400 mAh/g",
+            "value": 400.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "3.6. Chemical Vapor Deposition",
+                "text_snippet": "the electrode delivered a stable specific capacity of ~400 mAh/g with high Coulombic efficiency and over 62% capacity retention after prolonged cycling.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_zno_laurenti].performance_points[1]",
+            "property": "capacity_retention",
+            "raw_value": "over 62%",
+            "value": 62.0,
+            "unit": "%",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 13,
+                "section": "3.6. Chemical Vapor Deposition",
+                "text_snippet": "and over 62% capacity retention after prolonged cycling.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_nisno2_cnf_kim].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "447.6 mAh/g",
+            "value": 447.6,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 14,
+                "section": "3.7.1. Electrospinning",
+                "text_snippet": "which delivered a high reversible capacity of 447.6 mAh/g after 100 cycles.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_fe3o4c_gu].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "508.2 mAh/g",
+            "value": 508.2,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 14,
+                "section": "3.7.1. Electrospinning",
+                "text_snippet": "The resulting nanostructures exhibited a high discharge capacity of 508.2 mAh/g after 100 cycles",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_fe3o4c_gu].performance_points[1]",
+            "property": "specific_capacity",
+            "raw_value": "160 mAh/g",
+            "value": 160.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 14,
+                "section": "3.7.1. Electrospinning",
+                "text_snippet": "and a strong rate capability of 160 mAh/g at 5 A/g.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_heo_spinel_jin].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "132 mAh·g−1",
+            "value": 132.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "2.2.6. High Entropy Oxides (HEOs)",
+                "text_snippet": "maintaining a reversible capacity of 132 mAh·g−1 after 100 cycles at 100 mA·g−1",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_heo_spinel_jin].performance_points[1]",
+            "property": "specific_capacity",
+            "raw_value": "107 mAh·g−1",
+            "value": 107.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "2.2.6. High Entropy Oxides (HEOs)",
+                "text_snippet": "and 107 mAh·g−1 after 1000 cycles at 1 A·g−1.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_heo_porous_li].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "1022 mAh·g−1",
+            "value": 1022.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "2.2.6. High Entropy Oxides (HEOs)",
+                "text_snippet": "This material delivered a capacity of 1022 mAh·g−1 after 1000 cycles at 1 A·g−1",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_heo_porous_li].performance_points[1]",
+            "property": "specific_capacity",
+            "raw_value": "220 mAh·g−1",
+            "value": 220.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "2.2.6. High Entropy Oxides (HEOs)",
+                "text_snippet": "and maintained 220 mAh·g−1 even at an ultrahigh current density of 30 A·g−1.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "path": "battery_groups[grp_heo_rock_salt_qiu].performance_points[0]",
+            "property": "specific_capacity",
+            "raw_value": "700 mAh g−1",
+            "value": 700.0,
+            "unit": "mAh/g",
+            "ownership": "cited_prior_work",
+            "reason": "ownership_cited_prior_work",
+            "evidence": [
+              {
+                "page": 8,
+                "section": "2.2.6. High Entropy Oxides (HEOs)",
+                "text_snippet": "the studied material demonstrated a significant enhancement, achieving a value of 700 mAh g−1 during the conversion reaction from metal oxides to their metallic forms.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ]
+      },
+      "canonical_quantitative_metrics": {
+        "canonical_quantitative_values": 0,
+        "verbatim_supported_values": 0,
+        "duplicate_measurement_signatures": 0,
+        "duplicate_scientific_output_signatures": 0
+      },
+      "calculations": 0,
+      "calculation_outputs": 0,
+      "unresolved_condition_conflicts": 0,
+      "referential_integrity_warnings": []
+    },
+    {
+      "filename": "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+      "manifest": {
+        "filename": "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+        "title": "A Table-driven Li-Ion Battery Model for a BMS Development Platform – Modeling, Measurements, Implementation and Validation",
+        "document_type": "conference_research",
+        "subtypes": [
+          "battery_modelling",
+          "BMS",
+          "equivalent_circuit"
+        ],
+        "benchmark_priority": "A",
+        "use": "model/measurement data benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "failed",
+      "failure_class": "external service failure",
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 8,
+        "prompt_characters": 26798,
+        "parser": "pypdf",
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 1
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.95,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 9.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 1.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "electrolyte"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "her"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [
+            "open-circuit voltage"
+          ],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "schema_validation_success": null,
+      "error_type": "ClientError",
+      "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 36.889911897s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}",
+      "coercion_candidates": null
+    }
+  ],
+  "resumed_at_unix": 1789156538.585362
+}

@@ -1,0 +1,164 @@
+{
+  "filename": "Application_of_First_Principles_Computations_Based.pdf",
+  "manifest": {
+    "filename": "Application_of_First_Principles_Computations_Based.pdf",
+    "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+    "document_type": "perspective_review",
+    "subtypes": [
+      "sodium_ion",
+      "computational_dft",
+      "cathode_review"
+    ],
+    "benchmark_priority": "A",
+    "use": "DFT descriptor vocabulary; review-vs-focal-result discrimination"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 17,
+    "prompt_characters": 60719,
+    "truncated_at_180000": false,
+    "table_markers": 5,
+    "figure_markers": 11
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.95,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 9.0,
+      "biomaterials": 0.0,
+      "catalysis": 1.0,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 1.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte"
+      ],
+      "biomaterials": [],
+      "catalysis": [
+        "catalyst"
+      ],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [],
+      "semiconductors": [
+        "semiconductor"
+      ],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "electrochemical_performance",
+      "battery_dataset_modelling",
+      "materials_synthesis",
+      "computational_dft",
+      "electrode_fabrication"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "computational_dft"
+    ],
+    "materials": 4,
+    "shared_protocols": 0,
+    "battery_groups": 4,
+    "performance_points": 10,
+    "archive_completeness": 1.0,
+    "archive_semantic_warnings": [],
+    "missing_fields": []
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 38
+  },
+  "provenance": {
+    "evidence_capable_records": 18,
+    "records_with_evidence": 14,
+    "record_coverage": 0.778,
+    "snippets_checked": 14,
+    "verbatim_match_coverage": 0.429,
+    "unmatched_snippet_candidates": [
+      {
+        "location": "materials[0]",
+        "page": 6,
+        "snippet": "α-MnO2"
+      },
+      {
+        "location": "materials[1]",
+        "page": 6,
+        "snippet": "β-NaMnO2"
+      },
+      {
+        "location": "battery_groups[0].performance_points[0]",
+        "page": 6,
+        "snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V"
+      },
+      {
+        "location": "battery_groups[0].performance_points[1]",
+        "page": 6,
+        "snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V"
+      },
+      {
+        "location": "battery_groups[0].performance_points[2]",
+        "page": 6,
+        "snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV"
+      },
+      {
+        "location": "battery_groups[0].performance_points[3]",
+        "page": 6,
+        "snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV"
+      },
+      {
+        "location": "battery_groups[1].performance_points[0]",
+        "page": 6,
+        "snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV"
+      },
+      {
+        "location": "battery_groups[1].performance_points[1]",
+        "page": 6,
+        "snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV"
+      }
+    ],
+    "records_without_evidence": [
+      "battery_groups[0]",
+      "battery_groups[1]",
+      "battery_groups[2]",
+      "battery_groups[3]"
+    ],
+    "source_type_counts": {
+      "table": 4,
+      "unknown": 10
+    }
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [],
+  "review_contamination": {
+    "is_review": true,
+    "performance_points": 10,
+    "materials_with_synthesis": 0,
+    "manual_review_required": true,
+    "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually."
+  }
+}

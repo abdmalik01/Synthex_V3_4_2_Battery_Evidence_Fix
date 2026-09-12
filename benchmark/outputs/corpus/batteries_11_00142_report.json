@@ -1,0 +1,674 @@
+{
+  "filename": "batteries-11-00142.pdf",
+  "manifest": {
+    "filename": "batteries-11-00142.pdf",
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+    "doi": "10.3390/batteries11040142",
+    "year": 2025,
+    "document_type": "original_research",
+    "subtypes": [
+      "materials_synthesis",
+      "electrode_fabrication",
+      "cell_assembly",
+      "electrochemical_performance",
+      "impedance_eis"
+    ],
+    "benchmark_priority": "A+",
+    "use": "primary electrode-materials gold benchmark"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 15,
+    "prompt_characters": 69776,
+    "truncated_at_180000": false,
+    "table_markers": 4,
+    "figure_markers": 56
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.933,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 15.0,
+      "biomaterials": 0.0,
+      "catalysis": 1.0,
+      "corrosion": 0.0,
+      "gas_sensing": 2.25,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "lithium-ion",
+        "li-ion",
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte",
+        "capacity retention",
+        "electrochemical impedance spectroscopy"
+      ],
+      "biomaterials": [],
+      "catalysis": [
+        "catalyst"
+      ],
+      "corrosion": [],
+      "gas_sensing": [
+        "selectivity",
+        "ppm"
+      ],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "materials_synthesis",
+      "electrochemical_performance",
+      "impedance_eis",
+      "electrode_fabrication",
+      "cell_assembly"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "materials_synthesis",
+      "electrode_fabrication",
+      "cell_assembly",
+      "electrochemical_performance",
+      "impedance_eis"
+    ],
+    "materials": 1,
+    "shared_protocols": 1,
+    "battery_groups": 3,
+    "performance_points": 20,
+    "archive_completeness": 0.9,
+    "archive_semantic_warnings": [],
+    "missing_fields": [
+      "no EIS protocol"
+    ]
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 96
+  },
+  "provenance": {
+    "evidence_capable_records": 36,
+    "records_with_evidence": 0,
+    "record_coverage": 0.0,
+    "snippets_checked": 0,
+    "verbatim_match_coverage": 0.0,
+    "unmatched_snippet_candidates": [],
+    "records_without_evidence": [
+      "materials[0]",
+      "materials[0].synthesis",
+      "materials[0].synthesis.steps[0]",
+      "materials[0].synthesis.steps[1]",
+      "materials[0].synthesis.steps[2]",
+      "materials[0].synthesis.steps[3]",
+      "materials[0].synthesis.steps[4]",
+      "shared_protocols[0]",
+      "shared_protocols[0].electrochemical_testing",
+      "shared_protocols[0].electrode_fabrication",
+      "shared_protocols[0].electrode_fabrication.drying_steps[0]",
+      "shared_protocols[0].electrode_fabrication.drying_steps[1]",
+      "shared_protocols[0].cell_assembly",
+      "battery_groups[0]",
+      "battery_groups[0].performance_points[0]",
+      "battery_groups[0].performance_points[1]",
+      "battery_groups[0].performance_points[2]",
+      "battery_groups[0].performance_points[3]",
+      "battery_groups[0].performance_points[4]",
+      "battery_groups[1]",
+      "battery_groups[1].performance_points[0]",
+      "battery_groups[1].performance_points[1]",
+      "battery_groups[1].performance_points[2]",
+      "battery_groups[1].performance_points[3]",
+      "battery_groups[1].performance_points[4]",
+      "battery_groups[1].performance_points[5]",
+      "battery_groups[1].performance_points[6]",
+      "battery_groups[1].performance_points[7]",
+      "battery_groups[1].performance_points[8]",
+      "battery_groups[1].performance_points[9]",
+      "battery_groups[2]",
+      "battery_groups[2].performance_points[0]",
+      "battery_groups[2].performance_points[1]",
+      "battery_groups[2].performance_points[2]",
+      "battery_groups[2].performance_points[3]",
+      "battery_groups[2].performance_points[4]"
+    ],
+    "source_type_counts": {}
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [
+    {
+      "group_id": "group_600",
+      "property": "capacity_retention",
+      "value": 77.4,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "charge_transfer_resistance",
+      "value": 1258.6,
+      "unit": "ohm",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "diffusion_coefficient",
+      "value": 1.096e-12,
+      "unit": "cm2/s",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "capacity_retention",
+      "value": 79.9,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_800",
+      "property": "capacity_retention",
+      "value": 76.8,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    }
+  ],
+  "review_contamination": {
+    "is_review": false,
+    "performance_points": 20,
+    "materials_with_synthesis": 1,
+    "manual_review_required": false,
+    "note": null
+  },
+  "manual_gold": {
+    "passed": 15,
+    "total": 20,
+    "score": 0.5,
+    "structural_accuracy": 1.0,
+    "value_accuracy": 1.0,
+    "condition_association_accuracy": 0.0,
+    "provenance_coverage": 0.0,
+    "overall_score": 0.5,
+    "checks": [
+      {
+        "check": "title",
+        "pass": true,
+        "observed": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+        "expected": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method"
+      },
+      {
+        "check": "DOI",
+        "pass": true,
+        "observed": "10.3390/batteries11040142",
+        "expected": "10.3390/batteries11040142"
+      },
+      {
+        "check": "materials_synthesis type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "expected": true
+      },
+      {
+        "check": "electrode_fabrication type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "expected": true
+      },
+      {
+        "check": "cell_assembly type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "expected": true
+      },
+      {
+        "check": "electrochemical_performance type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "expected": true
+      },
+      {
+        "check": "impedance_eis type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "expected": true
+      },
+      {
+        "check": "Li2FeTiO4 material",
+        "pass": true,
+        "observed": "Li2FeTiO4",
+        "expected": "Li2FeTiO4"
+      },
+      {
+        "check": "sol-gel synthesis",
+        "pass": true,
+        "observed": "sol-gel",
+        "expected": "sol-gel"
+      },
+      {
+        "check": "electrode fabrication extracted",
+        "pass": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "80 wt% active material",
+        "pass": true,
+        "observed": {
+          "raw_value": "80 wt%",
+          "value": 80.0,
+          "unit": "wt%",
+          "qualifier": "exact"
+        },
+        "expected": 80
+      },
+      {
+        "check": "CR2032 cell assembly",
+        "pass": true,
+        "observed": "CR2032 coin cells",
+        "expected": "CR2032"
+      },
+      {
+        "check": "100 uL electrolyte",
+        "pass": true,
+        "observed": {
+          "raw_value": "100 µL",
+          "value": 100.0,
+          "unit": "µL",
+          "qualifier": "exact"
+        },
+        "expected": 100
+      },
+      {
+        "check": "CV 0.1 mV/s",
+        "pass": true,
+        "observed": {
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "qualifier": "exact"
+        },
+        "expected": 0.1
+      },
+      {
+        "check": "100-cycle long-term test",
+        "pass": true,
+        "observed": 100,
+        "expected": 100
+      },
+      {
+        "check": "strict performance specific_capacity=121.3",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance specific_capacity=108.2",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance capacity_retention=89.2",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "capacity_retention",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance charge_transfer_resistance=1258.6",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1258.6,
+          "unit": "ohm",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 0
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "ohm",
+          "method_contains": [
+            "EIS"
+          ]
+        }
+      },
+      {
+        "check": "strict performance diffusion_coefficient=1.096e-12",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 0
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "method": "EIS/Warburg",
+          "method_contains": [
+            "EIS"
+          ]
+        }
+      }
+    ],
+    "performance_checks": [
+      {
+        "property": "specific_capacity",
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": false,
+        "c_rate_status": "conflicted",
+        "pass": false
+      },
+      {
+        "property": "specific_capacity",
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": false,
+        "c_rate_status": "conflicted",
+        "pass": false
+      },
+      {
+        "property": "capacity_retention",
+        "expected": {
+          "variant": "700 °C",
+          "property": "capacity_retention",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "method": null,
+          "evidence_count": 0
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": false,
+        "c_rate_status": "conflicted",
+        "pass": false
+      },
+      {
+        "property": "charge_transfer_resistance",
+        "expected": {
+          "variant": "700 °C",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "ohm",
+          "method_contains": [
+            "EIS"
+          ]
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1258.6,
+          "unit": "ohm",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 0
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": false,
+        "c_rate_pass": true,
+        "c_rate_status": "not_required",
+        "pass": false
+      },
+      {
+        "property": "diffusion_coefficient",
+        "expected": {
+          "variant": "700 °C",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "method": "EIS/Warburg",
+          "method_contains": [
+            "EIS"
+          ]
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "Li2FeTiO4 calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 0
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": false,
+        "c_rate_pass": true,
+        "c_rate_status": "not_required",
+        "pass": false
+      }
+    ]
+  }
+}

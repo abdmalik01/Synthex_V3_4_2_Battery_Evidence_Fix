@@ -1,0 +1,1117 @@
+{
+  "filename": "batteries-11-00142.pdf",
+  "manifest": {
+    "filename": "batteries-11-00142.pdf",
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+    "doi": "10.3390/batteries11040142",
+    "year": 2025,
+    "document_type": "original_research",
+    "subtypes": [
+      "materials_synthesis",
+      "electrode_fabrication",
+      "cell_assembly",
+      "electrochemical_performance",
+      "impedance_eis"
+    ],
+    "benchmark_priority": "A+",
+    "use": "primary electrode-materials gold benchmark"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 15,
+    "prompt_characters": 69776,
+    "parser": "pypdf",
+    "truncated_at_180000": false,
+    "table_markers": 4,
+    "figure_markers": 56
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.933,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 15.0,
+      "biomaterials": 0.0,
+      "catalysis": 1.0,
+      "corrosion": 0.0,
+      "gas_sensing": 2.25,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "lithium-ion",
+        "li-ion",
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte",
+        "capacity retention",
+        "electrochemical impedance spectroscopy"
+      ],
+      "biomaterials": [],
+      "catalysis": [
+        "catalyst"
+      ],
+      "corrosion": [],
+      "gas_sensing": [
+        "selectivity",
+        "ppm"
+      ],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "materials_synthesis",
+      "electrochemical_performance",
+      "impedance_eis",
+      "electrode_fabrication",
+      "cell_assembly"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "materials_synthesis",
+      "electrode_fabrication",
+      "cell_assembly",
+      "electrochemical_performance"
+    ],
+    "materials": 1,
+    "shared_protocols": 1,
+    "battery_groups": 7,
+    "performance_points": 29,
+    "archive_completeness": 1.0,
+    "archive_semantic_warnings": [
+      "Scientific admissibility gate quarantined 21 quantitative value(s); raw values remain in the batteries domain payload.",
+      "1 unresolved experimental-condition conflict(s) remain in the raw domain payload."
+    ],
+    "missing_fields": [
+      "expected paper_type absent: impedance_eis",
+      "no EIS protocol"
+    ]
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 177
+  },
+  "provenance": {
+    "evidence_capable_records": 53,
+    "records_with_evidence": 45,
+    "record_coverage": 0.849,
+    "records_with_verbatim_evidence": 35,
+    "verbatim_record_coverage": 0.66,
+    "snippets_checked": 45,
+    "verbatim_match_coverage": 0.778,
+    "unmatched_snippet_candidates": [
+      {
+        "location": "materials[0].synthesis",
+        "page": 2,
+        "snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures."
+      },
+      {
+        "location": "materials[0].synthesis.steps[2]",
+        "page": 2,
+        "snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h."
+      },
+      {
+        "location": "materials[0].synthesis.steps[3]",
+        "page": 2,
+        "snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained."
+      },
+      {
+        "location": "materials[0].synthesis.steps[4]",
+        "page": 2,
+        "snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h."
+      },
+      {
+        "location": "materials[0].synthesis.steps[5]",
+        "page": 2,
+        "snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures."
+      },
+      {
+        "location": "shared_protocols[0].electrode_fabrication.drying_steps[0]",
+        "page": 3,
+        "snippet": "The coated electrodes were dried at 80°C for 12 h under vacuum to remove residual solvents"
+      },
+      {
+        "location": "shared_protocols[0].electrode_fabrication.drying_steps[2]",
+        "page": 3,
+        "snippet": "The dried electrodes were punched into disks with a diameter of 10 mm and further vacuum-dried at 120°C for 6 h prior to cell assembly."
+      },
+      {
+        "location": "battery_groups[1].performance_points[2]",
+        "page": 11,
+        "snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics."
+      },
+      {
+        "location": "battery_groups[1].performance_points[5]",
+        "page": 11,
+        "snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b)."
+      },
+      {
+        "location": "battery_groups[2].performance_points[0]",
+        "page": 10,
+        "snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance."
+      }
+    ],
+    "records_without_evidence": [
+      "shared_protocols[0]",
+      "battery_groups[0]",
+      "battery_groups[1]",
+      "battery_groups[2]",
+      "battery_groups[3]",
+      "battery_groups[4]",
+      "battery_groups[5]",
+      "battery_groups[6]"
+    ],
+    "source_type_counts": {
+      "text": 38,
+      "table": 7
+    }
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [
+    {
+      "group_id": "group_600",
+      "property": "capacity_retention",
+      "value": 77.4,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "charge_transfer_resistance",
+      "value": 1258.6,
+      "unit": "Ω",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "diffusion_coefficient",
+      "value": 1.096e-12,
+      "unit": "cm2 s-1",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "property": "capacity_retention",
+      "value": 79.9,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_800",
+      "property": "capacity_retention",
+      "value": 76.8,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_limtio4_prior",
+      "property": "diffusion_coefficient",
+      "value": 2.71e-14,
+      "unit": "cm2 s-1",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_limtio4_prior",
+      "property": "diffusion_coefficient",
+      "value": 2.91e-14,
+      "unit": "cm2 s-1",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    },
+    {
+      "group_id": "group_limtio4_prior",
+      "property": "diffusion_coefficient",
+      "value": 3.05e-14,
+      "unit": "cm2 s-1",
+      "reasons": [
+        "impedance/transport value has no method association"
+      ]
+    }
+  ],
+  "review_contamination": {
+    "is_review": false,
+    "performance_points": 29,
+    "materials_with_synthesis": 1,
+    "manual_review_required": false,
+    "note": null
+  },
+  "admissibility": {
+    "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+    "admitted_quantitative_values": 45,
+    "quarantined_quantitative_values": 21,
+    "quarantine": [
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[2].temperature",
+        "property": "temperature",
+        "raw_value": "65 °C",
+        "value": 65.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[2].duration",
+        "property": "duration",
+        "raw_value": "5 h",
+        "value": 5.0,
+        "unit": "h",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[3].temperature",
+        "property": "temperature",
+        "raw_value": "120 °C",
+        "value": 120.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[3].duration",
+        "property": "duration",
+        "raw_value": "24 h",
+        "value": 24.0,
+        "unit": "h",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[4].temperature",
+        "property": "temperature",
+        "raw_value": "500 °C",
+        "value": 500.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "materials[mat_li2fetio4].synthesis.steps[4].duration",
+        "property": "duration",
+        "raw_value": "8 h",
+        "value": 8.0,
+        "unit": "h",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 2,
+            "section": "2.1. Materials Preparation",
+            "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_600].calcination_temperature",
+        "property": "calcination_temperature",
+        "raw_value": "600 °C",
+        "value": 600.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_700].calcination_temperature",
+        "property": "calcination_temperature",
+        "raw_value": "700 °C",
+        "value": 700.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_700].performance_points[2]",
+        "property": "charge_transfer_resistance",
+        "raw_value": "1258.6 Ω",
+        "value": 1258.6,
+        "unit": "Ω",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_700].performance_points[5]",
+        "property": "capacity_retention",
+        "raw_value": "89.2%",
+        "value": 89.2,
+        "unit": "%",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b).",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_800].calcination_temperature",
+        "property": "calcination_temperature",
+        "raw_value": "800 °C",
+        "value": 800.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_800].performance_points[0]",
+        "property": "specific_surface_area",
+        "raw_value": "62.92 m2/g",
+        "value": 62.92,
+        "unit": "m2/g",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 10,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_nmc_prior].performance_points[0]",
+        "property": "specific_capacity",
+        "raw_value": "160 mAh/g",
+        "value": 160.0,
+        "unit": "mAh/g",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_nmc_prior].performance_points[1]",
+        "property": "capacity_retention",
+        "raw_value": "25%",
+        "value": 25.0,
+        "unit": "%",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_lno_prior].performance_points[0]",
+        "property": "specific_capacity",
+        "raw_value": "167.5 mAh/g",
+        "value": 167.5,
+        "unit": "mAh/g",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_lno_prior].performance_points[1]",
+        "property": "capacity_retention",
+        "raw_value": "63.8%",
+        "value": 63.8,
+        "unit": "%",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_lco_prior].performance_points[0]",
+        "property": "specific_capacity",
+        "raw_value": "165 mAh/g",
+        "value": 165.0,
+        "unit": "mAh/g",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "LCO 1 C 165 100 61 [38]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_lco_prior].performance_points[1]",
+        "property": "capacity_retention",
+        "raw_value": "61%",
+        "value": 61.0,
+        "unit": "%",
+        "ownership": "comparison_table",
+        "reason": "ownership_comparison_table",
+        "evidence": [
+          {
+            "page": 13,
+            "section": "Table 1",
+            "text_snippet": "LCO 1 C 165 100 61 [38]",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_limtio4_prior].performance_points[0]",
+        "property": "diffusion_coefficient",
+        "raw_value": "2.71 × 10–14 cm2 s−1",
+        "value": 2.71e-14,
+        "unit": "cm2 s-1",
+        "ownership": "cited_prior_work",
+        "reason": "ownership_cited_prior_work",
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+            "source_type": "text",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_limtio4_prior].performance_points[1]",
+        "property": "diffusion_coefficient",
+        "raw_value": "2.91 × 10–14 cm2 s−1",
+        "value": 2.91e-14,
+        "unit": "cm2 s-1",
+        "ownership": "cited_prior_work",
+        "reason": "ownership_cited_prior_work",
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+            "source_type": "text",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_limtio4_prior].performance_points[2]",
+        "property": "diffusion_coefficient",
+        "raw_value": "3.05 × 10–14 cm2 s−1",
+        "value": 3.05e-14,
+        "unit": "cm2 s-1",
+        "ownership": "cited_prior_work",
+        "reason": "ownership_cited_prior_work",
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+            "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+            "source_type": "text",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      }
+    ]
+  },
+  "canonical_quantitative_metrics": {
+    "canonical_quantitative_values": 45,
+    "verbatim_supported_values": 45,
+    "duplicate_measurement_signatures": 18,
+    "duplicate_scientific_output_signatures": 0
+  },
+  "calculations": 0,
+  "calculation_outputs": 0,
+  "unresolved_condition_conflicts": 1,
+  "referential_integrity_warnings": [],
+  "manual_gold": {
+    "passed": 16,
+    "total": 20,
+    "score": 0.783,
+    "structural_accuracy": 0.933,
+    "value_accuracy": 1.0,
+    "condition_association_accuracy": 0.6,
+    "provenance_coverage": 0.6,
+    "overall_score": 0.783,
+    "checks": [
+      {
+        "check": "title",
+        "pass": true,
+        "observed": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+        "expected": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method"
+      },
+      {
+        "check": "DOI",
+        "pass": true,
+        "observed": "10.3390/batteries11040142",
+        "expected": "10.3390/batteries11040142"
+      },
+      {
+        "check": "materials_synthesis type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "expected": true
+      },
+      {
+        "check": "electrode_fabrication type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "expected": true
+      },
+      {
+        "check": "cell_assembly type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "expected": true
+      },
+      {
+        "check": "electrochemical_performance type",
+        "pass": true,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "expected": true
+      },
+      {
+        "check": "impedance_eis type",
+        "pass": false,
+        "observed": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "expected": true
+      },
+      {
+        "check": "Li2FeTiO4 material",
+        "pass": true,
+        "observed": "Li2FeTiO4",
+        "expected": "Li2FeTiO4"
+      },
+      {
+        "check": "sol-gel synthesis",
+        "pass": true,
+        "observed": "sol-gel",
+        "expected": "sol-gel"
+      },
+      {
+        "check": "electrode fabrication extracted",
+        "pass": true,
+        "observed": true,
+        "expected": true
+      },
+      {
+        "check": "80 wt% active material",
+        "pass": true,
+        "observed": {
+          "raw_value": "80 wt%",
+          "value": 80.0,
+          "unit": "wt%",
+          "qualifier": "exact"
+        },
+        "expected": 80
+      },
+      {
+        "check": "CR2032 cell assembly",
+        "pass": true,
+        "observed": "CR2032 coin cells",
+        "expected": "CR2032"
+      },
+      {
+        "check": "100 uL electrolyte",
+        "pass": true,
+        "observed": {
+          "raw_value": "100 µL",
+          "value": 100.0,
+          "unit": "µL",
+          "qualifier": "exact"
+        },
+        "expected": 100
+      },
+      {
+        "check": "CV 0.1 mV/s",
+        "pass": true,
+        "observed": {
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "qualifier": "exact"
+        },
+        "expected": 0.1
+      },
+      {
+        "check": "100-cycle long-term test",
+        "pass": true,
+        "observed": 100,
+        "expected": 100
+      },
+      {
+        "check": "strict performance specific_capacity=121.3",
+        "pass": true,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance specific_capacity=108.2",
+        "pass": true,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance capacity_retention=89.2",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "capacity_retention",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        }
+      },
+      {
+        "check": "strict performance charge_transfer_resistance=1258.6",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1258.6,
+          "unit": "Ω",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "ohm",
+          "method_contains": [
+            "EIS"
+          ]
+        }
+      },
+      {
+        "check": "strict performance diffusion_coefficient=1.096e-12",
+        "pass": false,
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1.096e-12,
+          "unit": "cm2 s-1",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "expected": {
+          "variant": "700 °C",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "method": "EIS/Warburg",
+          "method_contains": [
+            "EIS"
+          ]
+        }
+      }
+    ],
+    "performance_checks": [
+      {
+        "property": "specific_capacity",
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "value_pass": true,
+        "conditions_pass": true,
+        "provenance_pass": true,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": true,
+        "c_rate_status": "conflicted",
+        "pass": true
+      },
+      {
+        "property": "specific_capacity",
+        "expected": {
+          "variant": "700 °C",
+          "property": "specific_capacity",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "value_pass": true,
+        "conditions_pass": true,
+        "provenance_pass": true,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": true,
+        "c_rate_status": "conflicted",
+        "pass": true
+      },
+      {
+        "property": "capacity_retention",
+        "expected": {
+          "variant": "700 °C",
+          "property": "capacity_retention",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate_status": "conflicted",
+          "c_rate_conflict": {
+            "reported_values": [
+              "0.1 C",
+              "1 C"
+            ]
+          }
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "value_pass": true,
+        "conditions_pass": true,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": true,
+        "c_rate_pass": true,
+        "c_rate_status": "conflicted",
+        "pass": false
+      },
+      {
+        "property": "charge_transfer_resistance",
+        "expected": {
+          "variant": "700 °C",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "ohm",
+          "method_contains": [
+            "EIS"
+          ]
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1258.6,
+          "unit": "Ω",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": false,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": false,
+        "c_rate_pass": true,
+        "c_rate_status": "not_required",
+        "pass": false
+      },
+      {
+        "property": "diffusion_coefficient",
+        "expected": {
+          "variant": "700 °C",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "method": "EIS/Warburg",
+          "method_contains": [
+            "EIS"
+          ]
+        },
+        "observed": {
+          "group_id": "group_700",
+          "variant": "calcined at 700 °C",
+          "material_ref": "mat_li2fetio4",
+          "value": 1.096e-12,
+          "unit": "cm2 s-1",
+          "cycle": null,
+          "c_rate": null,
+          "method": null,
+          "evidence_count": 1
+        },
+        "value_pass": true,
+        "conditions_pass": false,
+        "provenance_pass": true,
+        "sample_variant_pass": true,
+        "cycle_pass": true,
+        "method_pass": false,
+        "c_rate_pass": true,
+        "c_rate_status": "not_required",
+        "pass": false
+      }
+    ]
+  }
+}

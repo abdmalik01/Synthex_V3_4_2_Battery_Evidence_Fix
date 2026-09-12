@@ -1,0 +1,376 @@
+{
+  "source": {
+    "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+    "doi": "10.1016/j.xcrp.2026.103334",
+    "url": "https://doi.org/10.1016/j.xcrp.2026.103334",
+    "year": 2026,
+    "authors": [
+      "Binbin Zhu",
+      "Martinus Putra Widjaja",
+      "Tobias Bergmann",
+      "Mustapha Eddah",
+      "Yue Yao",
+      "Erlendur Jo´ nsson",
+      "Daniel Schro¨ der"
+    ],
+    "dataset_source": null
+  },
+  "paper_types": [
+    "impedance_eis",
+    "degradation_health",
+    "battery_dataset_modelling"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_active",
+      "name": "Lithium vanadium phosphate",
+      "formula": "Li3V2(PO4)3",
+      "role": "active_material",
+      "ownership": "focal_work",
+      "composition_raw": "Li3V2(PO4)3",
+      "morphology": null,
+      "phase": null,
+      "synthesis": null,
+      "evidence": [
+        {
+          "page": 4,
+          "section": "Data generation and preprocessing",
+          "text_snippet": "electrode active material Li3V2(PO4)3",
+          "source_type": "text",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "material_id": "mat_se",
+      "name": "ceramic oxide solid electrolyte",
+      "formula": null,
+      "role": "electrolyte",
+      "ownership": "focal_work",
+      "composition_raw": "ceramic-based oxide SE",
+      "morphology": null,
+      "phase": null,
+      "synthesis": null,
+      "evidence": [
+        {
+          "page": 3,
+          "section": "Data generation and preprocessing",
+          "text_snippet": "ceramic-based oxide SE",
+          "source_type": "text",
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "proto_cycling_eis",
+      "name": "CCCV Cycling and EIS Protocol",
+      "ownership": "focal_work",
+      "charge_protocol": {
+        "mode": "CCCV",
+        "constant_current": null,
+        "voltage_limit": {
+          "raw_value": "2.4 V",
+          "value": 2.4,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_current": null,
+        "additional_steps": []
+      },
+      "discharge_protocol": {
+        "mode": "CCCV",
+        "current": null,
+        "cutoff_voltage": {
+          "raw_value": "0 V",
+          "value": 0,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_voltages": [],
+        "additional_steps": []
+      },
+      "impedance_protocol": {
+        "method": "GEIS",
+        "frequency_min": {
+          "raw_value": "10 mHz",
+          "value": 0.01,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "frequency_max": {
+          "raw_value": "10 kHz",
+          "value": 10000,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "amplitude": {
+          "raw_value": "5 μA",
+          "value": 5e-6,
+          "unit": "A",
+          "qualifier": "exact"
+        },
+        "bias": null
+      },
+      "electrochemical_testing": {
+        "cv_scan_rate": null,
+        "voltage_min": {
+          "raw_value": "0 V",
+          "value": 0,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "voltage_max": {
+          "raw_value": "2.4 V",
+          "value": 2.4,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "c_rate_definition": "0.1, 0.25, 0.5, and 1 C",
+        "rate_capability_range": null,
+        "long_term_cycles": 100,
+        "long_term_c_rate": null,
+        "temperature": {
+          "raw_value": "25◦C",
+          "value": 25,
+          "unit": "°C",
+          "qualifier": "exact"
+        },
+        "equipment": [
+          "Biologic BCS-810 cycler"
+        ],
+        "evidence": [
+          {
+            "page": 12,
+            "section": "Cell study and analysis",
+            "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+            "source_type": "text",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "electrode_fabrication": null,
+      "cell_assembly": {
+        "cell_format": "multilayer ceramic chip",
+        "counter_electrode": "symmetrical",
+        "reference_electrode": null,
+        "separator": "solid electrolyte",
+        "electrolyte": "ceramic oxide",
+        "electrolyte_volume": null,
+        "atmosphere": null,
+        "glovebox_o2": null,
+        "glovebox_h2o": null,
+        "evidence": [
+          {
+            "page": 12,
+            "section": "Cell study and analysis",
+            "text_snippet": "The cell dimensions are 4.4 × 3.0 × 1.1 mm3; it is designed for applications that require lower power but compact, reliable, and extremely safe power supplies",
+            "source_type": "text",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "evidence": []
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "group_ceracharge",
+      "ownership": "focal_work",
+      "battery_ids": [
+        "cell-01",
+        "cell-02",
+        "cell-03",
+        "cell-04",
+        "cell-05",
+        "cell-06",
+        "cell-07",
+        "cell-08"
+      ],
+      "material_ref": "mat_active",
+      "variant_label": "TDK CeraCharge",
+      "chemistry": "SSB",
+      "cathode": "Li3V2(PO4)3",
+      "anode": "Li3V2(PO4)3",
+      "electrolyte": "ceramic oxide",
+      "cell_format": "multilayer ceramic chip",
+      "temperature": {
+        "raw_value": "25◦C",
+        "value": 25,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "proto_cycling_eis"
+      ],
+      "condition_conflicts": [],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "capacity",
+        "impedance",
+        "strain",
+        "displacement"
+      ],
+      "performance_points": [
+        {
+          "property": "mean_absolute_error",
+          "raw_value": "1.6%",
+          "value": 1.6,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": null,
+          "c_rate": null,
+          "voltage_window": "0-2.4 V",
+          "temperature": {
+            "raw_value": "25◦C",
+            "value": 25,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          "method": "Gaussian process regression (GPR) with DRT feature selection",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Performance with DRT-instructed feature selection",
+              "text_snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "mean_absolute_error",
+          "raw_value": "2.4%",
+          "value": 2.4,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": null,
+          "c_rate": null,
+          "voltage_window": "0-2.4 V",
+          "temperature": {
+            "raw_value": "25◦C",
+            "value": 25,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          "method": "Bayesian regression (BR) with DRT feature selection",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Performance with DRT-instructed feature selection",
+              "text_snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%.",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "deviatoric_strain",
+          "raw_value": "0.21 ± 0.18%",
+          "value": 0.21,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "voltage_window": "0-2.4 V",
+          "temperature": null,
+          "method": "Digital Volume Correlation (DVC) of LCT images",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "text_snippet": "the average deviatoric strain for cell-01 was 0.21 ± 0.18%",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "deviatoric_strain",
+          "raw_value": "0.87 ± 0.59%",
+          "value": 0.87,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "voltage_window": "0-2.4 V",
+          "temperature": null,
+          "method": "Digital Volume Correlation (DVC) of SCT images",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "text_snippet": "and for cell-02, 0.87 ± 0.59%.",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "displacement",
+          "raw_value": "1.15 ± 0.42 μm",
+          "value": 1.15,
+          "unit": "μm",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "voltage_window": "0-2.4 V",
+          "temperature": null,
+          "method": "DVC",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "text_snippet": "The average displacement of cell-01 is 1.15 ± 0.42 μm",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "displacement",
+          "raw_value": "6.83 ± 3.34 μm",
+          "value": 6.83,
+          "unit": "μm",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C",
+          "voltage_window": "0-2.4 V",
+          "temperature": null,
+          "method": "DVC",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "text_snippet": "whereas that for cell-02 is 6.83 ± 3.34 μm",
+              "source_type": "text",
+              "confidence": 0.95
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [
+        "Volume expansion and mechanical contact loss among layers is one of the most detrimental mechanisms for oxide-based SSBs.",
+        "The cells cycled at 1 C exhibited reduced reliability below 0.2 Hz according to the Kramers-Kronig consistency test."
+      ],
+      "evidence": []
+    }
+  ],
+  "extraction_notes": [
+    "The active material Li3V2(PO4)3 is assumed based on literature comparison (Kobayashi et al. and Sørensen et al.) for the TDK CeraCharge cell.",
+    "The cells were cycled beyond the manufacturer's recommended potential window of 0-1.6 V to 0-2.4 V to induce degradation."
+  ]
+}

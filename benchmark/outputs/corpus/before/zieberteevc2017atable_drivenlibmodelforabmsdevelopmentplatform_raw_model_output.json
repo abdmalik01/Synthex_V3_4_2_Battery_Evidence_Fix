@@ -1,0 +1,242 @@
+{
+  "source": {
+    "title": "A Table-driven Li-Ion Battery Model for a BMS Development Platform – Modeling, Measurements, Implementation and Validation",
+    "doi": null,
+    "url": null,
+    "year": 2017,
+    "authors": [
+      "Carlos Ziebert",
+      "Andreas Melcher",
+      "Boxia Lei",
+      "Magnus Rohde",
+      "Hans Jürgen Seifert",
+      "Matthias Gulbins",
+      "Thomas Markwirth",
+      "Joachim Haase"
+    ],
+    "dataset_source": null
+  },
+  "paper_types": [
+    "battery_dataset_modelling",
+    "electrochemical_performance"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_1",
+      "name": "lithium manganese oxide",
+      "formula": "LiMn2O4",
+      "role": "cathode",
+      "composition_raw": "LiMn2O4",
+      "morphology": null,
+      "phase": null,
+      "synthesis": null,
+      "evidence": [
+        {
+          "page": 3,
+          "section": "2 Parametrization of the cell model",
+          "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode",
+          "source_type": "text",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "proto_cit",
+      "name": "Current Interruption Technique (CIT)",
+      "charge_protocol": null,
+      "discharge_protocol": {
+        "mode": "pulsed",
+        "current": null,
+        "cutoff_voltage": null,
+        "cutoff_voltages": [],
+        "additional_steps": [
+          "Charged to 100% SOC",
+          "Discharged by rectangular current pulses of specified amplitude and length",
+          "Relaxed over a certain time period"
+        ]
+      },
+      "impedance_protocol": null,
+      "electrochemical_testing": {
+        "cv_scan_rate": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "c_rate_definition": null,
+        "rate_capability_range": null,
+        "long_term_cycles": null,
+        "long_term_c_rate": null,
+        "temperature": null,
+        "equipment": [
+          "ES-ARC",
+          "Thermal Hazard Technology",
+          "GSM",
+          "BaSyTec GmbH"
+        ],
+        "evidence": [
+          {
+            "page": 3,
+            "section": "2 Parametrization of the cell model",
+            "text_snippet": "To fill the LUTs several CIT (measurements have been performed in an ARC  (ES-ARC, Thermal Hazard Technology) combined with a battery cycler (GSM, BaSyTec GmbH) at different environmental temperatures under isoperibolic conditions."
+          },
+          {
+            "page": 4,
+            "section": "2 Parametrization of the cell model",
+            "text_snippet": "During the CIT measurement , a cell is first charged to 100% SOC and then discharged by rectangular current pulses of specified amplitude and length (as shown in Fig.4a)), which correspond to a decrease of the SOC  of the cell by a well -defined amount ."
+          }
+        ]
+      },
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "evidence": []
+    },
+    {
+      "protocol_id": "proto_nedc",
+      "name": "NEDC Driving Cycle Validation",
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": {
+        "cv_scan_rate": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "c_rate_definition": null,
+        "rate_capability_range": null,
+        "long_term_cycles": null,
+        "long_term_c_rate": null,
+        "temperature": null,
+        "equipment": [
+          "Voetsch VT3 4018",
+          "BaSyTec HPS"
+        ],
+        "evidence": [
+          {
+            "page": 6,
+            "section": "5 Validation of the cell model",
+            "text_snippet": "These measurements were carried out on the cell and the pack in a temperature chamber (Voetsch VT3 4018) with a battery cycler (BaSyTec HPS)."
+          }
+        ]
+      },
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "evidence": []
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "group_1",
+      "battery_ids": [
+        "cell_18650_single"
+      ],
+      "material_ref": "mat_1",
+      "variant_label": "commercial 18650 cell",
+      "chemistry": "Li-ion",
+      "cathode": "LiMn2O4",
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": "18650",
+      "temperature": null,
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "proto_cit",
+        "proto_nedc"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "terminal voltage",
+        "cell temperature",
+        "open-circuit voltage",
+        "inner resistance"
+      ],
+      "performance_points": [
+        {
+          "property": "capacity",
+          "raw_value": "1600 mAh",
+          "value": 1600.0,
+          "unit": "mAh",
+          "qualifier": "exact",
+          "cycle": null,
+          "c_rate": null,
+          "voltage_window": null,
+          "temperature": null,
+          "method": "nominal manufacturer specification",
+          "evidence": [
+            {
+              "page": 3,
+              "section": "2 Parametrization of the cell model",
+              "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V."
+            }
+          ]
+        },
+        {
+          "property": "voltage",
+          "raw_value": "3.7 V",
+          "value": 3.7,
+          "unit": "V",
+          "qualifier": "exact",
+          "cycle": null,
+          "c_rate": null,
+          "voltage_window": null,
+          "temperature": null,
+          "method": "nominal manufacturer specification",
+          "evidence": [
+            {
+              "page": 3,
+              "section": "2 Parametrization of the cell model",
+              "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V."
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [
+        "Under isoperibolic conditions, the temperature of the calorimeter chamber is kept constant, whereas the cell temperature can vary.",
+        "The deviation in temperature curves for the single cell under NEDC driving cycle was only 0.5 K."
+      ],
+      "evidence": []
+    },
+    {
+      "group_id": "group_2",
+      "battery_ids": [
+        "pack_6s1p"
+      ],
+      "material_ref": "mat_1",
+      "variant_label": "battery pack 6s1p",
+      "chemistry": "Li-ion",
+      "cathode": "LiMn2O4",
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": "pack (6s1p)",
+      "temperature": null,
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "proto_nedc"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "cell voltage",
+        "cell temperature"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [
+        "The battery pack consists of six cells in series (6s1p).",
+        "The model and parameters are the same for all cells in the pack, differing slightly in nominal capacity and initial SOC.",
+        "Good quantitative agreement was found between measurements and simulation for NEDC."
+      ],
+      "evidence": []
+    }
+  ],
+  "extraction_notes": [
+    "Cells used are commercial 18650 cells. Consequently, synthesis, electrode fabrication, and cell assembly parameters are not available in the text.",
+    "Current Interruption Technique (CIT) was used in place of traditional Electrochemical Impedance Spectroscopy (EIS) to determine ECM parameters."
+  ]
+}

@@ -1,0 +1,1217 @@
+{
+  "metadata": {
+    "archive_id": "arc-d5779ad43c837f71",
+    "schema_name": "synthex-archive",
+    "schema_version": "3.4.0",
+    "software_version": "3.4.2",
+    "created_at": "2026-09-11T19:45:44.240511+00:00",
+    "generator": "Synthex V3.4.2",
+    "extractor_model": "gemini-3.5-flash",
+    "domain": "batteries"
+  },
+  "sources": [
+    {
+      "source_id": "src-da708116d2900601",
+      "source_type": "paper",
+      "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+      "doi": "10.1016/j.xcrp.2026.103334",
+      "url": "https://doi.org/10.1016/j.xcrp.2026.103334",
+      "year": 2026,
+      "authors": [
+        "Binbin Zhu",
+        "Martinus Putra Widjaja",
+        "Tobias Bergmann",
+        "Mustapha Eddah",
+        "Yue Yao",
+        "Erlendur Jo´ nsson",
+        "Daniel Schro¨ der"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-2fd9ac8d66d4c38e",
+      "name": "Lithium vanadium phosphate",
+      "formula": "Li3V2(PO4)3",
+      "composition": {},
+      "elements": [],
+      "structure": {},
+      "morphology": {},
+      "defects": [],
+      "dopants": [],
+      "tags": [
+        "active_material",
+        "battery_material",
+        "ownership:focal_work"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-da708116d2900601",
+          "page": 4,
+          "section": "Data generation and preprocessing",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "electrode active material Li3V2(PO4)3",
+          "confidence": 0.95
+        }
+      ]
+    },
+    {
+      "material_id": "mat-9974b7d02309e91a",
+      "name": "ceramic oxide solid electrolyte",
+      "composition": {},
+      "elements": [],
+      "structure": {},
+      "morphology": {},
+      "defects": [],
+      "dopants": [],
+      "tags": [
+        "electrolyte",
+        "battery_material",
+        "ownership:focal_work"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-da708116d2900601",
+          "page": 3,
+          "section": "Data generation and preprocessing",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "ceramic-based oxide SE",
+          "confidence": 0.95
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "device_id": "dev-7806e5b8c11ae657",
+      "name": "cell-01",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-508b59ad8db297c8",
+      "name": "cell-02",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-68ee27b9ef78b684",
+      "name": "cell-03",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-9ae9cfa97d2a4eaa",
+      "name": "cell-04",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-314c5591768bcf6d",
+      "name": "cell-05",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-baee46bd04c0a7be",
+      "name": "cell-06",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-e004d86ed7d9bc36",
+      "name": "cell-07",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-e1c82c68d64f786f",
+      "name": "cell-08",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "configuration": {
+        "chemistry": "SSB",
+        "cathode": "Li3V2(PO4)3",
+        "anode": "Li3V2(PO4)3",
+        "electrolyte": "ceramic oxide",
+        "cell_format": "multilayer ceramic chip",
+        "source_group": "group_ceracharge",
+        "variant_label": "TDK CeraCharge",
+        "protocol_refs": [
+          "proto_cycling_eis"
+        ],
+        "counter_electrode": "symmetrical",
+        "separator": "solid electrolyte",
+        "cell_electrolyte": "ceramic oxide"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    }
+  ],
+  "processes": [],
+  "experiments": [
+    {
+      "experiment_id": "exp-1ddb0cc927e672f6",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "device_ids": [
+        "dev-7806e5b8c11ae657",
+        "dev-508b59ad8db297c8",
+        "dev-68ee27b9ef78b684",
+        "dev-9ae9cfa97d2a4eaa",
+        "dev-314c5591768bcf6d",
+        "dev-baee46bd04c0a7be",
+        "dev-e004d86ed7d9bc36",
+        "dev-e1c82c68d64f786f"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [
+        {
+          "property": "voltage_min",
+          "raw_value": "0 V",
+          "value": 0.0,
+          "unit": "V",
+          "normalized_value": 0.0,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 12,
+              "section": "Cell study and analysis",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "voltage_max",
+          "raw_value": "2.4 V",
+          "value": 2.4,
+          "unit": "V",
+          "normalized_value": 2.4,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 12,
+              "section": "Cell study and analysis",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "test_temperature",
+          "raw_value": "25◦C",
+          "value": 25.0,
+          "unit": "°C",
+          "normalized_value": 25.0,
+          "normalized_unit": "°C",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 12,
+              "section": "Cell study and analysis",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "c_rate_definition",
+          "raw_value": "0.1, 0.25, 0.5, and 1 C",
+          "value": "0.1, 0.25, 0.5, and 1 C",
+          "qualifier": "categorical",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 12,
+              "section": "Cell study and analysis",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+              "confidence": 0.95
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "property": "deviatoric_strain",
+          "raw_value": "0.21 ± 0.18%",
+          "value": 0.21,
+          "unit": "%",
+          "normalized_value": 0.21,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "method": "Digital Volume Correlation (DVC) of LCT images",
+          "conditions": {
+            "cycle": 100,
+            "C_rate": "0.1 C",
+            "voltage_window": "0-2.4 V",
+            "variant": "TDK CeraCharge"
+          },
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "the average deviatoric strain for cell-01 was 0.21 ± 0.18%",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "deviatoric_strain",
+          "raw_value": "0.87 ± 0.59%",
+          "value": 0.87,
+          "unit": "%",
+          "normalized_value": 0.87,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "method": "Digital Volume Correlation (DVC) of SCT images",
+          "conditions": {
+            "cycle": 100,
+            "C_rate": "0.1 C",
+            "voltage_window": "0-2.4 V",
+            "variant": "TDK CeraCharge"
+          },
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "and for cell-02, 0.87 ± 0.59%.",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "displacement",
+          "raw_value": "1.15 ± 0.42 μm",
+          "value": 1.15,
+          "unit": "μm",
+          "normalized_value": 1.15,
+          "normalized_unit": "µm",
+          "qualifier": "exact",
+          "method": "DVC",
+          "conditions": {
+            "cycle": 100,
+            "C_rate": "0.1 C",
+            "voltage_window": "0-2.4 V",
+            "variant": "TDK CeraCharge"
+          },
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The average displacement of cell-01 is 1.15 ± 0.42 μm",
+              "confidence": 0.95
+            }
+          ]
+        },
+        {
+          "property": "displacement",
+          "raw_value": "6.83 ± 3.34 μm",
+          "value": 6.83,
+          "unit": "μm",
+          "normalized_value": 6.83,
+          "normalized_unit": "µm",
+          "qualifier": "exact",
+          "method": "DVC",
+          "conditions": {
+            "cycle": 100,
+            "C_rate": "0.1 C",
+            "voltage_window": "0-2.4 V",
+            "variant": "TDK CeraCharge"
+          },
+          "evidence": [
+            {
+              "source_id": "src-da708116d2900601",
+              "page": 11,
+              "section": "Quantitative evaluation",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "whereas that for cell-02 is 6.83 ± 3.34 μm",
+              "confidence": 0.95
+            }
+          ]
+        }
+      ],
+      "protocol": "charge: CCCV; discharge: CCCV",
+      "evidence": []
+    },
+    {
+      "experiment_id": "exp-6bf7763406f21814",
+      "experiment_type": "GEIS",
+      "material_ids": [
+        "mat-2fd9ac8d66d4c38e"
+      ],
+      "device_ids": [
+        "dev-7806e5b8c11ae657",
+        "dev-508b59ad8db297c8",
+        "dev-68ee27b9ef78b684",
+        "dev-9ae9cfa97d2a4eaa",
+        "dev-314c5591768bcf6d",
+        "dev-baee46bd04c0a7be",
+        "dev-e004d86ed7d9bc36",
+        "dev-e1c82c68d64f786f"
+      ],
+      "target": "impedance / transport",
+      "conditions": [],
+      "outputs": [],
+      "evidence": []
+    }
+  ],
+  "calculations": [],
+  "relationships": [
+    {
+      "relation_id": "rel-2ed8514f0068293e",
+      "subject_id": "arc-d5779ad43c837f71",
+      "predicate": "reported_by",
+      "object_id": "src-da708116d2900601",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-0ef3cd127b2d74e3",
+      "subject_id": "dev-7806e5b8c11ae657",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2d56dab897f17f72",
+      "subject_id": "dev-508b59ad8db297c8",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-54cd40f8b8f49e63",
+      "subject_id": "dev-68ee27b9ef78b684",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-bda57a1aadc6e71f",
+      "subject_id": "dev-9ae9cfa97d2a4eaa",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-4f6210a39df4f892",
+      "subject_id": "dev-314c5591768bcf6d",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2639199d7ee52fa5",
+      "subject_id": "dev-baee46bd04c0a7be",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-4e6627962a840594",
+      "subject_id": "dev-e004d86ed7d9bc36",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-8641b2d0987b0387",
+      "subject_id": "dev-e1c82c68d64f786f",
+      "predicate": "contains_material",
+      "object_id": "mat-2fd9ac8d66d4c38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-652efc6c866ac809",
+      "subject_id": "dev-7806e5b8c11ae657",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-6655173e4849f072",
+      "subject_id": "dev-508b59ad8db297c8",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-104808e98a6e2803",
+      "subject_id": "dev-68ee27b9ef78b684",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-77d40e340cf5fe5d",
+      "subject_id": "dev-9ae9cfa97d2a4eaa",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-74fc4aa31186c053",
+      "subject_id": "dev-314c5591768bcf6d",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-b20583d9a07e9831",
+      "subject_id": "dev-baee46bd04c0a7be",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-9d3035bce9ae5ef4",
+      "subject_id": "dev-e004d86ed7d9bc36",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2e4eb0cf2c2cc55b",
+      "subject_id": "dev-e1c82c68d64f786f",
+      "predicate": "tested_in",
+      "object_id": "exp-1ddb0cc927e672f6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-69b3dd67878c25cc",
+      "subject_id": "dev-7806e5b8c11ae657",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-a8f316a93df6e76d",
+      "subject_id": "dev-508b59ad8db297c8",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-e61f2a2650ef4898",
+      "subject_id": "dev-68ee27b9ef78b684",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-62d2d451afed804c",
+      "subject_id": "dev-9ae9cfa97d2a4eaa",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-38ecc967182d7fb1",
+      "subject_id": "dev-314c5591768bcf6d",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-876123fd3da1b360",
+      "subject_id": "dev-baee46bd04c0a7be",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2f15982051e62efc",
+      "subject_id": "dev-e004d86ed7d9bc36",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-89559a82ceeaf41b",
+      "subject_id": "dev-e1c82c68d64f786f",
+      "predicate": "tested_in",
+      "object_id": "exp-6bf7763406f21814",
+      "attributes": {},
+      "evidence": []
+    }
+  ],
+  "domain_payloads": [
+    {
+      "domain": "batteries",
+      "schema_version": "1.2.0",
+      "tags": [
+        "impedance_eis",
+        "degradation_health",
+        "battery_dataset_modelling"
+      ],
+      "values": {
+        "dataset_source": null,
+        "paper_types": [
+          "impedance_eis",
+          "degradation_health",
+          "battery_dataset_modelling"
+        ],
+        "materials": [
+          {
+            "material_id": "mat_active",
+            "name": "Lithium vanadium phosphate",
+            "formula": "Li3V2(PO4)3",
+            "role": "active_material",
+            "ownership": "focal_work",
+            "composition_raw": "Li3V2(PO4)3",
+            "evidence": [
+              {
+                "page": 4,
+                "section": "Data generation and preprocessing",
+                "text_snippet": "electrode active material Li3V2(PO4)3",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          },
+          {
+            "material_id": "mat_se",
+            "name": "ceramic oxide solid electrolyte",
+            "role": "electrolyte",
+            "ownership": "focal_work",
+            "composition_raw": "ceramic-based oxide SE",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "Data generation and preprocessing",
+                "text_snippet": "ceramic-based oxide SE",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.95
+              }
+            ]
+          }
+        ],
+        "shared_protocols": [
+          {
+            "protocol_id": "proto_cycling_eis",
+            "name": "CCCV Cycling and EIS Protocol",
+            "ownership": "focal_work",
+            "charge_protocol": {
+              "mode": "CCCV",
+              "voltage_limit": {
+                "raw_value": "2.4 V",
+                "value": 2.4,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "additional_steps": []
+            },
+            "discharge_protocol": {
+              "mode": "CCCV",
+              "cutoff_voltage": {
+                "raw_value": "0 V",
+                "value": 0.0,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "cutoff_voltages": [],
+              "additional_steps": []
+            },
+            "impedance_protocol": {
+              "method": "GEIS",
+              "frequency_min": {
+                "raw_value": "10 mHz",
+                "value": 0.01,
+                "unit": "Hz",
+                "qualifier": "exact"
+              },
+              "frequency_max": {
+                "raw_value": "10 kHz",
+                "value": 10000.0,
+                "unit": "Hz",
+                "qualifier": "exact"
+              },
+              "amplitude": {
+                "raw_value": "5 μA",
+                "value": 5e-06,
+                "unit": "A",
+                "qualifier": "exact"
+              }
+            },
+            "electrochemical_testing": {
+              "voltage_min": {
+                "raw_value": "0 V",
+                "value": 0.0,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "voltage_max": {
+                "raw_value": "2.4 V",
+                "value": 2.4,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "c_rate_definition": "0.1, 0.25, 0.5, and 1 C",
+              "long_term_cycles": 100,
+              "temperature": {
+                "raw_value": "25◦C",
+                "value": 25.0,
+                "unit": "°C",
+                "qualifier": "exact"
+              },
+              "equipment": [
+                "Biologic BCS-810 cycler"
+              ],
+              "evidence": [
+                {
+                  "page": 12,
+                  "section": "Cell study and analysis",
+                  "text_snippet": "Electrochemical cycling and EIS testing used a Biologic BCS-810 cycler in a constant temperature (25◦C) and humidity (30%) environment.",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.95
+                }
+              ]
+            },
+            "cell_assembly": {
+              "cell_format": "multilayer ceramic chip",
+              "counter_electrode": "symmetrical",
+              "separator": "solid electrolyte",
+              "electrolyte": "ceramic oxide",
+              "evidence": [
+                {
+                  "page": 12,
+                  "section": "Cell study and analysis",
+                  "text_snippet": "The cell dimensions are 4.4 × 3.0 × 1.1 mm3; it is designed for applications that require lower power but compact, reliable, and extremely safe power supplies",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            "evidence": []
+          }
+        ],
+        "battery_groups": [
+          {
+            "group_id": "group_ceracharge",
+            "ownership": "focal_work",
+            "battery_ids": [
+              "cell-01",
+              "cell-02",
+              "cell-03",
+              "cell-04",
+              "cell-05",
+              "cell-06",
+              "cell-07",
+              "cell-08"
+            ],
+            "material_ref": "mat_active",
+            "variant_label": "TDK CeraCharge",
+            "chemistry": "SSB",
+            "cathode": "Li3V2(PO4)3",
+            "anode": "Li3V2(PO4)3",
+            "electrolyte": "ceramic oxide",
+            "cell_format": "multilayer ceramic chip",
+            "temperature": {
+              "raw_value": "25◦C",
+              "value": 25.0,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "protocol_refs": [
+              "proto_cycling_eis"
+            ],
+            "condition_conflicts": [],
+            "measured_variables": [
+              "capacity",
+              "impedance",
+              "strain",
+              "displacement"
+            ],
+            "performance_points": [
+              {
+                "property": "mean_absolute_error",
+                "raw_value": "1.6%",
+                "value": 1.6,
+                "unit": "%",
+                "qualifier": "exact",
+                "voltage_window": "0-2.4 V",
+                "temperature": {
+                  "raw_value": "25◦C",
+                  "value": 25.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "method": "Gaussian process regression (GPR) with DRT feature selection",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 8,
+                    "section": "Performance with DRT-instructed feature selection",
+                    "text_snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%",
+                    "source_type": "text",
+                    "verbatim_match": false,
+                    "confidence": 0.95
+                  }
+                ]
+              },
+              {
+                "property": "mean_absolute_error",
+                "raw_value": "2.4%",
+                "value": 2.4,
+                "unit": "%",
+                "qualifier": "exact",
+                "voltage_window": "0-2.4 V",
+                "temperature": {
+                  "raw_value": "25◦C",
+                  "value": 25.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "method": "Bayesian regression (BR) with DRT feature selection",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 8,
+                    "section": "Performance with DRT-instructed feature selection",
+                    "text_snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%.",
+                    "source_type": "text",
+                    "verbatim_match": false,
+                    "confidence": 0.95
+                  }
+                ]
+              },
+              {
+                "property": "deviatoric_strain",
+                "raw_value": "0.21 ± 0.18%",
+                "value": 0.21,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 100,
+                "c_rate": "0.1 C",
+                "voltage_window": "0-2.4 V",
+                "method": "Digital Volume Correlation (DVC) of LCT images",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "Quantitative evaluation",
+                    "text_snippet": "the average deviatoric strain for cell-01 was 0.21 ± 0.18%",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.95
+                  }
+                ]
+              },
+              {
+                "property": "deviatoric_strain",
+                "raw_value": "0.87 ± 0.59%",
+                "value": 0.87,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 100,
+                "c_rate": "0.1 C",
+                "voltage_window": "0-2.4 V",
+                "method": "Digital Volume Correlation (DVC) of SCT images",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "Quantitative evaluation",
+                    "text_snippet": "and for cell-02, 0.87 ± 0.59%.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.95
+                  }
+                ]
+              },
+              {
+                "property": "displacement",
+                "raw_value": "1.15 ± 0.42 μm",
+                "value": 1.15,
+                "unit": "μm",
+                "qualifier": "exact",
+                "cycle": 100,
+                "c_rate": "0.1 C",
+                "voltage_window": "0-2.4 V",
+                "method": "DVC",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "Quantitative evaluation",
+                    "text_snippet": "The average displacement of cell-01 is 1.15 ± 0.42 μm",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.95
+                  }
+                ]
+              },
+              {
+                "property": "displacement",
+                "raw_value": "6.83 ± 3.34 μm",
+                "value": 6.83,
+                "unit": "μm",
+                "qualifier": "exact",
+                "cycle": 100,
+                "c_rate": "0.1 C",
+                "voltage_window": "0-2.4 V",
+                "method": "DVC",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "Quantitative evaluation",
+                    "text_snippet": "whereas that for cell-02 is 6.83 ± 3.34 μm",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.95
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [
+              "Volume expansion and mechanical contact loss among layers is one of the most detrimental mechanisms for oxide-based SSBs.",
+              "The cells cycled at 1 C exhibited reduced reliability below 0.2 Hz according to the Kramers-Kronig consistency test."
+            ],
+            "evidence": []
+          }
+        ],
+        "extraction_notes": [
+          "The active material Li3V2(PO4)3 is assumed based on literature comparison (Kobayashi et al. and Sørensen et al.) for the TDK CeraCharge cell.",
+          "The cells were cycled beyond the manufacturer's recommended potential window of 0-1.6 V to 0-2.4 V to induce degradation.",
+          "Association warning: c_rate '0.1 C' for group_ceracharge/deviatoric_strain is not stated in the attached evidence snippet; review before curation.",
+          "Association warning: c_rate '0.1 C' for group_ceracharge/displacement is not stated in the attached evidence snippet; review before curation."
+        ],
+        "pdf_text_parser": "pymupdf",
+        "admissibility": {
+          "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+          "admitted_quantitative_values": 7,
+          "quarantined_quantitative_values": 8,
+          "quarantine": [
+            {
+              "path": "battery_groups[group_ceracharge].temperature",
+              "property": "temperature",
+              "raw_value": "25◦C",
+              "value": 25.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_ceracharge].charge_protocol.charge_voltage_limit",
+              "property": "charge_voltage_limit",
+              "raw_value": "2.4 V",
+              "value": 2.4,
+              "unit": "V",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_ceracharge].discharge_protocol.cutoff_voltages[0]",
+              "property": "discharge_cutoff_voltage",
+              "raw_value": "0 V",
+              "value": 0.0,
+              "unit": "V",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_ceracharge].performance_points[0]",
+              "property": "mean_absolute_error",
+              "raw_value": "1.6%",
+              "value": 1.6,
+              "unit": "%",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 8,
+                  "section": "Performance with DRT-instructed feature selection",
+                  "text_snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.95
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_ceracharge].performance_points[1]",
+              "property": "mean_absolute_error",
+              "raw_value": "2.4%",
+              "value": 2.4,
+              "unit": "%",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 8,
+                  "section": "Performance with DRT-instructed feature selection",
+                  "text_snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.95
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_min",
+              "property": "frequency_min",
+              "raw_value": "10 mHz",
+              "value": 0.01,
+              "unit": "Hz",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_max",
+              "property": "frequency_max",
+              "raw_value": "10 kHz",
+              "value": 10000.0,
+              "unit": "Hz",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_ceracharge].impedance_protocol.ac_amplitude",
+              "property": "ac_amplitude",
+              "raw_value": "5 μA",
+              "value": 5e-06,
+              "unit": "A",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "quality": {
+    "completeness": 1.0,
+    "provenance_coverage": 0.2222222222222222,
+    "unit_normalization_coverage": 1.0,
+    "extraction_confidence": 0.95,
+    "semantic_warnings": [
+      "Scientific admissibility gate quarantined 8 quantitative value(s); raw values remain in the batteries domain payload."
+    ],
+    "validation_status": "schema_validated"
+  }
+}

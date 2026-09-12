@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "archive_id": "arc-b0b476cc335d66e3",
+    "schema_name": "synthex-archive",
+    "schema_version": "3.4.0",
+    "software_version": "3.4.2",
+    "created_at": "2026-09-11T18:53:22.370821+00:00",
+    "generator": "Synthex V3.4.2",
+    "extractor_model": "gemini-3.5-flash",
+    "domain": "batteries"
+  },
+  "sources": [
+    {
+      "source_id": "src-f2480ef5606342cc",
+      "source_type": "paper",
+      "title": "A Table-driven Li-Ion Battery Model for a BMS Development Platform – Modeling, Measurements, Implementation and Validation",
+      "year": 2017,
+      "authors": [
+        "Carlos Ziebert",
+        "Andreas Melcher",
+        "Boxia Lei",
+        "Magnus Rohde",
+        "Hans Jürgen Seifert",
+        "Matthias Gulbins",
+        "Thomas Markwirth",
+        "Joachim Haase"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-f44c8a2a444a5f94",
+      "name": "lithium manganese oxide",
+      "formula": "LiMn2O4",
+      "composition": {},
+      "elements": [],
+      "structure": {},
+      "morphology": {},
+      "defects": [],
+      "dopants": [],
+      "tags": [
+        "cathode",
+        "battery_material"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-f2480ef5606342cc",
+          "page": 3,
+          "section": "2 Parametrization of the cell model",
+          "source_type": "text",
+          "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "device_id": "dev-4475ac069ccaa59d",
+      "name": "cell_18650_single",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-f44c8a2a444a5f94"
+      ],
+      "configuration": {
+        "chemistry": "Li-ion",
+        "cathode": "LiMn2O4",
+        "cell_format": "18650",
+        "source_group": "group_1",
+        "variant_label": "commercial 18650 cell",
+        "protocol_refs": [
+          "proto_cit",
+          "proto_nedc"
+        ]
+      },
+      "tags": [
+        "battery"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-f94d50b6af263fda",
+      "name": "pack_6s1p",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-f44c8a2a444a5f94"
+      ],
+      "configuration": {
+        "chemistry": "Li-ion",
+        "cathode": "LiMn2O4",
+        "cell_format": "pack (6s1p)",
+        "source_group": "group_2",
+        "variant_label": "battery pack 6s1p",
+        "protocol_refs": [
+          "proto_nedc"
+        ]
+      },
+      "tags": [
+        "battery"
+      ],
+      "evidence": []
+    }
+  ],
+  "processes": [],
+  "experiments": [
+    {
+      "experiment_id": "exp-5cfc50d53de4d7ee",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-f44c8a2a444a5f94"
+      ],
+      "device_ids": [
+        "dev-4475ac069ccaa59d"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [],
+      "outputs": [
+        {
+          "property": "capacity",
+          "raw_value": "1600 mAh",
+          "value": 1600.0,
+          "unit": "mAh",
+          "normalized_value": 1600.0,
+          "normalized_unit": "mAh",
+          "qualifier": "exact",
+          "method": "nominal manufacturer specification",
+          "conditions": {
+            "variant": "commercial 18650 cell"
+          },
+          "evidence": [
+            {
+              "source_id": "src-f2480ef5606342cc",
+              "page": 3,
+              "section": "2 Parametrization of the cell model",
+              "source_type": "unknown",
+              "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V."
+            }
+          ]
+        },
+        {
+          "property": "voltage",
+          "raw_value": "3.7 V",
+          "value": 3.7,
+          "unit": "V",
+          "normalized_value": 3.7,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "method": "nominal manufacturer specification",
+          "conditions": {
+            "variant": "commercial 18650 cell"
+          },
+          "evidence": [
+            {
+              "source_id": "src-f2480ef5606342cc",
+              "page": 3,
+              "section": "2 Parametrization of the cell model",
+              "source_type": "unknown",
+              "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V."
+            }
+          ]
+        }
+      ],
+      "protocol": "discharge: pulsed",
+      "evidence": []
+    },
+    {
+      "experiment_id": "exp-2ea446698657d0ae",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-f44c8a2a444a5f94"
+      ],
+      "device_ids": [
+        "dev-f94d50b6af263fda"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [],
+      "outputs": [],
+      "evidence": []
+    }
+  ],
+  "calculations": [],
+  "relationships": [
+    {
+      "relation_id": "rel-3d8ce2ff39255f80",
+      "subject_id": "arc-b0b476cc335d66e3",
+      "predicate": "reported_by",
+      "object_id": "src-f2480ef5606342cc",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-f91753990790436b",
+      "subject_id": "dev-4475ac069ccaa59d",
+      "predicate": "contains_material",
+      "object_id": "mat-f44c8a2a444a5f94",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-245d6bcd3609d531",
+      "subject_id": "dev-4475ac069ccaa59d",
+      "predicate": "tested_in",
+      "object_id": "exp-5cfc50d53de4d7ee",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-b18264f2179b76de",
+      "subject_id": "dev-f94d50b6af263fda",
+      "predicate": "contains_material",
+      "object_id": "mat-f44c8a2a444a5f94",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-b1e4c53b9f66572f",
+      "subject_id": "dev-f94d50b6af263fda",
+      "predicate": "tested_in",
+      "object_id": "exp-2ea446698657d0ae",
+      "attributes": {},
+      "evidence": []
+    }
+  ],
+  "domain_payloads": [
+    {
+      "domain": "batteries",
+      "schema_version": "1.2.0",
+      "tags": [
+        "battery_dataset_modelling",
+        "electrochemical_performance"
+      ],
+      "values": {
+        "dataset_source": null,
+        "paper_types": [
+          "battery_dataset_modelling",
+          "electrochemical_performance"
+        ],
+        "materials": [
+          {
+            "material_id": "mat_1",
+            "name": "lithium manganese oxide",
+            "formula": "LiMn2O4",
+            "role": "cathode",
+            "composition_raw": "LiMn2O4",
+            "evidence": [
+              {
+                "page": 3,
+                "section": "2 Parametrization of the cell model",
+                "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode",
+                "source_type": "text",
+                "confidence": 0.9
+              }
+            ]
+          }
+        ],
+        "shared_protocols": [
+          {
+            "protocol_id": "proto_cit",
+            "name": "Current Interruption Technique (CIT)",
+            "discharge_protocol": {
+              "mode": "pulsed",
+              "cutoff_voltages": [],
+              "additional_steps": [
+                "Charged to 100% SOC",
+                "Discharged by rectangular current pulses of specified amplitude and length",
+                "Relaxed over a certain time period"
+              ]
+            },
+            "electrochemical_testing": {
+              "equipment": [
+                "ES-ARC",
+                "Thermal Hazard Technology",
+                "GSM",
+                "BaSyTec GmbH"
+              ],
+              "evidence": [
+                {
+                  "page": 3,
+                  "section": "2 Parametrization of the cell model",
+                  "text_snippet": "To fill the LUTs several CIT (measurements have been performed in an ARC  (ES-ARC, Thermal Hazard Technology) combined with a battery cycler (GSM, BaSyTec GmbH) at different environmental temperatures under isoperibolic conditions.",
+                  "source_type": "unknown"
+                },
+                {
+                  "page": 4,
+                  "section": "2 Parametrization of the cell model",
+                  "text_snippet": "During the CIT measurement , a cell is first charged to 100% SOC and then discharged by rectangular current pulses of specified amplitude and length (as shown in Fig.4a)), which correspond to a decrease of the SOC  of the cell by a well -defined amount .",
+                  "source_type": "unknown"
+                }
+              ]
+            },
+            "evidence": []
+          },
+          {
+            "protocol_id": "proto_nedc",
+            "name": "NEDC Driving Cycle Validation",
+            "electrochemical_testing": {
+              "equipment": [
+                "Voetsch VT3 4018",
+                "BaSyTec HPS"
+              ],
+              "evidence": [
+                {
+                  "page": 6,
+                  "section": "5 Validation of the cell model",
+                  "text_snippet": "These measurements were carried out on the cell and the pack in a temperature chamber (Voetsch VT3 4018) with a battery cycler (BaSyTec HPS).",
+                  "source_type": "unknown"
+                }
+              ]
+            },
+            "evidence": []
+          }
+        ],
+        "battery_groups": [
+          {
+            "group_id": "group_1",
+            "battery_ids": [
+              "cell_18650_single"
+            ],
+            "material_ref": "mat_1",
+            "variant_label": "commercial 18650 cell",
+            "chemistry": "Li-ion",
+            "cathode": "LiMn2O4",
+            "cell_format": "18650",
+            "protocol_refs": [
+              "proto_cit",
+              "proto_nedc"
+            ],
+            "measured_variables": [
+              "terminal voltage",
+              "cell temperature",
+              "open-circuit voltage",
+              "inner resistance"
+            ],
+            "performance_points": [
+              {
+                "property": "capacity",
+                "raw_value": "1600 mAh",
+                "value": 1600.0,
+                "unit": "mAh",
+                "qualifier": "exact",
+                "method": "nominal manufacturer specification",
+                "evidence": [
+                  {
+                    "page": 3,
+                    "section": "2 Parametrization of the cell model",
+                    "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V.",
+                    "source_type": "unknown"
+                  }
+                ]
+              },
+              {
+                "property": "voltage",
+                "raw_value": "3.7 V",
+                "value": 3.7,
+                "unit": "V",
+                "qualifier": "exact",
+                "method": "nominal manufacturer specification",
+                "evidence": [
+                  {
+                    "page": 3,
+                    "section": "2 Parametrization of the cell model",
+                    "text_snippet": "The cell under consideration was a commercial 18650 cell with LiMn2O4 cathode, a nominal cell capacity  1600 mAh and a nominal cell voltage of 3.7 V.",
+                    "source_type": "unknown"
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [
+              "Under isoperibolic conditions, the temperature of the calorimeter chamber is kept constant, whereas the cell temperature can vary.",
+              "The deviation in temperature curves for the single cell under NEDC driving cycle was only 0.5 K."
+            ],
+            "evidence": []
+          },
+          {
+            "group_id": "group_2",
+            "battery_ids": [
+              "pack_6s1p"
+            ],
+            "material_ref": "mat_1",
+            "variant_label": "battery pack 6s1p",
+            "chemistry": "Li-ion",
+            "cathode": "LiMn2O4",
+            "cell_format": "pack (6s1p)",
+            "protocol_refs": [
+              "proto_nedc"
+            ],
+            "measured_variables": [
+              "cell voltage",
+              "cell temperature"
+            ],
+            "performance_points": [],
+            "qualitative_findings": [
+              "The battery pack consists of six cells in series (6s1p).",
+              "The model and parameters are the same for all cells in the pack, differing slightly in nominal capacity and initial SOC.",
+              "Good quantitative agreement was found between measurements and simulation for NEDC."
+            ],
+            "evidence": []
+          }
+        ],
+        "extraction_notes": [
+          "Cells used are commercial 18650 cells. Consequently, synthesis, electrode fabrication, and cell assembly parameters are not available in the text.",
+          "Current Interruption Technique (CIT) was used in place of traditional Electrochemical Impedance Spectroscopy (EIS) to determine ECM parameters."
+        ]
+      }
+    }
+  ],
+  "quality": {
+    "completeness": 0.8571428571428571,
+    "provenance_coverage": 0.25,
+    "unit_normalization_coverage": 1.0,
+    "extraction_confidence": 0.9,
+    "semantic_warnings": [],
+    "validation_status": "schema_validated"
+  }
+}

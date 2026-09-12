@@ -1,0 +1,414 @@
+{
+  "filename": "coatings-16-00912.pdf",
+  "manifest": {
+    "filename": "coatings-16-00912.pdf",
+    "title": "Anode Materials for Lithium-Ion Batteries, from Conventional Materials to High-Entropy Oxides: A Review of Synthesis Methods, Properties and Sustainability Challenges",
+    "document_type": "review",
+    "subtypes": [
+      "anode_review",
+      "synthesis_review",
+      "high_entropy_oxides"
+    ],
+    "benchmark_priority": "B",
+    "use": "large synthesis-method/alias coverage"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 31,
+    "prompt_characters": 127618,
+    "truncated_at_180000": false,
+    "table_markers": 4,
+    "figure_markers": 6
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.914,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 18.25,
+      "biomaterials": 0.0,
+      "catalysis": 3.5,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 0.0,
+      "membranes": 1.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 1.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "lithium-ion",
+        "li-ion",
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte",
+        "coulombic",
+        "capacity retention",
+        "c-rate"
+      ],
+      "biomaterials": [],
+      "catalysis": [
+        "catalyst",
+        "catalysis",
+        "electrocatalysis"
+      ],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [],
+      "membranes": [
+        "membrane"
+      ],
+      "photovoltaics": [],
+      "semiconductors": [
+        "semiconductor"
+      ],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "materials_synthesis",
+      "electrochemical_performance",
+      "electrode_fabrication",
+      "degradation_health",
+      "battery_dataset_modelling"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "materials_synthesis",
+      "electrochemical_performance",
+      "battery_dataset_modelling"
+    ],
+    "materials": 21,
+    "shared_protocols": 0,
+    "battery_groups": 21,
+    "performance_points": 33,
+    "archive_completeness": 0.6,
+    "archive_semantic_warnings": [],
+    "missing_fields": []
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [
+      "battery_groups[0].performance_points[0].voltage_window",
+      "battery_groups[0].performance_points[1].voltage_window",
+      "battery_groups[1].performance_points[0].voltage_window",
+      "battery_groups[2].performance_points[0].voltage_window",
+      "battery_groups[2].performance_points[1].voltage_window",
+      "battery_groups[3].performance_points[0].voltage_window",
+      "battery_groups[4].performance_points[0].voltage_window",
+      "battery_groups[4].performance_points[1].voltage_window",
+      "battery_groups[4].performance_points[2].voltage_window",
+      "battery_groups[5].performance_points[0].voltage_window",
+      "battery_groups[6].performance_points[0].voltage_window",
+      "battery_groups[6].performance_points[1].voltage_window",
+      "battery_groups[7].performance_points[0].voltage_window",
+      "battery_groups[8].performance_points[0].voltage_window",
+      "battery_groups[8].performance_points[1].voltage_window",
+      "battery_groups[9].performance_points[0].voltage_window",
+      "battery_groups[9].performance_points[1].voltage_window",
+      "battery_groups[9].performance_points[2].voltage_window",
+      "battery_groups[10].performance_points[0].voltage_window",
+      "battery_groups[11].performance_points[0].voltage_window",
+      "battery_groups[12].performance_points[0].voltage_window",
+      "battery_groups[13].performance_points[0].voltage_window",
+      "battery_groups[14].performance_points[0].voltage_window",
+      "battery_groups[15].performance_points[0].voltage_window",
+      "battery_groups[15].performance_points[1].voltage_window",
+      "battery_groups[16].performance_points[0].voltage_window",
+      "battery_groups[17].performance_points[0].voltage_window",
+      "battery_groups[17].performance_points[1].voltage_window",
+      "battery_groups[18].performance_points[0].voltage_window",
+      "battery_groups[18].performance_points[1].voltage_window",
+      "battery_groups[19].performance_points[0].voltage_window",
+      "battery_groups[19].performance_points[1].voltage_window",
+      "battery_groups[20].performance_points[0].voltage_window"
+    ],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 153
+  },
+  "provenance": {
+    "evidence_capable_records": 92,
+    "records_with_evidence": 59,
+    "record_coverage": 0.641,
+    "snippets_checked": 59,
+    "verbatim_match_coverage": 0.729,
+    "unmatched_snippet_candidates": [
+      {
+        "location": "materials[0]",
+        "page": 4,
+        "snippet": "Lithium has been utilized as a pure metal in crafting anodes for Li-ion batteries since the 1970s. This material demonstrated its suitability for energy storage due to a significant characteristic—its high energy density, with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+      },
+      {
+        "location": "materials[3]",
+        "page": 5,
+        "snippet": "One strategy focuses on creating hybrid nanostructured anodes, such as silicon nanoparticles attached to vertically aligned carbon nanotubes (VACNTs). This design accommodates silicon’s volume fluctuations, enhancing electrode stability and delivering a reversible capacity of 1330 mAh/g over 2000 cycles."
+      },
+      {
+        "location": "materials[7]",
+        "page": 7,
+        "snippet": "Graphene, represented as a monolayer of carbon atoms with sp2 bonds can offer remarkable properties as an anode material... This type of material provides a theoretical specific capacity of 744 mAh/g based on Li2C6"
+      },
+      {
+        "location": "materials[8].synthesis",
+        "page": 10,
+        "snippet": "In their work, Yin et al. [78] present the sol–gel synthesis of Al-doped, carbon-coated Li4Ti5O12 (LTO) anodes, leveraging the method’s ability to produce homogenous, nano-sized particles with uniform doping and carbon coating."
+      },
+      {
+        "location": "materials[9].synthesis",
+        "page": 10,
+        "snippet": "reports the sol–gel synthesis of Li3VO4/carbon (Li3VO4/C) composites for use as anode materials in lithium-ion batteries."
+      },
+      {
+        "location": "materials[14].synthesis",
+        "page": 12,
+        "snippet": "explored the use of flame spray pyrolysis (FSP) for the synthesis of Li4Ti5O12 (LTO) nanoparticles... LTO nanoparticles with an average particle size of around 30–50 nm, offering high surface areas (~100 m 2/g)"
+      },
+      {
+        "location": "materials[16].synthesis",
+        "page": 14,
+        "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization, resulting in uniformly distributed 15 nm SnO2/NiO nanoparticles embedded on conductive CNFs."
+      },
+      {
+        "location": "materials[16].synthesis.steps[0]",
+        "page": null,
+        "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization"
+      },
+      {
+        "location": "materials[16].synthesis.steps[1]",
+        "page": null,
+        "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization"
+      },
+      {
+        "location": "battery_groups[0].performance_points[0]",
+        "page": 4,
+        "snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+      },
+      {
+        "location": "battery_groups[0].performance_points[1]",
+        "page": 4,
+        "snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+      },
+      {
+        "location": "battery_groups[1].performance_points[0]",
+        "page": 8,
+        "snippet": "Graphite | ~372 | ~600 | Medium | High | Low | Medium"
+      },
+      {
+        "location": "battery_groups[3].performance_points[0]",
+        "page": 5,
+        "snippet": "delivering a reversible capacity of 1330 mAh/g over 2000 cycles."
+      },
+      {
+        "location": "battery_groups[10].performance_points[0]",
+        "page": 11,
+        "snippet": "Electrochemical testing showed a stable reversible capacity of 430 mAh/g after 100 cycles at C/10."
+      },
+      {
+        "location": "battery_groups[13].performance_points[0]",
+        "page": 12,
+        "snippet": "the composite exhibited improved electrochemical performance, including higher specific capacity and rate capability (300 mAh/g, two times higher than that achieved by pristine LTO)"
+      },
+      {
+        "location": "battery_groups[18].performance_points[0]",
+        "page": 8,
+        "snippet": "maintaining a reversible capacity of 132 mAh·g−1 after 100 cycles at 100 mA·g−1"
+      }
+    ],
+    "records_without_evidence": [
+      "materials[8]",
+      "materials[9]",
+      "materials[10]",
+      "materials[11]",
+      "materials[12]",
+      "materials[13]",
+      "materials[14]",
+      "materials[15]",
+      "materials[16]",
+      "materials[17]",
+      "materials[18]",
+      "materials[19]",
+      "battery_groups[0]",
+      "battery_groups[1]",
+      "battery_groups[2]",
+      "battery_groups[3]",
+      "battery_groups[4]",
+      "battery_groups[5]",
+      "battery_groups[6]",
+      "battery_groups[7]",
+      "battery_groups[8]",
+      "battery_groups[9]",
+      "battery_groups[10]",
+      "battery_groups[11]",
+      "battery_groups[12]",
+      "battery_groups[13]",
+      "battery_groups[14]",
+      "battery_groups[15]",
+      "battery_groups[16]",
+      "battery_groups[17]",
+      "battery_groups[18]",
+      "battery_groups[19]",
+      "battery_groups[20]"
+    ],
+    "source_type_counts": {
+      "unknown": 54,
+      "text": 5
+    }
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [
+    {
+      "group_id": "group_li_baseline",
+      "property": "specific_capacity",
+      "value": 3861.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_li_baseline",
+      "property": "specific_capacity",
+      "value": 2062.0,
+      "unit": "mAh/cm3",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_graphite_baseline",
+      "property": "specific_capacity",
+      "value": 372.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_si_baseline",
+      "property": "specific_capacity",
+      "value": 3590.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_si_baseline",
+      "property": "specific_capacity",
+      "value": 4200.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_lto_baseline",
+      "property": "specific_capacity",
+      "value": 175.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_sn_baseline",
+      "property": "specific_capacity",
+      "value": 944.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_mwcnt_baseline",
+      "property": "specific_capacity",
+      "value": 312.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_mwcnt_baseline",
+      "property": "specific_capacity",
+      "value": 2087.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_graphene_baseline",
+      "property": "specific_capacity",
+      "value": 744.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_lto_gu",
+      "property": "specific_capacity",
+      "value": 300.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_lto_birrozzi",
+      "property": "specific_capacity",
+      "value": 160.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_zno_laurenti",
+      "property": "specific_capacity",
+      "value": 400.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    },
+    {
+      "group_id": "group_zno_laurenti",
+      "property": "capacity_retention",
+      "value": 62.0,
+      "unit": "%",
+      "reasons": [
+        "retention has no associated cycle"
+      ]
+    },
+    {
+      "group_id": "group_heo_qiu",
+      "property": "specific_capacity",
+      "value": 700.0,
+      "unit": "mAh/g",
+      "reasons": [
+        "capacity has neither cycle nor C-rate association"
+      ]
+    }
+  ],
+  "review_contamination": {
+    "is_review": true,
+    "performance_points": 33,
+    "materials_with_synthesis": 12,
+    "manual_review_required": true,
+    "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually."
+  }
+}

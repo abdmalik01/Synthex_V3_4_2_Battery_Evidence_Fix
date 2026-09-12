@@ -1,0 +1,306 @@
+{
+  "source": {
+    "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+    "doi": "10.3390/batteries11010011",
+    "url": "https://doi.org/10.3390/batteries11010011",
+    "year": 2025,
+    "authors": [
+      "Yuechan Xiao",
+      "Xinrong Huang",
+      "Jinhao Meng",
+      "Yipu Zhang",
+      "Vaclav Knap",
+      "Daniel-Ioan Stroe"
+    ],
+    "pdf_text_parser": "pypdf"
+  },
+  "paper_types": [
+    "impedance_eis",
+    "battery_dataset_modelling",
+    "electrochemical_performance"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_nmc",
+      "name": "Li(NiCoMn)O2",
+      "formula": "Li(NiCoMn)O2",
+      "role": "anode",
+      "ownership": "focal_work",
+      "composition_raw": "Li(NiCoMn)O2",
+      "evidence": [
+        {
+          "page": 4,
+          "section": "3. Experiment Method",
+          "text_snippet": "Anode material Li(NiCoMn)O 2",
+          "source_type": "table",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_plumbago",
+      "name": "Plumbago",
+      "role": "cathode",
+      "ownership": "focal_work",
+      "composition_raw": "Plumbago",
+      "evidence": [
+        {
+          "page": 4,
+          "section": "3. Experiment Method",
+          "text_snippet": "Cathode material Plumbago",
+          "source_type": "table",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "proto_testing",
+      "name": "EIS and Characterization Protocol",
+      "ownership": "focal_work",
+      "charge_protocol": {
+        "mode": "CC-CV",
+        "constant_current": {
+          "raw_value": "0.2 C (0.7 A)",
+          "value": 0.2,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "voltage_limit": {
+          "raw_value": "4.2 V",
+          "value": 4.2,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_current": {
+          "raw_value": "0.02 C (0.07 A)",
+          "value": 0.02,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "additional_steps": []
+      },
+      "discharge_protocol": {
+        "mode": "CC",
+        "current": {
+          "raw_value": "0.2 C",
+          "value": 0.2,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "cutoff_voltage": {
+          "raw_value": "2.5 V",
+          "value": 2.5,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_voltages": [],
+        "additional_steps": []
+      },
+      "impedance_protocol": {
+        "method": "EIS",
+        "frequency_min": {
+          "raw_value": "0.001 Hz",
+          "value": 0.001,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "frequency_max": {
+          "raw_value": "10,000 Hz",
+          "value": 10000.0,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "amplitude": {
+          "raw_value": "5 mV",
+          "value": 5.0,
+          "unit": "mV",
+          "qualifier": "exact"
+        }
+      },
+      "electrochemical_testing": {
+        "c_rate_definition": "0.2 C (0.7 A)",
+        "temperature": {
+          "raw_value": "seven temperatures, ranging from -20 °C to 10 °C (and 20 °C)",
+          "value": -20.0,
+          "unit": "°C to 10 °C (and 20 °C)",
+          "qualifier": "exact"
+        },
+        "equipment": [
+          "MHW-200 (NEWARE)",
+          "MULTI AUTOLAB M204 (Metrohm)"
+        ],
+        "evidence": [
+          {
+            "page": 4,
+            "section": "3. Experiment Method",
+            "text_snippet": "The temperature chamber is MHW-200 produced by NEWARE in Shenzhen, China, which enables the tested battery to stay in a specific constant-temperature environment. The electrochemical workstation is MULTI AUTOLAB M204, produced by Metrohm in Beijing, China, measuring the battery EIS.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "cell_assembly": {
+        "cell_format": "Cylindrical, 18650",
+        "evidence": [
+          {
+            "page": 4,
+            "section": "3. Experiment Method",
+            "text_snippet": "Format Cylindrical, 18650",
+            "source_type": "table",
+            "verbatim_match": true,
+            "confidence": 0.9
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "page": 5,
+          "section": "3.1. Experimental Procedure",
+          "text_snippet": "Fully charge the battery cell using the constant current–constant voltage (CC-CV) mode, and the current of the CC phase and cut-off charging current of the CV phase are 0.2 C (0.7 A) and 0.02 C (0.07 A), respectively; discharge the battery with 0.2 C until the discharging cut-off voltage.",
+          "source_type": "text",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "group_panasonic_18650",
+      "ownership": "focal_work",
+      "battery_ids": [
+        "NCR18650GA"
+      ],
+      "variant_label": "Panasonic NCR18650GA",
+      "chemistry": "NMC-Graphite",
+      "cathode": "Plumbago",
+      "anode": "Li(NiCoMn)O2",
+      "cell_format": "Cylindrical, 18650",
+      "protocol_refs": [
+        "proto_testing"
+      ],
+      "condition_conflicts": [],
+      "measured_variables": [
+        "impedance",
+        "capacity"
+      ],
+      "performance_points": [
+        {
+          "property": "capacity",
+          "raw_value": "3500 mAh",
+          "value": 3500.0,
+          "unit": "mAh",
+          "qualifier": "exact",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 4,
+              "section": "3. Experiment Method",
+              "text_snippet": "Nominal capacity 3500 mAh",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "nominal_voltage",
+          "raw_value": "3.7 V",
+          "value": 3.7,
+          "unit": "V",
+          "qualifier": "exact",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 4,
+              "section": "3. Experiment Method",
+              "text_snippet": "Nominal voltage 3.7 V",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "internal_resistance",
+          "raw_value": "25 mΩ",
+          "value": 25.0,
+          "unit": "mOhm",
+          "qualifier": "exact",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 4,
+              "section": "3. Experiment Method",
+              "text_snippet": "Battery internal resistance 25 m Ω",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "fitting_error",
+          "raw_value": "0.11 ± 0.05 %",
+          "value": 0.11,
+          "unit": "%",
+          "qualifier": "exact",
+          "method": "ZView2 fitting",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "3.2. Experimental Results",
+              "text_snippet": "R 0 0.11 ± 0.05",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "fitting_error",
+          "raw_value": "0.13 ± 0.06 %",
+          "value": 0.13,
+          "unit": "%",
+          "qualifier": "exact",
+          "method": "ZView2 fitting",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "3.2. Experimental Results",
+              "text_snippet": "Rct 0.13 ± 0.06",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [
+        "Ohmic resistance R0 has a negative correlation with temperature.",
+        "RSEI and Rct increase exponentially and are significantly affected by low temperature.",
+        "The impedance model developed for a frequency of 20 Hz has the best impedance estimation accuracy for a wide range of temperatures and SOCs."
+      ],
+      "evidence": [
+        {
+          "page": 5,
+          "section": "3.2. Experimental Results",
+          "text_snippet": "The impedance spectrum-fitting software ZView2 is used to fit the EIS to determine the model parameters",
+          "source_type": "text",
+          "verbatim_match": false,
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "Table 1 lists 'Anode material Li(NiCoMn)O2' and 'Cathode material Plumbago'. This is a swap of typical roles (where Plumbago/graphite is the anode and NMC is the cathode). The extraction preserves the raw roles as reported in the source text to avoid silent correction."
+  ]
+}

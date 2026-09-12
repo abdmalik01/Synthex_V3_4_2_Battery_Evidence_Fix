@@ -1,0 +1,309 @@
+{
+  "source": {
+    "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+    "doi": "10.3390/batteries9020086",
+    "url": "https://doi.org/10.3390/batteries9020086",
+    "year": 2023,
+    "authors": [
+      "Yuqiu Wang",
+      "Binkai Yu",
+      "Jin Xiao",
+      "Limin Zhou",
+      "Mingzhe Chen"
+    ]
+  },
+  "paper_types": [
+    "computational_dft"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_alpha_mno2",
+      "name": "alpha-MnO2",
+      "formula": "MnO2",
+      "role": "cathode",
+      "composition_raw": "alpha-MnO2",
+      "phase": "alpha",
+      "evidence": [
+        {
+          "page": 6,
+          "section": "Table 1",
+          "text_snippet": "α-MnO2",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_beta_namno2",
+      "name": "beta-NaMnO2",
+      "formula": "NaMnO2",
+      "role": "cathode",
+      "composition_raw": "beta-NaMnO2",
+      "phase": "beta",
+      "evidence": [
+        {
+          "page": 6,
+          "section": "Table 1",
+          "text_snippet": "β-NaMnO2",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_na2fe_fecn6",
+      "name": "Na2Fe[Fe(CN)6]",
+      "formula": "Na2Fe[Fe(CN)6]",
+      "role": "cathode",
+      "composition_raw": "Na2Fe[Fe(CN)6]",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "Table 1",
+          "text_snippet": "Na2Fe[Fe(CN)6]",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_na2c6h2o4",
+      "name": "Na2C6H2O4",
+      "formula": "Na2C6H2O4",
+      "role": "cathode",
+      "composition_raw": "Na2C6H2O4",
+      "evidence": [
+        {
+          "page": 8,
+          "section": "Table 1",
+          "text_snippet": "Na2C6H2O4",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [],
+  "battery_groups": [
+    {
+      "group_id": "group_alpha_mno2",
+      "battery_ids": [],
+      "material_ref": "mat_alpha_mno2",
+      "variant_label": "alpha-MnO2",
+      "chemistry": "Na-ion",
+      "cathode": "alpha-MnO2",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.42 V",
+          "value": 3.42,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.23 V",
+          "value": 3.23,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "Experimental",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "band_gap",
+          "raw_value": "2.42 eV",
+          "value": 2.42,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "band_gap",
+          "raw_value": "2.23 eV",
+          "value": 2.23,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "Experimental",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_beta_namno2",
+      "battery_ids": [],
+      "material_ref": "mat_beta_namno2",
+      "variant_label": "beta-NaMnO2",
+      "chemistry": "Na-ion",
+      "cathode": "beta-NaMnO2",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "migration_energy_barrier",
+          "raw_value": "0.3 eV",
+          "value": 0.3,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "migration_energy_barrier",
+          "raw_value": "0.27 eV",
+          "value": 0.27,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "Experimental",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_na2fe_fecn6",
+      "battery_ids": [],
+      "material_ref": "mat_nafe_fecn6",
+      "variant_label": "Na2Fe[Fe(CN)6]",
+      "chemistry": "Na-ion",
+      "cathode": "Na2Fe[Fe(CN)6]",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.32 V",
+          "value": 3.32,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Table 1",
+              "text_snippet": "Na2Fe[Fe(CN)6] reaction voltages 3.32 V 3.23 V",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.23 V",
+          "value": 3.23,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "Experimental",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Table 1",
+              "text_snippet": "Na2Fe[Fe(CN)6] reaction voltages 3.32 V 3.23 V",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_na2c6h2o4",
+      "battery_ids": [],
+      "material_ref": "mat_na2c6h2o4",
+      "variant_label": "Na2C6H2O4",
+      "chemistry": "Na-ion",
+      "cathode": "Na2C6H2O4",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "reaction_voltage",
+          "raw_value": "1.17 V",
+          "value": 1.17,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Table 1",
+              "text_snippet": "Na2C6H2O4 reaction voltages 1.17 V 1.21 V",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "reaction_voltage",
+          "raw_value": "1.21 V",
+          "value": 1.21,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "Experimental",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Table 1",
+              "text_snippet": "Na2C6H2O4 reaction voltages 1.17 V 1.21 V",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    }
+  ],
+  "extraction_notes": [
+    "This paper is a review/perspective summarizing applications of DFT calculations in cathode materials for sodium-ion batteries. No new experimental parameters were created. The data presented are compiled comparison values between DFT calculations and experimental results from cited literature (summarized in Table 1).",
+    "Table 1 contains the raw formula 'Na3.41£0.59FeV(PO4)3' where the symbol '£' represents an OCR corruption or a representation of a vacancy (usually denoted as a square box or □). The raw string was preserved as reported in the source text."
+  ]
+}

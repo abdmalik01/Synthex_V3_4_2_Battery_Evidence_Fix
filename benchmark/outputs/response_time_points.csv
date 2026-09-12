@@ -1,0 +1,7 @@
+sample,source_paper,material,sensor_type,target_analyte,temperature_C,concentration_ppm,response_time,response_time_unit,criterion
+Selective Reduction Laser Sinterin… | SRLS-In2O3,Selective Reduction Laser Sintering: A New Strategy for NO2 Gas Detection Based on In2O3 Nanoparticles,In2O3 nanoparticles,Chemiresistive gas sensor,NO2,,10.0,27.0,s,
+Au/ZnO/In2O3 nanoparticles for enh… | 2%Au/1%ZnO/In2O3,Au/ZnO/In2O3 nanoparticles for enhanced isopropanol gas sensing performance,Au/ZnO/In2O3,Chemiresistive gas sensor,Isopropanol,,100.0,78.0,s,t90
+Ni–In2O3/ZnO MEMS H2S gas sensor | Ni-In2O3/ZnO,Ni–In2O3/ZnO MEMS H2S gas sensor,Ni–In2O3/ZnO,MEMS chemiresistive gas sensor,H2S,300.0,100.0,4.4,s,
+Defect-Driven Selectivity Inversio… | ZnO-NO2,Defect-Driven Selectivity Inversion in ZnO Gas Sensors via Y3+ and Dy3+ Doping for Enhanced VOC Detection with a Suppressed NO2 Response,ZnO,Chemiresistive gas sensor,NO2,230.0,25.0,343.4,s,t90
+Defect-Driven Selectivity Inversio… | ZD4-Ethanol,Defect-Driven Selectivity Inversion in ZnO Gas Sensors via Y3+ and Dy3+ Doping for Enhanced VOC Detection with a Suppressed NO2 Response,Dy-doped ZnO,Chemiresistive gas sensor,Ethanol,279.0,25.0,30.43,s,t90
+Defect-Driven Selectivity Inversio… | ZY4-Acetone,Defect-Driven Selectivity Inversion in ZnO Gas Sensors via Y3+ and Dy3+ Doping for Enhanced VOC Detection with a Suppressed NO2 Response,Y-doped ZnO,Chemiresistive gas sensor,Acetone,258.0,25.0,12.19,s,t90

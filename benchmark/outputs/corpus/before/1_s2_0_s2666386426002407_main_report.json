@@ -1,0 +1,65 @@
+{
+  "filename": "1-s2.0-S2666386426002407-main.pdf",
+  "manifest": {
+    "filename": "1-s2.0-S2666386426002407-main.pdf",
+    "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+    "document_type": "original_research",
+    "subtypes": [
+      "solid_state_batteries",
+      "impedance_eis",
+      "machine_learning",
+      "diagnostics"
+    ],
+    "benchmark_priority": "A",
+    "use": "EIS/DRT/ML original-research benchmark"
+  },
+  "expected_domain": "batteries",
+  "status": "pdf_extraction_failed_before_gemini",
+  "failure_class": "PDF extraction problem",
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": false,
+    "error_type": "PdfReadError",
+    "error": "More than one /FontFile found in {'/StemV': 50, '/FontName': '/FLHIMB+HelveticaNeue-Heavy', '/FontFile': IndirectObject(3326, 0, 1690616511888), '/FontFile3': IndirectObject(3327, 0, 1690616511888), '/Flags': 4, '/Descent': -180, '/FontBBox': [-50, -180, 1000, 720], '/Ascent': 720, '/CapHeight': 670, '/XHeight': 475, '/Type': '/FontDescriptor', '/ItalicAngle': 0, '/MissingWidth': 250}"
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.519,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 1.0,
+      "biomaterials": 0.0,
+      "catalysis": 0.0,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "battery"
+      ],
+      "biomaterials": [],
+      "catalysis": [],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "battery_dataset_modelling"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "metadata_title_fallback",
+    "correct": true
+  },
+  "schema_validation_success": null,
+  "extractor_skipped": "Existing BatteryGeminiExtractor cannot run without extract_pages output."
+}

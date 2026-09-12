@@ -1,0 +1,281 @@
+[
+  {
+    "domain": "additive_manufacturing",
+    "id": "additive_manufacturing.density_prediction",
+    "name": "Density prediction",
+    "target": "relative_density",
+    "group_by": [
+      "alloy",
+      "process"
+    ]
+  },
+  {
+    "domain": "additive_manufacturing",
+    "id": "additive_manufacturing.porosity_prediction",
+    "name": "Porosity prediction",
+    "target": "porosity",
+    "group_by": [
+      "alloy",
+      "process"
+    ]
+  },
+  {
+    "domain": "additive_manufacturing",
+    "id": "additive_manufacturing.melt_pool_geometry_prediction",
+    "name": "Melt pool geometry prediction",
+    "target": "melt_pool_depth",
+    "group_by": [
+      "alloy",
+      "process"
+    ]
+  },
+  {
+    "domain": "batteries",
+    "id": "batteries.capacity_retention_prediction",
+    "name": "Capacity retention prediction",
+    "target": "cycle_retention",
+    "group_by": [
+      "chemistry",
+      "electrode"
+    ]
+  },
+  {
+    "domain": "batteries",
+    "id": "batteries.voltage_prediction",
+    "name": "Voltage prediction",
+    "target": "voltage",
+    "group_by": [
+      "chemistry"
+    ]
+  },
+  {
+    "domain": "batteries",
+    "id": "batteries.rate_capability_prediction",
+    "name": "Rate capability prediction",
+    "target": "specific_capacity",
+    "group_by": [
+      "chemistry",
+      "C_rate"
+    ]
+  },
+  {
+    "domain": "biomaterials",
+    "id": "biomaterials.cell_viability_prediction",
+    "name": "Cell viability prediction",
+    "target": "cell_viability",
+    "group_by": [
+      "material",
+      "cell_line"
+    ]
+  },
+  {
+    "domain": "biomaterials",
+    "id": "biomaterials.degradation_prediction",
+    "name": "Degradation prediction",
+    "target": "degradation_rate",
+    "group_by": [
+      "material",
+      "medium"
+    ]
+  },
+  {
+    "domain": "biomaterials",
+    "id": "biomaterials.mechanical_compatibility_prediction",
+    "name": "Mechanical compatibility prediction",
+    "target": "compressive_modulus",
+    "group_by": [
+      "material",
+      "process"
+    ]
+  },
+  {
+    "domain": "catalysis",
+    "id": "catalysis.activity_prediction",
+    "name": "Activity prediction",
+    "target": "turnover_frequency",
+    "group_by": [
+      "catalyst",
+      "reaction"
+    ]
+  },
+  {
+    "domain": "catalysis",
+    "id": "catalysis.product_selectivity_prediction",
+    "name": "Product selectivity prediction",
+    "target": "product_selectivity",
+    "group_by": [
+      "catalyst",
+      "reaction"
+    ]
+  },
+  {
+    "domain": "catalysis",
+    "id": "catalysis.overpotential_prediction",
+    "name": "Overpotential prediction",
+    "target": "overpotential",
+    "group_by": [
+      "catalyst",
+      "reaction"
+    ]
+  },
+  {
+    "domain": "corrosion",
+    "id": "corrosion.corrosion_rate_prediction",
+    "name": "Corrosion rate prediction",
+    "target": "corrosion_rate",
+    "group_by": [
+      "alloy",
+      "environment"
+    ]
+  },
+  {
+    "domain": "corrosion",
+    "id": "corrosion.inhibitor_efficiency_prediction",
+    "name": "Inhibitor efficiency prediction",
+    "target": "inhibition_efficiency",
+    "group_by": [
+      "alloy",
+      "inhibitor"
+    ]
+  },
+  {
+    "domain": "gas_sensing",
+    "id": "gas_sensing.target_selectivity_prediction",
+    "name": "Target selectivity prediction",
+    "target": "selectivity_ratio",
+    "group_by": [
+      "material",
+      "target"
+    ]
+  },
+  {
+    "domain": "gas_sensing",
+    "id": "gas_sensing.response_time_prediction",
+    "name": "Response time prediction",
+    "target": "response_time",
+    "group_by": [
+      "material",
+      "target"
+    ]
+  },
+  {
+    "domain": "mechanical",
+    "id": "mechanical.yield_strength_prediction",
+    "name": "Yield strength prediction",
+    "target": "yield_strength",
+    "group_by": [
+      "alloy",
+      "process"
+    ]
+  },
+  {
+    "domain": "mechanical",
+    "id": "mechanical.fatigue_life_prediction",
+    "name": "Fatigue life prediction",
+    "target": "fatigue_life",
+    "group_by": [
+      "alloy",
+      "loading"
+    ]
+  },
+  {
+    "domain": "mechanical",
+    "id": "mechanical.creep_rupture_prediction",
+    "name": "Creep rupture prediction",
+    "target": "creep_rupture_time",
+    "group_by": [
+      "alloy",
+      "temperature",
+      "stress"
+    ]
+  },
+  {
+    "domain": "membranes",
+    "id": "membranes.permeability-selectivity_prediction",
+    "name": "Permeability-selectivity prediction",
+    "target": "permeability",
+    "group_by": [
+      "polymer",
+      "gas"
+    ]
+  },
+  {
+    "domain": "membranes",
+    "id": "membranes.rejection_prediction",
+    "name": "Rejection prediction",
+    "target": "rejection",
+    "group_by": [
+      "membrane",
+      "solute"
+    ]
+  },
+  {
+    "domain": "photovoltaics",
+    "id": "photovoltaics.pce_prediction",
+    "name": "PCE prediction",
+    "target": "power_conversion_efficiency",
+    "group_by": [
+      "absorber",
+      "architecture"
+    ]
+  },
+  {
+    "domain": "photovoltaics",
+    "id": "photovoltaics.stability_prediction",
+    "name": "Stability prediction",
+    "target": "stability_retention",
+    "group_by": [
+      "absorber",
+      "encapsulation"
+    ]
+  },
+  {
+    "domain": "semiconductors",
+    "id": "semiconductors.band_gap_prediction",
+    "name": "Band gap prediction",
+    "target": "band_gap",
+    "group_by": [
+      "material"
+    ]
+  },
+  {
+    "domain": "semiconductors",
+    "id": "semiconductors.mobility_prediction",
+    "name": "Mobility prediction",
+    "target": "electron_mobility",
+    "group_by": [
+      "material",
+      "temperature"
+    ]
+  },
+  {
+    "domain": "semiconductors",
+    "id": "semiconductors.defect_formation_prediction",
+    "name": "Defect formation prediction",
+    "target": "defect_formation_energy",
+    "group_by": [
+      "material",
+      "defect"
+    ]
+  },
+  {
+    "domain": "thermoelectrics",
+    "id": "thermoelectrics.zt_prediction",
+    "name": "zT prediction",
+    "target": "zt",
+    "group_by": [
+      "material",
+      "temperature"
+    ]
+  },
+  {
+    "domain": "thermoelectrics",
+    "id": "thermoelectrics.thermal_conductivity_prediction",
+    "name": "Thermal conductivity prediction",
+    "target": "thermal_conductivity",
+    "group_by": [
+      "material",
+      "temperature"
+    ]
+  }
+]

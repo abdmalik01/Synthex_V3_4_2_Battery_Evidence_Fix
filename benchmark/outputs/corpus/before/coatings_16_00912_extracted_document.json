@@ -1,0 +1,1385 @@
+{
+  "source": {
+    "title": "Anode Materials for Lithium-Ion Batteries, from Conventional Materials to High-Entropy Oxides: A Review of Synthesis Methods, Properties and Sustainability Challenges",
+    "doi": "10.3390/coatings16080912",
+    "url": "https://doi.org/10.3390/coatings16080912",
+    "year": 2026,
+    "authors": [
+      "Beatrice-Adriana S, erban",
+      "Ioana-Cristina Badea",
+      "S, tefania Caramarin",
+      "Laura Mădălina Cursaru",
+      "Dumitru Mitrică",
+      "Mihai-T udor Olaru",
+      "Sabina-Andreea Fironda",
+      "Ioana Anasiei",
+      "Dragos, -Florin Marcu",
+      "Mariana Ciurdas,",
+      "Bogdan Florea"
+    ]
+  },
+  "paper_types": [
+    "materials_synthesis",
+    "electrochemical_performance",
+    "battery_dataset_modelling"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_li",
+      "name": "Lithium metal",
+      "formula": "Li",
+      "role": "anode",
+      "composition_raw": "pure metal",
+      "evidence": [
+        {
+          "page": 4,
+          "section": "2.2.1. Graphite",
+          "text_snippet": "Lithium has been utilized as a pure metal in crafting anodes for Li-ion batteries since the 1970s. This material demonstrated its suitability for energy storage due to a significant characteristic—its high energy density, with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_graphite",
+      "name": "Graphite",
+      "formula": "C",
+      "role": "anode",
+      "composition_raw": "carbon with a layered structure",
+      "morphology": "layered",
+      "evidence": [
+        {
+          "page": 4,
+          "section": "2.2.1. Graphite",
+          "text_snippet": "As an alternative to metallic lithium, graphite has gained an important place in the batteries field, being a form of carbon with a layered structure.",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_si",
+      "name": "Silicon",
+      "formula": "Si",
+      "role": "anode",
+      "composition_raw": "Si",
+      "morphology": "nanowires, nanospheres, nanoparticles and silicon films",
+      "phase": "Li 15Si4, Li 22Si5",
+      "evidence": [
+        {
+          "page": 5,
+          "section": "2.2.2. Silicon",
+          "text_snippet": "The theoretical capacity of Si is 3590 mAhg−1 resulting from the analysis of the fully alloyed form of Li 15Si4 at room temperature. This property increases to 4200 mAhg −1 at elevated temperatures and corresponds to the formation of Li 22Si5 compound.",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_si_vacnt",
+      "name": "Silicon nanoparticles on carbon nanotubes",
+      "formula": "Si/VACNT",
+      "role": "anode",
+      "composition_raw": "silicon nanoparticles attached to vertically aligned carbon nanotubes (VACNTs)",
+      "morphology": "hybrid nanostructured",
+      "evidence": [
+        {
+          "page": 5,
+          "section": "2.2.2. Silicon",
+          "text_snippet": "One strategy focuses on creating hybrid nanostructured anodes, such as silicon nanoparticles attached to vertically aligned carbon nanotubes (VACNTs). This design accommodates silicon’s volume fluctuations, enhancing electrode stability and delivering a reversible capacity of 1330 mAh/g over 2000 cycles.",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_lto",
+      "name": "Lithium titanate",
+      "formula": "Li4Ti5O12",
+      "role": "anode",
+      "composition_raw": "Li4Ti5O12",
+      "phase": "spinel",
+      "evidence": [
+        {
+          "page": 5,
+          "section": "2.2.3. Lithium Titanate (Li4Ti5O12, LTO)",
+          "text_snippet": "Another anode material used predominantly in the manufacture of Li-ion batteries is lithium titanate (Li4Ti5O12, LTO).",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_sn",
+      "name": "Tin",
+      "formula": "Sn",
+      "role": "anode",
+      "composition_raw": "Sn",
+      "phase": "Li4.4Sn",
+      "evidence": [
+        {
+          "page": 6,
+          "section": "2.2.4. Tin (Sn)",
+          "text_snippet": "The compound Li4.4Sn, resulting from the alloying of pure tin with lithium, exhibits a high theoretical capacity (~944 mAh/g) compared to conventional graphite anodes",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_mwcnt",
+      "name": "Multi-walled carbon nanotubes",
+      "formula": "C",
+      "role": "anode",
+      "composition_raw": "carbon",
+      "morphology": "nanotubes",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "2.2.5. Carbon Nanotubes (CNTs) and Graphene",
+          "text_snippet": "MWCNTs exhibit a discharge capacity of approximately 312 mAh/g. Chemical etching can further increase lithium storage capacities, with etched MWCNTs reaching values up to 2087 mAh/g",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_graphene",
+      "name": "Graphene",
+      "formula": "C",
+      "role": "anode",
+      "composition_raw": "monolayer of carbon atoms with sp2 bonds",
+      "morphology": "monolayer sheet",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "2.2.5. Carbon Nanotubes (CNTs) and Graphene",
+          "text_snippet": "Graphene, represented as a monolayer of carbon atoms with sp2 bonds can offer remarkable properties as an anode material... This type of material provides a theoretical specific capacity of 744 mAh/g based on Li2C6",
+          "source_type": "unknown"
+        }
+      ]
+    },
+    {
+      "material_id": "mat_lto_yin",
+      "name": "Al-doped carbon-coated lithium titanate",
+      "formula": "Al-Li4Ti5O12/C",
+      "role": "anode",
+      "composition_raw": "Al-doped, carbon-coated Li4Ti5O12",
+      "morphology": "nano-sized particles",
+      "synthesis": {
+        "method": "sol-gel",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 10,
+            "section": "3.2. Sol–Gel Synthesis",
+            "text_snippet": "In their work, Yin et al. [78] present the sol–gel synthesis of Al-doped, carbon-coated Li4Ti5O12 (LTO) anodes, leveraging the method’s ability to produce homogenous, nano-sized particles with uniform doping and carbon coating.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_lvo_thauer",
+      "name": "Li3VO4/carbon composite",
+      "formula": "Li3VO4/C",
+      "role": "anode",
+      "composition_raw": "Li3VO4/carbon",
+      "morphology": "composite",
+      "synthesis": {
+        "method": "sol-gel",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 10,
+            "section": "3.2. Sol–Gel Synthesis",
+            "text_snippet": "reports the sol–gel synthesis of Li3VO4/carbon (Li3VO4/C) composites for use as anode materials in lithium-ion batteries.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_zmo_courtel",
+      "name": "ZnMn2O4 nanoparticles",
+      "formula": "ZnMn2O4",
+      "role": "anode",
+      "composition_raw": "ZnMn2O4",
+      "morphology": "ultra-fine nanoparticles (≤5 nm)",
+      "synthesis": {
+        "method": "hydrothermal",
+        "precursors": [],
+        "solvents": [
+          "ethylene glycol"
+        ],
+        "chelating_agents": [],
+        "steps": [
+          {
+            "step": "reaction in autoclave",
+            "details": "using ethylene glycol as a solvent, yielded highly uniform nanoparticles without the need for post-synthesis annealing.",
+            "evidence": [
+              {
+                "text_snippet": "The hydrothermal method, using ethylene glycol as a solvent enabled precise control over particle size and prevented agglomeration, yielding highly uniform nanoparticles without the need for post-synthesis annealing.",
+                "source_type": "text"
+              }
+            ]
+          }
+        ],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+            "text_snippet": "Courtel et al. [80] reported the hydrothermal synthesis of ultra-fine ZnMn2O4 nanoparticles (≤5 nm) as high-performance anode materials for Li-ion batteries.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_tio2_li",
+      "name": "Nitrogen-doped TiO2/reduced graphene oxide hybrid",
+      "formula": "N-TiO2/rGO",
+      "role": "anode",
+      "composition_raw": "N-TiO2/rGO",
+      "morphology": "hybrids",
+      "synthesis": {
+        "method": "hydrothermal",
+        "precursors": [
+          "thiourea"
+        ],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+            "text_snippet": "reported in their study the synthesis of nitrogen-doped TiO2/reduced graphene oxide (N-TiO2/rGO) hybrids via a hydrothermal approach, employing thiourea as the nitrogen source.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_zno_shen",
+      "name": "ZnO-loaded porous carbon composite",
+      "formula": "ZnO/PC",
+      "role": "anode",
+      "composition_raw": "ZnO/PC",
+      "morphology": "composite, porous carbon matrix with ZnO nanoparticles",
+      "synthesis": {
+        "method": "solvothermal",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 11,
+            "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+            "text_snippet": "obtained ZnO-loaded porous carbon (ZnO/PC) composites for the first time via a facile solvothermal method.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_lto_gu",
+      "name": "MgCo2O4-coated Li4Ti5O12 composite",
+      "formula": "MgCo2O4-coated Li4Ti5O12",
+      "role": "anode",
+      "composition_raw": "MgCo2O4-coated LTO",
+      "morphology": "coated composite",
+      "phase": "spinel",
+      "synthesis": {
+        "method": "co-precipitation",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 12,
+            "section": "3.4. Co-Precipitation Synthesis",
+            "text_snippet": "used in their work the co-precipitation synthesis to obtain MgCo2O4-coated Li4Ti5O12 (LTO) composite anodes for lithium-ion batteries.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_lto_birrozzi",
+      "name": "Li4Ti5O12 nanoparticles",
+      "formula": "Li4Ti5O12",
+      "role": "anode",
+      "composition_raw": "Li4Ti5O12",
+      "morphology": "nanoparticles (30-50 nm)",
+      "synthesis": {
+        "method": "flame spray pyrolysis",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 12,
+            "section": "3.5. Spray Pyrolysis Synthesis",
+            "text_snippet": "explored the use of flame spray pyrolysis (FSP) for the synthesis of Li4Ti5O12 (LTO) nanoparticles... LTO nanoparticles with an average particle size of around 30–50 nm, offering high surface areas (~100 m 2/g)",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_zno_laurenti",
+      "name": "Zinc oxide nanostructures",
+      "formula": "ZnO",
+      "role": "anode",
+      "composition_raw": "ZnO",
+      "morphology": "well-aligned, polycrystalline nanostructures",
+      "phase": "polycrystalline",
+      "synthesis": {
+        "method": "chemical vapor deposition",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 13,
+            "section": "3.6. Chemical Vapor Deposition",
+            "text_snippet": "demonstrate in their work the chemical vapor deposition growth of ZnO nanostructures directly onto stainless steel current collectors for use as binder-free anodes",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_sn_kim",
+      "name": "Ni-doped SnO2-carbon nanofiber composite",
+      "formula": "Ni-SnO2/CNF",
+      "role": "anode",
+      "composition_raw": "Ni-doped SnO2–carbon nanofiber (CNF) composites",
+      "morphology": "porous and highly interconnected nanostructures, 15 nm SnO2/NiO nanoparticles embedded on CNFs",
+      "synthesis": {
+        "method": "electrospinning",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [
+          {
+            "step": "electrospinning",
+            "evidence": [
+              {
+                "text_snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization",
+                "source_type": "text"
+              }
+            ]
+          },
+          {
+            "step": "carbonization",
+            "evidence": [
+              {
+                "text_snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization",
+                "source_type": "text"
+              }
+            ]
+          }
+        ],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 14,
+            "section": "3.7.1. Electrospinning",
+            "text_snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization, resulting in uniformly distributed 15 nm SnO2/NiO nanoparticles embedded on conductive CNFs.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_fe3o4_gu",
+      "name": "Fe3O4/C composite fibers",
+      "formula": "Fe3O4/C",
+      "role": "anode",
+      "composition_raw": "Fe3O4/C",
+      "morphology": "fibers",
+      "synthesis": {
+        "method": "electrospinning",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [
+          {
+            "step": "electrospinning",
+            "evidence": [
+              {
+                "text_snippet": "Fe3O4/C composite fibers were also synthesized by the electrospinning method, followed by carbonization in a vacuum",
+                "source_type": "text"
+              }
+            ]
+          },
+          {
+            "step": "carbonization",
+            "atmosphere": "vacuum",
+            "evidence": [
+              {
+                "text_snippet": "followed by carbonization in a vacuum",
+                "source_type": "text"
+              }
+            ]
+          }
+        ],
+        "calcination_temperatures": [],
+        "atmosphere": "vacuum",
+        "evidence": [
+          {
+            "page": 14,
+            "section": "3.7.1. Electrospinning",
+            "text_snippet": "Fe3O4/C composite fibers were also synthesized by the electrospinning method, followed by carbonization in a vacuum",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_heo_jin",
+      "name": "Spinel High-Entropy Oxide",
+      "formula": "(Cr0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4",
+      "role": "anode",
+      "composition_raw": "(Cr0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4",
+      "morphology": "nanoparticles",
+      "phase": "spinel",
+      "synthesis": {
+        "method": "solution combustion",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 8,
+            "section": "2.2.6. High Entropy Oxides (HEOs)",
+            "text_snippet": "synthesized spinel HEO nanoparticles, (Cr 0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4, using a solution combustion method.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_heo_li",
+      "name": "Porous spinel-phase High-Entropy Oxide",
+      "formula": "(Cr0.2Fe0.2Co0.2Ni0.2Zn0.2)3O4",
+      "role": "anode",
+      "composition_raw": "(Cr0.2Fe0.2Co0.2Ni0.2Zn0.2)3O4",
+      "morphology": "porous",
+      "phase": "porous spinel-phase",
+      "synthesis": {
+        "method": "sol-gel",
+        "precursors": [],
+        "solvents": [],
+        "chelating_agents": [],
+        "steps": [],
+        "calcination_temperatures": [],
+        "evidence": [
+          {
+            "page": 8,
+            "section": "2.2.6. High Entropy Oxides (HEOs)",
+            "text_snippet": "the porous spinel-phase HEO, (Cr0.2Fe0.2Co0.2Ni0.2Zn0.2)3O4, was synthesized at low temperatures using a sol–gel method.",
+            "source_type": "unknown"
+          }
+        ]
+      },
+      "evidence": []
+    },
+    {
+      "material_id": "mat_heo_qiu",
+      "name": "High Entropy Oxide mixture",
+      "formula": "(Mg0.2Co0.2Ni0.2Cu0.2Zn0.2)O",
+      "role": "anode",
+      "composition_raw": "(Mg0.2Co0.2Ni0.2Cu0.2Zn0.2)O",
+      "morphology": "mixture",
+      "evidence": [
+        {
+          "page": 8,
+          "section": "2.2.6. High Entropy Oxides (HEOs)",
+          "text_snippet": "examined the behavior and properties of a (Mg0.2Co0.2Ni0.2Cu0.2Zn0.2)O mixture.",
+          "source_type": "unknown"
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [],
+  "battery_groups": [
+    {
+      "group_id": "group_li_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_li",
+      "variant_label": "Pure lithium metal anode",
+      "chemistry": "Li",
+      "anode": "Li",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "3861 mAhg−1",
+          "value": 3861.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 4,
+              "section": "2.2.1. Graphite",
+              "text_snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "2062 mAhcm−3",
+          "value": 2062.0,
+          "unit": "mAh/cm3",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 4,
+              "section": "2.2.1. Graphite",
+              "text_snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_graphite_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_graphite",
+      "variant_label": "Graphite baseline anode",
+      "chemistry": "Li-ion",
+      "anode": "graphite",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "~372 mAh/g",
+          "value": 372.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "Table 1",
+              "text_snippet": "Graphite | ~372 | ~600 | Medium | High | Low | Medium",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_si_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_si",
+      "variant_label": "Silicon baseline anode",
+      "chemistry": "Li-Si",
+      "anode": "Si",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "3590 mAhg−1",
+          "value": 3590.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "method": "theoretical limit of Li15Si4 at room temperature",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "2.2.2. Silicon",
+              "text_snippet": "The theoretical capacity of Si is 3590 mAhg−1 resulting from the analysis of the fully alloyed form of Li 15Si4 at room temperature.",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "4200 mAhg −1",
+          "value": 4200.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "method": "theoretical limit of Li22Si5 at elevated temperature",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "2.2.2. Silicon",
+              "text_snippet": "This property increases to 4200 mAhg −1 at elevated temperatures and corresponds to the formation of Li 22Si5 compound.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_si_vacnt_hybrid",
+      "battery_ids": [],
+      "material_ref": "mat_si_vacnt",
+      "variant_label": "Si on VACNTs hybrid",
+      "chemistry": "Li-Si",
+      "anode": "Si nanoparticles on VACNTs",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "1330 mAh/g",
+          "value": 1330.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 2000,
+          "evidence": [
+            {
+              "page": 5,
+              "section": "2.2.2. Silicon",
+              "text_snippet": "delivering a reversible capacity of 1330 mAh/g over 2000 cycles.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_lto_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_lto",
+      "variant_label": "LTO baseline",
+      "chemistry": "Li-LTO",
+      "anode": "Li4Ti5O12",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "175 mAh g−1",
+          "value": 175.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "theoretical",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "2.2.3. Lithium Titanate (Li4Ti5O12, LTO)",
+              "text_snippet": "LTO’s applications are constrained by its low theoretical capacity (around 175 mAh g−1)",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "206 mA h g−1",
+          "value": 206.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "20C",
+          "method": "with carbon coating",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "2.2.3. Lithium Titanate (Li4Ti5O12, LTO)",
+              "text_snippet": "For example, carbon coatings on LTO enhance specific capacity (206 mA h g−1 at 20C being appropriate to LTO without carbon layers which was 224 mA h g −1 at 1C)",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "224 mA h g −1",
+          "value": 224.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "1C",
+          "method": "without carbon layers",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "2.2.3. Lithium Titanate (Li4Ti5O12, LTO)",
+              "text_snippet": "which was 224 mA h g −1 at 1C",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_sn_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_sn",
+      "variant_label": "Tin baseline",
+      "chemistry": "Li-Sn",
+      "anode": "Sn",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "~944 mAh/g",
+          "value": 944.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "theoretical",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "2.2.4. Tin (Sn)",
+              "text_snippet": "The compound Li4.4Sn, resulting from the alloying of pure tin with lithium, exhibits a high theoretical capacity (~944 mAh/g)",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_mwcnt_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_mwcnt",
+      "variant_label": "MWCNTs",
+      "chemistry": "Li-C",
+      "anode": "MWCNTs",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "312 mAh/g",
+          "value": 312.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "discharge capacity",
+          "evidence": [
+            {
+              "page": 7,
+              "section": "2.2.5. Carbon Nanotubes (CNTs) and Graphene",
+              "text_snippet": "MWCNTs exhibit a discharge capacity of approximately 312 mAh/g.",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "2087 mAh/g",
+          "value": 2087.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "method": "etched MWCNTs",
+          "evidence": [
+            {
+              "page": 7,
+              "section": "2.2.5. Carbon Nanotubes (CNTs) and Graphene",
+              "text_snippet": "Chemical etching can further increase lithium storage capacities, with etched MWCNTs reaching values up to 2087 mAh/g",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_graphene_baseline",
+      "battery_ids": [],
+      "material_ref": "mat_graphene",
+      "variant_label": "Graphene",
+      "chemistry": "Li-C",
+      "anode": "Graphene",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "744 mAh/g",
+          "value": 744.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "method": "theoretical",
+          "evidence": [
+            {
+              "page": 7,
+              "section": "2.2.5. Carbon Nanotubes (CNTs) and Graphene",
+              "text_snippet": "This type of material provides a theoretical specific capacity of 744 mAh/g based on Li2C6",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_lto_yin",
+      "battery_ids": [],
+      "material_ref": "mat_lto_yin",
+      "variant_label": "Yin et al. Sol-Gel LTO",
+      "chemistry": "Li-LTO",
+      "anode": "Al-doped, carbon-coated Li4Ti5O12",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "174.1 mAh/g",
+          "value": 174.1,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "1C",
+          "method": "discharge",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2. Sol–Gel Synthesis",
+              "text_snippet": "The resulting material exhibited enhanced Li+ diffusion, discharge capacity up to 174.1 mAh/g at 1C",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "97%",
+          "value": 97.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "20C",
+          "method": "cycling stability",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2. Sol–Gel Synthesis",
+              "text_snippet": "and excellent cycling stability (97% after 100 cycles at 20C)",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_lvo_thauer",
+      "battery_ids": [],
+      "material_ref": "mat_lvo_thauer",
+      "variant_label": "Thauer et al. Li3VO4/C",
+      "chemistry": "Li-ion",
+      "anode": "Li3VO4/C",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "366.3 mAh/g",
+          "value": 366.3,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "0.2C",
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "3.2. Sol–Gel Synthesis",
+              "text_snippet": "the optimized composite delivered a reversible capacity of 366.3 mAh/g at 0.2C",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "270.6 mAh/g",
+          "value": 270.6,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 200,
+          "c_rate": "1C",
+          "method": "reversible capacity after cycling",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "3.2. Sol–Gel Synthesis",
+              "text_snippet": "maintained 270.6 mAh/g after 200 cycles at 1C",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "175.3 mAh/g",
+          "value": 175.3,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "5C",
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "3.2. Sol–Gel Synthesis",
+              "text_snippet": "and showed excellent rate capability (175.3 mAh/g at 5C).",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_zmo_courtel",
+      "battery_ids": [],
+      "material_ref": "mat_zmo_courtel",
+      "variant_label": "Courtel et al. ZnMn2O4",
+      "chemistry": "Li-ion",
+      "anode": "ZnMn2O4",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "430 mAh/g",
+          "value": 430.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "C/10",
+          "method": "reversible",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+              "text_snippet": "Electrochemical testing showed a stable reversible capacity of 430 mAh/g after 100 cycles at C/10.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_tio2_li",
+      "battery_ids": [],
+      "material_ref": "mat_tio2_li",
+      "variant_label": "Li et al. N-TiO2/rGO",
+      "chemistry": "Li-ion",
+      "anode": "N-doped TiO2/rGO hybrids",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "210 mAh/g",
+          "value": 210.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 2000,
+          "method": "retained",
+          "evidence": [
+            {
+              "page": 11,
+              "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+              "text_snippet": "retaining 210 mAh/g after 2000 cycles.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_zno_shen",
+      "battery_ids": [],
+      "material_ref": "mat_zno_shen",
+      "variant_label": "Shen et al. ZnO/PC",
+      "chemistry": "Li-ion",
+      "anode": "ZnO/PC",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "653.7 mAh/g",
+          "value": 653.7,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 12,
+              "section": "3.3. Hydrothermal/Solvothermal Synthesis",
+              "text_snippet": "contributing to superior cycling performance (high reversible capacity of 653.7 mAh/g after 100 cycles).",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_lto_gu",
+      "battery_ids": [],
+      "material_ref": "mat_lto_gu",
+      "variant_label": "Gu et al. MgCo2O4-coated LTO",
+      "chemistry": "Li-ion",
+      "anode": "MgCo2O4-coated LTO",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "300 mAh/g",
+          "value": 300.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "specific capacity",
+          "evidence": [
+            {
+              "page": 12,
+              "section": "3.4. Co-Precipitation Synthesis",
+              "text_snippet": "the composite exhibited improved electrochemical performance, including higher specific capacity and rate capability (300 mAh/g, two times higher than that achieved by pristine LTO)",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_lto_birrozzi",
+      "battery_ids": [],
+      "material_ref": "mat_lto_birrozzi",
+      "variant_label": "Birrozzi et al. FSP LTO",
+      "chemistry": "Li-LTO",
+      "anode": "Li4Ti5O12",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "~160 mAh/g",
+          "value": 160.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "discharge capacity",
+          "evidence": [
+            {
+              "page": 13,
+              "section": "3.5. Spray Pyrolysis Synthesis",
+              "text_snippet": "offering high surface areas (~100 m 2/g) and excellent electrochemical properties, such as a discharge capacity of approximately 160 mAh/g.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_zno_laurenti",
+      "battery_ids": [],
+      "material_ref": "mat_zno_laurenti",
+      "variant_label": "Laurenti et al. CVD ZnO",
+      "chemistry": "Li-ZnO",
+      "anode": "ZnO nanostructures",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "~400 mAh/g",
+          "value": 400.0,
+          "unit": "mAh/g",
+          "qualifier": "approx",
+          "method": "specific capacity",
+          "evidence": [
+            {
+              "page": 13,
+              "section": "3.6. Chemical Vapor Deposition",
+              "text_snippet": "the electrode delivered a stable specific capacity of ~400 mAh/g",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "over 62%",
+          "value": 62.0,
+          "unit": "%",
+          "qualifier": "lower_bound",
+          "method": "after prolonged cycling",
+          "evidence": [
+            {
+              "page": 13,
+              "section": "3.6. Chemical Vapor Deposition",
+              "text_snippet": "with high Coulombic efficiency and over 62% capacity retention after prolonged cycling.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_sn_kim",
+      "battery_ids": [],
+      "material_ref": "mat_sn_kim",
+      "variant_label": "Kim et al. Ni-SnO2/CNF",
+      "chemistry": "Li-ion",
+      "anode": "Ni-doped SnO2-carbon nanofiber",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "447.6 mAh/g",
+          "value": 447.6,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 14,
+              "section": "3.7.1. Electrospinning",
+              "text_snippet": "which delivered a high reversible capacity of 447.6 mAh/g after 100 cycles.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_fe3o4_gu",
+      "battery_ids": [],
+      "material_ref": "mat_fe3o4_gu",
+      "variant_label": "Gu et al. Fe3O4/C",
+      "chemistry": "Li-ion",
+      "anode": "Fe3O4/C composite fibers",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "508.2 mAh/g",
+          "value": 508.2,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "method": "discharge capacity",
+          "evidence": [
+            {
+              "page": 14,
+              "section": "3.7.1. Electrospinning",
+              "text_snippet": "The resulting nanostructures exhibited a high discharge capacity of 508.2 mAh/g after 100 cycles",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "160 mAh/g",
+          "value": 160.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "5 A/g",
+          "method": "rate capability",
+          "evidence": [
+            {
+              "page": 14,
+              "section": "3.7.1. Electrospinning",
+              "text_snippet": "and a strong rate capability of 160 mAh/g at 5 A/g.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_heo_jin",
+      "battery_ids": [],
+      "material_ref": "mat_heo_jin",
+      "variant_label": "Jin et al. (Cr0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4 HEO",
+      "chemistry": "Li-HEO",
+      "anode": "(Cr0.2Mn0.2Co0.2Ni0.2Zn0.2)3O4",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "132 mAh·g−1",
+          "value": 132.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "100 mA/g",
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "2.2.6. High Entropy Oxides (HEOs)",
+              "text_snippet": "maintaining a reversible capacity of 132 mAh·g−1 after 100 cycles at 100 mA·g−1",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "107 mAh·g−1",
+          "value": 107.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 1000,
+          "c_rate": "1 A/g",
+          "method": "reversible capacity",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "2.2.6. High Entropy Oxides (HEOs)",
+              "text_snippet": "and 107 mAh·g−1 after 1000 cycles at 1 A·g−1.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_heo_li",
+      "battery_ids": [],
+      "material_ref": "mat_heo_li",
+      "variant_label": "Li et al. (Cr0.2Fe0.2Co0.2Ni0.2Zn0.2)3O4 HEO",
+      "chemistry": "Li-HEO",
+      "anode": "(Cr0.2Fe0.2Co0.2Ni0.2Zn0.2)3O4",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "1022 mAh·g−1",
+          "value": 1022.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 1000,
+          "c_rate": "1 A/g",
+          "method": "delivered capacity",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "2.2.6. High Entropy Oxides (HEOs)",
+              "text_snippet": "This material delivered a capacity of 1022 mAh·g−1 after 1000 cycles at 1 A·g−1",
+              "source_type": "unknown"
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "220 mAh·g−1",
+          "value": 220.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "30 A/g",
+          "method": "delivered capacity",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "2.2.6. High Entropy Oxides (HEOs)",
+              "text_snippet": "and maintained 220 mAh·g−1 even at an ultrahigh current density of 30 A·g−1.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "group_heo_qiu",
+      "battery_ids": [],
+      "material_ref": "mat_heo_qiu",
+      "variant_label": "Qiu et al. (Mg0.2Co0.2Ni0.2Cu0.2Zn0.2)O HEO",
+      "chemistry": "Li-HEO",
+      "anode": "(Mg0.2Co0.2Ni0.2Cu0.2Zn0.2)O",
+      "protocol_refs": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "raw_value": "700 mAh g−1",
+          "value": 700.0,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "method": "conversion reaction",
+          "evidence": [
+            {
+              "page": 8,
+              "section": "2.2.6. High Entropy Oxides (HEOs)",
+              "text_snippet": "the studied material demonstrated a significant enhancement, achieving a value of 700 mAh g−1 during the conversion reaction from metal oxides to their metallic forms.",
+              "source_type": "unknown"
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    }
+  ],
+  "extraction_notes": [
+    "This is a comprehensive review paper. In accordance with Rule 13, all extracted electrochemical performance data and specific material synthesis descriptions belong to cited prior literature summarized by the authors, rather than a focal primary experiment of this work.",
+    "OCR issue: Author names in the source contain raw OCR representation with commas instead of Romanian diacritics: e.g. 'S, erban' for Șerban, 'S, tefania' for Ștefania, 'Dragos, -Florin' for Dragoș-Florin, 'Ciurdas,' for Ciurdaș. Preserved exactly as printed in the PDF source text.",
+    "Table 2 contains a minor typo 'nMn2O4' which is explicitly known to be 'ZnMn2O4' in Section 3.3. Under rule 14, this has been preserved in the corresponding notes.",
+    "Association warning: c_rate '100 mA/g' for group_heo_jin/specific_capacity is not stated in the attached evidence snippet; review before curation.",
+    "Association warning: c_rate '1 A/g' for group_heo_jin/specific_capacity is not stated in the attached evidence snippet; review before curation.",
+    "Association warning: c_rate '1 A/g' for group_heo_li/specific_capacity is not stated in the attached evidence snippet; review before curation.",
+    "Association warning: c_rate '30 A/g' for group_heo_li/specific_capacity is not stated in the attached evidence snippet; review before curation."
+  ]
+}

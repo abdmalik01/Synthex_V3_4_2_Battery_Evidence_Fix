@@ -1,0 +1,1095 @@
+{
+  "$defs": {
+    "ArchiveMetadata": {
+      "properties": {
+        "archive_id": {
+          "title": "Archive Id",
+          "type": "string"
+        },
+        "schema_name": {
+          "default": "synthex-archive",
+          "title": "Schema Name",
+          "type": "string"
+        },
+        "schema_version": {
+          "default": "3.4.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "software_version": {
+          "default": "3.4.2",
+          "title": "Software Version",
+          "type": "string"
+        },
+        "created_at": {
+          "title": "Created At",
+          "type": "string"
+        },
+        "generator": {
+          "default": "Synthex V3.4.2",
+          "title": "Generator",
+          "type": "string"
+        },
+        "extractor_model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extractor Model"
+        },
+        "domain": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Domain"
+        }
+      },
+      "required": [
+        "archive_id"
+      ],
+      "title": "ArchiveMetadata",
+      "type": "object"
+    },
+    "CalculationRecord": {
+      "properties": {
+        "calculation_id": {
+          "title": "Calculation Id",
+          "type": "string"
+        },
+        "calculation_type": {
+          "title": "Calculation Type",
+          "type": "string"
+        },
+        "material_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Ids",
+          "type": "array"
+        },
+        "code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Code"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "functional": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Functional"
+        },
+        "model": {
+          "additionalProperties": true,
+          "title": "Model",
+          "type": "object"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "calculation_id",
+        "calculation_type"
+      ],
+      "title": "CalculationRecord",
+      "type": "object"
+    },
+    "DeviceEntity": {
+      "properties": {
+        "device_id": {
+          "title": "Device Id",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "device_type": {
+          "title": "Device Type",
+          "type": "string"
+        },
+        "material_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Ids",
+          "type": "array"
+        },
+        "configuration": {
+          "additionalProperties": true,
+          "title": "Configuration",
+          "type": "object"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "device_id",
+        "device_type"
+      ],
+      "title": "DeviceEntity",
+      "type": "object"
+    },
+    "DomainPayload": {
+      "properties": {
+        "domain": {
+          "title": "Domain",
+          "type": "string"
+        },
+        "schema_version": {
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "values": {
+          "additionalProperties": true,
+          "title": "Values",
+          "type": "object"
+        }
+      },
+      "required": [
+        "domain",
+        "schema_version"
+      ],
+      "title": "DomainPayload",
+      "type": "object"
+    },
+    "Evidence": {
+      "properties": {
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType",
+          "default": "unknown"
+        },
+        "original_source_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Original Source Type"
+        },
+        "verbatim_match": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Verbatim Match"
+        },
+        "text_snippet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text Snippet"
+        },
+        "table_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Id"
+        },
+        "figure_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Figure Id"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locator"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        }
+      },
+      "title": "Evidence",
+      "type": "object"
+    },
+    "ExperimentRecord": {
+      "properties": {
+        "experiment_id": {
+          "title": "Experiment Id",
+          "type": "string"
+        },
+        "experiment_type": {
+          "title": "Experiment Type",
+          "type": "string"
+        },
+        "material_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Ids",
+          "type": "array"
+        },
+        "device_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Device Id"
+        },
+        "device_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Device Ids",
+          "type": "array"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "protocol": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "experiment_id",
+        "experiment_type"
+      ],
+      "title": "ExperimentRecord",
+      "type": "object"
+    },
+    "MaterialEntity": {
+      "properties": {
+        "material_id": {
+          "title": "Material Id",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "formula": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Formula"
+        },
+        "composition": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Composition",
+          "type": "object"
+        },
+        "elements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Elements",
+          "type": "array"
+        },
+        "phase": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phase"
+        },
+        "structure": {
+          "additionalProperties": true,
+          "title": "Structure",
+          "type": "object"
+        },
+        "morphology": {
+          "additionalProperties": true,
+          "title": "Morphology",
+          "type": "object"
+        },
+        "defects": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Defects",
+          "type": "array"
+        },
+        "dopants": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Dopants",
+          "type": "array"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "material_id"
+      ],
+      "title": "MaterialEntity",
+      "type": "object"
+    },
+    "Measurement": {
+      "properties": {
+        "property": {
+          "title": "Property",
+          "type": "string"
+        },
+        "raw_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Value"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "normalized_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Value"
+        },
+        "normalized_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Unit"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty"
+        },
+        "uncertainty_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Unit"
+        },
+        "qualifier": {
+          "default": "unknown",
+          "enum": [
+            "exact",
+            "approx",
+            "lower_bound",
+            "upper_bound",
+            "range",
+            "categorical",
+            "unknown"
+          ],
+          "title": "Qualifier",
+          "type": "string"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "conditions": {
+          "additionalProperties": true,
+          "title": "Conditions",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "property"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "ProcessStep": {
+      "properties": {
+        "process_id": {
+          "title": "Process Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "family": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Family"
+        },
+        "sequence_index": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sequence Index"
+        },
+        "inputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Inputs",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "atmosphere": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Atmosphere"
+        },
+        "equipment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Equipment"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "process_id",
+        "name"
+      ],
+      "title": "ProcessStep",
+      "type": "object"
+    },
+    "QualityRecord": {
+      "properties": {
+        "completeness": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Completeness",
+          "type": "number"
+        },
+        "provenance_coverage": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Provenance Coverage",
+          "type": "number"
+        },
+        "unit_normalization_coverage": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Unit Normalization Coverage",
+          "type": "number"
+        },
+        "extraction_confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Extraction Confidence"
+        },
+        "semantic_warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Semantic Warnings",
+          "type": "array"
+        },
+        "validation_status": {
+          "default": "unvalidated",
+          "description": "Validation stage. schema_validated means structural/local-schema checks passed; it does not imply scientific or human verification. machine_validated is retained only for backward-compatible archive reads.",
+          "enum": [
+            "unvalidated",
+            "schema_validated",
+            "machine_validated",
+            "human_reviewed",
+            "rejected"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "title": "QualityRecord",
+      "type": "object"
+    },
+    "Relationship": {
+      "properties": {
+        "relation_id": {
+          "title": "Relation Id",
+          "type": "string"
+        },
+        "subject_id": {
+          "title": "Subject Id",
+          "type": "string"
+        },
+        "predicate": {
+          "title": "Predicate",
+          "type": "string"
+        },
+        "object_id": {
+          "title": "Object Id",
+          "type": "string"
+        },
+        "attributes": {
+          "additionalProperties": true,
+          "title": "Attributes",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "relation_id",
+        "subject_id",
+        "predicate",
+        "object_id"
+      ],
+      "title": "Relationship",
+      "type": "object"
+    },
+    "SourceRecord": {
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_type": {
+          "default": "paper",
+          "enum": [
+            "paper",
+            "dataset",
+            "database",
+            "report",
+            "thesis",
+            "patent",
+            "user_upload"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "doi": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Doi"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Year"
+        },
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Authors",
+          "type": "array"
+        },
+        "license": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License"
+        },
+        "checksum": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Checksum"
+        }
+      },
+      "required": [
+        "source_id"
+      ],
+      "title": "SourceRecord",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "text",
+        "table",
+        "figure",
+        "figure_caption",
+        "supplementary",
+        "database",
+        "computation",
+        "user",
+        "unknown"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "metadata": {
+      "$ref": "#/$defs/ArchiveMetadata"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/SourceRecord"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/MaterialEntity"
+      },
+      "title": "Materials",
+      "type": "array"
+    },
+    "devices": {
+      "items": {
+        "$ref": "#/$defs/DeviceEntity"
+      },
+      "title": "Devices",
+      "type": "array"
+    },
+    "processes": {
+      "items": {
+        "$ref": "#/$defs/ProcessStep"
+      },
+      "title": "Processes",
+      "type": "array"
+    },
+    "experiments": {
+      "items": {
+        "$ref": "#/$defs/ExperimentRecord"
+      },
+      "title": "Experiments",
+      "type": "array"
+    },
+    "calculations": {
+      "items": {
+        "$ref": "#/$defs/CalculationRecord"
+      },
+      "title": "Calculations",
+      "type": "array"
+    },
+    "relationships": {
+      "items": {
+        "$ref": "#/$defs/Relationship"
+      },
+      "title": "Relationships",
+      "type": "array"
+    },
+    "domain_payloads": {
+      "items": {
+        "$ref": "#/$defs/DomainPayload"
+      },
+      "title": "Domain Payloads",
+      "type": "array"
+    },
+    "quality": {
+      "$ref": "#/$defs/QualityRecord"
+    }
+  },
+  "required": [
+    "metadata"
+  ],
+  "title": "SynthexArchive",
+  "type": "object"
+}

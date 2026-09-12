@@ -1,0 +1,257 @@
+{
+  "source": {
+    "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+    "doi": "10.3390/batteries11010011",
+    "url": "https://doi.org/10.3390/batteries11010011",
+    "year": 2025,
+    "authors": [
+      "Yuechan Xiao",
+      "Xinrong Huang",
+      "Jinhao Meng",
+      "Yipu Zhang",
+      "Vaclav Knap",
+      "Daniel-Ioan Stroe"
+    ]
+  },
+  "paper_types": [
+    "impedance_eis",
+    "battery_dataset_modelling",
+    "electrochemical_performance"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_anode_raw",
+      "name": "Li(NiCoMn)O 2",
+      "formula": "Li(NiCoMn)O2",
+      "role": "anode",
+      "composition_raw": "Li(NiCoMn)O 2",
+      "evidence": [
+        {
+          "page": 5,
+          "section": "Table 1. Battery parameters.",
+          "text_snippet": "Anode material Li(NiCoMn)O 2",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_cathode_raw",
+      "name": "Plumbago",
+      "role": "cathode",
+      "composition_raw": "Plumbago",
+      "evidence": [
+        {
+          "page": 5,
+          "section": "Table 1. Battery parameters.",
+          "text_snippet": "Cathode material Plumbago",
+          "source_type": "table",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "proto_1",
+      "name": "Testing and EIS Characterization Protocol",
+      "charge_protocol": {
+        "mode": "CC-CV",
+        "constant_current": {
+          "raw_value": "0.2 C (0.7 A)",
+          "value": 0.2,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "voltage_limit": {
+          "raw_value": "4.2 V",
+          "value": 4.2,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_current": {
+          "raw_value": "0.02 C (0.07 A)",
+          "value": 0.02,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "additional_steps": []
+      },
+      "discharge_protocol": {
+        "mode": "CC",
+        "current": {
+          "raw_value": "0.2 C",
+          "value": 0.2,
+          "unit": "C",
+          "qualifier": "exact"
+        },
+        "cutoff_voltage": {
+          "raw_value": "2.5 V",
+          "value": 2.5,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_voltages": [],
+        "additional_steps": []
+      },
+      "impedance_protocol": {
+        "method": "EIS",
+        "frequency_min": {
+          "raw_value": "0.001 Hz",
+          "value": 0.001,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "frequency_max": {
+          "raw_value": "10,000 Hz",
+          "value": 10000.0,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "amplitude": {
+          "raw_value": "5 mV",
+          "value": 5.0,
+          "unit": "mV",
+          "qualifier": "exact"
+        }
+      },
+      "electrochemical_testing": {
+        "voltage_min": {
+          "raw_value": "2.5 V",
+          "value": 2.5,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "voltage_max": {
+          "raw_value": "4.2 V",
+          "value": 4.2,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "c_rate_definition": "0.2 C = 0.7 A",
+        "equipment": [
+          "MULTI AUTOLAB M204",
+          "MHW-200"
+        ],
+        "evidence": [
+          {
+            "page": 5,
+            "section": "3. Experiment Method",
+            "text_snippet": "The temperature chamber is MHW-200 produced by NEWARE in Shenzhen, China, which enables the tested battery to stay in a specific constant-temperature environment. The electrochemical workstation is MULTI AUTOLAB M204, produced by Metrohm in Beijing, China, measuring the battery EIS.",
+            "source_type": "text",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "cell_assembly": {
+        "cell_format": "Cylindrical, 18650",
+        "evidence": [
+          {
+            "page": 5,
+            "section": "Table 1. Battery parameters.",
+            "text_snippet": "Format Cylindrical, 18650",
+            "source_type": "table",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "evidence": []
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "group_ncr18650ga",
+      "battery_ids": [
+        "Panasonic_NCR18650GA"
+      ],
+      "variant_label": "Panasonic NCR18650GA",
+      "chemistry": "NCM-Graphite",
+      "cathode": "Plumbago",
+      "anode": "Li(NiCoMn)O2",
+      "cell_format": "Cylindrical, 18650",
+      "temperature": {
+        "raw_value": "-20 to 20 °C",
+        "unit": "°C",
+        "qualifier": "range"
+      },
+      "protocol_refs": [
+        "proto_1"
+      ],
+      "measured_variables": [
+        "impedance",
+        "ohmic resistance",
+        "SEI resistance",
+        "charge transfer resistance"
+      ],
+      "performance_points": [
+        {
+          "property": "nominal_capacity",
+          "raw_value": "3500 mAh",
+          "value": 3500.0,
+          "unit": "mAh",
+          "qualifier": "exact",
+          "method": "discharge test",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "Table 1. Battery parameters.",
+              "text_snippet": "Nominal capacity 3500 mAh",
+              "source_type": "table",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "nominal_voltage",
+          "raw_value": "3.7 V",
+          "value": 3.7,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "Table 1. Battery parameters.",
+              "text_snippet": "Nominal voltage 3.7 V",
+              "source_type": "table",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "internal_resistance",
+          "raw_value": "25 m Ω",
+          "value": 25.0,
+          "unit": "mΩ",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "Table 1. Battery parameters.",
+              "text_snippet": "Battery internal resistance 25 m Ω",
+              "source_type": "table",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [
+        "R0 has a negative correlation with temperature, mainly due to the electrolyte viscosity increase and decrease in ion conductivity at low temperatures.",
+        "Both RSEI and Rct increase exponentially as temperature decreases.",
+        "The model developed for a frequency of 20 Hz has the highest accuracy and widest applicability for state estimation over a broad range of temperatures and SOCs.",
+        "At 20 Hz in narrow ranges (T: 0 to 20 °C, SOC: 40% to 60%), R2 is 0.97675 and RMSE is 0.00712."
+      ],
+      "evidence": [
+        {
+          "page": 6,
+          "section": "3.2. Experimental Results",
+          "text_snippet": "The ohmic resistance has a negative correlation with the temperature, as shown in Figure 5a.",
+          "source_type": "text",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "In Table 1 of the original document, 'Anode material' is listed as 'Li(NiCoMn)O 2' and 'Cathode material' is listed as 'Plumbago'. Typically, Li(NiCoMn)O2 is the cathode active material and plumbago (graphite) is the anode active material. Per Core Rule 14, this potential typo/swap has been preserved as reported in the source text without silent correction."
+  ]
+}

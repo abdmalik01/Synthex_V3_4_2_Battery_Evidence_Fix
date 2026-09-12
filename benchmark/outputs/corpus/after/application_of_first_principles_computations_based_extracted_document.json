@@ -1,0 +1,322 @@
+{
+  "source": {
+    "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+    "doi": "10.3390/batteries9020086",
+    "url": "https://doi.org/10.3390/batteries9020086",
+    "year": 2023,
+    "authors": [
+      "Yuqiu Wang",
+      "Binkai Yu",
+      "Jin Xiao",
+      "Limin Zhou",
+      "Mingzhe Chen"
+    ],
+    "pdf_text_parser": "pypdf"
+  },
+  "paper_types": [
+    "computational_dft"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_alpha_mno2",
+      "name": "alpha-MnO2",
+      "formula": "alpha-MnO2",
+      "role": "cathode",
+      "ownership": "cited_prior_work",
+      "composition_raw": "alpha-MnO2",
+      "phase": "alpha",
+      "evidence": [
+        {
+          "page": 6,
+          "section": "Table 1",
+          "text_snippet": "alpha-MnO2",
+          "source_type": "table",
+          "verbatim_match": false,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_beta_namno2",
+      "name": "beta-NaMnO2",
+      "formula": "beta-NaMnO2",
+      "role": "cathode",
+      "ownership": "cited_prior_work",
+      "composition_raw": "beta-NaMnO2",
+      "phase": "beta",
+      "evidence": [
+        {
+          "page": 6,
+          "section": "Table 1",
+          "text_snippet": "beta-NaMnO2",
+          "source_type": "table",
+          "verbatim_match": false,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_na3_41_fev_po4_3",
+      "name": "Na3.41FeV(PO4)3",
+      "formula": "Na3.41FeV(PO4)3",
+      "role": "cathode",
+      "ownership": "cited_prior_work",
+      "composition_raw": "Na3.41FeV(PO4)3",
+      "phase": "NASICON",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "Table 1",
+          "text_snippet": "Na3.41£0.59FeV(PO4)3",
+          "source_type": "table",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_na2fepo4f",
+      "name": "Na2FePO4F",
+      "formula": "Na2FePO4F",
+      "role": "cathode",
+      "ownership": "cited_prior_work",
+      "composition_raw": "Na2FePO4F",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "Table 1",
+          "text_snippet": "Na2FePO4F",
+          "source_type": "table",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "material_id": "mat_na3v2_po4_3",
+      "name": "Na3V2(PO4)3",
+      "formula": "Na3V2(PO4)3",
+      "role": "cathode",
+      "ownership": "cited_prior_work",
+      "composition_raw": "Na3V2(PO4)3",
+      "phase": "NASICON",
+      "evidence": [
+        {
+          "page": 7,
+          "section": "Table 1",
+          "text_snippet": "Na3V2(PO4)3",
+          "source_type": "table",
+          "verbatim_match": true,
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "shared_protocols": [],
+  "battery_groups": [
+    {
+      "group_id": "grp_alpha_mno2",
+      "ownership": "cited_prior_work",
+      "battery_ids": [],
+      "material_ref": "mat_alpha_mno2",
+      "variant_label": "alpha-MnO2",
+      "chemistry": "Na-ion",
+      "cathode": "alpha-MnO2",
+      "protocol_refs": [],
+      "condition_conflicts": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.42 V",
+          "value": 3.42,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 reaction voltages 3.42 V",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "reaction_voltage",
+          "raw_value": "3.23 V",
+          "value": 3.23,
+          "unit": "V",
+          "qualifier": "exact",
+          "method": "experimental",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 reaction voltages ... 3.23 V",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "band_gap",
+          "raw_value": "2.42 eV",
+          "value": 2.42,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 electronic band 2.42 eV",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "band_gap",
+          "raw_value": "2.23 eV",
+          "value": 2.23,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "experimental",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "α-MnO2 electronic band ... 2.23 eV",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "grp_beta_namno2",
+      "ownership": "cited_prior_work",
+      "battery_ids": [],
+      "material_ref": "mat_beta_namno2",
+      "variant_label": "beta-NaMnO2",
+      "chemistry": "Na-ion",
+      "cathode": "beta-NaMnO2",
+      "protocol_refs": [],
+      "condition_conflicts": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "migration_energy_barrier",
+          "raw_value": "0.3 eV",
+          "value": 0.3,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "β-NaMnO2 migration energy barrier 0.3 eV",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "migration_energy_barrier",
+          "raw_value": "0.27 eV",
+          "value": 0.27,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "experimental",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 6,
+              "section": "Table 1",
+              "text_snippet": "β-NaMnO2 migration energy barrier ... 0.27 eV",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    },
+    {
+      "group_id": "grp_na2fepo4f",
+      "ownership": "cited_prior_work",
+      "battery_ids": [],
+      "material_ref": "mat_na2fepo4f",
+      "variant_label": "Na2FePO4F",
+      "chemistry": "Na-ion",
+      "cathode": "Na2FePO4F",
+      "protocol_refs": [],
+      "condition_conflicts": [],
+      "measured_variables": [],
+      "performance_points": [
+        {
+          "property": "band_gap",
+          "raw_value": "2.19 eV",
+          "value": 2.19,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "DFT calculation",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Table 1",
+              "text_snippet": "Na2FePO4F band gap energy 2.19 eV",
+              "source_type": "table",
+              "verbatim_match": true,
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "band_gap",
+          "raw_value": "2.80 eV",
+          "value": 2.8,
+          "unit": "eV",
+          "qualifier": "exact",
+          "method": "experimental",
+          "ownership": "cited_prior_work",
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Table 1",
+              "text_snippet": "Na2FePO4F band gap energy ... 2.80 eV",
+              "source_type": "table",
+              "verbatim_match": false,
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "qualitative_findings": [],
+      "evidence": []
+    }
+  ],
+  "extraction_notes": [
+    "This paper is a perspective/review summarizing DFT calculations and experimental results from prior literature. No new experimental or computational data were generated in this study.",
+    "Table 1 compares DFT calculation data and experimental data for various sodium-ion battery cathode materials."
+  ]
+}

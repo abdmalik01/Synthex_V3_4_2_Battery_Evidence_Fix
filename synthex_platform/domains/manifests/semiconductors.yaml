@@ -1,0 +1,129 @@
+slug: semiconductors
+name: Semiconductors
+version: 1.0.0
+description: Electronic/optical materials, growth, doping, defects, transport and
+  device metrics.
+recommended_sections:
+- growth
+- fabrication
+- structural characterization
+- electrical characterization
+- optical characterization
+- device results
+- DFT
+process_vocabulary:
+- MBE
+- MOCVD
+- CVD
+- sputtering
+- ALD
+- ion implantation
+- diffusion doping
+- annealing
+- lithography
+properties:
+- key: band_gap
+  name: Band gap
+  kind: electronic
+  units:
+  - eV
+  conditions:
+  - temperature
+  - method
+  aliases: []
+- key: electron_mobility
+  name: Electron mobility
+  kind: transport
+  units:
+  - cm2/V/s
+  conditions:
+  - temperature
+  - carrier_density
+  aliases: []
+- key: hole_mobility
+  name: Hole mobility
+  kind: transport
+  units:
+  - cm2/V/s
+  conditions:
+  - temperature
+  - carrier_density
+  aliases: []
+- key: carrier_concentration
+  name: Carrier concentration
+  kind: transport
+  units:
+  - 1/cm3
+  conditions:
+  - temperature
+  - carrier_type
+  aliases: []
+- key: resistivity
+  name: Resistivity
+  kind: transport
+  units:
+  - ohm*cm
+  conditions:
+  - temperature
+  aliases: []
+- key: breakdown_field
+  name: Breakdown field
+  kind: device
+  units:
+  - MV/cm
+  conditions:
+  - temperature
+  aliases: []
+- key: dielectric_constant
+  name: Dielectric constant
+  kind: electronic
+  units:
+  - dimensionless
+  conditions:
+  - frequency
+  aliases: []
+- key: defect_formation_energy
+  name: Defect formation energy
+  kind: calculation
+  units:
+  - eV
+  conditions:
+  - defect
+  - charge_state
+  - fermi_level
+  aliases: []
+- key: effective_mass
+  name: Effective mass
+  kind: calculation
+  units:
+  - m_e
+  conditions:
+  - carrier
+  - direction
+  aliases: []
+benchmarks:
+- id: semiconductors.band_gap_prediction
+  name: Band gap prediction
+  target: band_gap
+  group_by:
+  - material
+- id: semiconductors.mobility_prediction
+  name: Mobility prediction
+  target: electron_mobility
+  group_by:
+  - material
+  - temperature
+- id: semiconductors.defect_formation_prediction
+  name: Defect formation prediction
+  target: defect_formation_energy
+  group_by:
+  - material
+  - defect
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

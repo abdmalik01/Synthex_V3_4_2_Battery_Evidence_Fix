@@ -1,0 +1,139 @@
+{
+  "filename": "batteries-11-00011.pdf",
+  "manifest": {
+    "filename": "batteries-11-00011.pdf",
+    "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+    "document_type": "original_research",
+    "subtypes": [
+      "impedance_eis",
+      "characterization",
+      "battery_modelling",
+      "temperature",
+      "state_of_charge"
+    ],
+    "benchmark_priority": "A",
+    "use": "EIS protocol/conditions/model benchmark"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 17,
+    "prompt_characters": 66510,
+    "truncated_at_180000": false,
+    "table_markers": 19,
+    "figure_markers": 72
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.978,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 20.75,
+      "biomaterials": 0.0,
+      "catalysis": 0.0,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 1.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "lithium-ion",
+        "li-ion",
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte",
+        "state of health",
+        "state-of-health",
+        "constant current",
+        "constant voltage",
+        "electrochemical impedance spectroscopy"
+      ],
+      "biomaterials": [],
+      "catalysis": [],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [
+        "photovoltaic"
+      ],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "impedance_eis",
+      "electrochemical_performance",
+      "degradation_health",
+      "battery_dataset_modelling",
+      "cell_assembly"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "impedance_eis",
+      "battery_dataset_modelling",
+      "electrochemical_performance"
+    ],
+    "materials": 2,
+    "shared_protocols": 1,
+    "battery_groups": 1,
+    "performance_points": 3,
+    "archive_completeness": 1.0,
+    "archive_semantic_warnings": [],
+    "missing_fields": []
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [
+      "battery_groups[0].performance_points[0].voltage_window",
+      "battery_groups[0].performance_points[1].voltage_window",
+      "battery_groups[0].performance_points[2].voltage_window"
+    ],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 27
+  },
+  "provenance": {
+    "evidence_capable_records": 9,
+    "records_with_evidence": 8,
+    "record_coverage": 0.889,
+    "snippets_checked": 8,
+    "verbatim_match_coverage": 0.875,
+    "unmatched_snippet_candidates": [
+      {
+        "location": "battery_groups[0]",
+        "page": 6,
+        "snippet": "The ohmic resistance has a negative correlation with the temperature, as shown in Figure 5a."
+      }
+    ],
+    "records_without_evidence": [
+      "shared_protocols[0]"
+    ],
+    "source_type_counts": {
+      "table": 6,
+      "text": 2
+    }
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [],
+  "review_contamination": {
+    "is_review": false,
+    "performance_points": 3,
+    "materials_with_synthesis": 0,
+    "manual_review_required": false,
+    "note": null
+  }
+}

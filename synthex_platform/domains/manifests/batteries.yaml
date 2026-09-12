@@ -1,0 +1,175 @@
+slug: batteries
+name: Batteries
+version: 1.2.0
+description: Electrode/electrolyte materials, cell assembly, cycling protocols, degradation, impedance and computational battery data.
+recommended_sections:
+- materials
+- electrode preparation
+- cell assembly
+- electrochemical measurements
+- charge discharge testing
+- impedance spectroscopy
+- results
+- supplementary information
+process_vocabulary:
+- slurry mixing
+- coating
+- drying
+- calendering
+- cell assembly
+- formation cycling
+- annealing
+- solid-state synthesis
+- electrode slurry preparation
+- doctor-blade coating
+- vacuum drying
+- calendaring / pressing
+- coin-cell assembly
+- sol-gel synthesis
+- hydrothermal synthesis
+paper_types:
+- materials_synthesis
+- electrode_fabrication
+- cell_assembly
+- electrochemical_performance
+- degradation_health
+- impedance_eis
+- computational_dft
+- battery_dataset_modelling
+properties:
+- key: specific_capacity
+  name: Specific capacity
+  kind: performance
+  units: [mAh/g]
+  conditions: [cycle, C_rate, voltage_window, temperature]
+  aliases: [discharge capacity, charge capacity]
+- key: areal_capacity
+  name: Areal capacity
+  kind: performance
+  units: [mAh/cm2]
+  conditions: [cycle, C_rate]
+  aliases: []
+- key: coulombic_efficiency
+  name: Coulombic efficiency
+  kind: performance
+  units: ['%']
+  conditions: [cycle]
+  aliases: [CE]
+- key: capacity_retention
+  name: Capacity retention
+  kind: stability
+  units: ['%']
+  conditions: [cycle_count, C_rate, temperature]
+  aliases: [cycle retention]
+- key: cycle_life
+  name: Cycle life
+  kind: stability
+  units: [cycles]
+  conditions: [retention_threshold, C_rate, temperature]
+  aliases: []
+- key: state_of_health
+  name: State of health
+  kind: degradation
+  units: ['%']
+  conditions: [cycle, time, temperature]
+  aliases: [SOH]
+- key: energy_density
+  name: Energy density
+  kind: performance
+  units: [Wh/kg, Wh/L]
+  conditions: [basis]
+  aliases: []
+- key: power_density
+  name: Power density
+  kind: performance
+  units: [W/kg, W/L]
+  conditions: [basis]
+  aliases: []
+- key: working_voltage
+  name: Average/working voltage
+  kind: performance
+  units: [V]
+  conditions: [reference, state_of_charge]
+  aliases: [average voltage, discharge voltage]
+- key: ionic_conductivity
+  name: Ionic conductivity
+  kind: transport
+  units: [S/cm]
+  conditions: [temperature]
+  aliases: []
+- key: diffusion_coefficient
+  name: Ion diffusion coefficient
+  kind: transport
+  units: [cm2/s]
+  conditions: [species, state_of_charge, method]
+  aliases: [Li diffusion coefficient, Na diffusion coefficient]
+- key: charge_transfer_resistance
+  name: Charge-transfer resistance
+  kind: impedance
+  units: [ohm, ohm*cm2]
+  conditions: [temperature, cycle, state_of_charge]
+  aliases: [Rct]
+- key: internal_resistance
+  name: Internal resistance
+  kind: impedance
+  units: [ohm]
+  conditions: [temperature, cycle, state_of_charge]
+  aliases: []
+- key: impedance
+  name: Electrochemical impedance
+  kind: impedance
+  units: [ohm]
+  conditions: [frequency, temperature, cycle]
+  aliases: [EIS impedance]
+- key: migration_barrier
+  name: Ion migration barrier
+  kind: computation
+  units: [eV]
+  conditions: [species, pathway]
+  aliases: [diffusion barrier]
+- key: formation_energy
+  name: Formation energy
+  kind: computation
+  units: [eV, eV/atom]
+  conditions: [composition, state_of_charge]
+  aliases: []
+- key: insertion_voltage
+  name: Calculated insertion voltage
+  kind: computation
+  units: [V]
+  conditions: [species, reference]
+  aliases: [intercalation voltage]
+benchmarks:
+- id: batteries.capacity_retention_prediction
+  name: Capacity retention prediction
+  target: capacity_retention
+  group_by: [chemistry, electrode]
+- id: batteries.voltage_prediction
+  name: Voltage prediction
+  target: working_voltage
+  group_by: [chemistry]
+- id: batteries.rate_capability_prediction
+  name: Rate capability prediction
+  target: specific_capacity
+  group_by: [chemistry, C_rate]
+- id: batteries.soh_prediction
+  name: State-of-health prediction
+  target: state_of_health
+  group_by: [chemistry, temperature]
+- id: batteries.impedance_degradation
+  name: Impedance/degradation modelling
+  target: charge_transfer_resistance
+  group_by: [chemistry, cycle]
+
+- id: batteries.process_property_linkage
+  name: Process-to-performance linkage
+  target: specific_capacity
+  group_by: [material, synthesis_method, calcination_temperature, electrode_fabrication]
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

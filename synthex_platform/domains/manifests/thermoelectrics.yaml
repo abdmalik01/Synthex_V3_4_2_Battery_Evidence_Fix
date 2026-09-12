@@ -1,0 +1,98 @@
+slug: thermoelectrics
+name: Thermoelectrics
+version: 1.0.0
+description: Thermoelectric composition, processing, transport properties and temperature-dependent
+  figure of merit.
+recommended_sections:
+- materials
+- synthesis
+- transport measurements
+- thermal conductivity
+- electrical properties
+- results
+process_vocabulary:
+- solid-state reaction
+- ball milling
+- spark plasma sintering
+- hot pressing
+- annealing
+properties:
+- key: seebeck_coefficient
+  name: Seebeck coefficient
+  kind: transport
+  units:
+  - uV/K
+  conditions:
+  - temperature
+  aliases: []
+- key: electrical_conductivity
+  name: Electrical conductivity
+  kind: transport
+  units:
+  - S/m
+  - S/cm
+  conditions:
+  - temperature
+  aliases: []
+- key: thermal_conductivity
+  name: Thermal conductivity
+  kind: transport
+  units:
+  - W/m/K
+  conditions:
+  - temperature
+  aliases: []
+- key: power_factor
+  name: Power factor
+  kind: performance
+  units:
+  - uW/cm/K2
+  - W/m/K2
+  conditions:
+  - temperature
+  aliases: []
+- key: zt
+  name: Figure of merit zT
+  kind: performance
+  units:
+  - dimensionless
+  conditions:
+  - temperature
+  aliases: []
+- key: carrier_concentration
+  name: Carrier concentration
+  kind: transport
+  units:
+  - 1/cm3
+  conditions:
+  - temperature
+  aliases: []
+- key: mobility
+  name: Carrier mobility
+  kind: transport
+  units:
+  - cm2/V/s
+  conditions:
+  - temperature
+  aliases: []
+benchmarks:
+- id: thermoelectrics.zt_prediction
+  name: zT prediction
+  target: zt
+  group_by:
+  - material
+  - temperature
+- id: thermoelectrics.thermal_conductivity_prediction
+  name: Thermal conductivity prediction
+  target: thermal_conductivity
+  group_by:
+  - material
+  - temperature
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

@@ -1,0 +1,75 @@
+{
+  "paper": {
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+    "doi": "10.3390/batteries11040142",
+    "year": 2025,
+    "paper_types": ["materials_synthesis", "electrode_fabrication", "cell_assembly", "electrochemical_performance", "impedance_eis"]
+  },
+  "material": {
+    "formula": "Li2FeTiO4",
+    "role": "cathode",
+    "synthesis_method": "sol-gel",
+    "precursors": ["citric acid", "anhydrous ethanol", "CH3COOLi·2H2O", "FeCl2·4H2O", "Ti(OC4H9)4"],
+    "process_assertions": [
+      {"step": "stirring", "temperature": "room temperature", "duration_h": 24},
+      {"step": "water bath", "temperature_C": 65, "duration_h": 5},
+      {"step": "vacuum drying", "temperature_C": 120, "duration_h": 24},
+      {"step": "precalcination", "temperature_C": 500, "duration_h": 8, "atmosphere": "Ar"},
+      {"step": "secondary calcination", "temperatures_C": [600, 700, 800]}
+    ]
+  },
+  "electrode_fabrication": {
+    "active_material": "Li2FeTiO4",
+    "active_material_wt_percent": 80,
+    "conductive_additive": "acetylene black",
+    "conductive_wt_percent": 10,
+    "binder": "PVDF",
+    "binder_wt_percent": 10,
+    "solvent": "NMP",
+    "current_collector": "Al foil",
+    "coating_method": "doctor blade",
+    "mass_loading_mg_cm2": 1.0,
+    "drying_1_C": 80,
+    "drying_1_h": 12,
+    "pressing_MPa": 10,
+    "disk_diameter_mm": 10,
+    "drying_2_C": 120,
+    "drying_2_h": 6
+  },
+  "cell_assembly": {
+    "cell_format": "CR2032",
+    "counter_electrode": "lithium foil",
+    "separator": "Celgard 2400 polypropylene film",
+    "electrolyte_volume_uL": 100,
+    "atmosphere": "argon-filled glovebox",
+    "O2_upper_bound_ppm": 0.1,
+    "H2O_upper_bound_ppm": 0.1
+  },
+  "electrochemical_testing": {
+    "cv_scan_rate_mV_s": 0.1,
+    "voltage_window_V": [1.5, 4.8],
+    "c_rate_definition": "1 C = 300 mA/g",
+    "rate_capability_range": "0.1 C–5 C",
+    "long_term_cycles": 100,
+    "long_term_c_rate": "1 C"
+  },
+  "performance_assertions": [
+    {"variant": "700 °C", "property": "specific_capacity", "value": 121.3, "unit": "mAh/g", "cycle": 1, "c_rate_status": "conflicted", "c_rate_conflict": {"reported_values": ["0.1 C", "1 C"]}},
+    {"variant": "700 °C", "property": "specific_capacity", "value": 108.2, "unit": "mAh/g", "cycle": 100, "c_rate_status": "conflicted", "c_rate_conflict": {"reported_values": ["0.1 C", "1 C"]}},
+    {"variant": "700 °C", "property": "capacity_retention", "value": 89.2, "unit": "%", "cycle": 100, "c_rate_status": "conflicted", "c_rate_conflict": {"reported_values": ["0.1 C", "1 C"]}},
+    {"variant": "700 °C", "property": "charge_transfer_resistance", "value": 1258.6, "unit": "ohm", "method_contains": ["EIS"]},
+    {"variant": "700 °C", "property": "diffusion_coefficient", "value": 1.096e-12, "unit": "cm2/s", "method": "EIS/Warburg", "method_contains": ["EIS"]}
+  ],
+  "condition_conflicts": [
+    {
+      "condition": "long-term cycling C-rate",
+      "reported_values": ["0.1 C", "1 C"],
+      "policy": "Do not assign either rate to the cycling performance points unless the point evidence explicitly supports it; preserve the paper-level contradiction."
+    }
+  ],
+  "notes": [
+    "The parsed precursor molar-ratio string is visually ambiguous; benchmark should preserve the raw ratio instead of forcing a cleaned numeric ratio.",
+    "Coulombic efficiency is not included as a gold assertion because this paper does not provide a clear focal numeric CE value in the extracted text.",
+    "Values from comparison Table 1 for NMC/LNO/LCO are literature comparators and must not be attributed to this work."
+  ]
+}

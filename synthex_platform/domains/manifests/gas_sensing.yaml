@@ -1,0 +1,128 @@
+slug: gas_sensing
+name: Gas Sensing
+version: 1.0.0
+description: Experimental and computational gas-sensor materials, fabrication, testing
+  and performance.
+recommended_sections:
+- materials
+- synthesis
+- fabrication
+- sensor testing
+- results
+- DFT
+- supporting information
+process_vocabulary:
+- hydrothermal
+- sol-gel
+- sputtering
+- CVD
+- ALD
+- spin coating
+- electrodeposition
+- annealing
+properties:
+- key: sensor_response
+  name: Sensor response
+  kind: performance
+  units:
+  - dimensionless
+  - '%'
+  conditions:
+  - target
+  - concentration
+  - temperature
+  - humidity
+  aliases: []
+- key: sensitivity
+  name: Sensitivity
+  kind: performance
+  units: []
+  conditions:
+  - target
+  - concentration_range
+  - temperature
+  aliases: []
+- key: selectivity_ratio
+  name: Selectivity ratio
+  kind: performance
+  units:
+  - dimensionless
+  conditions:
+  - target
+  - interferent
+  - temperature
+  aliases: []
+- key: limit_of_detection
+  name: Limit of detection
+  kind: performance
+  units:
+  - ppb
+  - ppm
+  - nM
+  - uM
+  conditions:
+  - target
+  aliases: []
+- key: response_time
+  name: Response time
+  kind: kinetics
+  units:
+  - s
+  conditions:
+  - target
+  - concentration
+  - temperature
+  - criterion
+  aliases: []
+- key: recovery_time
+  name: Recovery time
+  kind: kinetics
+  units:
+  - s
+  conditions:
+  - target
+  - concentration
+  - temperature
+  - criterion
+  aliases: []
+- key: adsorption_energy
+  name: Adsorption energy
+  kind: calculation
+  units:
+  - eV
+  conditions:
+  - adsorbate
+  - surface
+  - site
+  aliases: []
+- key: charge_transfer
+  name: Charge transfer
+  kind: calculation
+  units:
+  - e
+  conditions:
+  - adsorbate
+  - surface
+  - method
+  aliases: []
+benchmarks:
+- id: gas_sensing.target_selectivity_prediction
+  name: Target selectivity prediction
+  target: selectivity_ratio
+  group_by:
+  - material
+  - target
+- id: gas_sensing.response_time_prediction
+  name: Response time prediction
+  target: response_time
+  group_by:
+  - material
+  - target
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

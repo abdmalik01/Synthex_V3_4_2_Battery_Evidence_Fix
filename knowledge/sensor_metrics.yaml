@@ -1,0 +1,17 @@
+sensor_response:
+  rule: Preserve the paper's response definition and formula. Do not silently relabel as sensitivity.
+sensitivity:
+  canonical_definition: Change in output per change in analyte concentration when the paper supports that interpretation.
+  never_assume: A dimensionless gas response ratio is automatically analytical sensitivity.
+selectivity:
+  extract: [target_analyte, interferents, target_response, interferent_response, selectivity_ratio, formula, evidence]
+  rule: Preserve qualitative selectivity if no numeric comparison exists.
+limit_of_detection:
+  extract: [reported_value, unit, calculation_method, formula, sigma_definition, calibration_slope, evidence]
+  rule: Never force a universal LOD formula.
+response_time:
+  extract: [value, unit, criterion, analyte, concentration, operating_temperature, evidence]
+  rule: criterion must be null if t90/t95/etc. is not stated.
+recovery_time:
+  extract: [value, unit, criterion, analyte, concentration, operating_temperature, evidence]
+  rule: criterion must be null if t90/t95/etc. is not stated.

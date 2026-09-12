@@ -1,0 +1,115 @@
+slug: corrosion
+name: Corrosion
+version: 1.0.0
+description: Alloy/environment exposure, electrochemical corrosion tests, degradation
+  rates and inhibitor performance.
+recommended_sections:
+- materials
+- sample preparation
+- corrosion testing
+- electrochemical measurements
+- surface analysis
+- results
+process_vocabulary:
+- polishing
+- heat treatment
+- immersion
+- salt spray
+- potentiodynamic polarization
+- EIS
+- coating
+- inhibitor addition
+properties:
+- key: corrosion_rate
+  name: Corrosion rate
+  kind: performance
+  units:
+  - mm/year
+  - mpy
+  - mg/cm2/day
+  conditions:
+  - environment
+  - temperature
+  - exposure_time
+  aliases: []
+- key: corrosion_current_density
+  name: Corrosion current density
+  kind: electrochemical
+  units:
+  - A/cm2
+  conditions:
+  - electrolyte
+  - temperature
+  aliases: []
+- key: corrosion_potential
+  name: Corrosion potential
+  kind: electrochemical
+  units:
+  - V
+  conditions:
+  - reference_electrode
+  - electrolyte
+  aliases: []
+- key: polarization_resistance
+  name: Polarization resistance
+  kind: electrochemical
+  units:
+  - ohm*cm2
+  conditions:
+  - electrolyte
+  aliases: []
+- key: charge_transfer_resistance
+  name: Charge-transfer resistance
+  kind: electrochemical
+  units:
+  - ohm*cm2
+  conditions:
+  - frequency_range
+  aliases: []
+- key: pitting_potential
+  name: Pitting potential
+  kind: performance
+  units:
+  - V
+  conditions:
+  - chloride_concentration
+  aliases: []
+- key: inhibition_efficiency
+  name: Inhibition efficiency
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - inhibitor
+  - concentration
+  aliases: []
+- key: mass_loss
+  name: Mass loss
+  kind: performance
+  units:
+  - mg
+  - mg/cm2
+  conditions:
+  - exposure_time
+  aliases: []
+benchmarks:
+- id: corrosion.corrosion_rate_prediction
+  name: Corrosion rate prediction
+  target: corrosion_rate
+  group_by:
+  - alloy
+  - environment
+- id: corrosion.inhibitor_efficiency_prediction
+  name: Inhibitor efficiency prediction
+  target: inhibition_efficiency
+  group_by:
+  - alloy
+  - inhibitor
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

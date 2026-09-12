@@ -1,0 +1,706 @@
+{
+  "$defs": {
+    "DraftCalculation": {
+      "properties": {
+        "local_id": {
+          "title": "Local Id",
+          "type": "string"
+        },
+        "calculation_type": {
+          "title": "Calculation Type",
+          "type": "string"
+        },
+        "material_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Refs",
+          "type": "array"
+        },
+        "code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Code"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "functional": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Functional"
+        },
+        "model": {
+          "additionalProperties": true,
+          "title": "Model",
+          "type": "object"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "local_id",
+        "calculation_type"
+      ],
+      "title": "DraftCalculation",
+      "type": "object"
+    },
+    "DraftExperiment": {
+      "properties": {
+        "local_id": {
+          "title": "Local Id",
+          "type": "string"
+        },
+        "experiment_type": {
+          "title": "Experiment Type",
+          "type": "string"
+        },
+        "material_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Refs",
+          "type": "array"
+        },
+        "target": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target"
+        },
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Outputs",
+          "type": "array"
+        },
+        "protocol": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "local_id",
+        "experiment_type"
+      ],
+      "title": "DraftExperiment",
+      "type": "object"
+    },
+    "DraftMaterial": {
+      "properties": {
+        "local_id": {
+          "title": "Local Id",
+          "type": "string"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "formula": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Formula"
+        },
+        "composition": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Composition",
+          "type": "object"
+        },
+        "elements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Elements",
+          "type": "array"
+        },
+        "phase": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phase"
+        },
+        "morphology": {
+          "additionalProperties": true,
+          "title": "Morphology",
+          "type": "object"
+        },
+        "defects": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Defects",
+          "type": "array"
+        },
+        "dopants": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Dopants",
+          "type": "array"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        }
+      },
+      "required": [
+        "local_id"
+      ],
+      "title": "DraftMaterial",
+      "type": "object"
+    },
+    "DraftProcess": {
+      "properties": {
+        "local_id": {
+          "title": "Local Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "family": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Family"
+        },
+        "material_refs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Material Refs",
+          "type": "array"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/Measurement"
+          },
+          "title": "Parameters",
+          "type": "array"
+        },
+        "atmosphere": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Atmosphere"
+        },
+        "equipment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Equipment"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "local_id",
+        "name"
+      ],
+      "title": "DraftProcess",
+      "type": "object"
+    },
+    "DraftSource": {
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "doi": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Doi"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "year": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Year"
+        },
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Authors",
+          "type": "array"
+        }
+      },
+      "title": "DraftSource",
+      "type": "object"
+    },
+    "Evidence": {
+      "properties": {
+        "source_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Id"
+        },
+        "page": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Page"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType",
+          "default": "unknown"
+        },
+        "text_snippet": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Text Snippet"
+        },
+        "table_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Table Id"
+        },
+        "figure_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Figure Id"
+        },
+        "locator": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Locator"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        }
+      },
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Measurement": {
+      "properties": {
+        "property": {
+          "title": "Property",
+          "type": "string"
+        },
+        "raw_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Raw Value"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "normalized_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Value"
+        },
+        "normalized_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Normalized Unit"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty"
+        },
+        "uncertainty_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty Unit"
+        },
+        "qualifier": {
+          "default": "unknown",
+          "enum": [
+            "exact",
+            "approx",
+            "lower_bound",
+            "upper_bound",
+            "range",
+            "categorical",
+            "unknown"
+          ],
+          "title": "Qualifier",
+          "type": "string"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "conditions": {
+          "additionalProperties": true,
+          "title": "Conditions",
+          "type": "object"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        }
+      },
+      "required": [
+        "property"
+      ],
+      "title": "Measurement",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "text",
+        "table",
+        "figure",
+        "figure_caption",
+        "supplementary",
+        "database",
+        "computation",
+        "user",
+        "unknown"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "source": {
+      "$ref": "#/$defs/DraftSource"
+    },
+    "materials": {
+      "items": {
+        "$ref": "#/$defs/DraftMaterial"
+      },
+      "title": "Materials",
+      "type": "array"
+    },
+    "processes": {
+      "items": {
+        "$ref": "#/$defs/DraftProcess"
+      },
+      "title": "Processes",
+      "type": "array"
+    },
+    "experiments": {
+      "items": {
+        "$ref": "#/$defs/DraftExperiment"
+      },
+      "title": "Experiments",
+      "type": "array"
+    },
+    "calculations": {
+      "items": {
+        "$ref": "#/$defs/DraftCalculation"
+      },
+      "title": "Calculations",
+      "type": "array"
+    },
+    "domain_values": {
+      "additionalProperties": true,
+      "title": "Domain Values",
+      "type": "object"
+    },
+    "extraction_notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Extraction Notes",
+      "type": "array"
+    }
+  },
+  "title": "ExtractedDocument",
+  "type": "object"
+}

@@ -1,0 +1,135 @@
+slug: additive_manufacturing
+name: Additive Manufacturing
+version: 1.0.0
+description: Powder/feedstock, machine parameters, thermal history, defects, microstructure
+  and part properties.
+recommended_sections:
+- feedstock
+- machine setup
+- process parameters
+- build
+- post-processing
+- characterization
+- mechanical testing
+process_vocabulary:
+- LPBF
+- SLM
+- EBM
+- DED
+- binder jetting
+- WAAM
+- HIP
+- stress relief
+- solution treatment
+properties:
+- key: laser_power
+  name: Laser power
+  kind: process
+  units:
+  - W
+  conditions:
+  - machine
+  aliases: []
+- key: scan_speed
+  name: Scan speed
+  kind: process
+  units:
+  - mm/s
+  conditions:
+  - strategy
+  aliases: []
+- key: hatch_spacing
+  name: Hatch spacing
+  kind: process
+  units:
+  - um
+  - mm
+  conditions: []
+  aliases: []
+- key: layer_thickness
+  name: Layer thickness
+  kind: process
+  units:
+  - um
+  conditions: []
+  aliases: []
+- key: volumetric_energy_density
+  name: Volumetric energy density
+  kind: derived
+  units:
+  - J/mm3
+  conditions:
+  - power
+  - speed
+  - hatch
+  - layer
+  aliases: []
+- key: relative_density
+  name: Relative density
+  kind: quality
+  units:
+  - '%'
+  conditions:
+  - process
+  aliases: []
+- key: porosity
+  name: Porosity
+  kind: quality
+  units:
+  - '%'
+  conditions:
+  - method
+  aliases: []
+- key: surface_roughness
+  name: Surface roughness
+  kind: quality
+  units:
+  - um
+  conditions:
+  - metric
+  aliases: []
+- key: melt_pool_width
+  name: Melt pool width
+  kind: process
+  units:
+  - um
+  conditions:
+  - power
+  - speed
+  aliases: []
+- key: melt_pool_depth
+  name: Melt pool depth
+  kind: process
+  units:
+  - um
+  conditions:
+  - power
+  - speed
+  aliases: []
+benchmarks:
+- id: additive_manufacturing.density_prediction
+  name: Density prediction
+  target: relative_density
+  group_by:
+  - alloy
+  - process
+- id: additive_manufacturing.porosity_prediction
+  name: Porosity prediction
+  target: porosity
+  group_by:
+  - alloy
+  - process
+- id: additive_manufacturing.melt_pool_geometry_prediction
+  name: Melt pool geometry prediction
+  target: melt_pool_depth
+  group_by:
+  - alloy
+  - process
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

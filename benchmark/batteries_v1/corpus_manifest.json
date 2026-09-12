@@ -1,0 +1,230 @@
+{
+  "corpus_name": "Synthex Batteries V1 user-supplied validation corpus",
+  "total_files": 19,
+  "unique_files": 17,
+  "battery_relevant_unique": 15,
+  "duplicates": 2,
+  "negative_controls": 2,
+  "entries": [
+    {
+      "filename": "1-s2.0-S1026918524001100-main.pdf",
+      "title": "Lithium-ion battery fundamentals and exploration of cathode materials: A review",
+      "document_type": "review",
+      "subtypes": [
+        "cathode_review",
+        "electrochemical_performance_review"
+      ],
+      "benchmark_priority": "B",
+      "use": "ontology/alias coverage; not primary extraction accuracy"
+    },
+    {
+      "filename": "1-s2.0-S2211285524003689-main.pdf",
+      "title": "Ni-rich cathode materials for stable high-energy lithium-ion batteries",
+      "document_type": "review",
+      "subtypes": [
+        "cathode_review",
+        "Ni_rich",
+        "degradation"
+      ],
+      "benchmark_priority": "B",
+      "use": "review-table and terminology stress test"
+    },
+    {
+      "filename": "1-s2.0-S2211285525005919-main.pdf",
+      "title": "A comprehensive review of solid-state lithium batteries: Fast Charging characteristics and in-operando diagnostics",
+      "document_type": "review",
+      "subtypes": [
+        "solid_state_batteries",
+        "fast_charging",
+        "diagnostics",
+        "electrolyte"
+      ],
+      "benchmark_priority": "B",
+      "use": "solid-state terminology and diagnostics"
+    },
+    {
+      "filename": "1-s2.0-S2590174526005167-main.pdf",
+      "title": "Recent advances and future perspectives on key components for sodium-ion batteries",
+      "document_type": "review",
+      "subtypes": [
+        "sodium_ion",
+        "cathode_review",
+        "anode_review",
+        "electrolyte_review"
+      ],
+      "benchmark_priority": "B",
+      "use": "Na-ion vocabulary and cross-chemistry coverage"
+    },
+    {
+      "filename": "1-s2.0-S2666386426002407-main.pdf",
+      "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+      "document_type": "original_research",
+      "subtypes": [
+        "solid_state_batteries",
+        "impedance_eis",
+        "machine_learning",
+        "diagnostics"
+      ],
+      "benchmark_priority": "A",
+      "use": "EIS/DRT/ML original-research benchmark"
+    },
+    {
+      "filename": "Application_of_First_Principles_Computations_Based.pdf",
+      "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+      "document_type": "perspective_review",
+      "subtypes": [
+        "sodium_ion",
+        "computational_dft",
+        "cathode_review"
+      ],
+      "benchmark_priority": "A",
+      "use": "DFT descriptor vocabulary; review-vs-focal-result discrimination"
+    },
+    {
+      "filename": "Characteristics_and_properties_of_anode_materials_.pdf",
+      "title": "Characteristics and properties of anode materials for lithium-ion batteries",
+      "document_type": "review",
+      "subtypes": [
+        "anode_review"
+      ],
+      "benchmark_priority": "C",
+      "use": "anode terminology"
+    },
+    {
+      "filename": "Characteristics_and_properties_of_anode_materials_ (1).pdf",
+      "duplicate_of": "Characteristics_and_properties_of_anode_materials_.pdf",
+      "document_type": "duplicate",
+      "benchmark_priority": "EXCLUDE"
+    },
+    {
+      "filename": "Electrolytes - StatPearls - NCBI Bookshelf.pdf",
+      "title": "Electrolytes",
+      "document_type": "non_battery",
+      "subtypes": [
+        "biomedical_reference"
+      ],
+      "benchmark_priority": "EXCLUDE",
+      "use": "negative-domain-routing test"
+    },
+    {
+      "filename": "Evaluation_of_Li_Ion_Batteries.pdf",
+      "title": "Analysis and Performance Evaluation of Li-Ion Batteries Using NASA Battery Data Set",
+      "document_type": "technical_report",
+      "subtypes": [
+        "battery_dataset_modelling",
+        "electrochemical_performance",
+        "degradation_health",
+        "impedance_eis"
+      ],
+      "benchmark_priority": "A",
+      "use": "dataset-analysis / protocol / routing regression test"
+    },
+    {
+      "filename": "battery_test.pdf",
+      "duplicate_of": "Evaluation_of_Li_Ion_Batteries.pdf",
+      "document_type": "duplicate",
+      "benchmark_priority": "EXCLUDE"
+    },
+    {
+      "filename": "From_Li-Ion_Batteries_toward_Na-Ion_Chemistries_Ch.pdf",
+      "title": "From Li-Ion Batteries toward Na-Ion Chemistries: Challenges and Opportunities",
+      "document_type": "progress_report_review",
+      "subtypes": [
+        "lithium_ion",
+        "sodium_ion",
+        "chemistry_transition"
+      ],
+      "benchmark_priority": "B",
+      "use": "cross-chemistry ontology"
+    },
+    {
+      "filename": "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+      "title": "A Table-driven Li-Ion Battery Model for a BMS Development Platform – Modeling, Measurements, Implementation and Validation",
+      "document_type": "conference_research",
+      "subtypes": [
+        "battery_modelling",
+        "BMS",
+        "equivalent_circuit"
+      ],
+      "benchmark_priority": "A",
+      "use": "model/measurement data benchmark"
+    },
+    {
+      "filename": "applsci-10-04112.pdf",
+      "title": "Cycling Biomechanics and Its Relationship to Performance",
+      "document_type": "non_battery",
+      "subtypes": [
+        "cycling_biomechanics"
+      ],
+      "benchmark_priority": "EXCLUDE",
+      "use": "hard negative routing test for keyword cycling"
+    },
+    {
+      "filename": "batteries-11-00011.pdf",
+      "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+      "document_type": "original_research",
+      "subtypes": [
+        "impedance_eis",
+        "characterization",
+        "battery_modelling",
+        "temperature",
+        "state_of_charge"
+      ],
+      "benchmark_priority": "A",
+      "use": "EIS protocol/conditions/model benchmark"
+    },
+    {
+      "filename": "batteries-11-00142.pdf",
+      "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+      "doi": "10.3390/batteries11040142",
+      "year": 2025,
+      "document_type": "original_research",
+      "subtypes": [
+        "materials_synthesis",
+        "electrode_fabrication",
+        "cell_assembly",
+        "electrochemical_performance",
+        "impedance_eis"
+      ],
+      "benchmark_priority": "A+",
+      "use": "primary electrode-materials gold benchmark"
+    },
+    {
+      "filename": "coatings-16-00912.pdf",
+      "title": "Anode Materials for Lithium-Ion Batteries, from Conventional Materials to High-Entropy Oxides: A Review of Synthesis Methods, Properties and Sustainability Challenges",
+      "document_type": "review",
+      "subtypes": [
+        "anode_review",
+        "synthesis_review",
+        "high_entropy_oxides"
+      ],
+      "benchmark_priority": "B",
+      "use": "large synthesis-method/alias coverage"
+    },
+    {
+      "filename": "inorganics-05-00032.pdf",
+      "title": "Study of Cathode Materials for Lithium-Ion Batteries: Recent Progress and New Challenges",
+      "document_type": "review",
+      "subtypes": [
+        "cathode_review",
+        "cycling",
+        "rate_capability"
+      ],
+      "benchmark_priority": "B",
+      "use": "cathode property vocabulary"
+    },
+    {
+      "filename": "review-on-synthesis-characterizations-and-electrochemical-properties-of-cathode-materials-for-lithium-ion-batteries-2169-0022-1000258.pdf",
+      "title": "Review on Synthesis, Characterizations, and Electrochemical Properties of Cathode Materials for Lithium Ion Batteries",
+      "document_type": "review",
+      "subtypes": [
+        "cathode_review",
+        "synthesis_review",
+        "characterization_review",
+        "electrochemical_review"
+      ],
+      "benchmark_priority": "B",
+      "use": "synthesis/characterization coverage"
+    }
+  ]
+}

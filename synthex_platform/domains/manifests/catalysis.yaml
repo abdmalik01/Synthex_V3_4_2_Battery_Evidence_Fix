@@ -1,0 +1,148 @@
+slug: catalysis
+name: Catalysis & Electrocatalysis
+version: 1.0.0
+description: Catalyst synthesis, active sites, reaction conditions, kinetics, selectivity
+  and electrochemical activity.
+recommended_sections:
+- catalyst synthesis
+- characterization
+- catalytic tests
+- electrochemistry
+- DFT
+- results
+process_vocabulary:
+- impregnation
+- co-precipitation
+- hydrothermal
+- calcination
+- reduction
+- electrode ink preparation
+- activation
+properties:
+- key: conversion
+  name: Conversion
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - reactant
+  - temperature
+  - pressure
+  - flow
+  aliases: []
+- key: product_selectivity
+  name: Product selectivity
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - product
+  - conversion
+  aliases: []
+- key: yield
+  name: Product yield
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - product
+  aliases: []
+- key: turnover_frequency
+  name: Turnover frequency
+  kind: kinetics
+  units:
+  - 1/s
+  - 1/h
+  conditions:
+  - active_site_basis
+  - temperature
+  aliases: []
+- key: mass_activity
+  name: Mass activity
+  kind: performance
+  units:
+  - A/g
+  - mol/g/h
+  conditions:
+  - potential
+  - product
+  aliases: []
+- key: specific_activity
+  name: Specific activity
+  kind: performance
+  units:
+  - mA/cm2
+  conditions:
+  - potential
+  aliases: []
+- key: overpotential
+  name: Overpotential
+  kind: performance
+  units:
+  - mV
+  conditions:
+  - current_density
+  - reaction
+  aliases: []
+- key: tafel_slope
+  name: Tafel slope
+  kind: kinetics
+  units:
+  - mV/dec
+  conditions:
+  - reaction
+  aliases: []
+- key: faradaic_efficiency
+  name: Faradaic efficiency
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - product
+  - potential
+  aliases: []
+- key: adsorption_energy
+  name: Adsorption energy
+  kind: calculation
+  units:
+  - eV
+  conditions:
+  - intermediate
+  - site
+  aliases: []
+- key: activation_barrier
+  name: Activation barrier
+  kind: calculation
+  units:
+  - eV
+  - kJ/mol
+  conditions:
+  - elementary_step
+  aliases: []
+benchmarks:
+- id: catalysis.activity_prediction
+  name: Activity prediction
+  target: turnover_frequency
+  group_by:
+  - catalyst
+  - reaction
+- id: catalysis.product_selectivity_prediction
+  name: Product selectivity prediction
+  target: product_selectivity
+  group_by:
+  - catalyst
+  - reaction
+- id: catalysis.overpotential_prediction
+  name: Overpotential prediction
+  target: overpotential
+  group_by:
+  - catalyst
+  - reaction
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

@@ -1,0 +1,267 @@
+{
+  "filename": "1-s2.0-S2666386426002407-main.pdf",
+  "manifest": {
+    "filename": "1-s2.0-S2666386426002407-main.pdf",
+    "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+    "document_type": "original_research",
+    "subtypes": [
+      "solid_state_batteries",
+      "impedance_eis",
+      "machine_learning",
+      "diagnostics"
+    ],
+    "benchmark_priority": "A",
+    "use": "EIS/DRT/ML original-research benchmark"
+  },
+  "expected_domain": "batteries",
+  "status": "completed",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 15,
+    "prompt_characters": 73223,
+    "parser": "pymupdf",
+    "truncated_at_180000": false,
+    "table_markers": 0,
+    "figure_markers": 30
+  },
+  "routing": {
+    "domain": "batteries",
+    "confidence": 0.98,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 23.0,
+      "biomaterials": 0.0,
+      "catalysis": 1.0,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 0.0,
+      "membranes": 0.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [
+        "lithium-ion",
+        "li-ion",
+        "battery",
+        "batteries",
+        "cathode",
+        "anode",
+        "electrolyte",
+        "charge-discharge",
+        "coulombic",
+        "c-rate",
+        "state of health",
+        "constant current",
+        "constant voltage",
+        "electrochemical impedance spectroscopy"
+      ],
+      "biomaterials": [],
+      "catalysis": [
+        "her"
+      ],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [],
+      "membranes": [],
+      "photovoltaics": [],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [
+      "electrochemical_performance",
+      "battery_dataset_modelling",
+      "impedance_eis",
+      "degradation_health",
+      "electrode_fabrication"
+    ],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "model": "gemini-3.5-flash",
+  "schema_validation_success": true,
+  "extraction": {
+    "paper_types": [
+      "impedance_eis",
+      "degradation_health",
+      "battery_dataset_modelling"
+    ],
+    "materials": 2,
+    "shared_protocols": 1,
+    "battery_groups": 1,
+    "performance_points": 6,
+    "archive_completeness": 1.0,
+    "archive_semantic_warnings": [
+      "Scientific admissibility gate quarantined 8 quantitative value(s); raw values remain in the batteries domain payload."
+    ],
+    "missing_fields": []
+  },
+  "coercion_candidates": {
+    "recognized_alias_keys": [
+      "battery_groups[0].performance_points[0].voltage_window",
+      "battery_groups[0].performance_points[1].voltage_window",
+      "battery_groups[0].performance_points[2].voltage_window",
+      "battery_groups[0].performance_points[3].voltage_window",
+      "battery_groups[0].performance_points[4].voltage_window",
+      "battery_groups[0].performance_points[5].voltage_window"
+    ],
+    "invalid_qualifiers": [],
+    "compact_quantity_strings": 38
+  },
+  "provenance": {
+    "evidence_capable_records": 12,
+    "records_with_evidence": 10,
+    "record_coverage": 0.833,
+    "records_with_verbatim_evidence": 8,
+    "verbatim_record_coverage": 0.667,
+    "snippets_checked": 10,
+    "verbatim_match_coverage": 0.8,
+    "unmatched_snippet_candidates": [
+      {
+        "location": "battery_groups[0].performance_points[0]",
+        "page": 8,
+        "snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%"
+      },
+      {
+        "location": "battery_groups[0].performance_points[1]",
+        "page": 8,
+        "snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%."
+      }
+    ],
+    "records_without_evidence": [
+      "shared_protocols[0]",
+      "battery_groups[0]"
+    ],
+    "source_type_counts": {
+      "text": 10
+    }
+  },
+  "duplicate_facts": [],
+  "condition_association_review": [],
+  "review_contamination": {
+    "is_review": false,
+    "performance_points": 6,
+    "materials_with_synthesis": 0,
+    "manual_review_required": false,
+    "note": null
+  },
+  "admissibility": {
+    "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+    "admitted_quantitative_values": 7,
+    "quarantined_quantitative_values": 8,
+    "quarantine": [
+      {
+        "path": "battery_groups[group_ceracharge].temperature",
+        "property": "temperature",
+        "raw_value": "25◦C",
+        "value": 25.0,
+        "unit": "°C",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_ceracharge].charge_protocol.charge_voltage_limit",
+        "property": "charge_voltage_limit",
+        "raw_value": "2.4 V",
+        "value": 2.4,
+        "unit": "V",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_ceracharge].discharge_protocol.cutoff_voltages[0]",
+        "property": "discharge_cutoff_voltage",
+        "raw_value": "0 V",
+        "value": 0.0,
+        "unit": "V",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_ceracharge].performance_points[0]",
+        "property": "mean_absolute_error",
+        "raw_value": "1.6%",
+        "value": 1.6,
+        "unit": "%",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 8,
+            "section": "Performance with DRT-instructed feature selection",
+            "text_snippet": "The GPR model achieves a precise diagnosis of cell capacity based on unobserved impedance, exhibiting a remarkably low MSE of 0.06% and an MAE of 1.6%",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.95
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_ceracharge].performance_points[1]",
+        "property": "mean_absolute_error",
+        "raw_value": "2.4%",
+        "value": 2.4,
+        "unit": "%",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": [
+          {
+            "page": 8,
+            "section": "Performance with DRT-instructed feature selection",
+            "text_snippet": "The capacity prediction in the next 10 cycles has only been slightly improved in the BR model, resulting in an MSE of 0.16% and an MAE of 2.4%.",
+            "source_type": "text",
+            "verbatim_match": false,
+            "confidence": 0.95
+          }
+        ]
+      },
+      {
+        "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_min",
+        "property": "frequency_min",
+        "raw_value": "10 mHz",
+        "value": 0.01,
+        "unit": "Hz",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_ceracharge].impedance_protocol.frequency_max",
+        "property": "frequency_max",
+        "raw_value": "10 kHz",
+        "value": 10000.0,
+        "unit": "Hz",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      },
+      {
+        "path": "battery_groups[group_ceracharge].impedance_protocol.ac_amplitude",
+        "property": "ac_amplitude",
+        "raw_value": "5 μA",
+        "value": 5e-06,
+        "unit": "A",
+        "ownership": "focal_work",
+        "reason": "no_verbatim_evidence",
+        "evidence": []
+      }
+    ]
+  },
+  "canonical_quantitative_metrics": {
+    "canonical_quantitative_values": 7,
+    "verbatim_supported_values": 7,
+    "duplicate_measurement_signatures": 0
+  },
+  "calculations": 0,
+  "calculation_outputs": 0,
+  "unresolved_condition_conflicts": 0,
+  "referential_integrity_warnings": []
+}

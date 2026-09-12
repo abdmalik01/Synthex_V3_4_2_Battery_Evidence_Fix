@@ -1,0 +1,654 @@
+[
+{
+  "paper": {
+    "title": "Selective Reduction Laser Sintering: A New Strategy for NO2 Gas Detection Based on In2O3 Nanoparticles",
+    "doi": "10.1002/adfm.202419057",
+    "year": 2025,
+    "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.202419057"
+  },
+  "samples": [
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "SRLS-In2O3",
+      "material": "In2O3 nanoparticles",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "Chemiresistive gas sensor",
+      "transduction_method": "Resistance change",
+      "synthesis": null,
+      "deposition": {
+        "method_family": "Laser processing",
+        "method": "Selective reduction laser sintering",
+        "method_variant": "UV selective reduction laser sintering",
+        "substrate": null,
+        "parameters": [],
+        "post_treatment": [],
+        "evidence": null
+      },
+      "testing_conditions": {
+        "target_analyte": "NO2",
+        "concentration": {
+          "raw_value": "10 ppm",
+          "value": 10.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": null,
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": "room temperature"
+      },
+      "performance": {
+        "sensor_response": {
+          "reported_term": null,
+          "definition_as_reported": null,
+          "formula": null,
+          "value": {
+            "raw_value": "S = 460.9",
+            "value": 460.9,
+            "unit": "dimensionless",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "sensitivity": {
+          "reported_term": null,
+          "definition_as_reported": null,
+          "formula": null,
+          "value": {
+            "raw_value": "56.91 ppm^-1",
+            "value": 56.91,
+            "unit": "ppm^-1",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "concentration_range": "2–10 ppm",
+          "canonical_interpretation": null,
+          "evidence": null
+        },
+        "selectivity": {
+          "target_analyte": "NO2",
+          "definition_as_reported": null,
+          "entries": [
+            {
+              "interferent": "C2H5OH / CO2 / acetone / NH3 / CH4 / H2S",
+              "raw_ratio": ">400",
+              "selectivity_ratio": null,
+              "target_response": null,
+              "interferent_response": null,
+              "unit": null,
+              "formula": null,
+              "evidence": null
+            }
+          ],
+          "qualitative_statement": null,
+          "evidence": null
+        },
+        "limit_of_detection": null,
+        "response_time": {
+          "value": {
+            "raw_value": "27 s",
+            "value": 27.0,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": null,
+          "analyte": "NO2",
+          "concentration": {
+            "raw_value": "10 ppm",
+            "value": 10.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": null,
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "570 s",
+            "value": 570.0,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": null,
+          "analyte": "NO2",
+          "concentration": {
+            "raw_value": "10 ppm",
+            "value": 10.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": null,
+          "evidence": null
+        }
+      }
+    }
+  ],
+  "extraction_notes": []
+},
+{
+  "paper": {
+    "title": "Au/ZnO/In2O3 nanoparticles for enhanced isopropanol gas sensing performance",
+    "doi": "10.1039/D3RA07507A",
+    "year": 2024,
+    "url": "https://pubs.rsc.org/en/Content/ArticleHtml/2024/RA/d3ra07507a"
+  },
+  "samples": [
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "2%Au/1%ZnO/In2O3",
+      "material": "Au/ZnO/In2O3",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "Chemiresistive gas sensor",
+      "transduction_method": "Resistance change",
+      "synthesis": null,
+      "deposition": null,
+      "testing_conditions": {
+        "target_analyte": "Isopropanol",
+        "concentration": {
+          "raw_value": "100 ppm",
+          "value": 100.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": null,
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": null
+      },
+      "performance": {
+        "sensor_response": null,
+        "sensitivity": null,
+        "selectivity": null,
+        "limit_of_detection": null,
+        "response_time": {
+          "value": {
+            "raw_value": "78 s",
+            "value": 78.0,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": "Isopropanol",
+          "concentration": {
+            "raw_value": "100 ppm",
+            "value": 100.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": null,
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "49 s",
+            "value": 49.0,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": "Isopropanol",
+          "concentration": {
+            "raw_value": "100 ppm",
+            "value": 100.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": null,
+          "evidence": null
+        }
+      }
+    }
+  ],
+  "extraction_notes": []
+},
+{
+  "paper": {
+    "title": "Ni–In2O3/ZnO MEMS H2S gas sensor",
+    "doi": "10.1515/znb-2024-0113",
+    "year": 2025,
+    "url": "https://www.degruyterbrill.com/document/doi/10.1515/znb-2024-0113/pdf?licenseType=free"
+  },
+  "samples": [
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "Ni-In2O3/ZnO",
+      "material": "Ni–In2O3/ZnO",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "MEMS chemiresistive gas sensor",
+      "transduction_method": null,
+      "synthesis": null,
+      "deposition": null,
+      "testing_conditions": {
+        "target_analyte": "H2S",
+        "concentration": {
+          "raw_value": "100 ppm",
+          "value": 100.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": {
+          "raw_value": "300 °C",
+          "value": 300.0,
+          "unit": "°C",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": null
+      },
+      "performance": {
+        "sensor_response": null,
+        "sensitivity": null,
+        "selectivity": {
+          "target_analyte": "H2S",
+          "definition_as_reported": null,
+          "entries": [],
+          "qualitative_statement": "Specific selectivity for H2S versus tested interfering gases.",
+          "evidence": null
+        },
+        "limit_of_detection": {
+          "value": {
+            "raw_value": "0.57 ppm",
+            "value": 0.57,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "calculation_method": "Reported by authors",
+          "formula": null,
+          "sigma_definition": null,
+          "calibration_slope": null,
+          "evidence": null
+        },
+        "response_time": {
+          "value": {
+            "raw_value": "4.4 s",
+            "value": 4.4,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": null,
+          "analyte": "H2S",
+          "concentration": {
+            "raw_value": "100 ppm",
+            "value": 100.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": {
+            "raw_value": "300 °C",
+            "value": 300.0,
+            "unit": "°C",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "5.2 s",
+            "value": 5.2,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": null,
+          "analyte": "H2S",
+          "concentration": {
+            "raw_value": "100 ppm",
+            "value": 100.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": {
+            "raw_value": "300 °C",
+            "value": 300.0,
+            "unit": "°C",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        }
+      }
+    }
+  ],
+  "extraction_notes": []
+},
+{
+  "paper": {
+    "title": "Defect-Driven Selectivity Inversion in ZnO Gas Sensors via Y3+ and Dy3+ Doping for Enhanced VOC Detection with a Suppressed NO2 Response",
+    "doi": "10.3390/s26154675",
+    "year": 2026,
+    "url": "https://www.mdpi.com/1424-8220/26/15/4675"
+  },
+  "samples": [
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "ZnO-NO2",
+      "material": "ZnO",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "Chemiresistive gas sensor",
+      "transduction_method": null,
+      "synthesis": null,
+      "deposition": null,
+      "testing_conditions": {
+        "target_analyte": "NO2",
+        "concentration": {
+          "raw_value": "25 ppm",
+          "value": 25.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": {
+          "raw_value": "230 °C",
+          "value": 230.0,
+          "unit": "°C",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": null
+      },
+      "performance": {
+        "sensor_response": {
+          "reported_term": null,
+          "definition_as_reported": null,
+          "formula": null,
+          "value": {
+            "raw_value": "30.0 dimensionless",
+            "value": 30.0,
+            "unit": "dimensionless",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "sensitivity": null,
+        "selectivity": null,
+        "limit_of_detection": null,
+        "response_time": {
+          "value": {
+            "raw_value": "343.4 s",
+            "value": 343.4,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": "NO2",
+          "concentration": {
+            "raw_value": "25 ppm",
+            "value": 25.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": {
+            "raw_value": "230 °C",
+            "value": 230.0,
+            "unit": "°C",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "705.68 s",
+            "value": 705.68,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": null,
+          "concentration": null,
+          "operating_temperature": null,
+          "evidence": null
+        }
+      }
+    },
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "ZD4-Ethanol",
+      "material": "Dy-doped ZnO",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "Chemiresistive gas sensor",
+      "transduction_method": null,
+      "synthesis": null,
+      "deposition": null,
+      "testing_conditions": {
+        "target_analyte": "Ethanol",
+        "concentration": {
+          "raw_value": "25 ppm",
+          "value": 25.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": {
+          "raw_value": "279 °C",
+          "value": 279.0,
+          "unit": "°C",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": null
+      },
+      "performance": {
+        "sensor_response": {
+          "reported_term": null,
+          "definition_as_reported": null,
+          "formula": null,
+          "value": {
+            "raw_value": "9.61 dimensionless",
+            "value": 9.61,
+            "unit": "dimensionless",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "sensitivity": null,
+        "selectivity": {
+          "target_analyte": "Ethanol",
+          "definition_as_reported": null,
+          "entries": [
+            {
+              "interferent": "NO2",
+              "raw_ratio": "5.6×",
+              "selectivity_ratio": 5.6,
+              "target_response": null,
+              "interferent_response": null,
+              "unit": null,
+              "formula": null,
+              "evidence": null
+            }
+          ],
+          "qualitative_statement": null,
+          "evidence": null
+        },
+        "limit_of_detection": null,
+        "response_time": {
+          "value": {
+            "raw_value": "30.43 s",
+            "value": 30.43,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": "Ethanol",
+          "concentration": {
+            "raw_value": "25 ppm",
+            "value": 25.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": {
+            "raw_value": "279 °C",
+            "value": 279.0,
+            "unit": "°C",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "284.67 s",
+            "value": 284.67,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": null,
+          "concentration": null,
+          "operating_temperature": null,
+          "evidence": null
+        }
+      }
+    },
+    {
+      "source_paper_title": null,
+      "source_doi": null,
+      "sample_id": "ZY4-Acetone",
+      "material": "Y-doped ZnO",
+      "material_category": "Metal Oxides",
+      "composition": null,
+      "sensor_type": "Chemiresistive gas sensor",
+      "transduction_method": null,
+      "synthesis": null,
+      "deposition": null,
+      "testing_conditions": {
+        "target_analyte": "Acetone",
+        "concentration": {
+          "raw_value": "25 ppm",
+          "value": 25.0,
+          "unit": "ppm",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "operating_temperature": {
+          "raw_value": "258 °C",
+          "value": 258.0,
+          "unit": "°C",
+          "normalized_value": null,
+          "normalized_unit": null
+        },
+        "humidity": null,
+        "bias_voltage": null,
+        "atmosphere": null
+      },
+      "performance": {
+        "sensor_response": {
+          "reported_term": null,
+          "definition_as_reported": null,
+          "formula": null,
+          "value": {
+            "raw_value": "8.27 dimensionless",
+            "value": 8.27,
+            "unit": "dimensionless",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "sensitivity": null,
+        "selectivity": {
+          "target_analyte": "Acetone",
+          "definition_as_reported": null,
+          "entries": [
+            {
+              "interferent": "NO2",
+              "raw_ratio": "2×",
+              "selectivity_ratio": 2.0,
+              "target_response": null,
+              "interferent_response": null,
+              "unit": null,
+              "formula": null,
+              "evidence": null
+            }
+          ],
+          "qualitative_statement": null,
+          "evidence": null
+        },
+        "limit_of_detection": null,
+        "response_time": {
+          "value": {
+            "raw_value": "12.19 s",
+            "value": 12.19,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": "Acetone",
+          "concentration": {
+            "raw_value": "25 ppm",
+            "value": 25.0,
+            "unit": "ppm",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "operating_temperature": {
+            "raw_value": "258 °C",
+            "value": 258.0,
+            "unit": "°C",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "evidence": null
+        },
+        "recovery_time": {
+          "value": {
+            "raw_value": "271.45 s",
+            "value": 271.45,
+            "unit": "s",
+            "normalized_value": null,
+            "normalized_unit": null
+          },
+          "criterion": "t90",
+          "analyte": null,
+          "concentration": null,
+          "operating_temperature": null,
+          "evidence": null
+        }
+      }
+    }
+  ],
+  "extraction_notes": []
+}
+]

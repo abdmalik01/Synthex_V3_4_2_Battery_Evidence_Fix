@@ -1,0 +1,1931 @@
+[
+  {
+    "slug": "additive_manufacturing",
+    "name": "Additive Manufacturing",
+    "version": "1.0.0",
+    "description": "Powder/feedstock, machine parameters, thermal history, defects, microstructure and part properties.",
+    "recommended_sections": [
+      "feedstock",
+      "machine setup",
+      "process parameters",
+      "build",
+      "post-processing",
+      "characterization",
+      "mechanical testing"
+    ],
+    "process_vocabulary": [
+      "LPBF",
+      "SLM",
+      "EBM",
+      "DED",
+      "binder jetting",
+      "WAAM",
+      "HIP",
+      "stress relief",
+      "solution treatment"
+    ],
+    "properties": [
+      {
+        "key": "laser_power",
+        "name": "Laser power",
+        "kind": "process",
+        "units": [
+          "W"
+        ],
+        "conditions": [
+          "machine"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "scan_speed",
+        "name": "Scan speed",
+        "kind": "process",
+        "units": [
+          "mm/s"
+        ],
+        "conditions": [
+          "strategy"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "hatch_spacing",
+        "name": "Hatch spacing",
+        "kind": "process",
+        "units": [
+          "um",
+          "mm"
+        ],
+        "conditions": [],
+        "aliases": []
+      },
+      {
+        "key": "layer_thickness",
+        "name": "Layer thickness",
+        "kind": "process",
+        "units": [
+          "um"
+        ],
+        "conditions": [],
+        "aliases": []
+      },
+      {
+        "key": "volumetric_energy_density",
+        "name": "Volumetric energy density",
+        "kind": "derived",
+        "units": [
+          "J/mm3"
+        ],
+        "conditions": [
+          "power",
+          "speed",
+          "hatch",
+          "layer"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "relative_density",
+        "name": "Relative density",
+        "kind": "quality",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "process"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "porosity",
+        "name": "Porosity",
+        "kind": "quality",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "method"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "surface_roughness",
+        "name": "Surface roughness",
+        "kind": "quality",
+        "units": [
+          "um"
+        ],
+        "conditions": [
+          "metric"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "melt_pool_width",
+        "name": "Melt pool width",
+        "kind": "process",
+        "units": [
+          "um"
+        ],
+        "conditions": [
+          "power",
+          "speed"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "melt_pool_depth",
+        "name": "Melt pool depth",
+        "kind": "process",
+        "units": [
+          "um"
+        ],
+        "conditions": [
+          "power",
+          "speed"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "additive_manufacturing.density_prediction",
+        "name": "Density prediction",
+        "target": "relative_density",
+        "group_by": [
+          "alloy",
+          "process"
+        ]
+      },
+      {
+        "id": "additive_manufacturing.porosity_prediction",
+        "name": "Porosity prediction",
+        "target": "porosity",
+        "group_by": [
+          "alloy",
+          "process"
+        ]
+      },
+      {
+        "id": "additive_manufacturing.melt_pool_geometry_prediction",
+        "name": "Melt pool geometry prediction",
+        "target": "melt_pool_depth",
+        "group_by": [
+          "alloy",
+          "process"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "batteries",
+    "name": "Batteries",
+    "version": "1.0.0",
+    "description": "Electrode/electrolyte materials, cell assembly, cycling protocols and electrochemical performance.",
+    "recommended_sections": [
+      "materials",
+      "electrode preparation",
+      "cell assembly",
+      "electrochemical measurements",
+      "results",
+      "supplementary information"
+    ],
+    "process_vocabulary": [
+      "slurry mixing",
+      "coating",
+      "drying",
+      "calendering",
+      "cell assembly",
+      "formation cycling",
+      "annealing",
+      "solid-state synthesis"
+    ],
+    "properties": [
+      {
+        "key": "specific_capacity",
+        "name": "Specific capacity",
+        "kind": "performance",
+        "units": [
+          "mAh/g"
+        ],
+        "conditions": [
+          "cycle",
+          "C_rate",
+          "voltage_window",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "areal_capacity",
+        "name": "Areal capacity",
+        "kind": "performance",
+        "units": [
+          "mAh/cm2"
+        ],
+        "conditions": [
+          "cycle",
+          "C_rate"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "coulombic_efficiency",
+        "name": "Coulombic efficiency",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "cycle"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "energy_density",
+        "name": "Energy density",
+        "kind": "performance",
+        "units": [
+          "Wh/kg",
+          "Wh/L"
+        ],
+        "conditions": [
+          "basis"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "power_density",
+        "name": "Power density",
+        "kind": "performance",
+        "units": [
+          "W/kg",
+          "W/L"
+        ],
+        "conditions": [
+          "basis"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "cycle_retention",
+        "name": "Capacity retention",
+        "kind": "stability",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "cycle_count",
+          "C_rate"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "ionic_conductivity",
+        "name": "Ionic conductivity",
+        "kind": "transport",
+        "units": [
+          "S/cm"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "diffusion_coefficient",
+        "name": "Ion diffusion coefficient",
+        "kind": "transport",
+        "units": [
+          "cm2/s"
+        ],
+        "conditions": [
+          "species",
+          "state_of_charge"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "voltage",
+        "name": "Average/working voltage",
+        "kind": "performance",
+        "units": [
+          "V"
+        ],
+        "conditions": [
+          "reference"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "interfacial_resistance",
+        "name": "Interfacial resistance",
+        "kind": "transport",
+        "units": [
+          "ohm",
+          "ohm*cm2"
+        ],
+        "conditions": [
+          "temperature",
+          "cycle"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "batteries.capacity_retention_prediction",
+        "name": "Capacity retention prediction",
+        "target": "cycle_retention",
+        "group_by": [
+          "chemistry",
+          "electrode"
+        ]
+      },
+      {
+        "id": "batteries.voltage_prediction",
+        "name": "Voltage prediction",
+        "target": "voltage",
+        "group_by": [
+          "chemistry"
+        ]
+      },
+      {
+        "id": "batteries.rate_capability_prediction",
+        "name": "Rate capability prediction",
+        "target": "specific_capacity",
+        "group_by": [
+          "chemistry",
+          "C_rate"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "biomaterials",
+    "name": "Biomaterials",
+    "version": "1.0.0",
+    "description": "Material composition, fabrication, biological assay conditions, mechanical properties and biocompatibility.",
+    "recommended_sections": [
+      "materials",
+      "fabrication",
+      "surface characterization",
+      "cell culture",
+      "biological assays",
+      "mechanical testing",
+      "results"
+    ],
+    "process_vocabulary": [
+      "3D printing",
+      "electrospinning",
+      "crosslinking",
+      "freeze drying",
+      "surface functionalization",
+      "sterilization",
+      "cell seeding"
+    ],
+    "properties": [
+      {
+        "key": "cell_viability",
+        "name": "Cell viability",
+        "kind": "biological",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "cell_line",
+          "time",
+          "assay"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "cell_adhesion",
+        "name": "Cell adhesion",
+        "kind": "biological",
+        "units": [
+          "cells/cm2",
+          "%"
+        ],
+        "conditions": [
+          "cell_line",
+          "time"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "proliferation",
+        "name": "Cell proliferation",
+        "kind": "biological",
+        "units": [
+          "fold",
+          "%"
+        ],
+        "conditions": [
+          "cell_line",
+          "time",
+          "assay"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "hemolysis",
+        "name": "Hemolysis",
+        "kind": "biological",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "blood_source"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "degradation_rate",
+        "name": "Degradation rate",
+        "kind": "performance",
+        "units": [
+          "%/day",
+          "%/week",
+          "mg/day"
+        ],
+        "conditions": [
+          "medium",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "swelling_ratio",
+        "name": "Swelling ratio",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "medium",
+          "time"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "compressive_modulus",
+        "name": "Compressive modulus",
+        "kind": "mechanical",
+        "units": [
+          "MPa",
+          "kPa"
+        ],
+        "conditions": [
+          "strain_rate"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "tensile_strength",
+        "name": "Tensile strength",
+        "kind": "mechanical",
+        "units": [
+          "MPa"
+        ],
+        "conditions": [
+          "hydration_state"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "contact_angle",
+        "name": "Contact angle",
+        "kind": "surface",
+        "units": [
+          "degree"
+        ],
+        "conditions": [],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "biomaterials.cell_viability_prediction",
+        "name": "Cell viability prediction",
+        "target": "cell_viability",
+        "group_by": [
+          "material",
+          "cell_line"
+        ]
+      },
+      {
+        "id": "biomaterials.degradation_prediction",
+        "name": "Degradation prediction",
+        "target": "degradation_rate",
+        "group_by": [
+          "material",
+          "medium"
+        ]
+      },
+      {
+        "id": "biomaterials.mechanical_compatibility_prediction",
+        "name": "Mechanical compatibility prediction",
+        "target": "compressive_modulus",
+        "group_by": [
+          "material",
+          "process"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "catalysis",
+    "name": "Catalysis & Electrocatalysis",
+    "version": "1.0.0",
+    "description": "Catalyst synthesis, active sites, reaction conditions, kinetics, selectivity and electrochemical activity.",
+    "recommended_sections": [
+      "catalyst synthesis",
+      "characterization",
+      "catalytic tests",
+      "electrochemistry",
+      "DFT",
+      "results"
+    ],
+    "process_vocabulary": [
+      "impregnation",
+      "co-precipitation",
+      "hydrothermal",
+      "calcination",
+      "reduction",
+      "electrode ink preparation",
+      "activation"
+    ],
+    "properties": [
+      {
+        "key": "conversion",
+        "name": "Conversion",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "reactant",
+          "temperature",
+          "pressure",
+          "flow"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "product_selectivity",
+        "name": "Product selectivity",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "product",
+          "conversion"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "yield",
+        "name": "Product yield",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "product"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "turnover_frequency",
+        "name": "Turnover frequency",
+        "kind": "kinetics",
+        "units": [
+          "1/s",
+          "1/h"
+        ],
+        "conditions": [
+          "active_site_basis",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "mass_activity",
+        "name": "Mass activity",
+        "kind": "performance",
+        "units": [
+          "A/g",
+          "mol/g/h"
+        ],
+        "conditions": [
+          "potential",
+          "product"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "specific_activity",
+        "name": "Specific activity",
+        "kind": "performance",
+        "units": [
+          "mA/cm2"
+        ],
+        "conditions": [
+          "potential"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "overpotential",
+        "name": "Overpotential",
+        "kind": "performance",
+        "units": [
+          "mV"
+        ],
+        "conditions": [
+          "current_density",
+          "reaction"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "tafel_slope",
+        "name": "Tafel slope",
+        "kind": "kinetics",
+        "units": [
+          "mV/dec"
+        ],
+        "conditions": [
+          "reaction"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "faradaic_efficiency",
+        "name": "Faradaic efficiency",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "product",
+          "potential"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "adsorption_energy",
+        "name": "Adsorption energy",
+        "kind": "calculation",
+        "units": [
+          "eV"
+        ],
+        "conditions": [
+          "intermediate",
+          "site"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "activation_barrier",
+        "name": "Activation barrier",
+        "kind": "calculation",
+        "units": [
+          "eV",
+          "kJ/mol"
+        ],
+        "conditions": [
+          "elementary_step"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "catalysis.activity_prediction",
+        "name": "Activity prediction",
+        "target": "turnover_frequency",
+        "group_by": [
+          "catalyst",
+          "reaction"
+        ]
+      },
+      {
+        "id": "catalysis.product_selectivity_prediction",
+        "name": "Product selectivity prediction",
+        "target": "product_selectivity",
+        "group_by": [
+          "catalyst",
+          "reaction"
+        ]
+      },
+      {
+        "id": "catalysis.overpotential_prediction",
+        "name": "Overpotential prediction",
+        "target": "overpotential",
+        "group_by": [
+          "catalyst",
+          "reaction"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "corrosion",
+    "name": "Corrosion",
+    "version": "1.0.0",
+    "description": "Alloy/environment exposure, electrochemical corrosion tests, degradation rates and inhibitor performance.",
+    "recommended_sections": [
+      "materials",
+      "sample preparation",
+      "corrosion testing",
+      "electrochemical measurements",
+      "surface analysis",
+      "results"
+    ],
+    "process_vocabulary": [
+      "polishing",
+      "heat treatment",
+      "immersion",
+      "salt spray",
+      "potentiodynamic polarization",
+      "EIS",
+      "coating",
+      "inhibitor addition"
+    ],
+    "properties": [
+      {
+        "key": "corrosion_rate",
+        "name": "Corrosion rate",
+        "kind": "performance",
+        "units": [
+          "mm/year",
+          "mpy",
+          "mg/cm2/day"
+        ],
+        "conditions": [
+          "environment",
+          "temperature",
+          "exposure_time"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "corrosion_current_density",
+        "name": "Corrosion current density",
+        "kind": "electrochemical",
+        "units": [
+          "A/cm2"
+        ],
+        "conditions": [
+          "electrolyte",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "corrosion_potential",
+        "name": "Corrosion potential",
+        "kind": "electrochemical",
+        "units": [
+          "V"
+        ],
+        "conditions": [
+          "reference_electrode",
+          "electrolyte"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "polarization_resistance",
+        "name": "Polarization resistance",
+        "kind": "electrochemical",
+        "units": [
+          "ohm*cm2"
+        ],
+        "conditions": [
+          "electrolyte"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "charge_transfer_resistance",
+        "name": "Charge-transfer resistance",
+        "kind": "electrochemical",
+        "units": [
+          "ohm*cm2"
+        ],
+        "conditions": [
+          "frequency_range"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "pitting_potential",
+        "name": "Pitting potential",
+        "kind": "performance",
+        "units": [
+          "V"
+        ],
+        "conditions": [
+          "chloride_concentration"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "inhibition_efficiency",
+        "name": "Inhibition efficiency",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "inhibitor",
+          "concentration"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "mass_loss",
+        "name": "Mass loss",
+        "kind": "performance",
+        "units": [
+          "mg",
+          "mg/cm2"
+        ],
+        "conditions": [
+          "exposure_time"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "corrosion.corrosion_rate_prediction",
+        "name": "Corrosion rate prediction",
+        "target": "corrosion_rate",
+        "group_by": [
+          "alloy",
+          "environment"
+        ]
+      },
+      {
+        "id": "corrosion.inhibitor_efficiency_prediction",
+        "name": "Inhibitor efficiency prediction",
+        "target": "inhibition_efficiency",
+        "group_by": [
+          "alloy",
+          "inhibitor"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "gas_sensing",
+    "name": "Gas Sensing",
+    "version": "1.0.0",
+    "description": "Experimental and computational gas-sensor materials, fabrication, testing and performance.",
+    "recommended_sections": [
+      "materials",
+      "synthesis",
+      "fabrication",
+      "sensor testing",
+      "results",
+      "DFT",
+      "supporting information"
+    ],
+    "process_vocabulary": [
+      "hydrothermal",
+      "sol-gel",
+      "sputtering",
+      "CVD",
+      "ALD",
+      "spin coating",
+      "electrodeposition",
+      "annealing"
+    ],
+    "properties": [
+      {
+        "key": "sensor_response",
+        "name": "Sensor response",
+        "kind": "performance",
+        "units": [
+          "dimensionless",
+          "%"
+        ],
+        "conditions": [
+          "target",
+          "concentration",
+          "temperature",
+          "humidity"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "sensitivity",
+        "name": "Sensitivity",
+        "kind": "performance",
+        "units": [],
+        "conditions": [
+          "target",
+          "concentration_range",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "selectivity_ratio",
+        "name": "Selectivity ratio",
+        "kind": "performance",
+        "units": [
+          "dimensionless"
+        ],
+        "conditions": [
+          "target",
+          "interferent",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "limit_of_detection",
+        "name": "Limit of detection",
+        "kind": "performance",
+        "units": [
+          "ppb",
+          "ppm",
+          "nM",
+          "uM"
+        ],
+        "conditions": [
+          "target"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "response_time",
+        "name": "Response time",
+        "kind": "kinetics",
+        "units": [
+          "s"
+        ],
+        "conditions": [
+          "target",
+          "concentration",
+          "temperature",
+          "criterion"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "recovery_time",
+        "name": "Recovery time",
+        "kind": "kinetics",
+        "units": [
+          "s"
+        ],
+        "conditions": [
+          "target",
+          "concentration",
+          "temperature",
+          "criterion"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "adsorption_energy",
+        "name": "Adsorption energy",
+        "kind": "calculation",
+        "units": [
+          "eV"
+        ],
+        "conditions": [
+          "adsorbate",
+          "surface",
+          "site"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "charge_transfer",
+        "name": "Charge transfer",
+        "kind": "calculation",
+        "units": [
+          "e"
+        ],
+        "conditions": [
+          "adsorbate",
+          "surface",
+          "method"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "gas_sensing.target_selectivity_prediction",
+        "name": "Target selectivity prediction",
+        "target": "selectivity_ratio",
+        "group_by": [
+          "material",
+          "target"
+        ]
+      },
+      {
+        "id": "gas_sensing.response_time_prediction",
+        "name": "Response time prediction",
+        "target": "response_time",
+        "group_by": [
+          "material",
+          "target"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "mechanical",
+    "name": "Mechanical, Creep & Fatigue",
+    "version": "1.0.0",
+    "description": "Mechanical properties across composition, processing, microstructure, temperature and loading history.",
+    "recommended_sections": [
+      "materials",
+      "processing",
+      "microstructure",
+      "mechanical testing",
+      "fatigue",
+      "creep",
+      "results"
+    ],
+    "process_vocabulary": [
+      "casting",
+      "forging",
+      "rolling",
+      "heat treatment",
+      "quenching",
+      "tempering",
+      "tensile testing",
+      "creep testing",
+      "fatigue testing"
+    ],
+    "properties": [
+      {
+        "key": "yield_strength",
+        "name": "Yield strength",
+        "kind": "mechanical",
+        "units": [
+          "MPa"
+        ],
+        "conditions": [
+          "temperature",
+          "strain_rate",
+          "orientation"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "ultimate_tensile_strength",
+        "name": "Ultimate tensile strength",
+        "kind": "mechanical",
+        "units": [
+          "MPa"
+        ],
+        "conditions": [
+          "temperature",
+          "strain_rate"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "youngs_modulus",
+        "name": "Young modulus",
+        "kind": "mechanical",
+        "units": [
+          "GPa"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "elongation",
+        "name": "Elongation at break",
+        "kind": "mechanical",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "hardness",
+        "name": "Hardness",
+        "kind": "mechanical",
+        "units": [
+          "HV",
+          "HRC",
+          "GPa"
+        ],
+        "conditions": [
+          "method",
+          "load"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "fatigue_life",
+        "name": "Fatigue life",
+        "kind": "fatigue",
+        "units": [
+          "cycles"
+        ],
+        "conditions": [
+          "stress_amplitude",
+          "R_ratio",
+          "frequency",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "fatigue_strength",
+        "name": "Fatigue strength",
+        "kind": "fatigue",
+        "units": [
+          "MPa"
+        ],
+        "conditions": [
+          "cycles",
+          "R_ratio"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "creep_rate",
+        "name": "Steady-state creep rate",
+        "kind": "creep",
+        "units": [
+          "1/s"
+        ],
+        "conditions": [
+          "stress",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "creep_rupture_time",
+        "name": "Creep rupture time",
+        "kind": "creep",
+        "units": [
+          "h"
+        ],
+        "conditions": [
+          "stress",
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "fracture_toughness",
+        "name": "Fracture toughness",
+        "kind": "mechanical",
+        "units": [
+          "MPa*sqrt(m)"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "mechanical.yield_strength_prediction",
+        "name": "Yield strength prediction",
+        "target": "yield_strength",
+        "group_by": [
+          "alloy",
+          "process"
+        ]
+      },
+      {
+        "id": "mechanical.fatigue_life_prediction",
+        "name": "Fatigue life prediction",
+        "target": "fatigue_life",
+        "group_by": [
+          "alloy",
+          "loading"
+        ]
+      },
+      {
+        "id": "mechanical.creep_rupture_prediction",
+        "name": "Creep rupture prediction",
+        "target": "creep_rupture_time",
+        "group_by": [
+          "alloy",
+          "temperature",
+          "stress"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "membranes",
+    "name": "Membranes",
+    "version": "1.0.0",
+    "description": "Membrane material, fabrication, morphology and gas/liquid separation or transport performance.",
+    "recommended_sections": [
+      "materials",
+      "membrane fabrication",
+      "characterization",
+      "permeation",
+      "filtration",
+      "results"
+    ],
+    "process_vocabulary": [
+      "phase inversion",
+      "interfacial polymerization",
+      "solution casting",
+      "electrospinning",
+      "coating",
+      "crosslinking",
+      "annealing"
+    ],
+    "properties": [
+      {
+        "key": "permeability",
+        "name": "Permeability",
+        "kind": "transport",
+        "units": [
+          "Barrer",
+          "L/m2/h/bar"
+        ],
+        "conditions": [
+          "species",
+          "temperature",
+          "pressure"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "permeance",
+        "name": "Permeance",
+        "kind": "transport",
+        "units": [
+          "GPU"
+        ],
+        "conditions": [
+          "species",
+          "temperature",
+          "pressure"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "separation_factor",
+        "name": "Separation factor",
+        "kind": "performance",
+        "units": [
+          "dimensionless"
+        ],
+        "conditions": [
+          "species_A",
+          "species_B"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "selectivity",
+        "name": "Membrane selectivity",
+        "kind": "performance",
+        "units": [
+          "dimensionless"
+        ],
+        "conditions": [
+          "species_A",
+          "species_B"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "flux",
+        "name": "Flux",
+        "kind": "transport",
+        "units": [
+          "LMH",
+          "kg/m2/h"
+        ],
+        "conditions": [
+          "feed",
+          "pressure"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "rejection",
+        "name": "Rejection",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "solute",
+          "pressure"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "water_contact_angle",
+        "name": "Water contact angle",
+        "kind": "surface",
+        "units": [
+          "degree"
+        ],
+        "conditions": [],
+        "aliases": []
+      },
+      {
+        "key": "thickness",
+        "name": "Membrane thickness",
+        "kind": "structure",
+        "units": [
+          "um"
+        ],
+        "conditions": [],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "membranes.permeability-selectivity_prediction",
+        "name": "Permeability-selectivity prediction",
+        "target": "permeability",
+        "group_by": [
+          "polymer",
+          "gas"
+        ]
+      },
+      {
+        "id": "membranes.rejection_prediction",
+        "name": "Rejection prediction",
+        "target": "rejection",
+        "group_by": [
+          "membrane",
+          "solute"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "photovoltaics",
+    "name": "Photovoltaics",
+    "version": "1.0.0",
+    "description": "Absorber/device fabrication, architecture, optoelectronic properties and photovoltaic performance.",
+    "recommended_sections": [
+      "materials",
+      "device fabrication",
+      "characterization",
+      "photovoltaic measurements",
+      "stability",
+      "results"
+    ],
+    "process_vocabulary": [
+      "spin coating",
+      "blade coating",
+      "evaporation",
+      "sputtering",
+      "CVD",
+      "annealing",
+      "encapsulation"
+    ],
+    "properties": [
+      {
+        "key": "power_conversion_efficiency",
+        "name": "Power conversion efficiency",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "illumination",
+          "scan_direction",
+          "area"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "open_circuit_voltage",
+        "name": "Open-circuit voltage",
+        "kind": "performance",
+        "units": [
+          "V"
+        ],
+        "conditions": [
+          "illumination"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "short_circuit_current_density",
+        "name": "Short-circuit current density",
+        "kind": "performance",
+        "units": [
+          "mA/cm2"
+        ],
+        "conditions": [
+          "illumination"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "fill_factor",
+        "name": "Fill factor",
+        "kind": "performance",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "illumination"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "band_gap",
+        "name": "Band gap",
+        "kind": "optoelectronic",
+        "units": [
+          "eV"
+        ],
+        "conditions": [
+          "method"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "external_quantum_efficiency",
+        "name": "External quantum efficiency",
+        "kind": "optoelectronic",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "wavelength"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "carrier_lifetime",
+        "name": "Carrier lifetime",
+        "kind": "transport",
+        "units": [
+          "ns",
+          "us"
+        ],
+        "conditions": [
+          "method"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "stability_retention",
+        "name": "PCE retention",
+        "kind": "stability",
+        "units": [
+          "%"
+        ],
+        "conditions": [
+          "time",
+          "temperature",
+          "humidity",
+          "illumination"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "photovoltaics.pce_prediction",
+        "name": "PCE prediction",
+        "target": "power_conversion_efficiency",
+        "group_by": [
+          "absorber",
+          "architecture"
+        ]
+      },
+      {
+        "id": "photovoltaics.stability_prediction",
+        "name": "Stability prediction",
+        "target": "stability_retention",
+        "group_by": [
+          "absorber",
+          "encapsulation"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "semiconductors",
+    "name": "Semiconductors",
+    "version": "1.0.0",
+    "description": "Electronic/optical materials, growth, doping, defects, transport and device metrics.",
+    "recommended_sections": [
+      "growth",
+      "fabrication",
+      "structural characterization",
+      "electrical characterization",
+      "optical characterization",
+      "device results",
+      "DFT"
+    ],
+    "process_vocabulary": [
+      "MBE",
+      "MOCVD",
+      "CVD",
+      "sputtering",
+      "ALD",
+      "ion implantation",
+      "diffusion doping",
+      "annealing",
+      "lithography"
+    ],
+    "properties": [
+      {
+        "key": "band_gap",
+        "name": "Band gap",
+        "kind": "electronic",
+        "units": [
+          "eV"
+        ],
+        "conditions": [
+          "temperature",
+          "method"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "electron_mobility",
+        "name": "Electron mobility",
+        "kind": "transport",
+        "units": [
+          "cm2/V/s"
+        ],
+        "conditions": [
+          "temperature",
+          "carrier_density"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "hole_mobility",
+        "name": "Hole mobility",
+        "kind": "transport",
+        "units": [
+          "cm2/V/s"
+        ],
+        "conditions": [
+          "temperature",
+          "carrier_density"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "carrier_concentration",
+        "name": "Carrier concentration",
+        "kind": "transport",
+        "units": [
+          "1/cm3"
+        ],
+        "conditions": [
+          "temperature",
+          "carrier_type"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "resistivity",
+        "name": "Resistivity",
+        "kind": "transport",
+        "units": [
+          "ohm*cm"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "breakdown_field",
+        "name": "Breakdown field",
+        "kind": "device",
+        "units": [
+          "MV/cm"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "dielectric_constant",
+        "name": "Dielectric constant",
+        "kind": "electronic",
+        "units": [
+          "dimensionless"
+        ],
+        "conditions": [
+          "frequency"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "defect_formation_energy",
+        "name": "Defect formation energy",
+        "kind": "calculation",
+        "units": [
+          "eV"
+        ],
+        "conditions": [
+          "defect",
+          "charge_state",
+          "fermi_level"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "effective_mass",
+        "name": "Effective mass",
+        "kind": "calculation",
+        "units": [
+          "m_e"
+        ],
+        "conditions": [
+          "carrier",
+          "direction"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "semiconductors.band_gap_prediction",
+        "name": "Band gap prediction",
+        "target": "band_gap",
+        "group_by": [
+          "material"
+        ]
+      },
+      {
+        "id": "semiconductors.mobility_prediction",
+        "name": "Mobility prediction",
+        "target": "electron_mobility",
+        "group_by": [
+          "material",
+          "temperature"
+        ]
+      },
+      {
+        "id": "semiconductors.defect_formation_prediction",
+        "name": "Defect formation prediction",
+        "target": "defect_formation_energy",
+        "group_by": [
+          "material",
+          "defect"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  },
+  {
+    "slug": "thermoelectrics",
+    "name": "Thermoelectrics",
+    "version": "1.0.0",
+    "description": "Thermoelectric composition, processing, transport properties and temperature-dependent figure of merit.",
+    "recommended_sections": [
+      "materials",
+      "synthesis",
+      "transport measurements",
+      "thermal conductivity",
+      "electrical properties",
+      "results"
+    ],
+    "process_vocabulary": [
+      "solid-state reaction",
+      "ball milling",
+      "spark plasma sintering",
+      "hot pressing",
+      "annealing"
+    ],
+    "properties": [
+      {
+        "key": "seebeck_coefficient",
+        "name": "Seebeck coefficient",
+        "kind": "transport",
+        "units": [
+          "uV/K"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "electrical_conductivity",
+        "name": "Electrical conductivity",
+        "kind": "transport",
+        "units": [
+          "S/m",
+          "S/cm"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "thermal_conductivity",
+        "name": "Thermal conductivity",
+        "kind": "transport",
+        "units": [
+          "W/m/K"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "power_factor",
+        "name": "Power factor",
+        "kind": "performance",
+        "units": [
+          "uW/cm/K2",
+          "W/m/K2"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "zt",
+        "name": "Figure of merit zT",
+        "kind": "performance",
+        "units": [
+          "dimensionless"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "carrier_concentration",
+        "name": "Carrier concentration",
+        "kind": "transport",
+        "units": [
+          "1/cm3"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      },
+      {
+        "key": "mobility",
+        "name": "Carrier mobility",
+        "kind": "transport",
+        "units": [
+          "cm2/V/s"
+        ],
+        "conditions": [
+          "temperature"
+        ],
+        "aliases": []
+      }
+    ],
+    "benchmarks": [
+      {
+        "id": "thermoelectrics.zt_prediction",
+        "name": "zT prediction",
+        "target": "zt",
+        "group_by": [
+          "material",
+          "temperature"
+        ]
+      },
+      {
+        "id": "thermoelectrics.thermal_conductivity_prediction",
+        "name": "Thermal conductivity prediction",
+        "target": "thermal_conductivity",
+        "group_by": [
+          "material",
+          "temperature"
+        ]
+      }
+    ],
+    "graph_relations": [
+      "derived_from",
+      "processed_by",
+      "tested_in",
+      "calculated_for",
+      "has_property",
+      "compared_with",
+      "reported_by"
+    ]
+  }
+]

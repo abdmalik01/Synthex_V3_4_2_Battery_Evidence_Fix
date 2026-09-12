@@ -1,0 +1,530 @@
+{
+  "source": {
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+    "doi": "10.3390/batteries11040142",
+    "url": "https://doi.org/10.3390/batteries11040142",
+    "year": 2025,
+    "authors": [
+      "Pengqing Hou",
+      "Qi Sun",
+      "Shengxue Yan",
+      "Guanglong Li",
+      "Yingdong Qu",
+      "Shaohua Luo"
+    ]
+  },
+  "paper_types": [
+    "materials_synthesis",
+    "electrode_fabrication",
+    "cell_assembly",
+    "electrochemical_performance",
+    "impedance_eis"
+  ],
+  "materials": [
+    {
+      "material_id": "mat_li2fetio4",
+      "name": "Li2FeTiO4",
+      "formula": "Li2FeTiO4",
+      "role": "cathode",
+      "composition_raw": "Li2FeTiO4",
+      "morphology": "regular cubic morphology, nanoparticles",
+      "phase": "monoclinic phase (JCPDS#49-0207)",
+      "synthesis": {
+        "method": "sol-gel",
+        "precursors": [
+          "citric acid (C6H8O7)",
+          "CH3COOLi-2H2O",
+          "FeCl2-4H2O",
+          "Ti(OC4H9)4"
+        ],
+        "solvents": [
+          "anhydrous ethanol"
+        ],
+        "chelating_agents": [
+          "citric acid"
+        ],
+        "precursor_ratio_raw": "2.05.1:1",
+        "steps": [
+          {
+            "step": 1,
+            "temperature": {
+              "raw_value": "room temperature",
+              "value": null,
+              "unit": null,
+              "qualifier": "approx"
+            },
+            "duration": {
+              "raw_value": "24 h",
+              "value": 24,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "atmosphere": "air",
+            "details": "First, citric acid was dissolved in anhydrous ethanol. Then, CH3COOLi-2H2O, FeCl2-4H2O, and Ti(OC4H9)4 were added at a molar ratio of 2.05.1:1, and homogenized by continuous stirring for 24 h at room temperature."
+          },
+          {
+            "step": 2,
+            "temperature": {
+              "raw_value": "65 °C",
+              "value": 65,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "duration": {
+              "raw_value": "5 h",
+              "value": 5,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "details": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h."
+          },
+          {
+            "step": 3,
+            "temperature": {
+              "raw_value": "120 °C",
+              "value": 120,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "duration": {
+              "raw_value": "24 h",
+              "value": 24,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "atmosphere": "vacuum",
+            "details": "Dried in a vacuum drying oven at 120 °C for 24 h to obtain sample precursors."
+          },
+          {
+            "step": 4,
+            "temperature": {
+              "raw_value": "500 °C",
+              "value": 500,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "duration": {
+              "raw_value": "8 h",
+              "value": 8,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "atmosphere": "Ar",
+            "details": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500 °C for 8 h."
+          },
+          {
+            "step": 5,
+            "details": "The precursors were subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800 °C) and fully milled."
+          }
+        ],
+        "calcination_temperatures": [
+          {
+            "raw_value": "500 °C",
+            "value": 500,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          {
+            "raw_value": "600 °C",
+            "value": 600,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          {
+            "raw_value": "700 °C",
+            "value": 700,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          {
+            "raw_value": "800 °C",
+            "value": 800,
+            "unit": "°C",
+            "qualifier": "exact"
+          }
+        ],
+        "atmosphere": "Ar"
+      }
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "proto_1",
+      "name": "Standard testing & fabrication protocol",
+      "electrode_fabrication": {
+        "active_material": "Li2FeTiO4",
+        "active_material_fraction": {
+          "raw_value": "80 wt%",
+          "value": 80,
+          "unit": "wt%",
+          "qualifier": "exact"
+        },
+        "conductive_additive": "acetylene black",
+        "conductive_fraction": {
+          "raw_value": "10 wt%",
+          "value": 10,
+          "unit": "wt%",
+          "qualifier": "exact"
+        },
+        "binder": "polyvinylidene fluoride (PVDF)",
+        "binder_fraction": {
+          "raw_value": "10 wt%",
+          "value": 10,
+          "unit": "wt%",
+          "qualifier": "exact"
+        },
+        "solvent": "N-methyl-2-pyrrolidone (NMP)",
+        "current_collector": "Al foil",
+        "coating_method": "doctor blade",
+        "mass_loading": {
+          "raw_value": "1.0 mg/cm2",
+          "value": 1,
+          "unit": "mg/cm2",
+          "qualifier": "exact"
+        },
+        "drying_steps": [
+          {
+            "step": 1,
+            "temperature": {
+              "raw_value": "80 °C",
+              "value": 80,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "duration": {
+              "raw_value": "12 h",
+              "value": 12,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "atmosphere": "vacuum",
+            "details": "The coated electrodes were dried at 80 °C for 12 h under vacuum"
+          },
+          {
+            "step": 2,
+            "temperature": {
+              "raw_value": "120 °C",
+              "value": 120,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "duration": {
+              "raw_value": "6 h",
+              "value": 6,
+              "unit": "h",
+              "qualifier": "exact"
+            },
+            "atmosphere": "vacuum",
+            "details": "punched into disks with a diameter of 10 mm and further vacuum-dried at 120 °C for 6 h"
+          }
+        ],
+        "pressing_pressure": {
+          "raw_value": "10 MPa",
+          "value": 10,
+          "unit": "MPa",
+          "qualifier": "exact"
+        },
+        "disk_diameter": {
+          "raw_value": "10 mm",
+          "value": 10,
+          "unit": "mm",
+          "qualifier": "exact"
+        }
+      },
+      "cell_assembly": {
+        "cell_format": "CR2032 coin cells",
+        "counter_electrode": "lithium foils",
+        "reference_electrode": "lithium foils",
+        "separator": "Celgard 2400 polypropylene film",
+        "electrolyte": "commercial lithium electrolyte",
+        "electrolyte_volume": {
+          "raw_value": "100 µL",
+          "value": 100,
+          "unit": "µL",
+          "qualifier": "exact"
+        },
+        "atmosphere": "argon",
+        "glovebox_o2": {
+          "raw_value": "< 0.1 ppm",
+          "value": 0.1,
+          "unit": "ppm",
+          "qualifier": "upper_bound"
+        },
+        "glovebox_h2o": {
+          "raw_value": "< 0.1 ppm",
+          "value": 0.1,
+          "unit": "ppm",
+          "qualifier": "upper_bound"
+        }
+      },
+      "electrochemical_testing": {
+        "cv_scan_rate": {
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "qualifier": "exact"
+        },
+        "voltage_min": {
+          "raw_value": "1.5 V",
+          "value": 1.5,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "voltage_max": {
+          "raw_value": "4.8 V",
+          "value": 4.8,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "c_rate_definition": "1 C = 300 mA/g",
+        "rate_capability_range": "0.05 to 1 C",
+        "long_term_cycles": 100,
+        "long_term_c_rate": "0.1 C",
+        "temperature": {
+          "raw_value": "ambient temperature",
+          "value": null,
+          "unit": null,
+          "qualifier": "approx"
+        },
+        "equipment": [
+          "CHI760E electrochemical workstation",
+          "LAND-CT2001A system"
+        ]
+      }
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "group_600",
+      "battery_ids": [
+        "Li2FeTiO4_600C"
+      ],
+      "material_ref": "mat_li2fetio4",
+      "variant_label": "Li2FeTiO4 calcined at 600 °C",
+      "chemistry": "Li-ion",
+      "cathode": "Li2FeTiO4 (calcined at 600 °C)",
+      "anode": "lithium metal",
+      "electrolyte": "commercial lithium electrolyte",
+      "cell_format": "CR2032",
+      "calcination_temperature": {
+        "raw_value": "600 °C",
+        "value": 600,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "protocol_refs": [
+        "proto_1"
+      ],
+      "performance_points": [
+        {
+          "property": "specific_surface_area",
+          "raw_value": "61.61 m2/g",
+          "value": 61.61,
+          "unit": "m2/g",
+          "qualifier": "exact"
+        },
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "637.7",
+          "value": 637.7,
+          "unit": null,
+          "qualifier": "exact"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "67.0 mAh g−1",
+          "value": 67,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "1 C"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "68.0 mAh g−1",
+          "value": 68,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "77.4%",
+          "value": 77.4,
+          "unit": "%",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        }
+      ]
+    },
+    {
+      "group_id": "group_700",
+      "battery_ids": [
+        "Li2FeTiO4_700C"
+      ],
+      "material_ref": "mat_li2fetio4",
+      "variant_label": "Li2FeTiO4 calcined at 700 °C",
+      "chemistry": "Li-ion",
+      "cathode": "Li2FeTiO4 (calcined at 700 °C)",
+      "anode": "lithium metal",
+      "electrolyte": "commercial lithium electrolyte",
+      "cell_format": "CR2032",
+      "calcination_temperature": {
+        "raw_value": "700 °C",
+        "value": 700,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "protocol_refs": [
+        "proto_1"
+      ],
+      "performance_points": [
+        {
+          "property": "specific_surface_area",
+          "raw_value": "84.22 m2/g",
+          "value": 84.22,
+          "unit": "m2/g",
+          "qualifier": "exact"
+        },
+        {
+          "property": "charge_transfer_resistance",
+          "raw_value": "1258.6 Ω",
+          "value": 1258.6,
+          "unit": "ohm",
+          "qualifier": "exact"
+        },
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "438.4",
+          "value": 438.4,
+          "unit": null,
+          "qualifier": "exact"
+        },
+        {
+          "property": "diffusion_coefficient",
+          "raw_value": "1.096 × 10−12 cm2 s−1",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "qualifier": "exact"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "121.3 mAh/g",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 1,
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "108.2 mAh/g",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "89.2%",
+          "value": 89.2,
+          "unit": "%",
+          "qualifier": "exact",
+          "cycle": 100,
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "72.6 mAh g−1",
+          "value": 72.6,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "1 C"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "76.8 mAh g−1",
+          "value": 76.8,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "79.9%",
+          "value": 79.9,
+          "unit": "%",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        }
+      ]
+    },
+    {
+      "group_id": "group_800",
+      "battery_ids": [
+        "Li2FeTiO4_800C"
+      ],
+      "material_ref": "mat_li2fetio4",
+      "variant_label": "Li2FeTiO4 calcined at 800 °C",
+      "chemistry": "Li-ion",
+      "cathode": "Li2FeTiO4 (calcined at 800 °C)",
+      "anode": "lithium metal",
+      "electrolyte": "commercial lithium electrolyte",
+      "cell_format": "CR2032",
+      "calcination_temperature": {
+        "raw_value": "800 °C",
+        "value": 800,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "protocol_refs": [
+        "proto_1"
+      ],
+      "performance_points": [
+        {
+          "property": "specific_surface_area",
+          "raw_value": "62.92 m2/g",
+          "value": 62.92,
+          "unit": "m2/g",
+          "qualifier": "exact"
+        },
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "241.8",
+          "value": 241.8,
+          "unit": null,
+          "qualifier": "exact"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "58.7 mAh g−1",
+          "value": 58.7,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "1 C"
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "63.4 mAh g−1",
+          "value": 63.4,
+          "unit": "mAh/g",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "76.8%",
+          "value": 76.8,
+          "unit": "%",
+          "qualifier": "exact",
+          "c_rate": "0.1 C"
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "The precursor molar ratio is typed as '2.05.1:1' in Section 2.1, which is likely a typo for '2.05:1:1'. This raw value was preserved as requested.",
+    "In Section 2.1, 'CH3COOLi-2H2O' and 'FeCl2-4H2O' are written with hyphens instead of dots; these raw chemical formulas have been preserved.",
+    "There is a discrepancy in the description of the cycle test: Section 2.3 states cycling stability was evaluated at 1 C for 100 cycles, but the results (Table 1 and Fig 10b) indicate the 100-cycle stability test was performed at 0.1 C."
+  ]
+}

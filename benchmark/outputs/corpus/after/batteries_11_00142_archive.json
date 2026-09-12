@@ -1,0 +1,3261 @@
+{
+  "metadata": {
+    "archive_id": "arc-ffe3e44791ebfa53",
+    "schema_name": "synthex-archive",
+    "schema_version": "3.4.0",
+    "software_version": "3.4.2",
+    "created_at": "2026-09-11T20:07:48.230693+00:00",
+    "generator": "Synthex V3.4.2",
+    "extractor_model": "gemini-3.5-flash",
+    "domain": "batteries"
+  },
+  "sources": [
+    {
+      "source_id": "src-74b0c0fd21c78e3e",
+      "source_type": "paper",
+      "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+      "doi": "10.3390/batteries11040142",
+      "url": "https://doi.org/10.3390/batteries11040142",
+      "year": 2025,
+      "authors": [
+        "Pengqing Hou",
+        "Qi Sun",
+        "Shengxue Yan",
+        "Guanglong Li",
+        "Yingdong Qu",
+        "Shaohua Luo"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "mat-c59b37edf210e38e",
+      "name": "Li2FeTiO4",
+      "formula": "Li2FeTiO4",
+      "composition": {},
+      "elements": [],
+      "structure": {
+        "phase": "monoclinic"
+      },
+      "morphology": {
+        "description": "cubic"
+      },
+      "defects": [],
+      "dopants": [],
+      "tags": [
+        "cathode",
+        "battery_material",
+        "ownership:focal_work"
+      ],
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "First, citric acid (C6H8O7, Aladdin, Shanghai, China, 99.5%) was dissolved in an amount of anhydrous ethanol.",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "device_id": "dev-f81842a51924d990",
+      "name": "group_600",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "configuration": {
+        "chemistry": "Li-ion",
+        "cathode": "Li2FeTiO4",
+        "anode": "lithium metal",
+        "electrolyte": "commercial lithium electrolyte",
+        "cell_format": "CR2032 coin cells",
+        "source_group": "group_600",
+        "variant_label": "calcined at 600 °C",
+        "protocol_refs": [
+          "proto_1"
+        ],
+        "counter_electrode": "lithium foils",
+        "separator": "Celgard 2400 polypropylene film",
+        "cell_electrolyte": "commercial lithium electrolyte",
+        "assembly_atmosphere": "argon"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-57d02060cb0c762f",
+      "name": "group_700",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "configuration": {
+        "chemistry": "Li-ion",
+        "cathode": "Li2FeTiO4",
+        "anode": "lithium metal",
+        "electrolyte": "commercial lithium electrolyte",
+        "cell_format": "CR2032 coin cells",
+        "source_group": "group_700",
+        "variant_label": "calcined at 700 °C",
+        "protocol_refs": [
+          "proto_1"
+        ],
+        "counter_electrode": "lithium foils",
+        "separator": "Celgard 2400 polypropylene film",
+        "cell_electrolyte": "commercial lithium electrolyte",
+        "assembly_atmosphere": "argon"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    },
+    {
+      "device_id": "dev-cc0ec51b8a86a72f",
+      "name": "group_800",
+      "device_type": "battery_cell",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "configuration": {
+        "chemistry": "Li-ion",
+        "cathode": "Li2FeTiO4",
+        "anode": "lithium metal",
+        "electrolyte": "commercial lithium electrolyte",
+        "cell_format": "CR2032 coin cells",
+        "source_group": "group_800",
+        "variant_label": "calcined at 800 °C",
+        "protocol_refs": [
+          "proto_1"
+        ],
+        "counter_electrode": "lithium foils",
+        "separator": "Celgard 2400 polypropylene film",
+        "cell_electrolyte": "commercial lithium electrolyte",
+        "assembly_atmosphere": "argon"
+      },
+      "tags": [
+        "battery",
+        "ownership:focal_work"
+      ],
+      "evidence": []
+    }
+  ],
+  "processes": [
+    {
+      "process_id": "proc-44f08ff382c542e5",
+      "name": "Dissolution",
+      "family": "sol-gel",
+      "sequence_index": 0,
+      "inputs": [
+        "C6H8O7",
+        "CH3COOLi-2H2O",
+        "FeCl2-4H2O",
+        "Ti(OC4H9)4"
+      ],
+      "outputs": [],
+      "parameters": [],
+      "atmosphere": "Ar",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "First, citric acid (C6H8O7, Aladdin, Shanghai, China, 99.5%) was dissolved in an amount of anhydrous ethanol.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-697bbc455ea8e7d6",
+      "name": "Mixing",
+      "family": "sol-gel",
+      "sequence_index": 1,
+      "inputs": [],
+      "outputs": [],
+      "parameters": [
+        {
+          "property": "duration",
+          "raw_value": "24 h",
+          "value": 24.0,
+          "unit": "h",
+          "normalized_value": 86400.0,
+          "normalized_unit": "s",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 2,
+              "section": "2.1. Materials Preparation",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Then, CH 3COOLi-2H2O (Aladdin, 99.0%), FeCl2-4H2O (Macklin, Shanghai, China, 98.0%), and Ti(OC4H9)4 (Alaadin, 99.0%) were added at a molar ratio of 2.05.1:1, and the above solutions were homogenized by continuous stirring for 24 h at room temperature.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "atmosphere": "Ar",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "Then, CH 3COOLi-2H2O (Aladdin, 99.0%), FeCl2-4H2O (Macklin, Shanghai, China, 98.0%), and Ti(OC4H9)4 (Alaadin, 99.0%) were added at a molar ratio of 2.05.1:1, and the above solutions were homogenized by continuous stirring for 24 h at room temperature.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-47621067def051a8",
+      "name": "Gelation",
+      "family": "sol-gel",
+      "sequence_index": 2,
+      "inputs": [],
+      "outputs": [],
+      "parameters": [],
+      "atmosphere": "Ar",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": false,
+          "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-27539ad8ca1ea18e",
+      "name": "Drying",
+      "family": "sol-gel",
+      "sequence_index": 3,
+      "inputs": [],
+      "outputs": [],
+      "parameters": [],
+      "atmosphere": "vacuum",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": false,
+          "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-7da8a3f5bbfa3a76",
+      "name": "Precalcination",
+      "family": "sol-gel",
+      "sequence_index": 4,
+      "inputs": [],
+      "outputs": [],
+      "parameters": [],
+      "atmosphere": "Ar",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": false,
+          "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-b9ad8dfec026efed",
+      "name": "Secondary Calcination",
+      "family": "sol-gel",
+      "sequence_index": 5,
+      "inputs": [],
+      "outputs": [
+        "mat-c59b37edf210e38e"
+      ],
+      "parameters": [],
+      "atmosphere": "Ar",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 2,
+          "section": "2.1. Materials Preparation",
+          "source_type": "text",
+          "verbatim_match": false,
+          "text_snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-46499893b4b3caa0",
+      "name": "electrode fabrication",
+      "family": "doctor blade",
+      "inputs": [
+        "Li2FeTiO4",
+        "acetylene black",
+        "polyvinylidene fluoride (PVDF)",
+        "N-methyl-2-pyrrolidone (NMP)"
+      ],
+      "outputs": [
+        "dev-f81842a51924d990"
+      ],
+      "parameters": [
+        {
+          "property": "active_material_fraction",
+          "raw_value": "80 wt%",
+          "value": 80.0,
+          "unit": "wt%",
+          "normalized_value": 80.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "conductive_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "binder_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "mass_loading",
+          "raw_value": "1.0 mg/cm2",
+          "value": 1.0,
+          "unit": "mg/cm2",
+          "normalized_value": 1.0,
+          "normalized_unit": "mg/cm²",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "pressing_pressure",
+          "raw_value": "10 MPa",
+          "value": 10.0,
+          "unit": "MPa",
+          "normalized_value": 10.0,
+          "normalized_unit": "MPa",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "disk_diameter",
+          "raw_value": "10 mm",
+          "value": 10.0,
+          "unit": "mm",
+          "normalized_value": 10.0,
+          "normalized_unit": "mm",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "equipment": "Al foil",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 3,
+          "section": "2.3. Electrochemical Measurements",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-e9db05a4baa39981",
+      "name": "electrode fabrication",
+      "family": "doctor blade",
+      "inputs": [
+        "Li2FeTiO4",
+        "acetylene black",
+        "polyvinylidene fluoride (PVDF)",
+        "N-methyl-2-pyrrolidone (NMP)"
+      ],
+      "outputs": [
+        "dev-57d02060cb0c762f"
+      ],
+      "parameters": [
+        {
+          "property": "active_material_fraction",
+          "raw_value": "80 wt%",
+          "value": 80.0,
+          "unit": "wt%",
+          "normalized_value": 80.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "conductive_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "binder_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "mass_loading",
+          "raw_value": "1.0 mg/cm2",
+          "value": 1.0,
+          "unit": "mg/cm2",
+          "normalized_value": 1.0,
+          "normalized_unit": "mg/cm²",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "pressing_pressure",
+          "raw_value": "10 MPa",
+          "value": 10.0,
+          "unit": "MPa",
+          "normalized_value": 10.0,
+          "normalized_unit": "MPa",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "disk_diameter",
+          "raw_value": "10 mm",
+          "value": 10.0,
+          "unit": "mm",
+          "normalized_value": 10.0,
+          "normalized_unit": "mm",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "equipment": "Al foil",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 3,
+          "section": "2.3. Electrochemical Measurements",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "process_id": "proc-1bee92fba7e90473",
+      "name": "electrode fabrication",
+      "family": "doctor blade",
+      "inputs": [
+        "Li2FeTiO4",
+        "acetylene black",
+        "polyvinylidene fluoride (PVDF)",
+        "N-methyl-2-pyrrolidone (NMP)"
+      ],
+      "outputs": [
+        "dev-cc0ec51b8a86a72f"
+      ],
+      "parameters": [
+        {
+          "property": "active_material_fraction",
+          "raw_value": "80 wt%",
+          "value": 80.0,
+          "unit": "wt%",
+          "normalized_value": 80.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "conductive_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "binder_fraction",
+          "raw_value": "10 wt%",
+          "value": 10.0,
+          "unit": "wt%",
+          "normalized_value": 10.0,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "mass_loading",
+          "raw_value": "1.0 mg/cm2",
+          "value": 1.0,
+          "unit": "mg/cm2",
+          "normalized_value": 1.0,
+          "normalized_unit": "mg/cm²",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "pressing_pressure",
+          "raw_value": "10 MPa",
+          "value": 10.0,
+          "unit": "MPa",
+          "normalized_value": 10.0,
+          "normalized_unit": "MPa",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "disk_diameter",
+          "raw_value": "10 mm",
+          "value": 10.0,
+          "unit": "mm",
+          "normalized_value": 10.0,
+          "normalized_unit": "mm",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "equipment": "Al foil",
+      "evidence": [
+        {
+          "source_id": "src-74b0c0fd21c78e3e",
+          "page": 3,
+          "section": "2.3. Electrochemical Measurements",
+          "source_type": "text",
+          "verbatim_match": true,
+          "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+          "confidence": 0.9
+        }
+      ]
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "exp-ec5b6a5735aa460b",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "device_ids": [
+        "dev-f81842a51924d990"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [
+        {
+          "property": "temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": []
+        },
+        {
+          "property": "cv_scan_rate",
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "normalized_value": 0.0001,
+          "normalized_unit": "V/s",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_min",
+          "raw_value": "1.5 V",
+          "value": 1.5,
+          "unit": "V",
+          "normalized_value": 1.5,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_max",
+          "raw_value": "4.8 V",
+          "value": 4.8,
+          "unit": "V",
+          "normalized_value": 4.8,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "test_temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "c_rate_definition",
+          "raw_value": "1 C = 300 mA/g",
+          "value": "1 C = 300 mA/g",
+          "qualifier": "categorical",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "property": "specific_surface_area",
+          "raw_value": "61.61 m2/g",
+          "value": 61.61,
+          "unit": "m2/g",
+          "normalized_value": 61.61,
+          "normalized_unit": "m2/g",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 600 °C",
+            "calcination_temperature": "600 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 9,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "the 600 °C sample retains a rich mesoporous structure due to incomplete crystallization, with a specific surface area of 61.61 m2/g.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "637.7",
+          "value": 637.7,
+          "unit": "unknown",
+          "normalized_value": 637.7,
+          "normalized_unit": "unknown",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 600 °C",
+            "calcination_temperature": "600 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 11,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "67.0 mAh g−1",
+          "value": 67.0,
+          "unit": "mAh/g",
+          "normalized_value": 67.0,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "1 C",
+            "variant": "calcined at 600 °C",
+            "calcination_temperature": "600 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "68.0 mAh g−1",
+          "value": 68.0,
+          "unit": "mAh/g",
+          "normalized_value": 68.0,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 600 °C",
+            "calcination_temperature": "600 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "77.4%",
+          "value": 77.4,
+          "unit": "%",
+          "normalized_value": 77.4,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 600 °C",
+            "calcination_temperature": "600 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "protocol": "rate capability: 0.05 to 1 C",
+      "evidence": []
+    },
+    {
+      "experiment_id": "exp-3901c240b42403f8",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "device_ids": [
+        "dev-57d02060cb0c762f"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [
+        {
+          "property": "temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": []
+        },
+        {
+          "property": "cv_scan_rate",
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "normalized_value": 0.0001,
+          "normalized_unit": "V/s",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_min",
+          "raw_value": "1.5 V",
+          "value": 1.5,
+          "unit": "V",
+          "normalized_value": 1.5,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_max",
+          "raw_value": "4.8 V",
+          "value": 4.8,
+          "unit": "V",
+          "normalized_value": 4.8,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "test_temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "c_rate_definition",
+          "raw_value": "1 C = 300 mA/g",
+          "value": "1 C = 300 mA/g",
+          "qualifier": "categorical",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "property": "specific_surface_area",
+          "raw_value": "84.22 m2/g",
+          "value": 84.22,
+          "unit": "m2/g",
+          "normalized_value": 84.22,
+          "normalized_unit": "m2/g",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 9,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The specific surface area of the 700 °C sample is 84.22 m 2/g.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "438.4",
+          "value": 438.4,
+          "unit": "unknown",
+          "normalized_value": 438.4,
+          "normalized_unit": "unknown",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 11,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "diffusion_coefficient",
+          "raw_value": "1.096 × 10−12 cm2 s−1",
+          "value": 1.096e-12,
+          "unit": "cm2 s-1",
+          "normalized_value": 1.096e-12,
+          "normalized_unit": "cm²/s",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 11,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Calculated analysis of Li + diffusion coefficients showed that the DLi+ value of Li2FeTiO4 at 700 °C was 1.096 × 10−12 cm2 s−1.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "121.3 mAh/g",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "normalized_value": 121.3,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "cycle": 1,
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 1,
+              "section": "Abstract",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The Li2FeTiO4 cathode material prepared at 700◦C provides a discharge-specific capacity of 121.3 mAh/g in the first cycle and capacity retention of 89.2%.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "108.2 mAh/g",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "normalized_value": 108.2,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "cycle": 100,
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 11,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "with a first discharge capacity of 121.3 mAh/g and a 100th discharge capacity of 108.2 mAh/g",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "72.6 mAh g−1",
+          "value": 72.6,
+          "unit": "mAh/g",
+          "normalized_value": 72.6,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "1 C",
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "76.8 mAh g−1",
+          "value": 76.8,
+          "unit": "mAh/g",
+          "normalized_value": 76.8,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "79.9%",
+          "value": 79.9,
+          "unit": "%",
+          "normalized_value": 79.9,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 700 °C",
+            "calcination_temperature": "700 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "protocol": "rate capability: 0.05 to 1 C",
+      "evidence": []
+    },
+    {
+      "experiment_id": "exp-10e22b82ad37db59",
+      "experiment_type": "battery performance / cycling",
+      "material_ids": [
+        "mat-c59b37edf210e38e"
+      ],
+      "device_ids": [
+        "dev-cc0ec51b8a86a72f"
+      ],
+      "target": "battery performance and degradation",
+      "conditions": [
+        {
+          "property": "temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": []
+        },
+        {
+          "property": "cv_scan_rate",
+          "raw_value": "0.1 mV/s",
+          "value": 0.1,
+          "unit": "mV/s",
+          "normalized_value": 0.0001,
+          "normalized_unit": "V/s",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_min",
+          "raw_value": "1.5 V",
+          "value": 1.5,
+          "unit": "V",
+          "normalized_value": 1.5,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "voltage_max",
+          "raw_value": "4.8 V",
+          "value": 4.8,
+          "unit": "V",
+          "normalized_value": 4.8,
+          "normalized_unit": "V",
+          "qualifier": "exact",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "test_temperature",
+          "raw_value": "ambient temperature",
+          "qualifier": "unknown",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "c_rate_definition",
+          "raw_value": "1 C = 300 mA/g",
+          "value": "1 C = 300 mA/g",
+          "qualifier": "categorical",
+          "conditions": {},
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 3,
+              "section": "2.3. Electrochemical Measurements",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "property": "warburg_coefficient",
+          "raw_value": "241.8",
+          "value": 241.8,
+          "unit": "unknown",
+          "normalized_value": 241.8,
+          "normalized_unit": "unknown",
+          "qualifier": "exact",
+          "conditions": {
+            "variant": "calcined at 800 °C",
+            "calcination_temperature": "800 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 11,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "58.7 mAh g−1",
+          "value": 58.7,
+          "unit": "mAh/g",
+          "normalized_value": 58.7,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "1 C",
+            "variant": "calcined at 800 °C",
+            "calcination_temperature": "800 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "specific_capacity",
+          "raw_value": "63.4 mAh g−1",
+          "value": 63.4,
+          "unit": "mAh/g",
+          "normalized_value": 63.4,
+          "normalized_unit": "mAh/g",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 800 °C",
+            "calcination_temperature": "800 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+              "confidence": 0.9
+            }
+          ]
+        },
+        {
+          "property": "capacity_retention",
+          "raw_value": "76.8%",
+          "value": 76.8,
+          "unit": "%",
+          "normalized_value": 76.8,
+          "normalized_unit": "%",
+          "qualifier": "exact",
+          "conditions": {
+            "C_rate": "0.1 C",
+            "variant": "calcined at 800 °C",
+            "calcination_temperature": "800 °C"
+          },
+          "evidence": [
+            {
+              "source_id": "src-74b0c0fd21c78e3e",
+              "page": 12,
+              "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+              "source_type": "text",
+              "verbatim_match": true,
+              "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+              "confidence": 0.9
+            }
+          ]
+        }
+      ],
+      "protocol": "rate capability: 0.05 to 1 C",
+      "evidence": []
+    }
+  ],
+  "calculations": [],
+  "relationships": [
+    {
+      "relation_id": "rel-ff95b0cbc801a60b",
+      "subject_id": "arc-ffe3e44791ebfa53",
+      "predicate": "reported_by",
+      "object_id": "src-74b0c0fd21c78e3e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-f6669420a7b1c888",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-44f08ff382c542e5",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-22f61d0a3c962855",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-697bbc455ea8e7d6",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-1e513f07f5a21cba",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-47621067def051a8",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-a7f11510c1ad8b94",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-27539ad8ca1ea18e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2b4b4c7dfc207d22",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-7da8a3f5bbfa3a76",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-2876488d666e43d8",
+      "subject_id": "mat-c59b37edf210e38e",
+      "predicate": "processed_by",
+      "object_id": "proc-b9ad8dfec026efed",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-11a0358248b2bf32",
+      "subject_id": "dev-f81842a51924d990",
+      "predicate": "contains_material",
+      "object_id": "mat-c59b37edf210e38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-8a1693e4cddbfb27",
+      "subject_id": "dev-f81842a51924d990",
+      "predicate": "processed_by",
+      "object_id": "proc-46499893b4b3caa0",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-d985bc704f6dfbbb",
+      "subject_id": "dev-f81842a51924d990",
+      "predicate": "tested_in",
+      "object_id": "exp-ec5b6a5735aa460b",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-03e8260cd806bb00",
+      "subject_id": "dev-57d02060cb0c762f",
+      "predicate": "contains_material",
+      "object_id": "mat-c59b37edf210e38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-b7dfcda86fea10be",
+      "subject_id": "dev-57d02060cb0c762f",
+      "predicate": "processed_by",
+      "object_id": "proc-e9db05a4baa39981",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-e406ca0336090051",
+      "subject_id": "dev-57d02060cb0c762f",
+      "predicate": "tested_in",
+      "object_id": "exp-3901c240b42403f8",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-bd9634be056012e5",
+      "subject_id": "dev-cc0ec51b8a86a72f",
+      "predicate": "contains_material",
+      "object_id": "mat-c59b37edf210e38e",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-6790b3edf8db6d3f",
+      "subject_id": "dev-cc0ec51b8a86a72f",
+      "predicate": "processed_by",
+      "object_id": "proc-1bee92fba7e90473",
+      "attributes": {},
+      "evidence": []
+    },
+    {
+      "relation_id": "rel-a4c49fdd73af8f02",
+      "subject_id": "dev-cc0ec51b8a86a72f",
+      "predicate": "tested_in",
+      "object_id": "exp-10e22b82ad37db59",
+      "attributes": {},
+      "evidence": []
+    }
+  ],
+  "domain_payloads": [
+    {
+      "domain": "batteries",
+      "schema_version": "1.2.0",
+      "tags": [
+        "materials_synthesis",
+        "electrode_fabrication",
+        "cell_assembly",
+        "electrochemical_performance"
+      ],
+      "values": {
+        "dataset_source": null,
+        "paper_types": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance"
+        ],
+        "materials": [
+          {
+            "material_id": "mat_li2fetio4",
+            "name": "Li2FeTiO4",
+            "formula": "Li2FeTiO4",
+            "role": "cathode",
+            "ownership": "focal_work",
+            "composition_raw": "Li2FeTiO4",
+            "morphology": "cubic",
+            "phase": "monoclinic",
+            "synthesis": {
+              "method": "sol-gel",
+              "precursors": [
+                "C6H8O7",
+                "CH3COOLi-2H2O",
+                "FeCl2-4H2O",
+                "Ti(OC4H9)4"
+              ],
+              "solvents": [
+                "anhydrous ethanol",
+                "water"
+              ],
+              "chelating_agents": [
+                "C6H8O7"
+              ],
+              "precursor_ratio_raw": "2.05.1:1",
+              "steps": [
+                {
+                  "step": "Dissolution",
+                  "details": "Citric acid was dissolved in anhydrous ethanol.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "First, citric acid (C6H8O7, Aladdin, Shanghai, China, 99.5%) was dissolved in an amount of anhydrous ethanol.",
+                      "source_type": "text",
+                      "verbatim_match": true,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Mixing",
+                  "duration": {
+                    "raw_value": "24 h",
+                    "value": 24.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "details": "CH3COOLi-2H2O, FeCl2-4H2O, and Ti(OC4H9)4 were added at a molar ratio of 2.05.1:1, and homogenized by continuous stirring for 24 h at room temperature.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "Then, CH 3COOLi-2H2O (Aladdin, 99.0%), FeCl2-4H2O (Macklin, Shanghai, China, 98.0%), and Ti(OC4H9)4 (Alaadin, 99.0%) were added at a molar ratio of 2.05.1:1, and the above solutions were homogenized by continuous stirring for 24 h at room temperature.",
+                      "source_type": "text",
+                      "verbatim_match": true,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Gelation",
+                  "temperature": {
+                    "raw_value": "65 °C",
+                    "value": 65.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "duration": {
+                    "raw_value": "5 h",
+                    "value": 5.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "details": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Drying",
+                  "temperature": {
+                    "raw_value": "120 °C",
+                    "value": 120.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "duration": {
+                    "raw_value": "24 h",
+                    "value": 24.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "atmosphere": "vacuum",
+                  "details": "Dried in a vacuum drying oven at 120 °C for 24 h.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Precalcination",
+                  "temperature": {
+                    "raw_value": "500 °C",
+                    "value": 500.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "duration": {
+                    "raw_value": "8 h",
+                    "value": 8.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "atmosphere": "Ar",
+                  "details": "Precalcined in a tube furnace under Ar atmosphere.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Secondary Calcination",
+                  "atmosphere": "Ar",
+                  "details": "Secondary calcination at several temperature ranges (600 °C, 700 °C, 800 °C) and fully milled.",
+                  "evidence": [
+                    {
+                      "page": 2,
+                      "section": "2.1. Materials Preparation",
+                      "text_snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures.",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                }
+              ],
+              "calcination_temperatures": [
+                {
+                  "raw_value": "600 °C",
+                  "value": 600.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                {
+                  "raw_value": "700 °C",
+                  "value": 700.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                {
+                  "raw_value": "800 °C",
+                  "value": 800.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                }
+              ],
+              "atmosphere": "Ar",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "The precursors were then subjected to secondary calcination at several temperature ranges (600 °C, 700 °C, 800°C) and fully milled to obtain powdered samples at different temperatures.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            "evidence": [
+              {
+                "page": 2,
+                "section": "2.1. Materials Preparation",
+                "text_snippet": "First, citric acid (C6H8O7, Aladdin, Shanghai, China, 99.5%) was dissolved in an amount of anhydrous ethanol.",
+                "source_type": "text",
+                "verbatim_match": true,
+                "confidence": 0.9
+              }
+            ]
+          }
+        ],
+        "shared_protocols": [
+          {
+            "protocol_id": "proto_1",
+            "name": "Standard Electrode and Cell Assembly Protocol",
+            "ownership": "focal_work",
+            "electrochemical_testing": {
+              "cv_scan_rate": {
+                "raw_value": "0.1 mV/s",
+                "value": 0.1,
+                "unit": "mV/s",
+                "qualifier": "exact"
+              },
+              "voltage_min": {
+                "raw_value": "1.5 V",
+                "value": 1.5,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "voltage_max": {
+                "raw_value": "4.8 V",
+                "value": 4.8,
+                "unit": "V",
+                "qualifier": "exact"
+              },
+              "c_rate_definition": "1 C = 300 mA/g",
+              "rate_capability_range": "0.05 to 1 C",
+              "long_term_cycles": 100,
+              "long_term_c_rate": "1 C",
+              "temperature": {
+                "raw_value": "ambient temperature",
+                "qualifier": "unknown"
+              },
+              "equipment": [
+                "CHI760E electrochemical workstation",
+                "LAND-CT2001A system"
+              ],
+              "evidence": [
+                {
+                  "page": 3,
+                  "section": "2.3. Electrochemical Measurements",
+                  "text_snippet": "Cyclic voltammetry (CV) tests were conducted at a scan rate of 0.1 mV/s within a voltage range of 1.5–4.8 V using a CHI760E electrochemical workstation. Galvanostatic charge/discharge tests were performed on a LAND-CT2001A system at various current densities, with 1 C defined as 300 mA/g based on the active material mass. Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            "electrode_fabrication": {
+              "active_material": "Li2FeTiO4",
+              "active_material_fraction": {
+                "raw_value": "80 wt%",
+                "value": 80.0,
+                "unit": "wt%",
+                "qualifier": "exact"
+              },
+              "conductive_additive": "acetylene black",
+              "conductive_fraction": {
+                "raw_value": "10 wt%",
+                "value": 10.0,
+                "unit": "wt%",
+                "qualifier": "exact"
+              },
+              "binder": "polyvinylidene fluoride (PVDF)",
+              "binder_fraction": {
+                "raw_value": "10 wt%",
+                "value": 10.0,
+                "unit": "wt%",
+                "qualifier": "exact"
+              },
+              "solvent": "N-methyl-2-pyrrolidone (NMP)",
+              "current_collector": "Al foil",
+              "coating_method": "doctor blade",
+              "mass_loading": {
+                "raw_value": "1.0 mg/cm2",
+                "value": 1.0,
+                "unit": "mg/cm2",
+                "qualifier": "exact"
+              },
+              "drying_steps": [
+                {
+                  "step": "First drying",
+                  "temperature": {
+                    "raw_value": "80 °C",
+                    "value": 80.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "duration": {
+                    "raw_value": "12 h",
+                    "value": 12.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "atmosphere": "vacuum",
+                  "details": "The coated electrodes were dried at 80°C for 12 h under vacuum to remove residual solvents.",
+                  "evidence": [
+                    {
+                      "page": 3,
+                      "section": "2.3. Electrochemical Measurements",
+                      "text_snippet": "The coated electrodes were dried at 80°C for 12 h under vacuum to remove residual solvents",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Pressing",
+                  "details": "pressed at 10 MPa using a hydraulic press to ensure intimate contact between components",
+                  "evidence": [
+                    {
+                      "page": 3,
+                      "section": "2.3. Electrochemical Measurements",
+                      "text_snippet": "and then pressed at 10 MPa using a hydraulic press to ensure intimate contact between components.",
+                      "source_type": "text",
+                      "verbatim_match": true,
+                      "confidence": 0.9
+                    }
+                  ]
+                },
+                {
+                  "step": "Second drying",
+                  "temperature": {
+                    "raw_value": "120 °C",
+                    "value": 120.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "duration": {
+                    "raw_value": "6 h",
+                    "value": 6.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "atmosphere": "vacuum",
+                  "details": "The dried electrodes were punched into disks with a diameter of 10 mm and further vacuum-dried at 120°C for 6 h prior to cell assembly.",
+                  "evidence": [
+                    {
+                      "page": 3,
+                      "section": "2.3. Electrochemical Measurements",
+                      "text_snippet": "The dried electrodes were punched into disks with a diameter of 10 mm and further vacuum-dried at 120°C for 6 h prior to cell assembly.",
+                      "source_type": "text",
+                      "verbatim_match": false,
+                      "confidence": 0.9
+                    }
+                  ]
+                }
+              ],
+              "pressing_pressure": {
+                "raw_value": "10 MPa",
+                "value": 10.0,
+                "unit": "MPa",
+                "qualifier": "exact"
+              },
+              "disk_diameter": {
+                "raw_value": "10 mm",
+                "value": 10.0,
+                "unit": "mm",
+                "qualifier": "exact"
+              },
+              "evidence": [
+                {
+                  "page": 3,
+                  "section": "2.3. Electrochemical Measurements",
+                  "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black (MTI Corporation, Richmond, CA, USA, 99.9%), and 10 wt% polyvinylidene fluoride (PVDF, Sigma-Aldrich, St. Louis, MO, USA) binder in N-methyl-2-pyrrolidone (NMP , Aladdin, 99.5%).",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            "cell_assembly": {
+              "cell_format": "CR2032 coin cells",
+              "counter_electrode": "lithium foils",
+              "separator": "Celgard 2400 polypropylene film",
+              "electrolyte": "commercial lithium electrolyte",
+              "electrolyte_volume": {
+                "raw_value": "100 µL",
+                "value": 100.0,
+                "unit": "µL",
+                "qualifier": "exact"
+              },
+              "atmosphere": "argon",
+              "glovebox_o2": {
+                "raw_value": "< 0.1 ppm",
+                "value": 0.1,
+                "unit": "ppm",
+                "qualifier": "upper_bound"
+              },
+              "glovebox_h2o": {
+                "raw_value": "< 0.1 ppm",
+                "value": 0.1,
+                "unit": "ppm",
+                "qualifier": "upper_bound"
+              },
+              "evidence": [
+                {
+                  "page": 3,
+                  "section": "2.3. Electrochemical Measurements",
+                  "text_snippet": "CR2032 coin cells were assembled in an argon-filled glovebox (O 2 < 0.1 ppm, H2O < 0.1 ppm). The cells were assembled in the order of negative case, shrapnel, spacer, lithium foils, Celgard 2400 polypropylene film, Li2FeTiO2 cathode, and positive case. The cells were assembled dropwise with 100µL of commercial lithium electrolyte per assembly.",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            "evidence": []
+          }
+        ],
+        "battery_groups": [
+          {
+            "group_id": "group_600",
+            "ownership": "focal_work",
+            "battery_ids": [],
+            "material_ref": "mat_li2fetio4",
+            "variant_label": "calcined at 600 °C",
+            "chemistry": "Li-ion",
+            "cathode": "Li2FeTiO4",
+            "anode": "lithium metal",
+            "electrolyte": "commercial lithium electrolyte",
+            "cell_format": "CR2032 coin cells",
+            "temperature": {
+              "raw_value": "ambient temperature",
+              "qualifier": "unknown"
+            },
+            "calcination_temperature": {
+              "raw_value": "600 °C",
+              "value": 600.0,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "protocol_refs": [
+              "proto_1"
+            ],
+            "condition_conflicts": [],
+            "measured_variables": [
+              "specific_surface_area",
+              "warburg_coefficient",
+              "specific_capacity"
+            ],
+            "performance_points": [
+              {
+                "property": "specific_surface_area",
+                "raw_value": "61.61 m2/g",
+                "value": 61.61,
+                "unit": "m2/g",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 9,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "the 600 °C sample retains a rich mesoporous structure due to incomplete crystallization, with a specific surface area of 61.61 m2/g.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "warburg_coefficient",
+                "raw_value": "637.7",
+                "value": 637.7,
+                "unit": "unknown",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "67.0 mAh g−1",
+                "value": 67.0,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "68.0 mAh g−1",
+                "value": 68.0,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "77.4%",
+                "value": 77.4,
+                "unit": "%",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_700",
+            "ownership": "focal_work",
+            "battery_ids": [],
+            "material_ref": "mat_li2fetio4",
+            "variant_label": "calcined at 700 °C",
+            "chemistry": "Li-ion",
+            "cathode": "Li2FeTiO4",
+            "anode": "lithium metal",
+            "electrolyte": "commercial lithium electrolyte",
+            "cell_format": "CR2032 coin cells",
+            "temperature": {
+              "raw_value": "ambient temperature",
+              "qualifier": "unknown"
+            },
+            "calcination_temperature": {
+              "raw_value": "700 °C",
+              "value": 700.0,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "protocol_refs": [
+              "proto_1"
+            ],
+            "condition_conflicts": [
+              {
+                "field": "c_rate",
+                "status": "conflicted",
+                "reported_values": [
+                  {
+                    "value": "1 C",
+                    "evidence": [
+                      {
+                        "page": 3,
+                        "section": "2.3. Electrochemical Measurements",
+                        "text_snippet": "long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+                        "source_type": "text",
+                        "verbatim_match": true,
+                        "confidence": 0.9
+                      }
+                    ]
+                  },
+                  {
+                    "value": "0.1 C",
+                    "evidence": [
+                      {
+                        "page": 13,
+                        "section": "Table 1",
+                        "text_snippet": "Li2FeTiO4 0.1 C 121.3 100 89.2 This work",
+                        "source_type": "table",
+                        "verbatim_match": true,
+                        "confidence": 0.9
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "measured_variables": [
+              "specific_surface_area",
+              "warburg_coefficient",
+              "specific_capacity",
+              "capacity_retention",
+              "charge_transfer_resistance",
+              "diffusion_coefficient"
+            ],
+            "performance_points": [
+              {
+                "property": "specific_surface_area",
+                "raw_value": "84.22 m2/g",
+                "value": 84.22,
+                "unit": "m2/g",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 9,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The specific surface area of the 700 °C sample is 84.22 m 2/g.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "warburg_coefficient",
+                "raw_value": "438.4",
+                "value": 438.4,
+                "unit": "unknown",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "charge_transfer_resistance",
+                "raw_value": "1258.6 Ω",
+                "value": 1258.6,
+                "unit": "Ω",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics.",
+                    "source_type": "text",
+                    "verbatim_match": false,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "diffusion_coefficient",
+                "raw_value": "1.096 × 10−12 cm2 s−1",
+                "value": 1.096e-12,
+                "unit": "cm2 s-1",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "Calculated analysis of Li + diffusion coefficients showed that the DLi+ value of Li2FeTiO4 at 700 °C was 1.096 × 10−12 cm2 s−1.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "121.3 mAh/g",
+                "value": 121.3,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "cycle": 1,
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 1,
+                    "section": "Abstract",
+                    "text_snippet": "The Li2FeTiO4 cathode material prepared at 700◦C provides a discharge-specific capacity of 121.3 mAh/g in the first cycle and capacity retention of 89.2%.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "89.2%",
+                "value": 89.2,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 100,
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b).",
+                    "source_type": "text",
+                    "verbatim_match": false,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "108.2 mAh/g",
+                "value": 108.2,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "cycle": 100,
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "with a first discharge capacity of 121.3 mAh/g and a 100th discharge capacity of 108.2 mAh/g",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "72.6 mAh g−1",
+                "value": 72.6,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "76.8 mAh g−1",
+                "value": 76.8,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "79.9%",
+                "value": 79.9,
+                "unit": "%",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_800",
+            "ownership": "focal_work",
+            "battery_ids": [],
+            "material_ref": "mat_li2fetio4",
+            "variant_label": "calcined at 800 °C",
+            "chemistry": "Li-ion",
+            "cathode": "Li2FeTiO4",
+            "anode": "lithium metal",
+            "electrolyte": "commercial lithium electrolyte",
+            "cell_format": "CR2032 coin cells",
+            "temperature": {
+              "raw_value": "ambient temperature",
+              "qualifier": "unknown"
+            },
+            "calcination_temperature": {
+              "raw_value": "800 °C",
+              "value": 800.0,
+              "unit": "°C",
+              "qualifier": "exact"
+            },
+            "protocol_refs": [
+              "proto_1"
+            ],
+            "condition_conflicts": [],
+            "measured_variables": [
+              "specific_surface_area",
+              "warburg_coefficient",
+              "specific_capacity"
+            ],
+            "performance_points": [
+              {
+                "property": "specific_surface_area",
+                "raw_value": "62.92 m2/g",
+                "value": 62.92,
+                "unit": "m2/g",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 10,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance.",
+                    "source_type": "text",
+                    "verbatim_match": false,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "warburg_coefficient",
+                "raw_value": "241.8",
+                "value": 241.8,
+                "unit": "unknown",
+                "qualifier": "exact",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The measured values of the Warburg coefficient (σw) at different temperatures were 637.7, 438.4, and 241.8, respectively (Figure 9b)",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "58.7 mAh g−1",
+                "value": 58.7,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "The discharge capacities of all samples were 67.0, 72.6, and 58.7 mAh g−1 at 1 C.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "specific_capacity",
+                "raw_value": "63.4 mAh g−1",
+                "value": 63.4,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "When the discharge multiplicity was reduced to 0.1 C, the reversible capacitances of all samples were 68.0, 76.8, and 63.4 mAh g −1",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "76.8%",
+                "value": 76.8,
+                "unit": "%",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "page": 12,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "which corresponded to the capacity retention of 77.4%, 79.9%, and 76.8% of their initial specific capacities, respectively.",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_nmc_prior",
+            "ownership": "comparison_table",
+            "battery_ids": [],
+            "variant_label": "NMC (Ref 36)",
+            "chemistry": "Li-ion",
+            "cathode": "NMC",
+            "protocol_refs": [],
+            "condition_conflicts": [],
+            "measured_variables": [],
+            "performance_points": [
+              {
+                "property": "specific_capacity",
+                "raw_value": "160 mAh/g",
+                "value": 160.0,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "25%",
+                "value": 25.0,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 100,
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_lno_prior",
+            "ownership": "comparison_table",
+            "battery_ids": [],
+            "variant_label": "LNO (Ref 37)",
+            "chemistry": "Li-ion",
+            "cathode": "LNO",
+            "protocol_refs": [],
+            "condition_conflicts": [],
+            "measured_variables": [],
+            "performance_points": [
+              {
+                "property": "specific_capacity",
+                "raw_value": "167.5 mAh/g",
+                "value": 167.5,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "0.1 C",
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "63.8%",
+                "value": 63.8,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 150,
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_lco_prior",
+            "ownership": "comparison_table",
+            "battery_ids": [],
+            "variant_label": "LCO (Ref 38)",
+            "chemistry": "Li-ion",
+            "cathode": "LCO",
+            "protocol_refs": [],
+            "condition_conflicts": [],
+            "measured_variables": [],
+            "performance_points": [
+              {
+                "property": "specific_capacity",
+                "raw_value": "165 mAh/g",
+                "value": 165.0,
+                "unit": "mAh/g",
+                "qualifier": "exact",
+                "c_rate": "1 C",
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "LCO 1 C 165 100 61 [38]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "capacity_retention",
+                "raw_value": "61%",
+                "value": 61.0,
+                "unit": "%",
+                "qualifier": "exact",
+                "cycle": 100,
+                "ownership": "comparison_table",
+                "evidence": [
+                  {
+                    "page": 13,
+                    "section": "Table 1",
+                    "text_snippet": "LCO 1 C 165 100 61 [38]",
+                    "source_type": "table",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          },
+          {
+            "group_id": "group_limtio4_prior",
+            "ownership": "cited_prior_work",
+            "battery_ids": [],
+            "variant_label": "LiMTiO4 (M = Mn, Fe, Co) (Ref 35)",
+            "chemistry": "Li-ion",
+            "cathode": "LiMTiO4",
+            "protocol_refs": [],
+            "condition_conflicts": [],
+            "measured_variables": [],
+            "performance_points": [
+              {
+                "property": "diffusion_coefficient",
+                "raw_value": "2.71 × 10–14 cm2 s−1",
+                "value": 2.71e-14,
+                "unit": "cm2 s-1",
+                "qualifier": "exact",
+                "ownership": "cited_prior_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "diffusion_coefficient",
+                "raw_value": "2.91 × 10–14 cm2 s−1",
+                "value": 2.91e-14,
+                "unit": "cm2 s-1",
+                "qualifier": "exact",
+                "ownership": "cited_prior_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              },
+              {
+                "property": "diffusion_coefficient",
+                "raw_value": "3.05 × 10–14 cm2 s−1",
+                "value": 3.05e-14,
+                "unit": "cm2 s-1",
+                "qualifier": "exact",
+                "ownership": "cited_prior_work",
+                "evidence": [
+                  {
+                    "page": 11,
+                    "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                    "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                    "source_type": "text",
+                    "verbatim_match": true,
+                    "confidence": 0.9
+                  }
+                ]
+              }
+            ],
+            "qualitative_findings": [],
+            "evidence": []
+          }
+        ],
+        "extraction_notes": [
+          "The precursor molar ratio is reported as '2.05.1:1' in the text, which is likely a typo for '2.05:1:1'. This raw string has been preserved.",
+          "There is a conflict regarding the C-rate used for long-term cycling of Li2FeTiO4. Section 2.3 states 'long-term cycling stability (100 cycles at 1 C) were evaluated', whereas Table 1 lists the current density as '0.1 C' for the 121.3 mAh/g capacity and 89.2% retention over 100 cycles. This conflict is documented in the condition_conflicts of group_700.",
+          "Association warning: c_rate '0.1 C' for group_600/capacity_retention is not stated in the attached evidence snippet; review before curation.",
+          "Association warning: c_rate '0.1 C' for group_700/capacity_retention is not stated in the attached evidence snippet; review before curation.",
+          "Association warning: c_rate '0.1 C' for group_800/capacity_retention is not stated in the attached evidence snippet; review before curation."
+        ],
+        "pdf_text_parser": "pypdf",
+        "admissibility": {
+          "policy": "focal_work_with_normalized_verbatim_evidence_v1",
+          "admitted_quantitative_values": 45,
+          "quarantined_quantitative_values": 21,
+          "quarantine": [
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[2].temperature",
+              "property": "temperature",
+              "raw_value": "65 °C",
+              "value": 65.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[2].duration",
+              "property": "duration",
+              "raw_value": "5 h",
+              "value": 5.0,
+              "unit": "h",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[3].temperature",
+              "property": "temperature",
+              "raw_value": "120 °C",
+              "value": 120.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[3].duration",
+              "property": "duration",
+              "raw_value": "24 h",
+              "value": 24.0,
+              "unit": "h",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "Subsequently, it was dried in a vacuum drying oven at 120°C for 24 h. After drying and grinding, sample precursors were obtained.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[4].temperature",
+              "property": "temperature",
+              "raw_value": "500 °C",
+              "value": 500.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "materials[mat_li2fetio4].synthesis.steps[4].duration",
+              "property": "duration",
+              "raw_value": "8 h",
+              "value": 8.0,
+              "unit": "h",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 2,
+                  "section": "2.1. Materials Preparation",
+                  "text_snippet": "The precursors were placed in a tube furnace under an Ar atmosphere and precalcined at 500°C for 8 h.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_600].calcination_temperature",
+              "property": "calcination_temperature",
+              "raw_value": "600 °C",
+              "value": 600.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_700].calcination_temperature",
+              "property": "calcination_temperature",
+              "raw_value": "700 °C",
+              "value": 700.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_700].performance_points[2]",
+              "property": "charge_transfer_resistance",
+              "raw_value": "1258.6 Ω",
+              "value": 1258.6,
+              "unit": "Ω",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 11,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "The comparative analysis indicates that the Li2FeTiO4 cathode obtained at 700 °C displays a lower R ct value (1258.6 Ω), indicating the fastest reaction kinetics.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_700].performance_points[5]",
+              "property": "capacity_retention",
+              "raw_value": "89.2%",
+              "value": 89.2,
+              "unit": "%",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 11,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "indicates that this temperature offers excellent long-term stability with 89.2% retention after 100 cycles (Figure 10a,b).",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_800].calcination_temperature",
+              "property": "calcination_temperature",
+              "raw_value": "800 °C",
+              "value": 800.0,
+              "unit": "°C",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": []
+            },
+            {
+              "path": "battery_groups[group_800].performance_points[0]",
+              "property": "specific_surface_area",
+              "raw_value": "62.92 m2/g",
+              "value": 62.92,
+              "unit": "m2/g",
+              "ownership": "focal_work",
+              "reason": "no_verbatim_evidence",
+              "evidence": [
+                {
+                  "page": 10,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "drastically reducing the surface area to 62.92 m 2/g and impairing kinetic performance.",
+                  "source_type": "text",
+                  "verbatim_match": false,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_nmc_prior].performance_points[0]",
+              "property": "specific_capacity",
+              "raw_value": "160 mAh/g",
+              "value": 160.0,
+              "unit": "mAh/g",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_nmc_prior].performance_points[1]",
+              "property": "capacity_retention",
+              "raw_value": "25%",
+              "value": 25.0,
+              "unit": "%",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "NMC 0.1 C 160 100 25 [36]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_lno_prior].performance_points[0]",
+              "property": "specific_capacity",
+              "raw_value": "167.5 mAh/g",
+              "value": 167.5,
+              "unit": "mAh/g",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_lno_prior].performance_points[1]",
+              "property": "capacity_retention",
+              "raw_value": "63.8%",
+              "value": 63.8,
+              "unit": "%",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "LNO 0.1 C 167.5 150 63.8 [37]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_lco_prior].performance_points[0]",
+              "property": "specific_capacity",
+              "raw_value": "165 mAh/g",
+              "value": 165.0,
+              "unit": "mAh/g",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "LCO 1 C 165 100 61 [38]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_lco_prior].performance_points[1]",
+              "property": "capacity_retention",
+              "raw_value": "61%",
+              "value": 61.0,
+              "unit": "%",
+              "ownership": "comparison_table",
+              "reason": "ownership_comparison_table",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "LCO 1 C 165 100 61 [38]",
+                  "source_type": "table",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_limtio4_prior].performance_points[0]",
+              "property": "diffusion_coefficient",
+              "raw_value": "2.71 × 10–14 cm2 s−1",
+              "value": 2.71e-14,
+              "unit": "cm2 s-1",
+              "ownership": "cited_prior_work",
+              "reason": "ownership_cited_prior_work",
+              "evidence": [
+                {
+                  "page": 11,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_limtio4_prior].performance_points[1]",
+              "property": "diffusion_coefficient",
+              "raw_value": "2.91 × 10–14 cm2 s−1",
+              "value": 2.91e-14,
+              "unit": "cm2 s-1",
+              "ownership": "cited_prior_work",
+              "reason": "ownership_cited_prior_work",
+              "evidence": [
+                {
+                  "page": 11,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            },
+            {
+              "path": "battery_groups[group_limtio4_prior].performance_points[2]",
+              "property": "diffusion_coefficient",
+              "raw_value": "3.05 × 10–14 cm2 s−1",
+              "value": 3.05e-14,
+              "unit": "cm2 s-1",
+              "ownership": "cited_prior_work",
+              "reason": "ownership_cited_prior_work",
+              "evidence": [
+                {
+                  "page": 11,
+                  "section": "3.4. Effect of Calcination Firing Temperature on Li 2FeTiO4 Materials",
+                  "text_snippet": "Li2FeTiO4 highlights a higher Li+ diffusion coefficient compared to LiMTiO4 (M = Mn, Fe, Co) materials (2.71 × 10 –14, 2.91 × 10–14, and 3.05 × 10 –14 cm2 s−1) [35].",
+                  "source_type": "text",
+                  "verbatim_match": true,
+                  "confidence": 0.9
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "quality": {
+    "completeness": 1.0,
+    "provenance_coverage": 0.7093023255813954,
+    "unit_normalization_coverage": 1.0,
+    "extraction_confidence": 0.9,
+    "semantic_warnings": [
+      "Scientific admissibility gate quarantined 21 quantitative value(s); raw values remain in the batteries domain payload.",
+      "1 unresolved experimental-condition conflict(s) remain in the raw domain payload."
+    ],
+    "validation_status": "schema_validated"
+  }
+}

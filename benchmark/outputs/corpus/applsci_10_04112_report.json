@@ -1,0 +1,65 @@
+{
+  "filename": "applsci-10-04112.pdf",
+  "manifest": {
+    "filename": "applsci-10-04112.pdf",
+    "title": "Cycling Biomechanics and Its Relationship to Performance",
+    "document_type": "non_battery",
+    "subtypes": [
+      "cycling_biomechanics"
+    ],
+    "benchmark_priority": "EXCLUDE",
+    "use": "hard negative routing test for keyword cycling"
+  },
+  "expected_domain": "non_battery",
+  "status": "correctly_rejected_negative_control",
+  "failure_class": null,
+  "serper_disabled": true,
+  "pdf_text_extraction": {
+    "success": true,
+    "pages": 15,
+    "prompt_characters": 70560,
+    "truncated_at_180000": false,
+    "table_markers": 0,
+    "figure_markers": 25
+  },
+  "routing": {
+    "domain": "mechanical",
+    "confidence": 0.363,
+    "scores": {
+      "additive_manufacturing": 0.0,
+      "batteries": 0.0,
+      "biomaterials": 0.0,
+      "catalysis": 0.0,
+      "corrosion": 0.0,
+      "gas_sensing": 0.0,
+      "mechanical": 2.0,
+      "membranes": 1.0,
+      "photovoltaics": 0.0,
+      "semiconductors": 0.0,
+      "thermoelectrics": 0.0
+    },
+    "matched_terms": {
+      "additive_manufacturing": [],
+      "batteries": [],
+      "biomaterials": [],
+      "catalysis": [],
+      "corrosion": [],
+      "gas_sensing": [],
+      "mechanical": [
+        "fatigue"
+      ],
+      "membranes": [
+        "membrane"
+      ],
+      "photovoltaics": [],
+      "semiconductors": [],
+      "thermoelectrics": []
+    },
+    "paper_types": [],
+    "method": "lexical_router_v1",
+    "input_kind": "extracted_pdf_text",
+    "correct": true
+  },
+  "schema_validation_success": null,
+  "extractor_skipped": "Correct non-battery route; battery extraction is not applicable."
+}

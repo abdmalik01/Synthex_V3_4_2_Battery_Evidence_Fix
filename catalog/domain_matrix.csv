@@ -1,0 +1,99 @@
+domain,property_key,property_name,kind,units,conditions
+additive_manufacturing,laser_power,Laser power,process,W,machine
+additive_manufacturing,scan_speed,Scan speed,process,mm/s,strategy
+additive_manufacturing,hatch_spacing,Hatch spacing,process,um|mm,
+additive_manufacturing,layer_thickness,Layer thickness,process,um,
+additive_manufacturing,volumetric_energy_density,Volumetric energy density,derived,J/mm3,power|speed|hatch|layer
+additive_manufacturing,relative_density,Relative density,quality,%,process
+additive_manufacturing,porosity,Porosity,quality,%,method
+additive_manufacturing,surface_roughness,Surface roughness,quality,um,metric
+additive_manufacturing,melt_pool_width,Melt pool width,process,um,power|speed
+additive_manufacturing,melt_pool_depth,Melt pool depth,process,um,power|speed
+batteries,specific_capacity,Specific capacity,performance,mAh/g,cycle|C_rate|voltage_window|temperature
+batteries,areal_capacity,Areal capacity,performance,mAh/cm2,cycle|C_rate
+batteries,coulombic_efficiency,Coulombic efficiency,performance,%,cycle
+batteries,energy_density,Energy density,performance,Wh/kg|Wh/L,basis
+batteries,power_density,Power density,performance,W/kg|W/L,basis
+batteries,cycle_retention,Capacity retention,stability,%,cycle_count|C_rate
+batteries,ionic_conductivity,Ionic conductivity,transport,S/cm,temperature
+batteries,diffusion_coefficient,Ion diffusion coefficient,transport,cm2/s,species|state_of_charge
+batteries,voltage,Average/working voltage,performance,V,reference
+batteries,interfacial_resistance,Interfacial resistance,transport,ohm|ohm*cm2,temperature|cycle
+biomaterials,cell_viability,Cell viability,biological,%,cell_line|time|assay
+biomaterials,cell_adhesion,Cell adhesion,biological,cells/cm2|%,cell_line|time
+biomaterials,proliferation,Cell proliferation,biological,fold|%,cell_line|time|assay
+biomaterials,hemolysis,Hemolysis,biological,%,blood_source
+biomaterials,degradation_rate,Degradation rate,performance,%/day|%/week|mg/day,medium|temperature
+biomaterials,swelling_ratio,Swelling ratio,performance,%,medium|time
+biomaterials,compressive_modulus,Compressive modulus,mechanical,MPa|kPa,strain_rate
+biomaterials,tensile_strength,Tensile strength,mechanical,MPa,hydration_state
+biomaterials,contact_angle,Contact angle,surface,degree,
+catalysis,conversion,Conversion,performance,%,reactant|temperature|pressure|flow
+catalysis,product_selectivity,Product selectivity,performance,%,product|conversion
+catalysis,yield,Product yield,performance,%,product
+catalysis,turnover_frequency,Turnover frequency,kinetics,1/s|1/h,active_site_basis|temperature
+catalysis,mass_activity,Mass activity,performance,A/g|mol/g/h,potential|product
+catalysis,specific_activity,Specific activity,performance,mA/cm2,potential
+catalysis,overpotential,Overpotential,performance,mV,current_density|reaction
+catalysis,tafel_slope,Tafel slope,kinetics,mV/dec,reaction
+catalysis,faradaic_efficiency,Faradaic efficiency,performance,%,product|potential
+catalysis,adsorption_energy,Adsorption energy,calculation,eV,intermediate|site
+catalysis,activation_barrier,Activation barrier,calculation,eV|kJ/mol,elementary_step
+corrosion,corrosion_rate,Corrosion rate,performance,mm/year|mpy|mg/cm2/day,environment|temperature|exposure_time
+corrosion,corrosion_current_density,Corrosion current density,electrochemical,A/cm2,electrolyte|temperature
+corrosion,corrosion_potential,Corrosion potential,electrochemical,V,reference_electrode|electrolyte
+corrosion,polarization_resistance,Polarization resistance,electrochemical,ohm*cm2,electrolyte
+corrosion,charge_transfer_resistance,Charge-transfer resistance,electrochemical,ohm*cm2,frequency_range
+corrosion,pitting_potential,Pitting potential,performance,V,chloride_concentration
+corrosion,inhibition_efficiency,Inhibition efficiency,performance,%,inhibitor|concentration
+corrosion,mass_loss,Mass loss,performance,mg|mg/cm2,exposure_time
+gas_sensing,sensor_response,Sensor response,performance,dimensionless|%,target|concentration|temperature|humidity
+gas_sensing,sensitivity,Sensitivity,performance,,target|concentration_range|temperature
+gas_sensing,selectivity_ratio,Selectivity ratio,performance,dimensionless,target|interferent|temperature
+gas_sensing,limit_of_detection,Limit of detection,performance,ppb|ppm|nM|uM,target
+gas_sensing,response_time,Response time,kinetics,s,target|concentration|temperature|criterion
+gas_sensing,recovery_time,Recovery time,kinetics,s,target|concentration|temperature|criterion
+gas_sensing,adsorption_energy,Adsorption energy,calculation,eV,adsorbate|surface|site
+gas_sensing,charge_transfer,Charge transfer,calculation,e,adsorbate|surface|method
+mechanical,yield_strength,Yield strength,mechanical,MPa,temperature|strain_rate|orientation
+mechanical,ultimate_tensile_strength,Ultimate tensile strength,mechanical,MPa,temperature|strain_rate
+mechanical,youngs_modulus,Young modulus,mechanical,GPa,temperature
+mechanical,elongation,Elongation at break,mechanical,%,temperature
+mechanical,hardness,Hardness,mechanical,HV|HRC|GPa,method|load
+mechanical,fatigue_life,Fatigue life,fatigue,cycles,stress_amplitude|R_ratio|frequency|temperature
+mechanical,fatigue_strength,Fatigue strength,fatigue,MPa,cycles|R_ratio
+mechanical,creep_rate,Steady-state creep rate,creep,1/s,stress|temperature
+mechanical,creep_rupture_time,Creep rupture time,creep,h,stress|temperature
+mechanical,fracture_toughness,Fracture toughness,mechanical,MPa*sqrt(m),temperature
+membranes,permeability,Permeability,transport,Barrer|L/m2/h/bar,species|temperature|pressure
+membranes,permeance,Permeance,transport,GPU,species|temperature|pressure
+membranes,separation_factor,Separation factor,performance,dimensionless,species_A|species_B
+membranes,selectivity,Membrane selectivity,performance,dimensionless,species_A|species_B
+membranes,flux,Flux,transport,LMH|kg/m2/h,feed|pressure
+membranes,rejection,Rejection,performance,%,solute|pressure
+membranes,water_contact_angle,Water contact angle,surface,degree,
+membranes,thickness,Membrane thickness,structure,um,
+photovoltaics,power_conversion_efficiency,Power conversion efficiency,performance,%,illumination|scan_direction|area
+photovoltaics,open_circuit_voltage,Open-circuit voltage,performance,V,illumination
+photovoltaics,short_circuit_current_density,Short-circuit current density,performance,mA/cm2,illumination
+photovoltaics,fill_factor,Fill factor,performance,%,illumination
+photovoltaics,band_gap,Band gap,optoelectronic,eV,method
+photovoltaics,external_quantum_efficiency,External quantum efficiency,optoelectronic,%,wavelength
+photovoltaics,carrier_lifetime,Carrier lifetime,transport,ns|us,method
+photovoltaics,stability_retention,PCE retention,stability,%,time|temperature|humidity|illumination
+semiconductors,band_gap,Band gap,electronic,eV,temperature|method
+semiconductors,electron_mobility,Electron mobility,transport,cm2/V/s,temperature|carrier_density
+semiconductors,hole_mobility,Hole mobility,transport,cm2/V/s,temperature|carrier_density
+semiconductors,carrier_concentration,Carrier concentration,transport,1/cm3,temperature|carrier_type
+semiconductors,resistivity,Resistivity,transport,ohm*cm,temperature
+semiconductors,breakdown_field,Breakdown field,device,MV/cm,temperature
+semiconductors,dielectric_constant,Dielectric constant,electronic,dimensionless,frequency
+semiconductors,defect_formation_energy,Defect formation energy,calculation,eV,defect|charge_state|fermi_level
+semiconductors,effective_mass,Effective mass,calculation,m_e,carrier|direction
+thermoelectrics,seebeck_coefficient,Seebeck coefficient,transport,uV/K,temperature
+thermoelectrics,electrical_conductivity,Electrical conductivity,transport,S/m|S/cm,temperature
+thermoelectrics,thermal_conductivity,Thermal conductivity,transport,W/m/K,temperature
+thermoelectrics,power_factor,Power factor,performance,uW/cm/K2|W/m/K2,temperature
+thermoelectrics,zt,Figure of merit zT,performance,dimensionless,temperature
+thermoelectrics,carrier_concentration,Carrier concentration,transport,1/cm3,temperature
+thermoelectrics,mobility,Carrier mobility,transport,cm2/V/s,temperature

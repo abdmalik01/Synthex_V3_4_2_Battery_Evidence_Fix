@@ -1,0 +1,578 @@
+{
+  "source": {
+    "title": "Analysis and Performance Evaluation of Li-Ion Batteries Using NASA Battery Data Set",
+    "doi": null,
+    "url": null,
+    "year": 2024,
+    "authors": [
+      "Tanish Patel"
+    ],
+    "dataset_source": "NASA Prognostics Center of Excellence (PCoE)"
+  },
+  "paper_types": [
+    "battery_dataset_modelling",
+    "degradation_health",
+    "electrochemical_performance",
+    "impedance_eis"
+  ],
+  "materials": [],
+  "shared_protocols": [
+    {
+      "protocol_id": "nasa_pcoe_protocol",
+      "name": "NASA PCoE Standard Charge-Discharge and EIS Protocol",
+      "charge_protocol": {
+        "mode": "CC-CV",
+        "constant_current": {
+          "raw_value": "1.5A",
+          "value": 1.5,
+          "unit": "A",
+          "qualifier": "exact"
+        },
+        "voltage_limit": {
+          "raw_value": "4.2V",
+          "value": 4.2,
+          "unit": "V",
+          "qualifier": "exact"
+        },
+        "cutoff_current": {
+          "raw_value": "20mA",
+          "value": 20.0,
+          "unit": "mA",
+          "qualifier": "exact"
+        },
+        "additional_steps": []
+      },
+      "discharge_protocol": {
+        "mode": "CC",
+        "current": {
+          "raw_value": "4A",
+          "value": 4.0,
+          "unit": "A",
+          "qualifier": "exact"
+        },
+        "cutoff_voltage": null,
+        "cutoff_voltages": [
+          {
+            "raw_value": "2.2V",
+            "value": 2.2,
+            "unit": "V",
+            "qualifier": "exact"
+          },
+          {
+            "raw_value": "2.5V",
+            "value": 2.5,
+            "unit": "V",
+            "qualifier": "exact"
+          },
+          {
+            "raw_value": "2.7V",
+            "value": 2.7,
+            "unit": "V",
+            "qualifier": "exact"
+          }
+        ],
+        "additional_steps": []
+      },
+      "impedance_protocol": {
+        "method": "Electrochemical Impedance Spectroscopy (EIS)",
+        "frequency_min": {
+          "raw_value": "0.1Hz",
+          "value": 0.1,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "frequency_max": {
+          "raw_value": "5kHz",
+          "value": 5000.0,
+          "unit": "Hz",
+          "qualifier": "exact"
+        },
+        "amplitude": null,
+        "bias": null
+      },
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.1",
+          "text_snippet": "Charging Method: Constant Current (CC) at 1.5A until 4.2V followed by Constant Voltage (CV) until the current drops to 20mA.\nDischarge Method: Constant Current (CC) at 4A until the specified stopping voltage is reached.\nImpedance Measurement: Frequency sweep from 0.1Hz to 5kHz.",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "batteries_25_28",
+      "battery_ids": [
+        "B0025",
+        "B0026",
+        "B0027",
+        "B0028"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 25-28 (24°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "24°C",
+        "value": 24.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [
+        "Voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.",
+        "Gradual decrease in voltage during discharge with significant drops towards the end."
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.1",
+          "text_snippet": "Batteries 25-28\n• Temperature: Ambient 24°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_29_32",
+      "battery_ids": [
+        "B0029",
+        "B0030",
+        "B0031",
+        "B0032"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 29-32 (43°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "43°C",
+        "value": 43.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [
+        "Batteries operated at elevated temperatures showed faster degradation."
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.2",
+          "text_snippet": "Batteries 29-32\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_33_36",
+      "battery_ids": [
+        "B0033",
+        "B0034",
+        "B0036"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 33-34, 36 (43°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "43°C",
+        "value": 43.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.3",
+          "text_snippet": "Batteries 33-34, 36\n• Temperature: Elevated ambient temperature (43°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_38_40",
+      "battery_ids": [
+        "B0038",
+        "B0039",
+        "B0040"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 38-40 (24°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "24°C",
+        "value": 24.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.4",
+          "text_snippet": "Batteries 38-40\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_41_44",
+      "battery_ids": [
+        "B0041",
+        "B0042",
+        "B0043",
+        "B0044"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 41-44 (4°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "4°C",
+        "value": 4.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [
+        "Batteries maintained at lower temperatures exhibited better longevity."
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.5",
+          "text_snippet": "Batteries 41-44\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_45_48",
+      "battery_ids": [
+        "B0045",
+        "B0046",
+        "B0047",
+        "B0048"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 45-48 (24°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "24°C",
+        "value": 24.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.6",
+          "text_snippet": "Batteries 45-48\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_49_52",
+      "battery_ids": [
+        "B0049",
+        "B0050",
+        "B0051",
+        "B0052"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 49-52 (24°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "24°C",
+        "value": 24.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.7",
+          "text_snippet": "Batteries 49-52\n• Temperature: Room temperature (24°C)\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_53_56",
+      "battery_ids": [
+        "B0053",
+        "B0054",
+        "B0055",
+        "B0056"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries 53-56 (4°C)",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": {
+        "raw_value": "4°C",
+        "value": 4.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [],
+      "evidence": [
+        {
+          "page": 2,
+          "section": "II.B.8",
+          "text_snippet": "Batteries 53-56\n• Temperature: Operated at 4°C\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "group_id": "batteries_05_18",
+      "battery_ids": [
+        "B0005",
+        "B0006",
+        "B0007",
+        "B0018"
+      ],
+      "material_ref": null,
+      "variant_label": "Batteries B0005, B0006, B0007, B0018",
+      "chemistry": "Li-ion",
+      "cathode": null,
+      "anode": null,
+      "electrolyte": null,
+      "cell_format": null,
+      "temperature": null,
+      "calcination_temperature": null,
+      "protocol_refs": [
+        "nasa_pcoe_protocol"
+      ],
+      "charge_protocol": null,
+      "discharge_protocol": null,
+      "impedance_protocol": null,
+      "electrochemical_testing": null,
+      "electrode_fabrication": null,
+      "cell_assembly": null,
+      "measured_variables": [
+        "voltage",
+        "current",
+        "temperature",
+        "time",
+        "capacity",
+        "impedance"
+      ],
+      "performance_points": [],
+      "qualitative_findings": [
+        "The voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.",
+        "The current remains constant during the CC phase of charging and decreases during the CV phase.",
+        "The temperature increases during charging due to internal resistance and energy conversion."
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "section": "IV.A",
+          "text_snippet": "Battery B0005\n1) Voltage vs. Time\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.",
+          "source_type": "paragraph",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "This paper represents a metadata evaluation and review of the NASA PCoE battery dataset.",
+    "No quantitative performance results (e.g., specific discharge capacities in mAh/g or capacity retention after N cycles) were reported as scalar results in the text, so the performance_points array is empty.",
+    "The generic term 'Li-ion' is utilized for the chemistry of the batteries under evaluation.",
+    "B0005, B0006, B0007, and B0018 are analyzed in Section IV but lack explicit temperature/operational metadata in Section II. They are grouped separately based on their qualitative descriptions."
+  ]
+}

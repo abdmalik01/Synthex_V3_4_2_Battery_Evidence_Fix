@@ -1,0 +1,114 @@
+slug: membranes
+name: Membranes
+version: 1.0.0
+description: Membrane material, fabrication, morphology and gas/liquid separation
+  or transport performance.
+recommended_sections:
+- materials
+- membrane fabrication
+- characterization
+- permeation
+- filtration
+- results
+process_vocabulary:
+- phase inversion
+- interfacial polymerization
+- solution casting
+- electrospinning
+- coating
+- crosslinking
+- annealing
+properties:
+- key: permeability
+  name: Permeability
+  kind: transport
+  units:
+  - Barrer
+  - L/m2/h/bar
+  conditions:
+  - species
+  - temperature
+  - pressure
+  aliases: []
+- key: permeance
+  name: Permeance
+  kind: transport
+  units:
+  - GPU
+  conditions:
+  - species
+  - temperature
+  - pressure
+  aliases: []
+- key: separation_factor
+  name: Separation factor
+  kind: performance
+  units:
+  - dimensionless
+  conditions:
+  - species_A
+  - species_B
+  aliases: []
+- key: selectivity
+  name: Membrane selectivity
+  kind: performance
+  units:
+  - dimensionless
+  conditions:
+  - species_A
+  - species_B
+  aliases: []
+- key: flux
+  name: Flux
+  kind: transport
+  units:
+  - LMH
+  - kg/m2/h
+  conditions:
+  - feed
+  - pressure
+  aliases: []
+- key: rejection
+  name: Rejection
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - solute
+  - pressure
+  aliases: []
+- key: water_contact_angle
+  name: Water contact angle
+  kind: surface
+  units:
+  - degree
+  conditions: []
+  aliases: []
+- key: thickness
+  name: Membrane thickness
+  kind: structure
+  units:
+  - um
+  conditions: []
+  aliases: []
+benchmarks:
+- id: membranes.permeability-selectivity_prediction
+  name: Permeability-selectivity prediction
+  target: permeability
+  group_by:
+  - polymer
+  - gas
+- id: membranes.rejection_prediction
+  name: Rejection prediction
+  target: rejection
+  group_by:
+  - membrane
+  - solute
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

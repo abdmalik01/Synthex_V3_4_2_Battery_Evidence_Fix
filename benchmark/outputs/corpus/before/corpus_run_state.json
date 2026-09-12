@@ -1,0 +1,1753 @@
+{
+  "corpus": "Synthex Batteries V1 user-supplied validation corpus",
+  "selected_files": [
+    "batteries-11-00142.pdf",
+    "batteries-11-00011.pdf",
+    "1-s2.0-S2666386426002407-main.pdf",
+    "Evaluation_of_Li_Ion_Batteries.pdf",
+    "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+    "Application_of_First_Principles_Computations_Based.pdf",
+    "coatings-16-00912.pdf",
+    "applsci-10-04112.pdf"
+  ],
+  "schema_frozen": true,
+  "serper_disabled": true,
+  "started_at_unix": 1789152646.3953261,
+  "papers": [
+    {
+      "filename": "batteries-11-00142.pdf",
+      "manifest": {
+        "filename": "batteries-11-00142.pdf",
+        "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+        "doi": "10.3390/batteries11040142",
+        "year": 2025,
+        "document_type": "original_research",
+        "subtypes": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "benchmark_priority": "A+",
+        "use": "primary electrode-materials gold benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 15,
+        "prompt_characters": 69776,
+        "truncated_at_180000": false,
+        "table_markers": 4,
+        "figure_markers": 56
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.933,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 15.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 2.25,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "capacity retention",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst"
+          ],
+          "corrosion": [],
+          "gas_sensing": [
+            "selectivity",
+            "ppm"
+          ],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance",
+          "impedance_eis",
+          "electrode_fabrication",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "materials_synthesis",
+          "electrode_fabrication",
+          "cell_assembly",
+          "electrochemical_performance",
+          "impedance_eis"
+        ],
+        "materials": 1,
+        "shared_protocols": 1,
+        "battery_groups": 3,
+        "performance_points": 20,
+        "archive_completeness": 0.9,
+        "archive_semantic_warnings": [],
+        "missing_fields": [
+          "no EIS protocol"
+        ]
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 96
+      },
+      "provenance": {
+        "evidence_capable_records": 36,
+        "records_with_evidence": 0,
+        "record_coverage": 0.0,
+        "snippets_checked": 0,
+        "verbatim_match_coverage": 0.0,
+        "unmatched_snippet_candidates": [],
+        "records_without_evidence": [
+          "materials[0]",
+          "materials[0].synthesis",
+          "materials[0].synthesis.steps[0]",
+          "materials[0].synthesis.steps[1]",
+          "materials[0].synthesis.steps[2]",
+          "materials[0].synthesis.steps[3]",
+          "materials[0].synthesis.steps[4]",
+          "shared_protocols[0]",
+          "shared_protocols[0].electrochemical_testing",
+          "shared_protocols[0].electrode_fabrication",
+          "shared_protocols[0].electrode_fabrication.drying_steps[0]",
+          "shared_protocols[0].electrode_fabrication.drying_steps[1]",
+          "shared_protocols[0].cell_assembly",
+          "battery_groups[0]",
+          "battery_groups[0].performance_points[0]",
+          "battery_groups[0].performance_points[1]",
+          "battery_groups[0].performance_points[2]",
+          "battery_groups[0].performance_points[3]",
+          "battery_groups[0].performance_points[4]",
+          "battery_groups[1]",
+          "battery_groups[1].performance_points[0]",
+          "battery_groups[1].performance_points[1]",
+          "battery_groups[1].performance_points[2]",
+          "battery_groups[1].performance_points[3]",
+          "battery_groups[1].performance_points[4]",
+          "battery_groups[1].performance_points[5]",
+          "battery_groups[1].performance_points[6]",
+          "battery_groups[1].performance_points[7]",
+          "battery_groups[1].performance_points[8]",
+          "battery_groups[1].performance_points[9]",
+          "battery_groups[2]",
+          "battery_groups[2].performance_points[0]",
+          "battery_groups[2].performance_points[1]",
+          "battery_groups[2].performance_points[2]",
+          "battery_groups[2].performance_points[3]",
+          "battery_groups[2].performance_points[4]"
+        ],
+        "source_type_counts": {}
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [
+        {
+          "group_id": "group_600",
+          "property": "capacity_retention",
+          "value": 77.4,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "charge_transfer_resistance",
+          "value": 1258.6,
+          "unit": "ohm",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "diffusion_coefficient",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "reasons": [
+            "impedance/transport value has no method association"
+          ]
+        },
+        {
+          "group_id": "group_700",
+          "property": "capacity_retention",
+          "value": 79.9,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_800",
+          "property": "capacity_retention",
+          "value": 76.8,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        }
+      ],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 20,
+        "materials_with_synthesis": 1,
+        "manual_review_required": false,
+        "note": null
+      },
+      "manual_gold": {
+        "passed": 15,
+        "total": 20,
+        "score": 0.5,
+        "structural_accuracy": 1.0,
+        "value_accuracy": 1.0,
+        "condition_association_accuracy": 0.0,
+        "provenance_coverage": 0.0,
+        "overall_score": 0.5,
+        "checks": [
+          {
+            "check": "title",
+            "pass": true,
+            "observed": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+            "expected": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method"
+          },
+          {
+            "check": "DOI",
+            "pass": true,
+            "observed": "10.3390/batteries11040142",
+            "expected": "10.3390/batteries11040142"
+          },
+          {
+            "check": "materials_synthesis type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance",
+              "impedance_eis"
+            ],
+            "expected": true
+          },
+          {
+            "check": "electrode_fabrication type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance",
+              "impedance_eis"
+            ],
+            "expected": true
+          },
+          {
+            "check": "cell_assembly type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance",
+              "impedance_eis"
+            ],
+            "expected": true
+          },
+          {
+            "check": "electrochemical_performance type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance",
+              "impedance_eis"
+            ],
+            "expected": true
+          },
+          {
+            "check": "impedance_eis type",
+            "pass": true,
+            "observed": [
+              "materials_synthesis",
+              "electrode_fabrication",
+              "cell_assembly",
+              "electrochemical_performance",
+              "impedance_eis"
+            ],
+            "expected": true
+          },
+          {
+            "check": "Li2FeTiO4 material",
+            "pass": true,
+            "observed": "Li2FeTiO4",
+            "expected": "Li2FeTiO4"
+          },
+          {
+            "check": "sol-gel synthesis",
+            "pass": true,
+            "observed": "sol-gel",
+            "expected": "sol-gel"
+          },
+          {
+            "check": "electrode fabrication extracted",
+            "pass": true,
+            "observed": true,
+            "expected": true
+          },
+          {
+            "check": "80 wt% active material",
+            "pass": true,
+            "observed": {
+              "raw_value": "80 wt%",
+              "value": 80.0,
+              "unit": "wt%",
+              "qualifier": "exact"
+            },
+            "expected": 80
+          },
+          {
+            "check": "CR2032 cell assembly",
+            "pass": true,
+            "observed": "CR2032 coin cells",
+            "expected": "CR2032"
+          },
+          {
+            "check": "100 uL electrolyte",
+            "pass": true,
+            "observed": {
+              "raw_value": "100 µL",
+              "value": 100.0,
+              "unit": "µL",
+              "qualifier": "exact"
+            },
+            "expected": 100
+          },
+          {
+            "check": "CV 0.1 mV/s",
+            "pass": true,
+            "observed": {
+              "raw_value": "0.1 mV/s",
+              "value": 0.1,
+              "unit": "mV/s",
+              "qualifier": "exact"
+            },
+            "expected": 0.1
+          },
+          {
+            "check": "100-cycle long-term test",
+            "pass": true,
+            "observed": 100,
+            "expected": 100
+          },
+          {
+            "check": "strict performance specific_capacity=121.3",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance specific_capacity=108.2",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance capacity_retention=89.2",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "capacity_retention",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            }
+          },
+          {
+            "check": "strict performance charge_transfer_resistance=1258.6",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1258.6,
+              "unit": "ohm",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 0
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "charge_transfer_resistance",
+              "value": 1258.6,
+              "unit": "ohm",
+              "method_contains": [
+                "EIS"
+              ]
+            }
+          },
+          {
+            "check": "strict performance diffusion_coefficient=1.096e-12",
+            "pass": false,
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 0
+            },
+            "expected": {
+              "variant": "700 °C",
+              "property": "diffusion_coefficient",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "method": "EIS/Warburg",
+              "method_contains": [
+                "EIS"
+              ]
+            }
+          }
+        ],
+        "performance_checks": [
+          {
+            "property": "specific_capacity",
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 121.3,
+              "unit": "mAh/g",
+              "cycle": 1,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": false,
+            "c_rate_status": "conflicted",
+            "pass": false
+          },
+          {
+            "property": "specific_capacity",
+            "expected": {
+              "variant": "700 °C",
+              "property": "specific_capacity",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 108.2,
+              "unit": "mAh/g",
+              "cycle": 100,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": false,
+            "c_rate_status": "conflicted",
+            "pass": false
+          },
+          {
+            "property": "capacity_retention",
+            "expected": {
+              "variant": "700 °C",
+              "property": "capacity_retention",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate_status": "conflicted",
+              "c_rate_conflict": {
+                "reported_values": [
+                  "0.1 C",
+                  "1 C"
+                ]
+              }
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 89.2,
+              "unit": "%",
+              "cycle": 100,
+              "c_rate": "0.1 C",
+              "method": null,
+              "evidence_count": 0
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": true,
+            "c_rate_pass": false,
+            "c_rate_status": "conflicted",
+            "pass": false
+          },
+          {
+            "property": "charge_transfer_resistance",
+            "expected": {
+              "variant": "700 °C",
+              "property": "charge_transfer_resistance",
+              "value": 1258.6,
+              "unit": "ohm",
+              "method_contains": [
+                "EIS"
+              ]
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1258.6,
+              "unit": "ohm",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 0
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": false,
+            "c_rate_pass": true,
+            "c_rate_status": "not_required",
+            "pass": false
+          },
+          {
+            "property": "diffusion_coefficient",
+            "expected": {
+              "variant": "700 °C",
+              "property": "diffusion_coefficient",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "method": "EIS/Warburg",
+              "method_contains": [
+                "EIS"
+              ]
+            },
+            "observed": {
+              "group_id": "group_700",
+              "variant": "Li2FeTiO4 calcined at 700 °C",
+              "material_ref": "mat_li2fetio4",
+              "value": 1.096e-12,
+              "unit": "cm2/s",
+              "cycle": null,
+              "c_rate": null,
+              "method": null,
+              "evidence_count": 0
+            },
+            "value_pass": true,
+            "conditions_pass": false,
+            "provenance_pass": false,
+            "sample_variant_pass": true,
+            "cycle_pass": true,
+            "method_pass": false,
+            "c_rate_pass": true,
+            "c_rate_status": "not_required",
+            "pass": false
+          }
+        ]
+      }
+    },
+    {
+      "filename": "batteries-11-00011.pdf",
+      "manifest": {
+        "filename": "batteries-11-00011.pdf",
+        "title": "Electrochemical Impedance Spectroscopy-Based Characterization and Modeling of Lithium-Ion Batteries Based on Frequency Selection",
+        "document_type": "original_research",
+        "subtypes": [
+          "impedance_eis",
+          "characterization",
+          "battery_modelling",
+          "temperature",
+          "state_of_charge"
+        ],
+        "benchmark_priority": "A",
+        "use": "EIS protocol/conditions/model benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 17,
+        "prompt_characters": 66510,
+        "truncated_at_180000": false,
+        "table_markers": 19,
+        "figure_markers": 72
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.978,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 20.75,
+          "biomaterials": 0.0,
+          "catalysis": 0.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 1.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "state of health",
+            "state-of-health",
+            "constant current",
+            "constant voltage",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [
+            "photovoltaic"
+          ],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "impedance_eis",
+          "electrochemical_performance",
+          "degradation_health",
+          "battery_dataset_modelling",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "impedance_eis",
+          "battery_dataset_modelling",
+          "electrochemical_performance"
+        ],
+        "materials": 2,
+        "shared_protocols": 1,
+        "battery_groups": 1,
+        "performance_points": 3,
+        "archive_completeness": 1.0,
+        "archive_semantic_warnings": [],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[0].performance_points[2].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 27
+      },
+      "provenance": {
+        "evidence_capable_records": 9,
+        "records_with_evidence": 8,
+        "record_coverage": 0.889,
+        "snippets_checked": 8,
+        "verbatim_match_coverage": 0.875,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "battery_groups[0]",
+            "page": 6,
+            "snippet": "The ohmic resistance has a negative correlation with the temperature, as shown in Figure 5a."
+          }
+        ],
+        "records_without_evidence": [
+          "shared_protocols[0]"
+        ],
+        "source_type_counts": {
+          "table": 6,
+          "text": 2
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 3,
+        "materials_with_synthesis": 0,
+        "manual_review_required": false,
+        "note": null
+      }
+    },
+    {
+      "filename": "1-s2.0-S2666386426002407-main.pdf",
+      "manifest": {
+        "filename": "1-s2.0-S2666386426002407-main.pdf",
+        "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+        "document_type": "original_research",
+        "subtypes": [
+          "solid_state_batteries",
+          "impedance_eis",
+          "machine_learning",
+          "diagnostics"
+        ],
+        "benchmark_priority": "A",
+        "use": "EIS/DRT/ML original-research benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "pdf_extraction_failed_before_gemini",
+      "failure_class": "PDF extraction problem",
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": false,
+        "error_type": "PdfReadError",
+        "error": "More than one /FontFile found in {'/StemV': 50, '/FontName': '/FLHIMB+HelveticaNeue-Heavy', '/FontFile': IndirectObject(3326, 0, 1690616511888), '/FontFile3': IndirectObject(3327, 0, 1690616511888), '/Flags': 4, '/Descent': -180, '/FontBBox': [-50, -180, 1000, 720], '/Ascent': 720, '/CapHeight': 670, '/XHeight': 475, '/Type': '/FontDescriptor', '/ItalicAngle': 0, '/MissingWidth': 250}"
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.519,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 1.0,
+          "biomaterials": 0.0,
+          "catalysis": 0.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "battery"
+          ],
+          "biomaterials": [],
+          "catalysis": [],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "battery_dataset_modelling"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "metadata_title_fallback",
+        "correct": true
+      },
+      "schema_validation_success": null,
+      "extractor_skipped": "Existing BatteryGeminiExtractor cannot run without extract_pages output."
+    },
+    {
+      "filename": "Evaluation_of_Li_Ion_Batteries.pdf",
+      "manifest": {
+        "filename": "Evaluation_of_Li_Ion_Batteries.pdf",
+        "title": "Analysis and Performance Evaluation of Li-Ion Batteries Using NASA Battery Data Set",
+        "document_type": "technical_report",
+        "subtypes": [
+          "battery_dataset_modelling",
+          "electrochemical_performance",
+          "degradation_health",
+          "impedance_eis"
+        ],
+        "benchmark_priority": "A",
+        "use": "dataset-analysis / protocol / routing regression test"
+      },
+      "expected_domain": "batteries",
+      "status": "failed",
+      "failure_class": "one-off LLM formatting variation",
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 11,
+        "prompt_characters": 24102,
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 12
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.967,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 13.5,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "charge-discharge",
+            "constant current",
+            "constant voltage",
+            "electrochemical impedance spectroscopy"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalysis"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "impedance_eis",
+          "degradation_health"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "schema_validation_success": false,
+      "error_type": "RuntimeError",
+      "error": "Battery JSON failed local Pydantic validation: 10 validation errors for BatteryDocument\nshared_protocols.0.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.0.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.1.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.2.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.3.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.4.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.5.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.6.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.7.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\nbattery_groups.8.evidence.0.source_type\n  Input should be 'text', 'table', 'figure_caption', 'figure', 'supplementary' or 'unknown' [type=literal_error, input_value='paragraph', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/literal_error\n\nRAW OUTPUT:\n{\n  \"source\": {\n    \"title\": \"Analysis and Performance Evaluation of Li-Ion Batteries Using NASA Battery Data Set\",\n    \"doi\": null,\n    \"url\": null,\n    \"year\": 2024,\n    \"authors\": [\n      \"Tanish Patel\"\n    ],\n    \"dataset_source\": \"NASA Prognostics Center of Excellence (PCoE)\"\n  },\n  \"paper_types\": [\n    \"battery_dataset_modelling\",\n    \"degradation_health\",\n    \"electrochemical_performance\",\n    \"impedance_eis\"\n  ],\n  \"materials\": [],\n  \"shared_protocols\": [\n    {\n      \"protocol_id\": \"nasa_pcoe_protocol\",\n      \"name\": \"NASA PCoE Standard Charge-Discharge and EIS Protocol\",\n      \"charge_protocol\": {\n        \"mode\": \"CC-CV\",\n        \"constant_current\": {\n          \"raw_value\": \"1.5A\",\n          \"value\": 1.5,\n          \"unit\": \"A\",\n          \"qualifier\": \"exact\"\n        },\n        \"voltage_limit\": {\n          \"raw_value\": \"4.2V\",\n          \"value\": 4.2,\n          \"unit\": \"V\",\n          \"qualifier\": \"exact\"\n        },\n        \"cutoff_current\": {\n          \"raw_value\": \"20mA\",\n          \"value\": 20.0,\n          \"unit\": \"mA\",\n          \"qualifier\": \"exact\"\n        },\n        \"additional_steps\": []\n      },\n      \"discharge_protocol\": {\n        \"mode\": \"CC\",\n        \"current\": {\n          \"raw_value\": \"4A\",\n          \"value\": 4.0,\n          \"unit\": \"A\",\n          \"qualifier\": \"exact\"\n        },\n        \"cutoff_voltage\": null,\n        \"cutoff_voltages\": [\n          {\n            \"raw_value\": \"2.2V\",\n            \"value\": 2.2,\n            \"unit\": \"V\",\n            \"qualifier\": \"exact\"\n          },\n          {\n            \"raw_value\": \"2.5V\",\n            \"value\": 2.5,\n            \"unit\": \"V\",\n            \"qualifier\": \"exact\"\n          },\n          {\n            \"raw_value\": \"2.7V\",\n            \"value\": 2.7,\n            \"unit\": \"V\",\n            \"qualifier\": \"exact\"\n          }\n        ],\n        \"additional_steps\": []\n      },\n      \"impedance_protocol\": {\n        \"method\": \"Electrochemical Impedance Spectroscopy (EIS)\",\n        \"frequency_min\": {\n          \"raw_value\": \"0.1Hz\",\n          \"value\": 0.1,\n          \"unit\": \"Hz\",\n          \"qualifier\": \"exact\"\n        },\n        \"frequency_max\": {\n          \"raw_value\": \"5kHz\",\n          \"value\": 5000.0,\n          \"unit\": \"Hz\",\n          \"qualifier\": \"exact\"\n        },\n        \"amplitude\": null,\n        \"bias\": null\n      },\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.1\",\n          \"text_snippet\": \"Charging Method: Constant Current (CC) at 1.5A until 4.2V followed by Constant Voltage (CV) until the current drops to 20mA.\\nDischarge Method: Constant Current (CC) at 4A until the specified stopping voltage is reached.\\nImpedance Measurement: Frequency sweep from 0.1Hz to 5kHz.\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    }\n  ],\n  \"battery_groups\": [\n    {\n      \"group_id\": \"batteries_25_28\",\n      \"battery_ids\": [\n        \"B0025\",\n        \"B0026\",\n        \"B0027\",\n        \"B0028\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 25-28 (24°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"24°C\",\n        \"value\": 24.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [\n        \"Voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.\",\n        \"Gradual decrease in voltage during discharge with significant drops towards the end.\"\n      ],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.1\",\n          \"text_snippet\": \"Batteries 25-28\\n• Temperature: Ambient 24°C\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_29_32\",\n      \"battery_ids\": [\n        \"B0029\",\n        \"B0030\",\n        \"B0031\",\n        \"B0032\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 29-32 (43°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"43°C\",\n        \"value\": 43.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [\n        \"Batteries operated at elevated temperatures showed faster degradation.\"\n      ],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.2\",\n          \"text_snippet\": \"Batteries 29-32\\n• Temperature: Elevated ambient temperature (43°C)\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_33_36\",\n      \"battery_ids\": [\n        \"B0033\",\n        \"B0034\",\n        \"B0036\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 33-34, 36 (43°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"43°C\",\n        \"value\": 43.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.3\",\n          \"text_snippet\": \"Batteries 33-34, 36\\n• Temperature: Elevated ambient temperature (43°C)\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_38_40\",\n      \"battery_ids\": [\n        \"B0038\",\n        \"B0039\",\n        \"B0040\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 38-40 (24°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"24°C\",\n        \"value\": 24.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.4\",\n          \"text_snippet\": \"Batteries 38-40\\n• Temperature: Room temperature (24°C)\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_41_44\",\n      \"battery_ids\": [\n        \"B0041\",\n        \"B0042\",\n        \"B0043\",\n        \"B0044\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 41-44 (4°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"4°C\",\n        \"value\": 4.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [\n        \"Batteries maintained at lower temperatures exhibited better longevity.\"\n      ],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.5\",\n          \"text_snippet\": \"Batteries 41-44\\n• Temperature: Operated at 4°C\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_45_48\",\n      \"battery_ids\": [\n        \"B0045\",\n        \"B0046\",\n        \"B0047\",\n        \"B0048\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 45-48 (24°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"24°C\",\n        \"value\": 24.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.6\",\n          \"text_snippet\": \"Batteries 45-48\\n• Temperature: Room temperature (24°C)\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_49_52\",\n      \"battery_ids\": [\n        \"B0049\",\n        \"B0050\",\n        \"B0051\",\n        \"B0052\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 49-52 (24°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"24°C\",\n        \"value\": 24.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.7\",\n          \"text_snippet\": \"Batteries 49-52\\n• Temperature: Room temperature (24°C)\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_53_56\",\n      \"battery_ids\": [\n        \"B0053\",\n        \"B0054\",\n        \"B0055\",\n        \"B0056\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries 53-56 (4°C)\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": {\n        \"raw_value\": \"4°C\",\n        \"value\": 4.0,\n        \"unit\": \"°C\",\n        \"qualifier\": \"exact\"\n      },\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [],\n      \"evidence\": [\n        {\n          \"page\": 2,\n          \"section\": \"II.B.8\",\n          \"text_snippet\": \"Batteries 53-56\\n• Temperature: Operated at 4°C\\n• Discharge Stopping Voltage: 2.2V, 2.5V, and 2.7V\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    },\n    {\n      \"group_id\": \"batteries_05_18\",\n      \"battery_ids\": [\n        \"B0005\",\n        \"B0006\",\n        \"B0007\",\n        \"B0018\"\n      ],\n      \"material_ref\": null,\n      \"variant_label\": \"Batteries B0005, B0006, B0007, B0018\",\n      \"chemistry\": \"Li-ion\",\n      \"cathode\": null,\n      \"anode\": null,\n      \"electrolyte\": null,\n      \"cell_format\": null,\n      \"temperature\": null,\n      \"calcination_temperature\": null,\n      \"protocol_refs\": [\n        \"nasa_pcoe_protocol\"\n      ],\n      \"charge_protocol\": null,\n      \"discharge_protocol\": null,\n      \"impedance_protocol\": null,\n      \"electrochemical_testing\": null,\n      \"electrode_fabrication\": null,\n      \"cell_assembly\": null,\n      \"measured_variables\": [\n        \"voltage\",\n        \"current\",\n        \"temperature\",\n        \"time\",\n        \"capacity\",\n        \"impedance\"\n      ],\n      \"performance_points\": [],\n      \"qualitative_findings\": [\n        \"The voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.\",\n        \"The current remains constant during the CC phase of charging and decreases during the CV phase.\",\n        \"The temperature increases during charging due to internal resistance and energy conversion.\"\n      ],\n      \"evidence\": [\n        {\n          \"page\": 3,\n          \"section\": \"IV.A\",\n          \"text_snippet\": \"Battery B0005\\n1) Voltage vs. Time\\nThe voltage profile during charging shows a sharp increase initially and stabilizes during the CV phase.\",\n          \"source_type\": \"paragraph\",\n          \"confidence\": \"high\"\n        }\n      ]\n    }\n  ],\n  \"extraction_notes\": [\n    \"This paper represents a metadata evaluation and review of the NASA PCoE battery dataset.\",\n    \"No quantitative performance results (e.g., specific discharge capacities in mAh/g or capacity retention after N cycles) were reported as scalar results in the text, so the performance_points array is empty.\",\n    \"The generic term 'Li-ion' is utilized for the chemistry of the batteries under evaluation.\",\n    \"B0005, B0006, B0007, and B0018 are analyzed in Section IV but lack explicit temperature/operational metadata in Section II. They are grouped separately based on their qualitative descriptions.\"\n  ]\n}",
+      "coercion_candidates": {
+        "recognized_alias_keys": [],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 35
+      }
+    },
+    {
+      "filename": "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+      "manifest": {
+        "filename": "ZiebertEEVC2017ATable-drivenLIBModelforaBMSdevelopmentplatform.pdf",
+        "title": "A Table-driven Li-Ion Battery Model for a BMS Development Platform – Modeling, Measurements, Implementation and Validation",
+        "document_type": "conference_research",
+        "subtypes": [
+          "battery_modelling",
+          "BMS",
+          "equivalent_circuit"
+        ],
+        "benchmark_priority": "A",
+        "use": "model/measurement data benchmark"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 8,
+        "prompt_characters": 26798,
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 1
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.95,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 9.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 1.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "electrolyte"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "her"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [
+            "open-circuit voltage"
+          ],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "cell_assembly"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "battery_dataset_modelling",
+          "electrochemical_performance"
+        ],
+        "materials": 1,
+        "shared_protocols": 2,
+        "battery_groups": 2,
+        "performance_points": 2,
+        "archive_completeness": 0.8571428571428571,
+        "archive_semantic_warnings": [],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 24
+      },
+      "provenance": {
+        "evidence_capable_records": 9,
+        "records_with_evidence": 5,
+        "record_coverage": 0.556,
+        "snippets_checked": 6,
+        "verbatim_match_coverage": 1.0,
+        "unmatched_snippet_candidates": [],
+        "records_without_evidence": [
+          "shared_protocols[0]",
+          "shared_protocols[1]",
+          "battery_groups[0]",
+          "battery_groups[1]"
+        ],
+        "source_type_counts": {
+          "text": 1,
+          "unknown": 5
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": false,
+        "performance_points": 2,
+        "materials_with_synthesis": 0,
+        "manual_review_required": false,
+        "note": null
+      }
+    },
+    {
+      "filename": "Application_of_First_Principles_Computations_Based.pdf",
+      "manifest": {
+        "filename": "Application_of_First_Principles_Computations_Based.pdf",
+        "title": "Application of First Principles Computations Based on Density Functional Theory (DFT) in Cathode Materials of Sodium-Ion Batteries",
+        "document_type": "perspective_review",
+        "subtypes": [
+          "sodium_ion",
+          "computational_dft",
+          "cathode_review"
+        ],
+        "benchmark_priority": "A",
+        "use": "DFT descriptor vocabulary; review-vs-focal-result discrimination"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 17,
+        "prompt_characters": 60719,
+        "truncated_at_180000": false,
+        "table_markers": 5,
+        "figure_markers": 11
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.95,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 9.0,
+          "biomaterials": 0.0,
+          "catalysis": 1.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 0.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [],
+          "photovoltaics": [],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "electrochemical_performance",
+          "battery_dataset_modelling",
+          "materials_synthesis",
+          "computational_dft",
+          "electrode_fabrication"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "computational_dft"
+        ],
+        "materials": 4,
+        "shared_protocols": 0,
+        "battery_groups": 4,
+        "performance_points": 10,
+        "archive_completeness": 1.0,
+        "archive_semantic_warnings": [],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 38
+      },
+      "provenance": {
+        "evidence_capable_records": 18,
+        "records_with_evidence": 14,
+        "record_coverage": 0.778,
+        "snippets_checked": 14,
+        "verbatim_match_coverage": 0.429,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "materials[0]",
+            "page": 6,
+            "snippet": "α-MnO2"
+          },
+          {
+            "location": "materials[1]",
+            "page": 6,
+            "snippet": "β-NaMnO2"
+          },
+          {
+            "location": "battery_groups[0].performance_points[0]",
+            "page": 6,
+            "snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V"
+          },
+          {
+            "location": "battery_groups[0].performance_points[1]",
+            "page": 6,
+            "snippet": "α-MnO2 reaction voltages 3.42 V 3.23 V"
+          },
+          {
+            "location": "battery_groups[0].performance_points[2]",
+            "page": 6,
+            "snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV"
+          },
+          {
+            "location": "battery_groups[0].performance_points[3]",
+            "page": 6,
+            "snippet": "α-MnO2 electronic band 2.42 eV 2.23 eV"
+          },
+          {
+            "location": "battery_groups[1].performance_points[0]",
+            "page": 6,
+            "snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV"
+          },
+          {
+            "location": "battery_groups[1].performance_points[1]",
+            "page": 6,
+            "snippet": "β-NaMnO2 migration energy barrier 0.3 eV 0.27 eV"
+          }
+        ],
+        "records_without_evidence": [
+          "battery_groups[0]",
+          "battery_groups[1]",
+          "battery_groups[2]",
+          "battery_groups[3]"
+        ],
+        "source_type_counts": {
+          "table": 4,
+          "unknown": 10
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [],
+      "review_contamination": {
+        "is_review": true,
+        "performance_points": 10,
+        "materials_with_synthesis": 0,
+        "manual_review_required": true,
+        "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually."
+      }
+    },
+    {
+      "filename": "coatings-16-00912.pdf",
+      "manifest": {
+        "filename": "coatings-16-00912.pdf",
+        "title": "Anode Materials for Lithium-Ion Batteries, from Conventional Materials to High-Entropy Oxides: A Review of Synthesis Methods, Properties and Sustainability Challenges",
+        "document_type": "review",
+        "subtypes": [
+          "anode_review",
+          "synthesis_review",
+          "high_entropy_oxides"
+        ],
+        "benchmark_priority": "B",
+        "use": "large synthesis-method/alias coverage"
+      },
+      "expected_domain": "batteries",
+      "status": "completed",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 31,
+        "prompt_characters": 127618,
+        "truncated_at_180000": false,
+        "table_markers": 4,
+        "figure_markers": 6
+      },
+      "routing": {
+        "domain": "batteries",
+        "confidence": 0.914,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 18.25,
+          "biomaterials": 0.0,
+          "catalysis": 3.5,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 0.0,
+          "membranes": 1.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 1.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [
+            "lithium-ion",
+            "li-ion",
+            "battery",
+            "batteries",
+            "cathode",
+            "anode",
+            "electrolyte",
+            "coulombic",
+            "capacity retention",
+            "c-rate"
+          ],
+          "biomaterials": [],
+          "catalysis": [
+            "catalyst",
+            "catalysis",
+            "electrocatalysis"
+          ],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [],
+          "membranes": [
+            "membrane"
+          ],
+          "photovoltaics": [],
+          "semiconductors": [
+            "semiconductor"
+          ],
+          "thermoelectrics": []
+        },
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance",
+          "electrode_fabrication",
+          "degradation_health",
+          "battery_dataset_modelling"
+        ],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "model": "gemini-3.5-flash",
+      "schema_validation_success": true,
+      "extraction": {
+        "paper_types": [
+          "materials_synthesis",
+          "electrochemical_performance",
+          "battery_dataset_modelling"
+        ],
+        "materials": 21,
+        "shared_protocols": 0,
+        "battery_groups": 21,
+        "performance_points": 33,
+        "archive_completeness": 0.6,
+        "archive_semantic_warnings": [],
+        "missing_fields": []
+      },
+      "coercion_candidates": {
+        "recognized_alias_keys": [
+          "battery_groups[0].performance_points[0].voltage_window",
+          "battery_groups[0].performance_points[1].voltage_window",
+          "battery_groups[1].performance_points[0].voltage_window",
+          "battery_groups[2].performance_points[0].voltage_window",
+          "battery_groups[2].performance_points[1].voltage_window",
+          "battery_groups[3].performance_points[0].voltage_window",
+          "battery_groups[4].performance_points[0].voltage_window",
+          "battery_groups[4].performance_points[1].voltage_window",
+          "battery_groups[4].performance_points[2].voltage_window",
+          "battery_groups[5].performance_points[0].voltage_window",
+          "battery_groups[6].performance_points[0].voltage_window",
+          "battery_groups[6].performance_points[1].voltage_window",
+          "battery_groups[7].performance_points[0].voltage_window",
+          "battery_groups[8].performance_points[0].voltage_window",
+          "battery_groups[8].performance_points[1].voltage_window",
+          "battery_groups[9].performance_points[0].voltage_window",
+          "battery_groups[9].performance_points[1].voltage_window",
+          "battery_groups[9].performance_points[2].voltage_window",
+          "battery_groups[10].performance_points[0].voltage_window",
+          "battery_groups[11].performance_points[0].voltage_window",
+          "battery_groups[12].performance_points[0].voltage_window",
+          "battery_groups[13].performance_points[0].voltage_window",
+          "battery_groups[14].performance_points[0].voltage_window",
+          "battery_groups[15].performance_points[0].voltage_window",
+          "battery_groups[15].performance_points[1].voltage_window",
+          "battery_groups[16].performance_points[0].voltage_window",
+          "battery_groups[17].performance_points[0].voltage_window",
+          "battery_groups[17].performance_points[1].voltage_window",
+          "battery_groups[18].performance_points[0].voltage_window",
+          "battery_groups[18].performance_points[1].voltage_window",
+          "battery_groups[19].performance_points[0].voltage_window",
+          "battery_groups[19].performance_points[1].voltage_window",
+          "battery_groups[20].performance_points[0].voltage_window"
+        ],
+        "invalid_qualifiers": [],
+        "compact_quantity_strings": 153
+      },
+      "provenance": {
+        "evidence_capable_records": 92,
+        "records_with_evidence": 59,
+        "record_coverage": 0.641,
+        "snippets_checked": 59,
+        "verbatim_match_coverage": 0.729,
+        "unmatched_snippet_candidates": [
+          {
+            "location": "materials[0]",
+            "page": 4,
+            "snippet": "Lithium has been utilized as a pure metal in crafting anodes for Li-ion batteries since the 1970s. This material demonstrated its suitability for energy storage due to a significant characteristic—its high energy density, with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+          },
+          {
+            "location": "materials[3]",
+            "page": 5,
+            "snippet": "One strategy focuses on creating hybrid nanostructured anodes, such as silicon nanoparticles attached to vertically aligned carbon nanotubes (VACNTs). This design accommodates silicon’s volume fluctuations, enhancing electrode stability and delivering a reversible capacity of 1330 mAh/g over 2000 cycles."
+          },
+          {
+            "location": "materials[7]",
+            "page": 7,
+            "snippet": "Graphene, represented as a monolayer of carbon atoms with sp2 bonds can offer remarkable properties as an anode material... This type of material provides a theoretical specific capacity of 744 mAh/g based on Li2C6"
+          },
+          {
+            "location": "materials[8].synthesis",
+            "page": 10,
+            "snippet": "In their work, Yin et al. [78] present the sol–gel synthesis of Al-doped, carbon-coated Li4Ti5O12 (LTO) anodes, leveraging the method’s ability to produce homogenous, nano-sized particles with uniform doping and carbon coating."
+          },
+          {
+            "location": "materials[9].synthesis",
+            "page": 10,
+            "snippet": "reports the sol–gel synthesis of Li3VO4/carbon (Li3VO4/C) composites for use as anode materials in lithium-ion batteries."
+          },
+          {
+            "location": "materials[14].synthesis",
+            "page": 12,
+            "snippet": "explored the use of flame spray pyrolysis (FSP) for the synthesis of Li4Ti5O12 (LTO) nanoparticles... LTO nanoparticles with an average particle size of around 30–50 nm, offering high surface areas (~100 m 2/g)"
+          },
+          {
+            "location": "materials[16].synthesis",
+            "page": 14,
+            "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization, resulting in uniformly distributed 15 nm SnO2/NiO nanoparticles embedded on conductive CNFs."
+          },
+          {
+            "location": "materials[16].synthesis.steps[0]",
+            "page": null,
+            "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization"
+          },
+          {
+            "location": "materials[16].synthesis.steps[1]",
+            "page": null,
+            "snippet": "obtained Ni-doped SnO2–carbon nanofiber (CNF) composites via electrospinning and carbonization"
+          },
+          {
+            "location": "battery_groups[0].performance_points[0]",
+            "page": 4,
+            "snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+          },
+          {
+            "location": "battery_groups[0].performance_points[1]",
+            "page": 4,
+            "snippet": "with lithium metal achieving an extraordinary theoretical specific capacity of 3861 mAhg−1 and 2062 mAhcm−3"
+          },
+          {
+            "location": "battery_groups[1].performance_points[0]",
+            "page": 8,
+            "snippet": "Graphite | ~372 | ~600 | Medium | High | Low | Medium"
+          },
+          {
+            "location": "battery_groups[3].performance_points[0]",
+            "page": 5,
+            "snippet": "delivering a reversible capacity of 1330 mAh/g over 2000 cycles."
+          },
+          {
+            "location": "battery_groups[10].performance_points[0]",
+            "page": 11,
+            "snippet": "Electrochemical testing showed a stable reversible capacity of 430 mAh/g after 100 cycles at C/10."
+          },
+          {
+            "location": "battery_groups[13].performance_points[0]",
+            "page": 12,
+            "snippet": "the composite exhibited improved electrochemical performance, including higher specific capacity and rate capability (300 mAh/g, two times higher than that achieved by pristine LTO)"
+          },
+          {
+            "location": "battery_groups[18].performance_points[0]",
+            "page": 8,
+            "snippet": "maintaining a reversible capacity of 132 mAh·g−1 after 100 cycles at 100 mA·g−1"
+          }
+        ],
+        "records_without_evidence": [
+          "materials[8]",
+          "materials[9]",
+          "materials[10]",
+          "materials[11]",
+          "materials[12]",
+          "materials[13]",
+          "materials[14]",
+          "materials[15]",
+          "materials[16]",
+          "materials[17]",
+          "materials[18]",
+          "materials[19]",
+          "battery_groups[0]",
+          "battery_groups[1]",
+          "battery_groups[2]",
+          "battery_groups[3]",
+          "battery_groups[4]",
+          "battery_groups[5]",
+          "battery_groups[6]",
+          "battery_groups[7]",
+          "battery_groups[8]",
+          "battery_groups[9]",
+          "battery_groups[10]",
+          "battery_groups[11]",
+          "battery_groups[12]",
+          "battery_groups[13]",
+          "battery_groups[14]",
+          "battery_groups[15]",
+          "battery_groups[16]",
+          "battery_groups[17]",
+          "battery_groups[18]",
+          "battery_groups[19]",
+          "battery_groups[20]"
+        ],
+        "source_type_counts": {
+          "unknown": 54,
+          "text": 5
+        }
+      },
+      "duplicate_facts": [],
+      "condition_association_review": [
+        {
+          "group_id": "group_li_baseline",
+          "property": "specific_capacity",
+          "value": 3861.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_li_baseline",
+          "property": "specific_capacity",
+          "value": 2062.0,
+          "unit": "mAh/cm3",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_graphite_baseline",
+          "property": "specific_capacity",
+          "value": 372.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_si_baseline",
+          "property": "specific_capacity",
+          "value": 3590.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_si_baseline",
+          "property": "specific_capacity",
+          "value": 4200.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_lto_baseline",
+          "property": "specific_capacity",
+          "value": 175.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_sn_baseline",
+          "property": "specific_capacity",
+          "value": 944.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_mwcnt_baseline",
+          "property": "specific_capacity",
+          "value": 312.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_mwcnt_baseline",
+          "property": "specific_capacity",
+          "value": 2087.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_graphene_baseline",
+          "property": "specific_capacity",
+          "value": 744.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_lto_gu",
+          "property": "specific_capacity",
+          "value": 300.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_lto_birrozzi",
+          "property": "specific_capacity",
+          "value": 160.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_zno_laurenti",
+          "property": "specific_capacity",
+          "value": 400.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        },
+        {
+          "group_id": "group_zno_laurenti",
+          "property": "capacity_retention",
+          "value": 62.0,
+          "unit": "%",
+          "reasons": [
+            "retention has no associated cycle"
+          ]
+        },
+        {
+          "group_id": "group_heo_qiu",
+          "property": "specific_capacity",
+          "value": 700.0,
+          "unit": "mAh/g",
+          "reasons": [
+            "capacity has neither cycle nor C-rate association"
+          ]
+        }
+      ],
+      "review_contamination": {
+        "is_review": true,
+        "performance_points": 33,
+        "materials_with_synthesis": 12,
+        "manual_review_required": true,
+        "note": "Structured focal-looking facts in a review may originate from cited literature; inspect evidence manually."
+      }
+    },
+    {
+      "filename": "applsci-10-04112.pdf",
+      "manifest": {
+        "filename": "applsci-10-04112.pdf",
+        "title": "Cycling Biomechanics and Its Relationship to Performance",
+        "document_type": "non_battery",
+        "subtypes": [
+          "cycling_biomechanics"
+        ],
+        "benchmark_priority": "EXCLUDE",
+        "use": "hard negative routing test for keyword cycling"
+      },
+      "expected_domain": "non_battery",
+      "status": "correctly_rejected_negative_control",
+      "failure_class": null,
+      "serper_disabled": true,
+      "pdf_text_extraction": {
+        "success": true,
+        "pages": 15,
+        "prompt_characters": 70560,
+        "truncated_at_180000": false,
+        "table_markers": 0,
+        "figure_markers": 25
+      },
+      "routing": {
+        "domain": "mechanical",
+        "confidence": 0.363,
+        "scores": {
+          "additive_manufacturing": 0.0,
+          "batteries": 0.0,
+          "biomaterials": 0.0,
+          "catalysis": 0.0,
+          "corrosion": 0.0,
+          "gas_sensing": 0.0,
+          "mechanical": 2.0,
+          "membranes": 1.0,
+          "photovoltaics": 0.0,
+          "semiconductors": 0.0,
+          "thermoelectrics": 0.0
+        },
+        "matched_terms": {
+          "additive_manufacturing": [],
+          "batteries": [],
+          "biomaterials": [],
+          "catalysis": [],
+          "corrosion": [],
+          "gas_sensing": [],
+          "mechanical": [
+            "fatigue"
+          ],
+          "membranes": [
+            "membrane"
+          ],
+          "photovoltaics": [],
+          "semiconductors": [],
+          "thermoelectrics": []
+        },
+        "paper_types": [],
+        "method": "lexical_router_v1",
+        "input_kind": "extracted_pdf_text",
+        "correct": true
+      },
+      "schema_validation_success": null,
+      "extractor_skipped": "Correct non-battery route; battery extraction is not applicable."
+    }
+  ]
+}

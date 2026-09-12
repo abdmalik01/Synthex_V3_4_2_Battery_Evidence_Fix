@@ -1,0 +1,332 @@
+{
+  "source": {
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol–Gel Method",
+    "doi": "10.3390/batteries11040142",
+    "year": 2025,
+    "authors": [
+      "Pengqing Hou",
+      "Qi Sun",
+      "Shengxue Yan",
+      "Guanglong Li",
+      "Yingdong Qu",
+      "Shaohua Luo"
+    ]
+  },
+  "paper_types": [
+    "materials_synthesis",
+    "electrode_fabrication",
+    "cell_assembly",
+    "electrochemical_performance",
+    "impedance_eis"
+  ],
+  "materials": [
+    {
+      "material_id": "Li2FeTiO4",
+      "name": "Li2FeTiO4",
+      "formula": "Li2FeTiO4",
+      "role": "cathode",
+      "ownership": "focal_work",
+      "synthesis": {
+        "method": "sol-gel",
+        "precursors": [
+          "citric acid",
+          "CH3COOLi·2H2O",
+          "FeCl2·4H2O",
+          "Ti(OC4H9)4"
+        ],
+        "solvents": [
+          "anhydrous ethanol"
+        ],
+        "chelating_agents": [
+          "citric acid"
+        ],
+        "precursor_ratio_raw": "2.05.1:1",
+        "steps": [
+          {
+            "step": "continuous stirring",
+            "duration": "24 h",
+            "details": "room temperature",
+            "evidence": {
+              "page": 2,
+              "section": "2.1 Materials Preparation",
+              "text_snippet": "the above solutions were homogenized by continuous stirring for 24 h at room temperature.",
+              "source_type": "text"
+            }
+          },
+          {
+            "step": "water-bath gelation",
+            "temperature": "65 °C",
+            "duration": "5 h",
+            "evidence": {
+              "page": 2,
+              "section": "2.1 Materials Preparation",
+              "text_snippet": "The gel was obtained by continued heating in a water bath at 65 °C for 5 h.",
+              "source_type": "text"
+            }
+          },
+          {
+            "step": "vacuum drying",
+            "temperature": "120 °C",
+            "duration": "24 h",
+            "evidence": {
+              "page": 2,
+              "section": "2.1 Materials Preparation",
+              "text_snippet": "it was dried in a vacuum drying oven at 120 °C for 24 h.",
+              "source_type": "text"
+            }
+          },
+          {
+            "step": "precalcination",
+            "temperature": "500 °C",
+            "duration": "8 h",
+            "atmosphere": "Ar",
+            "evidence": {
+              "page": 2,
+              "section": "2.1 Materials Preparation",
+              "text_snippet": "under an Ar atmosphere and precalcined at 500 °C for 8 h.",
+              "source_type": "text"
+            }
+          },
+          {
+            "step": "secondary calcination",
+            "details": "600 °C, 700 °C, and 800 °C variants",
+            "evidence": {
+              "page": 2,
+              "section": "2.1 Materials Preparation",
+              "text_snippet": "secondary calcination at several temperature ranges (600 °C, 700 °C, 800 °C)",
+              "source_type": "text"
+            }
+          }
+        ],
+        "calcination_temperatures": [
+          "600 °C",
+          "700 °C",
+          "800 °C"
+        ],
+        "atmosphere": "Ar"
+      }
+    }
+  ],
+  "shared_protocols": [
+    {
+      "protocol_id": "Li2FeTiO4_common_cell_protocol",
+      "ownership": "focal_work",
+      "name": "Common electrode/cell/electrochemical protocol",
+      "electrode_fabrication": {
+        "active_material": "Li2FeTiO4",
+        "active_material_fraction": "80 wt%",
+        "conductive_additive": "acetylene black",
+        "conductive_fraction": "10 wt%",
+        "binder": "PVDF",
+        "binder_fraction": "10 wt%",
+        "solvent": "NMP",
+        "current_collector": "Al foil",
+        "coating_method": "doctor blade",
+        "mass_loading": "1.0 mg/cm2",
+        "drying_steps": [
+          {
+            "step": "vacuum drying",
+            "temperature": "80 °C",
+            "duration": "12 h"
+          },
+          {
+            "step": "final vacuum drying",
+            "temperature": "120 °C",
+            "duration": "6 h"
+          }
+        ],
+        "pressing_pressure": "10 MPa",
+        "disk_diameter": "10 mm",
+        "evidence": [
+          {
+            "page": 3,
+            "section": "2.3 Electrochemical Measurements",
+            "text_snippet": "The cathode slurry was prepared by mixing 80 wt% active material (Li2FeTiO4), 10 wt% acetylene black, and 10 wt% polyvinylidene fluoride (PVDF) binder in N-methyl-2-pyrrolidone (NMP).",
+            "source_type": "text"
+          }
+        ]
+      },
+      "cell_assembly": {
+        "cell_format": "CR2032",
+        "counter_electrode": "lithium foil",
+        "separator": "Celgard 2400 polypropylene film",
+        "electrolyte": "commercial lithium electrolyte",
+        "electrolyte_volume": "100 µL",
+        "atmosphere": "argon-filled glovebox",
+        "glovebox_o2": "<0.1 ppm",
+        "glovebox_h2o": "<0.1 ppm",
+        "evidence": [
+          {
+            "page": 3,
+            "section": "2.3 Electrochemical Measurements",
+            "text_snippet": "CR2032 coin cells were assembled in an argon-filled glovebox (O2 < 0.1 ppm, H2O < 0.1 ppm).",
+            "source_type": "text"
+          }
+        ]
+      },
+      "electrochemical_testing": {
+        "cv_scan_rate": "0.1 mV/s",
+        "voltage_min": "1.5 V",
+        "voltage_max": "4.8 V",
+        "c_rate_definition": "1 C defined as 300 mA/g based on the active material mass",
+        "rate_capability_range": "0.1 C–5 C",
+        "long_term_cycles": 100,
+        "long_term_c_rate": "1 C",
+        "equipment": [
+          "CHI760E electrochemical workstation",
+          "LAND-CT2001A"
+        ],
+        "evidence": [
+          {
+            "page": 3,
+            "section": "2.3 Electrochemical Measurements",
+            "text_snippet": "Rate capability (0.1 C–5 C) and long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+            "source_type": "text"
+          }
+        ]
+      },
+      "impedance_protocol": {
+        "method": "Electrochemical Impedance Spectroscopy (EIS)"
+      }
+    }
+  ],
+  "battery_groups": [
+    {
+      "group_id": "Li2FeTiO4_600C",
+      "ownership": "focal_work",
+      "material_ref": "Li2FeTiO4",
+      "variant_label": "600 °C",
+      "calcination_temperature": "600 °C",
+      "protocol_refs": [
+        "Li2FeTiO4_common_cell_protocol"
+      ]
+    },
+    {
+      "group_id": "Li2FeTiO4_700C",
+      "ownership": "focal_work",
+      "material_ref": "Li2FeTiO4",
+      "variant_label": "700 °C",
+      "calcination_temperature": "700 °C",
+      "protocol_refs": [
+        "Li2FeTiO4_common_cell_protocol"
+      ],
+      "condition_conflicts": [
+        {
+          "field": "c_rate",
+          "status": "conflicted",
+          "reported_values": [
+            {
+              "value": "0.1 C",
+              "evidence": [
+                {
+                  "page": 13,
+                  "section": "Table 1",
+                  "text_snippet": "Li2FeTiO4 0.1 C 121.3 100 89.2 This work",
+                  "source_type": "table"
+                }
+              ]
+            },
+            {
+              "value": "1 C",
+              "evidence": [
+                {
+                  "page": 3,
+                  "section": "2.3 Electrochemical Measurements",
+                  "text_snippet": "long-term cycling stability (100 cycles at 1 C) were evaluated under ambient temperature conditions.",
+                  "source_type": "text"
+                }
+              ]
+            }
+          ],
+          "resolved_value": null
+        }
+      ],
+      "performance_points": [
+        {
+          "property": "specific_capacity",
+          "ownership": "focal_work",
+          "raw_value": "121.3 mAh/g",
+          "value": 121.3,
+          "unit": "mAh/g",
+          "cycle": 1,
+          "evidence": {
+            "page": 12,
+            "section": "Results",
+            "text_snippet": "a first discharge capacity of 121.3 mAh/g",
+            "source_type": "text"
+          }
+        },
+        {
+          "property": "specific_capacity",
+          "ownership": "focal_work",
+          "raw_value": "108.2 mAh/g",
+          "value": 108.2,
+          "unit": "mAh/g",
+          "cycle": 100,
+          "evidence": {
+            "page": 12,
+            "section": "Results",
+            "text_snippet": "a 100th discharge capacity of 108.2 mAh/g",
+            "source_type": "text"
+          }
+        },
+        {
+          "property": "capacity_retention",
+          "ownership": "focal_work",
+          "raw_value": "89.2%",
+          "value": 89.2,
+          "unit": "%",
+          "cycle": 100,
+          "evidence": {
+            "page": 12,
+            "section": "Results",
+            "text_snippet": "with 89.2% retention after 100 cycles",
+            "source_type": "text"
+          }
+        },
+        {
+          "property": "charge_transfer_resistance",
+          "ownership": "focal_work",
+          "raw_value": "1258.6 Ω",
+          "value": 1258.6,
+          "unit": "ohm",
+          "method": "EIS",
+          "evidence": {
+            "page": 11,
+            "section": "Results",
+            "text_snippet": "lower R ct value (1258.6 Ω)",
+            "source_type": "text"
+          }
+        },
+        {
+          "property": "diffusion_coefficient",
+          "ownership": "focal_work",
+          "raw_value": "1.096 × 10−12 cm2 s−1",
+          "value": 1.096e-12,
+          "unit": "cm2/s",
+          "method": "EIS/Warburg",
+          "evidence": {
+            "page": 11,
+            "section": "Results",
+            "text_snippet": "DLi+ value of Li2FeTiO4 at 700 °C was 1.096 × 10−12 cm2 s−1",
+            "source_type": "text"
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "Li2FeTiO4_800C",
+      "ownership": "focal_work",
+      "material_ref": "Li2FeTiO4",
+      "variant_label": "800 °C",
+      "calcination_temperature": "800 °C",
+      "protocol_refs": [
+        "Li2FeTiO4_common_cell_protocol"
+      ]
+    }
+  ],
+  "extraction_notes": [
+    "The precursor molar-ratio string is preserved raw because PDF text extraction makes its punctuation ambiguous.",
+    "Conflicting long-term cycling C-rate statements are preserved: Section 2.3 reports 1 C, while Section 3.4/Table 1 reports 0.1 C. No single C-rate is assigned to the affected performance points."
+  ]
+}

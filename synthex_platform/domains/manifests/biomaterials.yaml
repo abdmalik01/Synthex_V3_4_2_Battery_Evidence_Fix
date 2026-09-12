@@ -1,0 +1,132 @@
+slug: biomaterials
+name: Biomaterials
+version: 1.0.0
+description: Material composition, fabrication, biological assay conditions, mechanical
+  properties and biocompatibility.
+recommended_sections:
+- materials
+- fabrication
+- surface characterization
+- cell culture
+- biological assays
+- mechanical testing
+- results
+process_vocabulary:
+- 3D printing
+- electrospinning
+- crosslinking
+- freeze drying
+- surface functionalization
+- sterilization
+- cell seeding
+properties:
+- key: cell_viability
+  name: Cell viability
+  kind: biological
+  units:
+  - '%'
+  conditions:
+  - cell_line
+  - time
+  - assay
+  aliases: []
+- key: cell_adhesion
+  name: Cell adhesion
+  kind: biological
+  units:
+  - cells/cm2
+  - '%'
+  conditions:
+  - cell_line
+  - time
+  aliases: []
+- key: proliferation
+  name: Cell proliferation
+  kind: biological
+  units:
+  - fold
+  - '%'
+  conditions:
+  - cell_line
+  - time
+  - assay
+  aliases: []
+- key: hemolysis
+  name: Hemolysis
+  kind: biological
+  units:
+  - '%'
+  conditions:
+  - blood_source
+  aliases: []
+- key: degradation_rate
+  name: Degradation rate
+  kind: performance
+  units:
+  - '%/day'
+  - '%/week'
+  - mg/day
+  conditions:
+  - medium
+  - temperature
+  aliases: []
+- key: swelling_ratio
+  name: Swelling ratio
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - medium
+  - time
+  aliases: []
+- key: compressive_modulus
+  name: Compressive modulus
+  kind: mechanical
+  units:
+  - MPa
+  - kPa
+  conditions:
+  - strain_rate
+  aliases: []
+- key: tensile_strength
+  name: Tensile strength
+  kind: mechanical
+  units:
+  - MPa
+  conditions:
+  - hydration_state
+  aliases: []
+- key: contact_angle
+  name: Contact angle
+  kind: surface
+  units:
+  - degree
+  conditions: []
+  aliases: []
+benchmarks:
+- id: biomaterials.cell_viability_prediction
+  name: Cell viability prediction
+  target: cell_viability
+  group_by:
+  - material
+  - cell_line
+- id: biomaterials.degradation_prediction
+  name: Degradation prediction
+  target: degradation_rate
+  group_by:
+  - material
+  - medium
+- id: biomaterials.mechanical_compatibility_prediction
+  name: Mechanical compatibility prediction
+  target: compressive_modulus
+  group_by:
+  - material
+  - process
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

@@ -1,0 +1,112 @@
+slug: photovoltaics
+name: Photovoltaics
+version: 1.0.0
+description: Absorber/device fabrication, architecture, optoelectronic properties
+  and photovoltaic performance.
+recommended_sections:
+- materials
+- device fabrication
+- characterization
+- photovoltaic measurements
+- stability
+- results
+process_vocabulary:
+- spin coating
+- blade coating
+- evaporation
+- sputtering
+- CVD
+- annealing
+- encapsulation
+properties:
+- key: power_conversion_efficiency
+  name: Power conversion efficiency
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - illumination
+  - scan_direction
+  - area
+  aliases: []
+- key: open_circuit_voltage
+  name: Open-circuit voltage
+  kind: performance
+  units:
+  - V
+  conditions:
+  - illumination
+  aliases: []
+- key: short_circuit_current_density
+  name: Short-circuit current density
+  kind: performance
+  units:
+  - mA/cm2
+  conditions:
+  - illumination
+  aliases: []
+- key: fill_factor
+  name: Fill factor
+  kind: performance
+  units:
+  - '%'
+  conditions:
+  - illumination
+  aliases: []
+- key: band_gap
+  name: Band gap
+  kind: optoelectronic
+  units:
+  - eV
+  conditions:
+  - method
+  aliases: []
+- key: external_quantum_efficiency
+  name: External quantum efficiency
+  kind: optoelectronic
+  units:
+  - '%'
+  conditions:
+  - wavelength
+  aliases: []
+- key: carrier_lifetime
+  name: Carrier lifetime
+  kind: transport
+  units:
+  - ns
+  - us
+  conditions:
+  - method
+  aliases: []
+- key: stability_retention
+  name: PCE retention
+  kind: stability
+  units:
+  - '%'
+  conditions:
+  - time
+  - temperature
+  - humidity
+  - illumination
+  aliases: []
+benchmarks:
+- id: photovoltaics.pce_prediction
+  name: PCE prediction
+  target: power_conversion_efficiency
+  group_by:
+  - absorber
+  - architecture
+- id: photovoltaics.stability_prediction
+  name: Stability prediction
+  target: stability_retention
+  group_by:
+  - absorber
+  - encapsulation
+graph_relations:
+- derived_from
+- processed_by
+- tested_in
+- calculated_for
+- has_property
+- compared_with
+- reported_by

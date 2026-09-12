@@ -1,0 +1,30 @@
+rf_magnetron_sputtering:
+  canonical_name: RF Magnetron Sputtering
+  family: Physical Vapor Deposition
+  aliases: [RF sputtering, radio-frequency magnetron sputtering, RF magnetron deposition]
+  parameters: [target_material, rf_power, chamber_pressure, working_gas, oxygen_flow, argon_flow, substrate_temperature, deposition_time, target_substrate_distance, film_thickness]
+  post_treatment: [annealing_temperature, annealing_time, annealing_atmosphere]
+spin_coating:
+  canonical_name: Spin Coating
+  family: Solution-Based Deposition
+  aliases: [spin-coated, spin cast, spin casting]
+  parameters: [precursor_solution, concentration, solvent, spin_speed, spin_time, number_of_cycles, substrate, drying_temperature]
+  post_treatment: [annealing_temperature, annealing_time]
+chemical_vapor_deposition:
+  canonical_name: Chemical Vapor Deposition
+  family: Chemical Vapor Deposition
+  aliases: [CVD, thermal CVD, PECVD, MOCVD]
+  parameters: [precursor, carrier_gas, reactive_gas, gas_flow_rate, pressure, substrate_temperature, deposition_time]
+  post_treatment: [annealing_temperature, annealing_time, annealing_atmosphere]
+electrodeposition:
+  canonical_name: Electrodeposition
+  family: Electrochemical Deposition
+  aliases: [electrochemical deposition, potentiostatic deposition, galvanostatic deposition]
+  parameters: [electrolyte, concentration, pH, applied_potential, current_density, deposition_time, electrode_configuration]
+  post_treatment: [drying_temperature, annealing_temperature, annealing_time]
+atomic_layer_deposition:
+  canonical_name: Atomic Layer Deposition
+  family: Atomic Layer Deposition
+  aliases: [ALD, thermal ALD, plasma-enhanced ALD, PEALD]
+  parameters: [precursor_A, precursor_B, pulse_time, purge_time, number_of_cycles, substrate_temperature]
+  post_treatment: [annealing_temperature, annealing_time]
