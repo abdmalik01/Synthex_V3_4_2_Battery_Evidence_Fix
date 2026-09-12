@@ -1,0 +1,8 @@
+{
+  "headers": ["Sample", "Temperature (°C)", "Capacity (mAh/g)", "Resistance (Ω)", "Diffusion coefficient (cm²/s)"],
+  "rows": [
+    ["LFTO-600", "600 °C", "67.0 mAh/g", "1258.6 Ω", "1.096 × 10⁻¹² cm²/s"],
+    ["LFTO-700", "700 °C", "121.3 mAh/g", "1258.6 Ω", "1.096 × 10⁻¹² cm²/s"],
+    ["LFTO-800", "800 °C", "58.7 mAh/g", "1258.6 Ω", "1.096 × 10⁻¹² cm²/s"]
+  ]
+}

@@ -6,6 +6,16 @@ Synthex is being developed toward a materials-intelligence platform that links l
 
 - Gas sensing: live structured extraction, normalization, validation and visualization foundation.
 - Batteries: live domain routing and dedicated extraction, now expanded for true electrode-materials papers.
+- **Visual Intelligence V1 — COMPLETE:** native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, OCR fallback, and calibrated graph digitization.
+
+## Visual Intelligence V1 scientific guarantees
+
+- Visual extraction products do not automatically create canonical measurements.
+- OCR is explicitly marked `origin="ocr_extracted"` and remains distinguishable from native extraction.
+- Digitized graph points are always `origin="figure_digitized"`, `estimated=true`, and `evidence_strength="estimated_digitized"`.
+- Digitized values remain visual sidecar products outside canonical admission by default.
+- Uncertainty, calibration, raw pixel coordinates, warnings, and rejection reasons are retained for audit.
+- Batteries V1 remains frozen; Visual Intelligence does not alter its schemas or archive-admission rules.
 
 ## Batteries V1.3 scientific-admissibility additions
 
@@ -24,7 +34,7 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Structured experimental-condition conflicts with unresolved disputed values removed.
 - Battery DFT outputs assembled as calculations rather than cycling experiments.
 - Internal archive and battery material/protocol reference validation.
-- PyPDF-first text extraction with a PyMuPDF fallback; OCR is not enabled.
+- PyPDF-first text extraction with a PyMuPDF fallback and an opt-in, explicitly labelled Tesseract OCR fallback for insufficient pages.
 - Low-variance Gemini settings (`temperature=0`, reproducibility seed `0`).
 
 ### Eight-document hardening result

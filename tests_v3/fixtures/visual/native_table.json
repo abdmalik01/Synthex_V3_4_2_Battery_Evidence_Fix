@@ -1,0 +1,5 @@
+{
+  "caption": "Table 1. Electrochemical performance of Li₂FeTiO₄.",
+  "headers": ["Sample", "Temperature (°C)", "Capacity (mAh/g)", "Diffusion coefficient (cm²/s)"],
+  "row": ["Li₂FeTiO₄", "700 °C", "121.3 mAh/g", "1.096 × 10⁻¹² cm²/s"]
+}

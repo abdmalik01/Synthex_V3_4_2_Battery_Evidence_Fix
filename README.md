@@ -9,6 +9,7 @@ Synthex is evolving from a nanomaterial parameter extractor into a literature-to
 - **Catalysis, corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors, biomaterials:** domain manifests, canonical properties and benchmark tasks exist; these remain generic/scaffold extractors until domain-specific benchmarking is completed.
 
 See `CURRENT_STATUS.md` for the plain-language project status.
+Visual Intelligence V1 is complete: native tables, provenance sidecars, figure understanding, generated charts, explicit OCR fallback, and calibrated graph digitization. These visual products remain outside canonical admission by default; see `docs/VISUAL_INTELLIGENCE_V1_STATUS.md`.
 
 ## Run the platform dashboard
 

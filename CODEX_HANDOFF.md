@@ -6,7 +6,7 @@
 
 **Project:** Synthex  
 **Current development line:** V3.4.2  
-**Current focus:** Batteries V1 benchmark hardening  
+**Current focus:** Visual Intelligence V1 closure; Batteries V1 frozen
 **Long-term goal:** Build a materials-intelligence platform that converts scientific literature into structured, provenance-aware, machine-usable datasets linking:
 
 **process → structure/material → computation → property → performance**
@@ -35,6 +35,10 @@ Planned/partially scaffolded domains:
 11. Biomaterials
 
 Do **not** assume the non-battery/non-gas domains are research-grade yet.
+
+### Visual Intelligence V1 — COMPLETE
+
+The shared visual layer provides native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, explicit OCR fallback, and calibrated graph digitization. It is not a canonical-admission path: OCR is explicit, and digitized points remain `estimated=true`, `origin="figure_digitized"`, with uncertainty/rejection metadata and `admission_status="not_submitted"` by default. Batteries V1 remains frozen. Read `docs/VISUAL_INTELLIGENCE_V1_STATUS.md` before changing visual code.
 
 ---
 
@@ -649,10 +653,10 @@ Priority order:
 1. Finish Li2FeTiO4 benchmark without schema crashes.
 2. Strengthen benchmark checks for condition/value association.
 3. Validate against additional battery papers from the benchmark corpus.
-4. Add table/figure extraction support.
+4. Preserve completed Visual Intelligence V1 and its sidecar-only, estimated-data boundaries.
 5. Improve quality scoring and provenance coverage.
 6. Stress-test shared-protocol deduplication.
 7. Add battery subtype-specific benchmark suites.
-8. Only after Batteries V1 is stable, begin the next domain vertical.
+8. Only after Batteries V1 remains stable and this closure is reviewed, begin the next domain vertical deliberately.
 
 Do not broaden Synthex into new domains prematurely at the cost of battery extraction quality.

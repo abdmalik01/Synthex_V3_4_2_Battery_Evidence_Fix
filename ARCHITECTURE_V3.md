@@ -169,6 +169,7 @@ Synthex Archive
 
 ### V3.1 — ingestion quality
 - PDF multimodal/table extraction
+- Visual Intelligence V1 complete: native tables, provenance sidecars, figure understanding, generated charts, explicit OCR, and calibrated graph digitization.
 - DOI metadata resolution
 - unit ontology and conversion library
 - material/entity resolution across papers
@@ -188,6 +189,8 @@ Synthex Archive
 - electrochemical condition normalization
 - corrosion environment ontology
 - benchmark releases
+
+Visual Intelligence V1 is a shared, non-canonical sidecar layer: OCR is explicit; digitized values are estimated, retain uncertainty/rejection evidence, and are never automatically admitted to SynthexArchive.
 
 ### V3.4+ — remaining domains
 Expand one domain at a time only after a verified seed benchmark exists. Avoid adding broad but low-quality schemas without curation.
