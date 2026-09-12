@@ -1,148 +1,85 @@
 slug: catalysis
 name: Catalysis & Electrocatalysis
-version: 1.0.0
-description: Catalyst synthesis, active sites, reaction conditions, kinetics, selectivity
-  and electrochemical activity.
+version: 1.1.0-stage1
+description: >-
+  Stage 1 schema scaffold for heterogeneous catalysis, electrocatalysis, stability,
+  characterization and computational catalysis. Canonical admission is not enabled yet.
 recommended_sections:
-- catalyst synthesis
-- characterization
-- catalytic tests
-- electrochemistry
-- DFT
-- results
+  - catalyst synthesis
+  - catalyst characterization
+  - catalytic tests
+  - electrochemistry
+  - stability and regeneration
+  - computational methods
+  - DFT
+  - results
 process_vocabulary:
-- impregnation
-- co-precipitation
-- hydrothermal
-- calcination
-- reduction
-- electrode ink preparation
-- activation
+  - impregnation
+  - incipient wetness impregnation
+  - deposition
+  - co-precipitation
+  - precipitation
+  - hydrothermal
+  - solvothermal
+  - washing
+  - drying
+  - calcination
+  - annealing
+  - reduction
+  - activation
+  - pretreatment
+  - electrode ink preparation
+  - catalyst loading
+paper_types:
+  - catalyst_synthesis
+  - catalyst_characterization
+  - heterogeneous_catalysis
+  - electrocatalysis
+  - kinetics
+  - stability_deactivation
+  - computational_dft
+  - catalyst_dataset_modelling
+  - review
 properties:
-- key: conversion
-  name: Conversion
-  kind: performance
-  units:
-  - '%'
-  conditions:
-  - reactant
-  - temperature
-  - pressure
-  - flow
-  aliases: []
-- key: product_selectivity
-  name: Product selectivity
-  kind: performance
-  units:
-  - '%'
-  conditions:
-  - product
-  - conversion
-  aliases: []
-- key: yield
-  name: Product yield
-  kind: performance
-  units:
-  - '%'
-  conditions:
-  - product
-  aliases: []
-- key: turnover_frequency
-  name: Turnover frequency
-  kind: kinetics
-  units:
-  - 1/s
-  - 1/h
-  conditions:
-  - active_site_basis
-  - temperature
-  aliases: []
-- key: mass_activity
-  name: Mass activity
-  kind: performance
-  units:
-  - A/g
-  - mol/g/h
-  conditions:
-  - potential
-  - product
-  aliases: []
-- key: specific_activity
-  name: Specific activity
-  kind: performance
-  units:
-  - mA/cm2
-  conditions:
-  - potential
-  aliases: []
-- key: overpotential
-  name: Overpotential
-  kind: performance
-  units:
-  - mV
-  conditions:
-  - current_density
-  - reaction
-  aliases: []
-- key: tafel_slope
-  name: Tafel slope
-  kind: kinetics
-  units:
-  - mV/dec
-  conditions:
-  - reaction
-  aliases: []
-- key: faradaic_efficiency
-  name: Faradaic efficiency
-  kind: performance
-  units:
-  - '%'
-  conditions:
-  - product
-  - potential
-  aliases: []
-- key: adsorption_energy
-  name: Adsorption energy
-  kind: calculation
-  units:
-  - eV
-  conditions:
-  - intermediate
-  - site
-  aliases: []
-- key: activation_barrier
-  name: Activation barrier
-  kind: calculation
-  units:
-  - eV
-  - kJ/mol
-  conditions:
-  - elementary_step
-  aliases: []
+  - {key: conversion, name: Conversion, kind: performance, units: ['%'], conditions: [reactant, temperature, pressure, flow_rate, time_on_stream], aliases: [reactant conversion]}
+  - {key: product_selectivity, name: Product selectivity, kind: performance, units: ['%'], conditions: [product, conversion, temperature, pressure], aliases: [selectivity]}
+  - {key: yield, name: Product yield, kind: performance, units: ['%'], conditions: [product, reactant, temperature], aliases: []}
+  - {key: activity, name: Catalytic activity, kind: performance, units: [mol/g/h, mmol/g/h, A/g], conditions: [normalization_basis, temperature, potential], aliases: [catalytic activity]}
+  - {key: reaction_rate, name: Reaction rate, kind: kinetics, units: [mol/g/h, mmol/g/s, mol/m2/s], conditions: [normalization_basis, reactant, temperature], aliases: [rate]}
+  - {key: turnover_frequency, name: Turnover frequency, kind: kinetics, units: [1/s, 1/h], conditions: [active_site_basis, temperature, potential], aliases: [TOF]}
+  - {key: productivity, name: Productivity, kind: performance, units: [mol/g/h, g_product/g_catalyst/h], conditions: [product, normalization_basis], aliases: []}
+  - {key: activation_energy, name: Apparent activation energy, kind: kinetics, units: [eV, kJ/mol], conditions: [reaction, temperature_range], aliases: [Ea]}
+  - {key: carbon_balance, name: Carbon balance, kind: performance, units: ['%'], conditions: [reaction], aliases: []}
+  - {key: overpotential, name: Overpotential, kind: performance, units: [mV], conditions: [current_density, reaction, electrolyte, potential_reference], aliases: []}
+  - {key: onset_potential, name: Onset potential, kind: performance, units: [V], conditions: [reaction, potential_reference, electrolyte], aliases: []}
+  - {key: half_wave_potential, name: Half-wave potential, kind: performance, units: [V], conditions: [reaction, potential_reference, electrolyte], aliases: [E1/2]}
+  - {key: current_density, name: Current density, kind: performance, units: [mA/cm2, A/cm2], conditions: [normalization_basis, potential, potential_reference], aliases: []}
+  - {key: partial_current_density, name: Partial current density, kind: performance, units: [mA/cm2, A/cm2], conditions: [product, normalization_basis, potential, potential_reference], aliases: []}
+  - {key: tafel_slope, name: Tafel slope, kind: kinetics, units: [mV/dec], conditions: [reaction, electrolyte, potential_reference], aliases: []}
+  - {key: faradaic_efficiency, name: Faradaic efficiency, kind: performance, units: ['%'], conditions: [product, potential, potential_reference, electrolyte, duration], aliases: [FE]}
+  - {key: mass_activity, name: Mass activity, kind: performance, units: [A/g, mA/mg], conditions: [normalization_basis, potential, potential_reference], aliases: []}
+  - {key: specific_activity, name: Specific activity, kind: performance, units: [mA/cm2], conditions: [normalization_basis, potential, potential_reference], aliases: []}
+  - {key: ecsa, name: Electrochemically active surface area, kind: characterization, units: [cm2, m2/g], conditions: [method], aliases: [ECSA]}
+  - {key: double_layer_capacitance, name: Double-layer capacitance, kind: characterization, units: [mF/cm2, F/g], conditions: [method], aliases: [Cdl]}
+  - {key: product_formation_rate, name: Product formation rate, kind: performance, units: [mol/g/h, umol/cm2/h], conditions: [product, potential, potential_reference, analytical_method], aliases: []}
+  - {key: retention, name: Activity retention, kind: stability, units: ['%'], conditions: [duration, cycle_count, operating_condition], aliases: [current retention]}
+  - {key: adsorption_energy, name: Adsorption energy, kind: calculation, units: [eV], conditions: [intermediate, site, facet], aliases: []}
+  - {key: adsorption_free_energy, name: Adsorption free energy, kind: calculation, units: [eV], conditions: [intermediate, site, facet], aliases: []}
+  - {key: reaction_free_energy, name: Reaction free energy, kind: calculation, units: [eV], conditions: [elementary_step, facet], aliases: []}
+  - {key: activation_barrier, name: Activation barrier, kind: calculation, units: [eV, kJ/mol], conditions: [elementary_step, facet], aliases: []}
+  - {key: transition_state_energy, name: Transition-state energy, kind: calculation, units: [eV], conditions: [elementary_step, facet], aliases: []}
+  - {key: d_band_center, name: d-band center, kind: calculation, units: [eV], conditions: [site, facet], aliases: []}
+  - {key: work_function, name: Work function, kind: calculation, units: [eV], conditions: [facet], aliases: []}
+  - {key: bader_charge, name: Bader charge, kind: calculation, units: [e], conditions: [site], aliases: []}
+  - {key: charge_density_difference, name: Charge-density difference, kind: calculation, units: [e, e/angstrom3], conditions: [system], aliases: []}
+  - {key: dos_pdos, name: DOS/PDOS, kind: calculation, units: [states/eV], conditions: [orbital, facet], aliases: []}
+  - {key: surface_energy, name: Surface energy, kind: calculation, units: [J/m2, eV/angstrom2], conditions: [facet], aliases: []}
+  - {key: vacancy_formation_energy, name: Vacancy formation energy, kind: calculation, units: [eV], conditions: [defect, facet], aliases: []}
+  - {key: binding_energy, name: Binding energy, kind: calculation, units: [eV], conditions: [species, site], aliases: []}
+  - {key: limiting_potential, name: Limiting potential, kind: calculation, units: [V], conditions: [reaction], aliases: []}
+  - {key: theoretical_overpotential, name: Theoretical overpotential, kind: calculation, units: [V], conditions: [reaction], aliases: []}
 benchmarks:
-- id: catalysis.activity_prediction
-  name: Activity prediction
-  target: turnover_frequency
-  group_by:
-  - catalyst
-  - reaction
-- id: catalysis.product_selectivity_prediction
-  name: Product selectivity prediction
-  target: product_selectivity
-  group_by:
-  - catalyst
-  - reaction
-- id: catalysis.overpotential_prediction
-  name: Overpotential prediction
-  target: overpotential
-  group_by:
-  - catalyst
-  - reaction
-graph_relations:
-- derived_from
-- processed_by
-- tested_in
-- calculated_for
-- has_property
-- compared_with
-- reported_by
+  - {id: catalysis.activity_prediction, name: Activity prediction, target: turnover_frequency, group_by: [catalyst, reaction]}
+  - {id: catalysis.product_selectivity_prediction, name: Product selectivity prediction, target: product_selectivity, group_by: [catalyst, reaction, product]}
+  - {id: catalysis.overpotential_prediction, name: Overpotential prediction, target: overpotential, group_by: [catalyst, reaction, potential_reference]}
+graph_relations: [derived_from, processed_by, tested_in, calculated_for, has_property, compared_with, reported_by, supported_on, promoted_by, pretreated_by, regenerated_by]

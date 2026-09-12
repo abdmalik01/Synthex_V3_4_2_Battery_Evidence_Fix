@@ -18,6 +18,7 @@ class DomainRoute:
     focal_signals: dict[str, list[str]] | None = None
     incidental_signals: dict[str, list[str]] | None = None
     ambiguity_reason: str | None = None
+    scope_status: str = "supported"
 
 
 DOMAIN_TERMS: dict[str, tuple[str, ...]] = {
@@ -33,7 +34,11 @@ DOMAIN_TERMS: dict[str, tuple[str, ...]] = {
     ),
     "catalysis": (
         "catalyst", "catalysis", "electrocatalysis", "overpotential", "tafel slope",
-        "faradaic efficiency", "turnover frequency", "oer", "her", "orr",
+        "faradaic efficiency", "turnover frequency", "oer", "her", "orr", "co2rr", "nrr",
+        "co oxidation", "hydrogenation", "methane conversion", "ammonia synthesis",
+        "ammonia decomposition", "conversion", "product selectivity", "yield", "reactor",
+        "whsv", "ghsv", "time on stream", "adsorption energy", "adsorption free energy",
+        "reaction free energy", "d-band center", "limiting potential", "surface slab",
     ),
     "corrosion": (
         "corrosion", "corrosion rate", "pitting", "icorr", "ecorr", "polarization resistance",
@@ -76,6 +81,27 @@ BATTERY_PAPER_TYPE_TERMS: dict[str, tuple[str, ...]] = {
     "computational_dft": ("density functional theory", "dft", "migration barrier", "formation energy"),
     "battery_dataset_modelling": ("dataset", "data set", "prognostics", "prediction", "machine learning", "model"),
 }
+
+CATALYSIS_PAPER_TYPE_TERMS: dict[str, tuple[str, ...]] = {
+    "catalyst_synthesis": ("impregnation", "calcination", "reduction", "precursor", "catalyst preparation"),
+    "catalyst_characterization": ("xrd", "xps", "bet surface area", "raman", "tem", "sem"),
+    "heterogeneous_catalysis": ("reactor", "conversion", "selectivity", "whsv", "ghsv", "time on stream"),
+    "electrocatalysis": ("electrocatalysis", "overpotential", "tafel slope", "faradaic efficiency", "reference electrode", "rhe"),
+    "kinetics": ("activation energy", "reaction rate", "turnover frequency", "tafel slope"),
+    "stability_deactivation": ("deactivation", "regeneration", "stability", "time on stream", "retention"),
+    "computational_dft": ("density functional theory", "dft", "adsorption energy", "free energy", "d-band center"),
+    "catalyst_dataset_modelling": ("catalyst dataset", "catalysis dataset", "catalyst database", "activity prediction"),
+    "review": ("review", "perspective", "overview"),
+}
+
+_CATALYSIS_DEFERRED_TERMS = ("photocatalysis", "photocatalyst", "homogeneous catalysis", "molecular catalyst", "enzymatic catalysis", "biocatalysis")
+_HETERO_REACTION_TERMS = ("co oxidation", "hydrogenation", "methane conversion", "ammonia synthesis", "ammonia decomposition", "hydrocarbon conversion", "oxidation")
+_HETERO_OPERATION_TERMS = ("reactor", "conversion", "selectivity", "yield", "whsv", "ghsv", "feed composition", "time on stream")
+_ELECTRO_REACTION_TERMS = ("her", "oer", "orr", "co2rr", "nrr", "small molecule oxidation")
+_ELECTRO_OPERATION_TERMS = ("overpotential", "tafel slope", "faradaic efficiency", "reference electrode", "rhe", "ag/agcl", "electrolyte", "current density")
+_DFT_SURFACE_TERMS = ("surface", "slab", "facet", "adsorbate", "intermediate")
+_DFT_METHOD_TERMS = ("density functional theory", "dft", "k points", "functional", "plane wave")
+_DFT_PROPERTY_TERMS = ("adsorption energy", "adsorption free energy", "reaction free energy", "activation barrier", "d-band center", "limiting potential")
 
 MATERIALS_INFORMATICS_TERMS: tuple[str, ...] = (
     "knowledge graph", "named entity recognition", "ner", "bert", "dataset", "data set",
@@ -133,6 +159,44 @@ def classify_battery_paper_types(text: str) -> list[str]:
     return [name for score, name in ranked if score >= 1.0][:5]
 
 
+def classify_catalysis_paper_types(text: str) -> list[str]:
+    ranked: list[tuple[float, str]] = []
+    for paper_type, terms in CATALYSIS_PAPER_TYPE_TERMS.items():
+        score, _ = _matched(text, terms)
+        if score > 0:
+            ranked.append((score, paper_type))
+    ranked.sort(reverse=True)
+    return [name for score, name in ranked if score >= 1.0][:6]
+
+
+def catalysis_scope_status(text: str) -> str:
+    return "deferred_subtype" if any(_count_term(text, term) for term in _CATALYSIS_DEFERRED_TERMS) else "supported"
+
+
+def _catalysis_context_bonus(text: str) -> tuple[float, list[str]]:
+    """Reward bounded focal combinations, never a lone catalyst mention."""
+    catalyst_score, catalyst_hits = _matched(text, ("catalyst", "catalysis", "electrocatalysis"))
+    hetero_reaction, hetero_reaction_hits = _matched(text, _HETERO_REACTION_TERMS)
+    hetero_operation, hetero_operation_hits = _matched(text, _HETERO_OPERATION_TERMS)
+    electro_reaction, electro_reaction_hits = _matched(text, _ELECTRO_REACTION_TERMS)
+    electro_operation, electro_operation_hits = _matched(text, _ELECTRO_OPERATION_TERMS)
+    dft_surface, dft_surface_hits = _matched(text, _DFT_SURFACE_TERMS)
+    dft_method, dft_method_hits = _matched(text, _DFT_METHOD_TERMS)
+    dft_property, dft_property_hits = _matched(text, _DFT_PROPERTY_TERMS)
+    signals: list[str] = []
+    bonus = 0.0
+    if catalyst_score and hetero_reaction and hetero_operation:
+        bonus = max(bonus, 3.5)
+        signals.append("heterogeneous_context")
+    if electro_reaction and electro_operation:
+        bonus = max(bonus, 3.5)
+        signals.append("electrocatalysis_context")
+    if dft_surface and dft_method and dft_property:
+        bonus = max(bonus, 3.5)
+        signals.append("computational_catalysis_context")
+    return bonus, signals
+
+
 class DomainRouter:
     """Fast, deterministic first-pass domain router.
 
@@ -158,7 +222,11 @@ class DomainRouter:
             score, hits = _matched(text, DOMAIN_TERMS.get(domain, ()))
             focal, incidental = _contextual_signals(text, DOMAIN_TERMS.get(domain, ()))
             # Context adjusts, but does not erase, transparent lexical evidence.
-            scores[domain] = max(0.0, score + 0.5 * len(focal) - 0.75 * len(incidental))
+            contextual_bonus = 0.0
+            if domain == "catalysis":
+                contextual_bonus, combination_signals = _catalysis_context_bonus(text)
+                focal = sorted(set([*focal, *combination_signals]))
+            scores[domain] = max(0.0, score + contextual_bonus + 0.5 * len(focal) - 0.75 * len(incidental))
             matched_terms[domain] = hits
             focal_signals[domain] = focal
             incidental_signals[domain] = incidental
@@ -198,7 +266,11 @@ class DomainRouter:
             focal_signals["generic"] = []
             incidental_signals["generic"] = []
             scores["generic"] = informatics_score
-        paper_types = classify_battery_paper_types(text) if selected_domain == "batteries" else []
+        paper_types = (
+            classify_battery_paper_types(text) if selected_domain == "batteries"
+            else classify_catalysis_paper_types(text) if selected_domain == "catalysis"
+            else []
+        )
         return DomainRoute(
             domain=selected_domain,
             confidence=confidence,
@@ -208,4 +280,5 @@ class DomainRouter:
             focal_signals=focal_signals,
             incidental_signals=incidental_signals,
             ambiguity_reason=ambiguity_reason,
+            scope_status=catalysis_scope_status(text) if selected_domain == "catalysis" else "supported",
         )
