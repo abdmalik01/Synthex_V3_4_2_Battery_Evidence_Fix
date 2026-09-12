@@ -1,0 +1,110 @@
+{
+  "source_id": "src-fig",
+  "source_checksum": "8cf29b9717cb49b42183556a0470e01fcd7d743277215843a6a5cbbf6820eac0",
+  "extraction_metadata": {
+    "table_parser": "pymupdf",
+    "text_extraction": "pypdf_then_pymupdf_v1"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-c9a79e853df38132",
+      "source_id": "src-fig",
+      "page": 1,
+      "figure_number": "3",
+      "caption": "Fig. 3. Cycling performance of LFTO samples.",
+      "bbox": {
+        "x0": 78.0,
+        "y0": 140.0,
+        "x1": 425.0,
+        "y1": 245.0
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        }
+      ],
+      "figure_type": "cycling_performance",
+      "axes": [
+        {
+          "role": "x",
+          "raw_label": "Cycle Number",
+          "scale_type": "unknown"
+        },
+        {
+          "role": "y",
+          "raw_label": "Specific Capacity (mAh/g)",
+          "unit": "mAh/g",
+          "scale_type": "unknown"
+        }
+      ],
+      "legend_entries": [
+        {
+          "raw_label": "LFTO-700"
+        }
+      ],
+      "annotations": [
+        {
+          "raw_text": "121.3 mAh/g",
+          "panel": "a",
+          "provenance": {
+            "origin": "figure_annotation",
+            "source_id": "src-fig",
+            "page": 1,
+            "object_id": "fig-c9a79e853df38132",
+            "object_type": "figure",
+            "panel": "a",
+            "parser_or_method": "fake-v1",
+            "raw_text": "121.3 mAh/g",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "sample_material_labels": [
+        "LFTO-700"
+      ],
+      "scientific_meaning": "Capacity is compared across cycling.",
+      "understanding_provider": "fake",
+      "provider_model": "fake-v1",
+      "prompt_schema_version": "figure_understanding_v1",
+      "confidence": 0.8,
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3. Cycling performance of LFTO samples."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fig",
+        "page": 1,
+        "object_id": "fig-c9a79e853df38132",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 78.0,
+          "y0": 140.0,
+          "x1": 425.0,
+          "y1": 245.0
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3. Cycling performance of LFTO samples.",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

@@ -15,6 +15,9 @@ class DomainRoute:
     matched_terms: dict[str, list[str]]
     paper_types: list[str]
     method: str = "lexical_router_v1"
+    focal_signals: dict[str, list[str]] | None = None
+    incidental_signals: dict[str, list[str]] | None = None
+    ambiguity_reason: str | None = None
 
 
 DOMAIN_TERMS: dict[str, tuple[str, ...]] = {
@@ -74,6 +77,15 @@ BATTERY_PAPER_TYPE_TERMS: dict[str, tuple[str, ...]] = {
     "battery_dataset_modelling": ("dataset", "data set", "prognostics", "prediction", "machine learning", "model"),
 }
 
+MATERIALS_INFORMATICS_TERMS: tuple[str, ...] = (
+    "knowledge graph", "named entity recognition", "ner", "bert", "dataset", "data set",
+    "rdf", "sparql", "literature mining", "ontology", "corpus", "database", "triples",
+    "information extraction",
+)
+_INCIDENTAL_CUES = ("for example", "example", "cited", "previously reported", "prior work", "literature example", "review")
+_FOCAL_CUES = ("we synthesized", "we prepared", "we measured", "our experiment", "experimental section", "methods", "reaction conditions", "electrochemical measurement")
+_MIN_SCIENTIFIC_DOMAIN_SCORE = 4.0
+
 
 def _count_term(text: str, term: str) -> int:
     # Phrase-aware count. Short acronyms receive word boundaries to reduce accidental matches.
@@ -93,6 +105,21 @@ def _matched(text: str, terms: Iterable[str]) -> tuple[float, list[str]]:
             # Cap repetition so one repeated term cannot overwhelm all other evidence.
             score += 1.0 + min(n - 1, 4) * 0.25
     return score, hits
+
+
+def _contextual_signals(text: str, terms: Iterable[str]) -> tuple[list[str], list[str]]:
+    focal, incidental = [], []
+    sentences = re.split(r"(?<=[.!?])\s+", text)
+    for sentence in sentences:
+        lowered = sentence.lower()
+        matched = [term for term in terms if _count_term(sentence, term)]
+        if not matched:
+            continue
+        if any(cue in lowered for cue in _INCIDENTAL_CUES):
+            incidental.extend(matched)
+        elif any(cue in lowered for cue in _FOCAL_CUES):
+            focal.extend(matched)
+    return sorted(set(focal)), sorted(set(incidental))
 
 
 def classify_battery_paper_types(text: str) -> list[str]:
@@ -124,11 +151,17 @@ class DomainRouter:
         available = {d["slug"] for d in self.registry.list_domains()}
         scores: dict[str, float] = {}
         matched_terms: dict[str, list[str]] = {}
+        focal_signals: dict[str, list[str]] = {}
+        incidental_signals: dict[str, list[str]] = {}
 
         for domain in sorted(available):
             score, hits = _matched(text, DOMAIN_TERMS.get(domain, ()))
-            scores[domain] = score
+            focal, incidental = _contextual_signals(text, DOMAIN_TERMS.get(domain, ()))
+            # Context adjusts, but does not erase, transparent lexical evidence.
+            scores[domain] = max(0.0, score + 0.5 * len(focal) - 0.75 * len(incidental))
             matched_terms[domain] = hits
+            focal_signals[domain] = focal
+            incidental_signals[domain] = incidental
 
         best_domain = max(scores, key=scores.get)
         best = scores[best_domain]
@@ -145,11 +178,34 @@ class DomainRouter:
         margin = (best - second) / max(best, 1.0)
         confidence = round(max(0.35, min(0.99, 0.55 * breadth + 0.45 * margin)), 3)
 
-        paper_types = classify_battery_paper_types(text) if best_domain == "batteries" else []
+        informatics_score, informatics_hits = _matched(text, MATERIALS_INFORMATICS_TERMS)
+        ambiguity_reason = None
+        selected_domain = best_domain
+        # Multiple independent data/knowledge-graph cues indicate that material names and
+        # scientific domains are often examples rather than the paper's focal experiment.
+        if len(informatics_hits) >= 2:
+            selected_domain = "generic"
+            ambiguity_reason = "materials_informatics_signals"
+        elif best < _MIN_SCIENTIFIC_DOMAIN_SCORE and not focal_signals[best_domain]:
+            selected_domain = "generic"
+            ambiguity_reason = "weak_scientific_domain_evidence"
+        elif margin < 0.25 and not focal_signals[best_domain]:
+            selected_domain = "generic"
+            ambiguity_reason = "conflicting_scientific_domain_evidence"
+
+        if informatics_hits:
+            matched_terms["generic"] = informatics_hits
+            focal_signals["generic"] = []
+            incidental_signals["generic"] = []
+            scores["generic"] = informatics_score
+        paper_types = classify_battery_paper_types(text) if selected_domain == "batteries" else []
         return DomainRoute(
-            domain=best_domain,
+            domain=selected_domain,
             confidence=confidence,
             scores=scores,
             matched_terms=matched_terms,
             paper_types=paper_types,
+            focal_signals=focal_signals,
+            incidental_signals=incidental_signals,
+            ambiguity_reason=ambiguity_reason,
         )

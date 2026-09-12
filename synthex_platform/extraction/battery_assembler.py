@@ -36,9 +36,11 @@ class _AdmissibilityGate:
         self.quarantine: list[dict] = []
 
     def admit(self, *, path: str, property_name: str, raw_value, value, unit,
-              ownership: str, evidence: Iterable[BatteryEvidence]) -> bool:
+              ownership: str, evidence: Iterable[BatteryEvidence], derivation: dict | None = None) -> bool:
         evidence_items = list(evidence)
-        if ownership != "focal_work":
+        if derivation is not None:
+            reason = "derived_value_not_reported"
+        elif ownership != "focal_work":
             reason = f"ownership_{ownership}"
         elif not any(item.verbatim_match is True for item in evidence_items):
             reason = "no_verbatim_evidence"
@@ -54,6 +56,7 @@ class _AdmissibilityGate:
             "ownership": ownership,
             "reason": reason,
             "evidence": [item.model_dump(exclude_none=True) for item in evidence_items],
+            **({"derivation": derivation} if derivation is not None else {}),
         })
         return False
 
@@ -92,6 +95,7 @@ def _ev_one(ev: BatteryEvidence | None, sid: str) -> Evidence | None:
     return Evidence(
         source_id=sid, page=ev.page, section=ev.section, source_type=st,
         original_source_type=ev.original_source_type,
+        table_id=ev.table_id, figure_id=ev.figure_id, locator=ev.locator,
         verbatim_match=ev.verbatim_match,
         text_snippet=ev.text_snippet, confidence=ev.confidence,
     )
@@ -443,6 +447,7 @@ def assemble_battery_archive(
                 unit=point.unit,
                 ownership=ownership,
                 evidence=point.evidence,
+                derivation=point.derivation.model_dump(mode="json") if point.derivation else None,
             ):
                 continue
             q = BatteryQuantity(

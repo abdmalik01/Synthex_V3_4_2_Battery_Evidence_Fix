@@ -14,16 +14,18 @@ from synthex_platform.storage import JsonlArchiveStore
 
 
 def make_archive(domain="batteries"):
+    evidence = Evidence(page=3, text_snippet="The authors measured 150 mAh/g.", confidence=0.95)
     draft = ExtractedDocument(
         source=DraftSource(title="Example source", doi="10.0000/example", year=2026),
-        materials=[DraftMaterial(local_id="material_1", name="Example cathode", formula="LiFePO4", elements=["Li","Fe","P","O"])],
+        materials=[DraftMaterial(local_id="material_1", name="Example cathode", formula="LiFePO4", elements=["Li","Fe","P","O"], ownership="focal_work", evidence=[evidence])],
         experiments=[DraftExperiment(
             local_id="experiment_1",
             experiment_type="galvanostatic cycling",
             material_refs=["material_1"],
             target="Li-ion storage",
             conditions=[Measurement(property="C_rate", raw_value="1 C", value=1.0, unit="C")],
-            outputs=[Measurement(property="specific_capacity", raw_value="150 mAh/g", value=150.0, unit="mAh/g", evidence=[Evidence(page=3, text_snippet="150 mAh/g", confidence=0.95)])],
+            outputs=[Measurement(property="specific_capacity", raw_value="150 mAh/g", value=150.0, unit="mAh/g", evidence=[evidence])],
+            ownership="focal_work", evidence=[evidence],
         )],
         domain_values={"chemistry":"LFP"},
     )

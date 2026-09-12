@@ -116,6 +116,9 @@ class BatteryEvidence(StrictBatteryModel):
     text_snippet: str | None = None
     source_type: Literal["text", "table", "figure_caption", "figure", "supplementary", "unknown"] = "unknown"
     original_source_type: str | None = None
+    table_id: str | None = None
+    figure_id: str | None = None
+    locator: str | None = None
     verbatim_match: bool | None = None
     confidence: float | None = Field(default=None, ge=0, le=1)
 
@@ -478,6 +481,15 @@ class SharedBatteryProtocol(StrictBatteryModel):
     evidence: list[BatteryEvidence] = Field(default_factory=list)
 
 
+class BatteryDerivation(StrictBatteryModel):
+    """Explicit provenance for a value calculated by Synthex, not reported verbatim."""
+
+    reported_property: str
+    reported_raw_value: str
+    reported_value: float | None = None
+    transformation: str
+
+
 class BatteryPerformancePoint(StrictBatteryModel):
     property: str
     raw_value: str | None = None
@@ -489,6 +501,7 @@ class BatteryPerformancePoint(StrictBatteryModel):
     voltage_window: str | None = None
     temperature: BatteryQuantity | None = None
     method: str | None = None
+    derivation: BatteryDerivation | None = None
     ownership: ResultOwnership = "unknown"
     evidence: list[BatteryEvidence] = Field(default_factory=list)
 

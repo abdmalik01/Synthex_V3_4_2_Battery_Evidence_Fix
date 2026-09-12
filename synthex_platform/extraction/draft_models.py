@@ -1,8 +1,13 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 from pydantic import BaseModel, Field
 from synthex_platform.core.models import Evidence, Measurement
+
+GenericOwnership = Literal[
+    "focal_work", "cited_prior_work", "review_summary", "comparison_table",
+    "background", "example", "unknown",
+]
 
 
 class DraftSource(BaseModel):
@@ -24,6 +29,8 @@ class DraftMaterial(BaseModel):
     defects: list[dict[str, Any]] = Field(default_factory=list)
     dopants: list[dict[str, Any]] = Field(default_factory=list)
     tags: list[str] = Field(default_factory=list)
+    ownership: GenericOwnership = "unknown"
+    evidence: list[Evidence] = Field(default_factory=list)
 
 
 class DraftProcess(BaseModel):
@@ -35,6 +42,7 @@ class DraftProcess(BaseModel):
     atmosphere: str | None = None
     equipment: str | None = None
     evidence: list[Evidence] = Field(default_factory=list)
+    ownership: GenericOwnership = "unknown"
 
 
 class DraftExperiment(BaseModel):
@@ -46,6 +54,7 @@ class DraftExperiment(BaseModel):
     outputs: list[Measurement] = Field(default_factory=list)
     protocol: str | None = None
     evidence: list[Evidence] = Field(default_factory=list)
+    ownership: GenericOwnership = "unknown"
 
 
 class DraftCalculation(BaseModel):
@@ -59,6 +68,7 @@ class DraftCalculation(BaseModel):
     parameters: list[Measurement] = Field(default_factory=list)
     outputs: list[Measurement] = Field(default_factory=list)
     evidence: list[Evidence] = Field(default_factory=list)
+    ownership: GenericOwnership = "unknown"
 
 
 class ExtractedDocument(BaseModel):

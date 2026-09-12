@@ -1,0 +1,1260 @@
+{
+  "source_id": "src-fd7893e6c3ced119",
+  "source_checksum": "266b1c1165938dd68d5ad4129525ddda99cb284ec441ff372d2665030196855d",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-fd7893e6c3ced119",
+    "filename": "Predicting-battery-performance-with-small-datasets (1).pdf",
+    "source_checksum": "266b1c1165938dd68d5ad4129525ddda99cb284ec441ff372d2665030196855d",
+    "primary_native_parser": "pymupdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pymupdf",
+        "parser": "pymupdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf",
+          "pymupdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 25,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "data\\archive\\visual\\src-fd7893e6c3ced119\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 2,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 3,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 4,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 5,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 6,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 7,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 8,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 9,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 10,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 11,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 12,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 13,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 14,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    },
+    {
+      "page": 15,
+      "text_parser": "pymupdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": [
+        "pypdf_error:PdfReadError"
+      ]
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-09b7f07337290d5b",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 1,
+      "bbox": {
+        "x0": 55.162200927734375,
+        "y0": 194.51300048828125,
+        "x1": 340.83819580078125,
+        "y1": 480.18902587890625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 1,
+        "object_id": "fig-09b7f07337290d5b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 55.162200927734375,
+          "y0": 194.51300048828125,
+          "x1": 340.83819580078125,
+          "y1": 480.18902587890625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ee0699bdfe7a6443",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 1,
+      "bbox": {
+        "x0": 53.18730163574219,
+        "y0": 708.5450439453125,
+        "x1": 69.0552978515625,
+        "y1": 724.4130249023438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 1,
+        "object_id": "fig-ee0699bdfe7a6443",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.18730163574219,
+          "y0": 708.5450439453125,
+          "x1": 69.0552978515625,
+          "y1": 724.4130249023438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-9ec49791b07425f5",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 1,
+      "bbox": {
+        "x0": 53.10089874267578,
+        "y0": 43.31300735473633,
+        "x1": 543.2002563476562,
+        "y1": 734.09033203125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 1,
+        "object_id": "fig-9ec49791b07425f5",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.10089874267578,
+          "y0": 43.31300735473633,
+          "x1": 543.2002563476562,
+          "y1": 734.09033203125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-708e85967500000a",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 2,
+      "bbox": {
+        "x0": 53.18730163574219,
+        "y0": 750.7245483398438,
+        "x1": 69.0552978515625,
+        "y1": 766.592529296875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 2,
+        "object_id": "fig-708e85967500000a",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.18730163574219,
+          "y0": 750.7245483398438,
+          "x1": 69.0552978515625,
+          "y1": 766.592529296875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-cef3aa978b515a09",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 2,
+      "bbox": {
+        "x0": 53.121299743652344,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 766.5924072265625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 2,
+        "object_id": "fig-cef3aa978b515a09",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.121299743652344,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 766.5924072265625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-422f1799da39de37",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 3,
+      "bbox": {
+        "x0": 95.24298095703125,
+        "y0": 107.08793640136719,
+        "x1": 307.41412353515625,
+        "y1": 279.09912109375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 3,
+        "object_id": "fig-422f1799da39de37",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 95.24298095703125,
+          "y0": 107.08793640136719,
+          "x1": 307.41412353515625,
+          "y1": 279.09912109375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-05fcb21fab75693b",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 3,
+      "bbox": {
+        "x0": 182.35629272460938,
+        "y0": 291.8490295410156,
+        "x1": 186.3782958984375,
+        "y1": 372.36102294921875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 3,
+        "object_id": "fig-05fcb21fab75693b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 182.35629272460938,
+          "y0": 291.8490295410156,
+          "x1": 186.3782958984375,
+          "y1": 372.36102294921875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a69da73746bb393b",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 3,
+      "bbox": {
+        "x0": 352.34130859375,
+        "y0": 293.4510498046875,
+        "x1": 356.3143005371094,
+        "y1": 372.9530334472656
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 3,
+        "object_id": "fig-a69da73746bb393b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 352.34130859375,
+          "y0": 293.4510498046875,
+          "x1": 356.3143005371094,
+          "y1": 372.9530334472656
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f3fe0a0a9210c36a",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 3,
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 392.71282958984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 3,
+        "object_id": "fig-f3fe0a0a9210c36a",
+        "object_type": "figure",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 392.71282958984375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-cf05941189f9942e",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 4,
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 4,
+        "object_id": "fig-cf05941189f9942e",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-0c6bc5c47cc8cb86",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 5,
+      "figure_number": "2",
+      "caption": "Figure 2. Representative EIS data and modeling results Top: impedance spectra of a representative SSB cell, EIS measured at 0% SOC, cell cycled with 0.1 C, with marked impedance data points in the low-, middle-, and high-frequency range over a number of different cycles. Lower left: measured and diagnosed relative discharged capacity using Gaussian process regression (GPR), with DRT instructed feature engineering, data divided into training, cross validation (CV), and test sets. Lower right: measured and predicted relative discharged capacity after next 10 cycles using Bayesian regression (BR), with DRT instructed feature engineering, data divided into training, CV, and test sets.",
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 408.1322326660156
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. Representative EIS data and modeling results Top: impedance spectra of a representative SSB cell, EIS measured at 0% SOC, cell cycled with 0.1 C, with marked impedance data points in the low-, middle-, and high-frequency range over a number of different cycles. Lower left: measured and diagnosed relative discharged capacity using Gaussian process regression (GPR), with DRT instructed feature engineering, data divided into training, cross validation (CV), and test sets. Lower right: measured and predicted relative discharged capacity after next 10 cycles using Bayesian regression (BR), with DRT instructed feature engineering, data divided into training, CV, and test sets."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 5,
+        "object_id": "fig-0c6bc5c47cc8cb86",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 408.1322326660156
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. Representative EIS data and modeling results Top: impedance spectra of a representative SSB cell, EIS measured at 0% SOC, cell cycled with 0.1 C, with marked impedance data points in the low-, middle-, and high-frequency range over a number of different cycles. Lower left: measured and diagnosed relative discharged capacity using Gaussian process regression (GPR), with DRT instructed feature engineering, data divided into training, cross validation (CV), and test sets. Lower right: measured and predicted relative discharged capacity after next 10 cycles using Bayesian regression (BR), with DRT instructed feature engineering, data divided into training, CV, and test sets.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4f08a0ae292c4636",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 6,
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 213.90301513671875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 6,
+        "object_id": "fig-4f08a0ae292c4636",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 213.90301513671875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-95cb47ac5ecba214",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 7,
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 7,
+        "object_id": "fig-95cb47ac5ecba214",
+        "object_type": "figure",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a0fc4ba22c5d5161",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 8,
+      "figure_number": "5",
+      "caption": "Figure 5. ML model results with feature reduction based on DRT analysis MAE of training, CV, and test datasets in BR, NN, GPR, and DT for SSB data obtained at 0.1 to 1 C, up to 100 cycles for diagnostic models (left) and prediction models (right).",
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 693.1276245117188
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 5. ML model results with feature reduction based on DRT analysis MAE of training, CV, and test datasets in BR, NN, GPR, and DT for SSB data obtained at 0.1 to 1 C, up to 100 cycles for diagnostic models (left) and prediction models (right)."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 8,
+        "object_id": "fig-a0fc4ba22c5d5161",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 693.1276245117188
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 5. ML model results with feature reduction based on DRT analysis MAE of training, CV, and test datasets in BR, NN, GPR, and DT for SSB data obtained at 0.1 to 1 C, up to 100 cycles for diagnostic models (left) and prediction models (right).",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-50d6664959d1f3ac",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 9,
+      "bbox": {
+        "x0": 59.75429916381836,
+        "y0": 101.70703125,
+        "x1": 382.8472900390625,
+        "y1": 313.7950134277344
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 9,
+        "object_id": "fig-50d6664959d1f3ac",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 59.75429916381836,
+          "y0": 101.70703125,
+          "x1": 382.8472900390625,
+          "y1": 313.7950134277344
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2350e74184dd2538",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 9,
+      "figure_number": "6",
+      "caption": "Figure 6. 3D rendered images of two TDK CeraCharge SSB from CT measurements Both cells were cycled at 0.1 C, while the imped­ ance of cell-01 is shown in Figure 2 (top). The LCT machine produced grayscale images with 4.8 μm resolution, and the blue-green zones were pro­ duced with 1 μm resolution and then used for further evaluation. The blue-green zone of (D) has a resolution of 0.72 μm taken from the SCT data­ set. (A) and (B) are used for qualitative evaluation, whereas (C) and (D) are used for quantitative evaluation.",
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. 3D rendered images of two TDK CeraCharge SSB from CT measurements Both cells were cycled at 0.1 C, while the imped­ ance of cell-01 is shown in Figure 2 (top). The LCT machine produced grayscale images with 4.8 μm resolution, and the blue-green zones were pro­ duced with 1 μm resolution and then used for further evaluation. The blue-green zone of (D) has a resolution of 0.72 μm taken from the SCT data­ set. (A) and (B) are used for qualitative evaluation, whereas (C) and (D) are used for quantitative evaluation."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 9,
+        "object_id": "fig-2350e74184dd2538",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. 3D rendered images of two TDK CeraCharge SSB from CT measurements Both cells were cycled at 0.1 C, while the imped­ ance of cell-01 is shown in Figure 2 (top). The LCT machine produced grayscale images with 4.8 μm resolution, and the blue-green zones were pro­ duced with 1 μm resolution and then used for further evaluation. The blue-green zone of (D) has a resolution of 0.72 μm taken from the SCT data­ set. (A) and (B) are used for qualitative evaluation, whereas (C) and (D) are used for quantitative evaluation.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a9902d1d5e7b1ceb",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 10,
+      "figure_number": "8",
+      "caption": "Figure 8. CT images of pristine and cycled cell-02 The cell was scanned at a fully discharged state at the corresponding slices with a 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions.",
+      "bbox": {
+        "x0": 88.3843002319336,
+        "y0": 463.8620300292969,
+        "x1": 507.96832275390625,
+        "y1": 693.071044921875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 8. CT images of pristine and cycled cell-02 The cell was scanned at a fully discharged state at the corresponding slices with a 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 10,
+        "object_id": "fig-a9902d1d5e7b1ceb",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 88.3843002319336,
+          "y0": 463.8620300292969,
+          "x1": 507.96832275390625,
+          "y1": 693.071044921875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 8. CT images of pristine and cycled cell-02 The cell was scanned at a fully discharged state at the corresponding slices with a 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ca5ba58ca6f64aa0",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 10,
+      "figure_number": "7",
+      "caption": "Figure 7. CT images of a pristine and a cycled cell-01 The cell was scanned at a fully discharged state at the corresponding slices with 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions.",
+      "bbox": {
+        "x0": 88.95120239257812,
+        "y0": 101.59405517578125,
+        "x1": 507.4012145996094,
+        "y1": 337.2660217285156
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 7. CT images of a pristine and a cycled cell-01 The cell was scanned at a fully discharged state at the corresponding slices with 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 10,
+        "object_id": "fig-ca5ba58ca6f64aa0",
+        "object_type": "figure",
+        "table_or_figure_number": "7",
+        "bbox": {
+          "x0": 88.95120239257812,
+          "y0": 101.59405517578125,
+          "x1": 507.4012145996094,
+          "y1": 337.2660217285156
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 7. CT images of a pristine and a cycled cell-01 The cell was scanned at a fully discharged state at the corresponding slices with 4.8 μm voxel size. The cycle process was carried out under 0.1 C and 100 cycles. The red (XZ plane), blue (YZ plane), and green (XY plane) slices are displayed on the top, middle, and bottom regions.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7b5e4bfe484e1dda",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 10,
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 10,
+        "object_id": "fig-7b5e4bfe484e1dda",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a31e221082f6d154",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 11,
+      "figure_number": "9",
+      "caption": "Figure 9. Result of DVC analysis that uses both the before and after cycling image dataset to reveal how much strain was induced by cycling Deviatoric strain results are shown in a white-red color map (left), and the displacement magnitude in blue-green-red (right) color maps of the quiver plot. Left: cell- 01; right: cell-02.",
+      "bbox": {
+        "x0": 95.64089965820312,
+        "y0": 101.59405517578125,
+        "x1": 514.0909423828125,
+        "y1": 255.91204833984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 9. Result of DVC analysis that uses both the before and after cycling image dataset to reveal how much strain was induced by cycling Deviatoric strain results are shown in a white-red color map (left), and the displacement magnitude in blue-green-red (right) color maps of the quiver plot. Left: cell- 01; right: cell-02."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 11,
+        "object_id": "fig-a31e221082f6d154",
+        "object_type": "figure",
+        "table_or_figure_number": "9",
+        "bbox": {
+          "x0": 95.64089965820312,
+          "y0": 101.59405517578125,
+          "x1": 514.0909423828125,
+          "y1": 255.91204833984375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 9. Result of DVC analysis that uses both the before and after cycling image dataset to reveal how much strain was induced by cycling Deviatoric strain results are shown in a white-red color map (left), and the displacement magnitude in blue-green-red (right) color maps of the quiver plot. Left: cell- 01; right: cell-02.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-071cc864a0d70592",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 11,
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 11,
+        "object_id": "fig-071cc864a0d70592",
+        "object_type": "figure",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-62cbbd333e2394f2",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 12,
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 12,
+        "object_id": "fig-62cbbd333e2394f2",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-92f79cfa403d00aa",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 13,
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 397.87103271484375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 13,
+        "object_id": "fig-92f79cfa403d00aa",
+        "object_type": "figure",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 397.87103271484375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-6823bce3a49aa861",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 14,
+      "bbox": {
+        "x0": 53.12129211425781,
+        "y0": 41.843017578125,
+        "x1": 614.9940185546875,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 14,
+        "object_id": "fig-6823bce3a49aa861",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 53.12129211425781,
+          "y0": 41.843017578125,
+          "x1": 614.9940185546875,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-144d1e151bd1b8c1",
+      "source_id": "src-fd7893e6c3ced119",
+      "page": 15,
+      "bbox": {
+        "x0": -11.955100059509277,
+        "y0": 41.843017578125,
+        "x1": 549.9819946289062,
+        "y1": 75.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-fd7893e6c3ced119",
+        "page": 15,
+        "object_id": "fig-144d1e151bd1b8c1",
+        "object_type": "figure",
+        "bbox": {
+          "x0": -11.955100059509277,
+          "y0": 41.843017578125,
+          "x1": 549.9819946289062,
+          "y1": 75.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

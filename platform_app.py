@@ -15,7 +15,6 @@ from synthex_platform.visual.analytics import AnalyticQuery, build_visualization
 from synthex_platform.visual.analytics.render import VisualizationRenderer
 from synthex_platform.visual.digitization import AxisCalibration, DigitizationRequest, PlotArea, SeriesSelection, digitize_plot
 from synthex_platform.visual.digitization.models import PixelBoundingBox
-from synthex_v2.pdf_utils_v2 import extract_pages, pages_to_marked_text
 
 st.set_page_config(page_title="Synthex V3.4", page_icon="🧬", layout="wide")
 registry = DomainRegistry()
@@ -59,24 +58,32 @@ if page == "Extract Paper":
     uploaded = st.file_uploader("Upload PDF", type=["pdf"])
 
     if uploaded:
-        # Parse the current upload on every rerun; keep the much larger extracted archive in session state.
+        pipeline = SynthexExtractionPipeline(
+            router=router,
+            search_assisted=search_assisted,
+            find_supplementary=find_supplementary,
+        )
+        # Build one reusable source bundle; extraction consumes this same object.
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
             tmp.write(uploaded.getbuffer())
             tmp_path = Path(tmp.name)
         try:
-            pages = extract_pages(str(tmp_path))
-            text = pages_to_marked_text(pages)
+            source_bundle = pipeline.build_source_bundle(tmp_path, source_filename=uploaded.name)
         finally:
             tmp_path.unlink(missing_ok=True)
+        text = source_bundle.page_marked_text()
 
         if chosen_label == "Auto Detect":
             try:
                 preview_route = router.route_text(text)
-                st.success(f"Detected domain: {registry.get(preview_route.domain)['name']} · routing confidence {preview_route.confidence:.2f}")
+                route_name = "Generic / uncertain materials" if preview_route.domain == "generic" else registry.get(preview_route.domain)["name"]
+                st.success(f"Detected domain: {route_name} · routing confidence {preview_route.confidence:.2f}")
+                if preview_route.ambiguity_reason:
+                    st.info(f"Safe fallback selected: {preview_route.ambiguity_reason.replace('_', ' ')}.")
                 if preview_route.paper_types:
                     st.write("Detected paper types:", preview_route.paper_types)
                 with st.expander("Routing evidence"):
-                    st.json({"scores": preview_route.scores, "matched_terms": preview_route.matched_terms, "method": preview_route.method})
+                    st.json({"scores": preview_route.scores, "matched_terms": preview_route.matched_terms, "focal_signals": preview_route.focal_signals, "incidental_signals": preview_route.incidental_signals, "ambiguity_reason": preview_route.ambiguity_reason, "method": preview_route.method})
             except Exception as exc:
                 preview_route = None
                 st.warning(f"Auto-routing could not decide: {exc}. Select a domain manually.")
@@ -86,12 +93,7 @@ if page == "Extract Paper":
         if st.button("Extract research record", type="primary"):
             domain = "auto" if chosen_label == "Auto Detect" else options[chosen_label]
             with st.spinner("Extracting structured scientific record with Gemini..."):
-                pipeline = SynthexExtractionPipeline(
-                    router=router,
-                    search_assisted=search_assisted,
-                    find_supplementary=find_supplementary,
-                )
-                resolved_route, archive = pipeline.extract_text(text, domain=domain)
+                resolved_route, archive = pipeline.extract_source_bundle(source_bundle, domain=domain)
             st.session_state["synthex_last_archive"] = archive.model_dump(exclude_none=True)
             st.session_state["synthex_last_route"] = resolved_route.domain
 

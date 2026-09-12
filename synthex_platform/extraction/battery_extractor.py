@@ -15,10 +15,10 @@ except ImportError:
     genai = None
     errors = None
 
-from synthex_v2.pdf_utils_v2 import extract_pages, pages_to_marked_text
 from .battery_models import BatteryDocument
 from .battery_evidence import verify_battery_evidence
 from .battery_postprocess import deduplicate_shared_protocols, apply_scientific_guardrails
+from .source_context import SourceBundle, build_source_bundle, compact_source_context, has_prompt_source_context
 
 load_dotenv(override=True)
 
@@ -84,7 +84,18 @@ Core rules:
 24. Represent a disputed condition in condition_conflicts as {field,status:"conflicted",reported_values:[{value,evidence:[]}],resolved_value:null}. Keep at least two reported values with their own evidence. Do not also assign one disputed value to the affected performance point.
 25. For DFT/first-principles values, preserve the computational method in performance_points.method and use computational_dft in paper_types. Ownership still determines whether the calculation belongs to the focal work or cited literature.
 26. Never invent ownership, evidence, or a conflict resolution.
-27. Return JSON only.
+27. When STRUCTURED SOURCE CONTEXT is supplied, use relevant table headers and cells together; do not classify
+    an enzyme/biocatalyst as electrolyte unless the source explicitly assigns that battery role.
+28. Preserve visual provenance. For a table cell, copy table_id and use locator="row=<row>;column=<column>;cell_id=<cell_id>".
+    Use original_source_type="table_reported" for tables, "native_text" for native prose, and "ocr_extracted"
+    for OCR. Never silently correct OCR text. Figure digitizations are estimated and outside canonical admission;
+    do not create performance points from digitization references.
+29. Preserve approximate qualifiers such as about, approximately and ~ as qualifier="approx".
+    Distinguish areal capacity (for example mAh/cm2 or mAh cm-2) from specific capacity (mAh/g or mAh g-1).
+30. If retaining capacity retention calculated from a reported loss, mark it with derivation
+    {reported_property:"capacity_loss",reported_raw_value,reported_value,transformation:"100 - loss"}.
+    Never represent the derived retention as author-reported evidence or canonically admit it.
+31. Return JSON only.
 """
 
 OUTPUT_SHAPE = """
@@ -111,12 +122,13 @@ shared_protocols [{protocol_id,name,ownership,
 battery_groups [{group_id,ownership,battery_ids[],material_ref,variant_label,chemistry,cathode,anode,electrolyte,cell_format,
   temperature,calcination_temperature,protocol_refs[],condition_conflicts:[{field,status,reported_values:[{value,evidence:[]}],resolved_value}],charge_protocol,discharge_protocol,impedance_protocol,
   electrochemical_testing,electrode_fabrication,cell_assembly,measured_variables[],
-  performance_points:[{property,raw_value,value,unit,qualifier,cycle,c_rate,voltage_window,temperature,method,ownership,evidence:[]}],
+  performance_points:[{property,raw_value,value,unit,qualifier,cycle,c_rate,voltage_window,temperature,method,
+    derivation:{reported_property,reported_raw_value,reported_value,transformation} or null,ownership,evidence:[]}],
   qualitative_findings[],evidence:[]}]
 extraction_notes []
 
 All quantity fields should preferably be objects: {raw_value,value,unit,qualifier}.
-Evidence must be {page,section,text_snippet,source_type,confidence}; source_type is text, table, figure_caption, figure, supplementary, or unknown.
+Evidence may be {page,section,text_snippet,source_type,original_source_type,table_id,figure_id,locator,confidence}; source_type is text, table, figure_caption, figure, supplementary, or unknown.
 Material role must be one of cathode, anode, active_material, electrolyte, separator, additive, other, unknown.
 """
 
@@ -131,16 +143,32 @@ class BatteryGeminiExtractor:
         self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
         self.client = genai.Client(api_key=self.api_key)
 
-    def build_prompt(self, text: str) -> str:
-        return f"{BATTERY_RULES}\n{OUTPUT_SHAPE}\n\nSOURCE TEXT:\n{text}"
+    def build_prompt(self, text: str, source_bundle: SourceBundle | None = None) -> str:
+        structured = ""
+        if source_bundle is not None and has_prompt_source_context(source_bundle):
+            battery_spec = {
+                "name": "Batteries", "process_vocabulary": [
+                    "capacity", "retention", "coulombic efficiency", "electrolyte",
+                    "electrode", "cycle", "impedance", "enzyme", "biocatalyst",
+                ],
+                "properties": [
+                    "specific_capacity", "areal_capacity", "capacity_retention",
+                    "capacity_loss", "charge_transfer_resistance",
+                ],
+            }
+            structured = (
+                "\n\nSTRUCTURED SOURCE CONTEXT (bounded, loss-aware JSON):\n"
+                f"{compact_source_context(source_bundle, battery_spec)}"
+            )
+        return f"{BATTERY_RULES}\n{OUTPUT_SHAPE}\n\nSOURCE TEXT:\n{text}{structured}"
 
-    def extract_text(self, text: str) -> BatteryDocument:
+    def extract_text(self, text: str, source_bundle: SourceBundle | None = None) -> BatteryDocument:
         response = None
         for attempt in range(MAX_GEMINI_ATTEMPTS):
             try:
                 response = self.client.models.generate_content(
                     model=self.model,
-                    contents=self.build_prompt(text),
+                    contents=self.build_prompt(text, source_bundle=source_bundle),
                     config={
                         "response_mime_type": "application/json",
                         "temperature": GEMINI_TEMPERATURE,
@@ -174,9 +202,9 @@ class BatteryGeminiExtractor:
         return verify_battery_evidence(result, text)
 
     def extract_pdf(self, pdf_path: str | Path) -> BatteryDocument:
-        pages = extract_pages(str(pdf_path))
-        doc = self.extract_text(pages_to_marked_text(pages))
-        parser = pages[0].get("parser") if pages else None
+        bundle = build_source_bundle(pdf_path)
+        doc = self.extract_text(bundle.page_marked_text(), source_bundle=bundle)
+        parser = bundle.primary_native_parser()
         doc._pdf_parser = parser
         doc.source.pdf_text_parser = parser
         return doc
