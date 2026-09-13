@@ -6,6 +6,7 @@ Synthex is being developed toward a materials-intelligence platform that links l
 
 - Gas sensing: live structured extraction, normalization, validation and visualization foundation.
 - Batteries: live domain routing and dedicated extraction, now expanded for true electrode-materials papers.
+- Paper Discovery V1: live primary-platform Serper discovery workspace with cached/budgeted search, explicit unverified discovery candidates and session-only saved bibliography leads. Discovery requires a later real-PDF upload before SourceBundle-based scientific extraction.
 - **Visual Intelligence V1 — COMPLETE:** native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, OCR fallback, and calibrated graph digitization.
 
 ## Visual Intelligence V1 scientific guarantees
@@ -60,3 +61,10 @@ Catalysis/electrocatalysis, corrosion, mechanical/creep/fatigue, additive manufa
 - Added retrieval provenance as a dedicated `retrieval` domain payload.
 - Benchmark scripts remain paper-only with Serper disabled to prevent answer leakage.
 - Added tests for caching, conservative metadata enrichment, and non-overwrite behavior.
+
+## Paper Discovery V1 boundary
+
+- **Discover Papers** is a researcher workflow for finding and opening paper links; it is not an extraction workflow.
+- Search snippets, titles, URLs and saved discovery metadata are never canonical scientific evidence and cannot create archive records, `SourceBundle`s, materials, experiments, measurements or calculations.
+- The researcher must obtain and upload the actual PDF. Its `SourceBundle`, routing, extraction, evidence verification, admission and quarantine controls remain authoritative.
+- Arbitrary server-side result-URL downloads are deliberately unsupported because of SSRF, redirect, content-size, publisher-access, licensing and provenance risks.

@@ -20,6 +20,20 @@ streamlit run platform_app.py
 
 Use **Extract Paper → Auto Detect** to route an uploaded PDF. Battery papers are sent to the dedicated Batteries V1 extractor.
 
+## Paper discovery → PDF extraction boundary
+
+Use **Discover Papers** in `platform_app.py` to search with Serper, open a result externally, and optionally save its unverified bibliographic metadata for a later upload. Discovery results contain navigation metadata only: title, URL, provider snippet, cache/query provenance and a DOI only when it is directly present in a DOI URL.
+
+```text
+Discover Papers
+    → discovery only; search snippets are never scientific evidence
+
+Upload PDF
+    → SourceBundle → extraction → evidence verification → admission/quarantine
+```
+
+Synthex never fetches arbitrary result URLs server-side and never creates an archive, `SourceBundle`, material, measurement, or experiment from a title, URL, or search snippet. An actual uploaded PDF remains authoritative.
+
 ## Quick routing test — no Gemini request
 
 ```bash
@@ -101,3 +115,5 @@ streamlit run platform_app.py
 ```
 
 Then enable **Search-assisted enrichment with Serper** only when you want metadata/supplementary discovery.
+
+**Discover Papers** is the separate researcher-facing search workflow. It preserves results in the current Streamlit session until a new search or explicit clear action. Saved discovery candidates remain session-only bibliography leads and are not canonical archive data.

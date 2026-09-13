@@ -9,7 +9,19 @@ import streamlit as st
 from synthex_platform.benchmarks import benchmark_matrix
 from synthex_platform.core.registry import DomainRegistry
 from synthex_platform.extraction import DomainRouter, SynthexExtractionPipeline
+from synthex_platform.extraction.domain_extractor import StructuredExtractionValidationError
 from synthex_platform.graph import export_graph
+from synthex_platform.retrieval import DiscoveryError, discover_papers
+from synthex_platform.retrieval.discovery import (
+    clear_discovery_results,
+    clear_saved_discovery_candidates,
+    current_discovery_results,
+    initialize_discovery_state,
+    remove_discovery_candidate,
+    save_discovery_candidate,
+    saved_discovery_candidates,
+    store_discovery_results,
+)
 from synthex_platform.storage import JsonlArchiveStore
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
 from synthex_platform.visual.analytics.render import VisualizationRenderer
@@ -20,6 +32,7 @@ st.set_page_config(page_title="Synthex V3.4", page_icon="🧬", layout="wide")
 registry = DomainRegistry()
 store = JsonlArchiveStore("data/archive/archives.jsonl")
 router = DomainRouter(registry)
+initialize_discovery_state(st.session_state)
 
 st.title("Synthex V3.4 · Materials Intelligence Platform")
 st.caption("Literature-derived experimental + computational materials data, with domain routing, provenance and benchmark-ready schemas.")
@@ -30,11 +43,112 @@ c2.metric("Archive entries", store.count())
 c3.metric("Benchmark tasks", sum(len(v) for v in benchmark_matrix(registry).values()))
 c4.metric("Schema", "3.4.0")
 
-page = st.sidebar.radio("Workspace", ["Extract Paper", "Battery Validation", "Domain Registry", "Benchmark Catalog", "Visual Explorer", "Digitized Figures", "Archive Explorer", "Knowledge Graph", "Gas Sensing V2"])
+page = st.sidebar.radio("Workspace", ["Discover Papers", "Extract Paper", "Battery Validation", "Domain Registry", "Benchmark Catalog", "Visual Explorer", "Digitized Figures", "Archive Explorer", "Knowledge Graph", "Gas Sensing V2"])
 
-if page == "Extract Paper":
+if page == "Discover Papers":
+    st.subheader("Discover materials-science papers")
+    st.caption("Discovery results are navigation metadata only. Search snippets never become scientific evidence or canonical archive data.")
+
+    with st.form("paper_discovery_form", border=False):
+        research_query = st.text_input(
+            "Research query",
+            placeholder="e.g. NiFe LDH OER catalyst, ZnO NiO gas sensing, LiFePO4 cathode synthesis",
+            key="synthex_discovery_query_input",
+        )
+        focus_label = st.selectbox(
+            "Optional focus",
+            ["No added focus", "Materials science", "Battery materials", "Catalysis and electrocatalysis", "Gas sensing"],
+            key="synthex_discovery_focus",
+        )
+        number_of_results = st.number_input(
+            "Results", min_value=1, max_value=10, value=5, step=1, key="synthex_discovery_num_results",
+        )
+        submitted = st.form_submit_button("Search papers", type="primary", icon=":material/search:")
+
+    if submitted:
+        focus = None if focus_label == "No added focus" else focus_label
+        try:
+            with st.spinner("Searching paper discovery index..."):
+                result = discover_papers(research_query, focus=focus, num_results=int(number_of_results))
+            store_discovery_results(st.session_state, result)
+        except DiscoveryError as exc:
+            st.error(str(exc))
+
+    controls_left, controls_right = st.columns([1, 3])
+    with controls_left:
+        if st.button("Clear search results", icon=":material/clear_all:", key="synthex_clear_discovery_results"):
+            clear_discovery_results(st.session_state)
+    with controls_right:
+        st.caption("Clearing results keeps any papers you explicitly saved for a later PDF upload.")
+
+    result = current_discovery_results(st.session_state)
+    if result:
+        usage = result.usage
+        cache_label = "cache hit" if result.cache_hit else "network query"
+        st.caption(
+            f"Query: {result.query} · {cache_label} · "
+            f"local network queries: {usage.get('network_queries', 0)} · "
+            f"remaining local budget: {usage.get('remaining_local_budget', 0)}"
+        )
+        if not result.candidates:
+            st.info("No usable paper links were returned. Try a more specific materials-science query.")
+        else:
+            st.subheader("Discovery results")
+            for candidate in result.candidates:
+                with st.container(border=True):
+                    st.subheader(candidate.title)
+                    st.caption("Discovery result — not yet scientifically verified")
+                    if candidate.snippet:
+                        st.write(candidate.snippet)
+                    if candidate.doi:
+                        st.caption(f"DOI from direct DOI URL: {candidate.doi}")
+                    st.caption(
+                        f"Provider: {candidate.provider} · "
+                        f"{'cache hit' if candidate.cache_hit else 'network query'} · "
+                        f"recorded {candidate.retrieved_at.isoformat()}"
+                    )
+                    actions_left, actions_right = st.columns([1, 1])
+                    with actions_left:
+                        st.link_button("Open paper link", candidate.url, icon=":material/open_in_new:")
+                    with actions_right:
+                        already_saved = any(item.candidate_id == candidate.candidate_id for item in saved_discovery_candidates(st.session_state))
+                        if st.button(
+                            "Saved for extraction" if already_saved else "Save for extraction",
+                            key=f"synthex_save_discovery_{candidate.candidate_id}",
+                            disabled=already_saved,
+                            icon=":material/bookmark_add:",
+                        ):
+                            save_discovery_candidate(st.session_state, candidate)
+                            st.success("Saved as unverified candidate bibliography. Upload the actual PDF before extraction.")
+
+    saved_candidates = saved_discovery_candidates(st.session_state)
+    if saved_candidates:
+        st.subheader("Saved for PDF upload")
+        st.caption("Saved candidates are not archive records, SourceBundles, or scientific claims.")
+        for candidate in saved_candidates:
+            saved_left, saved_right = st.columns([4, 1])
+            with saved_left:
+                st.write(candidate.title)
+                st.link_button("Open paper link", candidate.url, key=f"synthex_saved_link_{candidate.candidate_id}", icon=":material/open_in_new:")
+            with saved_right:
+                if st.button("Remove", key=f"synthex_remove_discovery_{candidate.candidate_id}", icon=":material/bookmark_remove:"):
+                    remove_discovery_candidate(st.session_state, candidate.candidate_id)
+        if st.button("Clear saved candidates", icon=":material/delete_sweep:"):
+            clear_saved_discovery_candidates(st.session_state)
+
+elif page == "Extract Paper":
     st.subheader("Route and extract a materials-science paper")
     st.caption("Auto Detect first classifies the scientific domain. Batteries use the V1.2 extractor with synthesis, electrode fabrication, cell assembly, shared protocols and performance records; other domains use the manifest-driven generic extractor.")
+
+    saved_candidates = saved_discovery_candidates(st.session_state)
+    if saved_candidates:
+        st.info("Saved discovery candidates are optional bibliography leads only. Upload the actual PDF below; candidate metadata is not applied automatically and cannot create scientific evidence.")
+        with st.expander("Saved discovery candidates"):
+            for candidate in saved_candidates:
+                st.write(candidate.title)
+                st.link_button("Open paper link", candidate.url, key=f"synthex_extract_saved_link_{candidate.candidate_id}", icon=":material/open_in_new:")
+                if candidate.doi:
+                    st.caption(f"Direct DOI URL: {candidate.doi}")
 
     options = {d["name"]: d["slug"] for d in registry.list_domains()}
     domain_labels = ["Auto Detect"] + list(options)
@@ -92,10 +206,20 @@ if page == "Extract Paper":
 
         if st.button("Extract research record", type="primary"):
             domain = "auto" if chosen_label == "Auto Detect" else options[chosen_label]
-            with st.spinner("Extracting structured scientific record with Gemini..."):
-                resolved_route, archive = pipeline.extract_source_bundle(source_bundle, domain=domain)
-            st.session_state["synthex_last_archive"] = archive.model_dump(exclude_none=True)
-            st.session_state["synthex_last_route"] = resolved_route.domain
+            try:
+                with st.spinner("Extracting structured scientific record with Gemini..."):
+                    resolved_route, archive = pipeline.extract_source_bundle(source_bundle, domain=domain)
+            except StructuredExtractionValidationError as exc:
+                st.error(str(exc))
+                with st.expander("Extraction validation details"):
+                    st.json({
+                        "route": exc.route,
+                        "source_id": exc.source_id,
+                        "validation_errors": exc.validation_errors,
+                    })
+            else:
+                st.session_state["synthex_last_archive"] = archive.model_dump(exclude_none=True)
+                st.session_state["synthex_last_route"] = resolved_route.domain
 
     archive_data = st.session_state.get("synthex_last_archive")
     if archive_data:

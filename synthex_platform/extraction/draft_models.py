@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from typing import Any, Literal
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from synthex_platform.core.models import Evidence, Measurement
 
 GenericOwnership = Literal[
@@ -10,7 +10,13 @@ GenericOwnership = Literal[
 ]
 
 
-class DraftSource(BaseModel):
+class StrictDraftModel(BaseModel):
+    """The generic extraction contract rejects unknown scientific fields."""
+
+    model_config = ConfigDict(extra="forbid")
+
+
+class DraftSource(StrictDraftModel):
     title: str | None = None
     doi: str | None = None
     url: str | None = None
@@ -18,7 +24,7 @@ class DraftSource(BaseModel):
     authors: list[str] = Field(default_factory=list)
 
 
-class DraftMaterial(BaseModel):
+class DraftMaterial(StrictDraftModel):
     local_id: str
     name: str | None = None
     formula: str | None = None
@@ -33,7 +39,7 @@ class DraftMaterial(BaseModel):
     evidence: list[Evidence] = Field(default_factory=list)
 
 
-class DraftProcess(BaseModel):
+class DraftProcess(StrictDraftModel):
     local_id: str
     name: str
     family: str | None = None
@@ -45,7 +51,7 @@ class DraftProcess(BaseModel):
     ownership: GenericOwnership = "unknown"
 
 
-class DraftExperiment(BaseModel):
+class DraftExperiment(StrictDraftModel):
     local_id: str
     experiment_type: str
     material_refs: list[str] = Field(default_factory=list)
@@ -57,7 +63,7 @@ class DraftExperiment(BaseModel):
     ownership: GenericOwnership = "unknown"
 
 
-class DraftCalculation(BaseModel):
+class DraftCalculation(StrictDraftModel):
     local_id: str
     calculation_type: str
     material_refs: list[str] = Field(default_factory=list)
@@ -71,7 +77,7 @@ class DraftCalculation(BaseModel):
     ownership: GenericOwnership = "unknown"
 
 
-class ExtractedDocument(BaseModel):
+class ExtractedDocument(StrictDraftModel):
     source: DraftSource = Field(default_factory=DraftSource)
     materials: list[DraftMaterial] = Field(default_factory=list)
     processes: list[DraftProcess] = Field(default_factory=list)

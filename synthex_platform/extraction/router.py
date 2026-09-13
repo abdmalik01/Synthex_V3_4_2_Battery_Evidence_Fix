@@ -30,7 +30,8 @@ DOMAIN_TERMS: dict[str, tuple[str, ...]] = {
     ),
     "gas_sensing": (
         "gas sensor", "gas sensing", "chemiresistive", "target gas", "response time",
-        "recovery time", "selectivity", "ppm", "ppb", "sensor response",
+        "recovery time", "selectivity", "ppm", "ppb", "sensor response", "gas response",
+        "operating temperature", "ra/rg", "ra / rg", "resistance ratio", "discriminability",
     ),
     "catalysis": (
         "catalyst", "catalysis", "electrocatalysis", "overpotential", "tafel slope",
