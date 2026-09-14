@@ -6,7 +6,8 @@ Synthex is evolving from a nanomaterial parameter extractor into a literature-to
 
 - **Gas sensing:** mature V2 vertical — synthesis/deposition + sensing performance + validation + visualizations.
 - **Batteries:** live V1 expansion — auto-routing, battery paper typing, charge/discharge/EIS protocol extraction, battery IDs/condition groups, performance points, universal archive assembly.
-- **Catalysis, corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors, biomaterials:** domain manifests, canonical properties and benchmark tasks exist; these remain generic/scaffold extractors until domain-specific benchmarking is completed.
+- **Catalysis/electrocatalysis:** Stages 1–3 are implemented and the controlled seven-paper Stage 3 benchmark is historically complete. Its strict validation and safety gates pass, but demonstrated Gold A recall and Gold B association gaps remain; Stage 4/freeze has not begun.
+- **Corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors, biomaterials:** domain manifests, canonical properties and benchmark tasks exist; these remain generic/scaffold extractors.
 
 See `CURRENT_STATUS.md` for the plain-language project status.
 Visual Intelligence V1 is complete: native tables, provenance sidecars, figure understanding, generated charts, explicit OCR fallback, and calibrated graph digitization. These visual products remain outside canonical admission by default; see `docs/VISUAL_INTELLIGENCE_V1_STATUS.md`.
@@ -18,7 +19,12 @@ pip install -r requirements.txt
 streamlit run platform_app.py
 ```
 
-Use **Extract Paper → Auto Detect** to route an uploaded PDF. Battery papers are sent to the dedicated Batteries V1 extractor.
+Use **Analyze Paper → Auto Detect** to route an uploaded PDF. Battery and catalysis papers are sent to their dedicated extractors.
+
+The primary UI is organized around the researcher workflow: **Home**, **Analyze Paper**,
+**Discover Papers**, **Explore Results**, and **Visualize Data**. Validation catalogs,
+figure digitization, diagnostics, registry data, graph export, and the legacy gas-sensing
+entry point remain available under clearly labelled **Advanced** navigation.
 
 ## Paper discovery → PDF extraction boundary
 
@@ -51,12 +57,19 @@ Requires a root `.env` file containing:
 ```env
 GEMINI_API_KEY=your_real_key
 GEMINI_MODEL=gemini-3.8-flash
+GEMINI_FALLBACK_MODELS=gemini-3.5-flash,gemini-3.6-flash,gemini-3.7-flash
 ```
 
 The `.env` file is ignored by Git. Do not place real keys in `.env.example`.
 
-Battery extraction uses `temperature=0` and reproducibility seed `0` with the configured
-Gemini model. PyPDF remains the primary text parser; PyMuPDF is a non-OCR fallback for
+Production extraction uses a shared, bounded Gemini gateway. It tries the preferred model and
+then the configured fallback models once each only for provider/model availability, timeout, or
+transport failures. Authentication, quota, safety, unexpected, schema-validation, and scientific
+validation failures do not trigger cross-model retries. Benchmark runners are explicitly pinned to
+one model, and any schema-repair request stays on the model that produced the primary output.
+Every request records requested/actual model and attempt/failure metadata without API keys.
+
+Battery extraction uses `temperature=0` and reproducibility seed `0`. PyPDF remains the primary text parser; PyMuPDF is a non-OCR fallback for
 structurally valid PDFs that PyPDF cannot decode. Quantitative values remain in the raw
 battery payload, but the canonical archive admits only focal-work values backed by a
 normalized verbatim evidence match. Other values are retained in the payload's
@@ -90,7 +103,7 @@ pytest -q
 
 ### Researcher CSV exports
 
-After an extraction finishes, **Extract Paper → Export Results** provides **Download JSON**,
+After an extraction finishes, **Analyze Paper → Export Results** provides **Download JSON**,
 **Download CSV**, and **Download CSV Bundle**. JSON remains canonical; CSV is a deterministic
 derived view of that already-built archive and does not re-run Gemini or extraction.
 
@@ -102,9 +115,9 @@ evidence using stable join IDs. Files are UTF-8 with BOM for Windows spreadsheet
 preserve scientific symbols and approximate raw values, and escape formula-like text safely.
 See `docs/CSV_EXPORT_V1.md` for the full contract.
 
-### Archive Explorer
+### Explore Results
 
-**Archive Explorer V1** lets researchers browse and filter the structured information Synthex
+**Explore Results** lets researchers browse and filter the structured information Synthex
 extracted from the current paper without reading archive JSON. It uses the already-built session
 archive and performs only local, deterministic filtering. Opening the Explorer never re-runs PDF
 parsing or calls Gemini, Serper, embeddings, or the web.
@@ -115,6 +128,11 @@ rejection reason. Materials, processes, experiments, calculations, evidence, and
 have separate views. Selecting a result reveals source tracking: title, DOI, page, exact evidence
 snippet, evidence origin/strength, ownership, admission status, and estimated status. The current
 filtered result set can be downloaded as CSV without changing the archive.
+
+Researcher-facing trust labels (`Verified`, `Admitted`, `Estimated`, `Needs review`) summarize—but
+never replace—the exact machine admission, ownership, evidence, uncertainty, and quarantine fields.
+Paper summaries and result highlights are deterministic projections of the validated archive; they
+do not invoke an LLM or invent scientific conclusions.
 
 The long-term goal is research usefulness comparable to large materials-data infrastructures, with Synthex differentiated by linking literature-derived **processing → structure/material → computation → experimental conditions → performance** with explicit provenance.
 

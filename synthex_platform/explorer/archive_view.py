@@ -52,6 +52,55 @@ class ArchiveExplorerData:
     relationships: tuple[dict[str, Any], ...]
 
 
+def researcher_status(row: Mapping[str, Any]) -> str:
+    """Translate machine admission fields without hiding their exact values."""
+    if str(row.get("admission_status", "")).casefold() == "quarantined":
+        return "Needs review"
+    if _as_bool(row.get("estimated")):
+        return "Estimated"
+    if str(row.get("evidence_strength", "")).casefold().startswith("verified"):
+        return "Verified"
+    if str(row.get("admission_status", "")).casefold() in {"canonical", "admitted"}:
+        return "Admitted"
+    return "Needs review"
+
+
+def result_highlights(
+    rows: Iterable[Mapping[str, Any]], *, limit: int = 3,
+) -> tuple[dict[str, Any], ...]:
+    """Select a small deterministic result-first summary from projected rows."""
+    if limit < 0:
+        raise ValueError("limit must be non-negative")
+    candidates = [dict(row) for row in rows]
+    candidates.sort(key=lambda row: (
+        0 if str(row.get("measurement_role", "")).casefold() == "result" else 1,
+        str(row.get("record_id", "")),
+    ))
+    return tuple({**row, "researcher_status": researcher_status(row)} for row in candidates[:limit])
+
+
+def archive_summary(archive: SynthexArchive) -> dict[str, Any]:
+    """Produce a compact, archive-only paper summary for the research UI."""
+    if not isinstance(archive, SynthexArchive):
+        raise TypeError("archive must be a validated SynthexArchive")
+    source = archive.sources[0] if archive.sources else None
+    rows = project_results_rows(archive, include_quarantined=True)
+    admitted = [row for row in rows if str(row.get("admission_status", "")).casefold() != "quarantined"]
+    quarantined = [row for row in rows if str(row.get("admission_status", "")).casefold() == "quarantined"]
+    return {
+        "title": (source.title if source else None) or archive.metadata.archive_id or "Untitled extraction",
+        "domain": archive.metadata.domain or "unknown",
+        "source_id": source.source_id if source else None,
+        "doi": source.doi if source else None,
+        "materials": len(archive.materials),
+        "experiments": len(archive.experiments),
+        "calculations": len(archive.calculations),
+        "admitted_observations": len(admitted),
+        "quarantined_observations": len(quarantined),
+        "source_tracked_observations": sum(bool(row.get("source_id") or row.get("evidence_snippet")) for row in rows),
+    }
+
+
 def _decode_csv(payload: bytes) -> tuple[dict[str, Any], ...]:
     return tuple(csv.DictReader(StringIO(payload.decode("utf-8-sig"))))
 

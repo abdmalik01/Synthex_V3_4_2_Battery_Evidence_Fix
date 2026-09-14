@@ -246,7 +246,7 @@ def evaluate(doc):
 def main():
     if len(sys.argv) < 2:
         raise SystemExit('Usage: python benchmark_battery_material.py "path/to/batteries-11-00142.pdf"')
-    extractor = BatteryGeminiExtractor()
+    extractor = BatteryGeminiExtractor(provider_mode="benchmark")
     doc = extractor.extract_pdf(sys.argv[1])
     archive = assemble_battery_archive(doc, model=extractor.model)
     report = evaluate(doc)

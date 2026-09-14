@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
 from streamlit.testing.v1 import AppTest
 
 from synthex_platform.core.archive import ArchiveMetadata, SynthexArchive
@@ -17,7 +18,15 @@ from synthex_platform.core.models import (
     SourceRecord,
     SourceType,
 )
-from synthex_platform.explorer import ExplorerFilters, build_archive_explorer, filter_options, filter_results
+from synthex_platform.explorer import (
+    ExplorerFilters,
+    archive_summary,
+    build_archive_explorer,
+    filter_options,
+    filter_results,
+    researcher_status,
+    result_highlights,
+)
 from synthex_platform.export import export_results_rows_csv
 
 
@@ -193,6 +202,29 @@ def test_cross_domain_archives_project_without_domain_specific_assumptions():
         build_archive_explorer(archive)
 
 
+def test_research_summary_highlights_and_trust_labels_are_archive_only():
+    archive = _archive()
+    explorer = build_archive_explorer(archive, include_quarantined=True)
+    summary = archive_summary(archive)
+    assert summary["title"] == "Explorer source"
+    assert summary["materials"] == 1
+    assert summary["experiments"] == 1
+    assert summary["admitted_observations"] >= 1
+    assert summary["quarantined_observations"] == 1
+    highlights = result_highlights(explorer.results, limit=2)
+    assert len(highlights) == 2
+    assert all(item["researcher_status"] in {"Verified", "Admitted", "Estimated", "Needs review"} for item in highlights)
+    quarantined = next(row for row in explorer.results if row["admission_status"] == "quarantined")
+    assert researcher_status(quarantined) == "Needs review"
+
+
+def test_result_highlights_limit_is_bounded():
+    rows = build_archive_explorer(_archive()).results
+    assert result_highlights(rows, limit=0) == ()
+    with pytest.raises(ValueError, match="non-negative"):
+        result_highlights(rows, limit=-1)
+
+
 def test_projection_and_filtered_csv_do_not_mutate_or_call_external_services(monkeypatch):
     archive = _archive()
     before = archive.model_dump_json()
@@ -212,9 +244,18 @@ def test_archive_explorer_streamlit_smoke_uses_session_archive_without_extractio
     at.session_state["synthex_last_archive"] = _archive().model_dump(mode="json", exclude_none=True)
     at.session_state["synthex_last_route"] = "catalysis"
     at.run()
-    at.sidebar.radio[0].set_value("Archive Explorer").run()
+    at.sidebar.radio[0].set_value("Explore Results").run()
     assert not at.exception
-    assert any(item.value == "Archive Explorer" for item in at.subheader)
+    assert any(item.value == "Explore Results" for item in at.subheader)
     assert [item.label for item in at.toggle] == ["Include quarantined"]
     assert len(at.tabs) == 7
     assert at.dataframe
+
+
+def test_research_ui_home_has_primary_workflows_and_advanced_navigation():
+    at = AppTest.from_file(Path(__file__).parents[1] / "platform_app.py", default_timeout=25).run()
+    assert not at.exception
+    assert any(item.value == "SYNTHEX" for item in at.title)
+    assert {button.label for button in at.button} >= {"Analyze a paper", "Discover papers"}
+    options = set(at.sidebar.radio[0].options)
+    assert {"Analyze Paper", "Explore Results", "Visualize Data", "Advanced · Diagnostics"} <= options

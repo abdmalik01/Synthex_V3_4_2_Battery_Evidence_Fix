@@ -419,9 +419,10 @@ def _coverage_schema() -> dict[str, Any]:
 class CatalysisCoverageRecoverer:
     """One-call, no-repair semantic interpreter for uncovered candidates."""
 
-    def __init__(self, *, client, model: str):
+    def __init__(self, *, client, model: str, gateway=None):
         self.client = client
         self.model = model
+        self.gateway = gateway
         self.last_raw_output: str | None = None
 
     @staticmethod
@@ -482,11 +483,16 @@ class CatalysisCoverageRecoverer:
     def recover(
         self, document: CatalysisDocument, candidates: list[CatalysisQuantitativeCandidate],
     ) -> CatalysisCoverageResponse:
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=self.build_prompt(document, candidates),
-            config={"response_mime_type": "application/json", "temperature": 0, "seed": 0},
-        )
+        contents = self.build_prompt(document, candidates)
+        config = {"response_mime_type": "application/json", "temperature": 0, "seed": 0}
+        if self.gateway is not None:
+            response = self.gateway.generate_pinned(
+                contents=contents, config=config, phase="coverage_recovery",
+            )
+        else:
+            response = self.client.models.generate_content(
+                model=self.model, contents=contents, config=config,
+            )
         self.last_raw_output = response.text
         if not response.text:
             raise ValueError("Gemini returned no Catalysis coverage response.")

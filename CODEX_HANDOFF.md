@@ -6,7 +6,7 @@
 
 **Project:** Synthex  
 **Current development line:** V3.4.2  
-**Current focus:** Visual Intelligence V1 closure; Batteries V1 frozen
+**Current focus:** Research UI V1 and LLM Provider Resilience V1 complete; Catalysis Stage 3 remains historically complete but not Stage-4-ready; Batteries V1 and Visual Intelligence V1 frozen
 **Long-term goal:** Build a materials-intelligence platform that converts scientific literature into structured, provenance-aware, machine-usable datasets linking:
 
 **process → structure/material → computation → property → performance**
@@ -17,14 +17,14 @@ Synthex is not intended to be only a PDF extractor. The target is a reusable res
 
 ## 2. Current domain roadmap
 
-Synthex currently has one mature vertical and one actively maturing vertical:
+Current domain state:
 
 1. **Gas sensing** — live and relatively mature
 2. **Batteries** — live V1, currently under benchmark validation
 
 Planned/partially scaffolded domains:
 
-3. Catalysis / electrocatalysis  
+3. **Catalysis / electrocatalysis** — Stages 1–3 implemented; controlled Stage 3 benchmark historically complete, with unresolved real-paper recall/association gaps; not frozen and Stage 4 not started  
 4. Corrosion  
 5. Mechanical / creep / fatigue  
 6. Additive manufacturing  
@@ -61,6 +61,24 @@ calculations, evidence, and relationships. Result selection shows source trackin
 exact snippet, origin/strength, ownership, admission, and estimated state), and filtered rows can be
 downloaded without mutating or reconstructing the archive. Explorer interactions must remain local:
 no PDF parsing, Gemini, Serper, embeddings, FAISS, or web calls.
+
+### Synthex Research UI V1 — COMPLETE
+
+`platform_app.py` now prioritizes Home, Analyze Paper, Discover Papers, Explore Results, and
+Visualize Data. It derives high-level summaries, bounded result highlights, and researcher-facing
+trust labels from the validated archive only. Exact admission, ownership, evidence, uncertainty,
+source, and quarantine fields remain accessible. Specialist and legacy tools are grouped under
+Advanced navigation; no extraction functionality was removed.
+
+### LLM Provider Resilience V1 — COMPLETE
+
+`synthex_platform.providers.GeminiGateway` owns production model selection. The preferred model and
+ordered `GEMINI_FALLBACK_MODELS` are each attempted at most once, and only availability/model,
+timeout, and transport failures permit failover. Authentication, quota, safety, unexpected,
+schema-validation, and scientific-validation failures do not. Benchmarks use `provider_mode="benchmark"`
+and one explicit model; repair calls remain pinned to the model that returned the primary output.
+Audit payloads preserve requested/actual model, order, failure class, and fallback status with
+credential redaction. Provider diagnostics run only after an explicit Advanced-page button press.
 
 ---
 
@@ -272,17 +290,12 @@ The battery extractor is a stateless JSON request and does not use tools, so AFC
 `Models.generate_content` configuration. A live V3.4.2 Li2FeTiO4 benchmark completed without the SDK AFC warning.
 The interaction style remains a direct model request; no chat session is needed for this tool-free extraction.
 
-### Retry behavior
+### Provider resilience behavior
 
-The battery extractor retries transient failures such as:
-
-- Gemini `503 UNAVAILABLE`
-- `httpx.TimeoutException`
-- `httpx.NetworkError`
-- connection timeouts
-
-It uses bounded exponential backoff with jitter. Local schema validation and scientific post-processing occur
-outside the retry boundary and are not retried.
+The shared gateway makes one attempt per approved model for Gemini `503`/model availability,
+timeouts, and transport failures. It does not repeatedly retry the same model. Schema repair uses
+the already selected model and does not open another failover chain. Local schema validation and
+scientific post-processing remain outside the provider failover boundary.
 
 Do not let transient network failures corrupt scientific state or consume unrelated Serper queries.
 

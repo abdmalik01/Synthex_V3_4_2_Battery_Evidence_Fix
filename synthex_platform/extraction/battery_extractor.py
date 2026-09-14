@@ -1,19 +1,16 @@
 from __future__ import annotations
 
 import os
-import time
-import random
 from pathlib import Path
-import httpx
 from dotenv import load_dotenv
 from pydantic import ValidationError
 
 try:
     from google import genai
-    from google.genai import errors
 except ImportError:
     genai = None
-    errors = None
+
+from synthex_platform.providers import GeminiGateway
 
 from .battery_models import BatteryDocument
 from .battery_evidence import verify_battery_evidence
@@ -22,15 +19,6 @@ from .source_context import SourceBundle, build_source_bundle, compact_source_co
 
 load_dotenv(override=True)
 
-TRANSIENT_REQUEST_ERRORS: tuple[type[BaseException], ...] = (
-    httpx.TimeoutException,
-    httpx.NetworkError,
-)
-if errors is not None:
-    TRANSIENT_REQUEST_ERRORS = (errors.ServerError, *TRANSIENT_REQUEST_ERRORS)
-
-MAX_GEMINI_ATTEMPTS = 5
-MAX_RETRY_DELAY_SECONDS = 60.0
 GEMINI_TEMPERATURE = 0
 GEMINI_REPRODUCIBILITY_SEED = 0
 
@@ -134,14 +122,25 @@ Material role must be one of cathode, anode, active_material, electrolyte, separ
 
 
 class BatteryGeminiExtractor:
-    def __init__(self, api_key: str | None = None, model: str | None = None):
+    def __init__(
+        self,
+        api_key: str | None = None,
+        model: str | None = None,
+        *,
+        fallback_models: list[str] | tuple[str, ...] | None = None,
+        provider_mode: str = "production",
+    ):
         if genai is None:
             raise RuntimeError("google-genai is not installed. Run: pip install -r requirements.txt")
         self.api_key = api_key or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is missing. Add it to .env.")
         self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+        self.requested_model = self.model
+        self.fallback_models = fallback_models
+        self.provider_mode = provider_mode
         self.client = genai.Client(api_key=self.api_key)
+        self.last_provider_audit: dict = {}
 
     def build_prompt(self, text: str, source_bundle: SourceBundle | None = None) -> str:
         structured = ""
@@ -163,34 +162,26 @@ class BatteryGeminiExtractor:
         return f"{BATTERY_RULES}\n{OUTPUT_SHAPE}\n\nSOURCE TEXT:\n{text}{structured}"
 
     def extract_text(self, text: str, source_bundle: SourceBundle | None = None) -> BatteryDocument:
-        response = None
-        for attempt in range(MAX_GEMINI_ATTEMPTS):
-            try:
-                response = self.client.models.generate_content(
-                    model=self.model,
-                    contents=self.build_prompt(text, source_bundle=source_bundle),
-                    config={
-                        "response_mime_type": "application/json",
-                        "temperature": GEMINI_TEMPERATURE,
-                        "seed": GEMINI_REPRODUCIBILITY_SEED,
-                        # This extractor does not use tools. Explicitly disable AFC so
-                        # google-genai does not enter its deprecated Models AFC path.
-                        "automatic_function_calling": {"disable": True},
-                    },
-                )
-                break
-            except TRANSIENT_REQUEST_ERRORS as exc:
-                if attempt == MAX_GEMINI_ATTEMPTS - 1:
-                    raise
-                delay = min(MAX_RETRY_DELAY_SECONDS, (2 ** attempt) + random.uniform(0, 1))
-                print(
-                    f"Gemini request failed transiently with {type(exc).__name__} "
-                    f"(attempt {attempt + 1}/{MAX_GEMINI_ATTEMPTS}). "
-                    f"Retrying in {delay:.1f}s..."
-                )
-                time.sleep(delay)
-        if response is None:
-            raise RuntimeError("Gemini failed to return a response after retries.")
+        gateway = GeminiGateway(
+            client=self.client,
+            preferred_model=self.requested_model,
+            fallback_models=self.fallback_models,
+            mode=self.provider_mode,
+        )
+        try:
+            response = gateway.generate_primary(
+                contents=self.build_prompt(text, source_bundle=source_bundle),
+                config={
+                    "response_mime_type": "application/json",
+                    "temperature": GEMINI_TEMPERATURE,
+                    "seed": GEMINI_REPRODUCIBILITY_SEED,
+                    "automatic_function_calling": {"disable": True},
+                },
+            )
+        finally:
+            self.last_provider_audit = gateway.audit()
+        if gateway.actual_model:
+            self.model = gateway.actual_model
         output_text = response.text
         if not output_text:
             raise RuntimeError("Gemini returned no battery JSON output.")

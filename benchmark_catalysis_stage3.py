@@ -409,6 +409,8 @@ def run(
     manifest = json.loads((BENCHMARK_ROOT / "corpus_manifest.json").read_text(encoding="utf-8"))
     output_dir.mkdir(parents=True, exist_ok=True)
     pipeline = SynthexExtractionPipeline(
+        model="gemini-3.5-flash",
+        provider_mode="benchmark",
         search_assisted=False,
         find_supplementary=False,
         enable_ocr=True,

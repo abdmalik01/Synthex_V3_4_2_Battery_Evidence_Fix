@@ -15,6 +15,7 @@ from .catalysis_extractor import CatalysisGeminiExtractor
 from .domain_extractor import DomainGeminiExtractor
 from .router import DomainRoute, DomainRouter
 from .source_context import SourceBundle, build_source_bundle
+from synthex_platform.core.models import DomainPayload
 from synthex_platform.retrieval import MetadataEnricher, SerperClient
 from synthex_platform.visual.sidecar_store import VisualSidecarStore
 
@@ -41,6 +42,8 @@ class SynthexExtractionPipeline:
         ocr_provider=None,
         enable_ocr: bool = True,
         visual_sidecar_store: VisualSidecarStore | None = None,
+        provider_mode: str = "production",
+        fallback_models: list[str] | tuple[str, ...] | None = None,
     ):
         self.router = router or DomainRouter()
         self.api_key = api_key
@@ -51,7 +54,10 @@ class SynthexExtractionPipeline:
         self.ocr_provider = ocr_provider
         self.enable_ocr = enable_ocr
         self.visual_sidecar_store = visual_sidecar_store or VisualSidecarStore("data/archive")
+        self.provider_mode = provider_mode
+        self.fallback_models = fallback_models
         self.last_extraction_diagnostics: dict = {}
+        self.last_provider_audit: dict = {}
         self.last_catalysis_model_outputs: dict[str, str] = {}
         self.last_catalysis_candidate_inventory: list[dict] = []
         self.last_catalysis_candidate_coverage: list[dict] = []
@@ -79,6 +85,7 @@ class SynthexExtractionPipeline:
 
     def _extract(self, text: str, domain: str, source_bundle: SourceBundle | None):
         self.last_extraction_diagnostics = {}
+        self.last_provider_audit = {}
         self.last_catalysis_model_outputs = {}
         self.last_catalysis_candidate_inventory = []
         self.last_catalysis_candidate_coverage = []
@@ -86,21 +93,32 @@ class SynthexExtractionPipeline:
             domain=domain, confidence=1.0, scores={domain: 1.0}, matched_terms={domain: []}, paper_types=[], method="user_selected"
         )
         if route.domain == "batteries":
-            extractor = BatteryGeminiExtractor(api_key=self.api_key, model=self.model)
-            draft = extractor.extract_text(text, source_bundle=source_bundle)
+            extractor = BatteryGeminiExtractor(
+                api_key=self.api_key, model=self.model,
+                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+            )
+            try:
+                draft = extractor.extract_text(text, source_bundle=source_bundle)
+            finally:
+                self.last_provider_audit = dict(extractor.last_provider_audit)
             if source_bundle is not None:
                 parser = source_bundle.primary_native_parser()
                 draft._pdf_parser = parser
                 draft.source.pdf_text_parser = parser
             archive = assemble_battery_archive(draft, model=extractor.model)
         elif route.domain == "catalysis":
-            extractor = CatalysisGeminiExtractor(api_key=self.api_key, model=self.model)
+            extractor = CatalysisGeminiExtractor(
+                api_key=self.api_key, model=self.model,
+                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+            )
             try:
                 draft = extractor.extract_text(text, source_bundle=source_bundle)
             finally:
                 # Preserve call/repair diagnostics even when a provider or
                 # validation failure interrupts the Catalysis path.
                 self.last_extraction_diagnostics = dict(getattr(extractor, "last_diagnostics", {}))
+                self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
+                self.last_extraction_diagnostics["provider"] = self.last_provider_audit
                 self.last_extraction_diagnostics.setdefault("primary_calls", 1)
                 self.last_extraction_diagnostics.setdefault(
                     "schema_repair_calls", self.last_extraction_diagnostics.get("repair_calls", 0),
@@ -140,7 +158,11 @@ class SynthexExtractionPipeline:
                     "coverage_candidates_rejected": 0,
                 })
                 if uncovered:
-                    recoverer = CatalysisCoverageRecoverer(client=extractor.client, model=extractor.model)
+                    recoverer = CatalysisCoverageRecoverer(
+                        client=extractor.client,
+                        model=extractor.model,
+                        gateway=getattr(extractor, "_gateway", None),
+                    )
                     self.last_extraction_diagnostics["coverage_calls"] = 1
                     self.last_extraction_diagnostics["gemini_calls"] = (
                         self.last_extraction_diagnostics.get("gemini_calls", 0) + 1
@@ -161,6 +183,9 @@ class SynthexExtractionPipeline:
                             "coverage_candidates_rejected": len(uncovered),
                         })
                     finally:
+                        if getattr(extractor, "_gateway", None) is not None:
+                            self.last_provider_audit = extractor._gateway.audit()
+                            self.last_extraction_diagnostics["provider"] = self.last_provider_audit
                         if recoverer.last_raw_output:
                             self.last_catalysis_model_outputs["coverage"] = recoverer.last_raw_output
             effective_scope = _most_conservative_scope(route.scope_status, draft.scope_status)
@@ -182,14 +207,27 @@ class SynthexExtractionPipeline:
             )
         else:
             # Generic manifest-driven path. Gas sensing remains more mature in the legacy V2 UI.
-            extractor = DomainGeminiExtractor(api_key=self.api_key, model=self.model)
-            archive = extractor.extract_text(text, route.domain, source_bundle=source_bundle)
+            extractor = DomainGeminiExtractor(
+                api_key=self.api_key, model=self.model,
+                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+            )
+            try:
+                archive = extractor.extract_text(text, route.domain, source_bundle=source_bundle)
+            finally:
+                self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
         if source_bundle is not None:
             if archive.sources:
                 archive.sources[0].checksum = source_bundle.source.source_checksum
             for payload in archive.domain_payloads:
                 if payload.domain == route.domain:
                     payload.values["source_context"] = source_bundle.parser_metadata()
+        if self.last_provider_audit:
+            archive.domain_payloads.append(DomainPayload(
+                domain="llm_provider",
+                schema_version="1.0.0",
+                tags=["production_failover" if self.provider_mode == "production" else "benchmark_pinned"],
+                values=self.last_provider_audit,
+            ))
         if self.search_assisted:
             client = SerperClient(api_key=self.serper_api_key)
             archive = MetadataEnricher(client=client).enrich_archive(

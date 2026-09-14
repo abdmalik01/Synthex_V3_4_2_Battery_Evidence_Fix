@@ -14,6 +14,7 @@ except ImportError:  # permits offline registry/storage use
     genai = None
 
 from synthex_platform.core.registry import DomainRegistry
+from synthex_platform.providers import GeminiGateway
 from .assembler import assemble_archive
 from .draft_models import ExtractedDocument
 from .source_context import SourceBundle, compact_source_context, has_prompt_source_context
@@ -185,7 +186,15 @@ def parse_extracted_document_json(output_text: str, source_bundle: SourceBundle 
 
 
 class DomainGeminiExtractor:
-    def __init__(self, registry: DomainRegistry | None = None, api_key: str | None = None, model: str | None = None):
+    def __init__(
+        self,
+        registry: DomainRegistry | None = None,
+        api_key: str | None = None,
+        model: str | None = None,
+        *,
+        fallback_models: list[str] | tuple[str, ...] | None = None,
+        provider_mode: str = "production",
+    ):
         if genai is None:
             raise RuntimeError("google-genai is not installed. Run: pip install -r requirements.txt")
         self.registry = registry or DomainRegistry()
@@ -193,7 +202,12 @@ class DomainGeminiExtractor:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is missing.")
         self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+        self.requested_model = self.model
+        self.fallback_models = fallback_models
+        self.provider_mode = provider_mode
         self.client = genai.Client(api_key=self.api_key)
+        self.last_provider_audit: dict = {}
+        self._gateway: GeminiGateway | None = None
 
     def _domain_spec(self, domain: str) -> dict:
         return self.registry.get(domain) if domain != "generic" else {
@@ -220,11 +234,20 @@ class DomainGeminiExtractor:
 
     def extract_text(self, text: str, domain: str, source_bundle: SourceBundle | None = None):
         prompt = self.build_prompt(text, domain, source_bundle=source_bundle)
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config={"response_mime_type": "application/json"},
+        self._gateway = GeminiGateway(
+            client=self.client,
+            preferred_model=getattr(self, "requested_model", self.model),
+            fallback_models=getattr(self, "fallback_models", None),
+            mode=getattr(self, "provider_mode", "production"),
         )
+        try:
+            response = self._gateway.generate_primary(
+                contents=prompt, config={"response_mime_type": "application/json"},
+            )
+        finally:
+            self.last_provider_audit = self._gateway.audit()
+        if self._gateway.actual_model:
+            self.model = self._gateway.actual_model
         output_text = response.text
         if not output_text:
             raise RuntimeError("Gemini returned no structured output.")
@@ -289,14 +312,19 @@ class DomainGeminiExtractor:
         errors = self._validation_errors(error)
         source_identifier = source_bundle.source.source_id if source_bundle else None
         try:
-            response = self.client.models.generate_content(
-                model=self.model,
-                contents=self._repair_prompt(
-                    output_text=output_text, errors=errors, text=text,
-                    domain=domain, source_bundle=source_bundle,
-                ),
-                config={"response_mime_type": "application/json"},
-            )
+            if self._gateway is None:
+                raise RuntimeError("Gemini gateway was not initialized for structural repair.")
+            try:
+                response = self._gateway.generate_pinned(
+                    contents=self._repair_prompt(
+                        output_text=output_text, errors=errors, text=text,
+                        domain=domain, source_bundle=source_bundle,
+                    ),
+                    config={"response_mime_type": "application/json"},
+                    phase="schema_repair",
+                )
+            finally:
+                self.last_provider_audit = self._gateway.audit()
             repaired_output = response.text
             if not repaired_output:
                 raise ValueError("Gemini returned no JSON during the structural repair attempt.")

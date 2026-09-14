@@ -410,7 +410,7 @@ def main() -> None:
             continue
 
         if extractor is None:
-            extractor = BatteryGeminiExtractor()
+            extractor = BatteryGeminiExtractor(provider_mode="benchmark")
         captured: dict[str, str] = {}
         original_generate = extractor.client.models.generate_content
 

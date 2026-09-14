@@ -18,6 +18,7 @@ except ImportError:  # permits offline validation and tests
     genai = None
 
 from synthex_platform.core.registry import DomainRegistry
+from synthex_platform.providers import GeminiGateway
 
 from .battery_evidence import normalize_evidence_text
 from .catalysis_models import CatalysisDocument, with_stage1_warnings
@@ -325,7 +326,15 @@ def parse_catalysis_document_json(
 class CatalysisGeminiExtractor:
     """Typed extraction boundary; postprocessing and assembly remain separate."""
 
-    def __init__(self, registry: DomainRegistry | None = None, api_key: str | None = None, model: str | None = None):
+    def __init__(
+        self,
+        registry: DomainRegistry | None = None,
+        api_key: str | None = None,
+        model: str | None = None,
+        *,
+        fallback_models: list[str] | tuple[str, ...] | None = None,
+        provider_mode: str = "production",
+    ):
         if genai is None:
             raise RuntimeError("google-genai is not installed. Run: pip install -r requirements.txt")
         self.registry = registry or DomainRegistry()
@@ -333,10 +342,15 @@ class CatalysisGeminiExtractor:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is missing.")
         self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+        self.requested_model = self.model
+        self.fallback_models = fallback_models
+        self.provider_mode = provider_mode
         self.client = genai.Client(api_key=self.api_key)
         self.last_diagnostics: dict[str, Any] = {}
         self.last_raw_output: str | None = None
         self.last_repaired_output: str | None = None
+        self.last_provider_audit: dict[str, Any] = {}
+        self._gateway: GeminiGateway | None = None
 
     def _domain_spec(self) -> dict:
         return self.registry.get("catalysis")
@@ -408,15 +422,20 @@ class CatalysisGeminiExtractor:
         self.last_diagnostics["repair_calls"] += 1
         self.last_diagnostics["gemini_calls"] += 1
         self.last_diagnostics["initial_validation_error_count"] = len(initial_errors)
-        repair_response = self.client.models.generate_content(
-            model=self.model,
-            contents=self._repair_prompt(
-                output_text=output_text,
-                errors=initial_errors,
-                source_bundle=source_bundle,
-            ),
-            config=_response_config(),
-        )
+        if self._gateway is None:
+            raise RuntimeError("Gemini gateway was not initialized for schema repair.")
+        try:
+            repair_response = self._gateway.generate_pinned(
+                contents=self._repair_prompt(
+                    output_text=output_text,
+                    errors=initial_errors,
+                    source_bundle=source_bundle,
+                ),
+                config=_response_config(),
+                phase="schema_repair",
+            )
+        finally:
+            self.last_provider_audit = self._gateway.audit()
         repaired_text = repair_response.text
         self.last_repaired_output = repaired_text
         if repaired_text:
@@ -455,11 +474,21 @@ class CatalysisGeminiExtractor:
             "schema_valid_repaired_response": False,
             "persistent_failure": False,
         }
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=self.build_prompt(text, source_bundle=source_bundle),
-            config=_response_config(),
+        self._gateway = GeminiGateway(
+            client=self.client,
+            preferred_model=self.requested_model,
+            fallback_models=self.fallback_models,
+            mode=self.provider_mode,
         )
+        try:
+            response = self._gateway.generate_primary(
+                contents=self.build_prompt(text, source_bundle=source_bundle),
+                config=_response_config(),
+            )
+        finally:
+            self.last_provider_audit = self._gateway.audit()
+        if self._gateway.actual_model:
+            self.model = self._gateway.actual_model
         if not response.text:
             raise RuntimeError("Gemini returned no catalysis JSON output.")
         self.last_raw_output = response.text

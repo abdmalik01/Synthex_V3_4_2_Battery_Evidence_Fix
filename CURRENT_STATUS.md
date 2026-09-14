@@ -9,6 +9,8 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Paper Discovery V1: live primary-platform Serper discovery workspace with cached/budgeted search, explicit unverified discovery candidates and session-only saved bibliography leads. Discovery requires a later real-PDF upload before SourceBundle-based scientific extraction.
 - CSV Export V1: complete deterministic researcher-facing results CSV and relational CSV bundle derived from validated archives. Canonical rows are the default; quarantined rows require explicit opt-in and remain visibly identified. JSON remains canonical.
 - Archive Explorer V1: complete read-only session-archive browser with a researcher-friendly Results table, local search and archive-derived filters, explicit quarantine opt-in, separate entity/calculation/evidence/relationship views, source tracking, and filtered CSV download.
+- **Synthex Research UI V1 — COMPLETE:** the primary Streamlit app now opens on a focused researcher home, follows Analyze → Review → Explore → Export, presents archive-only summaries and result highlights, translates trust status without hiding exact machine fields, and groups specialist tools under Advanced navigation.
+- **LLM Provider Resilience V1 — COMPLETE:** production extraction uses an ordered Gemini fallback chain with one bounded attempt per model for availability-class failures only. Benchmarks remain single-model pinned; repair calls stay on the selected model; request audit metadata records model selection and redacted failure classes.
 - **Visual Intelligence V1 — COMPLETE:** native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, OCR fallback, and calibrated graph digitization.
 
 ## CSV Export V1 guarantees
@@ -68,9 +70,16 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Full local suite: 60 passed, 2 warnings.
 - Detailed comparison: `benchmark/outputs/corpus/after/scientific_admissibility_comparison.md`.
 
+## Catalysis / Electrocatalysis status
+
+Stages 1–3 are implemented. The fixed seven-paper Stage 3 benchmark is historically complete with
+its strict schema, routing, evidence, ownership, admission, and safety acceptance targets intact.
+The bounded follow-up did not close the demonstrated Gold A completeness and Gold B association
+gaps. Catalysis is therefore **not frozen and not ready for Stage 4**; Stage 4 has not begun.
+
 ## Still platform scaffolds
 
-Catalysis/electrocatalysis, corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors and biomaterials have manifests/ontologies/benchmark roadmaps but are not yet at battery/gas-sensing live-validation maturity.
+Corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors and biomaterials have manifests/ontologies/benchmark roadmaps but are not yet at battery/gas-sensing live-validation maturity.
 
 ## V3.4 update — Serper enrichment
 

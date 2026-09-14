@@ -201,6 +201,10 @@ def test_repair_contract_forbids_transport_fields_and_pipeline_reattaches_author
     assert archive.sources[0].checksum == "gas-checksum"
     assert archive.domain_payloads[0].values["source_context"]["source_id"] == "src-gas"
     assert archive.experiments[0].conditions[0].evidence[0].source_id == "src-gas"
+    provider_payload = next(item for item in archive.domain_payloads if item.domain == "llm_provider")
+    assert provider_payload.values["requested_model"] == "offline-fake"
+    assert provider_payload.values["actual_model"] == "offline-fake"
+    assert [item["phase"] for item in provider_payload.values["attempts"]] == ["primary", "schema_repair"]
 
 
 def test_gas_sensing_routes_to_generic_manifest_extractor_and_pipeline_preserves_typed_failure(monkeypatch):
