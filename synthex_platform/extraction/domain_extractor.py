@@ -125,8 +125,6 @@ def _normalize_evidence_list(container: dict, source_bundle: SourceBundle | None
             normalized_items.append(item)
             continue
         evidence = _evidence_from_exact_bundle_text(item, source_bundle)
-        # Preserve unsupported strings verbatim so strict validation and the
-        # repair prompt can address them; never replace them with a guessed null.
         normalized_items.append(evidence if evidence is not None else item)
     container["evidence"] = normalized_items
 
@@ -153,8 +151,6 @@ def normalize_extracted_document_structure(payload: dict, source_bundle: SourceB
                 if field in item:
                     item[field] = _singleton_list(item[field])
             _normalize_evidence_list(item, source_bundle)
-            # Measurements are the only nested Evidence-bearing structures in
-            # ExtractedDocument. Enumerate them explicitly; do not recurse blindly.
             for measurement_field in ("parameters", "conditions", "outputs"):
                 measurements = item.get(measurement_field, [])
                 if not isinstance(measurements, list):
@@ -186,15 +182,7 @@ def parse_extracted_document_json(output_text: str, source_bundle: SourceBundle 
 
 
 class DomainGeminiExtractor:
-    def __init__(
-        self,
-        registry: DomainRegistry | None = None,
-        api_key: str | None = None,
-        model: str | None = None,
-        *,
-        fallback_models: list[str] | tuple[str, ...] | None = None,
-        provider_mode: str = "production",
-    ):
+    def __init__(self, registry: DomainRegistry | None = None, api_key: str | None = None, model: str | None = None, *, fallback_models: list[str] | tuple[str, ...] | None = None, provider_mode: str = "production"):
         if genai is None:
             raise RuntimeError("google-genai is not installed. Run: pip install -r requirements.txt")
         self.registry = registry or DomainRegistry()
@@ -210,40 +198,21 @@ class DomainGeminiExtractor:
         self._gateway: GeminiGateway | None = None
 
     def _domain_spec(self, domain: str) -> dict:
-        return self.registry.get(domain) if domain != "generic" else {
-            "name": "Generic materials / materials-informatics", "description": "A non-vertical fallback; preserve only explicitly supported, focal work.",
-            "recommended_sections": [], "process_vocabulary": [], "properties": [],
-        }
+        return self.registry.get(domain) if domain != "generic" else {"name": "Generic materials / materials-informatics", "description": "A non-vertical fallback; preserve only explicitly supported, focal work.", "recommended_sections": [], "process_vocabulary": [], "properties": []}
 
     def build_prompt(self, text: str, domain: str, source_bundle: SourceBundle | None = None) -> str:
         spec = self._domain_spec(domain)
-        compact_spec = {
-            "domain": spec["name"],
-            "description": spec.get("description"),
-            "recommended_sections": spec.get("recommended_sections", []),
-            "process_vocabulary": spec.get("process_vocabulary", []),
-            "canonical_properties": spec.get("properties", []),
-        }
+        compact_spec = {"domain": spec["name"], "description": spec.get("description"), "recommended_sections": spec.get("recommended_sections", []), "process_vocabulary": spec.get("process_vocabulary", []), "canonical_properties": spec.get("properties", [])}
         structured = ""
         if source_bundle is not None and has_prompt_source_context(source_bundle):
-            structured = (
-                "\n\nSTRUCTURED SOURCE CONTEXT (bounded, loss-aware JSON):\n"
-                f"{compact_source_context(source_bundle, spec)}"
-            )
-        return f"""{BASE_RULES}\nDOMAIN SPECIFICATION:\n{json.dumps(compact_spec, ensure_ascii=False, indent=2)}\n\nSOURCE TEXT:\n{text}{structured}"""
+            structured = "\n\nSTRUCTURED SOURCE CONTEXT (bounded, loss-aware JSON):\n" + compact_source_context(source_bundle, spec)
+        return f"{BASE_RULES}\nDOMAIN SPECIFICATION:\n{json.dumps(compact_spec, ensure_ascii=False, indent=2)}\n\nSOURCE TEXT:\n{text}{structured}"
 
     def extract_text(self, text: str, domain: str, source_bundle: SourceBundle | None = None):
         prompt = self.build_prompt(text, domain, source_bundle=source_bundle)
-        self._gateway = GeminiGateway(
-            client=self.client,
-            preferred_model=getattr(self, "requested_model", self.model),
-            fallback_models=getattr(self, "fallback_models", None),
-            mode=getattr(self, "provider_mode", "production"),
-        )
+        self._gateway = GeminiGateway(client=self.client, preferred_model=getattr(self, "requested_model", None) or self.model, fallback_models=getattr(self, "fallback_models", None), mode=getattr(self, "provider_mode", "production"))
         try:
-            response = self._gateway.generate_primary(
-                contents=prompt, config={"response_mime_type": "application/json"},
-            )
+            response = self._gateway.generate_primary(contents=prompt, config={"response_mime_type": "application/json"})
         finally:
             self.last_provider_audit = self._gateway.audit()
         if self._gateway.actual_model:
@@ -254,13 +223,7 @@ class DomainGeminiExtractor:
         try:
             draft = parse_extracted_document_json(output_text, source_bundle=source_bundle)
         except (ValidationError, ValueError) as exc:
-            draft = self._repair_invalid_output(
-                output_text=output_text,
-                error=exc,
-                text=text,
-                domain=domain,
-                source_bundle=source_bundle,
-            )
+            draft = self._repair_invalid_output(output_text=output_text, error=exc, text=text, domain=domain, source_bundle=source_bundle)
         return assemble_archive(draft, domain=domain, model=self.model)
 
     @staticmethod
@@ -269,60 +232,21 @@ class DomainGeminiExtractor:
             return error.errors(include_url=False)
         return [{"type": "output_shape", "msg": str(error)}]
 
-    def _repair_prompt(
-        self,
-        *,
-        output_text: str,
-        errors: list[dict],
-        text: str,
-        domain: str,
-        source_bundle: SourceBundle | None,
-    ) -> str:
+    def _repair_prompt(self, *, output_text: str, errors: list[dict], text: str, domain: str, source_bundle: SourceBundle | None) -> str:
         source_context = ""
         if source_bundle is not None and has_prompt_source_context(source_bundle):
             source_context = "\nSTRUCTURED SOURCE CONTEXT:\n" + compact_source_context(source_bundle, self._domain_spec(domain))
-        contract = (
-            "Return exactly one ExtractedDocument JSON object with source, materials, processes, experiments, "
-            "calculations, domain_values, and extraction_notes. List fields must be JSON arrays. Process.name and "
-            "experiment.experiment_type are required when those objects are present. Never put source_id, filename, "
-            "or source_checksum in source: those are pipeline-owned SourceBundle provenance fields. Every evidence "
-            "field is an array of Evidence OBJECTS, never raw strings, including nested experiment conditions. "
-            "Example: {\"conditions\":[{\"property\":\"total_flow_rate\",\"raw_value\":\"500 mL/min\","
-            "\"value\":500,\"unit\":\"mL/min\",\"evidence\":[{\"source_type\":\"text\","
-            "\"text_snippet\":\"total flow rate ... 500 mL/min\"}]}]}."
-        )
-        return (
-            "Repair only the structural/schema validation errors in the prior model JSON below. "
-            "Do not invent scientific facts, names, types, values, evidence, or ownership. If the source does not "
-            "support a required field, remove that malformed object rather than guessing. Keep supported objects and "
-            "return one JSON object only.\n\n"
-            f"REQUIRED CONTRACT:\n{contract}\n\nVALIDATION ERRORS:\n{json.dumps(errors, ensure_ascii=False)}"
-            f"\n\nPRIOR MODEL JSON:\n{output_text}\n\nSOURCE TEXT:\n{text}{source_context}"
-        )
+        contract = ("Return exactly one ExtractedDocument JSON object with source, materials, processes, experiments, calculations, domain_values, and extraction_notes. List fields must be JSON arrays. Process.name and experiment.experiment_type are required when those objects are present. Never put source_id, filename, or source_checksum in source: those are pipeline-owned SourceBundle provenance fields. Every evidence field is an array of Evidence OBJECTS, never raw strings, including nested experiment conditions. Example: {\"conditions\":[{\"property\":\"total_flow_rate\",\"raw_value\":\"500 mL/min\",\"value\":500,\"unit\":\"mL/min\",\"evidence\":[{\"source_type\":\"text\",\"text_snippet\":\"total flow rate ... 500 mL/min\"}]}]}.")
+        return ("Repair only the structural/schema validation errors in the prior model JSON below. Do not invent scientific facts, names, types, values, evidence, or ownership. If the source does not support a required field, remove that malformed object rather than guessing. Keep supported objects and return one JSON object only.\n\n" f"REQUIRED CONTRACT:\n{contract}\n\nVALIDATION ERRORS:\n{json.dumps(errors, ensure_ascii=False)}" f"\n\nPRIOR MODEL JSON:\n{output_text}\n\nSOURCE TEXT:\n{text}{source_context}")
 
-    def _repair_invalid_output(
-        self,
-        *,
-        output_text: str,
-        error: Exception,
-        text: str,
-        domain: str,
-        source_bundle: SourceBundle | None,
-    ) -> ExtractedDocument:
+    def _repair_invalid_output(self, *, output_text: str, error: Exception, text: str, domain: str, source_bundle: SourceBundle | None) -> ExtractedDocument:
         errors = self._validation_errors(error)
         source_identifier = source_bundle.source.source_id if source_bundle else None
         try:
             if self._gateway is None:
                 raise RuntimeError("Gemini gateway was not initialized for structural repair.")
             try:
-                response = self._gateway.generate_pinned(
-                    contents=self._repair_prompt(
-                        output_text=output_text, errors=errors, text=text,
-                        domain=domain, source_bundle=source_bundle,
-                    ),
-                    config={"response_mime_type": "application/json"},
-                    phase="schema_repair",
-                )
+                response = self._gateway.generate_pinned(contents=self._repair_prompt(output_text=output_text, errors=errors, text=text, domain=domain, source_bundle=source_bundle), config={"response_mime_type": "application/json"}, phase="schema_repair")
             finally:
                 self.last_provider_audit = self._gateway.audit()
             repaired_output = response.text
@@ -330,9 +254,4 @@ class DomainGeminiExtractor:
                 raise ValueError("Gemini returned no JSON during the structural repair attempt.")
             return parse_extracted_document_json(repaired_output, source_bundle=source_bundle)
         except (ValidationError, ValueError) as repair_error:
-            raise StructuredExtractionValidationError(
-                route=domain,
-                source_id=source_identifier,
-                validation_errors=self._validation_errors(repair_error),
-                raw_output=output_text,
-            ) from repair_error
+            raise StructuredExtractionValidationError(route=domain, source_id=source_identifier, validation_errors=self._validation_errors(repair_error), raw_output=output_text) from repair_error
