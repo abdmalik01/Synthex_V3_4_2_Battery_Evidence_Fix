@@ -11,6 +11,18 @@ from .catalysis_models import CatalysisDocument
 from .catalysis_extractor import CatalysisGeminiExtractor, CatalysisStructuredExtractionValidationError
 from .catalysis_assembler import assemble_catalysis_archive
 
+# Compatibility defaults for offline/unit-test construction via ``object.__new__``.
+# Normal runtime initialization still overwrites these on each extractor instance.
+for _extractor_cls in (DomainGeminiExtractor, BatteryGeminiExtractor, CatalysisGeminiExtractor):
+    if not hasattr(_extractor_cls, "requested_model"):
+        _extractor_cls.requested_model = None
+    if not hasattr(_extractor_cls, "fallback_models"):
+        _extractor_cls.fallback_models = None
+    if not hasattr(_extractor_cls, "provider_mode"):
+        _extractor_cls.provider_mode = "production"
+    if not hasattr(_extractor_cls, "last_provider_audit"):
+        _extractor_cls.last_provider_audit = {}
+
 __all__ = [
     "DomainGeminiExtractor", "assemble_archive", "ExtractedDocument",
     "DomainRoute", "DomainRouter", "BatteryDocument", "BatteryGeminiExtractor",
