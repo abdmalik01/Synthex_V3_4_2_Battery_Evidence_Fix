@@ -6,7 +6,6 @@ import pytest
 from google.genai import errors
 from pydantic import ValidationError
 
-from synthex_platform.extraction import battery_extractor as extractor_module
 from synthex_platform.extraction.battery_assembler import assemble_battery_archive
 from synthex_platform.extraction.battery_extractor import BatteryGeminiExtractor
 from synthex_platform.extraction.battery_models import (
@@ -43,12 +42,16 @@ class _SequencedModels:
 def _extractor_with(outcomes):
     extractor = object.__new__(BatteryGeminiExtractor)
     extractor.model = "test-model"
+    extractor.requested_model = "test-model"
+    extractor.fallback_models = ["fallback-1", "fallback-2", "fallback-3"]
+    extractor.provider_mode = "production"
+    extractor.last_provider_audit = {}
     models = _SequencedModels(outcomes)
     extractor.client = SimpleNamespace(models=models)
     return extractor, models
 
 
-def test_transient_gemini_and_network_errors_retry_with_bounded_backoff(monkeypatch):
+def test_transient_gemini_and_network_errors_fail_over_once_per_model():
     outcomes = [
         errors.ServerError(503, {"error": {"message": "unavailable"}}),
         httpx.ConnectTimeout("connect timeout"),
@@ -56,17 +59,17 @@ def test_transient_gemini_and_network_errors_retry_with_bounded_backoff(monkeypa
         json.dumps({"source": {"title": "Recovered"}}),
     ]
     extractor, models = _extractor_with(outcomes)
-    sleeps = []
-    monkeypatch.setattr(extractor_module.random, "uniform", lambda _a, _b: 0.0)
-    monkeypatch.setattr(extractor_module.time, "sleep", sleeps.append)
 
     doc = extractor.extract_text("paper")
 
     assert doc.source.title == "Recovered"
     assert len(models.calls) == 4
-    assert sleeps == [1, 2, 4]
+    assert [call["model"] for call in models.calls] == [
+        "test-model", "fallback-1", "fallback-2", "fallback-3",
+    ]
     assert models.calls[-1]["config"]["temperature"] == 0
     assert models.calls[-1]["config"]["seed"] == 0
+    assert extractor.last_provider_audit["fallback_occurred"] is True
 
 
 def test_deterministic_request_error_is_not_retried():
