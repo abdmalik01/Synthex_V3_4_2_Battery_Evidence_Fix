@@ -9,3 +9,5 @@ output/
 .streamlit/secrets.toml
 .DS_Store
 data/search_cache/
+# Local VisualSidecarStore runtime output; generated from uploaded/extracted papers.
+data/archive/visual/
