@@ -8,6 +8,7 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Batteries: live domain routing and dedicated extraction, now expanded for true electrode-materials papers.
 - Paper Discovery V1: live primary-platform Serper discovery workspace with cached/budgeted search, explicit unverified discovery candidates and session-only saved bibliography leads. Discovery requires a later real-PDF upload before SourceBundle-based scientific extraction.
 - CSV Export V1: complete deterministic researcher-facing results CSV and relational CSV bundle derived from validated archives. Canonical rows are the default; quarantined rows require explicit opt-in and remain visibly identified. JSON remains canonical.
+- Archive Explorer V1: complete read-only session-archive browser with a researcher-friendly Results table, local search and archive-derived filters, explicit quarantine opt-in, separate entity/calculation/evidence/relationship views, source tracking, and filtered CSV download.
 - **Visual Intelligence V1 — COMPLETE:** native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, OCR fallback, and calibrated graph digitization.
 
 ## CSV Export V1 guarantees
@@ -18,6 +19,15 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Relational tables preserve stable join IDs and keep calculations/DFT separate from experiments.
 - UTF-8 BOM, scientific Unicode, deterministic ordering/JSON-in-cell encoding, blank missing values, and formula-injection protection support safe spreadsheet use.
 - CSV is a derived research view only; archive JSON remains the canonical data model.
+
+## Archive Explorer V1 guarantees
+
+- The Explorer reads the validated archive already held in Streamlit session state and never reparses the PDF or calls an external provider.
+- Its Results view reuses the CSV Export V1 observation projection so the UI and downloaded data agree.
+- Canonical/admitted observations are the default. Quarantined rows require an explicit toggle and retain visible rejection and trust fields.
+- Domain, source, material, experiment type, reaction, metric, product, admission, ownership, evidence-origin, estimated, and local text filters are offered only from loaded archive values.
+- Materials, processes, experiments, calculations, evidence, and relationships remain distinct, with clean empty states.
+- Result selection exposes concise source tracking without displaying the paper's full text.
 
 ## Visual Intelligence V1 scientific guarantees
 

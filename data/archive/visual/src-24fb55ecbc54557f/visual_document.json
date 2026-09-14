@@ -1,0 +1,1022 @@
+{
+  "source_id": "src-24fb55ecbc54557f",
+  "source_checksum": "3c3c14d9789404d26d92ab5ba58b564c870fda0606fccedb352527779859f69b",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-24fb55ecbc54557f",
+    "filename": "d4cp00266k.pdf",
+    "source_checksum": "3c3c14d9789404d26d92ab5ba58b564c870fda0606fccedb352527779859f69b",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 16,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 17,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 18,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 19,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 20,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 21,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 1,
+    "figures_detected": 6,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "data\\archive\\visual\\src-24fb55ecbc54557f\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 12,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 13,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 14,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 15,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 16,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 17,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 18,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 19,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 20,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 21,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl-bf067fd9db9bc2f4",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 1,
+      "headers": [
+        [
+          null,
+          "Published on 07 February 20",
+          "24"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "",
+          "Published on 07 February 20",
+          "24"
+        ],
+        [
+          "T",
+          "UTORIAL REVIEW",
+          ""
+        ],
+        [
+          "",
+          "Licensed under CC-BY",
+          "4.0"
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r0:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 42.535429273332866,
+            "y0": 82.99660055977958,
+            "x1": 55.659193420410155,
+            "y1": 96.0950190226237
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r0:c0",
+            "bbox": {
+              "x0": 42.535429273332866,
+              "y0": 82.99660055977958,
+              "x1": 55.659193420410155,
+              "y1": 96.0950190226237
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r0:c1",
+          "raw_text": "Published on 07 February 20",
+          "text": "Published on 07 February 20",
+          "bbox": {
+            "x0": 55.659193420410155,
+            "y0": 82.99660055977958,
+            "x1": 533.8904852616159,
+            "y1": 96.0950190226237
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r0:c1",
+            "bbox": {
+              "x0": 55.659193420410155,
+              "y0": 82.99660055977958,
+              "x1": 533.8904852616159,
+              "y1": 96.0950190226237
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Published on 07 February 20",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r0:c2",
+          "raw_text": "24",
+          "text": "24",
+          "bbox": {
+            "x0": 533.8904852616159,
+            "y0": 82.99660055977958,
+            "x1": 552.7649780273438,
+            "y1": 96.0950190226237
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r0:c2",
+            "bbox": {
+              "x0": 533.8904852616159,
+              "y0": 82.99660055977958,
+              "x1": 552.7649780273438,
+              "y1": 96.0950190226237
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "24",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r1:c0",
+          "raw_text": "T",
+          "text": "T",
+          "bbox": {
+            "x0": 42.535429273332866,
+            "y0": 96.0950190226237,
+            "x1": 55.659193420410155,
+            "y1": 108.05701955159505
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r1:c0",
+            "bbox": {
+              "x0": 42.535429273332866,
+              "y0": 96.0950190226237,
+              "x1": 55.659193420410155,
+              "y1": 108.05701955159505
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "T",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r1:c1",
+          "raw_text": "UTORIAL REVIEW",
+          "text": "UTORIAL REVIEW",
+          "bbox": {
+            "x0": 55.659193420410155,
+            "y0": 96.0950190226237,
+            "x1": 533.8904852616159,
+            "y1": 108.05701955159505
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r1:c1",
+            "bbox": {
+              "x0": 55.659193420410155,
+              "y0": 96.0950190226237,
+              "x1": 533.8904852616159,
+              "y1": 108.05701955159505
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "UTORIAL REVIEW",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r1:c2",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 533.8904852616159,
+            "y0": 96.0950190226237,
+            "x1": 552.7649780273438,
+            "y1": 108.05701955159505
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r1:c2",
+            "bbox": {
+              "x0": 533.8904852616159,
+              "y0": 96.0950190226237,
+              "x1": 552.7649780273438,
+              "y1": 108.05701955159505
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r2:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 42.535429273332866,
+            "y0": 108.05701955159505,
+            "x1": 55.659193420410155,
+            "y1": 121.15302276611328
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r2:c0",
+            "bbox": {
+              "x0": 42.535429273332866,
+              "y0": 108.05701955159505,
+              "x1": 55.659193420410155,
+              "y1": 121.15302276611328
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r2:c1",
+          "raw_text": "Licensed under CC-BY",
+          "text": "Licensed under CC-BY",
+          "bbox": {
+            "x0": 55.659193420410155,
+            "y0": 108.05701955159505,
+            "x1": 533.8904852616159,
+            "y1": 121.15302276611328
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r2:c1",
+            "bbox": {
+              "x0": 55.659193420410155,
+              "y0": 108.05701955159505,
+              "x1": 533.8904852616159,
+              "y1": 121.15302276611328
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Licensed under CC-BY",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "cell_id": "tbl-bf067fd9db9bc2f4:r2:c2",
+          "raw_text": "4.0",
+          "text": "4.0",
+          "bbox": {
+            "x0": 533.8904852616159,
+            "y0": 108.05701955159505,
+            "x1": 552.7649780273438,
+            "y1": 121.15302276611328
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-24fb55ecbc54557f",
+            "page": 1,
+            "object_id": "tbl-bf067fd9db9bc2f4",
+            "object_type": "table",
+            "row": 2,
+            "column": 2,
+            "cell_id": "tbl-bf067fd9db9bc2f4:r2:c2",
+            "bbox": {
+              "x0": 533.8904852616159,
+              "y0": 108.05701955159505,
+              "x1": 552.7649780273438,
+              "y1": 121.15302276611328
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "4.0",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 42.535429273332866,
+        "y0": 82.99660055977958,
+        "x1": 552.7649780273438,
+        "y1": 121.15302276611328
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "",
+            "Published on 07 February 20",
+            "24"
+          ],
+          [
+            "T",
+            "UTORIAL REVIEW",
+            ""
+          ],
+          [
+            "",
+            "Licensed under CC-BY",
+            "4.0"
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            "Published on 07 February 20",
+            "24"
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            "Published on 07 February 20",
+            "24"
+          ],
+          [
+            "T",
+            "UTORIAL REVIEW",
+            null
+          ],
+          [
+            null,
+            "Licensed under CC-BY",
+            "4.0"
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 1,
+        "object_id": "tbl-bf067fd9db9bc2f4",
+        "object_type": "table",
+        "bbox": {
+          "x0": 42.535429273332866,
+          "y0": 82.99660055977958,
+          "x1": 552.7649780273438,
+          "y1": 121.15302276611328
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig-f2929c434d49721d",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 1,
+      "bbox": {
+        "x0": 42.677001953125,
+        "y0": 137.0780029296875,
+        "x1": 139.86700439453125,
+        "y1": 155.46502685546875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 1,
+        "object_id": "fig-f2929c434d49721d",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 42.677001953125,
+          "y0": 137.0780029296875,
+          "x1": 139.86700439453125,
+          "y1": 155.46502685546875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b0b324c90a375656",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 1,
+      "bbox": {
+        "x0": 41.78300094604492,
+        "y0": 22.678024291992188,
+        "x1": 798.406005859375,
+        "y1": 665.51904296875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 1,
+        "object_id": "fig-b0b324c90a375656",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 41.78300094604492,
+          "y0": 22.678024291992188,
+          "x1": 798.406005859375,
+          "y1": 665.51904296875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-43c2014fbb7d52bb",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 2,
+      "bbox": {
+        "x0": 50.060001373291016,
+        "y0": 567.4400024414062,
+        "x1": 284.4280090332031,
+        "y1": 692.1640014648438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 2,
+        "object_id": "fig-43c2014fbb7d52bb",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.060001373291016,
+          "y0": 567.4400024414062,
+          "x1": 284.4280090332031,
+          "y1": 692.1640014648438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a536eb45abac9a1f",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 3,
+      "figure_number": "2",
+      "caption": "Fig. 2 Charge-controlled switchable CO2 capture boron nitride and borophene materials proposed on the basis of DFT studies. Reproduced from ref. 29 and 30 with permission from American Chemical Society, copyright 2013 and 2017.",
+      "bbox": {
+        "x0": 103.40799713134766,
+        "y0": 49.83404541015625,
+        "x1": 491.8110046386719,
+        "y1": 189.80804443359375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 2 Charge-controlled switchable CO2 capture boron nitride and borophene materials proposed on the basis of DFT studies. Reproduced from ref. 29 and 30 with permission from American Chemical Society, copyright 2013 and 2017."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 3,
+        "object_id": "fig-a536eb45abac9a1f",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 103.40799713134766,
+          "y0": 49.83404541015625,
+          "x1": 491.8110046386719,
+          "y1": 189.80804443359375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 2 Charge-controlled switchable CO2 capture boron nitride and borophene materials proposed on the basis of DFT studies. Reproduced from ref. 29 and 30 with permission from American Chemical Society, copyright 2013 and 2017.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f760c08bfa36b895",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 9,
+      "figure_number": "3",
+      "caption": "Fig. 3 Jacob’s ladder of density functional theory going from the Hartree world of independent electrons (bottom) to the heaven of chemical accuracy (top). n stands for the density, Ex for the exact exchange, and ji(r) for the orbitals.",
+      "bbox": {
+        "x0": 110.89099884033203,
+        "y0": 49.83404541015625,
+        "x1": 223.5970001220703,
+        "y1": 217.36102294921875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3 Jacob’s ladder of density functional theory going from the Hartree world of independent electrons (bottom) to the heaven of chemical accuracy (top). n stands for the density, Ex for the exact exchange, and ji(r) for the orbitals."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 9,
+        "object_id": "fig-f760c08bfa36b895",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 110.89099884033203,
+          "y0": 49.83404541015625,
+          "x1": 223.5970001220703,
+          "y1": 217.36102294921875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3 Jacob’s ladder of density functional theory going from the Hartree world of independent electrons (bottom) to the heaven of chemical accuracy (top). n stands for the density, Ex for the exact exchange, and ji(r) for the orbitals.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-85d1b25c8f7d8906",
+      "source_id": "src-24fb55ecbc54557f",
+      "page": 13,
+      "figure_number": "4",
+      "caption": "Fig. 4 Energy profile of a model catalytic cycle in which the highest value of dE is obtained by considering the energy diﬀerence between TS1–2 and I1 that thus represent the TDTS and TDI, respectively.",
+      "bbox": {
+        "x0": 344.635986328125,
+        "y0": 49.83404541015625,
+        "x1": 511.427001953125,
+        "y1": 204.3790283203125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 4 Energy profile of a model catalytic cycle in which the highest value of dE is obtained by considering the energy diﬀerence between TS1–2 and I1 that thus represent the TDTS and TDI, respectively."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-24fb55ecbc54557f",
+        "page": 13,
+        "object_id": "fig-85d1b25c8f7d8906",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 344.635986328125,
+          "y0": 49.83404541015625,
+          "x1": 511.427001953125,
+          "y1": 204.3790283203125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 4 Energy profile of a model catalytic cycle in which the highest value of dE is obtained by considering the energy diﬀerence between TS1–2 and I1 that thus represent the TDTS and TDI, respectively.",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

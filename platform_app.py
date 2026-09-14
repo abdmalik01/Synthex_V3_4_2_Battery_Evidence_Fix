@@ -9,7 +9,8 @@ import streamlit as st
 from synthex_platform.benchmarks import benchmark_matrix
 from synthex_platform.core.archive import SynthexArchive
 from synthex_platform.core.registry import DomainRegistry
-from synthex_platform.export import export_csv_bundle_zip, export_results_csv
+from synthex_platform.explorer import ExplorerFilters, build_archive_explorer, filter_options, filter_results
+from synthex_platform.export import export_csv_bundle_zip, export_results_csv, export_results_rows_csv
 from synthex_platform.extraction import DomainRouter, SynthexExtractionPipeline
 from synthex_platform.extraction.catalysis_extractor import CatalysisStructuredExtractionValidationError
 from synthex_platform.extraction.domain_extractor import StructuredExtractionValidationError
@@ -36,6 +37,15 @@ registry = DomainRegistry()
 store = JsonlArchiveStore("data/archive/archives.jsonl")
 router = DomainRouter(registry)
 initialize_discovery_state(st.session_state)
+
+
+@st.cache_data(max_entries=8, show_spinner=False)
+def _cached_archive_explorer(archive_json: str, include_quarantined: bool):
+    """Cache the derived view only; the validated archive remains authoritative."""
+    return build_archive_explorer(
+        SynthexArchive.model_validate_json(archive_json),
+        include_quarantined=include_quarantined,
+    )
 
 st.title("Synthex V3.4 · Materials Intelligence Platform")
 st.caption("Literature-derived experimental + computational materials data, with domain routing, provenance and benchmark-ready schemas.")
@@ -389,19 +399,170 @@ elif page == "Digitized Figures":
                 st.error(f"Calibration was not accepted: {error}")
 
 elif page == "Archive Explorer":
-    st.subheader("Local Synthex Archive")
-    archives = list(store.iter_archives() or [])
-    st.write(f"{len(archives)} archived entries")
-    if archives:
-        domains = ["All"] + sorted({a.metadata.domain for a in archives if a.metadata.domain})
-        d = st.selectbox("Filter domain", domains)
-        shown = [a for a in archives if d == "All" or a.metadata.domain == d]
-        for a in shown:
-            title = a.sources[0].title if a.sources else a.metadata.archive_id
-            with st.expander(f"{title or 'Untitled'} · {a.metadata.domain}"):
-                st.json(a.model_dump(exclude_none=True))
+    st.subheader("Archive Explorer")
+    st.caption(
+        "Browse and filter the structured information Synthex extracted from the current paper. "
+        "All views are local and read-only."
+    )
+    archive_data = st.session_state.get("synthex_last_archive")
+    if not archive_data:
+        st.info("No current extraction to explore. Extract a paper first, then return here.")
     else:
-        st.info("No archives yet. V3 uses data/archive/archives.jsonl as its local append-only archive.")
+        current_archive = SynthexArchive.model_validate(archive_data)
+        source = current_archive.sources[0] if current_archive.sources else None
+        with st.container(border=True):
+            st.write(source.title if source and source.title else current_archive.metadata.archive_id)
+            st.caption(
+                f"Domain: {current_archive.metadata.domain or 'unknown'} · "
+                f"Source ID: {source.source_id if source else 'unavailable'}"
+            )
+            if source and source.doi:
+                st.caption(f"DOI: {source.doi}")
+
+        include_quarantined = st.toggle(
+            "Include quarantined",
+            value=False,
+            help=(
+                "Quarantined records remain explicitly marked and are never presented as canonical science."
+            ),
+            key="synthex_explorer_include_quarantined",
+        )
+        explorer = _cached_archive_explorer(
+            current_archive.model_dump_json(exclude_none=True), include_quarantined,
+        )
+        options = filter_options(explorer.results)
+
+        search = st.text_input(
+            "Search loaded results",
+            placeholder="Material, metric, reaction, product, or evidence text",
+            key="synthex_explorer_search",
+            icon=":material/search:",
+        )
+        selected: dict[str, tuple[str, ...]] = {}
+        filter_labels = (
+            ("domain", "Domain"),
+            ("source_title", "Source"),
+            ("material_names", "Material"),
+            ("experiment_type", "Experiment type"),
+            ("reaction", "Reaction"),
+            ("metric", "Metric"),
+            ("product", "Product"),
+            ("admission_status", "Admission status"),
+            ("ownership", "Ownership"),
+            ("evidence_origin", "Evidence origin"),
+        )
+        with st.expander("Filters", icon=":material/filter_alt:"):
+            for start in range(0, len(filter_labels), 3):
+                with st.container(horizontal=True):
+                    for field, label in filter_labels[start:start + 3]:
+                        values = options[field]
+                        if values:
+                            selected[field] = tuple(st.multiselect(
+                                label,
+                                values,
+                                key=f"synthex_explorer_filter_{field}",
+                                width="stretch",
+                            ))
+            estimated_choice = st.segmented_control(
+                "Estimated status",
+                ["All", "Estimated", "Not estimated"],
+                default="All",
+                key="synthex_explorer_estimated",
+            ) if explorer.results else "All"
+        estimated = True if estimated_choice == "Estimated" else False if estimated_choice == "Not estimated" else None
+        filters = ExplorerFilters(
+            **{field: selected.get(field, ()) for field, _ in filter_labels},
+            estimated=estimated,
+            search=search,
+        )
+        shown_results = filter_results(explorer.results, filters)
+
+        result_tab, materials_tab, processes_tab, experiments_tab, calculations_tab, evidence_tab, relationships_tab = st.tabs(
+            ["Results", "Materials", "Processes", "Experiments", "Calculations", "Evidence", "Relationships"]
+        )
+        with result_tab:
+            st.caption(f"{len(shown_results)} observation(s) shown")
+            if any(row.get("admission_status") == "quarantined" for row in shown_results):
+                st.warning("This view includes quarantined records. Check admission status and rejection reason before use.")
+            if shown_results:
+                display_columns = (
+                    "admission_status", "material_names", "reaction", "experiment_type", "metric", "product",
+                    "value", "unit", "temperature", "potential", "reference_electrode", "ownership",
+                    "source_page", "evidence_origin",
+                )
+                display_rows = [{key: row.get(key, "") for key in display_columns} for row in shown_results]
+                selection = st.dataframe(
+                    display_rows,
+                    hide_index=True,
+                    column_order=display_columns,
+                    key="synthex_explorer_results_table",
+                    on_select="rerun",
+                    selection_mode="single-row",
+                )
+                with st.container(horizontal=True):
+                    st.download_button(
+                        "Download filtered CSV",
+                        data=export_results_rows_csv(shown_results),
+                        file_name="filtered_results.csv",
+                        mime="text/csv",
+                        on_click="ignore",
+                        icon=":material/download:",
+                    )
+                selected_rows = selection.selection.rows
+                if selected_rows:
+                    detail = shown_results[selected_rows[0]]
+                    with st.container(border=True):
+                        st.write("Source tracking")
+                        detail_fields = {
+                            "Source title": detail.get("source_title"),
+                            "DOI": detail.get("doi"),
+                            "Page": detail.get("source_page"),
+                            "Evidence origin": detail.get("evidence_origin"),
+                            "Evidence strength": detail.get("evidence_strength"),
+                            "Ownership": detail.get("ownership"),
+                            "Admission status": detail.get("admission_status"),
+                            "Estimated": detail.get("estimated"),
+                            "Rejection reason": detail.get("quarantine_reason"),
+                        }
+                        st.table([{"Field": key, "Value": value or ""} for key, value in detail_fields.items()])
+                        if detail.get("evidence_snippet"):
+                            st.caption("Exact evidence snippet")
+                            st.text(detail["evidence_snippet"])
+                        with st.expander("Additional observation fields"):
+                            st.json(detail)
+            else:
+                st.info("No observations match the current filters.")
+
+        with materials_tab:
+            if explorer.materials:
+                st.dataframe(explorer.materials, hide_index=True)
+            else:
+                st.info("This archive contains no admitted materials.")
+        with processes_tab:
+            if explorer.processes:
+                st.dataframe(explorer.processes, hide_index=True)
+            else:
+                st.info("This archive contains no admitted processes.")
+        with experiments_tab:
+            if explorer.experiments:
+                st.dataframe(explorer.experiments, hide_index=True)
+            else:
+                st.info("This archive contains no admitted experiments.")
+        with calculations_tab:
+            if explorer.calculations:
+                st.dataframe(explorer.calculations, hide_index=True)
+            else:
+                st.info("This archive contains no admitted calculations.")
+        with evidence_tab:
+            if explorer.evidence:
+                st.dataframe(explorer.evidence, hide_index=True)
+            else:
+                st.info("This archive contains no attached evidence records.")
+        with relationships_tab:
+            if explorer.relationships:
+                st.dataframe(explorer.relationships, hide_index=True)
+            else:
+                st.info("This archive contains no relationships.")
 
 elif page == "Knowledge Graph":
     st.subheader("Knowledge graph export")

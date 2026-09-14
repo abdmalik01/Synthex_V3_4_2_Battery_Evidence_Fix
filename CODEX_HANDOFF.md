@@ -51,6 +51,17 @@ spreadsheet compatibility and protects formula-like text without altering negati
 The primary Streamlit app creates these downloads from `synthex_last_archive` and never reruns
 extraction. See `docs/CSV_EXPORT_V1.md` before extending export behavior.
 
+### Archive Explorer V1 - COMPLETE
+
+The primary Streamlit app's Archive Explorer is a read-only view over `synthex_last_archive`.
+`synthex_platform.explorer` builds deterministic tables and filters from the same result projection
+used by CSV Export V1. Canonical observations are the default; quarantine inclusion is explicit and
+never changes admission status. Separate views cover results, materials, processes, experiments,
+calculations, evidence, and relationships. Result selection shows source tracking (title, DOI, page,
+exact snippet, origin/strength, ownership, admission, and estimated state), and filtered rows can be
+downloaded without mutating or reconstructing the archive. Explorer interactions must remain local:
+no PDF parsing, Gemini, Serper, embeddings, FAISS, or web calls.
+
 ---
 
 ## 3. Core architectural principle

@@ -102,6 +102,20 @@ evidence using stable join IDs. Files are UTF-8 with BOM for Windows spreadsheet
 preserve scientific symbols and approximate raw values, and escape formula-like text safely.
 See `docs/CSV_EXPORT_V1.md` for the full contract.
 
+### Archive Explorer
+
+**Archive Explorer V1** lets researchers browse and filter the structured information Synthex
+extracted from the current paper without reading archive JSON. It uses the already-built session
+archive and performs only local, deterministic filtering. Opening the Explorer never re-runs PDF
+parsing or calls Gemini, Serper, embeddings, or the web.
+
+The default Results view shows canonical observations. **Include quarantined** is an explicit
+option; included records remain visibly marked with their ownership, admission status, and
+rejection reason. Materials, processes, experiments, calculations, evidence, and relationships
+have separate views. Selecting a result reveals source tracking: title, DOI, page, exact evidence
+snippet, evidence origin/strength, ownership, admission status, and estimated status. The current
+filtered result set can be downloaded as CSV without changing the archive.
+
 The long-term goal is research usefulness comparable to large materials-data infrastructures, with Synthex differentiated by linking literature-derived **processing → structure/material → computation → experimental conditions → performance** with explicit provenance.
 
 ## V3.4: optional Serper search-assisted enrichment

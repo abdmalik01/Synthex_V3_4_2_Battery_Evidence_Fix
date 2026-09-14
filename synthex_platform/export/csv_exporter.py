@@ -465,9 +465,27 @@ def export_results_csv(
     archive: SynthexArchive, *, include_quarantined: bool = False, excel_compatible: bool = True,
 ) -> bytes:
     """Return a one-observation-per-row CSV derived from ``archive``."""
+    return export_results_rows_csv(
+        project_results_rows(archive, include_quarantined=include_quarantined),
+        excel_compatible=excel_compatible,
+    )
+
+
+def project_results_rows(
+    archive: SynthexArchive, *, include_quarantined: bool = False,
+) -> tuple[dict[str, Any], ...]:
+    """Project archive measurements into immutable, deterministic result rows."""
     if not isinstance(archive, SynthexArchive):
         raise TypeError("archive must be a validated SynthexArchive")
-    return _csv_bytes(RESULTS_HEADERS, _all_results_rows(archive, include_quarantined), bom=excel_compatible)
+    return tuple(_all_results_rows(archive, include_quarantined))
+
+
+def export_results_rows_csv(
+    rows: Iterable[Mapping[str, Any]], *, excel_compatible: bool = True,
+) -> bytes:
+    """Encode a filtered result projection without touching the source archive."""
+    stable_rows = sorted((dict(row) for row in rows), key=lambda row: str(row.get("record_id", "")))
+    return _csv_bytes(RESULTS_HEADERS, stable_rows, bom=excel_compatible)
 
 
 def export_csv_bundle(
