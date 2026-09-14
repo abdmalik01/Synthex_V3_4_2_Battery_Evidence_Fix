@@ -100,7 +100,7 @@ class SynthexExtractionPipeline:
             try:
                 draft = extractor.extract_text(text, source_bundle=source_bundle)
             finally:
-                self.last_provider_audit = dict(extractor.last_provider_audit)
+                self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
             if source_bundle is not None:
                 parser = source_bundle.primary_native_parser()
                 draft._pdf_parser = parser
