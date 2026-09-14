@@ -24,6 +24,10 @@ GOLD_PATHS = {
     "CAT-GOLD-A": BENCHMARK_ROOT / "gold" / "gold_a_heterogeneous_experimental.json",
     "CAT-GOLD-B": BENCHMARK_ROOT / "gold" / "gold_b_electrocatalysis.json",
 }
+_PROVIDER_BLOCK_TOKENS = (
+    "503", "unavailable", "high demand",
+    "429", "resource_exhausted", "quota exceeded", "rate limit",
+)
 
 
 def _gold_document(result: dict[str, Any]) -> dict[str, Any] | None:
@@ -47,12 +51,26 @@ def _metric_score(result: dict[str, Any]) -> dict[str, Any] | None:
     return score_metric_association(gold, document)
 
 
-def _paper_status(result: dict[str, Any]) -> str:
-    status = result.get("extraction_status")
-    if status in {"schema_valid", "routing_only_negative_control"}:
-        return "PASS"
+def _metric_complete(metric_v2: dict[str, Any] | None) -> bool:
+    if metric_v2 is None:
+        return True
+    return metric_v2.get("matched_count") == metric_v2.get("expected_count")
+
+
+def _provider_blocked(result: dict[str, Any]) -> bool:
+    if result.get("extraction_status") != "pipeline_error":
+        return False
     message = str(result.get("error_message") or "").casefold()
-    if status == "pipeline_error" and any(token in message for token in ("503", "unavailable", "high demand")):
+    return any(token in message for token in _PROVIDER_BLOCK_TOKENS)
+
+
+def _paper_status(result: dict[str, Any], metric_v2: dict[str, Any] | None = None) -> str:
+    status = result.get("extraction_status")
+    if status == "routing_only_negative_control":
+        return "PASS"
+    if status == "schema_valid":
+        return "PASS" if _metric_complete(metric_v2) else "SCIENTIFIC_GAP"
+    if _provider_blocked(result):
         return "PROVIDER_BLOCKED"
     return "FAIL"
 
@@ -86,9 +104,9 @@ def main() -> None:
             result_path = output_dir / f"{result['benchmark_id'].lower()}_result.json"
             result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
-        status = _paper_status(result)
+        status = _paper_status(result, metric_v2)
         provider_blocked = provider_blocked or status == "PROVIDER_BLOCKED"
-        scientific_failures = scientific_failures or status == "FAIL"
+        scientific_failures = scientific_failures or status in {"FAIL", "SCIENTIFIC_GAP"}
         safety = result.get("safety") or {}
         for key in ("dft_experimental_leakage", "review_contamination", "digitized_canonical_leakage"):
             safety_totals[key] += int(safety.get(key, 0) or 0)
@@ -120,11 +138,14 @@ def main() -> None:
     )
     safety_ok = all(value == 0 for value in safety_totals.values())
 
-    overall_status = "COMPLETE"
-    if provider_blocked:
+    if provider_blocked and scientific_failures:
+        overall_status = "PROVIDER_BLOCKED_WITH_SCIENTIFIC_GAPS"
+    elif provider_blocked:
         overall_status = "PROVIDER_BLOCKED"
     elif scientific_failures or not routing_ok or not safety_ok:
         overall_status = "FAILED"
+    else:
+        overall_status = "COMPLETE"
 
     report = {
         "run_at": summary.get("run_at"),
