@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "run_at": "2026-09-14T10:07:49.836012+00:00",
+      "benchmark_id": "CAT-GOLD-A",
+      "extraction_status": "schema_valid",
+      "error_type": null,
+      "gemini_calls": 1,
+      "repair_calls": 0,
+      "serper_enabled": false,
+      "target_conversions_passed": false,
+      "captured_model_outputs": {
+        "raw": "cat-gold-a_raw_gemini_response.json"
+      }
+    }
+  ]
+}

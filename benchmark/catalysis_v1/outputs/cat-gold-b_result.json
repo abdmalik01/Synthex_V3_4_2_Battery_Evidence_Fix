@@ -1,0 +1,3158 @@
+{
+  "benchmark_id": "CAT-GOLD-B",
+  "filename": "s41467-020-17690-8.pdf",
+  "route": {
+    "domain": "catalysis",
+    "confidence": 0.915,
+    "paper_types": [
+      "electrocatalysis",
+      "computational_dft",
+      "heterogeneous_catalysis",
+      "catalyst_characterization",
+      "review",
+      "stability_deactivation"
+    ],
+    "scope_status": "supported",
+    "ambiguity_reason": null
+  },
+  "route_correct": true,
+  "scope_correct": true,
+  "subtypes_correct": true,
+  "source_context": {
+    "source_id": "src-3626736bc803a292",
+    "filename": "s41467-020-17690-8.pdf",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 13,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-3626736bc803a292\\visual_document.json"
+  },
+  "extraction_status": "schema_valid",
+  "gemini_calls": 1,
+  "repair_calls": 0,
+  "schema_valid_first_response": true,
+  "schema_valid_repaired_response": false,
+  "persistent_failure": false,
+  "archive": {
+    "metadata": {
+      "archive_id": "arc-581738a9181e27a8",
+      "schema_name": "synthex-archive",
+      "schema_version": "3.4.0",
+      "software_version": "3.4.2",
+      "created_at": "2026-09-13T16:13:59.689304+00:00",
+      "generator": "Synthex V3.4.2",
+      "extractor_model": "gemini-3.5-flash",
+      "domain": "catalysis"
+    },
+    "sources": [
+      {
+        "source_id": "src-1e22eb63a995a554",
+        "source_type": "paper",
+        "title": "Oxygen induced promotion of electrochemical reduction of CO 2 via co-electrolysis",
+        "doi": "10.1038/s41467-020-17690-8",
+        "url": "https://doi.org/10.1038/s41467-020-17690-8",
+        "year": 2020,
+        "authors": [
+          "Ming He",
+          "Chunsong Li",
+          "Haochen Zhang",
+          "Xiaoxia Chang",
+          "Jingguang G. Chen",
+          "William A. Goddard III",
+          "Mu-jeng Cheng",
+          "Bingjun Xu",
+          "Qi Lu"
+        ],
+        "checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93"
+      }
+    ],
+    "materials": [
+      {
+        "material_id": "mat-faa37c80b000e772",
+        "name": "Copper",
+        "formula": "Cu",
+        "composition": {},
+        "elements": [],
+        "structure": {
+          "catalyst_state": "as_synthesized",
+          "components": []
+        },
+        "morphology": {},
+        "defects": [],
+        "dopants": [],
+        "tags": [
+          "catalyst",
+          "state:as_synthesized",
+          "ownership:focal_work"
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "Cu electrodes are prepared by depositing commercial polycrystalline Cu powders (~1 μm) (Supplementary Fig. 2) onto a PTFE-treated carbon ﬁber paper."
+          }
+        ]
+      },
+      {
+        "material_id": "mat-ee2cc08cc6d15d44",
+        "name": "Copper",
+        "formula": "Cu",
+        "composition": {},
+        "elements": [],
+        "structure": {
+          "catalyst_state": "as_synthesized",
+          "components": []
+        },
+        "morphology": {},
+        "defects": [],
+        "dopants": [],
+        "tags": [
+          "catalyst",
+          "state:as_synthesized",
+          "ownership:focal_work"
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil."
+          }
+        ]
+      },
+      {
+        "material_id": "mat-23f36368630ca035",
+        "name": "n-propanol",
+        "composition": {},
+        "elements": [],
+        "structure": {},
+        "morphology": {},
+        "defects": [],
+        "dopants": [],
+        "tags": [
+          "reaction_product"
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)"
+          }
+        ]
+      },
+      {
+        "material_id": "mat-85985890b04b8da3",
+        "name": "methane",
+        "composition": {},
+        "elements": [],
+        "structure": {},
+        "morphology": {},
+        "defects": [],
+        "dopants": [],
+        "tags": [
+          "reaction_product"
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d)."
+          }
+        ]
+      }
+    ],
+    "devices": [],
+    "processes": [
+      {
+        "process_id": "proc-e492fb6afaf4d4ee",
+        "name": "mixing",
+        "family": "catalyst_preparation",
+        "sequence_index": 0,
+        "inputs": [
+          "Cu powder"
+        ],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [
+          {
+            "property": "duration",
+            "raw_value": "20 min",
+            "value": 20.0,
+            "unit": "min",
+            "qualifier": "exact",
+            "conditions": {},
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-564ea50641554b8b",
+        "name": "deposition",
+        "family": "catalyst_preparation",
+        "sequence_index": 1,
+        "inputs": [],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-6451b156689a9b8a",
+        "name": "drying",
+        "family": "catalyst_preparation",
+        "sequence_index": 2,
+        "inputs": [],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [],
+        "atmosphere": "air",
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-f6b87114d9eca014",
+        "name": "deposition",
+        "family": "catalyst_preparation",
+        "sequence_index": 3,
+        "inputs": [
+          "Nafion solution"
+        ],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-ca6cb622d90a6b35",
+        "name": "drying",
+        "family": "catalyst_preparation",
+        "sequence_index": 4,
+        "inputs": [],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [],
+        "atmosphere": "vacuum",
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-712ffd3e79032db3",
+        "name": "pretreatment",
+        "family": "catalyst_preparation",
+        "sequence_index": 5,
+        "inputs": [],
+        "outputs": [
+          "mat-faa37c80b000e772"
+        ],
+        "parameters": [
+          {
+            "property": "duration",
+            "raw_value": "5 min",
+            "value": 5.0,
+            "unit": "min",
+            "qualifier": "exact",
+            "conditions": {},
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+              }
+            ]
+          }
+        ],
+        "atmosphere": "Ar",
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-f8d777a96867f3d6",
+        "name": "other",
+        "family": "catalyst_preparation",
+        "sequence_index": 0,
+        "inputs": [
+          "phosphoric acid"
+        ],
+        "outputs": [
+          "mat-ee2cc08cc6d15d44"
+        ],
+        "parameters": [
+          {
+            "property": "duration",
+            "raw_value": "5 min",
+            "value": 5.0,
+            "unit": "min",
+            "qualifier": "exact",
+            "conditions": {},
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+          }
+        ]
+      },
+      {
+        "process_id": "proc-a4d50ed307efd0aa",
+        "name": "pretreatment",
+        "family": "catalyst_preparation",
+        "sequence_index": 1,
+        "inputs": [],
+        "outputs": [
+          "mat-ee2cc08cc6d15d44"
+        ],
+        "parameters": [
+          {
+            "property": "duration",
+            "raw_value": "5 min",
+            "value": 5.0,
+            "unit": "min",
+            "qualifier": "exact",
+            "conditions": {},
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+              }
+            ]
+          }
+        ],
+        "atmosphere": "Ar",
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+          }
+        ]
+      }
+    ],
+    "experiments": [
+      {
+        "experiment_id": "exp-a9dfc3975bf19dda",
+        "experiment_type": "electrocatalysis",
+        "material_ids": [
+          "mat-faa37c80b000e772"
+        ],
+        "device_ids": [],
+        "target": "CO2 reduction reaction (CO2RR)",
+        "conditions": [],
+        "outputs": [
+          {
+            "property": "onset_potential",
+            "raw_value": "−0.90 V RHE",
+            "value": -0.9,
+            "unit": "V",
+            "qualifier": "unknown",
+            "conditions": {
+              "reaction": "CO2 reduction reaction (CO2RR)",
+              "reaction_class": "co2rr",
+              "product": "n-propanol",
+              "comparability_status": "unknown_basis",
+              "reported_potential_raw": "−0.90",
+              "reported_potential_value": -0.9,
+              "reported_potential_unit": "V",
+              "reported_reference": "RHE",
+              "potential_comparability_key": "reported:RHE:",
+              "conversion_status": "not_attempted"
+            },
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 2,
+                "section": "Results",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)"
+              }
+            ]
+          },
+          {
+            "property": "onset_potential",
+            "raw_value": "−0.95 VRHE",
+            "value": -0.95,
+            "unit": "V",
+            "qualifier": "unknown",
+            "conditions": {
+              "reaction": "CO2 reduction reaction (CO2RR)",
+              "reaction_class": "co2rr",
+              "product": "methane",
+              "comparability_status": "unknown_basis",
+              "reported_potential_raw": "−0.95",
+              "reported_potential_value": -0.95,
+              "reported_potential_unit": "V",
+              "reported_reference": "RHE",
+              "potential_comparability_key": "reported:RHE:",
+              "conversion_status": "not_attempted"
+            },
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 2,
+                "section": "Results",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d)."
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": false,
+            "text_snippet": "To establish the baseline for the co-reduction studies, the CO 2RR with pure CO 2 is conducted in 0.1 M KHCO 3 (Supplementary Fig. 3a)"
+          }
+        ]
+      },
+      {
+        "experiment_id": "exp-d4983c416a87e539",
+        "experiment_type": "electrocatalysis",
+        "material_ids": [
+          "mat-faa37c80b000e772"
+        ],
+        "device_ids": [],
+        "target": "co-electrolysis of CO2 and O2",
+        "conditions": [],
+        "outputs": [
+          {
+            "property": "onset_potential",
+            "raw_value": "−0.75 V RHE",
+            "value": -0.75,
+            "unit": "V",
+            "qualifier": "unknown",
+            "conditions": {
+              "reaction": "co-electrolysis of CO2 and O2",
+              "reaction_class": "co2rr",
+              "product": "methane",
+              "comparability_status": "unknown_basis",
+              "reported_potential_raw": "−0.75",
+              "reported_potential_value": -0.75,
+              "reported_potential_unit": "V",
+              "reported_reference": "RHE",
+              "potential_comparability_key": "reported:RHE:",
+              "conversion_status": "not_attempted"
+            },
+            "evidence": [
+              {
+                "source_id": "src-3626736bc803a292",
+                "page": 2,
+                "section": "Results",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)"
+              }
+            ]
+          }
+        ],
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The co-electrolysis is performed by feeding a mixture of CO 2 and O2 with mole ratios of 9:1 and 8:2."
+          }
+        ]
+      }
+    ],
+    "calculations": [],
+    "relationships": [
+      {
+        "relation_id": "rel-bf115e5ffd345a69",
+        "subject_id": "arc-581738a9181e27a8",
+        "predicate": "reported_by",
+        "object_id": "src-1e22eb63a995a554",
+        "attributes": {},
+        "evidence": []
+      },
+      {
+        "relation_id": "rel-7fee0f27946bbb82",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-e492fb6afaf4d4ee",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-285c69864ce5a375",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-564ea50641554b8b",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-fa03848730518101",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-6451b156689a9b8a",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-6cd86e6a0dd17275",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-f6b87114d9eca014",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-0fe61052d7f2b29f",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-ca6cb622d90a6b35",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-e480a51282d01548",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "processed_by",
+        "object_id": "proc-712ffd3e79032db3",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-0e74836983ea022b",
+        "subject_id": "mat-ee2cc08cc6d15d44",
+        "predicate": "processed_by",
+        "object_id": "proc-f8d777a96867f3d6",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-a723780a81c261f2",
+        "subject_id": "mat-ee2cc08cc6d15d44",
+        "predicate": "processed_by",
+        "object_id": "proc-a4d50ed307efd0aa",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 8,
+            "section": "Methods",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-07a965a9944eaa8a",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "tested_in",
+        "object_id": "exp-a9dfc3975bf19dda",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": false,
+            "text_snippet": "To establish the baseline for the co-reduction studies, the CO 2RR with pure CO 2 is conducted in 0.1 M KHCO 3 (Supplementary Fig. 3a)"
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-40bde4a64ca2e2bb",
+        "subject_id": "exp-a9dfc3975bf19dda",
+        "predicate": "reports",
+        "object_id": "mat-23f36368630ca035",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)"
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-495dd7b920b93e3b",
+        "subject_id": "exp-a9dfc3975bf19dda",
+        "predicate": "reports",
+        "object_id": "mat-85985890b04b8da3",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d)."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-3d81e88520ef530c",
+        "subject_id": "mat-faa37c80b000e772",
+        "predicate": "tested_in",
+        "object_id": "exp-d4983c416a87e539",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The co-electrolysis is performed by feeding a mixture of CO 2 and O2 with mole ratios of 9:1 and 8:2."
+          }
+        ]
+      },
+      {
+        "relation_id": "rel-20881e06f9d59562",
+        "subject_id": "exp-d4983c416a87e539",
+        "predicate": "reports",
+        "object_id": "mat-85985890b04b8da3",
+        "attributes": {},
+        "evidence": [
+          {
+            "source_id": "src-3626736bc803a292",
+            "page": 2,
+            "section": "Results",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true,
+            "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)"
+          }
+        ]
+      }
+    ],
+    "domain_payloads": [
+      {
+        "domain": "catalysis",
+        "schema_version": "1.0-stage2",
+        "tags": [],
+        "values": {
+          "validated_document": {
+            "source": {
+              "title": "Oxygen induced promotion of electrochemical reduction of CO 2 via co-electrolysis",
+              "doi": "10.1038/s41467-020-17690-8",
+              "url": "https://doi.org/10.1038/s41467-020-17690-8",
+              "year": 2020,
+              "authors": [
+                "Ming He",
+                "Chunsong Li",
+                "Haochen Zhang",
+                "Xiaoxia Chang",
+                "Jingguang G. Chen",
+                "William A. Goddard III",
+                "Mu-jeng Cheng",
+                "Bingjun Xu",
+                "Qi Lu"
+              ],
+              "pdf_text_parser": "pypdf"
+            },
+            "paper_types": [
+              "catalyst_synthesis",
+              "catalyst_characterization",
+              "electrocatalysis",
+              "computational_dft"
+            ],
+            "scope_status": "supported",
+            "catalysts": [
+              {
+                "local_id": "cat-cu-powder",
+                "reported_name": "polycrystalline Cu powder",
+                "canonical_name": "Copper",
+                "reported_formula": "Cu",
+                "formula": "Cu",
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": "metal",
+                "state": "as_synthesized",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": {
+                  "raw_value": "~1 μm",
+                  "value": 1.0,
+                  "unit": "μm",
+                  "qualifier": "approx"
+                },
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 2,
+                    "section": "Results",
+                    "text_snippet": "Cu electrodes are prepared by depositing commercial polycrystalline Cu powders (~1 μm) (Supplementary Fig. 2) onto a PTFE-treated carbon ﬁber paper.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "local_id": "cat-cu-foil",
+                "reported_name": "electropolished Cu foil",
+                "canonical_name": "Copper",
+                "reported_formula": "Cu",
+                "formula": "Cu",
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": "metal",
+                "state": "as_synthesized",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Methods",
+                    "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "preparations": [
+              {
+                "preparation_id": "prep-cu-powder",
+                "material_ref": "cat-cu-powder",
+                "name": "Preparation of polycrystalline Cu powder electrode",
+                "ownership": "focal_work",
+                "steps": [
+                  {
+                    "step": "mixing",
+                    "details": "mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min",
+                    "precursors": [
+                      "Cu powder"
+                    ],
+                    "precursor_ratio_raw": null,
+                    "solvents": [
+                      "isopropanol"
+                    ],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": {
+                      "raw_value": "20 min",
+                      "value": 20.0,
+                      "unit": "min",
+                      "qualifier": "exact"
+                    },
+                    "atmosphere": null,
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "deposition",
+                    "details": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper",
+                    "precursors": [],
+                    "precursor_ratio_raw": null,
+                    "solvents": [],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": null,
+                    "atmosphere": null,
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "drying",
+                    "details": "drying in air",
+                    "precursors": [],
+                    "precursor_ratio_raw": null,
+                    "solvents": [],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": null,
+                    "atmosphere": "air",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "deposition",
+                    "details": "180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface",
+                    "precursors": [
+                      "Nafion solution"
+                    ],
+                    "precursor_ratio_raw": null,
+                    "solvents": [
+                      "isopropanol"
+                    ],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": null,
+                    "atmosphere": null,
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "drying",
+                    "details": "dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent",
+                    "precursors": [],
+                    "precursor_ratio_raw": null,
+                    "solvents": [],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": null,
+                    "atmosphere": "vacuum",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "pretreatment",
+                    "details": "pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions",
+                    "precursors": [],
+                    "precursor_ratio_raw": null,
+                    "solvents": [],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": {
+                      "raw_value": "5 min",
+                      "value": 5.0,
+                      "unit": "min",
+                      "qualifier": "exact"
+                    },
+                    "atmosphere": "Ar",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Methods",
+                    "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "preparation_id": "prep-cu-foil",
+                "material_ref": "cat-cu-foil",
+                "name": "Preparation of electropolished Cu foil electrode",
+                "ownership": "focal_work",
+                "steps": [
+                  {
+                    "step": "other",
+                    "details": "electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water",
+                    "precursors": [
+                      "phosphoric acid"
+                    ],
+                    "precursor_ratio_raw": null,
+                    "solvents": [
+                      "water"
+                    ],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": {
+                      "raw_value": "5 min",
+                      "value": 5.0,
+                      "unit": "min",
+                      "qualifier": "exact"
+                    },
+                    "atmosphere": null,
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm).",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "step": "pretreatment",
+                    "details": "pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions",
+                    "precursors": [],
+                    "precursor_ratio_raw": null,
+                    "solvents": [],
+                    "pH": null,
+                    "temperature": null,
+                    "duration": {
+                      "raw_value": "5 min",
+                      "value": 5.0,
+                      "unit": "min",
+                      "qualifier": "exact"
+                    },
+                    "atmosphere": "Ar",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "All electrodes are pretreated in Ar-purged electrolyte at −1V RHE for 5 min to stabilize surface conditions.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Methods",
+                    "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "characterizations": [
+              {
+                "characterization_id": "char-sem",
+                "material_ref": "cat-cu-powder",
+                "method": "SEM",
+                "conditions": {},
+                "results": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 9,
+                    "section": "Methods",
+                    "text_snippet": "The microstructure of the Cu catalyst is characterized by ﬁeld emission scanning electron microscope (Merlin FE-SEM, Zeiss).",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "characterization_id": "char-xrd",
+                "material_ref": "cat-cu-powder",
+                "method": "XRD",
+                "conditions": {},
+                "results": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 9,
+                    "section": "Methods",
+                    "text_snippet": "Powder X-ray diffraction pattern is collected using a Rigaku MiniFlex 600 with Cu K α radiation.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "characterization_id": "char-xps",
+                "material_ref": "cat-cu-powder",
+                "method": "XPS",
+                "conditions": {},
+                "results": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 9,
+                    "section": "Methods",
+                    "text_snippet": "X-ray photoelectron spectroscopy measurements are conducted on a PHI Quantera II and CasaXPS software (Casa Software Ltd., UK) is used to analyze the resulting spectra.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "characterization_id": "char-sers",
+                "material_ref": "cat-cu-powder",
+                "method": "SERS",
+                "conditions": {},
+                "results": [
+                  {
+                    "property": "Raman band of surface hydroxyl",
+                    "raw_value": "706 cm−1",
+                    "value": null,
+                    "unit": null,
+                    "qualifier": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 3,
+                        "section": "In situ surface-enhanced Raman measurements",
+                        "text_snippet": "A prominent band at 706 cm−1 appears at potentials below 0 V RHE in the O 2 atmosphere (Fig. 3c), which has been assigned to the surface hydroxyl spe-cies21.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Methods",
+                    "text_snippet": "In situ Raman spectroscopy measurements are conducted using a custom-made three-electrode electrochemical cell in H-cell con ﬁguration that consists two compartments and is separated by a piece of Na ﬁon ion exchange membrane",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "heterogeneous_experiments": [],
+            "electrocatalysis_experiments": [
+              {
+                "experiment_id": "exp-pure-co2-cu-powder",
+                "catalyst_ref": "cat-cu-powder",
+                "reaction": {
+                  "reported_reaction": "CO2 reduction reaction (CO2RR)",
+                  "reaction_class": "co2rr",
+                  "reactants": [
+                    {
+                      "reported_name": "carbon dioxide",
+                      "formula": "CO2"
+                    }
+                  ],
+                  "products": [
+                    {
+                      "reported_name": "ethylene",
+                      "formula": "C2H4"
+                    },
+                    {
+                      "reported_name": "ethanol",
+                      "formula": "C2H5OH"
+                    },
+                    {
+                      "reported_name": "n-propanol",
+                      "formula": "C3H7OH"
+                    },
+                    {
+                      "reported_name": "acetate",
+                      "formula": "CH3COO-"
+                    },
+                    {
+                      "reported_name": "methane",
+                      "formula": "CH4"
+                    },
+                    {
+                      "reported_name": "carbon monoxide",
+                      "formula": "CO"
+                    },
+                    {
+                      "reported_name": "formate",
+                      "formula": "HCOO-"
+                    },
+                    {
+                      "reported_name": "hydrogen",
+                      "formula": "H2"
+                    }
+                  ]
+                },
+                "working_electrode": "polycrystalline Cu powder on carbon fiber paper",
+                "catalyst_loading": null,
+                "substrate_or_current_collector": "Sigracet 39 BC carbon ﬁber paper",
+                "binder": "Nafion",
+                "geometric_area": null,
+                "electrolyte": "KHCO3",
+                "electrolyte_concentration": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                },
+                "pH": 6.8,
+                "temperature": null,
+                "cell_configuration": "H-type electrochemical cell",
+                "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                "reference_electrode": "Ag/AgCl (3.0 M, BASi)",
+                "counter_electrode": "graphite rod",
+                "rotation_speed": null,
+                "scan_rate": null,
+                "potential_window": null,
+                "controlled_potential": null,
+                "controlled_current": null,
+                "ir_compensation": null,
+                "metrics": [
+                  {
+                    "property": "onset_potential",
+                    "raw_value": "−0.90 V RHE",
+                    "value": -0.9,
+                    "unit": "V",
+                    "qualifier": "unknown",
+                    "product": "n-propanol",
+                    "potential": {
+                      "raw_potential": {
+                        "raw_value": "−0.90",
+                        "value": -0.9,
+                        "unit": "V",
+                        "qualifier": "unknown"
+                      },
+                      "reported_reference": "RHE",
+                      "reported_reference_text": null,
+                      "filling_solution": null,
+                      "filling_solution_concentration": null,
+                      "pH": null,
+                      "temperature": null,
+                      "converted_potential": null,
+                      "converted_reference": null,
+                      "conversion_status": "not_attempted",
+                      "author_formula": null
+                    },
+                    "applied_current": null,
+                    "normalization_basis": null,
+                    "duration": null,
+                    "analytical_method": null,
+                    "derivation": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "partial_current_density",
+                    "raw_value": "~0.5 mA cm −2",
+                    "value": 0.5,
+                    "unit": "mA/cm2",
+                    "qualifier": "approx",
+                    "product": "n-propanol",
+                    "potential": {
+                      "raw_potential": {
+                        "raw_value": "−1.00",
+                        "value": -1.0,
+                        "unit": "V",
+                        "qualifier": "unknown"
+                      },
+                      "reported_reference": "RHE",
+                      "reported_reference_text": null,
+                      "filling_solution": null,
+                      "filling_solution_concentration": null,
+                      "pH": null,
+                      "temperature": null,
+                      "converted_potential": null,
+                      "converted_reference": null,
+                      "conversion_status": "not_attempted",
+                      "author_formula": null
+                    },
+                    "applied_current": null,
+                    "normalization_basis": null,
+                    "duration": null,
+                    "analytical_method": null,
+                    "derivation": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "and to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "onset_potential",
+                    "raw_value": "−0.95 VRHE",
+                    "value": -0.95,
+                    "unit": "V",
+                    "qualifier": "unknown",
+                    "product": "methane",
+                    "potential": {
+                      "raw_potential": {
+                        "raw_value": "−0.95",
+                        "value": -0.95,
+                        "unit": "V",
+                        "qualifier": "unknown"
+                      },
+                      "reported_reference": "RHE",
+                      "reported_reference_text": null,
+                      "filling_solution": null,
+                      "filling_solution_concentration": null,
+                      "pH": null,
+                      "temperature": null,
+                      "converted_potential": null,
+                      "converted_reference": null,
+                      "conversion_status": "not_attempted",
+                      "author_formula": null
+                    },
+                    "applied_current": null,
+                    "normalization_basis": null,
+                    "duration": null,
+                    "analytical_method": null,
+                    "derivation": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d).",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 2,
+                    "section": "Results",
+                    "text_snippet": "To establish the baseline for the co-reduction studies, the CO 2RR with pure CO 2 is conducted in 0.1 M KHCO 3 (Supplementary Fig. 3a)",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp-co-reduction-cu-powder",
+                "catalyst_ref": "cat-cu-powder",
+                "reaction": {
+                  "reported_reaction": "co-electrolysis of CO2 and O2",
+                  "reaction_class": "co2rr",
+                  "reactants": [
+                    {
+                      "reported_name": "carbon dioxide",
+                      "formula": "CO2"
+                    },
+                    {
+                      "reported_name": "oxygen",
+                      "formula": "O2"
+                    }
+                  ],
+                  "products": [
+                    {
+                      "reported_name": "ethylene",
+                      "formula": "C2H4"
+                    },
+                    {
+                      "reported_name": "ethanol",
+                      "formula": "C2H5OH"
+                    },
+                    {
+                      "reported_name": "n-propanol",
+                      "formula": "C3H7OH"
+                    },
+                    {
+                      "reported_name": "acetate",
+                      "formula": "CH3COO-"
+                    },
+                    {
+                      "reported_name": "methane",
+                      "formula": "CH4"
+                    },
+                    {
+                      "reported_name": "carbon monoxide",
+                      "formula": "CO"
+                    },
+                    {
+                      "reported_name": "formate",
+                      "formula": "HCOO-"
+                    },
+                    {
+                      "reported_name": "hydrogen",
+                      "formula": "H2"
+                    }
+                  ]
+                },
+                "working_electrode": "polycrystalline Cu powder on carbon fiber paper",
+                "catalyst_loading": null,
+                "substrate_or_current_collector": "Sigracet 39 BC carbon ﬁber paper",
+                "binder": "Nafion",
+                "geometric_area": null,
+                "electrolyte": "KHCO3",
+                "electrolyte_concentration": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                },
+                "pH": 6.8,
+                "temperature": null,
+                "cell_configuration": "H-type electrochemical cell",
+                "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                "reference_electrode": "Ag/AgCl (3.0 M, BASi)",
+                "counter_electrode": "graphite rod",
+                "rotation_speed": null,
+                "scan_rate": null,
+                "potential_window": null,
+                "controlled_potential": null,
+                "controlled_current": null,
+                "ir_compensation": null,
+                "metrics": [
+                  {
+                    "property": "partial_current_density",
+                    "raw_value": "~0.5 mA cm −2",
+                    "value": 0.5,
+                    "unit": "mA/cm2",
+                    "qualifier": "approx",
+                    "product": "n-propanol",
+                    "potential": {
+                      "raw_potential": {
+                        "raw_value": "-0.75",
+                        "value": -0.75,
+                        "unit": "V",
+                        "qualifier": "unknown"
+                      },
+                      "reported_reference": "RHE",
+                      "reported_reference_text": null,
+                      "filling_solution": null,
+                      "filling_solution_concentration": null,
+                      "pH": null,
+                      "temperature": null,
+                      "converted_potential": null,
+                      "converted_reference": null,
+                      "conversion_status": "not_attempted",
+                      "author_formula": null
+                    },
+                    "applied_current": null,
+                    "normalization_basis": null,
+                    "duration": null,
+                    "analytical_method": null,
+                    "derivation": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "onset_potential",
+                    "raw_value": "−0.75 V RHE",
+                    "value": -0.75,
+                    "unit": "V",
+                    "qualifier": "unknown",
+                    "product": "methane",
+                    "potential": {
+                      "raw_potential": {
+                        "raw_value": "−0.75",
+                        "value": -0.75,
+                        "unit": "V",
+                        "qualifier": "unknown"
+                      },
+                      "reported_reference": "RHE",
+                      "reported_reference_text": null,
+                      "filling_solution": null,
+                      "filling_solution_concentration": null,
+                      "pH": null,
+                      "temperature": null,
+                      "converted_potential": null,
+                      "converted_reference": null,
+                      "conversion_status": "not_attempted",
+                      "author_formula": null
+                    },
+                    "applied_current": null,
+                    "normalization_basis": null,
+                    "duration": null,
+                    "analytical_method": null,
+                    "derivation": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-3626736bc803a292",
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 2,
+                    "section": "Results",
+                    "text_snippet": "The co-electrolysis is performed by feeding a mixture of CO 2 and O2 with mole ratios of 9:1 and 8:2.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp-h2o2-control",
+                "catalyst_ref": "cat-cu-powder",
+                "reaction": {
+                  "reported_reaction": "CO2 reduction reaction (CO2RR) with H2O2 addition",
+                  "reaction_class": "co2rr",
+                  "reactants": [
+                    {
+                      "reported_name": "carbon dioxide",
+                      "formula": "CO2"
+                    },
+                    {
+                      "reported_name": "hydrogen peroxide",
+                      "formula": "H2O2"
+                    }
+                  ],
+                  "products": [
+                    {
+                      "reported_name": "ethylene",
+                      "formula": "C2H4"
+                    },
+                    {
+                      "reported_name": "ethanol",
+                      "formula": "C2H5OH"
+                    },
+                    {
+                      "reported_name": "n-propanol",
+                      "formula": "C3H7OH"
+                    },
+                    {
+                      "reported_name": "acetate",
+                      "formula": "CH3COO-"
+                    },
+                    {
+                      "reported_name": "methane",
+                      "formula": "CH4"
+                    },
+                    {
+                      "reported_name": "carbon monoxide",
+                      "formula": "CO"
+                    },
+                    {
+                      "reported_name": "formate",
+                      "formula": "HCOO-"
+                    },
+                    {
+                      "reported_name": "hydrogen",
+                      "formula": "H2"
+                    }
+                  ]
+                },
+                "working_electrode": "polycrystalline Cu powder on carbon fiber paper",
+                "catalyst_loading": null,
+                "substrate_or_current_collector": "Sigracet 39 BC carbon ﬁber paper",
+                "binder": "Nafion",
+                "geometric_area": null,
+                "electrolyte": "KHCO3 with H2O2",
+                "electrolyte_concentration": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                },
+                "pH": 6.8,
+                "temperature": null,
+                "cell_configuration": "H-type electrochemical cell",
+                "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                "reference_electrode": "Ag/AgCl (3.0 M, BASi)",
+                "counter_electrode": "graphite rod",
+                "rotation_speed": null,
+                "scan_rate": null,
+                "potential_window": null,
+                "controlled_potential": null,
+                "controlled_current": null,
+                "ir_compensation": null,
+                "metrics": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 4,
+                    "section": "In situ surface-enhanced Raman measurements",
+                    "text_snippet": "Introducing up to 10 mM of H 2O2 in the electrolyte of the CO 2RR (with a pure CO 2 feed) leads to a relatively modest change, i.e., less than 10-fold increase, in the production rates of oxygenates and hydrocarbons (Supplementary Fig. 10)",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "stability_tests": [],
+            "calculations": [
+              {
+                "calculation_id": "calc-dft-cu100",
+                "material_refs": [
+                  "cat-cu-powder"
+                ],
+                "calculation_type": "dft",
+                "code": "VASP",
+                "functional": "Perdew – Burke– Ernzerhof",
+                "dispersion_correction": "empirical D2 approach",
+                "plane_wave_cutoff_or_basis": null,
+                "k_points": "3 × 3 × 1",
+                "slab_or_facet": "Cu(100)",
+                "layers": 3,
+                "vacuum_thickness": {
+                  "raw_value": "25 Å",
+                  "value": 25.0,
+                  "unit": "Å",
+                  "qualifier": "exact"
+                },
+                "solvation_model": "VASPsol",
+                "adsorbate_coverage": null,
+                "spin_treatment": null,
+                "outputs": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Computational details",
+                    "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "condition_conflicts": [],
+            "extraction_notes": [],
+            "semantic_warnings": []
+          },
+          "admissibility_audit": {
+            "policy": "catalysis_focal_value_specific_verified_v1",
+            "admitted_quantitative_values": 7,
+            "quarantined_objects_or_values": 6,
+            "quarantine": [
+              {
+                "path": "experiments.exp-pure-co2-cu-powder.metrics.1",
+                "reason": "normalization_basis_unknown",
+                "ownership": "focal_work",
+                "object": {
+                  "property": "partial_current_density",
+                  "raw_value": "~0.5 mA cm −2",
+                  "value": 0.5,
+                  "unit": "mA/cm2",
+                  "qualifier": "approx",
+                  "product": "n-propanol",
+                  "potential": {
+                    "raw_potential": {
+                      "raw_value": "−1.00",
+                      "value": -1.0,
+                      "unit": "V",
+                      "qualifier": "unknown"
+                    },
+                    "reported_reference": "RHE",
+                    "conversion_status": "not_attempted"
+                  },
+                  "ownership": "focal_work",
+                  "evidence": [
+                    {
+                      "source_id": "src-3626736bc803a292",
+                      "page": 2,
+                      "section": "Results",
+                      "text_snippet": "and to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp-pure-co2-cu-powder.electrolyte_concentration",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                }
+              },
+              {
+                "path": "experiments.exp-co-reduction-cu-powder.metrics.0",
+                "reason": "normalization_basis_unknown",
+                "ownership": "focal_work",
+                "object": {
+                  "property": "partial_current_density",
+                  "raw_value": "~0.5 mA cm −2",
+                  "value": 0.5,
+                  "unit": "mA/cm2",
+                  "qualifier": "approx",
+                  "product": "n-propanol",
+                  "potential": {
+                    "raw_potential": {
+                      "raw_value": "-0.75",
+                      "value": -0.75,
+                      "unit": "V",
+                      "qualifier": "unknown"
+                    },
+                    "reported_reference": "RHE",
+                    "conversion_status": "not_attempted"
+                  },
+                  "ownership": "focal_work",
+                  "evidence": [
+                    {
+                      "source_id": "src-3626736bc803a292",
+                      "page": 2,
+                      "section": "Results",
+                      "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp-co-reduction-cu-powder.electrolyte_concentration",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                }
+              },
+              {
+                "path": "experiments.exp-h2o2-control",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "experiment_id": "exp-h2o2-control",
+                  "catalyst_ref": "cat-cu-powder",
+                  "reaction": {
+                    "reported_reaction": "CO2 reduction reaction (CO2RR) with H2O2 addition",
+                    "reaction_class": "co2rr",
+                    "reactants": [
+                      {
+                        "reported_name": "carbon dioxide",
+                        "formula": "CO2"
+                      },
+                      {
+                        "reported_name": "hydrogen peroxide",
+                        "formula": "H2O2"
+                      }
+                    ],
+                    "products": [
+                      {
+                        "reported_name": "ethylene",
+                        "formula": "C2H4"
+                      },
+                      {
+                        "reported_name": "ethanol",
+                        "formula": "C2H5OH"
+                      },
+                      {
+                        "reported_name": "n-propanol",
+                        "formula": "C3H7OH"
+                      },
+                      {
+                        "reported_name": "acetate",
+                        "formula": "CH3COO-"
+                      },
+                      {
+                        "reported_name": "methane",
+                        "formula": "CH4"
+                      },
+                      {
+                        "reported_name": "carbon monoxide",
+                        "formula": "CO"
+                      },
+                      {
+                        "reported_name": "formate",
+                        "formula": "HCOO-"
+                      },
+                      {
+                        "reported_name": "hydrogen",
+                        "formula": "H2"
+                      }
+                    ]
+                  },
+                  "working_electrode": "polycrystalline Cu powder on carbon fiber paper",
+                  "substrate_or_current_collector": "Sigracet 39 BC carbon ﬁber paper",
+                  "binder": "Nafion",
+                  "electrolyte": "KHCO3 with H2O2",
+                  "electrolyte_concentration": {
+                    "raw_value": "0.1 M",
+                    "value": 0.1,
+                    "unit": "M",
+                    "qualifier": "exact"
+                  },
+                  "pH": 6.8,
+                  "cell_configuration": "H-type electrochemical cell",
+                  "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                  "reference_electrode": "Ag/AgCl (3.0 M, BASi)",
+                  "counter_electrode": "graphite rod",
+                  "metrics": [],
+                  "ownership": "focal_work",
+                  "evidence": [
+                    {
+                      "source_id": "src-3626736bc803a292",
+                      "page": 4,
+                      "section": "In situ surface-enhanced Raman measurements",
+                      "text_snippet": "Introducing up to 10 mM of H 2O2 in the electrolyte of the CO 2RR (with a pure CO 2 feed) leads to a relatively modest change, i.e., less than 10-fold increase, in the production rates of oxygenates and hydrocarbons (Supplementary Fig. 10)",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "calculations.calc-dft-cu100",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "calculation_id": "calc-dft-cu100",
+                  "material_refs": [
+                    "cat-cu-powder"
+                  ],
+                  "calculation_type": "dft",
+                  "code": "VASP",
+                  "functional": "Perdew – Burke– Ernzerhof",
+                  "dispersion_correction": "empirical D2 approach",
+                  "k_points": "3 × 3 × 1",
+                  "slab_or_facet": "Cu(100)",
+                  "layers": 3,
+                  "vacuum_thickness": {
+                    "raw_value": "25 Å",
+                    "value": 25.0,
+                    "unit": "Å",
+                    "qualifier": "exact"
+                  },
+                  "solvation_model": "VASPsol",
+                  "outputs": [],
+                  "ownership": "focal_work",
+                  "evidence": [
+                    {
+                      "source_id": "src-3626736bc803a292",
+                      "page": 8,
+                      "section": "Computational details",
+                      "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu.",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "canonical_admission_count": 14
+          },
+          "quarantined_objects_measurements": [
+            {
+              "path": "experiments.exp-pure-co2-cu-powder.metrics.1",
+              "reason": "normalization_basis_unknown",
+              "ownership": "focal_work",
+              "object": {
+                "property": "partial_current_density",
+                "raw_value": "~0.5 mA cm −2",
+                "value": 0.5,
+                "unit": "mA/cm2",
+                "qualifier": "approx",
+                "product": "n-propanol",
+                "potential": {
+                  "raw_potential": {
+                    "raw_value": "−1.00",
+                    "value": -1.0,
+                    "unit": "V",
+                    "qualifier": "unknown"
+                  },
+                  "reported_reference": "RHE",
+                  "conversion_status": "not_attempted"
+                },
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 2,
+                    "section": "Results",
+                    "text_snippet": "and to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp-pure-co2-cu-powder.electrolyte_concentration",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "raw_value": "0.1 M",
+                "value": 0.1,
+                "unit": "M",
+                "qualifier": "exact"
+              }
+            },
+            {
+              "path": "experiments.exp-co-reduction-cu-powder.metrics.0",
+              "reason": "normalization_basis_unknown",
+              "ownership": "focal_work",
+              "object": {
+                "property": "partial_current_density",
+                "raw_value": "~0.5 mA cm −2",
+                "value": 0.5,
+                "unit": "mA/cm2",
+                "qualifier": "approx",
+                "product": "n-propanol",
+                "potential": {
+                  "raw_potential": {
+                    "raw_value": "-0.75",
+                    "value": -0.75,
+                    "unit": "V",
+                    "qualifier": "unknown"
+                  },
+                  "reported_reference": "RHE",
+                  "conversion_status": "not_attempted"
+                },
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 2,
+                    "section": "Results",
+                    "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp-co-reduction-cu-powder.electrolyte_concentration",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "raw_value": "0.1 M",
+                "value": 0.1,
+                "unit": "M",
+                "qualifier": "exact"
+              }
+            },
+            {
+              "path": "experiments.exp-h2o2-control",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "experiment_id": "exp-h2o2-control",
+                "catalyst_ref": "cat-cu-powder",
+                "reaction": {
+                  "reported_reaction": "CO2 reduction reaction (CO2RR) with H2O2 addition",
+                  "reaction_class": "co2rr",
+                  "reactants": [
+                    {
+                      "reported_name": "carbon dioxide",
+                      "formula": "CO2"
+                    },
+                    {
+                      "reported_name": "hydrogen peroxide",
+                      "formula": "H2O2"
+                    }
+                  ],
+                  "products": [
+                    {
+                      "reported_name": "ethylene",
+                      "formula": "C2H4"
+                    },
+                    {
+                      "reported_name": "ethanol",
+                      "formula": "C2H5OH"
+                    },
+                    {
+                      "reported_name": "n-propanol",
+                      "formula": "C3H7OH"
+                    },
+                    {
+                      "reported_name": "acetate",
+                      "formula": "CH3COO-"
+                    },
+                    {
+                      "reported_name": "methane",
+                      "formula": "CH4"
+                    },
+                    {
+                      "reported_name": "carbon monoxide",
+                      "formula": "CO"
+                    },
+                    {
+                      "reported_name": "formate",
+                      "formula": "HCOO-"
+                    },
+                    {
+                      "reported_name": "hydrogen",
+                      "formula": "H2"
+                    }
+                  ]
+                },
+                "working_electrode": "polycrystalline Cu powder on carbon fiber paper",
+                "substrate_or_current_collector": "Sigracet 39 BC carbon ﬁber paper",
+                "binder": "Nafion",
+                "electrolyte": "KHCO3 with H2O2",
+                "electrolyte_concentration": {
+                  "raw_value": "0.1 M",
+                  "value": 0.1,
+                  "unit": "M",
+                  "qualifier": "exact"
+                },
+                "pH": 6.8,
+                "cell_configuration": "H-type electrochemical cell",
+                "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                "reference_electrode": "Ag/AgCl (3.0 M, BASi)",
+                "counter_electrode": "graphite rod",
+                "metrics": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 4,
+                    "section": "In situ surface-enhanced Raman measurements",
+                    "text_snippet": "Introducing up to 10 mM of H 2O2 in the electrolyte of the CO 2RR (with a pure CO 2 feed) leads to a relatively modest change, i.e., less than 10-fold increase, in the production rates of oxygenates and hydrocarbons (Supplementary Fig. 10)",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "calculations.calc-dft-cu100",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "calculation_id": "calc-dft-cu100",
+                "material_refs": [
+                  "cat-cu-powder"
+                ],
+                "calculation_type": "dft",
+                "code": "VASP",
+                "functional": "Perdew – Burke– Ernzerhof",
+                "dispersion_correction": "empirical D2 approach",
+                "k_points": "3 × 3 × 1",
+                "slab_or_facet": "Cu(100)",
+                "layers": 3,
+                "vacuum_thickness": {
+                  "raw_value": "25 Å",
+                  "value": 25.0,
+                  "unit": "Å",
+                  "qualifier": "exact"
+                },
+                "solvation_model": "VASPsol",
+                "outputs": [],
+                "ownership": "focal_work",
+                "evidence": [
+                  {
+                    "source_id": "src-3626736bc803a292",
+                    "page": 8,
+                    "section": "Computational details",
+                    "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu.",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            }
+          ],
+          "normalization_comparability_warnings": [],
+          "conflicts": [],
+          "extraction_notes": [],
+          "source_context": {
+            "source_id": "src-3626736bc803a292",
+            "filename": "s41467-020-17690-8.pdf",
+            "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+            "primary_native_parser": "pypdf",
+            "page_parsers": [
+              {
+                "page": 1,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 2,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 3,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 4,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 5,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 6,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 7,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 8,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 9,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 10,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              }
+            ],
+            "tables_detected": 0,
+            "figures_detected": 13,
+            "ocr_pages_used": [],
+            "digitizations_available": 0,
+            "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-3626736bc803a292\\visual_document.json"
+          }
+        }
+      }
+    ],
+    "quality": {
+      "completeness": 0.5384615384615384,
+      "provenance_coverage": 0.9714285714285714,
+      "unit_normalization_coverage": 0.0,
+      "extraction_confidence": 0.5384615384615384,
+      "semantic_warnings": [
+        "canonical_admission_count:14",
+        "quarantine_count:6",
+        "unresolved_conflict_count:0"
+      ],
+      "validation_status": "schema_validated"
+    }
+  },
+  "safety": {
+    "dft_experimental_leakage": 0,
+    "review_contamination": 0,
+    "digitized_canonical_leakage": 0,
+    "referential_integrity_violations": []
+  },
+  "gold_score": {
+    "catalyst_identity": {
+      "expected_count": 2,
+      "matched_count": 1,
+      "missing": [
+        "polycrystalline Cu with surface hydroxyl species during co-electrolysis"
+      ]
+    },
+    "catalyst_components": {
+      "expected_count": 1,
+      "matched_count": 0,
+      "missing": [
+        "commercial polycrystalline Cu powder"
+      ]
+    },
+    "catalyst_state": {
+      "expected_count": 2,
+      "matched_count": 1,
+      "missing": [
+        "polycrystalline Cu with surface hydroxyl species during co-electrolysis"
+      ]
+    },
+    "metric_association": {
+      "expected_count": 4,
+      "matched_count": 0,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "qualifier": "approx",
+            "product": "n-propanol",
+            "potential": "-0.75 V RHE",
+            "reference_electrode": "RHE",
+            "normalization_basis": "geometric_area",
+            "context": {
+              "catalyst": "commercial polycrystalline Cu powder",
+              "reaction": "co2rr",
+              "feed": "O2-containing CO2 feed"
+            },
+            "evidence_locator": {
+              "page": 2,
+              "section": "Co-reduction of CO2 with O2"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "qualifier": "approx",
+            "product": "n-propanol",
+            "potential": "-1.00 V RHE",
+            "reference_electrode": "RHE",
+            "normalization_basis": "geometric_area",
+            "context": {
+              "catalyst": "commercial polycrystalline Cu powder",
+              "reaction": "co2rr",
+              "feed": "pure CO2"
+            },
+            "evidence_locator": {
+              "page": 2,
+              "section": "Co-reduction of CO2 with O2"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "raw_value": "-0.75 V RHE",
+            "value": -0.75,
+            "unit": "V",
+            "product": "methane",
+            "potential": "-0.75 V RHE",
+            "reference_electrode": "RHE",
+            "context": {
+              "feed": "O2-containing CO2 feed"
+            },
+            "evidence_locator": {
+              "page": 2,
+              "section": "Co-reduction of CO2 with O2"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "raw_value": "-0.95 V RHE",
+            "value": -0.95,
+            "unit": "V",
+            "product": "methane",
+            "potential": "-0.95 V RHE",
+            "reference_electrode": "RHE",
+            "context": {
+              "feed": "pure CO2"
+            },
+            "evidence_locator": {
+              "page": 2,
+              "section": "Co-reduction of CO2 with O2"
+            }
+          },
+          "matched": false
+        }
+      ]
+    },
+    "property_value_unit": {
+      "expected_count": 4,
+      "matched_count": 4,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.75,
+            "unit": "V"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.95,
+            "unit": "V"
+          },
+          "matched": true
+        }
+      ]
+    },
+    "condition_association": {
+      "expected_count": 4,
+      "matched_count": 0,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "context": {
+              "catalyst": "commercial polycrystalline Cu powder",
+              "reaction": "co2rr",
+              "feed": "O2-containing CO2 feed"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "context": {
+              "catalyst": "commercial polycrystalline Cu powder",
+              "reaction": "co2rr",
+              "feed": "pure CO2"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.75,
+            "unit": "V",
+            "context": {
+              "feed": "O2-containing CO2 feed"
+            }
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.95,
+            "unit": "V",
+            "context": {
+              "feed": "pure CO2"
+            }
+          },
+          "matched": false
+        }
+      ]
+    },
+    "product_association": {
+      "expected_count": 4,
+      "matched_count": 4,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "product": "n-propanol"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "product": "n-propanol"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.75,
+            "unit": "V",
+            "product": "methane"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.95,
+            "unit": "V",
+            "product": "methane"
+          },
+          "matched": true
+        }
+      ]
+    },
+    "potential_reference_association": {
+      "expected_count": 4,
+      "matched_count": 4,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "potential": "-0.75 V RHE",
+            "reference_electrode": "RHE"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "potential": "-1.00 V RHE",
+            "reference_electrode": "RHE"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.75,
+            "unit": "V",
+            "potential": "-0.75 V RHE",
+            "reference_electrode": "RHE"
+          },
+          "matched": true
+        },
+        {
+          "expected": {
+            "property": "onset_potential",
+            "value": -0.95,
+            "unit": "V",
+            "potential": "-0.95 V RHE",
+            "reference_electrode": "RHE"
+          },
+          "matched": true
+        }
+      ]
+    },
+    "normalization_basis_association": {
+      "expected_count": 2,
+      "matched_count": 0,
+      "results": [
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "normalization_basis": "geometric_area"
+          },
+          "matched": false
+        },
+        {
+          "expected": {
+            "property": "partial_current_density",
+            "value": 0.5,
+            "unit": "mA cm-2",
+            "normalization_basis": "geometric_area"
+          },
+          "matched": false
+        }
+      ]
+    },
+    "process_extraction": {
+      "expected_preparation_count": 1,
+      "observed_preparation_count": 2
+    },
+    "reaction_identity": {
+      "observed_heterogeneous": 0,
+      "observed_electrocatalysis": 3
+    },
+    "stability_association": {
+      "expected_count": 0,
+      "matched_count": 0,
+      "observed_count": 0,
+      "results": []
+    },
+    "calculation_separation": {
+      "expected_count": 1,
+      "observed_count": 1
+    },
+    "canonical_admission": {
+      "true_canonical_admissions": 7,
+      "false_canonical_admissions": 0,
+      "correct_quarantines": 6,
+      "incorrect_quarantines": 0,
+      "canonical_precision": 1.0
+    },
+    "provenance": {
+      "native_text": 26,
+      "native_table": 0,
+      "figure_caption_or_annotation": 0,
+      "ocr_extracted": 0,
+      "figure_digitized": 0,
+      "other": 0
+    },
+    "ownership": {
+      "focal_work": 17
+    },
+    "conflict_handling": {
+      "expected_count": 0,
+      "observed_count": 0
+    },
+    "referential_integrity_violations": [],
+    "unsupported_potential_conversions": 0
+  }
+}

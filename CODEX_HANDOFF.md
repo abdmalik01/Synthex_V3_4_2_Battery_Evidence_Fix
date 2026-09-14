@@ -40,6 +40,17 @@ Do **not** assume the non-battery/non-gas domains are research-grade yet.
 
 The shared visual layer provides native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, explicit OCR fallback, and calibrated graph digitization. It is not a canonical-admission path: OCR is explicit, and digitized points remain `estimated=true`, `origin="figure_digitized"`, with uncertainty/rejection metadata and `admission_status="not_submitted"` by default. Batteries V1 remains frozen. Read `docs/VISUAL_INTELLIGENCE_V1_STATUS.md` before changing visual code.
 
+### CSV Export V1 — COMPLETE
+
+`synthex_platform.export` provides a read-only, deterministic projection of a validated
+`SynthexArchive`. JSON remains canonical. The default `results.csv` includes admitted records only;
+quarantine inclusion is explicit and visibly marks status, ownership, rejection reason, and audit
+path. The relational ZIP separates sources, materials, processes, experiments, calculations,
+measurements, relationships, and evidence with stable joins. It uses UTF-8 BOM for Windows
+spreadsheet compatibility and protects formula-like text without altering negative numeric values.
+The primary Streamlit app creates these downloads from `synthex_last_archive` and never reruns
+extraction. See `docs/CSV_EXPORT_V1.md` before extending export behavior.
+
 ---
 
 ## 3. Core architectural principle

@@ -1,0 +1,120 @@
+{
+  "corpus_name": "Catalysis / Electrocatalysis V1 Stage 3 controlled real-paper corpus",
+  "status": "curated_real_corpus",
+  "target_papers": 7,
+  "available_real_papers": 7,
+  "required_benchmark_roles": [
+    "heterogeneous_experimental_gold",
+    "co2rr_electrocatalysis_gold",
+    "computational_dft",
+    "stability_deactivation",
+    "review_contamination",
+    "deferred_photocatalysis",
+    "cross_domain_negative_control"
+  ],
+  "entries": [
+    {
+      "benchmark_id": "CAT-GOLD-A",
+      "filename": "1-s2.0-S0360319924005640-main.pdf",
+      "title": "Improved conversion, selectivity, and stability during CO2 methanation by the incorporation of Ce in Ni, Co, and Fe-hydrotalcite-derived catalysts",
+      "doi": "10.1016/j.ijhydene.2024.02.149",
+      "year": 2024,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["catalyst_synthesis", "catalyst_characterization", "heterogeneous_catalysis", "stability_deactivation"],
+      "expected_ownership_behavior": "Focal catalyst, preparation, experiment, and stability records may be admitted only with verified value-specific evidence; cited comparisons remain non-focal.",
+      "expected_scope_status": "supported",
+      "checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+      "benchmark_role": "heterogeneous_experimental_gold",
+      "licensing_source_note": "PDF page 1 states open access under CC BY-NC-ND 4.0."
+    },
+    {
+      "benchmark_id": "CAT-GOLD-B",
+      "filename": "s41467-020-17690-8.pdf",
+      "title": "Oxygen induced promotion of electrochemical reduction of CO2 via co-electrolysis",
+      "doi": "10.1038/s41467-020-17690-8",
+      "year": 2020,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["electrocatalysis", "catalyst_characterization", "computational_dft"],
+      "expected_ownership_behavior": "Focal electrolysis and DFT records stay separate; product/potential/basis associations require verified evidence.",
+      "expected_scope_status": "supported",
+      "checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+      "benchmark_role": "co2rr_electrocatalysis_gold",
+      "licensing_source_note": "PDF page 10 states Creative Commons Attribution 4.0 International."
+    },
+    {
+      "benchmark_id": "CAT-COMPUTE-C",
+      "filename": "molecules-28-03888-v2.pdf",
+      "title": "Theoretical Investigation of HER and OER Electrocatalysts Based on the 2D R-graphyne Completely Composed of Anti-Aromatic Carbon Rings",
+      "doi": "10.3390/molecules28093888",
+      "year": 2023,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["computational_dft", "electrocatalysis"],
+      "expected_ownership_behavior": "Focal DFT outputs become CalculationRecord candidates and never experimental performance.",
+      "expected_scope_status": "supported",
+      "checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+      "benchmark_role": "computational_dft",
+      "licensing_source_note": "PDF page 1 states open access under CC BY 4.0."
+    },
+    {
+      "benchmark_id": "CAT-STABILITY-D",
+      "filename": "Advanced Science - 2025 - Swindell - Improving CO Oxidation Catalysis Over High Entropy Spinels by Increasing Disorder.pdf",
+      "title": "Improving CO Oxidation Catalysis Over High Entropy Spinels by Increasing Disorder",
+      "doi": "10.1002/advs.202413424",
+      "year": 2025,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["heterogeneous_catalysis", "stability_deactivation", "catalyst_synthesis", "catalyst_characterization"],
+      "expected_ownership_behavior": "Focal 4-metal/7-metal catalyst identity and 14 h deactivation associations remain distinct.",
+      "expected_scope_status": "supported",
+      "checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+      "benchmark_role": "stability_deactivation",
+      "licensing_source_note": "PDF page 1 states open access under the Creative Commons Attribution License."
+    },
+    {
+      "benchmark_id": "CAT-REVIEW-E",
+      "filename": "1-s2.0-S0378382025000918-main.pdf",
+      "title": "Progress in heterogeneous catalysis for renewable energy and petrochemical production from biomass",
+      "doi": "10.1016/j.fuproc.2025.108267",
+      "year": 2025,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["review", "heterogeneous_catalysis"],
+      "expected_ownership_behavior": "Cited studies and comparison-table values remain review_summary/comparison_table/cited_prior_work and quarantined.",
+      "expected_scope_status": "supported",
+      "checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+      "benchmark_role": "review_contamination",
+      "licensing_source_note": "PDF page 1 states open access under CC BY 4.0."
+    },
+    {
+      "benchmark_id": "CAT-PHOTO-F",
+      "filename": "materials-18-03513-v3.pdf",
+      "title": "NiO/TiO2 p-n Heterojunction Induced by Radiolysis for Photocatalytic Hydrogen Evolution",
+      "doi": "10.3390/ma18153513",
+      "year": 2025,
+      "expected_route": "catalysis",
+      "expected_subtypes": ["catalyst_synthesis", "catalyst_characterization"],
+      "expected_ownership_behavior": "Focal source data may be preserved, but unsupported V1 photocatalytic performance stays outside canonical Catalysis admission.",
+      "expected_scope_status": "deferred_subtype",
+      "checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+      "benchmark_role": "deferred_photocatalysis",
+      "licensing_source_note": "PDF page 1 states open access under CC BY 4.0."
+    },
+    {
+      "benchmark_id": "CAT-NEGATIVE-G",
+      "filename": "nanomaterials-10-00785.pdf",
+      "title": "Discriminable Sensing Response Behavior to Homogeneous Gases Based on n-ZnO/p-NiO Composites",
+      "doi": "10.3390/nano10040785",
+      "year": 2020,
+      "expected_route": "gas_sensing",
+      "expected_subtypes": [],
+      "expected_ownership_behavior": "Focal gas-sensing work must remain owned by gas_sensing and must not become Catalysis experiments.",
+      "expected_scope_status": "supported",
+      "checksum": "5445d3c928524541ab21c4ca9426e0ff3fa18978258166e52ce2dc1af9a01e53",
+      "benchmark_role": "cross_domain_negative_control",
+      "licensing_source_note": "PDF identifies an MDPI open-access article; no more specific license statement was asserted in this manifest."
+    }
+  ],
+  "notes": [
+    "All seven entries identify locally supplied PDFs by exact filename and SHA-256 checksum.",
+    "Gold A and Gold B truth is independently curated from the PDFs, never from model predictions.",
+    "No paper downloading, Serper lookup, or web search is part of this controlled corpus."
+  ]
+}

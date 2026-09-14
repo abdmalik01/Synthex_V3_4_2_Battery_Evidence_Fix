@@ -1,0 +1,2637 @@
+{
+  "benchmark_id": "CAT-REVIEW-E",
+  "filename": "1-s2.0-S0378382025000918-main.pdf",
+  "route": {
+    "domain": "catalysis",
+    "confidence": 0.944,
+    "paper_types": [
+      "heterogeneous_catalysis",
+      "catalyst_synthesis",
+      "stability_deactivation",
+      "review",
+      "catalyst_characterization",
+      "computational_dft"
+    ],
+    "scope_status": "supported",
+    "ambiguity_reason": null
+  },
+  "route_correct": true,
+  "scope_correct": true,
+  "subtypes_correct": true,
+  "source_context": {
+    "source_id": "src-0b5e032e1e99c2f7",
+    "filename": "1-s2.0-S0378382025000918-main.pdf",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 16,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 17,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 18,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 19,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 20,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 21,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 22,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 23,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 24,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 25,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 26,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 27,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 28,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 29,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 30,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 31,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 32,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 33,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 36,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-0b5e032e1e99c2f7\\visual_document.json"
+  },
+  "extraction_status": "schema_valid",
+  "gemini_calls": 1,
+  "repair_calls": 0,
+  "schema_valid_first_response": true,
+  "schema_valid_repaired_response": false,
+  "persistent_failure": false,
+  "archive": {
+    "metadata": {
+      "archive_id": "arc-b5f43e3f9b19cde3",
+      "schema_name": "synthex-archive",
+      "schema_version": "3.4.0",
+      "software_version": "3.4.2",
+      "created_at": "2026-09-14T07:55:06.640505+00:00",
+      "generator": "Synthex V3.4.2",
+      "extractor_model": "gemini-3.5-flash",
+      "domain": "catalysis"
+    },
+    "sources": [
+      {
+        "source_id": "src-1090acdceb1729b9",
+        "source_type": "paper",
+        "title": "Progress in heterogeneous catalysis for renewable energy and petrochemical production from biomass",
+        "doi": "10.1016/j.fuproc.2025.108267",
+        "url": "https://doi.org/10.1016/j.fuproc.2025.108267",
+        "year": 2025,
+        "authors": [
+          "Ifeanyi Michael Smarte Anekwe",
+          "Stephen Okiemute Akpasi",
+          "Emmanuel Kweinor Tetteh",
+          "Atuman Samaila Joel",
+          "Sherif Ishola Mustapha",
+          "Yusuf Makarfi Isa"
+        ],
+        "checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707"
+      }
+    ],
+    "materials": [],
+    "devices": [],
+    "processes": [],
+    "experiments": [],
+    "calculations": [],
+    "relationships": [
+      {
+        "relation_id": "rel-4b359857def64ad3",
+        "subject_id": "arc-b5f43e3f9b19cde3",
+        "predicate": "reported_by",
+        "object_id": "src-1090acdceb1729b9",
+        "attributes": {},
+        "evidence": []
+      }
+    ],
+    "domain_payloads": [
+      {
+        "domain": "catalysis",
+        "schema_version": "1.0-stage2",
+        "tags": [],
+        "values": {
+          "validated_document": {
+            "source": {
+              "title": "Progress in heterogeneous catalysis for renewable energy and petrochemical production from biomass",
+              "doi": "10.1016/j.fuproc.2025.108267",
+              "url": "https://doi.org/10.1016/j.fuproc.2025.108267",
+              "year": 2025,
+              "authors": [
+                "Ifeanyi Michael Smarte Anekwe",
+                "Stephen Okiemute Akpasi",
+                "Emmanuel Kweinor Tetteh",
+                "Atuman Samaila Joel",
+                "Sherif Ishola Mustapha",
+                "Yusuf Makarfi Isa"
+              ],
+              "pdf_text_parser": "pypdf"
+            },
+            "paper_types": [
+              "review",
+              "heterogeneous_catalysis"
+            ],
+            "scope_status": "supported",
+            "catalysts": [
+              {
+                "local_id": "cat_nimo_zeolite",
+                "reported_name": "NiMo/Zeolite",
+                "canonical_name": null,
+                "reported_formula": null,
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": {
+                  "raw_value": "340",
+                  "value": 340.0,
+                  "unit": "m2/g",
+                  "qualifier": "exact"
+                },
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "NiMo/Zeolite",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "local_id": "cat_hzsm5",
+                "reported_name": "HZSM-5",
+                "canonical_name": null,
+                "reported_formula": null,
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": {
+                  "raw_value": "425",
+                  "value": 425.0,
+                  "unit": "m2/g",
+                  "qualifier": "exact"
+                },
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "HZSM-5",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "local_id": "cat_koh_4a",
+                "reported_name": "KOH/4 A molecular sieve",
+                "canonical_name": null,
+                "reported_formula": null,
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "KOH/4 A \nmolecular sieve",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "local_id": "cat_ru_nc3",
+                "reported_name": "Ru/NC3",
+                "canonical_name": null,
+                "reported_formula": null,
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 11,
+                    "section": "2.1.3. Metal-organic frameworks (MOF)",
+                    "text_snippet": "Ru/NC3",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "local_id": "cat_co_sacs",
+                "reported_name": "Co-SACs",
+                "canonical_name": null,
+                "reported_formula": null,
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 13,
+                    "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                    "text_snippet": "Co-SACs",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "preparations": [],
+            "characterizations": [],
+            "heterogeneous_experiments": [
+              {
+                "experiment_id": "exp_nimo_zeolite",
+                "catalyst_ref": "cat_nimo_zeolite",
+                "reaction": {
+                  "reported_reaction": "Palm oil cracking to biogasoline",
+                  "reaction_class": "hydrocarbon_conversion",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": "BR",
+                "catalyst_mass": null,
+                "feed_composition": [],
+                "flow_rate": null,
+                "whsv": null,
+                "ghsv": null,
+                "pressure": null,
+                "temperature": {
+                  "raw_value": "300–320",
+                  "value": null,
+                  "unit": "°C",
+                  "qualifier": "range"
+                },
+                "carrier_gas": null,
+                "pretreatment_ref": null,
+                "reaction_time": null,
+                "time_on_stream": null,
+                "analytical_method": null,
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "11.93 %",
+                    "value": 11.93,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "biogasoline",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Palm oil",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp_hzsm5",
+                "catalyst_ref": "cat_hzsm5",
+                "reaction": {
+                  "reported_reaction": "Pyrolysis of Chlorella vulgaris",
+                  "reaction_class": "hydrocarbon_conversion",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": "Fixed-bed reactor",
+                "catalyst_mass": null,
+                "feed_composition": [],
+                "flow_rate": {
+                  "raw_value": "30 mL/min",
+                  "value": 30.0,
+                  "unit": "mL/min",
+                  "qualifier": "exact"
+                },
+                "whsv": null,
+                "ghsv": null,
+                "pressure": null,
+                "temperature": {
+                  "raw_value": "510 ± 5",
+                  "value": 510.0,
+                  "unit": "°C",
+                  "qualifier": "approx"
+                },
+                "carrier_gas": null,
+                "pretreatment_ref": null,
+                "reaction_time": null,
+                "time_on_stream": null,
+                "analytical_method": null,
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "25.8 wt%",
+                    "value": 25.8,
+                    "unit": "wt%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "aromatic hydrocarbons",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "When the catalyst\nconcentration increased\nfrom 0 to 9 times the\nbiomass, the yield of\naromatic hydrocarbons\nincreased from 0.9 wt%\nto 25.8 wt%.",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Chlorella \nvulgaris",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp_koh_4a",
+                "catalyst_ref": "cat_koh_4a",
+                "reaction": {
+                  "reported_reaction": "Synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                  "reaction_class": "other_heterogeneous",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": null,
+                "catalyst_mass": null,
+                "feed_composition": [],
+                "flow_rate": null,
+                "whsv": null,
+                "ghsv": null,
+                "pressure": {
+                  "raw_value": "3",
+                  "value": 3.0,
+                  "unit": "MPa",
+                  "qualifier": "exact"
+                },
+                "temperature": {
+                  "raw_value": "180",
+                  "value": 180.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "carrier_gas": null,
+                "pretreatment_ref": null,
+                "reaction_time": {
+                  "raw_value": "6",
+                  "value": 6.0,
+                  "unit": "h",
+                  "qualifier": "exact"
+                },
+                "time_on_stream": null,
+                "analytical_method": null,
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "58.7",
+                    "value": 58.7,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "propylene carbonate",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "Propylene carbonate\n(PC) yield (%) = 58.7",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "yield",
+                    "raw_value": "16.8",
+                    "value": 16.8,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "dimethyl carbonate",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "Dimethyl carbonate\n(DMC) yield\n(%) = 16.8",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Methanol",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp_ru_nc3",
+                "catalyst_ref": "cat_ru_nc3",
+                "reaction": {
+                  "reported_reaction": "hydrogenation of levulinic acid to γ-valerolactone",
+                  "reaction_class": "hydrogenation",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": null,
+                "catalyst_mass": null,
+                "feed_composition": [],
+                "flow_rate": null,
+                "whsv": null,
+                "ghsv": null,
+                "pressure": {
+                  "raw_value": "2 MPa",
+                  "value": 2.0,
+                  "unit": "MPa",
+                  "qualifier": "exact"
+                },
+                "temperature": {
+                  "raw_value": "130 ◦C",
+                  "value": 130.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "carrier_gas": null,
+                "pretreatment_ref": null,
+                "reaction_time": {
+                  "raw_value": "6 h",
+                  "value": 6.0,
+                  "unit": "h",
+                  "qualifier": "exact"
+                },
+                "time_on_stream": null,
+                "analytical_method": null,
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "97 %",
+                    "value": 97.0,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "γ-valerolactone",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 11,
+                        "section": "2.1.3. Metal-organic frameworks (MOF)",
+                        "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "selectivity",
+                    "raw_value": "100 %",
+                    "value": 100.0,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "γ-valerolactone",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 11,
+                        "section": "2.1.3. Metal-organic frameworks (MOF)",
+                        "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 11,
+                    "section": "2.1.3. Metal-organic frameworks (MOF)",
+                    "text_snippet": "The best results were obtained with Ru/NC3 for the hydrogenation of levulinic acid",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": true,
+                    "confidence": null,
+                    "evidence_strength": "verified_native",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              },
+              {
+                "experiment_id": "exp_co_sacs",
+                "catalyst_ref": "cat_co_sacs",
+                "reaction": {
+                  "reported_reaction": "lignin reductive depolymerization",
+                  "reaction_class": "other_heterogeneous",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": null,
+                "catalyst_mass": null,
+                "feed_composition": [],
+                "flow_rate": null,
+                "whsv": null,
+                "ghsv": null,
+                "pressure": null,
+                "temperature": {
+                  "raw_value": "160 ◦C",
+                  "value": 160.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "carrier_gas": null,
+                "pretreatment_ref": null,
+                "reaction_time": null,
+                "time_on_stream": null,
+                "analytical_method": null,
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "41.7 %",
+                    "value": 41.7,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "reactant": null,
+                    "product": "monophenol",
+                    "normalization_basis": null,
+                    "conditions": {},
+                    "derivation": null,
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 14,
+                        "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                        "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 14,
+                    "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                    "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "table_id": null,
+                    "figure_id": null,
+                    "row": null,
+                    "column": null,
+                    "cell_id": null,
+                    "bounding_box": null,
+                    "locator": null,
+                    "verbatim_match": false,
+                    "confidence": null,
+                    "evidence_strength": "unverified",
+                    "estimated": false,
+                    "admission_status": null,
+                    "digitization_id": null
+                  }
+                ]
+              }
+            ],
+            "electrocatalysis_experiments": [],
+            "stability_tests": [],
+            "calculations": [],
+            "condition_conflicts": [],
+            "extraction_notes": [],
+            "semantic_warnings": []
+          },
+          "admissibility_audit": {
+            "policy": "catalysis_focal_value_specific_verified_v1",
+            "admitted_quantitative_values": 0,
+            "quarantined_objects_or_values": 10,
+            "quarantine": [
+              {
+                "path": "catalysts.cat_nimo_zeolite",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "local_id": "cat_nimo_zeolite",
+                  "reported_name": "NiMo/Zeolite",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "bet_surface_area": {
+                    "raw_value": "340",
+                    "value": 340.0,
+                    "unit": "m2/g",
+                    "qualifier": "exact"
+                  },
+                  "active_site_claims": [],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "NiMo/Zeolite",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "catalysts.cat_hzsm5",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "local_id": "cat_hzsm5",
+                  "reported_name": "HZSM-5",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "bet_surface_area": {
+                    "raw_value": "425",
+                    "value": 425.0,
+                    "unit": "m2/g",
+                    "qualifier": "exact"
+                  },
+                  "active_site_claims": [],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "HZSM-5",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "catalysts.cat_koh_4a",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "local_id": "cat_koh_4a",
+                  "reported_name": "KOH/4 A molecular sieve",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "KOH/4 A \nmolecular sieve",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "catalysts.cat_ru_nc3",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "local_id": "cat_ru_nc3",
+                  "reported_name": "Ru/NC3",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 11,
+                      "section": "2.1.3. Metal-organic frameworks (MOF)",
+                      "text_snippet": "Ru/NC3",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "catalysts.cat_co_sacs",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "local_id": "cat_co_sacs",
+                  "reported_name": "Co-SACs",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 13,
+                      "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                      "text_snippet": "Co-SACs",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp_nimo_zeolite",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "experiment_id": "exp_nimo_zeolite",
+                  "catalyst_ref": "cat_nimo_zeolite",
+                  "reaction": {
+                    "reported_reaction": "Palm oil cracking to biogasoline",
+                    "reaction_class": "hydrocarbon_conversion",
+                    "reactants": [],
+                    "products": []
+                  },
+                  "reactor_type": "BR",
+                  "feed_composition": [],
+                  "temperature": {
+                    "raw_value": "300–320",
+                    "unit": "°C",
+                    "qualifier": "range"
+                  },
+                  "metrics": [
+                    {
+                      "property": "yield",
+                      "raw_value": "11.93 %",
+                      "value": 11.93,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "biogasoline",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "Palm oil",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp_hzsm5",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "experiment_id": "exp_hzsm5",
+                  "catalyst_ref": "cat_hzsm5",
+                  "reaction": {
+                    "reported_reaction": "Pyrolysis of Chlorella vulgaris",
+                    "reaction_class": "hydrocarbon_conversion",
+                    "reactants": [],
+                    "products": []
+                  },
+                  "reactor_type": "Fixed-bed reactor",
+                  "feed_composition": [],
+                  "flow_rate": {
+                    "raw_value": "30 mL/min",
+                    "value": 30.0,
+                    "unit": "mL/min",
+                    "qualifier": "exact"
+                  },
+                  "temperature": {
+                    "raw_value": "510 ± 5",
+                    "value": 510.0,
+                    "unit": "°C",
+                    "qualifier": "approx"
+                  },
+                  "metrics": [
+                    {
+                      "property": "yield",
+                      "raw_value": "25.8 wt%",
+                      "value": 25.8,
+                      "unit": "wt%",
+                      "qualifier": "unknown",
+                      "product": "aromatic hydrocarbons",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "When the catalyst\nconcentration increased\nfrom 0 to 9 times the\nbiomass, the yield of\naromatic hydrocarbons\nincreased from 0.9 wt%\nto 25.8 wt%.",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "Chlorella \nvulgaris",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp_koh_4a",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "experiment_id": "exp_koh_4a",
+                  "catalyst_ref": "cat_koh_4a",
+                  "reaction": {
+                    "reported_reaction": "Synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                    "reaction_class": "other_heterogeneous",
+                    "reactants": [],
+                    "products": []
+                  },
+                  "feed_composition": [],
+                  "pressure": {
+                    "raw_value": "3",
+                    "value": 3.0,
+                    "unit": "MPa",
+                    "qualifier": "exact"
+                  },
+                  "temperature": {
+                    "raw_value": "180",
+                    "value": 180.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "reaction_time": {
+                    "raw_value": "6",
+                    "value": 6.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "metrics": [
+                    {
+                      "property": "yield",
+                      "raw_value": "58.7",
+                      "value": 58.7,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "propylene carbonate",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "Propylene carbonate\n(PC) yield (%) = 58.7",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "yield",
+                      "raw_value": "16.8",
+                      "value": 16.8,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "dimethyl carbonate",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "Dimethyl carbonate\n(DMC) yield\n(%) = 16.8",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 20,
+                      "section": "Table 6",
+                      "text_snippet": "Methanol",
+                      "source_type": "table",
+                      "original_source_type": "table_reported",
+                      "table_id": "Table 6",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp_ru_nc3",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "experiment_id": "exp_ru_nc3",
+                  "catalyst_ref": "cat_ru_nc3",
+                  "reaction": {
+                    "reported_reaction": "hydrogenation of levulinic acid to γ-valerolactone",
+                    "reaction_class": "hydrogenation",
+                    "reactants": [],
+                    "products": []
+                  },
+                  "feed_composition": [],
+                  "pressure": {
+                    "raw_value": "2 MPa",
+                    "value": 2.0,
+                    "unit": "MPa",
+                    "qualifier": "exact"
+                  },
+                  "temperature": {
+                    "raw_value": "130 ◦C",
+                    "value": 130.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "reaction_time": {
+                    "raw_value": "6 h",
+                    "value": 6.0,
+                    "unit": "h",
+                    "qualifier": "exact"
+                  },
+                  "metrics": [
+                    {
+                      "property": "yield",
+                      "raw_value": "97 %",
+                      "value": 97.0,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "γ-valerolactone",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 11,
+                          "section": "2.1.3. Metal-organic frameworks (MOF)",
+                          "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "selectivity",
+                      "raw_value": "100 %",
+                      "value": 100.0,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "γ-valerolactone",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 11,
+                          "section": "2.1.3. Metal-organic frameworks (MOF)",
+                          "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 11,
+                      "section": "2.1.3. Metal-organic frameworks (MOF)",
+                      "text_snippet": "The best results were obtained with Ru/NC3 for the hydrogenation of levulinic acid",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": true,
+                      "evidence_strength": "verified_native",
+                      "estimated": false
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "experiments.exp_co_sacs",
+                "reason": "ownership_review_summary",
+                "ownership": "review_summary",
+                "object": {
+                  "experiment_id": "exp_co_sacs",
+                  "catalyst_ref": "cat_co_sacs",
+                  "reaction": {
+                    "reported_reaction": "lignin reductive depolymerization",
+                    "reaction_class": "other_heterogeneous",
+                    "reactants": [],
+                    "products": []
+                  },
+                  "feed_composition": [],
+                  "temperature": {
+                    "raw_value": "160 ◦C",
+                    "value": 160.0,
+                    "unit": "°C",
+                    "qualifier": "exact"
+                  },
+                  "metrics": [
+                    {
+                      "property": "yield",
+                      "raw_value": "41.7 %",
+                      "value": 41.7,
+                      "unit": "%",
+                      "qualifier": "unknown",
+                      "product": "monophenol",
+                      "conditions": {},
+                      "ownership": "review_summary",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 14,
+                          "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                          "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "review_summary",
+                  "evidence": [
+                    {
+                      "source_id": "src-0b5e032e1e99c2f7",
+                      "page": 14,
+                      "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                      "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                      "source_type": "text",
+                      "original_source_type": "native_text",
+                      "verbatim_match": false,
+                      "evidence_strength": "unverified",
+                      "estimated": false
+                    }
+                  ]
+                }
+              }
+            ],
+            "canonical_admission_count": 0
+          },
+          "quarantined_objects_measurements": [
+            {
+              "path": "catalysts.cat_nimo_zeolite",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "local_id": "cat_nimo_zeolite",
+                "reported_name": "NiMo/Zeolite",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "bet_surface_area": {
+                  "raw_value": "340",
+                  "value": 340.0,
+                  "unit": "m2/g",
+                  "qualifier": "exact"
+                },
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "NiMo/Zeolite",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "catalysts.cat_hzsm5",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "local_id": "cat_hzsm5",
+                "reported_name": "HZSM-5",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "bet_surface_area": {
+                  "raw_value": "425",
+                  "value": 425.0,
+                  "unit": "m2/g",
+                  "qualifier": "exact"
+                },
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "HZSM-5",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "catalysts.cat_koh_4a",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "local_id": "cat_koh_4a",
+                "reported_name": "KOH/4 A molecular sieve",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "KOH/4 A \nmolecular sieve",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "catalysts.cat_ru_nc3",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "local_id": "cat_ru_nc3",
+                "reported_name": "Ru/NC3",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 11,
+                    "section": "2.1.3. Metal-organic frameworks (MOF)",
+                    "text_snippet": "Ru/NC3",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "catalysts.cat_co_sacs",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "local_id": "cat_co_sacs",
+                "reported_name": "Co-SACs",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 13,
+                    "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                    "text_snippet": "Co-SACs",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp_nimo_zeolite",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "experiment_id": "exp_nimo_zeolite",
+                "catalyst_ref": "cat_nimo_zeolite",
+                "reaction": {
+                  "reported_reaction": "Palm oil cracking to biogasoline",
+                  "reaction_class": "hydrocarbon_conversion",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": "BR",
+                "feed_composition": [],
+                "temperature": {
+                  "raw_value": "300–320",
+                  "unit": "°C",
+                  "qualifier": "range"
+                },
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "11.93 %",
+                    "value": 11.93,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "biogasoline",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Palm oil",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp_hzsm5",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "experiment_id": "exp_hzsm5",
+                "catalyst_ref": "cat_hzsm5",
+                "reaction": {
+                  "reported_reaction": "Pyrolysis of Chlorella vulgaris",
+                  "reaction_class": "hydrocarbon_conversion",
+                  "reactants": [],
+                  "products": []
+                },
+                "reactor_type": "Fixed-bed reactor",
+                "feed_composition": [],
+                "flow_rate": {
+                  "raw_value": "30 mL/min",
+                  "value": 30.0,
+                  "unit": "mL/min",
+                  "qualifier": "exact"
+                },
+                "temperature": {
+                  "raw_value": "510 ± 5",
+                  "value": 510.0,
+                  "unit": "°C",
+                  "qualifier": "approx"
+                },
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "25.8 wt%",
+                    "value": 25.8,
+                    "unit": "wt%",
+                    "qualifier": "unknown",
+                    "product": "aromatic hydrocarbons",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "When the catalyst\nconcentration increased\nfrom 0 to 9 times the\nbiomass, the yield of\naromatic hydrocarbons\nincreased from 0.9 wt%\nto 25.8 wt%.",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Chlorella \nvulgaris",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp_koh_4a",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "experiment_id": "exp_koh_4a",
+                "catalyst_ref": "cat_koh_4a",
+                "reaction": {
+                  "reported_reaction": "Synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                  "reaction_class": "other_heterogeneous",
+                  "reactants": [],
+                  "products": []
+                },
+                "feed_composition": [],
+                "pressure": {
+                  "raw_value": "3",
+                  "value": 3.0,
+                  "unit": "MPa",
+                  "qualifier": "exact"
+                },
+                "temperature": {
+                  "raw_value": "180",
+                  "value": 180.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "reaction_time": {
+                  "raw_value": "6",
+                  "value": 6.0,
+                  "unit": "h",
+                  "qualifier": "exact"
+                },
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "58.7",
+                    "value": 58.7,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "propylene carbonate",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "Propylene carbonate\n(PC) yield (%) = 58.7",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "yield",
+                    "raw_value": "16.8",
+                    "value": 16.8,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "dimethyl carbonate",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "Dimethyl carbonate\n(DMC) yield\n(%) = 16.8",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 20,
+                    "section": "Table 6",
+                    "text_snippet": "Methanol",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                    "table_id": "Table 6",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp_ru_nc3",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "experiment_id": "exp_ru_nc3",
+                "catalyst_ref": "cat_ru_nc3",
+                "reaction": {
+                  "reported_reaction": "hydrogenation of levulinic acid to γ-valerolactone",
+                  "reaction_class": "hydrogenation",
+                  "reactants": [],
+                  "products": []
+                },
+                "feed_composition": [],
+                "pressure": {
+                  "raw_value": "2 MPa",
+                  "value": 2.0,
+                  "unit": "MPa",
+                  "qualifier": "exact"
+                },
+                "temperature": {
+                  "raw_value": "130 ◦C",
+                  "value": 130.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "reaction_time": {
+                  "raw_value": "6 h",
+                  "value": 6.0,
+                  "unit": "h",
+                  "qualifier": "exact"
+                },
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "97 %",
+                    "value": 97.0,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "γ-valerolactone",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 11,
+                        "section": "2.1.3. Metal-organic frameworks (MOF)",
+                        "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "selectivity",
+                    "raw_value": "100 %",
+                    "value": 100.0,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "γ-valerolactone",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 11,
+                        "section": "2.1.3. Metal-organic frameworks (MOF)",
+                        "text_snippet": "γ-valerolactone was obtained with 97 % yield and 100 % selectivity under the following conditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, 6 h, Ru/NC3 (Ru 8.64 μmol)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 11,
+                    "section": "2.1.3. Metal-organic frameworks (MOF)",
+                    "text_snippet": "The best results were obtained with Ru/NC3 for the hydrogenation of levulinic acid",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "evidence_strength": "verified_native",
+                    "estimated": false
+                  }
+                ]
+              }
+            },
+            {
+              "path": "experiments.exp_co_sacs",
+              "reason": "ownership_review_summary",
+              "ownership": "review_summary",
+              "object": {
+                "experiment_id": "exp_co_sacs",
+                "catalyst_ref": "cat_co_sacs",
+                "reaction": {
+                  "reported_reaction": "lignin reductive depolymerization",
+                  "reaction_class": "other_heterogeneous",
+                  "reactants": [],
+                  "products": []
+                },
+                "feed_composition": [],
+                "temperature": {
+                  "raw_value": "160 ◦C",
+                  "value": 160.0,
+                  "unit": "°C",
+                  "qualifier": "exact"
+                },
+                "metrics": [
+                  {
+                    "property": "yield",
+                    "raw_value": "41.7 %",
+                    "value": 41.7,
+                    "unit": "%",
+                    "qualifier": "unknown",
+                    "product": "monophenol",
+                    "conditions": {},
+                    "ownership": "review_summary",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 14,
+                        "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                        "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "review_summary",
+                "evidence": [
+                  {
+                    "source_id": "src-0b5e032e1e99c2f7",
+                    "page": 14,
+                    "section": "2.1.6.1. Single-atom catalysts (SACs)",
+                    "text_snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- SACs achieved a monophenol yield of 41.7 %",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": false,
+                    "evidence_strength": "unverified",
+                    "estimated": false
+                  }
+                ]
+              }
+            }
+          ],
+          "normalization_comparability_warnings": [],
+          "conflicts": [],
+          "extraction_notes": [],
+          "source_context": {
+            "source_id": "src-0b5e032e1e99c2f7",
+            "filename": "1-s2.0-S0378382025000918-main.pdf",
+            "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+            "primary_native_parser": "pypdf",
+            "page_parsers": [
+              {
+                "page": 1,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 2,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 3,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 4,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 5,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 6,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 7,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 8,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 9,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 10,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 11,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 12,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 13,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 14,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 15,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 16,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 17,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 18,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 19,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 20,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 21,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 22,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 23,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 24,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 25,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 26,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 27,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 28,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 29,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 30,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 31,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 32,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 33,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              }
+            ],
+            "tables_detected": 0,
+            "figures_detected": 36,
+            "ocr_pages_used": [],
+            "digitizations_available": 0,
+            "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-0b5e032e1e99c2f7\\visual_document.json"
+          }
+        }
+      }
+    ],
+    "quality": {
+      "completeness": 0.0,
+      "provenance_coverage": 0.0,
+      "unit_normalization_coverage": 0.0,
+      "extraction_confidence": 0.0,
+      "semantic_warnings": [
+        "canonical_admission_count:0",
+        "quarantine_count:10",
+        "unresolved_conflict_count:0"
+      ],
+      "validation_status": "schema_validated"
+    }
+  },
+  "safety": {
+    "dft_experimental_leakage": 0,
+    "review_contamination": 0,
+    "digitized_canonical_leakage": 0,
+    "referential_integrity_violations": []
+  }
+}

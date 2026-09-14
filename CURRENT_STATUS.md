@@ -7,7 +7,17 @@ Synthex is being developed toward a materials-intelligence platform that links l
 - Gas sensing: live structured extraction, normalization, validation and visualization foundation.
 - Batteries: live domain routing and dedicated extraction, now expanded for true electrode-materials papers.
 - Paper Discovery V1: live primary-platform Serper discovery workspace with cached/budgeted search, explicit unverified discovery candidates and session-only saved bibliography leads. Discovery requires a later real-PDF upload before SourceBundle-based scientific extraction.
+- CSV Export V1: complete deterministic researcher-facing results CSV and relational CSV bundle derived from validated archives. Canonical rows are the default; quarantined rows require explicit opt-in and remain visibly identified. JSON remains canonical.
 - **Visual Intelligence V1 — COMPLETE:** native table extraction, visual provenance and sidecars, figure understanding, generated tables/charts, OCR fallback, and calibrated graph digitization.
+
+## CSV Export V1 guarantees
+
+- Export uses the already-built `SynthexArchive`; it does not rerun extraction or call Gemini, Serper, or the web.
+- `results.csv` contains canonical/admitted measurements by default; `results_all.csv` is an explicit quarantine-inclusive view.
+- Trust columns preserve ownership, admission status, evidence origin, evidence strength, estimated status, rejection reason, and audit path where applicable.
+- Relational tables preserve stable join IDs and keep calculations/DFT separate from experiments.
+- UTF-8 BOM, scientific Unicode, deterministic ordering/JSON-in-cell encoding, blank missing values, and formula-injection protection support safe spreadsheet use.
+- CSV is a derived research view only; archive JSON remains the canonical data model.
 
 ## Visual Intelligence V1 scientific guarantees
 

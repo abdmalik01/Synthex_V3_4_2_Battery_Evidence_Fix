@@ -88,6 +88,20 @@ pytest -q
 - `catalog/benchmark_catalog.json` — benchmark roadmap
 - `schemas/synthex_archive.schema.json` — canonical archive schema
 
+### Researcher CSV exports
+
+After an extraction finishes, **Extract Paper → Export Results** provides **Download JSON**,
+**Download CSV**, and **Download CSV Bundle**. JSON remains canonical; CSV is a deterministic
+derived view of that already-built archive and does not re-run Gemini or extraction.
+
+`results.csv` contains canonical/admitted measurements only. Researchers can explicitly enable
+quarantined rows to receive `results_all.csv`, where every such row is visibly marked with its
+admission status, ownership, rejection reason, and audit path. The relational ZIP separates
+sources, materials, processes, experiments, calculations, measurements, relationships, and
+evidence using stable join IDs. Files are UTF-8 with BOM for Windows spreadsheet compatibility,
+preserve scientific symbols and approximate raw values, and escape formula-like text safely.
+See `docs/CSV_EXPORT_V1.md` for the full contract.
+
 The long-term goal is research usefulness comparable to large materials-data infrastructures, with Synthex differentiated by linking literature-derived **processing → structure/material → computation → experimental conditions → performance** with explicit provenance.
 
 ## V3.4: optional Serper search-assisted enrichment

@@ -23,8 +23,18 @@ SUPPORTED_EVIDENCE_ORIGINS = frozenset(
 )
 
 
+def normalize_catalysis_evidence_text(value: str) -> str:
+    """Normalize Catalysis PDF text, including embedded-NUL parser separators.
+
+    Some native scientific PDFs encode minus/superscript separators as NUL.
+    Treating those bytes as spaces is a parser repair only; it does not alter
+    scientific wording or broaden the Batteries evidence policy.
+    """
+    return normalize_evidence_text(value.replace("\x00", " "))
+
+
 def _contains(candidate: str, snippet: str | None) -> bool:
-    return bool(candidate and snippet) and normalize_evidence_text(snippet) in normalize_evidence_text(candidate)
+    return bool(candidate and snippet) and normalize_catalysis_evidence_text(snippet) in normalize_catalysis_evidence_text(candidate)
 
 
 def _table_candidate(bundle: SourceBundle, evidence: CatalysisEvidence) -> str:
@@ -106,9 +116,9 @@ def evidence_is_value_specific(
     """Require the claimed value itself in a deterministically verified snippet."""
     if not evidence.verbatim_match or not evidence.text_snippet:
         return False
-    snippet = normalize_evidence_text(evidence.text_snippet)
+    snippet = normalize_catalysis_evidence_text(evidence.text_snippet)
     candidates = [raw_value, str(value) if value is not None else None]
-    return any(candidate and normalize_evidence_text(candidate) in snippet for candidate in candidates)
+    return any(candidate and normalize_catalysis_evidence_text(candidate) in snippet for candidate in candidates)
 
 
 def _evidence_objects(value) -> Iterator[CatalysisEvidence]:

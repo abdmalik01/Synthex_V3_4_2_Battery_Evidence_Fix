@@ -8,7 +8,7 @@ from .battery_assembler import assemble_battery_archive
 from .pipeline import SynthexExtractionPipeline
 from .source_context import SourceBundle, SourceMetadata, SourcePageContext, build_source_bundle, compact_source_context, has_prompt_source_context
 from .catalysis_models import CatalysisDocument
-from .catalysis_extractor import CatalysisGeminiExtractor
+from .catalysis_extractor import CatalysisGeminiExtractor, CatalysisStructuredExtractionValidationError
 from .catalysis_assembler import assemble_catalysis_archive
 
 __all__ = [
@@ -17,5 +17,6 @@ __all__ = [
     "assemble_battery_archive", "SynthexExtractionPipeline", "SourceBundle",
     "SourceMetadata", "SourcePageContext", "build_source_bundle", "compact_source_context",
     "has_prompt_source_context",
-    "CatalysisDocument", "CatalysisGeminiExtractor", "assemble_catalysis_archive",
+    "CatalysisDocument", "CatalysisGeminiExtractor", "CatalysisStructuredExtractionValidationError",
+    "assemble_catalysis_archive",
 ]

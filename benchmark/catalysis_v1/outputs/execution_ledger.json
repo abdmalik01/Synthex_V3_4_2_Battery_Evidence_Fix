@@ -1,0 +1,80 @@
+{
+  "stage": "Catalysis / Electrocatalysis V1 Stage 3",
+  "methodology": "Manual ledger of controlled Gemini request attempts made while developing and verifying the real-paper benchmark. Local parsing, routing, scoring, and offline tests are not counted as Gemini calls.",
+  "events": [
+    {
+      "event": "Gold A provider-schema configuration probe",
+      "benchmark_ids": ["CAT-GOLD-A"],
+      "gemini_request_attempts": 1,
+      "content_responses": 0,
+      "repair_calls": 0,
+      "outcome": "provider_rejected_response_json_schema_before_generation"
+    },
+    {
+      "event": "Gold A preliminary extraction",
+      "benchmark_ids": ["CAT-GOLD-A"],
+      "gemini_request_attempts": 1,
+      "content_responses": 1,
+      "repair_calls": 0,
+      "outcome": "schema_valid_low_coverage"
+    },
+    {
+      "event": "Gold A prompt-refined extraction retained as final result",
+      "benchmark_ids": ["CAT-GOLD-A"],
+      "gemini_request_attempts": 1,
+      "content_responses": 1,
+      "repair_calls": 0,
+      "outcome": "schema_valid"
+    },
+    {
+      "event": "Remaining six-role run",
+      "benchmark_ids": ["CAT-GOLD-B", "CAT-COMPUTE-C", "CAT-STABILITY-D", "CAT-REVIEW-E", "CAT-PHOTO-F", "CAT-NEGATIVE-G"],
+      "gemini_request_attempts": 6,
+      "content_responses": 5,
+      "repair_calls": 1,
+      "outcome": "Gold B, DFT, and photocatalysis valid; stability persistently invalid; review SSL EOF; negative control used zero calls"
+    },
+    {
+      "event": "Stability and review bounded rerun",
+      "benchmark_ids": ["CAT-STABILITY-D", "CAT-REVIEW-E"],
+      "gemini_request_attempts": 2,
+      "content_responses": 1,
+      "repair_calls": 0,
+      "outcome": "review schema-valid; stability Windows socket 10053 transport failure"
+    },
+    {
+      "event": "Final stability verification",
+      "benchmark_ids": ["CAT-STABILITY-D"],
+      "gemini_request_attempts": 2,
+      "content_responses": 2,
+      "repair_calls": 1,
+      "outcome": "schema_valid_after_one_repair"
+    },
+    {
+      "event": "Photocatalysis deferred-scope verification",
+      "benchmark_ids": ["CAT-PHOTO-F"],
+      "gemini_request_attempts": 1,
+      "content_responses": 1,
+      "repair_calls": 0,
+      "outcome": "schema_valid_and_router_deferred_scope_enforced"
+    }
+  ],
+  "history_totals": {
+    "gemini_request_attempts": 14,
+    "content_responses": 11,
+    "repair_calls": 2,
+    "provider_configuration_rejections": 1,
+    "transport_failures": 2
+  },
+  "final_saved_result_set": {
+    "gemini_calls": 7,
+    "repair_calls": 1,
+    "catalysis_documents": 6,
+    "schema_valid_first_response": 5,
+    "schema_valid_repaired_response": 1,
+    "persistent_failures": 0,
+    "negative_control_calls": 0
+  },
+  "serper_calls": 0,
+  "web_calls": 0
+}

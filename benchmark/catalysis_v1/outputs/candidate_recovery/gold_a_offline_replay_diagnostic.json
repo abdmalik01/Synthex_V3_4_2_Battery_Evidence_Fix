@@ -1,0 +1,66 @@
+{
+  "diagnostic_type": "offline_replay_of_captured_gold_a_primary_json",
+  "external_calls": 0,
+  "source_pdf": "benchmark/catalysis_v1/corpus_pdfs/1-s2.0-S0360319924005640-main.pdf",
+  "captured_primary_json": "benchmark/catalysis_v1/outputs/gold_a_followup/cat-gold-a_raw_gemini_response.json",
+  "captured_primary_json_sha256": "011596F0D0AFE3CD1255B0BD30DC0DBFFC2B35AEE0045A21AAFBBF93528BF961",
+  "captured_output_review": {
+    "present_representative_metrics": [
+      "MMONiCo + Ce productivity 168 mol CH4 h-1 L-1 at 350 C",
+      "MMONiCo productivity 150 mol CH4 h-1 L-1 at 350 C",
+      "MMONi + Ce productivity 148 mol CH4 h-1 L-1 at 350 C",
+      "MMONiFe + Ce productivity 108 mol CH4 h-1 L-1 at 350 C",
+      "MMONi productivity 105 mol CH4 h-1 L-1 at 350 C",
+      "MMONiFe productivity 80 mol CH4 h-1 L-1 at 350 C"
+    ],
+    "absent_representative_metrics": [
+      "MMONiCo approximately 80 percent CO2 conversion at 350 C",
+      "MMONiFe 50 percent CO2 conversion at 350 C"
+    ],
+    "failure_classification": "selective scientific-output coverage omission",
+    "truncation": false,
+    "schema_repair": false
+  },
+  "candidate_inventory": {
+    "candidates_detected": 24,
+    "high_priority_candidates": 16,
+    "candidates_covered": 2,
+    "high_priority_candidates_covered": 2,
+    "high_priority_candidates_uncovered": 14,
+    "target_candidate": {
+      "candidate_id": "catcand-d993e51db7fe1ace",
+      "page": 9,
+      "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+      "origin": "native_text",
+      "numeric_spans": ["~80", "350", "50", "350"],
+      "unit_spans": ["%", "C"],
+      "lexical_cues": ["conversion"],
+      "ranking_score": 6,
+      "priority": "high",
+      "covered": false
+    }
+  },
+  "canonical_admission_reanalysis": {
+    "representative_productivity_metrics": {
+      "scientifically_eligible": 0,
+      "actually_admitted": 0,
+      "primary_reason": "normalization_basis_unknown",
+      "note": "Five metrics reach quantitative admission and are rejected for unknown normalization; the MMONi parent material/reference fails first because its exact reported name is absent from the linked snippet, and its productivity would still require an explicit normalization basis."
+    },
+    "benchmark_stability_observation": {
+      "scientifically_eligible": 1,
+      "actually_admitted": 1,
+      "linkage_fix": "exact child evidence is linked to its explicitly named existing catalyst and stability may resolve the catalyst through its valid parent experiment reference"
+    },
+    "additional_redundant_stability_observation_admitted": 1,
+    "all_admitted_quantitative_values_including_process_parameters": 4
+  },
+  "live_checkpoint": {
+    "status": "pipeline_error",
+    "provider_error": "503 UNAVAILABLE: model currently experiencing high demand",
+    "primary_calls_reaching_provider": 1,
+    "schema_repair_calls": 0,
+    "coverage_calls": 0,
+    "gold_a_gate_passed": false
+  }
+}

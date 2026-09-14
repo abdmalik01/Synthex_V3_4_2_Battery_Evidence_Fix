@@ -1,0 +1,3056 @@
+{
+  "source_id": "src-36d29fa17f60f9f7",
+  "source_checksum": "5445d3c928524541ab21c4ca9426e0ff3fa18978258166e52ce2dc1af9a01e53",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-36d29fa17f60f9f7",
+    "filename": "nanomaterials-10-00785.pdf",
+    "source_checksum": "5445d3c928524541ab21c4ca9426e0ff3fa18978258166e52ce2dc1af9a01e53",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 5,
+    "figures_detected": 25,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "data\\archive\\visual\\src-36d29fa17f60f9f7\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 12,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 13,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 14,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 15,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl-b96d72068b13378c",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "headers": [
+        [
+          "Exhaust\nElectric Furnace\n+\n_\nExhaust\nFlow Controller\nNeedle Valve\nReaction Temp\nMixer\nTemp Control MFC\nSwitch\nOn-Off Check Valve Mixer\nValve\nHeating Lamp\nAir H2 CO Air\nComputer\nElectrochemical\nWorkstation",
+          null
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          null,
+          "Electrochemical\nWorkstation"
+        ],
+        [
+          "",
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-b96d72068b13378c:r0:c0",
+          "raw_text": "Exhaust\nElectric Furnace\n+\n_\nExhaust\nFlow Controller\nNeedle Valve\nReaction Temp\nMixer\nTemp Control MFC\nSwitch\nOn-Off Check Valve Mixer\nValve\nHeating Lamp\nAir H2 CO Air\nComputer\nElectrochemical\nWorkstation",
+          "text": "Exhaust\nElectric Furnace\n+\n_\nExhaust\nFlow Controller\nNeedle Valve\nReaction Temp\nMixer\nTemp Control MFC\nSwitch\nOn-Off Check Valve Mixer\nValve\nHeating Lamp\nAir H2 CO Air\nComputer\nElectrochemical\nWorkstation",
+          "bbox": {
+            "x0": 241.95794677734375,
+            "y0": 260.03887939453125,
+            "x1": 498.5438639322917,
+            "y1": 431.4136901855469
+          },
+          "row_span": 3,
+          "column_span": 3,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-b96d72068b13378c:r0:c0",
+            "bbox": {
+              "x0": 241.95794677734375,
+              "y0": 260.03887939453125,
+              "x1": 498.5438639322917,
+              "y1": 431.4136901855469
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Exhaust\nElectric Furnace\n+\n_\nExhaust\nFlow Controller\nNeedle Valve\nReaction Temp\nMixer\nTemp Control MFC\nSwitch\nOn-Off Check Valve Mixer\nValve\nHeating Lamp\nAir H2 CO Air\nComputer\nElectrochemical\nWorkstation",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-b96d72068b13378c:r0:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-b96d72068b13378c:r0:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-b96d72068b13378c:r1:c0",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-b96d72068b13378c:r1:c0",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-b96d72068b13378c:r1:c1",
+          "raw_text": "Electrochemical\nWorkstation",
+          "text": "Electrochemical\nWorkstation",
+          "bbox": {
+            "x0": 254.14416226473722,
+            "y0": 407.20440673828125,
+            "x1": 323.99593268500433,
+            "y1": 431.4136901855469
+          },
+          "row_span": 2,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-b96d72068b13378c:r1:c1",
+            "bbox": {
+              "x0": 254.14416226473722,
+              "y0": 407.20440673828125,
+              "x1": 323.99593268500433,
+              "y1": 431.4136901855469
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Electrochemical\nWorkstation",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-b96d72068b13378c:r2:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 241.95794677734375,
+            "y0": 416.58900960286456,
+            "x1": 254.14416226473722,
+            "y1": 431.4136901855469
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-b96d72068b13378c:r2:c0",
+            "bbox": {
+              "x0": 241.95794677734375,
+              "y0": 416.58900960286456,
+              "x1": 254.14416226473722,
+              "y1": 431.4136901855469
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-b96d72068b13378c:r2:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-b96d72068b13378c",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-b96d72068b13378c:r2:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 241.95794677734375,
+        "y0": 260.03887939453125,
+        "x1": 498.5438639322917,
+        "y1": 431.4136901855469
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "Exhaust\nElectric Furnace\n+\n_\nExhaust\nFlow Controller\nNeedle Valve\nReaction Temp\nMixer\nTemp Control MFC\nSwitch\nOn-Off Check Valve Mixer\nValve\nHeating Lamp\nAir H2 CO Air\nComputer\nElectrochemical\nWorkstation",
+            null
+          ],
+          [
+            null,
+            "Electrochemical\nWorkstation"
+          ],
+          [
+            "",
+            null
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            "Exhaust Electric Furnace + _ Exhaust Flow Controller Needle Valve Reaction Temp Mixer Temp Control MFC Switch On-Off Check Valve Mixer Valve Heating Lamp Air H2 CO Air Computer Electrochemical Workstation",
+            null
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            "Electrochemical Workstation"
+          ],
+          [
+            null,
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "tbl-b96d72068b13378c",
+        "object_type": "table",
+        "bbox": {
+          "x0": 241.95794677734375,
+          "y0": 260.03887939453125,
+          "x1": 498.5438639322917,
+          "y1": 431.4136901855469
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-5b13ea1099de4303",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "headers": [
+        [
+          "m",
+          null
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "m",
+          ""
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-5b13ea1099de4303:r0:c0",
+          "raw_text": "m",
+          "text": "m",
+          "bbox": {
+            "x0": 109.88705444335938,
+            "y0": 302.5135787963867,
+            "x1": 115.01905059814453,
+            "y1": 410.44207763671875
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-5b13ea1099de4303",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-5b13ea1099de4303:r0:c0",
+            "bbox": {
+              "x0": 109.88705444335938,
+              "y0": 302.5135787963867,
+              "x1": 115.01905059814453,
+              "y1": 410.44207763671875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "m",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-5b13ea1099de4303:r0:c1",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 115.01905059814453,
+            "y0": 302.5135787963867,
+            "x1": 120.7259521484375,
+            "y1": 410.44207763671875
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-5b13ea1099de4303",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-5b13ea1099de4303:r0:c1",
+            "bbox": {
+              "x0": 115.01905059814453,
+              "y0": 302.5135787963867,
+              "x1": 120.7259521484375,
+              "y1": 410.44207763671875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 109.88705444335938,
+        "y0": 302.5135787963867,
+        "x1": 120.7259521484375,
+        "y1": 410.44207763671875
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "m",
+            ""
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            "m",
+            null
+          ]
+        ],
+        "rows": [
+          [
+            "m",
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "tbl-5b13ea1099de4303",
+        "object_type": "table",
+        "bbox": {
+          "x0": 109.88705444335938,
+          "y0": 302.5135787963867,
+          "x1": 120.7259521484375,
+          "y1": 410.44207763671875
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-8ab94c358d5cae73",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "headers": [
+        [
+          null,
+          "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+          "MFC\nCheck Valve"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "",
+          "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+          "MFC\nCheck Valve"
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-8ab94c358d5cae73:r0:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 331.34194564819336,
+            "y0": 334.0128506251744,
+            "x1": 347.3583475748698,
+            "y1": 380.3094902038574
+          },
+          "row_span": 2,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-8ab94c358d5cae73",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-8ab94c358d5cae73:r0:c0",
+            "bbox": {
+              "x0": 331.34194564819336,
+              "y0": 334.0128506251744,
+              "x1": 347.3583475748698,
+              "y1": 380.3094902038574
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-8ab94c358d5cae73:r0:c1",
+          "raw_text": "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+          "text": "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+          "bbox": {
+            "x0": 347.3583475748698,
+            "y0": 334.0128506251744,
+            "x1": 435.64078521728516,
+            "y1": 380.3094902038574
+          },
+          "row_span": 2,
+          "column_span": 2,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-8ab94c358d5cae73",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-8ab94c358d5cae73:r0:c1",
+            "bbox": {
+              "x0": 347.3583475748698,
+              "y0": 334.0128506251744,
+              "x1": 435.64078521728516,
+              "y1": 380.3094902038574
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-8ab94c358d5cae73:r0:c2",
+          "raw_text": "MFC\nCheck Valve",
+          "text": "MFC\nCheck Valve",
+          "bbox": {
+            "x0": 382.4300231933594,
+            "y0": 334.0128506251744,
+            "x1": 435.64078521728516,
+            "y1": 369.04197883605957
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 3,
+            "object_id": "tbl-8ab94c358d5cae73",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-8ab94c358d5cae73:r0:c2",
+            "bbox": {
+              "x0": 382.4300231933594,
+              "y0": 334.0128506251744,
+              "x1": 435.64078521728516,
+              "y1": 369.04197883605957
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "MFC\nCheck Valve",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 331.34194564819336,
+        "y0": 334.0128506251744,
+        "x1": 435.64078521728516,
+        "y1": 380.3094902038574
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "",
+            "Mixer\nMFC\nSwitch\nCheck Valve\nValve",
+            "MFC\nCheck Valve"
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            "Mixer MFC Switch Check Valve Valve",
+            "MFC Check Valve"
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            "Mixer MFC Switch Check Valve Valve",
+            "MFC Check Valve"
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "tbl-8ab94c358d5cae73",
+        "object_type": "table",
+        "bbox": {
+          "x0": 331.34194564819336,
+          "y0": 334.0128506251744,
+          "x1": 435.64078521728516,
+          "y1": 380.3094902038574
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-5d8551897d402ad8",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 9,
+      "headers": [
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          null,
+          null
+        ],
+        [
+          "Nanomaterials 2020, 10, 785 9 of 15",
+          null,
+          null
+        ],
+        [
+          "",
+          null,
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r0:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 1.435028076171875,
+            "x1": 517.1119995117188,
+            "y1": 14.935028076171875
+          },
+          "row_span": 1,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r0:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 1.435028076171875,
+              "x1": 517.1119995117188,
+              "y1": 14.935028076171875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r0:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r0:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r0:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r0:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r1:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 14.935028076171875,
+            "x1": 517.1119995117188,
+            "y1": 28.445068359375
+          },
+          "row_span": 1,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r1:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 14.935028076171875,
+              "x1": 517.1119995117188,
+              "y1": 28.445068359375
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r1:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r1:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r1:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r1:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r2:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 28.445068359375,
+            "x1": 334.79390801323785,
+            "y1": 41.92505900065104
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r2:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 28.445068359375,
+              "x1": 334.79390801323785,
+              "y1": 41.92505900065104
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r2:c1",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 334.79390801323785,
+            "y0": 28.445068359375,
+            "x1": 357.5438537597656,
+            "y1": 41.92505900065104
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r2:c1",
+            "bbox": {
+              "x0": 334.79390801323785,
+              "y0": 28.445068359375,
+              "x1": 357.5438537597656,
+              "y1": 41.92505900065104
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r2:c2",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 357.5438537597656,
+            "y0": 28.445068359375,
+            "x1": 517.1119995117188,
+            "y1": 41.92505900065104
+          },
+          "row_span": 1,
+          "column_span": 2,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 2,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r2:c2",
+            "bbox": {
+              "x0": 357.5438537597656,
+              "y0": 28.445068359375,
+              "x1": 517.1119995117188,
+              "y1": 41.92505900065104
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r3:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 41.92505900065104,
+            "x1": 517.1119995117188,
+            "y1": 55.405059814453125
+          },
+          "row_span": 1,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 3,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r3:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 41.92505900065104,
+              "x1": 517.1119995117188,
+              "y1": 55.405059814453125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r3:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 3,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r3:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r3:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 3,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r3:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r4:c0",
+          "raw_text": "Nanomaterials 2020, 10, 785 9 of 15",
+          "text": "Nanomaterials 2020, 10, 785 9 of 15",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 55.405059814453125,
+            "x1": 517.1119995117188,
+            "y1": 68.87506103515625
+          },
+          "row_span": 1,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 4,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r4:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 55.405059814453125,
+              "x1": 517.1119995117188,
+              "y1": 68.87506103515625
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Nanomaterials 2020, 10, 785 9 of 15",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r4:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 4,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r4:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r4:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 4,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r4:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "cell_id": "tbl-5d8551897d402ad8:r5:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 74.85199737548828,
+            "y0": 68.87506103515625,
+            "x1": 363.53632100423175,
+            "y1": 82.34506225585938
+          },
+          "row_span": 1,
+          "column_span": 3,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 5,
+            "column": 0,
+            "cell_id": "tbl-5d8551897d402ad8:r5:c0",
+            "bbox": {
+              "x0": 74.85199737548828,
+              "y0": 68.87506103515625,
+              "x1": 363.53632100423175,
+              "y1": 82.34506225585938
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "cell_id": "tbl-5d8551897d402ad8:r5:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 5,
+            "column": 1,
+            "cell_id": "tbl-5d8551897d402ad8:r5:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "cell_id": "tbl-5d8551897d402ad8:r5:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 9,
+            "object_id": "tbl-5d8551897d402ad8",
+            "object_type": "table",
+            "row": 5,
+            "column": 2,
+            "cell_id": "tbl-5d8551897d402ad8:r5:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 74.85199737548828,
+        "y0": 1.435028076171875,
+        "x1": 517.1119995117188,
+        "y1": 82.34506225585938
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "",
+            null,
+            null
+          ],
+          [
+            "",
+            null,
+            null
+          ],
+          [
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            null,
+            null
+          ],
+          [
+            "Nanomaterials 2020, 10, 785 9 of 15",
+            null,
+            null
+          ],
+          [
+            "",
+            null,
+            null
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            null,
+            null
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null
+          ],
+          [
+            "Nanomaterials 2020, 10, 785 9 of 15",
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 9,
+        "object_id": "tbl-5d8551897d402ad8",
+        "object_type": "table",
+        "bbox": {
+          "x0": 74.85199737548828,
+          "y0": 1.435028076171875,
+          "x1": 517.1119995117188,
+          "y1": 82.34506225585938
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-526aaef8f5a3cb0b",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 12,
+      "headers": [
+        [
+          null,
+          null,
+          null,
+          "CO"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": true
+      },
+      "rows": [
+        [
+          "",
+          null,
+          "",
+          "H2"
+        ],
+        [
+          "300oC\n400oC\n350oC",
+          "",
+          null,
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r0:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 250.5027313232422,
+            "y0": 190.63762530158547,
+            "x1": 307.26014709472656,
+            "y1": 228.66580338911578
+          },
+          "row_span": 1,
+          "column_span": 2,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r0:c0",
+            "bbox": {
+              "x0": 250.5027313232422,
+              "y0": 190.63762530158547,
+              "x1": 307.26014709472656,
+              "y1": 228.66580338911578
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r0:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r0:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r0:c2",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 307.26014709472656,
+            "y0": 190.63762530158547,
+            "x1": 317.3494873046875,
+            "y1": 228.66580338911578
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r0:c2",
+            "bbox": {
+              "x0": 307.26014709472656,
+              "y0": 190.63762530158547,
+              "x1": 317.3494873046875,
+              "y1": 228.66580338911578
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r0:c3",
+          "raw_text": "H2",
+          "text": "H2",
+          "bbox": {
+            "x0": 317.3494873046875,
+            "y0": 190.63762530158547,
+            "x1": 363.9677734375,
+            "y1": 228.66580338911578
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 0,
+            "column": 3,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r0:c3",
+            "bbox": {
+              "x0": 317.3494873046875,
+              "y0": 190.63762530158547,
+              "x1": 363.9677734375,
+              "y1": 228.66580338911578
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "H2",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r1:c0",
+          "raw_text": "300oC\n400oC\n350oC",
+          "text": "300oC\n400oC\n350oC",
+          "bbox": {
+            "x0": 250.5027313232422,
+            "y0": 228.66580338911578,
+            "x1": 363.9677734375,
+            "y1": 275.701423058143
+          },
+          "row_span": 2,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r1:c0",
+            "bbox": {
+              "x0": 250.5027313232422,
+              "y0": 228.66580338911578,
+              "x1": 363.9677734375,
+              "y1": 275.701423058143
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "300oC\n400oC\n350oC",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r1:c1",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 297.12103271484375,
+            "y0": 228.66580338911578,
+            "x1": 307.26014709472656,
+            "y1": 262.5155537923177
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r1:c1",
+            "bbox": {
+              "x0": 297.12103271484375,
+              "y0": 228.66580338911578,
+              "x1": 307.26014709472656,
+              "y1": 262.5155537923177
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r1:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r1:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "cell_id": "tbl-526aaef8f5a3cb0b:r1:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-36d29fa17f60f9f7",
+            "page": 12,
+            "object_id": "tbl-526aaef8f5a3cb0b",
+            "object_type": "table",
+            "row": 1,
+            "column": 3,
+            "cell_id": "tbl-526aaef8f5a3cb0b:r1:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 250.5027313232422,
+        "y0": 190.63762530158547,
+        "x1": 363.9677734375,
+        "y1": 275.701423058143
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "",
+            null,
+            "",
+            "H2"
+          ],
+          [
+            "300oC\n400oC\n350oC",
+            "",
+            null,
+            null
+          ]
+        ],
+        "header_external": true
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            null,
+            null,
+            "CO"
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            null,
+            null,
+            "H2"
+          ],
+          [
+            "300oC 400oC 350oC",
+            null,
+            null,
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 12,
+        "object_id": "tbl-526aaef8f5a3cb0b",
+        "object_type": "table",
+        "bbox": {
+          "x0": 250.5027313232422,
+          "y0": 190.63762530158547,
+          "x1": 363.9677734375,
+          "y1": 275.701423058143
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig-c0b5ea610b49fb4d",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 1,
+      "bbox": {
+        "x0": 476.3824768066406,
+        "y0": 55.14939880371094,
+        "x1": 517.9334106445312,
+        "y1": 82.53717041015625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 1,
+        "object_id": "fig-c0b5ea610b49fb4d",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 476.3824768066406,
+          "y0": 55.14939880371094,
+          "x1": 517.9334106445312,
+          "y1": 82.53717041015625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-efd2a7a427ff1367",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 1,
+      "bbox": {
+        "x0": 480.8445129394531,
+        "y0": 64.40375518798828,
+        "x1": 513.3829345703125,
+        "y1": 73.6006851196289
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 1,
+        "object_id": "fig-efd2a7a427ff1367",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 480.8445129394531,
+          "y0": 64.40375518798828,
+          "x1": 513.3829345703125,
+          "y1": 73.6006851196289
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-d657c36c4efa2f69",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 1,
+      "bbox": {
+        "x0": 496.56756591796875,
+        "y0": 62.406890869140625,
+        "x1": 517.7801513671875,
+        "y1": 82.53717041015625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 1,
+        "object_id": "fig-d657c36c4efa2f69",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 496.56756591796875,
+          "y0": 62.406890869140625,
+          "x1": 517.7801513671875,
+          "y1": 82.53717041015625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a8fc60dd7ab7179b",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 1,
+      "bbox": {
+        "x0": 476.56134033203125,
+        "y0": 55.339317321777344,
+        "x1": 497.773681640625,
+        "y1": 75.49618530273438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 1,
+        "object_id": "fig-a8fc60dd7ab7179b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 476.56134033203125,
+          "y0": 55.339317321777344,
+          "x1": 497.773681640625,
+          "y1": 75.49618530273438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c2acc98adee4fc28",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 1,
+      "bbox": {
+        "x0": 76.53500366210938,
+        "y0": 49.30026626586914,
+        "x1": 484.31927490234375,
+        "y1": 313.48260498046875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 1,
+        "object_id": "fig-c2acc98adee4fc28",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 76.53500366210938,
+          "y0": 49.30026626586914,
+          "x1": 484.31927490234375,
+          "y1": 313.48260498046875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-77ffa535113e2ef4",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "bbox": {
+        "x0": 338.4527282714844,
+        "y0": 279.6850891113281,
+        "x1": 356.244873046875,
+        "y1": 292.5779113769531
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "fig-77ffa535113e2ef4",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 338.4527282714844,
+          "y0": 279.6850891113281,
+          "x1": 356.244873046875,
+          "y1": 292.5779113769531
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e649d1097385b34f",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "figure_number": "1",
+      "caption": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+      "bbox": {
+        "x0": 362.91180419921875,
+        "y0": 397.5631408691406,
+        "x1": 400.0299072265625,
+        "y1": 415.67449951171875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "fig-e649d1097385b34f",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 362.91180419921875,
+          "y0": 397.5631408691406,
+          "x1": 400.0299072265625,
+          "y1": 415.67449951171875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f74a0a75827d3117",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "figure_number": "1",
+      "caption": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+      "bbox": {
+        "x0": 120.57134246826172,
+        "y0": 297.49029541015625,
+        "x1": 198.48867797851562,
+        "y1": 411.68389892578125
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "fig-f74a0a75827d3117",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 120.57134246826172,
+          "y0": 297.49029541015625,
+          "x1": 198.48867797851562,
+          "y1": 411.68389892578125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5a63be2348c74874",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 3,
+      "figure_number": "1",
+      "caption": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+      "bbox": {
+        "x0": 114.10972595214844,
+        "y0": 260.03887939453125,
+        "x1": 499.8663635253906,
+        "y1": 432.61322021484375
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 3,
+        "object_id": "fig-5a63be2348c74874",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 114.10972595214844,
+          "y0": 260.03887939453125,
+          "x1": 499.8663635253906,
+          "y1": 432.61322021484375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. Schematic diagram of (a) the sensor component and (b) the gas sensing measurement system.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-29a32d385721712e",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 4,
+      "figure_number": "2",
+      "caption": "Figure 2. Cont.",
+      "bbox": {
+        "x0": 111.05217742919922,
+        "y0": 363.8331298828125,
+        "x1": 511.0621337890625,
+        "y1": 701.8313598632812
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 85.03987121582031,
+            "y0": 327.2347412109375,
+            "x1": 104.96886444091797,
+            "y1": 350.13800048828125
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. Cont."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 4,
+        "object_id": "fig-29a32d385721712e",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 111.05217742919922,
+          "y0": 363.8331298828125,
+          "x1": 511.0621337890625,
+          "y1": 701.8313598632812
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. Cont.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c31fee7e46ccdd7c",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 5,
+      "figure_number": "2",
+      "caption": "Figure 2. (a) XRD patterns of pristine ZnO and ZnO–xNiO composites annealed at 550 ◦C with diﬀerent molar ratios of Zn:Ni. (b) Partially enlarged XRD patterns of ZnO–0.425NiO composite annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 170.94110107421875,
+        "y0": 155.31698608398438,
+        "x1": 450.3541259765625,
+        "y1": 260.0634765625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. (a) XRD patterns of pristine ZnO and ZnO–xNiO composites annealed at 550 ◦C with diﬀerent molar ratios of Zn:Ni. (b) Partially enlarged XRD patterns of ZnO–0.425NiO composite annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 5,
+        "object_id": "fig-c31fee7e46ccdd7c",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 170.94110107421875,
+          "y0": 155.31698608398438,
+          "x1": 450.3541259765625,
+          "y1": 260.0634765625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. (a) XRD patterns of pristine ZnO and ZnO–xNiO composites annealed at 550 ◦C with diﬀerent molar ratios of Zn:Ni. (b) Partially enlarged XRD patterns of ZnO–0.425NiO composite annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-d2e1b25ac6ce4dab",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 84.98099517822266,
+        "y0": 215.68026733398438,
+        "x1": 509.3172607421875,
+        "y1": 616.1862182617188
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-d2e1b25ac6ce4dab",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 84.98099517822266,
+          "y0": 215.68026733398438,
+          "x1": 509.3172607421875,
+          "y1": 616.1862182617188
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-bbbafca1d8c8d0b7",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "bbox": {
+        "x0": 425.6625061035156,
+        "y0": 414.5204772949219,
+        "x1": 465.7926025390625,
+        "y1": 437.97247314453125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-bbbafca1d8c8d0b7",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 425.6625061035156,
+          "y0": 414.5204772949219,
+          "x1": 465.7926025390625,
+          "y1": 437.97247314453125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-34927f103b192c35",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 148.87393188476562,
+        "y0": 539.8661499023438,
+        "x1": 195.67218017578125,
+        "y1": 564.3781127929688
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-34927f103b192c35",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 148.87393188476562,
+          "y0": 539.8661499023438,
+          "x1": 195.67218017578125,
+          "y1": 564.3781127929688
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-6ed3f425d01b2b9e",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 281.38812255859375,
+        "y0": 539.8660888671875,
+        "x1": 329.1562805175781,
+        "y1": 564.24560546875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-6ed3f425d01b2b9e",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 281.38812255859375,
+          "y0": 539.8660888671875,
+          "x1": 329.1562805175781,
+          "y1": 564.24560546875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-9f39e3daa218a68d",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 132.87039184570312,
+        "y0": 505.68182373046875,
+        "x1": 280.05450439453125,
+        "y1": 616.3909912109375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-9f39e3daa218a68d",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 132.87039184570312,
+          "y0": 505.68182373046875,
+          "x1": 280.05450439453125,
+          "y1": 616.3909912109375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b0ac8846db06c8a2",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 262.3536071777344,
+        "y0": 507.1393127441406,
+        "x1": 350.97930908203125,
+        "y1": 597.89990234375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-b0ac8846db06c8a2",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 262.3536071777344,
+          "y0": 507.1393127441406,
+          "x1": 350.97930908203125,
+          "y1": 597.89990234375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a3c001ae6be42d51",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "bbox": {
+        "x0": 406.3854675292969,
+        "y0": 382.8536071777344,
+        "x1": 479.12884521484375,
+        "y1": 428.5651550292969
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-a3c001ae6be42d51",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 406.3854675292969,
+          "y0": 382.8536071777344,
+          "x1": 479.12884521484375,
+          "y1": 428.5651550292969
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a5bbc92e4182f568",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 147.89593505859375,
+        "y0": 409.41265869140625,
+        "x1": 466.79888916015625,
+        "y1": 569.4229736328125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 6,
+        "object_id": "fig-a5bbc92e4182f568",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 147.89593505859375,
+          "y0": 409.41265869140625,
+          "x1": 466.79888916015625,
+          "y1": 569.4229736328125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) TEM; (b) HRTEM; (c) EDS; (d) TEM-EDS dark-mapping scan; (e–g) TEM-EDS Ni, Zn and O color-mapping scans of ZnO–0.425NiO annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-9958610482e03124",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 8,
+      "figure_number": "4",
+      "caption": "Figure 4. XPS survey spectra of ZnO and ZnO–0.425NiO annealed at 550 ◦C: (a) full spectra of ZnO, (b) full spectra of ZnO–0.425NiO, (c) Zn 2p spectra of ZnO and ZnO–0.425NiO, (d) Ni 2p spectra of ZnO–0.425NiO, (e) O 1s spectra of ZnO, (f) O 1s spectra of ZnO–0.425NiO.",
+      "bbox": {
+        "x0": 129.64950561523438,
+        "y0": 132.06324768066406,
+        "x1": 491.9976806640625,
+        "y1": 540.866455078125
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 146.55990600585938,
+            "y0": 94.62713623046875,
+            "x1": 285.6075744628906,
+            "y1": 108.24739074707031
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 306.7601623535156,
+            "y0": 96.46954345703125,
+            "x1": 490.4508361816406,
+            "y1": 109.95634460449219
+          }
+        },
+        {
+          "label": "c",
+          "bbox": {
+            "x0": 277.9862060546875,
+            "y0": 258.48248291015625,
+            "x1": 289.2524719238281,
+            "y1": 272.1847839355469
+          }
+        },
+        {
+          "label": "d",
+          "bbox": {
+            "x0": 477.1453857421875,
+            "y0": 258.298583984375,
+            "x1": 488.95440673828125,
+            "y1": 272.1255798339844
+          }
+        },
+        {
+          "label": "e",
+          "bbox": {
+            "x0": 277.20404052734375,
+            "y0": 422.06494140625,
+            "x1": 288.2154846191406,
+            "y1": 436.2137756347656
+          }
+        },
+        {
+          "label": "f",
+          "bbox": {
+            "x0": 479.6497802734375,
+            "y0": 421.4944763183594,
+            "x1": 489.8013916015625,
+            "y1": 435.9081726074219
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 4. XPS survey spectra of ZnO and ZnO–0.425NiO annealed at 550 ◦C: (a) full spectra of ZnO, (b) full spectra of ZnO–0.425NiO, (c) Zn 2p spectra of ZnO and ZnO–0.425NiO, (d) Ni 2p spectra of ZnO–0.425NiO, (e) O 1s spectra of ZnO, (f) O 1s spectra of ZnO–0.425NiO."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 8,
+        "object_id": "fig-9958610482e03124",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 129.64950561523438,
+          "y0": 132.06324768066406,
+          "x1": 491.9976806640625,
+          "y1": 540.866455078125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 4. XPS survey spectra of ZnO and ZnO–0.425NiO annealed at 550 ◦C: (a) full spectra of ZnO, (b) full spectra of ZnO–0.425NiO, (c) Zn 2p spectra of ZnO and ZnO–0.425NiO, (d) Ni 2p spectra of ZnO–0.425NiO, (e) O 1s spectra of ZnO, (f) O 1s spectra of ZnO–0.425NiO.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7935c0d84e0e4416",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 9,
+      "figure_number": "5",
+      "caption": "Figure 5. Raman spectra of the (a) pristine ZnO and (b) ZnO–0.425NiO composite annealed at 550 ◦C; photoluminescence (PL) spectra of (c) pristine ZnO and (d) ZnO–0.425NiO composite annealed at 550 ◦C.",
+      "bbox": {
+        "x0": 74.85199737548828,
+        "y0": -160.4349365234375,
+        "x1": 517.1119995117188,
+        "y1": 401.8937072753906
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 103.11016082763672,
+            "y0": 95.83366394042969,
+            "x1": 118.08135223388672,
+            "y1": 110.05107879638672
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 297.6898193359375,
+            "y0": 95.07644653320312,
+            "x1": 312.687255859375,
+            "y1": 108.93148040771484
+          }
+        },
+        {
+          "label": "c",
+          "bbox": {
+            "x0": 102.51235961914062,
+            "y0": 271.3236999511719,
+            "x1": 116.91007232666016,
+            "y1": 285.4571838378906
+          }
+        },
+        {
+          "label": "d",
+          "bbox": {
+            "x0": 299.5931396484375,
+            "y0": 267.2624206542969,
+            "x1": 315.0301513671875,
+            "y1": 281.58856201171875
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 5. Raman spectra of the (a) pristine ZnO and (b) ZnO–0.425NiO composite annealed at 550 ◦C; photoluminescence (PL) spectra of (c) pristine ZnO and (d) ZnO–0.425NiO composite annealed at 550 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 9,
+        "object_id": "fig-7935c0d84e0e4416",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 74.85199737548828,
+          "y0": -160.4349365234375,
+          "x1": 517.1119995117188,
+          "y1": 401.8937072753906
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 5. Raman spectra of the (a) pristine ZnO and (b) ZnO–0.425NiO composite annealed at 550 ◦C; photoluminescence (PL) spectra of (c) pristine ZnO and (d) ZnO–0.425NiO composite annealed at 550 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3f980032f5f66842",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 10,
+      "figure_number": "6",
+      "caption": "Figure 6. Responses of ZnO (a) and ZnO–xNiO (x = 0.111, 0.350, 0.400, 0.425, 0.429, 0.450, 0.667, 1.100) (b–i) annealed at 550 ◦C to 400 ppm CO and H2 at the operating temperature of 350 ◦C.",
+      "bbox": {
+        "x0": 114.05633544921875,
+        "y0": 2.06304931640625,
+        "x1": 493.77362060546875,
+        "y1": 456.1692810058594
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 97.4462890625,
+            "y0": 134.338623046875,
+            "x1": 108.31639862060547,
+            "y1": 145.27723693847656
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 231.47222900390625,
+            "y0": 136.2174530029297,
+            "x1": 242.2390594482422,
+            "y1": 146.5811309814453
+          }
+        },
+        {
+          "label": "c",
+          "bbox": {
+            "x0": 364.9197692871094,
+            "y0": 138.08267211914062,
+            "x1": 375.1711730957031,
+            "y1": 146.2475128173828
+          }
+        },
+        {
+          "label": "d",
+          "bbox": {
+            "x0": 94.48456573486328,
+            "y0": 250.89015197753906,
+            "x1": 105.21954345703125,
+            "y1": 259.203369140625
+          }
+        },
+        {
+          "label": "e",
+          "bbox": {
+            "x0": 229.56910705566406,
+            "y0": 248.37216186523438,
+            "x1": 239.75057983398438,
+            "y1": 259.0176696777344
+          }
+        },
+        {
+          "label": "f",
+          "bbox": {
+            "x0": 363.8865661621094,
+            "y0": 251.9769287109375,
+            "x1": 373.245849609375,
+            "y1": 260.08380126953125
+          }
+        },
+        {
+          "label": "g",
+          "bbox": {
+            "x0": 93.33041381835938,
+            "y0": 366.21929931640625,
+            "x1": 104.2659912109375,
+            "y1": 374.14801025390625
+          }
+        },
+        {
+          "label": "h",
+          "bbox": {
+            "x0": 232.70712280273438,
+            "y0": 365.6072692871094,
+            "x1": 243.02105712890625,
+            "y1": 376.1983947753906
+          }
+        },
+        {
+          "label": "i",
+          "bbox": {
+            "x0": 364.9873046875,
+            "y0": 366.6994323730469,
+            "x1": 373.6509094238281,
+            "y1": 374.6098327636719
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. Responses of ZnO (a) and ZnO–xNiO (x = 0.111, 0.350, 0.400, 0.425, 0.429, 0.450, 0.667, 1.100) (b–i) annealed at 550 ◦C to 400 ppm CO and H2 at the operating temperature of 350 ◦C."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 10,
+        "object_id": "fig-3f980032f5f66842",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 114.05633544921875,
+          "y0": 2.06304931640625,
+          "x1": 493.77362060546875,
+          "y1": 456.1692810058594
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. Responses of ZnO (a) and ZnO–xNiO (x = 0.111, 0.350, 0.400, 0.425, 0.429, 0.450, 0.667, 1.100) (b–i) annealed at 550 ◦C to 400 ppm CO and H2 at the operating temperature of 350 ◦C.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ea37a7723ee9539f",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 11,
+      "bbox": {
+        "x0": 107.5010986328125,
+        "y0": 443.4158935546875,
+        "x1": 501.33392333984375,
+        "y1": 952.52392578125
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 89.10560607910156,
+            "y0": 415.2804870605469,
+            "x1": 103.4821548461914,
+            "y1": 431.4895324707031
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 305.175048828125,
+            "y0": 413.4463195800781,
+            "x1": 319.988037109375,
+            "y1": 429.9307861328125
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 11,
+        "object_id": "fig-ea37a7723ee9539f",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 107.5010986328125,
+          "y0": 443.4158935546875,
+          "x1": 501.33392333984375,
+          "y1": 952.52392578125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f5153a7b8efc55cf",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 12,
+      "figure_number": "8",
+      "caption": "Figure 8. Response value of ZnO–0.425NiO annealed at (a) 500 ◦C, (b) 550 ◦C, (c) 600 ◦C to 400 ppm CO at diﬀerent operating temperatures.",
+      "bbox": {
+        "x0": 116.77940368652344,
+        "y0": -259.05560302734375,
+        "x1": 530.3038330078125,
+        "y1": 275.5077819824219
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 83.75973510742188,
+            "y0": 170.4390106201172,
+            "x1": 94.99921417236328,
+            "y1": 180.30892944335938
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 223.6657257080078,
+            "y0": 172.894775390625,
+            "x1": 248.66702270507812,
+            "y1": 188.85626220703125
+          }
+        },
+        {
+          "label": "c",
+          "bbox": {
+            "x0": 365.188232421875,
+            "y0": 170.10357666015625,
+            "x1": 388.013427734375,
+            "y1": 187.19195556640625
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 8. Response value of ZnO–0.425NiO annealed at (a) 500 ◦C, (b) 550 ◦C, (c) 600 ◦C to 400 ppm CO at diﬀerent operating temperatures."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 12,
+        "object_id": "fig-f5153a7b8efc55cf",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 116.77940368652344,
+          "y0": -259.05560302734375,
+          "x1": 530.3038330078125,
+          "y1": 275.5077819824219
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 8. Response value of ZnO–0.425NiO annealed at (a) 500 ◦C, (b) 550 ◦C, (c) 600 ◦C to 400 ppm CO at diﬀerent operating temperatures.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b4b418967682f916",
+      "source_id": "src-36d29fa17f60f9f7",
+      "page": 15,
+      "bbox": {
+        "x0": 77.55999755859375,
+        "y0": 720.1824340820312,
+        "x1": 160.6959991455078,
+        "y1": 749.280029296875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-36d29fa17f60f9f7",
+        "page": 15,
+        "object_id": "fig-b4b418967682f916",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 77.55999755859375,
+          "y0": 720.1824340820312,
+          "x1": 160.6959991455078,
+          "y1": 749.280029296875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

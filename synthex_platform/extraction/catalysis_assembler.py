@@ -323,11 +323,16 @@ def assemble_catalysis_archive(
             potential = getattr(metric, "potential", None)
             potential_conditions, potential_warnings = _reported_potential_conditions(potential)
             warnings.extend(potential_warnings)
+            feed_composition = [
+                component.model_dump(mode="json", exclude_none=True)
+                for component in getattr(experiment, "feed_composition", [])
+            ]
             conditions = {
                 "reaction": experiment.reaction.reported_reaction,
                 "reaction_class": experiment.reaction.reaction_class,
                 "reactant": getattr(metric, "reactant", None),
                 "product": getattr(metric, "product", None),
+                "feed_composition": feed_composition,
                 "normalization_basis": basis.model_dump(mode="json", exclude_none=True) if basis else None,
                 "normalization_key": normalization_key(basis),
                 "comparability_status": comparability_status(basis),
@@ -400,7 +405,19 @@ def assemble_catalysis_archive(
         assemble_experiment(item, electrochemical=True)
 
     for stability in document.stability_tests:
-        material_id = experiment_material.get(stability.experiment_ref or "")
+        parent_experiment = next(
+            (
+                item for item in [*document.heterogeneous_experiments, *document.electrocatalysis_experiments]
+                if item.experiment_id == stability.experiment_ref
+            ),
+            None,
+        )
+        parent_catalyst_ref = parent_experiment.catalyst_ref if parent_experiment else None
+        material_id = (
+            experiment_material.get(stability.experiment_ref or "")
+            or material_ids.get(stability.catalyst_state_ref or "")
+            or material_ids.get(parent_catalyst_ref or "")
+        )
         metric = stability.retained_metric
         if stability.ownership != "focal_work" or not material_id or metric is None:
             audit.reject(f"stability_tests.{stability.stability_id}", f"ownership_{stability.ownership}" if stability.ownership != "focal_work" else "schema_invalid", stability, ownership=stability.ownership)

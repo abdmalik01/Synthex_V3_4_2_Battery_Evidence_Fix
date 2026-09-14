@@ -1,0 +1,160 @@
+{
+  "benchmark_id": "CAT-GOLD-B",
+  "source": {
+    "filename": "s41467-020-17690-8.pdf",
+    "title": "Oxygen induced promotion of electrochemical reduction of CO2 via co-electrolysis",
+    "doi": "10.1038/s41467-020-17690-8",
+    "year": 2020,
+    "checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93"
+  },
+  "expected_route": "catalysis",
+  "expected_subtypes": ["electrocatalysis", "catalyst_characterization", "computational_dft"],
+  "expected_scope_status": "supported",
+  "catalysts": [
+    {
+      "local_id": "cat_cu_powder",
+      "reported_name": "commercial polycrystalline Cu powder",
+      "formula": "Cu",
+      "state": "as_synthesized",
+      "particle_size": "approximately 1 µm",
+      "components": [{"role": "active_component", "reported_name": "Cu"}],
+      "evidence_locator": {"page": 2, "section": "Co-reduction of CO2 with O2"}
+    },
+    {
+      "local_id": "cat_cu_surface_hydroxyl",
+      "reported_name": "polycrystalline Cu with surface hydroxyl species during co-electrolysis",
+      "formula": "Cu",
+      "state": "under_reaction",
+      "state_parent_ref": "cat_cu_powder",
+      "evidence_locator": {"page": 4, "section": "In situ surface-enhanced Raman measurements"}
+    }
+  ],
+  "preparations": [
+    {
+      "material_ref": "cat_cu_powder",
+      "method": "Cu powder ink deposition on PTFE-treated carbon fiber paper",
+      "steps": [
+        {"step": "mixing", "details": "1 mg Cu powder in 1 mL isopropanol"},
+        {"step": "other", "details": "sonicated", "duration": "20 min"},
+        {"step": "deposition", "details": "900 µL ink drop-cast onto 3 × 3 cm2 Sigracet 39 BC"},
+        {"step": "deposition", "details": "180 µL of 2.5 wt% Nafion solution deposited"},
+        {"step": "drying", "details": "air dried then vacuum treated"}
+      ],
+      "evidence_locator": {"page": 8, "section": "Electrode preparation"}
+    }
+  ],
+  "characterizations": [
+    {"method": "field-emission SEM", "evidence_locator": {"page": 9, "section": "Physical characterization"}},
+    {"method": "powder XRD", "evidence_locator": {"page": 9, "section": "Physical characterization"}},
+    {"method": "XPS", "evidence_locator": {"page": 9, "section": "Physical characterization"}},
+    {"method": "in situ SERS", "reported_result": "706 cm-1 band assigned to surface hydroxyl species in O2-containing electrolyte", "evidence_locator": {"page": 4, "figure": "Figure 3"}}
+  ],
+  "experiments": [
+    {
+      "experiment_id": "exp_co2rr_cu_powder",
+      "catalyst": "commercial polycrystalline Cu powder",
+      "reaction": "co-electrolysis of CO2 and O2 / electrochemical CO2 reduction",
+      "reaction_class": "co2rr",
+      "working_electrode": "Cu powder on PTFE-treated carbon fiber paper",
+      "cell_configuration": "gas-tight two-compartment H-type cell; three-electrode configuration",
+      "counter_electrode": "graphite rod",
+      "reference_electrode": "Ag/AgCl (3.0 M)",
+      "membrane": "Selemion AMV anion-exchange membrane",
+      "electrolyte": "CO2-saturated 0.1 M KHCO3",
+      "pH": 6.8,
+      "potential_reporting": {
+        "reported_scale": "RHE",
+        "underlying_reference": "Ag/AgCl (3.0 M)",
+        "author_formula": "ERHE = EAg/AgCl + 0.210 + 0.05916 × pH",
+        "conversion_status": "author_reported"
+      },
+      "ir_compensation": "100% of uncompensated resistance compensated during electrolysis",
+      "pretreatment": "-1 V RHE for 5 min in Ar-purged electrolyte",
+      "feeds": ["pure CO2", "10% O2 + 90% CO2", "20% O2 + 80% CO2"],
+      "flow": "10 mL/min",
+      "pre_electrolysis_purge": "15 min",
+      "duration": "1 h",
+      "normalization_basis": "geometric_area",
+      "products": ["ethylene", "ethanol", "n-propanol", "acetate", "methane", "CO", "formate", "H2"],
+      "ownership": "focal_work",
+      "evidence_locator": {"page": 8, "section": "Electrochemical measurements"}
+    }
+  ],
+  "metrics": [
+    {
+      "property": "partial_current_density",
+      "value": 0.5,
+      "unit": "mA cm-2",
+      "qualifier": "approx",
+      "product": "n-propanol",
+      "potential": "-0.75 V RHE",
+      "reference_electrode": "RHE",
+      "normalization_basis": "geometric_area",
+      "context": {"catalyst": "commercial polycrystalline Cu powder", "reaction": "co2rr", "feed": "O2-containing CO2 feed"},
+      "evidence_locator": {"page": 2, "section": "Co-reduction of CO2 with O2"}
+    },
+    {
+      "property": "partial_current_density",
+      "value": 0.5,
+      "unit": "mA cm-2",
+      "qualifier": "approx",
+      "product": "n-propanol",
+      "potential": "-1.00 V RHE",
+      "reference_electrode": "RHE",
+      "normalization_basis": "geometric_area",
+      "context": {"catalyst": "commercial polycrystalline Cu powder", "reaction": "co2rr", "feed": "pure CO2"},
+      "evidence_locator": {"page": 2, "section": "Co-reduction of CO2 with O2"}
+    },
+    {
+      "property": "onset_potential",
+      "raw_value": "-0.75 V RHE",
+      "value": -0.75,
+      "unit": "V",
+      "product": "methane",
+      "potential": "-0.75 V RHE",
+      "reference_electrode": "RHE",
+      "context": {"feed": "O2-containing CO2 feed"},
+      "evidence_locator": {"page": 2, "section": "Co-reduction of CO2 with O2"}
+    },
+    {
+      "property": "onset_potential",
+      "raw_value": "-0.95 V RHE",
+      "value": -0.95,
+      "unit": "V",
+      "product": "methane",
+      "potential": "-0.95 V RHE",
+      "reference_electrode": "RHE",
+      "context": {"feed": "pure CO2"},
+      "evidence_locator": {"page": 2, "section": "Co-reduction of CO2 with O2"}
+    }
+  ],
+  "qualitative_truth": [
+    {"claim": "Faradaic efficiency of CO2RR products decreases when O2 is introduced because ORR competes.", "evidence_locator": {"page": 7, "section": "Discussion"}},
+    {"claim": "Different products and potentials remain separate; Figure 1 bar values are figure evidence rather than native-text exact values.", "evidence_locator": {"page": 3, "figure": "Figure 1"}}
+  ],
+  "stability_tests": [],
+  "calculations": [
+    {
+      "calculation_id": "calc_cu100_oh",
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "D2",
+      "k_points": "3 × 3 × 1",
+      "slab_or_facet": "Cu(100), 3 × 3 slab, three layers",
+      "vacuum_thickness": "25 Å on each side",
+      "solvation_model": "VASPsol linear Poisson-Boltzmann implicit solvation; four explicit water molecules for *CO hydrogenation stationary points",
+      "reported_potential": "-0.5 V SHE, stated by authors as equivalent to -0.9 V RHE",
+      "outputs": ["activation barrier and reaction free-energy trends for *CO dimerization and *CO hydrogenation versus *OH coverage"],
+      "ownership": "focal_work",
+      "evidence_locator": {"pages": [5, 6, 8], "sections": ["Density functional theory calculations", "Computational details"]}
+    }
+  ],
+  "ownership_expectation": "Experimental and DFT work described above is focal_work; prior Cu literature in the introduction is cited_prior_work.",
+  "admission_expectation": "Only focal, value-specific, verified evidence is eligible. DFT outputs remain CalculationRecord candidates. Figure-only values and unsupported conversions remain noncanonical.",
+  "curation": {
+    "source_grounded": true,
+    "model_output_used": false,
+    "curator_note": "Representative truth independently transcribed from PDF pages 1-8; no Synthex prediction was used. Plot-only values were deliberately not promoted to exact text-derived truth."
+  }
+}

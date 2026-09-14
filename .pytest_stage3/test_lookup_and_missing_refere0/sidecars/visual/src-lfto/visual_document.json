@@ -1,0 +1,912 @@
+{
+  "source_id": "src-lfto",
+  "source_checksum": "9d99662bc3c43a38bc2baf429fa0edeb11ea48e33659679dbac8ea2abde47370",
+  "extraction_metadata": {
+    "table_parser": "pymupdf",
+    "text_extraction": "pypdf_then_pymupdf_v1"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl-cd7c2bb3ca41535e",
+      "source_id": "src-lfto",
+      "page": 1,
+      "table_number": "2",
+      "caption": "Table 2. LFTO electrochemical results.",
+      "headers": [
+        [
+          "Sample",
+          "Temperature (degC)",
+          "Capacity (mAh/g)",
+          "Resistance (Ohm)",
+          "Diffusion coefficient (cm2/s)"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "LFTO-600",
+          "600 degC",
+          "67.0 mAh/g",
+          "1258.6 Ohm",
+          "1.096 x 10-12 cm2/s"
+        ],
+        [
+          "LFTO-700",
+          "700 degC",
+          "121.3 mAh/g",
+          "1258.6 Ohm",
+          "1.096 x 10-12 cm2/s"
+        ],
+        [
+          "LFTO-800",
+          "800 degC",
+          "58.7 mAh/g",
+          "1258.6 Ohm",
+          "1.096 x 10-12 cm2/s"
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r0:c0",
+          "raw_text": "Sample",
+          "text": "Sample",
+          "bbox": {
+            "x0": 50.0,
+            "y0": 85.0,
+            "x1": 166.0,
+            "y1": 125.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r0:c0",
+            "bbox": {
+              "x0": 50.0,
+              "y0": 85.0,
+              "x1": 166.0,
+              "y1": 125.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Sample",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r0:c1",
+          "raw_text": "Temperature (degC)",
+          "text": "Temperature (degC)",
+          "bbox": {
+            "x0": 166.0,
+            "y0": 85.0,
+            "x1": 282.0,
+            "y1": 125.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r0:c1",
+            "bbox": {
+              "x0": 166.0,
+              "y0": 85.0,
+              "x1": 282.0,
+              "y1": 125.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Temperature (degC)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r0:c2",
+          "raw_text": "Capacity (mAh/g)",
+          "text": "Capacity (mAh/g)",
+          "bbox": {
+            "x0": 282.0,
+            "y0": 85.0,
+            "x1": 398.0,
+            "y1": 125.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r0:c2",
+            "bbox": {
+              "x0": 282.0,
+              "y0": 85.0,
+              "x1": 398.0,
+              "y1": 125.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Capacity (mAh/g)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r0:c3",
+          "raw_text": "Resistance (Ohm)",
+          "text": "Resistance (Ohm)",
+          "bbox": {
+            "x0": 398.0,
+            "y0": 85.0,
+            "x1": 514.0,
+            "y1": 125.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 0,
+            "column": 3,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r0:c3",
+            "bbox": {
+              "x0": 398.0,
+              "y0": 85.0,
+              "x1": 514.0,
+              "y1": 125.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Resistance (Ohm)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r0:c4",
+          "raw_text": "Diffusion coefficient (cm2/s)",
+          "text": "Diffusion coefficient (cm2/s)",
+          "bbox": {
+            "x0": 514.0,
+            "y0": 85.0,
+            "x1": 630.0,
+            "y1": 125.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 0,
+            "column": 4,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r0:c4",
+            "bbox": {
+              "x0": 514.0,
+              "y0": 85.0,
+              "x1": 630.0,
+              "y1": 125.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Diffusion coefficient (cm2/s)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r1:c0",
+          "raw_text": "LFTO-600",
+          "text": "LFTO-600",
+          "bbox": {
+            "x0": 50.0,
+            "y0": 125.0,
+            "x1": 166.0,
+            "y1": 165.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r1:c0",
+            "bbox": {
+              "x0": 50.0,
+              "y0": 125.0,
+              "x1": 166.0,
+              "y1": 165.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "LFTO-600",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r1:c1",
+          "raw_text": "600 degC",
+          "text": "600 degC",
+          "bbox": {
+            "x0": 166.0,
+            "y0": 125.0,
+            "x1": 282.0,
+            "y1": 165.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r1:c1",
+            "bbox": {
+              "x0": 166.0,
+              "y0": 125.0,
+              "x1": 282.0,
+              "y1": 165.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "600 degC",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r1:c2",
+          "raw_text": "67.0 mAh/g",
+          "text": "67.0 mAh/g",
+          "bbox": {
+            "x0": 282.0,
+            "y0": 125.0,
+            "x1": 398.0,
+            "y1": 165.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r1:c2",
+            "bbox": {
+              "x0": 282.0,
+              "y0": 125.0,
+              "x1": 398.0,
+              "y1": 165.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "67.0 mAh/g",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r1:c3",
+          "raw_text": "1258.6 Ohm",
+          "text": "1258.6 Ohm",
+          "bbox": {
+            "x0": 398.0,
+            "y0": 125.0,
+            "x1": 514.0,
+            "y1": 165.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 1,
+            "column": 3,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r1:c3",
+            "bbox": {
+              "x0": 398.0,
+              "y0": 125.0,
+              "x1": 514.0,
+              "y1": 165.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1258.6 Ohm",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r1:c4",
+          "raw_text": "1.096 x 10-12 cm2/s",
+          "text": "1.096 x 10-12 cm2/s",
+          "bbox": {
+            "x0": 514.0,
+            "y0": 125.0,
+            "x1": 630.0,
+            "y1": 165.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 1,
+            "column": 4,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r1:c4",
+            "bbox": {
+              "x0": 514.0,
+              "y0": 125.0,
+              "x1": 630.0,
+              "y1": 165.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1.096 x 10-12 cm2/s",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r2:c0",
+          "raw_text": "LFTO-700",
+          "text": "LFTO-700",
+          "bbox": {
+            "x0": 50.0,
+            "y0": 165.0,
+            "x1": 166.0,
+            "y1": 205.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r2:c0",
+            "bbox": {
+              "x0": 50.0,
+              "y0": 165.0,
+              "x1": 166.0,
+              "y1": 205.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "LFTO-700",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r2:c1",
+          "raw_text": "700 degC",
+          "text": "700 degC",
+          "bbox": {
+            "x0": 166.0,
+            "y0": 165.0,
+            "x1": 282.0,
+            "y1": 205.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r2:c1",
+            "bbox": {
+              "x0": 166.0,
+              "y0": 165.0,
+              "x1": 282.0,
+              "y1": 205.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "700 degC",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r2:c2",
+          "raw_text": "121.3 mAh/g",
+          "text": "121.3 mAh/g",
+          "bbox": {
+            "x0": 282.0,
+            "y0": 165.0,
+            "x1": 398.0,
+            "y1": 205.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 2,
+            "column": 2,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r2:c2",
+            "bbox": {
+              "x0": 282.0,
+              "y0": 165.0,
+              "x1": 398.0,
+              "y1": 205.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "121.3 mAh/g",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r2:c3",
+          "raw_text": "1258.6 Ohm",
+          "text": "1258.6 Ohm",
+          "bbox": {
+            "x0": 398.0,
+            "y0": 165.0,
+            "x1": 514.0,
+            "y1": 205.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 2,
+            "column": 3,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r2:c3",
+            "bbox": {
+              "x0": 398.0,
+              "y0": 165.0,
+              "x1": 514.0,
+              "y1": 205.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1258.6 Ohm",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r2:c4",
+          "raw_text": "1.096 x 10-12 cm2/s",
+          "text": "1.096 x 10-12 cm2/s",
+          "bbox": {
+            "x0": 514.0,
+            "y0": 165.0,
+            "x1": 630.0,
+            "y1": 205.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 2,
+            "column": 4,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r2:c4",
+            "bbox": {
+              "x0": 514.0,
+              "y0": 165.0,
+              "x1": 630.0,
+              "y1": 205.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1.096 x 10-12 cm2/s",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r3:c0",
+          "raw_text": "LFTO-800",
+          "text": "LFTO-800",
+          "bbox": {
+            "x0": 50.0,
+            "y0": 205.0,
+            "x1": 166.0,
+            "y1": 245.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 3,
+            "column": 0,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r3:c0",
+            "bbox": {
+              "x0": 50.0,
+              "y0": 205.0,
+              "x1": 166.0,
+              "y1": 245.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "LFTO-800",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r3:c1",
+          "raw_text": "800 degC",
+          "text": "800 degC",
+          "bbox": {
+            "x0": 166.0,
+            "y0": 205.0,
+            "x1": 282.0,
+            "y1": 245.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 3,
+            "column": 1,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r3:c1",
+            "bbox": {
+              "x0": 166.0,
+              "y0": 205.0,
+              "x1": 282.0,
+              "y1": 245.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "800 degC",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r3:c2",
+          "raw_text": "58.7 mAh/g",
+          "text": "58.7 mAh/g",
+          "bbox": {
+            "x0": 282.0,
+            "y0": 205.0,
+            "x1": 398.0,
+            "y1": 245.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 3,
+            "column": 2,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r3:c2",
+            "bbox": {
+              "x0": 282.0,
+              "y0": 205.0,
+              "x1": 398.0,
+              "y1": 245.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "58.7 mAh/g",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r3:c3",
+          "raw_text": "1258.6 Ohm",
+          "text": "1258.6 Ohm",
+          "bbox": {
+            "x0": 398.0,
+            "y0": 205.0,
+            "x1": 514.0,
+            "y1": 245.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 3,
+            "column": 3,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r3:c3",
+            "bbox": {
+              "x0": 398.0,
+              "y0": 205.0,
+              "x1": 514.0,
+              "y1": 245.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1258.6 Ohm",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "cell_id": "tbl-cd7c2bb3ca41535e:r3:c4",
+          "raw_text": "1.096 x 10-12 cm2/s",
+          "text": "1.096 x 10-12 cm2/s",
+          "bbox": {
+            "x0": 514.0,
+            "y0": 205.0,
+            "x1": 630.0,
+            "y1": 245.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-lfto",
+            "page": 1,
+            "object_id": "tbl-cd7c2bb3ca41535e",
+            "object_type": "table",
+            "table_number": "2",
+            "row": 3,
+            "column": 4,
+            "cell_id": "tbl-cd7c2bb3ca41535e:r3:c4",
+            "bbox": {
+              "x0": 514.0,
+              "y0": 205.0,
+              "x1": 630.0,
+              "y1": 245.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1.096 x 10-12 cm2/s",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {
+        "Temperature (degC)": "degC",
+        "Capacity (mAh/g)": "mAh/g",
+        "Resistance (Ohm)": "Ohm",
+        "Diffusion coefficient (cm2/s)": "cm2/s"
+      },
+      "footnotes": [],
+      "bbox": {
+        "x0": 50.0,
+        "y0": 85.0,
+        "x1": 630.0,
+        "y1": 245.0
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "Sample",
+            "Temperature (degC)",
+            "Capacity (mAh/g)",
+            "Resistance (Ohm)",
+            "Diffusion coefficient (cm2/s)"
+          ],
+          [
+            "LFTO-600",
+            "600 degC",
+            "67.0 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ],
+          [
+            "LFTO-700",
+            "700 degC",
+            "121.3 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ],
+          [
+            "LFTO-800",
+            "800 degC",
+            "58.7 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "normalized",
+        "headers": [
+          [
+            "Sample",
+            "Temperature (degC)",
+            "Capacity (mAh/g)",
+            "Resistance (Ohm)",
+            "Diffusion coefficient (cm2/s)"
+          ]
+        ],
+        "rows": [
+          [
+            "LFTO-600",
+            "600 degC",
+            "67.0 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ],
+          [
+            "LFTO-700",
+            "700 degC",
+            "121.3 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ],
+          [
+            "LFTO-800",
+            "800 degC",
+            "58.7 mAh/g",
+            "1258.6 Ohm",
+            "1.096 x 10-12 cm2/s"
+          ]
+        ],
+        "row_mappings": [
+          {
+            "Sample": "LFTO-600",
+            "Temperature (degC)": "600 degC",
+            "Capacity (mAh/g)": "67.0 mAh/g",
+            "Resistance (Ohm)": "1258.6 Ohm",
+            "Diffusion coefficient (cm2/s)": "1.096 x 10-12 cm2/s"
+          },
+          {
+            "Sample": "LFTO-700",
+            "Temperature (degC)": "700 degC",
+            "Capacity (mAh/g)": "121.3 mAh/g",
+            "Resistance (Ohm)": "1258.6 Ohm",
+            "Diffusion coefficient (cm2/s)": "1.096 x 10-12 cm2/s"
+          },
+          {
+            "Sample": "LFTO-800",
+            "Temperature (degC)": "800 degC",
+            "Capacity (mAh/g)": "58.7 mAh/g",
+            "Resistance (Ohm)": "1258.6 Ohm",
+            "Diffusion coefficient (cm2/s)": "1.096 x 10-12 cm2/s"
+          }
+        ]
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-lfto",
+        "page": 1,
+        "object_id": "tbl-cd7c2bb3ca41535e",
+        "object_type": "table",
+        "table_number": "2",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 50.0,
+          "y0": 85.0,
+          "x1": 630.0,
+          "y1": 245.0
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "figures": [],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

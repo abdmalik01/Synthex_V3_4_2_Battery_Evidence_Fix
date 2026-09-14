@@ -1,0 +1,62 @@
+{
+  "runs": [
+    {
+      "run_at": "2026-09-14T14:32:39.969484+00:00",
+      "selected_ids": [
+        "CAT-GOLD-A"
+      ],
+      "gold_a_gate_passed": false,
+      "serper_enabled": false,
+      "results": [
+        {
+          "benchmark_id": "CAT-GOLD-A",
+          "extraction_status": "pipeline_error",
+          "primary_calls": 1,
+          "schema_repair_calls": 0,
+          "coverage_calls": 0,
+          "gemini_calls": 1,
+          "candidates_detected": 0,
+          "high_priority_candidates": 0,
+          "candidates_covered": 0,
+          "candidates_sent": 0,
+          "coverage_candidates_accepted": 0,
+          "coverage_candidates_rejected": 0,
+          "captured_model_outputs": {},
+          "candidate_artifacts": {
+            "inventory": "cat-gold-a_candidate_inventory.json",
+            "coverage": "cat-gold-a_candidate_coverage.json"
+          }
+        }
+      ]
+    },
+    {
+      "run_at": "2026-09-14T14:34:10.811354+00:00",
+      "selected_ids": [
+        "CAT-GOLD-A"
+      ],
+      "gold_a_gate_passed": false,
+      "serper_enabled": false,
+      "results": [
+        {
+          "benchmark_id": "CAT-GOLD-A",
+          "extraction_status": "pipeline_error",
+          "primary_calls": 1,
+          "schema_repair_calls": 0,
+          "coverage_calls": 0,
+          "gemini_calls": 1,
+          "candidates_detected": 0,
+          "high_priority_candidates": 0,
+          "candidates_covered": 0,
+          "candidates_sent": 0,
+          "coverage_candidates_accepted": 0,
+          "coverage_candidates_rejected": 0,
+          "captured_model_outputs": {},
+          "candidate_artifacts": {
+            "inventory": "cat-gold-a_candidate_inventory.json",
+            "coverage": "cat-gold-a_candidate_coverage.json"
+          }
+        }
+      ]
+    }
+  ]
+}

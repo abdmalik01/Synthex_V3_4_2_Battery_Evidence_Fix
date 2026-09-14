@@ -1,0 +1,955 @@
+{
+  "source_id": "src-7179b701538dafe0",
+  "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-7179b701538dafe0",
+    "filename": "materials-18-03513-v3.pdf",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 16,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 17,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 18,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 15,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-7179b701538dafe0\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 12,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 13,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 14,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 15,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 16,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 17,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 18,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-db29b66c5a541173",
+      "source_id": "src-7179b701538dafe0",
+      "page": 1,
+      "bbox": {
+        "x0": 35.715999603271484,
+        "y0": 33.05719757080078,
+        "x1": 558.7335815429688,
+        "y1": 512.6929931640625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-7179b701538dafe0",
+        "page": 1,
+        "object_id": "fig-db29b66c5a541173",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 35.715999603271484,
+          "y0": 33.05719757080078,
+          "x1": 558.7335815429688,
+          "y1": 512.6929931640625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-914deaaec2db796f",
+      "source_id": "src-7179b701538dafe0",
+      "page": 4,
+      "figure_number": "1",
+      "caption": "Figure 1. Synthesis of photocatalysts, Ni-based NPs/TiO2, by radiolysis method.",
+      "bbox": {
+        "x0": 166.5469970703125,
+        "y0": 72.32301330566406,
+        "x1": 455.3760070800781,
+        "y1": 234.0830078125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. Synthesis of photocatalysts, Ni-based NPs/TiO2, by radiolysis method."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 4,
+        "object_id": "fig-914deaaec2db796f",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 166.5469970703125,
+          "y0": 72.32301330566406,
+          "x1": 455.3760070800781,
+          "y1": 234.0830078125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. Synthesis of photocatalysts, Ni-based NPs/TiO2, by radiolysis method.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a8cebcfa5a023461",
+      "source_id": "src-7179b701538dafe0",
+      "page": 6,
+      "bbox": {
+        "x0": 167.697998046875,
+        "y0": 210.84002685546875,
+        "x1": 359.697998046875,
+        "y1": 338.52001953125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-7179b701538dafe0",
+        "page": 6,
+        "object_id": "fig-a8cebcfa5a023461",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 167.697998046875,
+          "y0": 210.84002685546875,
+          "x1": 359.697998046875,
+          "y1": 338.52001953125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5d46724597d5c70b",
+      "source_id": "src-7179b701538dafe0",
+      "page": 6,
+      "bbox": {
+        "x0": 364.25799560546875,
+        "y0": 210.83999633789062,
+        "x1": 556.2579956054688,
+        "y1": 338.2799987792969
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-7179b701538dafe0",
+        "page": 6,
+        "object_id": "fig-5d46724597d5c70b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 364.25799560546875,
+          "y0": 210.83999633789062,
+          "x1": 556.2579956054688,
+          "y1": 338.2799987792969
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-94a4a6b2af256f3b",
+      "source_id": "src-7179b701538dafe0",
+      "page": 6,
+      "figure_number": "2",
+      "caption": "Figure 2. (a) TEM micrograph, (b) HRTEM micrograph, and (c) EELS spectrum of 3.5 wt.% Niacac- based NPs/TiO2-modified sample.",
+      "bbox": {
+        "x0": 213.53799438476562,
+        "y0": 344.280029296875,
+        "x1": 510.8979797363281,
+        "y1": 515.6400146484375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. (a) TEM micrograph, (b) HRTEM micrograph, and (c) EELS spectrum of 3.5 wt.% Niacac- based NPs/TiO2-modified sample."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 6,
+        "object_id": "fig-94a4a6b2af256f3b",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 213.53799438476562,
+          "y0": 344.280029296875,
+          "x1": 510.8979797363281,
+          "y1": 515.6400146484375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. (a) TEM micrograph, (b) HRTEM micrograph, and (c) EELS spectrum of 3.5 wt.% Niacac- based NPs/TiO2-modified sample.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-34315efe68ab98d0",
+      "source_id": "src-7179b701538dafe0",
+      "page": 7,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2.",
+      "bbox": {
+        "x0": 326.1659851074219,
+        "y0": 71.86502075195312,
+        "x1": 534.1790161132812,
+        "y1": 244.07801818847656
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 7,
+        "object_id": "fig-34315efe68ab98d0",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 326.1659851074219,
+          "y0": 71.86502075195312,
+          "x1": 534.1790161132812,
+          "y1": 244.07801818847656
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e934972bcceaff1b",
+      "source_id": "src-7179b701538dafe0",
+      "page": 7,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2.",
+      "bbox": {
+        "x0": 92.76536560058594,
+        "y0": 80.87872314453125,
+        "x1": 270.1221923828125,
+        "y1": 219.11831665039062
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 7,
+        "object_id": "fig-e934972bcceaff1b",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 92.76536560058594,
+          "y0": 80.87872314453125,
+          "x1": 270.1221923828125,
+          "y1": 219.11831665039062
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) DRS spectra and (b) their Tauc plot of Niacac-based NPs/TiO2-modified samples and bare TiO2.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-df6c5f3f2ff5bb32",
+      "source_id": "src-7179b701538dafe0",
+      "page": 8,
+      "figure_number": "4",
+      "caption": "Figure 4. Narrow-scan XPS spectra of Ni 2p3/2 of 3.5wt% Niacac-based NPs/TiO2-modified sample.",
+      "bbox": {
+        "x0": 166.3939971923828,
+        "y0": 254.34799194335938,
+        "x1": 390.2090148925781,
+        "y1": 436.74798583984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 4. Narrow-scan XPS spectra of Ni 2p3/2 of 3.5wt% Niacac-based NPs/TiO2-modified sample."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 8,
+        "object_id": "fig-df6c5f3f2ff5bb32",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 166.3939971923828,
+          "y0": 254.34799194335938,
+          "x1": 390.2090148925781,
+          "y1": 436.74798583984375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 4. Narrow-scan XPS spectra of Ni 2p3/2 of 3.5wt% Niacac-based NPs/TiO2-modified sample.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c013d3d193a473fe",
+      "source_id": "src-7179b701538dafe0",
+      "page": 9,
+      "figure_number": "5",
+      "caption": "Figure 5. TRMC signals of Niacac-based NPs/TiO2-modified samples and bare TiO2 at different wavelengths: (a) λ = 360 nm, and (b) λ = 420 nm. The laser energy of these wavelengths was 1.1 mJ and 2.3 mJ, respectively.",
+      "bbox": {
+        "x0": 59.68499755859375,
+        "y0": 114.95000457763672,
+        "x1": 536.0250244140625,
+        "y1": 290.57000732421875
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 158.8035430908203,
+            "y0": 283.0049133300781,
+            "x1": 275.1287536621094,
+            "y1": 303.6751708984375
+          }
+        },
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 419.86260986328125,
+            "y0": 280.6051330566406,
+            "x1": 540.5675659179688,
+            "y1": 301.275390625
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 5. TRMC signals of Niacac-based NPs/TiO2-modified samples and bare TiO2 at different wavelengths: (a) λ = 360 nm, and (b) λ = 420 nm. The laser energy of these wavelengths was 1.1 mJ and 2.3 mJ, respectively."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 9,
+        "object_id": "fig-c013d3d193a473fe",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 59.68499755859375,
+          "y0": 114.95000457763672,
+          "x1": 536.0250244140625,
+          "y1": 290.57000732421875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 5. TRMC signals of Niacac-based NPs/TiO2-modified samples and bare TiO2 at different wavelengths: (a) λ = 360 nm, and (b) λ = 420 nm. The laser energy of these wavelengths was 1.1 mJ and 2.3 mJ, respectively.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7b3bd0aa73d845a4",
+      "source_id": "src-7179b701538dafe0",
+      "page": 10,
+      "figure_number": "6",
+      "caption": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+      "bbox": {
+        "x0": 312.6675720214844,
+        "y0": 131.45046997070312,
+        "x1": 526.987548828125,
+        "y1": 291.2784729003906
+      },
+      "panels": [
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 413.6715393066406,
+            "y0": 284.43377685546875,
+            "x1": 529.0242919921875,
+            "y1": 304.0705261230469
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 10,
+        "object_id": "fig-7b3bd0aa73d845a4",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 312.6675720214844,
+          "y0": 131.45046997070312,
+          "x1": 526.987548828125,
+          "y1": 291.2784729003906
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-8eeb0d5b80e53487",
+      "source_id": "src-7179b701538dafe0",
+      "page": 10,
+      "figure_number": "6",
+      "caption": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+      "bbox": {
+        "x0": 69.7905502319336,
+        "y0": 133.44546508789062,
+        "x1": 257.83355712890625,
+        "y1": 292.0195007324219
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 165.66549682617188,
+            "y0": 284.7755126953125,
+            "x1": 276.17315673828125,
+            "y1": 304.4122619628906
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 10,
+        "object_id": "fig-8eeb0d5b80e53487",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 69.7905502319336,
+          "y0": 133.44546508789062,
+          "x1": 257.83355712890625,
+          "y1": 292.0195007324219
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-31544327b85ddaa9",
+      "source_id": "src-7179b701538dafe0",
+      "page": 11,
+      "bbox": {
+        "x0": 184.5959930419922,
+        "y0": 606.6751098632812,
+        "x1": 232.11599731445312,
+        "y1": 627.8551025390625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-7179b701538dafe0",
+        "page": 11,
+        "object_id": "fig-31544327b85ddaa9",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 184.5959930419922,
+          "y0": 606.6751098632812,
+          "x1": 232.11599731445312,
+          "y1": 627.8551025390625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ab140f11e8271b3d",
+      "source_id": "src-7179b701538dafe0",
+      "page": 11,
+      "bbox": {
+        "x0": 184.5959930419922,
+        "y0": 487.93511962890625,
+        "x1": 233.4359893798828,
+        "y1": 519.5551147460938
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-7179b701538dafe0",
+        "page": 11,
+        "object_id": "fig-ab140f11e8271b3d",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 184.5959930419922,
+          "y0": 487.93511962890625,
+          "x1": 233.4359893798828,
+          "y1": 519.5551147460938
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a083eba450270309",
+      "source_id": "src-7179b701538dafe0",
+      "page": 11,
+      "figure_number": "8",
+      "caption": "Figure 8. Narrow-scan XPS spectra of Ni2p3/2 of 3.5 wt.% Niacac-based NPs/TiO2 sample before and after cycling.",
+      "bbox": {
+        "x0": 169.5749969482422,
+        "y0": 75.92902374267578,
+        "x1": 383.4750061035156,
+        "y1": 701.715087890625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 8. Narrow-scan XPS spectra of Ni2p3/2 of 3.5 wt.% Niacac-based NPs/TiO2 sample before and after cycling."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 11,
+        "object_id": "fig-a083eba450270309",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 169.5749969482422,
+          "y0": 75.92902374267578,
+          "x1": 383.4750061035156,
+          "y1": 701.715087890625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 8. Narrow-scan XPS spectra of Ni2p3/2 of 3.5 wt.% Niacac-based NPs/TiO2 sample before and after cycling.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4f1670c637e5aa23",
+      "source_id": "src-7179b701538dafe0",
+      "page": 12,
+      "figure_number": "9",
+      "caption": "Figure 9. Photocatalytic mechanism of Ni-based NPs/TiO2 sample under UV–visible light excitation.",
+      "bbox": {
+        "x0": 167.82730102539062,
+        "y0": 360.91119384765625,
+        "x1": 429.97930908203125,
+        "y1": 534.706787109375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 9. Photocatalytic mechanism of Ni-based NPs/TiO2 sample under UV–visible light excitation."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-7179b701538dafe0",
+        "page": 12,
+        "object_id": "fig-4f1670c637e5aa23",
+        "object_type": "figure",
+        "table_or_figure_number": "9",
+        "bbox": {
+          "x0": 167.82730102539062,
+          "y0": 360.91119384765625,
+          "x1": 429.97930908203125,
+          "y1": 534.706787109375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 9. Photocatalytic mechanism of Ni-based NPs/TiO2 sample under UV–visible light excitation.",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

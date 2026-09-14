@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
 
 from .catalysis_evidence import (
     SUPPORTED_EVIDENCE_ORIGINS,
     evidence_is_value_specific,
     verify_catalysis_document_evidence,
+    normalize_catalysis_evidence_text,
 )
 from .catalysis_models import CatalysisDocument, CatalysisEvidence, collect_stage1_warnings
 from .source_context import SourceBundle
@@ -32,6 +34,46 @@ POTENTIAL_REFERENCE_REQUIRED = {"onset_potential", "half_wave_potential"}
 class AdmissionDecision:
     admitted: bool
     reason: str | None = None
+
+
+def _link_explicit_referenced_catalyst_evidence(document: CatalysisDocument) -> None:
+    """Carry exact child evidence to an explicitly named referenced catalyst.
+
+    This repairs provenance linkage only. It never creates a catalyst, changes
+    ownership, or treats a scientific value as evidence of an unnamed material.
+    """
+    catalysts = {item.local_id: item for item in document.catalysts}
+    experiments = {
+        item.experiment_id: item
+        for item in [*document.heterogeneous_experiments, *document.electrocatalysis_experiments]
+    }
+
+    def link(local_id: str | None, evidence: list[CatalysisEvidence]) -> None:
+        catalyst = catalysts.get(local_id or "")
+        if catalyst is None or catalyst.ownership != "focal_work" or not catalyst.reported_name:
+            return
+        name = normalize_catalysis_evidence_text(catalyst.reported_name)
+        pattern = re.compile(rf"(?<!\w){re.escape(name)}(?!\w)")
+        known = {item.model_dump_json(exclude_none=True) for item in catalyst.evidence}
+        for item in evidence:
+            snippet = normalize_catalysis_evidence_text(item.text_snippet or "")
+            serialized = item.model_dump_json(exclude_none=True)
+            if pattern.search(snippet) and serialized not in known:
+                catalyst.evidence.append(item.model_copy(deep=True))
+                known.add(serialized)
+
+    for experiment in experiments.values():
+        evidence = [*experiment.evidence]
+        for metric in experiment.metrics:
+            evidence.extend(metric.evidence)
+        link(experiment.catalyst_ref, evidence)
+    for stability in document.stability_tests:
+        parent = experiments.get(stability.experiment_ref or "")
+        local_id = stability.catalyst_state_ref or (parent.catalyst_ref if parent else None)
+        evidence = [*stability.evidence]
+        if stability.retained_metric is not None:
+            evidence.extend(stability.retained_metric.evidence)
+        link(local_id, evidence)
 
 
 def decide_quantitative_admission(
@@ -104,6 +146,7 @@ def postprocess_catalysis_document(
     source_text: str = "",
     source_bundle: SourceBundle | None = None,
 ) -> tuple[CatalysisDocument, list[str]]:
+    _link_explicit_referenced_catalyst_evidence(document)
     verify_catalysis_document_evidence(document, source_text, source_bundle)
     warnings = list(dict.fromkeys([*document.semantic_warnings, *collect_stage2_warnings(document)]))
     potentials = []

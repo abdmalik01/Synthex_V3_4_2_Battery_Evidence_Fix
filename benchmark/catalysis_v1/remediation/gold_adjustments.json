@@ -1,0 +1,31 @@
+{
+  "benchmark_id": "CAT-GOLD-B",
+  "historical_gold_unchanged": true,
+  "adjustments": [
+    {
+      "selector": {
+        "property": "partial_current_density",
+        "value": 0.5,
+        "potential": "-0.75 V RHE"
+      },
+      "remove_expected_field": "normalization_basis",
+      "replacement_expectation": "unknown_or_absent",
+      "reason": "The paper reports mA cm-2 and electrode dimensions but does not explicitly identify the denominator as geometric electrode area."
+    },
+    {
+      "selector": {
+        "property": "partial_current_density",
+        "value": 0.5,
+        "potential": "-1.00 V RHE"
+      },
+      "remove_expected_field": "normalization_basis",
+      "replacement_expectation": "unknown_or_absent",
+      "reason": "The paper reports mA cm-2 and electrode dimensions but does not explicitly identify the denominator as geometric electrode area."
+    }
+  ],
+  "source_review": {
+    "searched_terms": ["geometric", "normaliz", "electrode area"],
+    "explicit_basis_statement_found": false,
+    "scientific_rule": "Area-normalized units and electrode dimensions do not by themselves prove geometric-area normalization."
+  }
+}

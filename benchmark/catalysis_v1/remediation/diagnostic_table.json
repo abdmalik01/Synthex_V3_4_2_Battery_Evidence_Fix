@@ -1,0 +1,69 @@
+{
+  "historical_stage3_unchanged": true,
+  "misses": [
+    {
+      "id": "gold-a-conversion-mmonico",
+      "expected": "MMONiCo CO2 conversion approximately 80% at 350 °C",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold A page 9, section 3.2.2",
+      "failure_layer": "A_model_extraction",
+      "diagnosis": "The accepted strict document omitted the prose metric; postprocessing does not delete metrics."
+    },
+    {
+      "id": "gold-a-conversion-mmonife",
+      "expected": "MMONiFe CO2 conversion 50% at 350 °C",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold A page 9, section 3.2.2",
+      "failure_layer": "A_model_extraction",
+      "diagnosis": "The accepted strict document omitted the prose metric; postprocessing does not delete metrics."
+    },
+    {
+      "id": "gold-b-npropanol-o2-feed",
+      "expected": "n-propanol partial current density approximately 0.5 mA cm-2 at -0.75 V RHE under O2-containing CO2",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold B page 2",
+      "failure_layer": "A_schema_contract_plus_C_assembly_plus_D_matcher",
+      "diagnosis": "The model separated the feed regimes in parent experiments, but ElectrocatalysisExperiment had no typed feed field and downstream association could not inherit one."
+    },
+    {
+      "id": "gold-b-npropanol-pure-feed",
+      "expected": "n-propanol partial current density approximately 0.5 mA cm-2 at -1.00 V RHE under pure CO2",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold B page 2",
+      "failure_layer": "A_schema_contract_plus_C_assembly_plus_D_matcher",
+      "diagnosis": "The model separated the feed regimes in parent experiments, but ElectrocatalysisExperiment had no typed feed field and downstream association could not inherit one."
+    },
+    {
+      "id": "gold-b-methane-o2-feed",
+      "expected": "methane onset -0.75 V RHE under O2-containing CO2",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold B page 2",
+      "failure_layer": "A_schema_contract_plus_C_assembly_plus_D_matcher",
+      "diagnosis": "The parent experiment carried only untyped reaction/evidence wording, so the matcher had no feed context."
+    },
+    {
+      "id": "gold-b-methane-pure-feed",
+      "expected": "methane onset -0.95 V RHE under pure CO2",
+      "source_status": "explicit_native_prose",
+      "source_location": "Gold B page 2",
+      "failure_layer": "A_schema_contract_plus_C_assembly_plus_D_matcher",
+      "diagnosis": "The parent experiment carried only untyped reaction/evidence wording, so the matcher had no feed context."
+    },
+    {
+      "id": "gold-b-normalization-o2-feed",
+      "expected": "geometric_area normalization for the -0.75 V partial current density",
+      "source_status": "not_explicitly_supported",
+      "source_location": "Gold B pages 2, 3, and 8 reviewed",
+      "failure_layer": "F_gold_expectation",
+      "diagnosis": "mA cm-2 and electrode dimensions are insufficient to assert geometric-area normalization. Unknown/absent is the scientifically correct result."
+    },
+    {
+      "id": "gold-b-normalization-pure-feed",
+      "expected": "geometric_area normalization for the -1.00 V partial current density",
+      "source_status": "not_explicitly_supported",
+      "source_location": "Gold B pages 2, 3, and 8 reviewed",
+      "failure_layer": "F_gold_expectation",
+      "diagnosis": "mA cm-2 and electrode dimensions are insufficient to assert geometric-area normalization. Unknown/absent is the scientifically correct result."
+    }
+  ]
+}

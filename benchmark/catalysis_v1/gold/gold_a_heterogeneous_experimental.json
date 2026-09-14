@@ -1,0 +1,125 @@
+{
+  "benchmark_id": "CAT-GOLD-A",
+  "source": {
+    "filename": "1-s2.0-S0360319924005640-main.pdf",
+    "title": "Improved conversion, selectivity, and stability during CO2 methanation by the incorporation of Ce in Ni, Co, and Fe-hydrotalcite-derived catalysts",
+    "doi": "10.1016/j.ijhydene.2024.02.149",
+    "year": 2024,
+    "checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285"
+  },
+  "expected_route": "catalysis",
+  "expected_subtypes": [
+    "catalyst_synthesis",
+    "catalyst_characterization",
+    "heterogeneous_catalysis",
+    "stability_deactivation"
+  ],
+  "expected_scope_status": "supported",
+  "catalysts": [
+    {"local_id": "cat_mmoni", "reported_name": "MMONi", "formula": "Mg5NiAl2O9", "state": "as_synthesized"},
+    {"local_id": "cat_mmoni15", "reported_name": "MMONi1.5", "formula": "Mg4.5Ni1.5Al2O9", "state": "as_synthesized", "variant_of": "cat_mmoni"},
+    {"local_id": "cat_mmoni2", "reported_name": "MMONi2", "formula": "Mg4Ni2Al2O9", "state": "as_synthesized", "variant_of": "cat_mmoni"},
+    {"local_id": "cat_mmonico", "reported_name": "MMONiCo", "formula": "Mg4.7NiCo0.3Al2O9", "state": "as_synthesized", "variant_of": "cat_mmoni", "components": [{"role": "active_component", "reported_name": "Ni"}, {"role": "promoter", "reported_name": "Co"}]},
+    {"local_id": "cat_mmonife", "reported_name": "MMONiFe", "formula": "Mg5NiAl1.7Fe0.3O9", "state": "as_synthesized", "variant_of": "cat_mmoni", "components": [{"role": "active_component", "reported_name": "Ni"}, {"role": "promoter", "reported_name": "Fe"}]},
+    {"local_id": "cat_mmoni_ce", "reported_name": "MMONi + Ce", "formula": "Mg5NiAl2O9 + 0.3CeO2", "state": "as_synthesized", "variant_of": "cat_mmoni", "components": [{"role": "support", "reported_name": "CeO2"}]},
+    {"local_id": "cat_mmonico_ce", "reported_name": "MMONiCo + Ce", "formula": "Mg4.7NiCo0.3Al2O9 + 0.3CeO2", "state": "as_synthesized", "variant_of": "cat_mmonico", "components": [{"role": "active_component", "reported_name": "Ni"}, {"role": "promoter", "reported_name": "Co"}, {"role": "support", "reported_name": "CeO2"}]},
+    {"local_id": "cat_mmonife_ce", "reported_name": "MMONiFe + Ce", "formula": "Mg5NiAl1.7Fe0.3O9 + 0.3CeO2", "state": "as_synthesized", "variant_of": "cat_mmonife", "components": [{"role": "active_component", "reported_name": "Ni"}, {"role": "promoter", "reported_name": "Fe"}, {"role": "support", "reported_name": "CeO2"}]},
+    {"local_id": "cat_mmonico_ce_activated", "reported_name": "MMONiCo + Ce", "state": "activated", "state_parent_ref": "cat_mmonico_ce"}
+  ],
+  "preparations": [
+    {
+      "material_refs": ["cat_mmoni", "cat_mmoni15", "cat_mmoni2", "cat_mmonico", "cat_mmonife"],
+      "method": "hydrotalcite coprecipitation followed by calcination",
+      "steps": [
+        {"step": "precipitation", "temperature": "65 °C", "details": "Metal nitrates were gradually added to sodium carbonate without pH change."},
+        {"step": "mixing", "duration": "1 h"},
+        {"step": "other", "details": "crystallized", "duration": "4 h"},
+        {"step": "washing", "details": "washed until neutral pH"},
+        {"step": "drying", "temperature": "90 °C", "duration": "24 h"},
+        {"step": "calcination", "temperature": "500 °C", "duration": "8 h"}
+      ],
+      "evidence_locator": {"page": 2, "section": "2.1 Hydrotalcite and mixed oxide synthesis"}
+    },
+    {
+      "material_refs": ["cat_mmoni_ce", "cat_mmonico_ce", "cat_mmonife_ce"],
+      "method": "ceria reconstruction",
+      "steps": [
+        {"step": "mixing", "details": "Ce(NO3)3·6H2O complexed with EDTA at pH 10; 1 mol Ce per 3 mol Ni", "duration": "24 h"},
+        {"step": "washing"},
+        {"step": "drying", "temperature": "80 °C", "duration": "24 h"}
+      ],
+      "evidence_locator": {"page": 2, "section": "2.1 Hydrotalcite and mixed oxide synthesis"}
+    }
+  ],
+  "characterizations": [
+    {"method": "XRD", "evidence_locator": {"page": 2, "section": "2.2 Characterization"}},
+    {"method": "atomic absorption spectroscopy", "evidence_locator": {"page": 2, "section": "2.2 Characterization"}},
+    {"method": "N2 adsorption-desorption / BET", "evidence_locator": {"page": 2, "section": "2.2 Characterization"}},
+    {"method": "SEM", "evidence_locator": {"page": 2, "section": "2.2 Characterization"}},
+    {"method": "TEM/EDX", "evidence_locator": {"page": 2, "section": "2.2 Characterization"}},
+    {"method": "XPS", "evidence_locator": {"page": 3, "section": "2.2 Characterization"}},
+    {"method": "H2-TPR", "evidence_locator": {"page": 3, "section": "2.2 Characterization"}},
+    {"method": "CO2-TPD", "evidence_locator": {"page": 3, "section": "2.2 Characterization"}}
+  ],
+  "experiments": [
+    {
+      "experiment_id": "exp_fixed_bed_methanation",
+      "reaction": "CO2 methanation",
+      "reaction_class": "hydrogenation",
+      "reactants": ["CO2", "H2"],
+      "product": "CH4",
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": "40 mg",
+      "feed": "40% H2 and 10% CO2 in Ar balance",
+      "flow": "50 mL min-1",
+      "space_velocity": "36000 h-1",
+      "temperatures": ["250 °C", "300 °C", "350 °C", "400 °C"],
+      "pretreatment": {"gas": "10% H2", "flow": "50 mL min-1", "duration": "1 h", "temperature_without_ceria": "800 °C", "temperature_with_ceria": "850 °C"},
+      "ownership": "focal_work",
+      "evidence_locator": {"page": 3, "section": "2.3 Catalytic activity"}
+    }
+  ],
+  "metrics": [
+    {"property": "conversion", "value": 80, "unit": "%", "qualifier": "approx", "reactant": "CO2", "context": {"catalyst": "MMONiCo", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 9, "section": "3.2.2"}},
+    {"property": "conversion", "value": 50, "unit": "%", "qualifier": "exact", "reactant": "CO2", "context": {"catalyst": "MMONiFe", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 9, "section": "3.2.2"}},
+    {"property": "productivity", "value": 168, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONiCo + Ce", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}},
+    {"property": "productivity", "value": 150, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONiCo", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}},
+    {"property": "productivity", "value": 148, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONi + Ce", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}},
+    {"property": "productivity", "value": 108, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONiFe + Ce", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}},
+    {"property": "productivity", "value": 105, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONi", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}},
+    {"property": "productivity", "value": 80, "unit": "mol CH4 h-1 L-1", "product": "CH4", "context": {"catalyst": "MMONiFe", "temperature": "350 °C", "reaction": "hydrogenation"}, "evidence_locator": {"page": 10, "section": "3.2.3"}}
+  ],
+  "qualitative_truth": [
+    {"claim": "Ceria substantially improves methane selectivity for MMONiCo + Ce and MMONi + Ce, especially at low temperatures.", "evidence_locator": {"page": 9, "section": "3.2.2"}},
+    {"claim": "Figure-only curve values are not treated as exact native-text metrics.", "evidence_locator": {"page": 9, "figure": "Figure 9"}}
+  ],
+  "stability_tests": [
+    {
+      "stability_id": "stability_mmonico_ce",
+      "catalyst": "MMONiCo + Ce",
+      "experiment_ref": "exp_fixed_bed_methanation",
+      "mode": "time_on_stream",
+      "temperature": "350 °C",
+      "duration": "1400 min",
+      "retained_metric": {"property": "conversion", "value": 85, "unit": "%", "qualifier": "approx", "reactant": "CO2"},
+      "ownership": "focal_work",
+      "evidence_locator": {"page": 10, "section": "3.2.3"}
+    }
+  ],
+  "calculations": [],
+  "condition_conflicts": [
+    {
+      "field": "MMONiCo conversion after 1400 min",
+      "native_text": "The prose states conversions higher than 80% for both catalysts.",
+      "figure_observation": "Figure 10B visually places MMONiCo near 70% at 1400 min.",
+      "expected_behavior": "Preserve the conflict; any digitized figure estimate remains estimated and noncanonical."
+    }
+  ],
+  "ownership_expectation": "All listed focal objects are focal_work; literature comparisons on page 10 are cited_prior_work and not focal.",
+  "admission_expectation": "Only focal, value-specific, deterministically verified native/table evidence is eligible; qualitative or digitized graph observations remain quarantined/not_submitted.",
+  "curation": {
+    "source_grounded": true,
+    "model_output_used": false,
+    "curator_note": "Representative truth independently transcribed from PDF pages 1-3 and 8-10; not exhaustive. Superscripts lost by parser are normalized only in this benchmark annotation's display strings, while locators preserve source pages."
+  }
+}

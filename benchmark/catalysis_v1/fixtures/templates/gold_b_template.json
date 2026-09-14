@@ -1,0 +1,7 @@
+{
+  "template_only": true,
+  "scorable": false,
+  "synthetic": true,
+  "former_placeholder_title": "Electrochemical CO2 reduction on Ag nanoparticle electrodes in neutral electrolyte",
+  "warning": "This fictional pre-corpus scaffold is retained only to document the Phase 0 audit. It is not benchmark truth and must never enter scoring."
+}

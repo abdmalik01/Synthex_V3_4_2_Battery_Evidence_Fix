@@ -109,6 +109,10 @@ MATERIALS_INFORMATICS_TERMS: tuple[str, ...] = (
     "rdf", "sparql", "literature mining", "ontology", "corpus", "database", "triples",
     "information extraction",
 )
+_MATERIALS_INFORMATICS_PRIMARY_TERMS = (
+    "knowledge graph", "named entity recognition", "rdf", "sparql", "literature mining",
+    "ontology", "triples", "information extraction",
+)
 _INCIDENTAL_CUES = ("for example", "example", "cited", "previously reported", "prior work", "literature example", "review")
 _FOCAL_CUES = ("we synthesized", "we prepared", "we measured", "our experiment", "experimental section", "methods", "reaction conditions", "electrochemical measurement")
 _MIN_SCIENTIFIC_DOMAIN_SCORE = 4.0
@@ -171,7 +175,28 @@ def classify_catalysis_paper_types(text: str) -> list[str]:
 
 
 def catalysis_scope_status(text: str) -> str:
-    return "deferred_subtype" if any(_count_term(text, term) for term in _CATALYSIS_DEFERRED_TERMS) else "supported"
+    """Classify focal deferred subtypes without reacting to isolated literature mentions."""
+    title_and_abstract = text[:6000]
+    deferred_score, _ = _matched(title_and_abstract, _CATALYSIS_DEFERRED_TERMS)
+    return (
+        "deferred_subtype"
+        if deferred_score >= 1.25
+        else "supported"
+    )
+
+
+def _has_materials_informatics_context(text: str, hits: list[str]) -> bool:
+    """Require a high-specificity informatics cue plus corroborating vocabulary."""
+    primary_hits = [term for term in _MATERIALS_INFORMATICS_PRIMARY_TERMS if term in hits]
+    has_named_entity_pair = "named entity recognition" in hits or (
+        "ner" in hits and any(term in hits for term in ("bert", "corpus", "information extraction"))
+    )
+    has_model_data_pair = "bert" in hits and any(term in hits for term in ("dataset", "data set", "corpus", "database"))
+    return bool(
+        (primary_hits and len(hits) >= 2)
+        or has_named_entity_pair
+        or has_model_data_pair
+    )
 
 
 def _catalysis_context_bonus(text: str) -> tuple[float, list[str]]:
@@ -252,7 +277,7 @@ class DomainRouter:
         selected_domain = best_domain
         # Multiple independent data/knowledge-graph cues indicate that material names and
         # scientific domains are often examples rather than the paper's focal experiment.
-        if len(informatics_hits) >= 2:
+        if _has_materials_informatics_context(text, informatics_hits):
             selected_domain = "generic"
             ambiguity_reason = "materials_informatics_signals"
         elif best < _MIN_SCIENTIFIC_DOMAIN_SCORE and not focal_signals[best_domain]:

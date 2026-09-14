@@ -322,6 +322,7 @@ class ElectrocatalysisExperiment(StrictCatalysisModel):
     substrate_or_current_collector: str | None = None
     binder: str | None = None
     geometric_area: CatalysisQuantity | None = None
+    feed_composition: list[FeedComponent] = Field(default_factory=list)
     electrolyte: str | None = None
     electrolyte_concentration: CatalysisQuantity | None = None
     pH: float | None = None

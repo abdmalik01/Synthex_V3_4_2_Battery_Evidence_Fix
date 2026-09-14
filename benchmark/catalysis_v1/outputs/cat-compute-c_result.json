@@ -1,0 +1,4444 @@
+{
+  "benchmark_id": "CAT-COMPUTE-C",
+  "filename": "molecules-28-03888-v2.pdf",
+  "route": {
+    "domain": "catalysis",
+    "confidence": 0.957,
+    "paper_types": [
+      "computational_dft",
+      "electrocatalysis",
+      "stability_deactivation",
+      "review",
+      "catalyst_synthesis",
+      "heterogeneous_catalysis"
+    ],
+    "scope_status": "supported",
+    "ambiguity_reason": null
+  },
+  "route_correct": true,
+  "scope_correct": true,
+  "subtypes_correct": true,
+  "source_context": {
+    "source_id": "src-bbd6b9071cef5e09",
+    "filename": "molecules-28-03888-v2.pdf",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 3,
+    "figures_detected": 20,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-bbd6b9071cef5e09\\visual_document.json"
+  },
+  "extraction_status": "schema_valid",
+  "gemini_calls": 1,
+  "repair_calls": 0,
+  "schema_valid_first_response": true,
+  "schema_valid_repaired_response": false,
+  "persistent_failure": false,
+  "archive": {
+    "metadata": {
+      "archive_id": "arc-ff576df5a19c2edc",
+      "schema_name": "synthex-archive",
+      "schema_version": "3.4.0",
+      "software_version": "3.4.2",
+      "created_at": "2026-09-13T16:15:39.211209+00:00",
+      "generator": "Synthex V3.4.2",
+      "extractor_model": "gemini-3.5-flash",
+      "domain": "catalysis"
+    },
+    "sources": [
+      {
+        "source_id": "src-6e3d37257698537d",
+        "source_type": "paper",
+        "title": "Theoretical Investigation of HER and OER Electrocatalysts Based on the 2D R-graphyne Completely Composed of Anti-Aromatic Carbon Rings",
+        "doi": "10.3390/molecules28093888",
+        "url": "https://doi.org/10.3390/molecules28093888",
+        "year": 2023,
+        "authors": [
+          "Cuimei Li",
+          "Tianya Li",
+          "Guangtao Yu",
+          "Wei Chen"
+        ],
+        "checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456"
+      }
+    ],
+    "materials": [],
+    "devices": [],
+    "processes": [],
+    "experiments": [],
+    "calculations": [],
+    "relationships": [
+      {
+        "relation_id": "rel-c3586d62855e92e3",
+        "subject_id": "arc-ff576df5a19c2edc",
+        "predicate": "reported_by",
+        "object_id": "src-6e3d37257698537d",
+        "attributes": {},
+        "evidence": []
+      }
+    ],
+    "domain_payloads": [
+      {
+        "domain": "catalysis",
+        "schema_version": "1.0-stage2",
+        "tags": [],
+        "values": {
+          "validated_document": {
+            "source": {
+              "title": "Theoretical Investigation of HER and OER Electrocatalysts Based on the 2D R-graphyne Completely Composed of Anti-Aromatic Carbon Rings",
+              "doi": "10.3390/molecules28093888",
+              "url": "https://doi.org/10.3390/molecules28093888",
+              "year": 2023,
+              "authors": [
+                "Cuimei Li",
+                "Tianya Li",
+                "Guangtao Yu",
+                "Wei Chen"
+              ],
+              "pdf_text_parser": "pypdf"
+            },
+            "paper_types": [
+              "computational_dft"
+            ],
+            "scope_status": "supported",
+            "catalysts": [
+              {
+                "local_id": "cat-r-graphyne",
+                "reported_name": "R-graphyne",
+                "canonical_name": "R-graphyne",
+                "reported_formula": "C",
+                "formula": "C",
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-graphene",
+                "reported_name": "graphene",
+                "canonical_name": "graphene",
+                "reported_formula": "C",
+                "formula": "C",
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "comparison_table",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-fe-r-graphyne",
+                "reported_name": "Fe@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Fe@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-ru-r-graphyne",
+                "reported_name": "Ru@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Ru@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-os-r-graphyne",
+                "reported_name": "Os@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Os@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-co-r-graphyne",
+                "reported_name": "Co@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Co@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-rh-r-graphyne",
+                "reported_name": "Rh@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Rh@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-ir-r-graphyne",
+                "reported_name": "Ir@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Ir@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-ni-r-graphyne",
+                "reported_name": "Ni@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Ni@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-pd-r-graphyne",
+                "reported_name": "Pd@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Pd@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              },
+              {
+                "local_id": "cat-pt-r-graphyne",
+                "reported_name": "Pt@R-graphyne",
+                "canonical_name": null,
+                "reported_formula": "Pt@R-graphyne",
+                "formula": null,
+                "composition_raw": null,
+                "composition": {},
+                "catalyst_family": null,
+                "state": "unknown",
+                "state_parent_ref": null,
+                "variant_of": null,
+                "components": [],
+                "phase": null,
+                "particle_size": null,
+                "morphology": null,
+                "bet_surface_area": null,
+                "pore_size": null,
+                "pore_volume": null,
+                "oxidation_state": null,
+                "exposed_facet": null,
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            ],
+            "preparations": [],
+            "characterizations": [],
+            "heterogeneous_experiments": [],
+            "electrocatalysis_experiments": [],
+            "stability_tests": [],
+            "calculations": [
+              {
+                "calculation_id": "calc-dft-study",
+                "material_refs": [
+                  "cat-r-graphyne",
+                  "cat-graphene",
+                  "cat-fe-r-graphyne",
+                  "cat-ru-r-graphyne",
+                  "cat-os-r-graphyne",
+                  "cat-co-r-graphyne",
+                  "cat-rh-r-graphyne",
+                  "cat-ir-r-graphyne",
+                  "cat-ni-r-graphyne",
+                  "cat-pd-r-graphyne",
+                  "cat-pt-r-graphyne"
+                ],
+                "calculation_type": "dft",
+                "code": "VASP",
+                "functional": "PBE",
+                "dispersion_correction": "DFT-D2",
+                "plane_wave_cutoff_or_basis": "400 eV",
+                "k_points": "3x3x1",
+                "slab_or_facet": null,
+                "layers": null,
+                "vacuum_thickness": {
+                  "raw_value": "20 Å",
+                  "value": 20.0,
+                  "unit": "Å",
+                  "qualifier": "exact"
+                },
+                "solvation_model": null,
+                "adsorbate_coverage": null,
+                "spin_treatment": "spin-polarized",
+                "outputs": [
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.450 eV",
+                    "value": 0.45,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.423 eV",
+                    "value": 0.423,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "1.642 eV",
+                    "value": 1.642,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "compared with the inert HER activity of graphene (1.642 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.239 eV",
+                    "value": 0.239,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.140 eV",
+                    "value": -0.14,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.122 eV",
+                    "value": 0.122,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.181 eV",
+                    "value": 0.181,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.235 eV",
+                    "value": 0.235,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC6",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.250 eV",
+                    "value": 0.25,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC7",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.237 eV",
+                    "value": 0.237,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC8",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.142 eV",
+                    "value": 0.142,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TFe",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "TFe site can also exhibit considerably high HER activity, in view of the small ∆GH* value of 0.142 eV",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.104 eV",
+                    "value": -0.104,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.014 eV",
+                    "value": -0.014,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.316 eV",
+                    "value": 0.316,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.328 eV",
+                    "value": 0.328,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.501 eV",
+                    "value": -0.501,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TRu",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TRu (−0.501 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.140 eV",
+                    "value": -0.14,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.272 eV",
+                    "value": 0.272,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.263 eV",
+                    "value": -0.263,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.196 eV",
+                    "value": 0.196,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.334 eV",
+                    "value": 0.334,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.778 eV",
+                    "value": -0.778,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TOs",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TOs (−0.778 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.068 eV",
+                    "value": 0.068,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.069 eV",
+                    "value": 0.069,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TCo",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.118 eV",
+                    "value": -0.118,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.037 eV",
+                    "value": -0.037,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.497 eV",
+                    "value": -0.497,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TRh",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TRh (−0.497 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.005 eV",
+                    "value": -0.005,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.246 eV",
+                    "value": 0.246,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.099 eV",
+                    "value": -0.099,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.241 eV",
+                    "value": 0.241,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.581 eV",
+                    "value": -0.581,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TIr",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TIr (−0.581 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.210 eV",
+                    "value": 0.21,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC3 site (0.210 eV) on Ni@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.240 eV",
+                    "value": 0.24,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.282 eV",
+                    "value": 0.282,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.267 eV",
+                    "value": 0.267,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 site (0.267 eV) on Pt@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "1.43 V",
+                    "value": 1.43,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": null,
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "the calculated ηOER values of Ru@R-graphyne (1.43 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "1.16 V",
+                    "value": 1.16,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": null,
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Ir@R-graphyne (1.16 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.74 V",
+                    "value": 0.74,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": null,
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Co@R-graphyne (0.74 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.48 V",
+                    "value": 0.48,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": null,
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Rh@R-graphyne can exhibit considerably high OER performance considering the very low ηOER value of 0.48 V",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.31 V",
+                    "value": 0.31,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": null,
+                    "site": null,
+                    "facet": null,
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "the calculated ηOER value can be as small as 0.31 V",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            ],
+            "condition_conflicts": [],
+            "extraction_notes": [],
+            "semantic_warnings": []
+          },
+          "admissibility_audit": {
+            "policy": "catalysis_focal_value_specific_verified_v1",
+            "admitted_quantitative_values": 0,
+            "quarantined_objects_or_values": 12,
+            "quarantine": [
+              {
+                "path": "catalysts.cat-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-r-graphyne",
+                  "reported_name": "R-graphyne",
+                  "canonical_name": "R-graphyne",
+                  "reported_formula": "C",
+                  "formula": "C",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-graphene",
+                "reason": "ownership_comparison_table",
+                "ownership": "comparison_table",
+                "object": {
+                  "local_id": "cat-graphene",
+                  "reported_name": "graphene",
+                  "canonical_name": "graphene",
+                  "reported_formula": "C",
+                  "formula": "C",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "comparison_table",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-fe-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-fe-r-graphyne",
+                  "reported_name": "Fe@R-graphyne",
+                  "reported_formula": "Fe@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-ru-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-ru-r-graphyne",
+                  "reported_name": "Ru@R-graphyne",
+                  "reported_formula": "Ru@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-os-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-os-r-graphyne",
+                  "reported_name": "Os@R-graphyne",
+                  "reported_formula": "Os@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-co-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-co-r-graphyne",
+                  "reported_name": "Co@R-graphyne",
+                  "reported_formula": "Co@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-rh-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-rh-r-graphyne",
+                  "reported_name": "Rh@R-graphyne",
+                  "reported_formula": "Rh@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-ir-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-ir-r-graphyne",
+                  "reported_name": "Ir@R-graphyne",
+                  "reported_formula": "Ir@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-ni-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-ni-r-graphyne",
+                  "reported_name": "Ni@R-graphyne",
+                  "reported_formula": "Ni@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-pd-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-pd-r-graphyne",
+                  "reported_name": "Pd@R-graphyne",
+                  "reported_formula": "Pd@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "catalysts.cat-pt-r-graphyne",
+                "reason": "no_value_specific_evidence",
+                "ownership": "focal_work",
+                "object": {
+                  "local_id": "cat-pt-r-graphyne",
+                  "reported_name": "Pt@R-graphyne",
+                  "reported_formula": "Pt@R-graphyne",
+                  "composition": {},
+                  "state": "unknown",
+                  "components": [],
+                  "active_site_claims": [],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              },
+              {
+                "path": "calculations.calc-dft-study",
+                "reason": "schema_invalid",
+                "ownership": "focal_work",
+                "object": {
+                  "calculation_id": "calc-dft-study",
+                  "material_refs": [
+                    "cat-r-graphyne",
+                    "cat-graphene",
+                    "cat-fe-r-graphyne",
+                    "cat-ru-r-graphyne",
+                    "cat-os-r-graphyne",
+                    "cat-co-r-graphyne",
+                    "cat-rh-r-graphyne",
+                    "cat-ir-r-graphyne",
+                    "cat-ni-r-graphyne",
+                    "cat-pd-r-graphyne",
+                    "cat-pt-r-graphyne"
+                  ],
+                  "calculation_type": "dft",
+                  "code": "VASP",
+                  "functional": "PBE",
+                  "dispersion_correction": "DFT-D2",
+                  "plane_wave_cutoff_or_basis": "400 eV",
+                  "k_points": "3x3x1",
+                  "vacuum_thickness": {
+                    "raw_value": "20 Å",
+                    "value": 20.0,
+                    "unit": "Å",
+                    "qualifier": "exact"
+                  },
+                  "spin_treatment": "spin-polarized",
+                  "outputs": [
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.450 eV",
+                      "value": 0.45,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC1",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 4,
+                          "section": "2.1",
+                          "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.423 eV",
+                      "value": 0.423,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 4,
+                          "section": "2.1",
+                          "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "1.642 eV",
+                      "value": 1.642,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 4,
+                          "section": "2.1",
+                          "text_snippet": "compared with the inert HER activity of graphene (1.642 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.239 eV",
+                      "value": 0.239,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.140 eV",
+                      "value": -0.14,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.122 eV",
+                      "value": 0.122,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC4",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.181 eV",
+                      "value": 0.181,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC5",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.235 eV",
+                      "value": 0.235,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC6",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.250 eV",
+                      "value": 0.25,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC7",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.237 eV",
+                      "value": 0.237,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC8",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.142 eV",
+                      "value": 0.142,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TFe",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "TFe site can also exhibit considerably high HER activity, in view of the small ∆GH* value of 0.142 eV",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.104 eV",
+                      "value": -0.104,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.014 eV",
+                      "value": -0.014,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.316 eV",
+                      "value": 0.316,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC4",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.328 eV",
+                      "value": 0.328,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC5",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.501 eV",
+                      "value": -0.501,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TRu",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "TRu (−0.501 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.140 eV",
+                      "value": -0.14,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC1",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.272 eV",
+                      "value": 0.272,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.263 eV",
+                      "value": -0.263,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.196 eV",
+                      "value": 0.196,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC4",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.334 eV",
+                      "value": 0.334,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC5",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 5,
+                          "section": "2.2",
+                          "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.778 eV",
+                      "value": -0.778,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TOs",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "TOs (−0.778 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.068 eV",
+                      "value": 0.068,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.069 eV",
+                      "value": 0.069,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TCo",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.118 eV",
+                      "value": -0.118,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.037 eV",
+                      "value": -0.037,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.497 eV",
+                      "value": -0.497,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TRh",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TRh (−0.497 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.005 eV",
+                      "value": -0.005,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC1",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.246 eV",
+                      "value": 0.246,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC2",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.099 eV",
+                      "value": -0.099,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.241 eV",
+                      "value": 0.241,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC4",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 6,
+                          "section": "2.2",
+                          "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "-0.581 eV",
+                      "value": -0.581,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TIr",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TIr (−0.581 eV)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.210 eV",
+                      "value": 0.21,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TC3 site (0.210 eV) on Ni@R-graphyne",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.240 eV",
+                      "value": 0.24,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC1",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.282 eV",
+                      "value": 0.282,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC3",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "adsorption_free_energy",
+                      "raw_value": "0.267 eV",
+                      "value": 0.267,
+                      "unit": "eV",
+                      "qualifier": "exact",
+                      "adsorbate_or_intermediate": "H*",
+                      "site": "TC1",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 7,
+                          "section": "2.2",
+                          "text_snippet": "TC1 site (0.267 eV) on Pt@R-graphyne",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "theoretical_overpotential",
+                      "raw_value": "1.43 V",
+                      "value": 1.43,
+                      "unit": "V",
+                      "qualifier": "exact",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 8,
+                          "section": "2.3",
+                          "text_snippet": "the calculated ηOER values of Ru@R-graphyne (1.43 V)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "theoretical_overpotential",
+                      "raw_value": "1.16 V",
+                      "value": 1.16,
+                      "unit": "V",
+                      "qualifier": "exact",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 8,
+                          "section": "2.3",
+                          "text_snippet": "Ir@R-graphyne (1.16 V)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "theoretical_overpotential",
+                      "raw_value": "0.74 V",
+                      "value": 0.74,
+                      "unit": "V",
+                      "qualifier": "exact",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 8,
+                          "section": "2.3",
+                          "text_snippet": "Co@R-graphyne (0.74 V)",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "theoretical_overpotential",
+                      "raw_value": "0.48 V",
+                      "value": 0.48,
+                      "unit": "V",
+                      "qualifier": "exact",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 8,
+                          "section": "2.3",
+                          "text_snippet": "Rh@R-graphyne can exhibit considerably high OER performance considering the very low ηOER value of 0.48 V",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    },
+                    {
+                      "property": "theoretical_overpotential",
+                      "raw_value": "0.31 V",
+                      "value": 0.31,
+                      "unit": "V",
+                      "qualifier": "exact",
+                      "ownership": "unknown",
+                      "evidence": [
+                        {
+                          "source_id": "src-bbd6b9071cef5e09",
+                          "page": 8,
+                          "section": "2.3",
+                          "text_snippet": "the calculated ηOER value can be as small as 0.31 V",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  ],
+                  "ownership": "focal_work",
+                  "evidence": []
+                }
+              }
+            ],
+            "canonical_admission_count": 0
+          },
+          "quarantined_objects_measurements": [
+            {
+              "path": "catalysts.cat-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-r-graphyne",
+                "reported_name": "R-graphyne",
+                "canonical_name": "R-graphyne",
+                "reported_formula": "C",
+                "formula": "C",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-graphene",
+              "reason": "ownership_comparison_table",
+              "ownership": "comparison_table",
+              "object": {
+                "local_id": "cat-graphene",
+                "reported_name": "graphene",
+                "canonical_name": "graphene",
+                "reported_formula": "C",
+                "formula": "C",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "comparison_table",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-fe-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-fe-r-graphyne",
+                "reported_name": "Fe@R-graphyne",
+                "reported_formula": "Fe@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-ru-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-ru-r-graphyne",
+                "reported_name": "Ru@R-graphyne",
+                "reported_formula": "Ru@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-os-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-os-r-graphyne",
+                "reported_name": "Os@R-graphyne",
+                "reported_formula": "Os@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-co-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-co-r-graphyne",
+                "reported_name": "Co@R-graphyne",
+                "reported_formula": "Co@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-rh-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-rh-r-graphyne",
+                "reported_name": "Rh@R-graphyne",
+                "reported_formula": "Rh@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-ir-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-ir-r-graphyne",
+                "reported_name": "Ir@R-graphyne",
+                "reported_formula": "Ir@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-ni-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-ni-r-graphyne",
+                "reported_name": "Ni@R-graphyne",
+                "reported_formula": "Ni@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-pd-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-pd-r-graphyne",
+                "reported_name": "Pd@R-graphyne",
+                "reported_formula": "Pd@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "catalysts.cat-pt-r-graphyne",
+              "reason": "no_value_specific_evidence",
+              "ownership": "focal_work",
+              "object": {
+                "local_id": "cat-pt-r-graphyne",
+                "reported_name": "Pt@R-graphyne",
+                "reported_formula": "Pt@R-graphyne",
+                "composition": {},
+                "state": "unknown",
+                "components": [],
+                "active_site_claims": [],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            },
+            {
+              "path": "calculations.calc-dft-study",
+              "reason": "schema_invalid",
+              "ownership": "focal_work",
+              "object": {
+                "calculation_id": "calc-dft-study",
+                "material_refs": [
+                  "cat-r-graphyne",
+                  "cat-graphene",
+                  "cat-fe-r-graphyne",
+                  "cat-ru-r-graphyne",
+                  "cat-os-r-graphyne",
+                  "cat-co-r-graphyne",
+                  "cat-rh-r-graphyne",
+                  "cat-ir-r-graphyne",
+                  "cat-ni-r-graphyne",
+                  "cat-pd-r-graphyne",
+                  "cat-pt-r-graphyne"
+                ],
+                "calculation_type": "dft",
+                "code": "VASP",
+                "functional": "PBE",
+                "dispersion_correction": "DFT-D2",
+                "plane_wave_cutoff_or_basis": "400 eV",
+                "k_points": "3x3x1",
+                "vacuum_thickness": {
+                  "raw_value": "20 Å",
+                  "value": 20.0,
+                  "unit": "Å",
+                  "qualifier": "exact"
+                },
+                "spin_treatment": "spin-polarized",
+                "outputs": [
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.450 eV",
+                    "value": 0.45,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.423 eV",
+                    "value": 0.423,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "1.642 eV",
+                    "value": 1.642,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 4,
+                        "section": "2.1",
+                        "text_snippet": "compared with the inert HER activity of graphene (1.642 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.239 eV",
+                    "value": 0.239,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.140 eV",
+                    "value": -0.14,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.122 eV",
+                    "value": 0.122,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.181 eV",
+                    "value": 0.181,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.235 eV",
+                    "value": 0.235,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC6",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.250 eV",
+                    "value": 0.25,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC7",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.237 eV",
+                    "value": 0.237,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC8",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.142 eV",
+                    "value": 0.142,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TFe",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "TFe site can also exhibit considerably high HER activity, in view of the small ∆GH* value of 0.142 eV",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.104 eV",
+                    "value": -0.104,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.014 eV",
+                    "value": -0.014,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.316 eV",
+                    "value": 0.316,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.328 eV",
+                    "value": 0.328,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.501 eV",
+                    "value": -0.501,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TRu",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TRu (−0.501 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.140 eV",
+                    "value": -0.14,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.272 eV",
+                    "value": 0.272,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.263 eV",
+                    "value": -0.263,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.196 eV",
+                    "value": 0.196,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.334 eV",
+                    "value": 0.334,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC5",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 5,
+                        "section": "2.2",
+                        "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.778 eV",
+                    "value": -0.778,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TOs",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TOs (−0.778 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.068 eV",
+                    "value": 0.068,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.069 eV",
+                    "value": 0.069,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TCo",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.118 eV",
+                    "value": -0.118,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.037 eV",
+                    "value": -0.037,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.497 eV",
+                    "value": -0.497,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TRh",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TRh (−0.497 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.005 eV",
+                    "value": -0.005,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.246 eV",
+                    "value": 0.246,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC2",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.099 eV",
+                    "value": -0.099,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.241 eV",
+                    "value": 0.241,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC4",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 6,
+                        "section": "2.2",
+                        "text_snippet": "carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV, respectively",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "-0.581 eV",
+                    "value": -0.581,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TIr",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TIr (−0.581 eV)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.210 eV",
+                    "value": 0.21,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC3 site (0.210 eV) on Ni@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.240 eV",
+                    "value": 0.24,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.282 eV",
+                    "value": 0.282,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC3",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "adsorption_free_energy",
+                    "raw_value": "0.267 eV",
+                    "value": 0.267,
+                    "unit": "eV",
+                    "qualifier": "exact",
+                    "adsorbate_or_intermediate": "H*",
+                    "site": "TC1",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 7,
+                        "section": "2.2",
+                        "text_snippet": "TC1 site (0.267 eV) on Pt@R-graphyne",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "1.43 V",
+                    "value": 1.43,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "the calculated ηOER values of Ru@R-graphyne (1.43 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "1.16 V",
+                    "value": 1.16,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Ir@R-graphyne (1.16 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.74 V",
+                    "value": 0.74,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Co@R-graphyne (0.74 V)",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.48 V",
+                    "value": 0.48,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "Rh@R-graphyne can exhibit considerably high OER performance considering the very low ηOER value of 0.48 V",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  },
+                  {
+                    "property": "theoretical_overpotential",
+                    "raw_value": "0.31 V",
+                    "value": 0.31,
+                    "unit": "V",
+                    "qualifier": "exact",
+                    "ownership": "unknown",
+                    "evidence": [
+                      {
+                        "source_id": "src-bbd6b9071cef5e09",
+                        "page": 8,
+                        "section": "2.3",
+                        "text_snippet": "the calculated ηOER value can be as small as 0.31 V",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                ],
+                "ownership": "focal_work",
+                "evidence": []
+              }
+            }
+          ],
+          "normalization_comparability_warnings": [],
+          "conflicts": [],
+          "extraction_notes": [],
+          "source_context": {
+            "source_id": "src-bbd6b9071cef5e09",
+            "filename": "molecules-28-03888-v2.pdf",
+            "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+            "primary_native_parser": "pypdf",
+            "page_parsers": [
+              {
+                "page": 1,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 2,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 3,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 4,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 5,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 6,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 7,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 8,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 9,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 10,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 11,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 12,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 13,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 14,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              },
+              {
+                "page": 15,
+                "native_parser": "pypdf",
+                "parser": "pypdf",
+                "origin": "native_text",
+                "attempt_history": [
+                  "pypdf"
+                ]
+              }
+            ],
+            "tables_detected": 3,
+            "figures_detected": 20,
+            "ocr_pages_used": [],
+            "digitizations_available": 0,
+            "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\sidecars\\visual\\src-bbd6b9071cef5e09\\visual_document.json"
+          }
+        }
+      }
+    ],
+    "quality": {
+      "completeness": 0.0,
+      "provenance_coverage": 0.0,
+      "unit_normalization_coverage": 0.0,
+      "extraction_confidence": 0.0,
+      "semantic_warnings": [
+        "canonical_admission_count:0",
+        "quarantine_count:12",
+        "unresolved_conflict_count:0"
+      ],
+      "validation_status": "schema_validated"
+    }
+  },
+  "safety": {
+    "dft_experimental_leakage": 0,
+    "review_contamination": 0,
+    "digitized_canonical_leakage": 0,
+    "referential_integrity_violations": []
+  }
+}

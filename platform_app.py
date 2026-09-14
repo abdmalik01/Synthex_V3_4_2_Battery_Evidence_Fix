@@ -7,8 +7,11 @@ import tempfile
 import streamlit as st
 
 from synthex_platform.benchmarks import benchmark_matrix
+from synthex_platform.core.archive import SynthexArchive
 from synthex_platform.core.registry import DomainRegistry
+from synthex_platform.export import export_csv_bundle_zip, export_results_csv
 from synthex_platform.extraction import DomainRouter, SynthexExtractionPipeline
+from synthex_platform.extraction.catalysis_extractor import CatalysisStructuredExtractionValidationError
 from synthex_platform.extraction.domain_extractor import StructuredExtractionValidationError
 from synthex_platform.graph import export_graph
 from synthex_platform.retrieval import DiscoveryError, discover_papers
@@ -209,14 +212,20 @@ elif page == "Extract Paper":
             try:
                 with st.spinner("Extracting structured scientific record with Gemini..."):
                     resolved_route, archive = pipeline.extract_source_bundle(source_bundle, domain=domain)
-            except StructuredExtractionValidationError as exc:
+            except (StructuredExtractionValidationError, CatalysisStructuredExtractionValidationError) as exc:
                 st.error(str(exc))
                 with st.expander("Extraction validation details"):
-                    st.json({
+                    details = {
                         "route": exc.route,
                         "source_id": exc.source_id,
                         "validation_errors": exc.validation_errors,
-                    })
+                    }
+                    if isinstance(exc, CatalysisStructuredExtractionValidationError):
+                        details.update({
+                            "repair_attempted": exc.repair_attempted,
+                            "raw_output_reference": exc.raw_output_reference,
+                        })
+                    st.json(details)
             else:
                 st.session_state["synthex_last_archive"] = archive.model_dump(exclude_none=True)
                 st.session_state["synthex_last_route"] = resolved_route.domain
@@ -225,19 +234,46 @@ elif page == "Extract Paper":
     if archive_data:
         st.success(f"Latest extraction complete · {st.session_state.get('synthex_last_route', 'unknown')}")
         st.json(archive_data)
-        col1, col2 = st.columns(2)
-        with col1:
-            archive_id = archive_data.get("metadata", {}).get("archive_id", "synthex_record")
+        archive = SynthexArchive.model_validate(archive_data)
+        archive_id = archive.metadata.archive_id or "synthex_record"
+        st.subheader("Export Results")
+        include_quarantined = st.checkbox(
+            "Include quarantined records in CSV exports",
+            value=False,
+            help=(
+                "Off exports canonical/admitted records only. When enabled, quarantined records "
+                "are included with explicit admission status, ownership, reason, and audit path."
+            ),
+            key="synthex_export_include_quarantined",
+        )
+        results_name = "results_all.csv" if include_quarantined else "results.csv"
+        with st.container(horizontal=True):
             st.download_button(
-                "Download archive JSON",
+                "Download JSON",
                 data=json.dumps(archive_data, ensure_ascii=False, indent=2),
                 file_name=f"{archive_id}.json",
                 mime="application/json",
+                on_click="ignore",
+                icon=":material/download:",
             )
-        with col2:
+            st.download_button(
+                "Download CSV",
+                data=export_results_csv(archive, include_quarantined=include_quarantined),
+                file_name=results_name,
+                mime="text/csv",
+                on_click="ignore",
+                icon=":material/table_view:",
+            )
+            st.download_button(
+                "Download CSV Bundle",
+                data=export_csv_bundle_zip(archive, include_quarantined=include_quarantined),
+                file_name=f"{archive_id}_csv_bundle.zip",
+                mime="application/zip",
+                on_click="ignore",
+                icon=":material/folder_zip:",
+            )
             if st.button("Save latest extraction to local Synthex Archive"):
-                from synthex_platform.core.archive import SynthexArchive
-                store.append(SynthexArchive.model_validate(archive_data))
+                store.append(archive)
                 st.success("Saved to data/archive/archives.jsonl")
 
 
