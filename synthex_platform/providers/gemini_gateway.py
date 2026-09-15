@@ -95,10 +95,7 @@ def configured_gemini_models(
     preferred = preferred_model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
     if fallback_models is None:
         configured = os.getenv("GEMINI_FALLBACK_MODELS")
-        fallback_models = (
-            configured.split(",") if configured is not None
-            else DEFAULT_GEMINI_MODELS
-        )
+        fallback_models = configured.split(",") if configured is not None else DEFAULT_GEMINI_MODELS
     return _deduplicate_models((preferred, *fallback_models))
 
 
@@ -114,8 +111,12 @@ def configured_gemini_credential_slots() -> tuple[str, ...]:
 
 
 def _environment_credential_clients() -> tuple[tuple[str, Any], ...]:
-    """Build only numbered fallback clients; primary client is supplied by the caller."""
-    if genai is None:
+    """Build numbered fallback clients for live production calls only.
+
+    Pytest may run with a real local .env present. Never let offline/mocked tests silently
+    instantiate fallback clients from those credentials and make network calls.
+    """
+    if genai is None or os.getenv("PYTEST_CURRENT_TEST"):
         return ()
     primary_value = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     seen_values = {primary_value} if primary_value else set()
@@ -285,9 +286,7 @@ class GeminiGateway:
         attempted_models = _deduplicate_models(
             item["model"] for item in self._attempts if item["phase"] == "primary"
         )
-        credential_slots_attempted = tuple(dict.fromkeys(
-            item["credential_slot"] for item in self._attempts
-        ))
+        credential_slots_attempted = tuple(dict.fromkeys(item["credential_slot"] for item in self._attempts))
         return {
             "mode": self.mode,
             "requested_model": self.preferred_model,
