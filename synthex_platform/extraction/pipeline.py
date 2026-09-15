@@ -12,6 +12,8 @@ from .catalysis_candidate_inventory import (
     merge_catalysis_coverage_response,
 )
 from .catalysis_extractor import CatalysisGeminiExtractor
+from .corrosion_assembler import assemble_corrosion_archive
+from .corrosion_extractor import CorrosionGeminiExtractor
 from .domain_extractor import DomainGeminiExtractor
 from .router import DomainRoute, DomainRouter
 from .source_context import SourceBundle, build_source_bundle
@@ -78,10 +80,7 @@ class SynthexExtractionPipeline:
         )
 
     def extract_source_bundle(self, source_bundle: SourceBundle, domain: str = "auto"):
-        """Extract one PDF source while retaining its visual and parser context."""
-        return self._extract(
-            source_bundle.page_marked_text(), domain=domain, source_bundle=source_bundle,
-        )
+        return self._extract(source_bundle.page_marked_text(), domain=domain, source_bundle=source_bundle)
 
     def _extract(self, text: str, domain: str, source_bundle: SourceBundle | None):
         self.last_extraction_diagnostics = {}
@@ -90,12 +89,20 @@ class SynthexExtractionPipeline:
         self.last_catalysis_candidate_inventory = []
         self.last_catalysis_candidate_coverage = []
         route = self.router.route_text(text) if domain == "auto" else DomainRoute(
-            domain=domain, confidence=1.0, scores={domain: 1.0}, matched_terms={domain: []}, paper_types=[], method="user_selected"
+            domain=domain,
+            confidence=1.0,
+            scores={domain: 1.0},
+            matched_terms={domain: []},
+            paper_types=[],
+            method="user_selected",
         )
+
         if route.domain == "batteries":
             extractor = BatteryGeminiExtractor(
-                api_key=self.api_key, model=self.model,
-                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+                api_key=self.api_key,
+                model=self.model,
+                provider_mode=self.provider_mode,
+                fallback_models=self.fallback_models,
             )
             try:
                 draft = extractor.extract_text(text, source_bundle=source_bundle)
@@ -106,22 +113,23 @@ class SynthexExtractionPipeline:
                 draft._pdf_parser = parser
                 draft.source.pdf_text_parser = parser
             archive = assemble_battery_archive(draft, model=extractor.model)
+
         elif route.domain == "catalysis":
             extractor = CatalysisGeminiExtractor(
-                api_key=self.api_key, model=self.model,
-                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+                api_key=self.api_key,
+                model=self.model,
+                provider_mode=self.provider_mode,
+                fallback_models=self.fallback_models,
             )
             try:
                 draft = extractor.extract_text(text, source_bundle=source_bundle)
             finally:
-                # Preserve call/repair diagnostics even when a provider or
-                # validation failure interrupts the Catalysis path.
                 self.last_extraction_diagnostics = dict(getattr(extractor, "last_diagnostics", {}))
                 self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
                 self.last_extraction_diagnostics["provider"] = self.last_provider_audit
                 self.last_extraction_diagnostics.setdefault("primary_calls", 1)
                 self.last_extraction_diagnostics.setdefault(
-                    "schema_repair_calls", self.last_extraction_diagnostics.get("repair_calls", 0),
+                    "schema_repair_calls", self.last_extraction_diagnostics.get("repair_calls", 0)
                 )
                 self.last_extraction_diagnostics.setdefault("coverage_calls", 0)
                 self.last_catalysis_model_outputs = {
@@ -176,8 +184,6 @@ class SynthexExtractionPipeline:
                             "coverage_merge": merge_audit,
                         })
                     except Exception as exc:
-                        # Coverage is supplementary. A malformed or unavailable one-call
-                        # response cannot invalidate the already strict primary document.
                         self.last_extraction_diagnostics.update({
                             "coverage_validation_error": f"{type(exc).__name__}: {exc}",
                             "coverage_candidates_rejected": len(uncovered),
@@ -205,22 +211,51 @@ class SynthexExtractionPipeline:
                 source_text=text,
                 source_bundle=source_bundle,
             )
+
+        elif route.domain == "corrosion":
+            extractor = CorrosionGeminiExtractor(
+                api_key=self.api_key,
+                model=self.model,
+                provider_mode=self.provider_mode,
+                fallback_models=self.fallback_models,
+            )
+            try:
+                draft = extractor.extract_text(text, source_bundle=source_bundle)
+            finally:
+                self.last_extraction_diagnostics = dict(getattr(extractor, "last_diagnostics", {}))
+                self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
+                self.last_extraction_diagnostics["provider"] = self.last_provider_audit
+                self.last_extraction_diagnostics.setdefault("primary_calls", 1)
+                self.last_extraction_diagnostics.setdefault(
+                    "schema_repair_calls", self.last_extraction_diagnostics.get("repair_calls", 0)
+                )
+            if source_bundle is not None:
+                draft.source.pdf_text_parser = source_bundle.primary_native_parser()
+            archive = assemble_corrosion_archive(
+                draft,
+                model=extractor.model,
+                source_bundle=source_bundle,
+            )
+
         else:
-            # Generic manifest-driven path. Gas sensing remains more mature in the legacy V2 UI.
             extractor = DomainGeminiExtractor(
-                api_key=self.api_key, model=self.model,
-                provider_mode=self.provider_mode, fallback_models=self.fallback_models,
+                api_key=self.api_key,
+                model=self.model,
+                provider_mode=self.provider_mode,
+                fallback_models=self.fallback_models,
             )
             try:
                 archive = extractor.extract_text(text, route.domain, source_bundle=source_bundle)
             finally:
                 self.last_provider_audit = dict(getattr(extractor, "last_provider_audit", {}))
+
         if source_bundle is not None:
             if archive.sources:
                 archive.sources[0].checksum = source_bundle.source.source_checksum
             for payload in archive.domain_payloads:
                 if payload.domain == route.domain:
                     payload.values["source_context"] = source_bundle.parser_metadata()
+
         if self.last_provider_audit:
             archive.domain_payloads.append(DomainPayload(
                 domain="llm_provider",
@@ -228,10 +263,12 @@ class SynthexExtractionPipeline:
                 tags=["production_failover" if self.provider_mode == "production" else "benchmark_pinned"],
                 values=self.last_provider_audit,
             ))
+
         if self.search_assisted:
             client = SerperClient(api_key=self.serper_api_key)
             archive = MetadataEnricher(client=client).enrich_archive(
-                archive, find_supplementary=self.find_supplementary
+                archive,
+                find_supplementary=self.find_supplementary,
             )
         return route, archive
 
