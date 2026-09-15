@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from datetime import datetime, timezone
 from enum import Enum
 import os
@@ -15,11 +16,17 @@ except ImportError:  # pragma: no cover - permits offline platform use
     genai = None
 
 
+# Production fallback order deliberately spans model families instead of relying only on
+# neighbouring Flash releases. Benchmark mode remains pinned to the requested model.
 DEFAULT_GEMINI_MODELS = (
-    "gemini-3.5-flash",
-    "gemini-3.6-flash",
-    "gemini-3.7-flash",
     "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.5-pro",
 )
 MAX_GEMINI_CREDENTIAL_SLOTS = 10
 
@@ -131,12 +138,32 @@ def _environment_credential_clients() -> tuple[tuple[str, Any], ...]:
     return tuple(clients)
 
 
+def summarize_provider_failures(audit: dict[str, Any]) -> str:
+    """Return a compact, secret-safe explanation suitable for CLI/Streamlit display."""
+    failures = audit.get("provider_failures") or []
+    if not failures:
+        return "No provider failure details were recorded."
+
+    counts = Counter(item.get("failure_class") or "unknown" for item in failures)
+    count_text = ", ".join(f"{name}={count}" for name, count in sorted(counts.items()))
+    model_text = "; ".join(
+        f"{item.get('model', 'unknown')}: {item.get('failure_class') or 'unknown'}"
+        + (f" ({item.get('provider_message')})" if item.get("provider_message") else "")
+        for item in failures
+    )
+    return f"Failure summary: {count_text}. Attempts: {model_text}"[:2000]
+
+
 class GeminiModelsUnavailableError(RuntimeError):
     """Every permitted model failed for a provider-level availability reason."""
 
     def __init__(self, audit: dict[str, Any]):
         self.audit = audit
-        super().__init__("All approved Gemini models were unavailable after one bounded attempt each.")
+        self.failure_summary = summarize_provider_failures(audit)
+        super().__init__(
+            "All approved Gemini models were unavailable after one bounded attempt each. "
+            + self.failure_summary
+        )
 
 
 class GeminiGateway:
@@ -287,7 +314,14 @@ class GeminiGateway:
             item["model"] for item in self._attempts if item["phase"] == "primary"
         )
         credential_slots_attempted = tuple(dict.fromkeys(item["credential_slot"] for item in self._attempts))
-        return {
+        provider_failures = [
+            {
+                key: item[key]
+                for key in ("model", "credential_slot", "phase", "failure_class", "provider_message")
+            }
+            for item in self._attempts if item["status"] == "failed"
+        ]
+        audit = {
             "mode": self.mode,
             "requested_model": self.preferred_model,
             "actual_model": self.actual_model,
@@ -301,14 +335,10 @@ class GeminiGateway:
                 self.actual_credential_slot and self.actual_credential_slot != "primary"
             ),
             "attempts": [dict(item) for item in self._attempts],
-            "provider_failures": [
-                {
-                    key: item[key]
-                    for key in ("model", "credential_slot", "phase", "failure_class", "provider_message")
-                }
-                for item in self._attempts if item["status"] == "failed"
-            ],
+            "provider_failures": provider_failures,
         }
+        audit["failure_summary"] = summarize_provider_failures(audit)
+        return audit
 
 
 def probe_gemini_models(client: Any, models: Iterable[str]) -> tuple[dict[str, Any], ...]:
