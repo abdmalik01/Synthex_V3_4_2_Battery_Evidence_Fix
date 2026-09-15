@@ -106,9 +106,17 @@ def apply_scientific_guardrails(doc: BatteryDocument) -> BatteryDocument:
             )
 
     # Do not convert qualitative temperature labels into invented numeric temperatures.
+    # Numeric-only step labels are IDs/order markers, not scientifically meaningful process names.
     for material in result.materials:
         if material.synthesis:
             for step in material.synthesis.steps:
+                raw_step_name = (step.step or "").strip()
+                if raw_step_name and re.fullmatch(r"\d+(?:\.\d+)?", raw_step_name):
+                    step.step = f"synthesis step {raw_step_name}"
+                    result.extraction_notes.append(
+                        f"Archive hygiene: numeric synthesis step label '{raw_step_name}' preserved as ordered label "
+                        f"'{step.step}' instead of treating it as a process name."
+                    )
                 if _qualitative_only(step.temperature) and step.temperature.value is not None:
                     raw = step.temperature.raw_value
                     step.temperature.value = None
@@ -164,6 +172,20 @@ def apply_scientific_guardrails(doc: BatteryDocument) -> BatteryDocument:
                 f"Guardrail: removed unsupported numeric temperature inferred from qualitative source value '{raw}'."
             )
         for point in group.performance_points:
+            # A bare Warburg coefficient number is dimensionally ambiguous. Preserve the reported raw value
+            # for review, but do not let it enter canonical quantitative results until a unit is explicit.
+            if (
+                point.property == "warburg_coefficient"
+                and point.value is not None
+                and not (point.unit and point.unit.strip())
+            ):
+                raw = point.raw_value or str(point.value)
+                point.value = None
+                point.qualifier = "unknown"
+                result.extraction_notes.append(
+                    f"Guardrail: unitless warburg_coefficient '{raw}' for {group.group_id} was retained as raw "
+                    "source text but excluded from canonical quantitative admission until its unit is explicit."
+                )
             if point.c_rate:
                 want = re.sub(r"\s+", "", point.c_rate.lower())
                 snippets = [ev.text_snippet for ev in point.evidence if ev.text_snippet]
