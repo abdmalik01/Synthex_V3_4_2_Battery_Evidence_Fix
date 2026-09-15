@@ -9,6 +9,8 @@ except ImportError:
     genai = None
 from pydantic import ValidationError
 
+from synthex_platform.providers import GeminiGateway
+
 from .models import SensorRecord
 from .pdf_utils_v2 import extract_pages, pages_to_marked_text
 from .normalizer import normalize_record
@@ -18,7 +20,7 @@ from .batch import stamp_source
 load_dotenv(override=True)
 
 SYSTEM_RULES = """
-You are Synthex V2, a scientific information extractor for nanomaterial sensor papers.
+You are Synthex Gas Sensing Analytics, a scientific information extractor for nanomaterial sensor papers.
 
 Core rules:
 1. Extract only information supported by the supplied paper text. Never invent missing values.
@@ -58,15 +60,22 @@ class GeminiSensorExtractor:
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY is missing. Add it to .env or your environment.")
         self.model = model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+        self.requested_model = self.model
         self.client = genai.Client(api_key=self.api_key)
+        self.last_provider_audit: dict = {}
 
     def extract_text(self, text: str, material_category: str | None = None, extraction_mode: str = "Full Sensor Record") -> tuple[SensorRecord, list[str]]:
         prompt = build_prompt(text, material_category, extraction_mode)
-        response = self.client.models.generate_content(
-            model=self.model,
-            contents=prompt,
-            config={"response_mime_type": "application/json"},
-        )
+        gateway = GeminiGateway(client=self.client, preferred_model=self.requested_model, mode="production")
+        try:
+            response = gateway.generate_primary(
+                contents=prompt,
+                config={"response_mime_type": "application/json"},
+            )
+        finally:
+            self.last_provider_audit = gateway.audit()
+        if gateway.actual_model:
+            self.model = gateway.actual_model
         output_text = response.text
         if not output_text:
             raise RuntimeError("Gemini returned no structured text output.")
