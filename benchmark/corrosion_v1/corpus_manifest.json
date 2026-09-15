@@ -1,6 +1,6 @@
 {
   "benchmark": "corrosion_v1_stage3",
-  "status": "corpus_files_present_mapping_under_verification",
+  "status": "corpus_mapping_resolved_pending_local_lock_refresh",
   "corpus_directory": "benchmark/corrosion_v1/corpus pdfs",
   "scientific_policy": {
     "no_fabricated_gold_values": true,
@@ -105,28 +105,35 @@
     {
       "id": "CORR-NEGATIVE-H",
       "role": "non_corrosion_negative_control",
-      "filename": "Corrosion 8.pdf",
+      "filename": "Corrosion 9.pdf",
       "expected_doi": "10.20964/2018.09.30",
       "expected_title": "Electrochemical Properties of Olivine-Type LiFePO4/C Cathode Material for Lithium Ion Batteries",
-      "git_blob_sha1": "e6bbf344b52500dda5fcb04b835c0c31158e13e2",
-      "file_size_bytes": 4461042,
+      "git_blob_sha1": "f45b2125a2e58251de887eea409e35b0cad5f787",
+      "file_size_bytes": 2286695,
       "sha256": null,
       "content_verified": false,
-      "status": "mapping_requires_content_verification",
+      "status": "mapping_resolved_by_local_content_match",
       "required_coverage": ["must_not_route_to_corrosion_without_corrosion_evidence"]
     },
     {
       "id": "CORR-HOLDOUT-I",
       "role": "localized_corrosion_holdout",
-      "filename": "Corrosion 9.pdf",
+      "filename": "Corrosion 8.pdf",
       "expected_doi": "10.1016/j.jma.2020.12.005",
       "expected_title": "Understanding pitting corrosion behavior of AZ91 alloy and its MAO coating in 3.5% NaCl solution by cyclic potentiodynamic polarization",
-      "git_blob_sha1": "f45b2125a2e58251de887eea409e35b0cad5f787",
-      "file_size_bytes": 2286695,
+      "git_blob_sha1": "e6bbf344b52500dda5fcb04b835c0c31158e13e2",
+      "file_size_bytes": 4461042,
       "sha256": null,
       "content_verified": false,
-      "status": "mapping_requires_content_verification",
+      "status": "mapping_resolved_by_local_content_match",
       "required_coverage": ["localized_corrosion", "cyclic_polarization", "bare_vs_coated_association", "pitting_behavior", "value_specific_evidence"]
+    }
+  ],
+  "unassigned_files": [
+    {
+      "filename": "Corrosion 4.pdf",
+      "status": "unassigned_not_scored",
+      "reason": "No benchmark role is assigned implicitly; retain for later inspection or supplemental use."
     }
   ]
 }
