@@ -1,0 +1,144 @@
+{
+  "benchmark": "corrosion_v1_stage3",
+  "status": "scaffold_only_source_review_required",
+  "policy": {
+    "gold_values_must_be_manually_verified_from_pdf": true,
+    "no_llm_generated_gold": true,
+    "no_inferred_units": true,
+    "no_reference_electrode_conversion": true,
+    "review_and_cited_prior_work_never_score_as_focal": true,
+    "holdout_excluded_from_tuning": true
+  },
+  "papers": [
+    {
+      "id": "CORR-GOLD-A",
+      "doi": "10.20964/2020.01.26",
+      "filename": "Corrosion 1.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "materials": [],
+        "environments": [],
+        "experiments": [],
+        "metrics": [
+          {"property": "corrosion_potential", "expected": null, "unit": null, "reference_electrode": null, "page": null, "evidence_snippet": null},
+          {"property": "corrosion_current_density", "expected": null, "unit": null, "page": null, "evidence_snippet": null},
+          {"property": "pitting_potential", "expected": null, "unit": null, "reference_electrode": null, "page": null, "evidence_snippet": null}
+        ]
+      }
+    },
+    {
+      "id": "CORR-COAT-B",
+      "doi": "10.1021/acsomega.2c00172",
+      "filename": "Corrosion 2.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "substrates": [],
+        "treatments": [],
+        "preparation": [],
+        "experiments": [],
+        "metrics": [
+          {"property": "corrosion_current_density", "expected": null, "unit": null, "page": null, "evidence_snippet": null},
+          {"property": "charge_transfer_resistance", "expected": null, "unit": null, "equivalent_circuit": null, "page": null, "evidence_snippet": null},
+          {"property": "protection_efficiency", "expected": null, "unit": null, "page": null, "evidence_snippet": null}
+        ]
+      }
+    },
+    {
+      "id": "CORR-INHIB-C",
+      "doi": "10.1016/j.heliyon.2020.e03939",
+      "filename": "Corrosion 3.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "materials": [],
+        "inhibitors": [],
+        "environments": [],
+        "experiments": [],
+        "metrics": [
+          {"property": "inhibition_efficiency", "expected": null, "unit": "%", "inhibitor_concentration": null, "page": null, "evidence_snippet": null},
+          {"property": "corrosion_current_density", "expected": null, "unit": null, "page": null, "evidence_snippet": null}
+        ],
+        "calculations": []
+      }
+    },
+    {
+      "id": "CORR-EIS-D",
+      "doi": "10.3390/ma16020546",
+      "filename": "Corrosion 4.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "materials": [],
+        "environments": [],
+        "eis_conditions": [{"frequency_min": null, "frequency_max": null, "perturbation_amplitude": null, "equivalent_circuit": null}],
+        "metrics": [
+          {"property": "charge_transfer_resistance", "expected": null, "unit": null, "exposure_time": null, "page": null, "evidence_snippet": null},
+          {"property": "solution_resistance", "expected": null, "unit": null, "page": null, "evidence_snippet": null},
+          {"property": "cpe_parameter", "expected": null, "unit": null, "page": null, "evidence_snippet": null}
+        ]
+      }
+    },
+    {
+      "id": "CORR-WEIGHT-E",
+      "doi": "10.1016/j.sajce.2022.06.011",
+      "filename": "Corrosion 5.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "materials": [],
+        "inhibitors": [],
+        "environments": [],
+        "experiments": [],
+        "metrics": [
+          {"property": "corrosion_rate", "expected": null, "unit": null, "exposure_time": null, "page": null, "evidence_snippet": null},
+          {"property": "mass_loss", "expected": null, "unit": null, "page": null, "evidence_snippet": null},
+          {"property": "inhibition_efficiency", "expected": null, "unit": "%", "page": null, "evidence_snippet": null}
+        ]
+      }
+    },
+    {
+      "id": "CORR-DFT-F",
+      "doi": "10.1155/2013/175910",
+      "filename": "Corrosion 6.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "paper_type": "computational_corrosion",
+        "materials": [],
+        "calculations": [
+          {"calculation_type": "dft", "method": null, "surface": "Fe(110)", "adsorbate_or_inhibitor": null, "outputs": []}
+        ],
+        "must_not_admit_as_experimental_performance": true
+      }
+    },
+    {
+      "id": "CORR-REVIEW-G",
+      "doi": "10.3390/polym14122306",
+      "filename": "Corrosion 7.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "paper_type": "review",
+        "canonical_focal_experiments_expected": 0,
+        "cited_numeric_results_must_not_be_focal": true
+      }
+    },
+    {
+      "id": "CORR-NEGATIVE-H",
+      "doi": "10.20964/2018.09.30",
+      "filename": "Corrosion 8.pdf",
+      "gold_status": "pending_manual_source_review",
+      "assertions": {
+        "expected_route": "batteries",
+        "must_not_route_to": "corrosion",
+        "reason": "EIS/Nyquist vocabulary alone is insufficient evidence for corrosion ownership"
+      }
+    },
+    {
+      "id": "CORR-HOLDOUT-I",
+      "doi": "10.1016/j.jma.2020.12.005",
+      "filename": "Corrosion 9.pdf",
+      "gold_status": "holdout_not_for_tuning",
+      "assertions": {
+        "expected_route": "corrosion",
+        "paper_types": ["localized_corrosion", "coating_surface_treatment", "polarization_corrosion"],
+        "metrics_to_review_after_freeze": ["pitting_potential", "corrosion_potential", "corrosion_current_density"]
+      }
+    }
+  ]
+}
