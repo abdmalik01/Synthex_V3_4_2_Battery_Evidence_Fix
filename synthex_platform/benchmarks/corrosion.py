@@ -95,7 +95,14 @@ def _numeric_equal(actual: object, expected: float, tolerance_abs: float) -> boo
 def _material_match(row: dict, needle: str | None) -> bool:
     if not needle:
         return True
-    haystack = " ".join(str(item) for item in row.get("material_names", []) if item is not None)
+    # Explorer rows store material names as a pipe-delimited display string.  Older
+    # benchmark code treated that string as an iterable and accidentally compared
+    # character-by-character, causing valid material associations to fail.
+    value = row.get("material_names")
+    if isinstance(value, (list, tuple, set)):
+        haystack = " | ".join(str(item) for item in value if item is not None)
+    else:
+        haystack = str(value or "")
     return _token(needle) in _token(haystack)
 
 
