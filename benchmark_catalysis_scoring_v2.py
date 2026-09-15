@@ -47,11 +47,97 @@ def _normal(value: Any) -> Any:
     return value
 
 
+def _potential_parts(value: Any) -> tuple[float | None, str | None]:
+    """Return numeric potential and explicitly reported reference without converting scales."""
+    if isinstance(value, dict):
+        reference = value.get("reported_reference") or value.get("reference_electrode")
+        raw = value.get("raw_potential")
+        if isinstance(raw, dict):
+            numeric = raw.get("value")
+            if isinstance(numeric, (int, float)):
+                return float(numeric), _normal(reference) if reference else None
+            raw = raw.get("raw_value")
+        if raw is None:
+            raw = value.get("raw_value")
+        numeric, parsed_reference = _potential_parts(raw)
+        return numeric, _normal(reference) if reference else parsed_reference
+    if isinstance(value, (int, float)):
+        return float(value), None
+    if not isinstance(value, str):
+        return None, None
+    text = _normal(value)
+    match = re.search(r"(?<![a-z0-9])([+-]?\d+(?:\.\d+)?)", text)
+    numeric = float(match.group(1)) if match else None
+    compact = re.sub(r"[^a-z0-9]+", "", text)
+    reference = None
+    for candidate in ("rhe", "she", "nhe"):
+        if candidate in compact:
+            reference = candidate
+            break
+    if reference is None and "agagcl" in compact:
+        reference = "ag/agcl"
+    return numeric, reference
+
+
+def potential_equal(expected: Any, observed: Any) -> bool:
+    """Compare reported potentials by value/reference only; never perform a scale conversion."""
+    if _equal(expected, observed):
+        return True
+    expected_value, expected_reference = _potential_parts(expected)
+    observed_value, observed_reference = _potential_parts(observed)
+    if expected_value is None or observed_value is None:
+        return False
+    if not math.isclose(expected_value, observed_value, rel_tol=1e-6, abs_tol=1e-9):
+        return False
+    if expected_reference is None:
+        return True
+    return expected_reference == observed_reference
+
+
+def _feed_signature(value: Any) -> str | None:
+    """Map only explicit typed CO2/O2 feed membership to the curated benchmark labels."""
+    if isinstance(value, str):
+        normalized = _normal(value)
+        if normalized in {"pure co2", "o2-containing co2 feed"}:
+            return normalized
+        return normalized
+    if not isinstance(value, list):
+        return None
+    species = {
+        _normal(item.get("species"))
+        for item in value
+        if isinstance(item, dict) and item.get("species")
+    }
+    if species == {"co2"}:
+        return "pure co2"
+    if "co2" in species and "o2" in species:
+        return "o2-containing co2 feed"
+    return None
+
+
+def feed_equal(expected: Any, observed: Any) -> bool:
+    if _equal(expected, observed):
+        return True
+    expected_signature = _feed_signature(expected)
+    observed_signature = _feed_signature(observed)
+    return expected_signature is not None and expected_signature == observed_signature
+
+
 def _field_value(record: dict[str, Any], field: str) -> Any:
     context = record.get("context") if isinstance(record.get("context"), dict) else {}
+
+    if field == "reference_electrode":
+        for mapping in (record, context):
+            for alias in ("reference_electrode", "reference", "reported_reference"):
+                if mapping.get(alias) is not None:
+                    return mapping[alias]
+        potential = record.get("potential")
+        if isinstance(potential, dict) and potential.get("reported_reference") is not None:
+            return potential.get("reported_reference")
+        return None
+
     aliases = {
         "catalyst": ("catalyst", "catalyst_id", "catalyst_ref", "material_ref"),
-        "reference_electrode": ("reference_electrode", "reference", "reported_reference"),
         "potential": ("potential", "potential_raw", "raw_potential"),
         "temperature": ("temperature", "temperature_c", "operating_temperature"),
         "flow": ("flow", "flow_rate"),
@@ -62,7 +148,7 @@ def _field_value(record: dict[str, Any], field: str) -> Any:
         for alias in aliases:
             if alias in mapping and mapping[alias] is not None:
                 value = mapping[alias]
-                if isinstance(value, dict):
+                if isinstance(value, dict) and field != "potential":
                     return value.get("raw_value") or value.get("reported_basis") or value
                 return value
     return None
@@ -171,6 +257,10 @@ def metric_match(expected: dict[str, Any], observed: dict[str, Any]) -> bool:
             equal = _reported_name_equal(expected_value, observed_value)
         elif field == "reaction":
             equal = reaction_equal(expected_value, observed_value)
+        elif field == "feed":
+            equal = feed_equal(expected_value, observed_value)
+        elif field == "potential":
+            equal = potential_equal(expected_value, observed_value)
         else:
             equal = _equal(expected_value, observed_value)
         if not equal:
@@ -179,7 +269,7 @@ def metric_match(expected: dict[str, Any], observed: dict[str, Any]) -> bool:
 
 
 def observed_metrics(document: dict[str, Any]) -> list[dict[str, Any]]:
-    """Project validated CatalysisDocument metrics without discarding explicit reaction text."""
+    """Project validated CatalysisDocument metrics without discarding typed context."""
     catalysts = {
         item.get("local_id"): item
         for item in document.get("catalysts", [])
