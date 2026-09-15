@@ -39,6 +39,7 @@ from synthex_platform.providers import (
     configured_gemini_models,
     probe_configured_gemini,
 )
+from synthex_platform.ui_empty_state import archive_empty_state
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
 from synthex_platform.visual.analytics.render import VisualizationRenderer
 from synthex_platform.visual.digitization import AxisCalibration, DigitizationRequest, PlotArea, SeriesSelection, digitize_plot
@@ -79,6 +80,29 @@ def _render_archive_summary(archive: SynthexArchive) -> None:
     columns[2].metric("Calculations", summary["calculations"])
     columns[3].metric("Admitted results", summary["admitted_observations"])
     columns[4].metric("Needs review", summary["quarantined_observations"])
+
+
+def _render_empty_results_state(archive: SynthexArchive, *, result_count: int) -> bool:
+    """Explain why an extraction can validly contain no researcher-facing result rows."""
+    state = archive_empty_state(archive, result_count=result_count)
+    if state is None:
+        return False
+    with st.container(border=True):
+        st.subheader(state["title"])
+        st.write(state["message"])
+        if state.get("kind") == "review_no_focal_data":
+            st.caption(
+                "This is an intentional scientific-safety outcome, not an extraction failure: "
+                "reviewed/cited literature is not relabelled as the focal paper's own dataset."
+            )
+        elif state.get("kind") == "quarantined_only":
+            st.caption(f"Quarantined candidates available for review: {state.get('quarantined', 0)}")
+        details = state.get("details") or []
+        if details:
+            with st.expander("Why Synthex made this decision"):
+                for note in details:
+                    st.write(f"• {note}")
+    return True
 
 
 NAVIGATION = (
@@ -130,8 +154,8 @@ if page == "Home":
     c3.metric("Benchmark tasks", sum(len(v) for v in benchmark_matrix(registry).values()))
     c4.metric("Archive schema", "3.4.0")
     st.info(
-        "Batteries V1 and Visual Intelligence V1 are frozen. Catalysis/Electrocatalysis V1 "
-        "Stages 1–3 are complete; Stage 4 has not begun."
+        "Batteries V1.3 and Visual Intelligence V1 are frozen. Catalysis/Electrocatalysis V1 "
+        "Stages 1–3 are closed; Stage 4 hardening/freeze is ready but has not begun."
     )
 
 elif page == "Discover Papers":
@@ -228,7 +252,7 @@ elif page == "Discover Papers":
 elif page == "Analyze Paper":
     st.subheader("Analyze a scientific paper")
     st.caption("Upload → analyze → review → explore → export")
-    st.caption("Auto Detect first classifies the scientific domain. Batteries use the V1.2 extractor with synthesis, electrode fabrication, cell assembly, shared protocols and performance records; other domains use the manifest-driven generic extractor.")
+    st.caption("Auto Detect first classifies the scientific domain. Batteries use the V1.3 extractor with synthesis, electrode fabrication, cell assembly, shared protocols and performance records; other domains use the manifest-driven generic extractor.")
 
     saved_candidates = saved_discovery_candidates(st.session_state)
     if saved_candidates:
@@ -267,7 +291,6 @@ elif page == "Analyze Paper":
             search_assisted=search_assisted,
             find_supplementary=find_supplementary,
         )
-        # Build one reusable source bundle; extraction consumes this same object.
         with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
             tmp.write(uploaded.getbuffer())
             tmp_path = Path(tmp.name)
@@ -342,6 +365,8 @@ elif page == "Analyze Paper":
                         f"{highlight['researcher_status']} · page {highlight.get('source_page') or 'not resolved'} · "
                         f"evidence {highlight.get('evidence_origin') or 'not recorded'}"
                     )
+        else:
+            _render_empty_results_state(archive, result_count=len(explorer.results))
         st.button("Explore all results", type="primary", on_click=_navigate, args=("Explore Results",))
         with st.expander("Complete validated archive"):
             st.json(archive_data)
@@ -388,7 +413,7 @@ elif page == "Analyze Paper":
 
 
 elif page == "Advanced · Battery validation":
-    st.subheader("Batteries V1.2 validation corpus")
+    st.subheader("Batteries V1.3 validation corpus")
     st.info("Benchmark runs are paper-only by design: Serper enrichment is OFF during scoring so retrieval cannot leak answers into extraction benchmarks.")
     manifest_path = Path("benchmark/batteries_v1/corpus_manifest.json")
     if manifest_path.exists():
@@ -412,7 +437,8 @@ elif page == "Advanced · Domain registry":
     st.write(spec["description"])
     maturity = {
         "gas_sensing": "Mature V2 vertical: live extraction + validation + visualizations",
-        "batteries": "Live V1.2 vertical: routing + synthesis + electrode/cell protocols + performance + benchmark corpus",
+        "batteries": "Frozen V1.3 vertical: routing + synthesis + electrode/cell protocols + performance + benchmark corpus",
+        "catalysis": "Stage 3 closed: heterogeneous catalysis, electrocatalysis, computational DFT, stability and review-ownership safeguards; Stage 4 freeze pending",
     }.get(options[chosen], "Platform scaffold: ontology + manifest + generic extractor; not yet benchmark-validated")
     st.info(maturity)
     left, right = st.columns([1, 2])
@@ -531,6 +557,8 @@ elif page == "Explore Results":
         explorer = _cached_archive_explorer(
             current_archive.model_dump_json(exclude_none=True), include_quarantined,
         )
+        if not explorer.results:
+            _render_empty_results_state(current_archive, result_count=0)
         options = filter_options(explorer.results)
 
         search = st.text_input(
@@ -632,8 +660,10 @@ elif page == "Explore Results":
                             st.text(detail["evidence_snippet"])
                         with st.expander("Additional observation fields"):
                             st.json(detail)
+            elif explorer.results:
+                st.info("No observations match the current filters. Clear or broaden the filters to see the loaded results.")
             else:
-                st.info("No observations match the current filters.")
+                st.caption("No result rows are available for this archive; see the explanation above.")
 
         with materials_tab:
             if explorer.materials:
