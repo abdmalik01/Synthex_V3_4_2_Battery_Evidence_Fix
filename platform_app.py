@@ -40,6 +40,7 @@ from synthex_platform.retrieval.discovery import (
 )
 from synthex_platform.storage import JsonlArchiveStore
 from synthex_platform.ui_empty_state import archive_empty_state
+from synthex_platform.ui_session import clear_research_workspace
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
 from synthex_platform.visual.analytics.render import VisualizationRenderer
 from synthex_platform.visual.digitization import AxisCalibration, DigitizationRequest, PlotArea, SeriesSelection, digitize_plot
@@ -62,6 +63,12 @@ def _cached_archive_explorer(archive_json: str, include_quarantined: bool):
 
 def _navigate(destination: str) -> None:
     st.session_state["synthex_workspace"] = destination
+
+
+def _start_new_analysis() -> None:
+    """Clear transient paper/batch state and return to a fresh uploader."""
+    clear_research_workspace(st.session_state)
+    st.session_state["synthex_workspace"] = "Analyze Paper"
 
 
 def _session_archives() -> list[SynthexArchive]:
@@ -273,7 +280,17 @@ elif page == "Discover Papers":
             clear_saved_discovery_candidates(st.session_state)
 
 elif page == "Analyze Paper":
-    st.subheader("Analyze scientific papers")
+    top_left, top_right = st.columns([5, 1])
+    with top_left:
+        st.subheader("Analyze scientific papers")
+    with top_right:
+        st.button(
+            "Start new analysis",
+            icon=":material/restart_alt:",
+            on_click=_start_new_analysis,
+            help="Clear the current uploaded PDFs, batch status, result filters, and in-session extraction results. Saved archives and discovery leads are kept.",
+            width="stretch",
+        )
     st.caption("Upload → route each paper → extract independently → compare parameters → export")
     st.info(
         f"Batch extraction supports up to {MAX_BATCH_PAPERS} PDFs in one run, so literature sets of at least "
@@ -469,7 +486,17 @@ elif page == "Analyze Paper":
                 st.success("Saved to data/archive/archives.jsonl")
 
 elif page == "Explore Results":
-    st.subheader("Explore Results")
+    top_left, top_right = st.columns([5, 1])
+    with top_left:
+        st.subheader("Explore Results")
+    with top_right:
+        st.button(
+            "Start new analysis",
+            icon=":material/restart_alt:",
+            on_click=_start_new_analysis,
+            help="Clear the current in-session paper/batch and return to a fresh uploader. Saved archives are not deleted.",
+            width="stretch",
+        )
     st.caption("Compare structured parameters across the current extraction batch while preserving paper-level source tracking.")
     archives = _session_archives()
     if not archives:
