@@ -1,10 +1,14 @@
 """Resume only unresolved Catalysis Stage 3 final-confirmation papers.
 
-This script reuses the latest saved final-confirmation report, skips papers that
-already passed, reruns only unresolved benchmark IDs in fresh per-paper output
-folders, and stops immediately when a hard quota-exhaustion (HTTP 429 /
-RESOURCE_EXHAUSTED) response is encountered. It remains pinned to the existing
-Stage 3 benchmark runner (gemini-3.5-flash, benchmark mode, no Serper).
+This script is cumulative. It starts from the latest saved final-confirmation run,
+recomputes each paper status from the saved result (so stale report labels cannot
+hide a Gold scientific gap), then folds in every later resume report and keeps the
+latest successful resolution for each benchmark ID. Only still-unresolved IDs are
+rerun in fresh per-paper output folders.
+
+The underlying Stage 3 runner remains pinned to gemini-3.5-flash in benchmark
+mode, with no Serper calls and no silent model failover. The script stops
+immediately on hard quota exhaustion (HTTP 429 / RESOURCE_EXHAUSTED).
 """
 
 from __future__ import annotations
@@ -87,16 +91,84 @@ def _status(result: dict[str, Any]) -> str:
     return "PASS"
 
 
+def _base_results(prior_dir: Path) -> dict[str, dict[str, Any]]:
+    report = json.loads((prior_dir / "final_confirmation_report.json").read_text(encoding="utf-8"))
+    resolved: dict[str, dict[str, Any]] = {}
+    for paper in report.get("papers", []):
+        benchmark_id = paper.get("benchmark_id")
+        if not benchmark_id:
+            continue
+        result_path = prior_dir / f"{benchmark_id.lower()}_result.json"
+        if result_path.exists():
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            metric = _metric_v2(result)
+            resolved[benchmark_id] = {
+                "benchmark_id": benchmark_id,
+                "status": _status(result),
+                "extraction_status": result.get("extraction_status"),
+                "gold_metric_association_v2": metric,
+                "source": str(result_path),
+            }
+        else:
+            resolved[benchmark_id] = {
+                "benchmark_id": benchmark_id,
+                "status": paper.get("status") or "FAIL",
+                "extraction_status": paper.get("extraction_status"),
+                "gold_metric_association_v2": paper.get("gold_metric_association_v2"),
+                "source": str(prior_dir / "final_confirmation_report.json"),
+            }
+    return resolved
+
+
+def _apply_resume_history(
+    state: dict[str, dict[str, Any]], prior_dir: Path,
+) -> dict[str, dict[str, Any]]:
+    """Fold in resume runs newer than the base final confirmation.
+
+    PASS replaces any earlier state. A later non-PASS result never erases an
+    already established PASS, preventing transient provider errors from
+    regressing a scientifically completed paper.
+    """
+    candidates = sorted(
+        [path for path in OUTPUT_ROOT.glob("stage3_final_resume_*") if path.is_dir()],
+        key=lambda path: path.stat().st_mtime,
+    )
+    base_mtime = prior_dir.stat().st_mtime
+    for path in candidates:
+        if path.stat().st_mtime < base_mtime:
+            continue
+        report_path = path / "resume_report.json"
+        if not report_path.exists():
+            continue
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        for item in report.get("results", []):
+            benchmark_id = item.get("benchmark_id")
+            if not benchmark_id:
+                continue
+            current = state.get(benchmark_id)
+            incoming_status = item.get("status") or "FAIL"
+            if current and current.get("status") == "PASS" and incoming_status != "PASS":
+                continue
+            state[benchmark_id] = {
+                "benchmark_id": benchmark_id,
+                "status": incoming_status,
+                "extraction_status": item.get("extraction_status"),
+                "gold_metric_association_v2": item.get("gold_metric_association_v2"),
+                "source": str(report_path),
+            }
+    return state
+
+
 def main() -> None:
     prior_dir = _latest_final_confirmation()
-    prior_report = json.loads((prior_dir / "final_confirmation_report.json").read_text(encoding="utf-8"))
+    state = _apply_resume_history(_base_results(prior_dir), prior_dir)
     unresolved = [
-        item["benchmark_id"]
-        for item in prior_report.get("papers", [])
+        benchmark_id
+        for benchmark_id, item in state.items()
         if item.get("status") != "PASS"
     ]
     if not unresolved:
-        print("All papers in the latest final confirmation already passed. Nothing to resume.")
+        print("All papers in the latest final confirmation are resolved. Nothing to resume.")
         return
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -106,6 +178,13 @@ def main() -> None:
     print("\n=== CATALYSIS STAGE 3 RESUME ===")
     print("Base run:", prior_dir)
     print("Unresolved IDs:", ", ".join(unresolved))
+    for benchmark_id in unresolved:
+        item = state[benchmark_id]
+        metric = item.get("gold_metric_association_v2") or {}
+        metric_text = ""
+        if metric:
+            metric_text = f" | metric_v2={metric.get('matched_count')}/{metric.get('expected_count')}"
+        print(f"  {benchmark_id}: prior_status={item.get('status')}{metric_text}")
     print("Model: gemini-3.5-flash")
     print("Provider mode: benchmark (pinned; no failover)")
     print("Serper enabled: False")
@@ -165,6 +244,7 @@ def main() -> None:
         "model": "gemini-3.5-flash",
         "provider_mode": "benchmark",
         "serper_enabled": False,
+        "prior_state": state,
         "requested_unresolved_ids": unresolved,
         "results": results,
         "stopped_for_quota": stopped_for_quota,
