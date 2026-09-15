@@ -14,10 +14,16 @@ from .corrosion_models import CorrosionDocument
 from .corrosion_admission import CorrosionAdmissionDecision, decide_corrosion_metric_admission
 from .corrosion_evidence import verify_corrosion_document_evidence, verify_corrosion_evidence_item
 from .corrosion_assembler import assemble_corrosion_archive
+from .corrosion_extractor import (
+    CorrosionGeminiExtractor,
+    CorrosionStructuredExtractionValidationError,
+    corrosion_output_contract,
+    parse_corrosion_document_json,
+)
 
 # Compatibility defaults for offline/unit-test construction via ``object.__new__``.
 # Normal runtime initialization still overwrites these on each extractor instance.
-for _extractor_cls in (DomainGeminiExtractor, BatteryGeminiExtractor, CatalysisGeminiExtractor):
+for _extractor_cls in (DomainGeminiExtractor, BatteryGeminiExtractor, CatalysisGeminiExtractor, CorrosionGeminiExtractor):
     if not hasattr(_extractor_cls, "requested_model"):
         _extractor_cls.requested_model = None
     if not hasattr(_extractor_cls, "fallback_models"):
@@ -37,5 +43,7 @@ __all__ = [
     "assemble_catalysis_archive", "CorrosionDocument",
     "CorrosionAdmissionDecision", "decide_corrosion_metric_admission",
     "verify_corrosion_document_evidence", "verify_corrosion_evidence_item",
-    "assemble_corrosion_archive",
+    "assemble_corrosion_archive", "CorrosionGeminiExtractor",
+    "CorrosionStructuredExtractionValidationError", "corrosion_output_contract",
+    "parse_corrosion_document_json",
 ]
