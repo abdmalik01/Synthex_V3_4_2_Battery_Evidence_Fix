@@ -100,8 +100,13 @@ def test_benchmark_mode_remains_pinned_to_requested_model():
         credential_clients=(),
     )
 
-    with pytest.raises(GeminiModelsUnavailableError):
+    # Benchmark mode is intentionally pinned: provider/model failures propagate
+    # directly instead of being converted into production fallback behavior.
+    with pytest.raises(RuntimeError, match="503 unavailable"):
         gateway.generate_primary(contents="x", config={})
 
     assert client.models.calls == ["m1"]
     assert gateway.model_chain == ("m1",)
+    audit = gateway.audit()
+    assert audit["models_attempted"] == ["m1"]
+    assert audit["attempts"][0]["failure_class"] == "provider_unavailable"
