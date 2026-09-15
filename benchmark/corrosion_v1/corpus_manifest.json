@@ -1,6 +1,6 @@
 {
   "benchmark": "corrosion_v1_stage3",
-  "status": "corpus_files_present_mapping_pending_local_content_verification",
+  "status": "corpus_files_present_mapping_under_verification",
   "corpus_directory": "benchmark/corrosion_v1/corpus pdfs",
   "scientific_policy": {
     "no_fabricated_gold_values": true,
@@ -53,14 +53,14 @@
     {
       "id": "CORR-EIS-D",
       "role": "eis_heavy",
-      "filename": "Corrosion 4.pdf",
+      "filename": "materials-16-00546-v2.pdf",
       "expected_doi": "10.3390/ma16020546",
       "expected_title": "Electrochemical Impedance Analysis for Corrosion Rate Monitoring of Sol–Gel Protective Coatings in Contact with Nitrate Molten Salts for CSP Applications",
-      "git_blob_sha1": "fff37d162050a1585e755fd47ca7392f5ca0a8a7",
-      "file_size_bytes": 4197185,
+      "git_blob_sha1": "713429278086819b9b277400509f8cd4724e130d",
+      "file_size_bytes": 4501849,
       "sha256": null,
       "content_verified": false,
-      "status": "file_present",
+      "status": "file_present_expected_identity_from_publisher_filename",
       "required_coverage": ["eis", "frequency_range", "perturbation_amplitude", "equivalent_circuit", "charge_transfer_resistance", "value_specific_evidence"]
     },
     {
@@ -112,7 +112,7 @@
       "file_size_bytes": 4461042,
       "sha256": null,
       "content_verified": false,
-      "status": "file_present",
+      "status": "mapping_requires_content_verification",
       "required_coverage": ["must_not_route_to_corrosion_without_corrosion_evidence"]
     },
     {
@@ -125,7 +125,7 @@
       "file_size_bytes": 2286695,
       "sha256": null,
       "content_verified": false,
-      "status": "holdout_file_present",
+      "status": "mapping_requires_content_verification",
       "required_coverage": ["localized_corrosion", "cyclic_polarization", "bare_vs_coated_association", "pitting_behavior", "value_specific_evidence"]
     }
   ]
