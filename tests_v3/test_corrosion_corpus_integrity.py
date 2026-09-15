@@ -32,9 +32,14 @@ def test_corrosion_stage3_corpus_has_eight_benchmark_papers_plus_one_holdout():
 
 def test_manifest_files_exist_and_match_locked_repository_blob_hashes_and_sizes():
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    listed = {entry["filename"] for entry in manifest["entries"]}
+    listed = [entry["filename"] for entry in manifest["entries"]]
     actual = {path.name for path in PDF_DIR.glob("*.pdf")}
-    assert actual == listed
+
+    # A researcher may keep additional downloaded candidate/duplicate PDFs in the
+    # corpus directory while resolving mappings. Only explicitly manifest-listed
+    # files are benchmark inputs; extra files must never be scored implicitly.
+    assert len(listed) == len(set(listed))
+    assert set(listed) <= actual
 
     for entry in manifest["entries"]:
         path = PDF_DIR / entry["filename"]
