@@ -1,10 +1,13 @@
 """Resume only unresolved Catalysis Stage 3 final-confirmation papers.
 
 This script is cumulative. It starts from the latest saved final-confirmation run,
-recomputes each paper status from the saved result (so stale report labels cannot
-hide a Gold scientific gap), then folds in every later resume report and keeps the
-latest successful resolution for each benchmark ID. Only still-unresolved IDs are
-rerun in fresh per-paper output folders.
+recomputes each paper status from the saved result, then folds in every later
+resume report and keeps the latest successful resolution for each benchmark ID.
+Only still-unresolved IDs are rerun in fresh per-paper output folders.
+
+Final Gold scoring is remediation-aware. Historical Gold files remain untouched;
+Gold B uses the reviewed remediation overlay and separately verifies that the two
+partial-current-density normalization bases remain unknown/absent.
 
 The underlying Stage 3 runner remains pinned to gemini-3.5-flash in benchmark
 mode, with no Serper calls and no silent model failover. The script stops
@@ -18,16 +21,12 @@ import json
 from pathlib import Path
 from typing import Any
 
-from benchmark_catalysis_scoring_v2 import score_metric_association
-from benchmark_catalysis_stage3 import BENCHMARK_ROOT, run
+from benchmark_catalysis_final_scoring import evaluate_gold_result, evaluation_complete
+from benchmark_catalysis_stage3 import run
 
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT_ROOT = ROOT / "benchmark" / "catalysis_v1" / "outputs"
-GOLD_PATHS = {
-    "CAT-GOLD-A": BENCHMARK_ROOT / "gold" / "gold_a_heterogeneous_experimental.json",
-    "CAT-GOLD-B": BENCHMARK_ROOT / "gold" / "gold_b_electrocatalysis.json",
-}
 
 
 def _latest_final_confirmation() -> Path:
@@ -40,26 +39,6 @@ def _latest_final_confirmation() -> Path:
         if (path / "final_confirmation_report.json").exists():
             return path
     raise FileNotFoundError("No prior Stage 3 final-confirmation report was found.")
-
-
-def _gold_document(result: dict[str, Any]) -> dict[str, Any] | None:
-    archive = result.get("archive") or {}
-    for payload in archive.get("domain_payloads", []):
-        if payload.get("domain") == "catalysis":
-            values = payload.get("values") or {}
-            document = values.get("validated_document")
-            if isinstance(document, dict):
-                return document
-    return None
-
-
-def _metric_v2(result: dict[str, Any]) -> dict[str, Any] | None:
-    path = GOLD_PATHS.get(result.get("benchmark_id"))
-    document = _gold_document(result)
-    if path is None or document is None:
-        return None
-    gold = json.loads(path.read_text(encoding="utf-8"))
-    return score_metric_association(gold, document)
 
 
 def _provider_blocked(result: dict[str, Any]) -> bool:
@@ -77,7 +56,7 @@ def _quota_exhausted(result: dict[str, Any]) -> bool:
     return any(token in text for token in ("429", "resource_exhausted", "quota exceeded"))
 
 
-def _status(result: dict[str, Any]) -> str:
+def _status(result: dict[str, Any], gold_evaluation: dict[str, Any] | None = None) -> str:
     extraction = result.get("extraction_status")
     if extraction == "routing_only_negative_control":
         return "PASS"
@@ -85,10 +64,22 @@ def _status(result: dict[str, Any]) -> str:
         return "PROVIDER_BLOCKED"
     if extraction != "schema_valid":
         return "FAIL"
-    metric = _metric_v2(result)
-    if metric is not None and metric.get("matched_count") != metric.get("expected_count"):
-        return "SCIENTIFIC_GAP"
-    return "PASS"
+    if gold_evaluation is None:
+        gold_evaluation = evaluate_gold_result(result)
+    return "PASS" if evaluation_complete(gold_evaluation) else "SCIENTIFIC_GAP"
+
+
+def _result_state(result: dict[str, Any], source: str) -> dict[str, Any]:
+    evaluation = evaluate_gold_result(result)
+    return {
+        "benchmark_id": result.get("benchmark_id"),
+        "status": _status(result, evaluation),
+        "extraction_status": result.get("extraction_status"),
+        "gold_final_evaluation": evaluation,
+        "gold_metric_association_v2": (evaluation or {}).get("metric_association_v2"),
+        "gold_normalization_source_review": (evaluation or {}).get("normalization_source_review"),
+        "source": source,
+    }
 
 
 def _base_results(prior_dir: Path) -> dict[str, dict[str, Any]]:
@@ -101,23 +92,27 @@ def _base_results(prior_dir: Path) -> dict[str, dict[str, Any]]:
         result_path = prior_dir / f"{benchmark_id.lower()}_result.json"
         if result_path.exists():
             result = json.loads(result_path.read_text(encoding="utf-8"))
-            metric = _metric_v2(result)
-            resolved[benchmark_id] = {
-                "benchmark_id": benchmark_id,
-                "status": _status(result),
-                "extraction_status": result.get("extraction_status"),
-                "gold_metric_association_v2": metric,
-                "source": str(result_path),
-            }
+            resolved[benchmark_id] = _result_state(result, str(result_path))
         else:
             resolved[benchmark_id] = {
                 "benchmark_id": benchmark_id,
                 "status": paper.get("status") or "FAIL",
                 "extraction_status": paper.get("extraction_status"),
+                "gold_final_evaluation": paper.get("gold_final_evaluation"),
                 "gold_metric_association_v2": paper.get("gold_metric_association_v2"),
+                "gold_normalization_source_review": paper.get("gold_normalization_source_review"),
                 "source": str(prior_dir / "final_confirmation_report.json"),
             }
     return resolved
+
+
+def _resume_result_file(item: dict[str, Any]) -> Path | None:
+    output_dir = item.get("output_dir")
+    benchmark_id = item.get("benchmark_id")
+    if not output_dir or not benchmark_id:
+        return None
+    candidate = Path(output_dir) / f"{benchmark_id.lower()}_result.json"
+    return candidate if candidate.exists() else None
 
 
 def _apply_resume_history(
@@ -125,9 +120,11 @@ def _apply_resume_history(
 ) -> dict[str, dict[str, Any]]:
     """Fold in resume runs newer than the base final confirmation.
 
-    PASS replaces any earlier state. A later non-PASS result never erases an
-    already established PASS, preventing transient provider errors from
-    regressing a scientifically completed paper.
+    Saved per-paper result JSON is preferred over the report label so updated
+    remediation-aware scoring can re-evaluate old resume outputs offline. PASS
+    replaces any earlier state. A later non-PASS result never erases an already
+    established PASS, preventing transient provider errors from regressing a
+    scientifically completed paper.
     """
     candidates = sorted(
         [path for path in OUTPUT_ROOT.glob("stage3_final_resume_*") if path.is_dir()],
@@ -145,17 +142,25 @@ def _apply_resume_history(
             benchmark_id = item.get("benchmark_id")
             if not benchmark_id:
                 continue
+            result_path = _resume_result_file(item)
+            if result_path is not None:
+                incoming = _result_state(
+                    json.loads(result_path.read_text(encoding="utf-8")), str(result_path)
+                )
+            else:
+                incoming = {
+                    "benchmark_id": benchmark_id,
+                    "status": item.get("status") or "FAIL",
+                    "extraction_status": item.get("extraction_status"),
+                    "gold_final_evaluation": item.get("gold_final_evaluation"),
+                    "gold_metric_association_v2": item.get("gold_metric_association_v2"),
+                    "gold_normalization_source_review": item.get("gold_normalization_source_review"),
+                    "source": str(report_path),
+                }
             current = state.get(benchmark_id)
-            incoming_status = item.get("status") or "FAIL"
-            if current and current.get("status") == "PASS" and incoming_status != "PASS":
+            if current and current.get("status") == "PASS" and incoming.get("status") != "PASS":
                 continue
-            state[benchmark_id] = {
-                "benchmark_id": benchmark_id,
-                "status": incoming_status,
-                "extraction_status": item.get("extraction_status"),
-                "gold_metric_association_v2": item.get("gold_metric_association_v2"),
-                "source": str(report_path),
-            }
+            state[benchmark_id] = incoming
     return state
 
 
@@ -181,10 +186,13 @@ def main() -> None:
     for benchmark_id in unresolved:
         item = state[benchmark_id]
         metric = item.get("gold_metric_association_v2") or {}
-        metric_text = ""
+        normalization = item.get("gold_normalization_source_review") or {}
+        details = ""
         if metric:
-            metric_text = f" | metric_v2={metric.get('matched_count')}/{metric.get('expected_count')}"
-        print(f"  {benchmark_id}: prior_status={item.get('status')}{metric_text}")
+            details += f" | metric_v2={metric.get('matched_count')}/{metric.get('expected_count')}"
+        if normalization:
+            details += f" | normalization={normalization.get('matched_count')}/{normalization.get('expected_count')}"
+        print(f"  {benchmark_id}: prior_status={item.get('status')}{details}")
     print("Model: gemini-3.5-flash")
     print("Provider mode: benchmark (pinned; no failover)")
     print("Serper enabled: False")
@@ -202,10 +210,17 @@ def main() -> None:
             capture_candidate_inventory=True,
         )
         result = summary["results"][0]
-        metric = _metric_v2(result)
-        if metric is not None:
+        evaluation = evaluate_gold_result(result)
+        metric = (evaluation or {}).get("metric_association_v2")
+        normalization = (evaluation or {}).get("normalization_source_review")
+        if evaluation is not None:
+            result["gold_final_evaluation"] = evaluation
             result["gold_metric_association_v2"] = metric
-        paper_status = _status(result)
+            if normalization is not None:
+                result["gold_normalization_source_review"] = normalization
+            result_path = paper_dir / f"{benchmark_id.lower()}_result.json"
+            result_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+        paper_status = _status(result, evaluation)
         record = {
             "benchmark_id": benchmark_id,
             "status": paper_status,
@@ -213,7 +228,9 @@ def main() -> None:
             "gemini_calls": result.get("gemini_calls", 0),
             "repair_calls": result.get("repair_calls", 0),
             "coverage_calls": result.get("coverage_calls", 0),
+            "gold_final_evaluation": evaluation,
             "gold_metric_association_v2": metric,
+            "gold_normalization_source_review": normalization,
             "error_type": result.get("error_type"),
             "error_message": result.get("error_message"),
             "output_dir": str(paper_dir),
@@ -227,6 +244,8 @@ def main() -> None:
         )
         if metric is not None:
             line += f" | metric_v2={metric.get('matched_count')}/{metric.get('expected_count')}"
+        if normalization is not None:
+            line += f" | normalization={normalization.get('matched_count')}/{normalization.get('expected_count')}"
         print(line)
         if record["error_type"]:
             print("  Error:", record["error_type"], "|", str(record["error_message"])[:700])
