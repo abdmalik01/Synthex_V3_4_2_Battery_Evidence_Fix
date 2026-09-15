@@ -244,8 +244,10 @@ def test_persistent_invalid_output_fails_cleanly_after_one_repair():
 def test_streamlit_handles_typed_catalysis_failure_without_raw_response_dump():
     app_source = (Path(__file__).resolve().parents[1] / "platform_app.py").read_text(encoding="utf-8")
     assert "CatalysisStructuredExtractionValidationError" in app_source
-    assert '"raw_output_reference": exc.raw_output_reference' in app_source
+    assert '"status": "validation_failed"' in app_source
+    assert '"message": str(exc)' in app_source
     assert "debug_payload" not in app_source
+    assert "raw_response_excerpt" not in app_source
 
 
 def test_pipeline_preserves_catalysis_call_diagnostics_on_provider_failure(monkeypatch):
