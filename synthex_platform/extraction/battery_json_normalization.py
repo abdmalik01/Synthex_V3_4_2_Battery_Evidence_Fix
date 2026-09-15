@@ -21,16 +21,29 @@ def _strip_markdown_fence(text: str) -> str:
 
 
 def _quantity_to_int(value: Any) -> Any:
+    """Collapse a quantity object to int only when it explicitly represents a whole count.
+
+    Fractional values are intentionally left untouched so Pydantic rejects them instead of
+    silently changing scientific meaning (for example 12.5 cycles must never become 12).
+    """
     if not isinstance(value, dict):
         return value
+
     numeric = value.get("value")
-    if isinstance(numeric, (int, float)) and float(numeric).is_integer():
-        return int(numeric)
+    if isinstance(numeric, (int, float)) and not isinstance(numeric, bool):
+        numeric_float = float(numeric)
+        if numeric_float.is_integer():
+            return int(numeric_float)
+        return value
+
     raw = value.get("raw_value")
     if isinstance(raw, str):
-        match = re.search(r"[-+]?\d+", raw)
+        text = raw.strip()
+        # Accept only a complete integer token optionally followed by a cycles/count label.
+        match = re.fullmatch(r"([+-]?\d+)\s*(?:cycles?|counts?)?", text, flags=re.I)
         if match:
-            return int(match.group(0))
+            return int(match.group(1))
+
     return value
 
 
