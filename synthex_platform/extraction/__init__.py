@@ -13,6 +13,7 @@ from .catalysis_assembler import assemble_catalysis_archive
 from .corrosion_models import CorrosionDocument
 from .corrosion_admission import CorrosionAdmissionDecision, decide_corrosion_metric_admission
 from .corrosion_evidence import verify_corrosion_document_evidence, verify_corrosion_evidence_item
+from .corrosion_assembler import assemble_corrosion_archive
 
 # Compatibility defaults for offline/unit-test construction via ``object.__new__``.
 # Normal runtime initialization still overwrites these on each extractor instance.
@@ -36,4 +37,5 @@ __all__ = [
     "assemble_catalysis_archive", "CorrosionDocument",
     "CorrosionAdmissionDecision", "decide_corrosion_metric_admission",
     "verify_corrosion_document_evidence", "verify_corrosion_evidence_item",
+    "assemble_corrosion_archive",
 ]
