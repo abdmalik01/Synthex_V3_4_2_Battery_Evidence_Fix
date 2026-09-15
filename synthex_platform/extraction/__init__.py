@@ -10,6 +10,7 @@ from .source_context import SourceBundle, SourceMetadata, SourcePageContext, bui
 from .catalysis_models import CatalysisDocument
 from .catalysis_extractor import CatalysisGeminiExtractor, CatalysisStructuredExtractionValidationError
 from .catalysis_assembler import assemble_catalysis_archive
+from .corrosion_models import CorrosionDocument
 
 # Compatibility defaults for offline/unit-test construction via ``object.__new__``.
 # Normal runtime initialization still overwrites these on each extractor instance.
@@ -30,5 +31,5 @@ __all__ = [
     "SourceMetadata", "SourcePageContext", "build_source_bundle", "compact_source_context",
     "has_prompt_source_context",
     "CatalysisDocument", "CatalysisGeminiExtractor", "CatalysisStructuredExtractionValidationError",
-    "assemble_catalysis_archive",
+    "assemble_catalysis_archive", "CorrosionDocument",
 ]
