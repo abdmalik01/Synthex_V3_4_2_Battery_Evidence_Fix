@@ -1,0 +1,293 @@
+[
+  {
+    "candidate_id": "catcand-7c3a26ce9fc28a38",
+    "covered": true,
+    "matched_record_paths": [
+      "stability_tests.0.retained_metric"
+    ],
+    "observed_numeric_spans": [
+      "1400",
+      "85"
+    ],
+    "missing_numeric_spans": [],
+    "reason": "evidence_linked_all_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-5c28835fdf4fded7",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "100",
+      "3",
+      "100",
+      "4",
+      "1",
+      "1",
+      "5",
+      "3"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-4d8b25e628df61b4",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "250",
+      "40"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-d993e51db7fe1ace",
+    "covered": true,
+    "matched_record_paths": [
+      "heterogeneous_experiments.exp_MMONiCo.metrics.1",
+      "heterogeneous_experiments.exp_MMONiFe.metrics.1"
+    ],
+    "observed_numeric_spans": [
+      "350",
+      "50",
+      "80"
+    ],
+    "missing_numeric_spans": [],
+    "reason": "evidence_linked_all_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-fefdf62ea886efd0",
+    "covered": true,
+    "matched_record_paths": [
+      "stability_tests.1.retained_metric"
+    ],
+    "observed_numeric_spans": [
+      "1400",
+      "80"
+    ],
+    "missing_numeric_spans": [],
+    "reason": "evidence_linked_all_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-115196c55da81874",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "36000",
+      "1",
+      "5"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-8fb9611d136c1d7d",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "1226",
+      "70"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-9c5c97a3f86238b1",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "10",
+      "1",
+      "800"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-2fd1a52a69929250",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "4",
+      "40",
+      "10"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-a2d8d0d0f73ad2b2",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "10",
+      "30",
+      "1",
+      "10",
+      "1",
+      "25–900"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-b33013e3324df795",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "350",
+      "50"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-f661c6ce18419744",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "200",
+      "850",
+      "100",
+      "1",
+      "10",
+      "1"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-2d41e2b1481a680c",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "350",
+      "400"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-343b69c3f7d31dca",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "20",
+      "72000",
+      "1",
+      "40",
+      "36000",
+      "1"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-9412e02fc390d953",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "40",
+      "36000",
+      "1",
+      "60",
+      "24000",
+      "1",
+      "350"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-1d064a65adc71036",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "350",
+      "1400"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-e3e9a9f061285b36",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "~85",
+      "1400"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-98b05d7f96d28c57",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "52-21"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-ed245a1538a5a2b2",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "8"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-6d871c6d51c2e219",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "250–350"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-0db2aa02b0781148",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "3.2.1"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-cb54ccfe4413c80e",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "12"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-d5c9bd5ee4ea85ae",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "60"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-56182702b4ef19da",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "3.1.2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  }
+]

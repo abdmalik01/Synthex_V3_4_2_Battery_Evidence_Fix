@@ -1,0 +1,3569 @@
+{
+  "run_at": "2026-09-15T09:03:12.113127+00:00",
+  "model": "gemini-3.5-flash",
+  "serper_enabled": false,
+  "temperature": 0,
+  "seed": 0,
+  "results": [
+    {
+      "benchmark_id": "CAT-PHOTO-F",
+      "filename": "materials-18-03513-v3.pdf",
+      "route": {
+        "domain": "catalysis",
+        "confidence": 0.862,
+        "paper_types": [
+          "catalyst_characterization",
+          "catalyst_synthesis",
+          "heterogeneous_catalysis",
+          "stability_deactivation",
+          "review"
+        ],
+        "scope_status": "deferred_subtype",
+        "ambiguity_reason": null
+      },
+      "route_correct": true,
+      "scope_correct": true,
+      "subtypes_correct": true,
+      "source_context": {
+        "source_id": "src-7179b701538dafe0",
+        "filename": "materials-18-03513-v3.pdf",
+        "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+        "primary_native_parser": "pypdf",
+        "page_parsers": [
+          {
+            "page": 1,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 2,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 3,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 4,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 5,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 6,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 7,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 8,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 9,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 10,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 11,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 12,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 13,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 14,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 15,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 16,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 17,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 18,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          }
+        ],
+        "tables_detected": 0,
+        "figures_detected": 15,
+        "ocr_pages_used": [],
+        "digitizations_available": 0,
+        "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-photo-f\\sidecars\\visual\\src-7179b701538dafe0\\visual_document.json"
+      },
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "schema_valid_first_response": true,
+      "schema_valid_repaired_response": false,
+      "persistent_failure": false,
+      "provider": {
+        "mode": "benchmark",
+        "requested_model": "gemini-3.5-flash",
+        "actual_model": "gemini-3.5-flash",
+        "configured_model_order": [
+          "gemini-3.5-flash"
+        ],
+        "models_attempted": [
+          "gemini-3.5-flash"
+        ],
+        "fallback_occurred": false,
+        "attempts": [
+          {
+            "order": 1,
+            "model": "gemini-3.5-flash",
+            "phase": "primary",
+            "status": "succeeded",
+            "failure_class": null,
+            "provider_message": null,
+            "timestamp": "2026-09-15T09:02:26.186138+00:00"
+          },
+          {
+            "order": 2,
+            "model": "gemini-3.5-flash",
+            "phase": "coverage_recovery",
+            "status": "succeeded",
+            "failure_class": null,
+            "provider_message": null,
+            "timestamp": "2026-09-15T09:03:12.035941+00:00"
+          }
+        ],
+        "provider_failures": []
+      },
+      "primary_calls": 1,
+      "schema_repair_calls": 0,
+      "coverage_calls": 1,
+      "candidates_detected": 22,
+      "high_priority_candidates": 13,
+      "candidates_covered": 0,
+      "candidates_sent": 13,
+      "coverage_candidates_accepted": 0,
+      "coverage_candidates_rejected": 13,
+      "coverage_merge": {
+        "accepted_candidates": 0,
+        "rejected_candidates": 13,
+        "added_catalysts": 0,
+        "added_experiments": 0,
+        "added_metrics": 0,
+        "duplicate_additions": 0,
+        "conflicts_preserved": 0,
+        "merge_rejections": [
+          {
+            "candidate_id": "catcand-d66d28c500a70e11",
+            "reason": "accepted_additions_do_not_cover_candidate"
+          },
+          {
+            "candidate_id": "catcand-39cf5b938db8318b",
+            "reason": "Contains a relative comparison (42-fold higher) rather than an absolute quantitative catalytic rate measurement."
+          },
+          {
+            "candidate_id": "catcand-b06335a0503cf4aa",
+            "reason": "accepted_additions_do_not_cover_candidate"
+          },
+          {
+            "candidate_id": "catcand-ca90b0d88284c066",
+            "reason": "accepted_additions_do_not_cover_candidate"
+          },
+          {
+            "candidate_id": "catcand-73b5f3e9962a40b4",
+            "reason": "accepted_additions_do_not_cover_candidate"
+          },
+          {
+            "candidate_id": "catcand-1e44c683d03363c4",
+            "reason": "Mentions supplementary figures and tables with experimental parameters and catalyst names, but does not contain direct quantitative catalytic activity measurements."
+          },
+          {
+            "candidate_id": "catcand-df9559cf0dc7ed35",
+            "reason": "Contains background information and band gap values rather than focal-work quantitative catalytic activity measurements."
+          },
+          {
+            "candidate_id": "catcand-700fa90eb8169e39",
+            "reason": "Qualitative statement about decay rate without quantitative catalytic activity measurements."
+          },
+          {
+            "candidate_id": "catcand-a1aa141c90f6e2ed",
+            "reason": "Figure caption describing the experiments without reporting specific quantitative catalytic activity values."
+          },
+          {
+            "candidate_id": "catcand-e421e6c083bd47f4",
+            "reason": "Text describing figure contents and experimental conditions without reporting specific quantitative catalytic activity values."
+          },
+          {
+            "candidate_id": "catcand-e5905346fd95c3de",
+            "reason": "Qualitative discussion of activity trends without specific quantitative catalytic activity measurements."
+          },
+          {
+            "candidate_id": "catcand-e593bcdb5471e9c5",
+            "reason": "Figure caption describing the experiments without reporting specific quantitative catalytic activity values."
+          },
+          {
+            "candidate_id": "catcand-e845e334eee3c9d4",
+            "reason": "accepted_additions_do_not_cover_candidate"
+          }
+        ]
+      },
+      "archive": {
+        "metadata": {
+          "archive_id": "arc-2d6eb45769d7ffe6",
+          "schema_name": "synthex-archive",
+          "schema_version": "3.4.0",
+          "software_version": "3.4.2",
+          "created_at": "2026-09-15T09:03:12.092628+00:00",
+          "generator": "Synthex V3.4.2",
+          "extractor_model": "gemini-3.5-flash",
+          "domain": "catalysis"
+        },
+        "sources": [
+          {
+            "source_id": "src-abfc27f058b57ac5",
+            "source_type": "paper",
+            "title": "NiO/TiO2 p-n Heterojunction Induced by Radiolysis for Photocatalytic Hydrogen Evolution",
+            "doi": "10.3390/ma18153513",
+            "url": "https://doi.org/10.3390/ma18153513",
+            "year": 2025,
+            "authors": [
+              "Ana Andrea Méndez-Medrano",
+              "Xiaojiao Yuan",
+              "Diana Dragoe",
+              "Christophe Colbeau-Justin",
+              "José Luis Rodríguez López",
+              "Hynd Remita"
+            ],
+            "checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851"
+          }
+        ],
+        "materials": [],
+        "devices": [],
+        "processes": [],
+        "experiments": [],
+        "calculations": [],
+        "relationships": [
+          {
+            "relation_id": "rel-b48ad2b032561ffc",
+            "subject_id": "arc-2d6eb45769d7ffe6",
+            "predicate": "reported_by",
+            "object_id": "src-abfc27f058b57ac5",
+            "attributes": {},
+            "evidence": []
+          }
+        ],
+        "domain_payloads": [
+          {
+            "domain": "catalysis",
+            "schema_version": "1.0-stage2",
+            "tags": [],
+            "values": {
+              "validated_document": {
+                "source": {
+                  "title": "NiO/TiO2 p-n Heterojunction Induced by Radiolysis for Photocatalytic Hydrogen Evolution",
+                  "doi": "10.3390/ma18153513",
+                  "url": "https://doi.org/10.3390/ma18153513",
+                  "year": 2025,
+                  "authors": [
+                    "Ana Andrea Méndez-Medrano",
+                    "Xiaojiao Yuan",
+                    "Diana Dragoe",
+                    "Christophe Colbeau-Justin",
+                    "José Luis Rodríguez López",
+                    "Hynd Remita"
+                  ],
+                  "pdf_text_parser": "pypdf"
+                },
+                "paper_types": [
+                  "catalyst_synthesis",
+                  "catalyst_characterization",
+                  "heterogeneous_catalysis"
+                ],
+                "scope_status": "deferred_subtype",
+                "catalysts": [
+                  {
+                    "local_id": "cat-bare-tio2",
+                    "reported_name": "bare TiO2",
+                    "canonical_name": "Titanium dioxide",
+                    "reported_formula": "TiO2",
+                    "formula": "TiO2",
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.1. Chemical Reagents",
+                        "text_snippet": "Commercial titania (TiO2-P25, 80% anatase, and 20% rutile, Evonik, Essen, Germany) was used as photocatalytic support.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-0.1-ni-acac",
+                    "reported_name": "0.1 wt.% Niacac-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-0.5-ni-acac",
+                    "reported_name": "0.5 wt.% Niacac-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-1.0-ni-acac",
+                    "reported_name": "1.0 wt.% Niacac-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-3.5-ni-acac",
+                    "reported_name": "3.5 wt.% Niacac-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-5.0-ni-acac",
+                    "reported_name": "5.0 wt.% Niacac-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-0.1-ni-formate",
+                    "reported_name": "0.1 wt.% Niformate-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-0.5-ni-formate",
+                    "reported_name": "0.5 wt.% Niformate-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-1.0-ni-formate",
+                    "reported_name": "1.0 wt.% Niformate-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat-3.5-ni-formate",
+                    "reported_name": "3.5 wt.% Niformate-based NPs/TiO2",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "as_synthesized",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "preparations": [
+                  {
+                    "preparation_id": "prep-ni-acac",
+                    "material_ref": "cat-3.5-ni-acac",
+                    "name": "Radiolysis synthesis using nickel (II) acetylacetonate",
+                    "ownership": "focal_work",
+                    "steps": [
+                      {
+                        "step": "mixing",
+                        "details": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                        "precursors": [
+                          "TiO2-P25",
+                          "nickel (II) acetylacetonate"
+                        ],
+                        "precursor_ratio_raw": null,
+                        "solvents": [
+                          "ethanol"
+                        ],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": "N2",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "reduction",
+                        "details": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "washing",
+                        "details": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [
+                          "ethanol"
+                        ],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "drying",
+                        "details": "The photocatalysts were then dried at 60 °C for 24 h.",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": {
+                          "raw_value": "60 °C",
+                          "value": 60.0,
+                          "unit": "°C",
+                          "qualifier": "exact"
+                        },
+                        "duration": {
+                          "raw_value": "24 h",
+                          "value": 24.0,
+                          "unit": "h",
+                          "qualifier": "exact"
+                        },
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The photocatalysts were then dried at 60 °C for 24 h.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "evidence": []
+                  }
+                ],
+                "characterizations": [
+                  {
+                    "characterization_id": "char-icp-3.5-ni-acac",
+                    "material_ref": "cat-3.5-ni-acac",
+                    "method": "ICP-OES",
+                    "conditions": {},
+                    "results": [
+                      {
+                        "property": "metal content",
+                        "raw_value": "1.30 wt%",
+                        "value": 1.3,
+                        "unit": "wt%",
+                        "qualifier": "exact",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 6,
+                            "section": "3.1. Characterization of the Photocatalysts",
+                            "text_snippet": "For 3.5 wt.% Ni acac-based NPs/TiO2 and 3.5 wt.% Ni formate-based NPs/TiO2 samples, the metal content is 1.30 wt% and 0.13 wt%, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": []
+                  },
+                  {
+                    "characterization_id": "char-icp-3.5-ni-formate",
+                    "material_ref": "cat-3.5-ni-formate",
+                    "method": "ICP-OES",
+                    "conditions": {},
+                    "results": [
+                      {
+                        "property": "metal content",
+                        "raw_value": "0.13 wt%",
+                        "value": 0.13,
+                        "unit": "wt%",
+                        "qualifier": "exact",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 6,
+                            "section": "3.1. Characterization of the Photocatalysts",
+                            "text_snippet": "For 3.5 wt.% Ni acac-based NPs/TiO2 and 3.5 wt.% Ni formate-based NPs/TiO2 samples, the metal content is 1.30 wt% and 0.13 wt%, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": []
+                  },
+                  {
+                    "characterization_id": "char-tem-3.5-ni-acac",
+                    "material_ref": "cat-3.5-ni-acac",
+                    "method": "TEM",
+                    "conditions": {},
+                    "results": [
+                      {
+                        "property": "particle size",
+                        "raw_value": "about 8 nm",
+                        "value": 8.0,
+                        "unit": "nm",
+                        "qualifier": "approx",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 5,
+                            "section": "3.1. Characterization of the Photocatalysts",
+                            "text_snippet": "TEM images show that reduction of nickel (II) acetylacetonate precursor by radiolysis led to nanoparticles of about 8 nm for the 3.5 wt.% Ni acac-based NPs/TiO2 sample",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": []
+                  }
+                ],
+                "heterogeneous_experiments": [
+                  {
+                    "experiment_id": "exp-uv-vis-photocatalysis",
+                    "catalyst_ref": null,
+                    "reaction": {
+                      "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [
+                        {
+                          "reported_name": "methanol",
+                          "formula": "CH3OH"
+                        },
+                        {
+                          "reported_name": "water",
+                          "formula": "H2O"
+                        }
+                      ],
+                      "products": [
+                        {
+                          "reported_name": "hydrogen",
+                          "formula": "H2"
+                        }
+                      ]
+                    },
+                    "reactor_type": "sealed quartz reactor",
+                    "catalyst_mass": {
+                      "raw_value": "20 mg",
+                      "value": 20.0,
+                      "unit": "mg",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "methanol",
+                        "fraction": {
+                          "raw_value": "25% v/v",
+                          "value": 25.0,
+                          "unit": "% v/v",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      },
+                      {
+                        "species": "water",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": null,
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": {
+                      "raw_value": "5 h",
+                      "value": 5.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "time_on_stream": null,
+                    "analytical_method": "gas chromatography",
+                    "metrics": [
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "23.3 µmol gcat.−1 h−1",
+                        "value": 23.3,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-bare-tio2",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The hydrogen evolution rate of TiO2 was 23.3 µmol gcat.−1 h−1.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "95.9",
+                        "value": 95.9,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-0.1-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "287.8",
+                        "value": 287.8,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-0.5-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "563.3",
+                        "value": 563.3,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-1.0-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "998.4",
+                        "value": 998.4,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "897.2",
+                        "value": 897.2,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-5.0-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "The photocatalytic reactions were carried out in a sealed quartz reactor under vigorous stirring and an inert atmosphere. A total of 20 mg of the photocatalyst was dispersed in a 20 mL solution of 25% v/v methanol in water.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "experiment_id": "exp-visible-photocatalysis",
+                    "catalyst_ref": null,
+                    "reaction": {
+                      "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution under visible light",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [
+                        {
+                          "reported_name": "methanol",
+                          "formula": "CH3OH"
+                        },
+                        {
+                          "reported_name": "water",
+                          "formula": "H2O"
+                        }
+                      ],
+                      "products": [
+                        {
+                          "reported_name": "hydrogen",
+                          "formula": "H2"
+                        }
+                      ]
+                    },
+                    "reactor_type": "sealed quartz reactor",
+                    "catalyst_mass": {
+                      "raw_value": "20 mg",
+                      "value": 20.0,
+                      "unit": "mg",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "methanol",
+                        "fraction": {
+                          "raw_value": "25% v/v",
+                          "value": 25.0,
+                          "unit": "% v/v",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      },
+                      {
+                        "species": "water",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": null,
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": {
+                      "raw_value": "5 h",
+                      "value": 5.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "time_on_stream": null,
+                    "analytical_method": "gas chromatography",
+                    "metrics": [
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "1.5",
+                        "value": 1.5,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-acac",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "0.6",
+                        "value": 0.6,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-formate",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "0.4",
+                        "value": 0.4,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "H2",
+                        "normalization_basis": null,
+                        "conditions": {
+                          "catalyst_ref": "cat-0.1-ni-acac",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The sample 0.1 wt.% Ni acac-based NPs/TiO2 shows a higher TRMC signal than bare TiO2 (Figure 5b) under visible excitation, but the hydrogen generation rate (0.4 µmol gcat.−1 h−1) was lower than that of 3.5 wt.% Ni acac-based NPs/TiO2.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "For visible light experiments, a 300 W LOT-Oriel Xenon Lamp (250 to 2000 nm) equipped with a water filter (a large quartz cell) was positioned between the lamp and the reactor to block the infrared light and prevent sample heating. An optical filter was used to limit irradiation to the visible (λ≥ 420 nm).",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "electrocatalysis_experiments": [],
+                "stability_tests": [
+                  {
+                    "stability_id": "stab-3.5-ni-acac",
+                    "experiment_ref": "exp-uv-vis-photocatalysis",
+                    "mode": "cycling",
+                    "duration": null,
+                    "cycle_count": 5,
+                    "operating_potential": null,
+                    "operating_current": null,
+                    "operating_temperature": null,
+                    "reaction_conditions": {},
+                    "catalyst_state_ref": null,
+                    "retained_metric": null,
+                    "conversion_loss": null,
+                    "structural_changes": [],
+                    "regeneration_details": null,
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "The stability of the photocatalyst with cycling was also studied. After the photocatalytic test, the reactor was covered with aluminum foil and put in the dark. The next day, the reactor was degassed again and irradiated under the same conditions until 5 cycles were completed.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "calculations": [],
+                "condition_conflicts": [],
+                "extraction_notes": [],
+                "semantic_warnings": [
+                  "scope_constrained_by_router:deferred_subtype"
+                ]
+              },
+              "admissibility_audit": {
+                "policy": "catalysis_focal_value_specific_verified_v1",
+                "admitted_quantitative_values": 0,
+                "quarantined_objects_or_values": 14,
+                "quarantine": [
+                  {
+                    "path": "catalysts.cat-bare-tio2",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-bare-tio2",
+                      "reported_name": "bare TiO2",
+                      "canonical_name": "Titanium dioxide",
+                      "reported_formula": "TiO2",
+                      "formula": "TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.1. Chemical Reagents",
+                          "text_snippet": "Commercial titania (TiO2-P25, 80% anatase, and 20% rutile, Evonik, Essen, Germany) was used as photocatalytic support.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-0.1-ni-acac",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-0.1-ni-acac",
+                      "reported_name": "0.1 wt.% Niacac-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-0.5-ni-acac",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-0.5-ni-acac",
+                      "reported_name": "0.5 wt.% Niacac-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-1.0-ni-acac",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-1.0-ni-acac",
+                      "reported_name": "1.0 wt.% Niacac-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-3.5-ni-acac",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-3.5-ni-acac",
+                      "reported_name": "3.5 wt.% Niacac-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-5.0-ni-acac",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-5.0-ni-acac",
+                      "reported_name": "5.0 wt.% Niacac-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-0.1-ni-formate",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-0.1-ni-formate",
+                      "reported_name": "0.1 wt.% Niformate-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-0.5-ni-formate",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-0.5-ni-formate",
+                      "reported_name": "0.5 wt.% Niformate-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-1.0-ni-formate",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-1.0-ni-formate",
+                      "reported_name": "1.0 wt.% Niformate-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat-3.5-ni-formate",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "local_id": "cat-3.5-ni-formate",
+                      "reported_name": "3.5 wt.% Niformate-based NPs/TiO2",
+                      "composition": {},
+                      "state": "as_synthesized",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 3,
+                          "section": "2.2. Synthesis Method",
+                          "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "preparations.prep-ni-acac",
+                    "reason": "schema_invalid",
+                    "ownership": "focal_work",
+                    "object": {
+                      "preparation_id": "prep-ni-acac",
+                      "material_ref": "cat-3.5-ni-acac",
+                      "name": "Radiolysis synthesis using nickel (II) acetylacetonate",
+                      "ownership": "focal_work",
+                      "steps": [
+                        {
+                          "step": "mixing",
+                          "details": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                          "precursors": [
+                            "TiO2-P25",
+                            "nickel (II) acetylacetonate"
+                          ],
+                          "solvents": [
+                            "ethanol"
+                          ],
+                          "atmosphere": "N2",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 3,
+                              "section": "2.2. Synthesis Method",
+                              "text_snippet": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "step": "reduction",
+                          "details": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                          "precursors": [],
+                          "solvents": [],
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 3,
+                              "section": "2.2. Synthesis Method",
+                              "text_snippet": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "step": "washing",
+                          "details": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                          "precursors": [],
+                          "solvents": [
+                            "ethanol"
+                          ],
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 3,
+                              "section": "2.2. Synthesis Method",
+                              "text_snippet": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "step": "drying",
+                          "details": "The photocatalysts were then dried at 60 °C for 24 h.",
+                          "precursors": [],
+                          "solvents": [],
+                          "temperature": {
+                            "raw_value": "60 °C",
+                            "value": 60.0,
+                            "unit": "°C",
+                            "qualifier": "exact"
+                          },
+                          "duration": {
+                            "raw_value": "24 h",
+                            "value": 24.0,
+                            "unit": "h",
+                            "qualifier": "exact"
+                          },
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 3,
+                              "section": "2.2. Synthesis Method",
+                              "text_snippet": "The photocatalysts were then dried at 60 °C for 24 h.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp-uv-vis-photocatalysis",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "experiment_id": "exp-uv-vis-photocatalysis",
+                      "reaction": {
+                        "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [
+                          {
+                            "reported_name": "methanol",
+                            "formula": "CH3OH"
+                          },
+                          {
+                            "reported_name": "water",
+                            "formula": "H2O"
+                          }
+                        ],
+                        "products": [
+                          {
+                            "reported_name": "hydrogen",
+                            "formula": "H2"
+                          }
+                        ]
+                      },
+                      "reactor_type": "sealed quartz reactor",
+                      "catalyst_mass": {
+                        "raw_value": "20 mg",
+                        "value": 20.0,
+                        "unit": "mg",
+                        "qualifier": "exact"
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "methanol",
+                          "fraction": {
+                            "raw_value": "25% v/v",
+                            "value": 25.0,
+                            "unit": "% v/v",
+                            "qualifier": "exact"
+                          }
+                        },
+                        {
+                          "species": "water"
+                        }
+                      ],
+                      "reaction_time": {
+                        "raw_value": "5 h",
+                        "value": 5.0,
+                        "unit": "h",
+                        "qualifier": "exact"
+                      },
+                      "analytical_method": "gas chromatography",
+                      "metrics": [
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "23.3 µmol gcat.−1 h−1",
+                          "value": 23.3,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-bare-tio2",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The hydrogen evolution rate of TiO2 was 23.3 µmol gcat.−1 h−1.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "95.9",
+                          "value": 95.9,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-0.1-ni-acac",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "287.8",
+                          "value": 287.8,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-0.5-ni-acac",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "563.3",
+                          "value": 563.3,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-1.0-ni-acac",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "998.4",
+                          "value": 998.4,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-3.5-ni-acac",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "897.2",
+                          "value": 897.2,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-5.0-ni-acac",
+                            "light_source": "UV-visible light"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 5,
+                          "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                          "text_snippet": "The photocatalytic reactions were carried out in a sealed quartz reactor under vigorous stirring and an inert atmosphere. A total of 20 mg of the photocatalyst was dispersed in a 20 mL solution of 25% v/v methanol in water.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "experiments.exp-visible-photocatalysis",
+                    "reason": "unsupported_v1_subtype",
+                    "ownership": "focal_work",
+                    "object": {
+                      "experiment_id": "exp-visible-photocatalysis",
+                      "reaction": {
+                        "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution under visible light",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [
+                          {
+                            "reported_name": "methanol",
+                            "formula": "CH3OH"
+                          },
+                          {
+                            "reported_name": "water",
+                            "formula": "H2O"
+                          }
+                        ],
+                        "products": [
+                          {
+                            "reported_name": "hydrogen",
+                            "formula": "H2"
+                          }
+                        ]
+                      },
+                      "reactor_type": "sealed quartz reactor",
+                      "catalyst_mass": {
+                        "raw_value": "20 mg",
+                        "value": 20.0,
+                        "unit": "mg",
+                        "qualifier": "exact"
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "methanol",
+                          "fraction": {
+                            "raw_value": "25% v/v",
+                            "value": 25.0,
+                            "unit": "% v/v",
+                            "qualifier": "exact"
+                          }
+                        },
+                        {
+                          "species": "water"
+                        }
+                      ],
+                      "reaction_time": {
+                        "raw_value": "5 h",
+                        "value": 5.0,
+                        "unit": "h",
+                        "qualifier": "exact"
+                      },
+                      "analytical_method": "gas chromatography",
+                      "metrics": [
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "1.5",
+                          "value": 1.5,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-3.5-ni-acac",
+                            "light_source": "visible light (λ >= 420 nm)"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "0.6",
+                          "value": 0.6,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-3.5-ni-formate",
+                            "light_source": "visible light (λ >= 420 nm)"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "reaction_rate",
+                          "raw_value": "0.4",
+                          "value": 0.4,
+                          "unit": "µmol/g/h",
+                          "qualifier": "exact",
+                          "product": "H2",
+                          "conditions": {
+                            "catalyst_ref": "cat-0.1-ni-acac",
+                            "light_source": "visible light (λ >= 420 nm)"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-7179b701538dafe0",
+                              "page": 10,
+                              "section": "3.2. Photocatalytic Hydrogen Generation",
+                              "text_snippet": "The sample 0.1 wt.% Ni acac-based NPs/TiO2 shows a higher TRMC signal than bare TiO2 (Figure 5b) under visible excitation, but the hydrogen generation rate (0.4 µmol gcat.−1 h−1) was lower than that of 3.5 wt.% Ni acac-based NPs/TiO2.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 5,
+                          "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                          "text_snippet": "For visible light experiments, a 300 W LOT-Oriel Xenon Lamp (250 to 2000 nm) equipped with a water filter (a large quartz cell) was positioned between the lamp and the reactor to block the infrared light and prevent sample heating. An optical filter was used to limit irradiation to the visible (λ≥ 420 nm).",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "stability_tests.stab-3.5-ni-acac",
+                    "reason": "schema_invalid",
+                    "ownership": "focal_work",
+                    "object": {
+                      "stability_id": "stab-3.5-ni-acac",
+                      "experiment_ref": "exp-uv-vis-photocatalysis",
+                      "mode": "cycling",
+                      "cycle_count": 5,
+                      "reaction_conditions": {},
+                      "structural_changes": [],
+                      "ownership": "focal_work",
+                      "evidence": [
+                        {
+                          "source_id": "src-7179b701538dafe0",
+                          "page": 5,
+                          "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                          "text_snippet": "The stability of the photocatalyst with cycling was also studied. After the photocatalytic test, the reactor was covered with aluminum foil and put in the dark. The next day, the reactor was degassed again and irradiated under the same conditions until 5 cycles were completed.",
+                          "source_type": "text",
+                          "original_source_type": "native_text",
+                          "verbatim_match": true,
+                          "evidence_strength": "verified_native",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "canonical_admission_count": 0
+              },
+              "quarantined_objects_measurements": [
+                {
+                  "path": "catalysts.cat-bare-tio2",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-bare-tio2",
+                    "reported_name": "bare TiO2",
+                    "canonical_name": "Titanium dioxide",
+                    "reported_formula": "TiO2",
+                    "formula": "TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.1. Chemical Reagents",
+                        "text_snippet": "Commercial titania (TiO2-P25, 80% anatase, and 20% rutile, Evonik, Essen, Germany) was used as photocatalytic support.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-0.1-ni-acac",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-0.1-ni-acac",
+                    "reported_name": "0.1 wt.% Niacac-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-0.5-ni-acac",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-0.5-ni-acac",
+                    "reported_name": "0.5 wt.% Niacac-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-1.0-ni-acac",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-1.0-ni-acac",
+                    "reported_name": "1.0 wt.% Niacac-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-3.5-ni-acac",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-3.5-ni-acac",
+                    "reported_name": "3.5 wt.% Niacac-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-5.0-ni-acac",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-5.0-ni-acac",
+                    "reported_name": "5.0 wt.% Niacac-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-0.1-ni-formate",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-0.1-ni-formate",
+                    "reported_name": "0.1 wt.% Niformate-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-0.5-ni-formate",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-0.5-ni-formate",
+                    "reported_name": "0.5 wt.% Niformate-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-1.0-ni-formate",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-1.0-ni-formate",
+                    "reported_name": "1.0 wt.% Niformate-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat-3.5-ni-formate",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "local_id": "cat-3.5-ni-formate",
+                    "reported_name": "3.5 wt.% Niformate-based NPs/TiO2",
+                    "composition": {},
+                    "state": "as_synthesized",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 3,
+                        "section": "2.2. Synthesis Method",
+                        "text_snippet": "TiO2 was surface-modified with different amounts of Ni: the experimental design of metal loadings was 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% Ni/TiO2.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "preparations.prep-ni-acac",
+                  "reason": "schema_invalid",
+                  "ownership": "focal_work",
+                  "object": {
+                    "preparation_id": "prep-ni-acac",
+                    "material_ref": "cat-3.5-ni-acac",
+                    "name": "Radiolysis synthesis using nickel (II) acetylacetonate",
+                    "ownership": "focal_work",
+                    "steps": [
+                      {
+                        "step": "mixing",
+                        "details": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                        "precursors": [
+                          "TiO2-P25",
+                          "nickel (II) acetylacetonate"
+                        ],
+                        "solvents": [
+                          "ethanol"
+                        ],
+                        "atmosphere": "N2",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The required amounts of metal precursors were dissolved in ethanol to prepare each photocatalyst. The solutions were first sonicated for 10 min, stirred for 30 min, and degassed with N2 gas.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "step": "reduction",
+                        "details": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                        "precursors": [],
+                        "solvents": [],
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The mixture was then irradiated using a 60Co panoramic gamma source.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "step": "washing",
+                        "details": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                        "precursors": [],
+                        "solvents": [
+                          "ethanol"
+                        ],
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "After the radiolysis process, the photocatalysts were separated by centrifugation. The powders were washed with ethanol 3 times at 6000 rpm for 10 min.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "step": "drying",
+                        "details": "The photocatalysts were then dried at 60 °C for 24 h.",
+                        "precursors": [],
+                        "solvents": [],
+                        "temperature": {
+                          "raw_value": "60 °C",
+                          "value": 60.0,
+                          "unit": "°C",
+                          "qualifier": "exact"
+                        },
+                        "duration": {
+                          "raw_value": "24 h",
+                          "value": 24.0,
+                          "unit": "h",
+                          "qualifier": "exact"
+                        },
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 3,
+                            "section": "2.2. Synthesis Method",
+                            "text_snippet": "The photocatalysts were then dried at 60 °C for 24 h.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp-uv-vis-photocatalysis",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "experiment_id": "exp-uv-vis-photocatalysis",
+                    "reaction": {
+                      "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [
+                        {
+                          "reported_name": "methanol",
+                          "formula": "CH3OH"
+                        },
+                        {
+                          "reported_name": "water",
+                          "formula": "H2O"
+                        }
+                      ],
+                      "products": [
+                        {
+                          "reported_name": "hydrogen",
+                          "formula": "H2"
+                        }
+                      ]
+                    },
+                    "reactor_type": "sealed quartz reactor",
+                    "catalyst_mass": {
+                      "raw_value": "20 mg",
+                      "value": 20.0,
+                      "unit": "mg",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "methanol",
+                        "fraction": {
+                          "raw_value": "25% v/v",
+                          "value": 25.0,
+                          "unit": "% v/v",
+                          "qualifier": "exact"
+                        }
+                      },
+                      {
+                        "species": "water"
+                      }
+                    ],
+                    "reaction_time": {
+                      "raw_value": "5 h",
+                      "value": 5.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "analytical_method": "gas chromatography",
+                    "metrics": [
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "23.3 µmol gcat.−1 h−1",
+                        "value": 23.3,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-bare-tio2",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The hydrogen evolution rate of TiO2 was 23.3 µmol gcat.−1 h−1.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "95.9",
+                        "value": 95.9,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-0.1-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "287.8",
+                        "value": 287.8,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-0.5-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "563.3",
+                        "value": 563.3,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-1.0-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "998.4",
+                        "value": 998.4,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "897.2",
+                        "value": 897.2,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-5.0-ni-acac",
+                          "light_source": "UV-visible light"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The results demonstrate that the Niacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.% on the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates, corresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "The photocatalytic reactions were carried out in a sealed quartz reactor under vigorous stirring and an inert atmosphere. A total of 20 mg of the photocatalyst was dispersed in a 20 mL solution of 25% v/v methanol in water.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "experiments.exp-visible-photocatalysis",
+                  "reason": "unsupported_v1_subtype",
+                  "ownership": "focal_work",
+                  "object": {
+                    "experiment_id": "exp-visible-photocatalysis",
+                    "reaction": {
+                      "reported_reaction": "Photocatalytic hydrogen generation from methanol/water solution under visible light",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [
+                        {
+                          "reported_name": "methanol",
+                          "formula": "CH3OH"
+                        },
+                        {
+                          "reported_name": "water",
+                          "formula": "H2O"
+                        }
+                      ],
+                      "products": [
+                        {
+                          "reported_name": "hydrogen",
+                          "formula": "H2"
+                        }
+                      ]
+                    },
+                    "reactor_type": "sealed quartz reactor",
+                    "catalyst_mass": {
+                      "raw_value": "20 mg",
+                      "value": 20.0,
+                      "unit": "mg",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "methanol",
+                        "fraction": {
+                          "raw_value": "25% v/v",
+                          "value": 25.0,
+                          "unit": "% v/v",
+                          "qualifier": "exact"
+                        }
+                      },
+                      {
+                        "species": "water"
+                      }
+                    ],
+                    "reaction_time": {
+                      "raw_value": "5 h",
+                      "value": 5.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "analytical_method": "gas chromatography",
+                    "metrics": [
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "1.5",
+                        "value": 1.5,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-acac",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "0.6",
+                        "value": 0.6,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-3.5-ni-formate",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were tested under visible light, showing a slight activity with hydrogen generation rates of 1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "reaction_rate",
+                        "raw_value": "0.4",
+                        "value": 0.4,
+                        "unit": "µmol/g/h",
+                        "qualifier": "exact",
+                        "product": "H2",
+                        "conditions": {
+                          "catalyst_ref": "cat-0.1-ni-acac",
+                          "light_source": "visible light (λ >= 420 nm)"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-7179b701538dafe0",
+                            "page": 10,
+                            "section": "3.2. Photocatalytic Hydrogen Generation",
+                            "text_snippet": "The sample 0.1 wt.% Ni acac-based NPs/TiO2 shows a higher TRMC signal than bare TiO2 (Figure 5b) under visible excitation, but the hydrogen generation rate (0.4 µmol gcat.−1 h−1) was lower than that of 3.5 wt.% Ni acac-based NPs/TiO2.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "For visible light experiments, a 300 W LOT-Oriel Xenon Lamp (250 to 2000 nm) equipped with a water filter (a large quartz cell) was positioned between the lamp and the reactor to block the infrared light and prevent sample heating. An optical filter was used to limit irradiation to the visible (λ≥ 420 nm).",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "stability_tests.stab-3.5-ni-acac",
+                  "reason": "schema_invalid",
+                  "ownership": "focal_work",
+                  "object": {
+                    "stability_id": "stab-3.5-ni-acac",
+                    "experiment_ref": "exp-uv-vis-photocatalysis",
+                    "mode": "cycling",
+                    "cycle_count": 5,
+                    "reaction_conditions": {},
+                    "structural_changes": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": "src-7179b701538dafe0",
+                        "page": 5,
+                        "section": "2.4. Photocatalytic Hydrogen Generation Tests",
+                        "text_snippet": "The stability of the photocatalyst with cycling was also studied. After the photocatalytic test, the reactor was covered with aluminum foil and put in the dark. The next day, the reactor was degassed again and irradiated under the same conditions until 5 cycles were completed.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "verbatim_match": true,
+                        "evidence_strength": "verified_native",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                }
+              ],
+              "normalization_comparability_warnings": [
+                "scope_constrained_by_router:deferred_subtype"
+              ],
+              "conflicts": [],
+              "extraction_notes": [],
+              "source_context": {
+                "source_id": "src-7179b701538dafe0",
+                "filename": "materials-18-03513-v3.pdf",
+                "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+                "primary_native_parser": "pypdf",
+                "page_parsers": [
+                  {
+                    "page": 1,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 2,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 3,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 4,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 5,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 6,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 7,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 8,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 9,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 10,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 11,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 12,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 13,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 14,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 15,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 16,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 17,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 18,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  }
+                ],
+                "tables_detected": 0,
+                "figures_detected": 15,
+                "ocr_pages_used": [],
+                "digitizations_available": 0,
+                "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-photo-f\\sidecars\\visual\\src-7179b701538dafe0\\visual_document.json"
+              }
+            }
+          },
+          {
+            "domain": "llm_provider",
+            "schema_version": "1.0.0",
+            "tags": [
+              "benchmark_pinned"
+            ],
+            "values": {
+              "mode": "benchmark",
+              "requested_model": "gemini-3.5-flash",
+              "actual_model": "gemini-3.5-flash",
+              "configured_model_order": [
+                "gemini-3.5-flash"
+              ],
+              "models_attempted": [
+                "gemini-3.5-flash"
+              ],
+              "fallback_occurred": false,
+              "attempts": [
+                {
+                  "order": 1,
+                  "model": "gemini-3.5-flash",
+                  "phase": "primary",
+                  "status": "succeeded",
+                  "failure_class": null,
+                  "provider_message": null,
+                  "timestamp": "2026-09-15T09:02:26.186138+00:00"
+                },
+                {
+                  "order": 2,
+                  "model": "gemini-3.5-flash",
+                  "phase": "coverage_recovery",
+                  "status": "succeeded",
+                  "failure_class": null,
+                  "provider_message": null,
+                  "timestamp": "2026-09-15T09:03:12.035941+00:00"
+                }
+              ],
+              "provider_failures": []
+            }
+          }
+        ],
+        "quality": {
+          "completeness": 0.0,
+          "provenance_coverage": 0.0,
+          "unit_normalization_coverage": 0.0,
+          "extraction_confidence": 0.0,
+          "semantic_warnings": [
+            "scope_constrained_by_router:deferred_subtype",
+            "canonical_admission_count:0",
+            "quarantine_count:14",
+            "unresolved_conflict_count:0"
+          ],
+          "validation_status": "schema_validated"
+        }
+      },
+      "safety": {
+        "dft_experimental_leakage": 0,
+        "review_contamination": 0,
+        "digitized_canonical_leakage": 0,
+        "referential_integrity_violations": []
+      },
+      "candidate_artifacts": {
+        "inventory": "cat-photo-f_candidate_inventory.json",
+        "coverage": "cat-photo-f_candidate_coverage.json"
+      },
+      "captured_model_outputs": {
+        "raw": "cat-photo-f_raw_gemini_response.json",
+        "coverage": "cat-photo-f_coverage_gemini_response.json"
+      }
+    }
+  ],
+  "totals": {
+    "gemini_calls": 2,
+    "repair_calls": 0,
+    "persistent_failures": 0
+  }
+}

@@ -1,0 +1,530 @@
+[
+  {
+    "candidate_id": "catcand-7c3a26ce9fc28a38",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+    "snippet": "Remarkably MMONiCo + Ce \nremained more stable than MMONiCo with no significant changes in \ncatalytic activity (~85 % of CO2 conversion after 1400 min of contin-\nuous use).",
+    "numeric_spans": [
+      "~85",
+      "1400"
+    ],
+    "unit_spans": [
+      "%",
+      "min"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5c28835fdf4fded7",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 3,
+    "section": "2.3. Catalytic activity",
+    "snippet": "CO2 Conversion(%)=A0CO2– ATCO2\nA0CO2\n⋅100 (3)  \nCH4 Selectivity(%)= ATCH4•F\nA0CO2– ATCO2\n⋅100 (4)  \nSTY\n(\nmol CH4 L\u0000 1 h\u0000 1\n)\n= QCH4\nVcat\n(5)  \n3.",
+    "numeric_spans": [
+      "100",
+      "3",
+      "100",
+      "4",
+      "1",
+      "1",
+      "5",
+      "3"
+    ],
+    "unit_spans": [
+      "%",
+      "h"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-4d8b25e628df61b4",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "It can be observed that the catalytic activities of these \nmaterials were moderate at 250 ◦C (lower than 40% of conversion), \nsuggesting that the methanation reaction began slowly.",
+    "numeric_spans": [
+      "250",
+      "40"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d993e51db7fe1ace",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 9,
+    "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+    "snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+    "numeric_spans": [
+      "~80",
+      "350",
+      "50",
+      "350"
+    ],
+    "unit_spans": [
+      "%",
+      "◦C"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fefdf62ea886efd0",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+    "snippet": "9B), exhibiting CO2 conversions \nhigher than 80 % even after 1400 min.",
+    "numeric_spans": [
+      "80",
+      "1400"
+    ],
+    "unit_spans": [
+      "%",
+      "min"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-115196c55da81874",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 1,
+    "snippet": "Firstly, the effects of space velocity and Ni loading on the catalyst were tested, and 36000 h\u0000 1 and 5 % of Ni were \nfound to be suitable conditions for CO2 conversion.",
+    "numeric_spans": [
+      "36000",
+      "1",
+      "5"
+    ],
+    "unit_spans": [
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-8fb9611d136c1d7d",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 1,
+    "snippet": "Improved conversion, selectivity, and stability during CO2 methanation by \nthe incorporation of Ce in Ni, Co, and Fe-hydrotalcite-derived catalysts \nCarlos Mendoza-Merlano, Juan Tapia-P´erez, Efraím Serna-Galvis, Dora Hoyos-Ayala, \nJohana Arboleda-Echavarría, Adriana Echavarría-Isaza * \nGrupo Catalizadores y Adsorbentes, Universidad de Antioquia UdeA, AA 1226, Calle 70 No.",
+    "numeric_spans": [
+      "1226",
+      "70"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-9c5c97a3f86238b1",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 2,
+    "section": "2.2. Characterization",
+    "snippet": "The sample was subjected to heating at a \nramp rate of 10 ◦C min\u0000 1 until it reached a temperature of 800 ◦C.",
+    "numeric_spans": [
+      "10",
+      "1",
+      "800"
+    ],
+    "unit_spans": [
+      "◦C",
+      "min"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-2fd1a52a69929250",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 3,
+    "section": "2.3. Catalytic activity",
+    "snippet": "Catalytic activity \nThe methanation reactions were performed in a fixed bed reactor \nwith a mixture of gases with a molar ratio of H2/CO = 4 in Ar balance \n(40 % H2 and 10 % CO2).",
+    "numeric_spans": [
+      "4",
+      "40",
+      "10"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a2d8d0d0f73ad2b2",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 3,
+    "snippet": "The reduction process was \nconducted using a 10% H2/Ar gas mixture with a flow rate of 30 mL \nmin\u0000 1 at 10 ◦C min\u0000 1 within the temperature range of 25–900 ◦C.",
+    "numeric_spans": [
+      "10",
+      "30",
+      "1",
+      "10",
+      "1",
+      "25–900"
+    ],
+    "unit_spans": [
+      "%",
+      "min",
+      "◦C"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b33013e3324df795",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 3,
+    "section": "2.3. Catalytic activity",
+    "snippet": "This was achieved by utilizing the CO2 molar flow per hour (QCO2), the \nyield to CH4 at 350 ◦C (Y350), and the catalyst volume in liter (Vcat) \nintroduced in the reactor.",
+    "numeric_spans": [
+      "350",
+      "50"
+    ],
+    "unit_spans": [
+      "◦C"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-f661c6ce18419744",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 3,
+    "snippet": "Initially, 200 mg of the sample was reduced \nat 850 ◦C with a flow rate of 100 mL min\u0000 1 of a 10% H2/Ar mixture gas \nfor 1 h.",
+    "numeric_spans": [
+      "200",
+      "850",
+      "100",
+      "1",
+      "10",
+      "1"
+    ],
+    "unit_spans": [
+      "◦C",
+      "min",
+      "%",
+      "h"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-2d41e2b1481a680c",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "Moreover, for \nthe three catalysts, the maximum CO2 conversion was obtained between \n350 ◦C and 400 ◦C.",
+    "numeric_spans": [
+      "350",
+      "400"
+    ],
+    "unit_spans": [
+      "◦C"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-343b69c3f7d31dca",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "It should be noted that the increase in the catalyst mass \nfrom 20 mg (72000 h\u0000 1) to 40 mg (36000 h\u0000 1) enhanced the conversion \nof CO2.",
+    "numeric_spans": [
+      "20",
+      "72000",
+      "1",
+      "40",
+      "36000",
+      "1"
+    ],
+    "unit_spans": [
+      "h"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-9412e02fc390d953",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "However, when the catalyst mass was raised from 40 mg (36000 \nh\u0000 1) to 60 mg (24000 h\u0000 1), no significant differences were found at the \nmaximum conversion temperature (i.e., 350 ◦C, Fig.",
+    "numeric_spans": [
+      "40",
+      "36000",
+      "1",
+      "60",
+      "24000",
+      "1",
+      "350"
+    ],
+    "unit_spans": [
+      "h",
+      "◦C"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1d064a65adc71036",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+    "snippet": "10B depicts the CO2 conversion at \n350 ◦C for 1400 min.",
+    "numeric_spans": [
+      "350",
+      "1400"
+    ],
+    "unit_spans": [
+      "◦C",
+      "min"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e3e9a9f061285b36",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+    "snippet": "Additionally, the MMONiCo + Ce material showed high \nstability, achieving elevated CO2 conversion (~85 %) even after 1400 \nmin of continuous use.",
+    "numeric_spans": [
+      "~85",
+      "1400"
+    ],
+    "unit_spans": [
+      "%",
+      "min"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-98b05d7f96d28c57",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 1,
+    "snippet": "52-21, Medellín, Colombia   \nARTICLE INFO  \nHandling Editor: Dr A Iranzo  \nKeywords: \nCO2 conversion \nCatalytic performance \nCeria incorporation \nHydrotalcite-derived catalysts \nABSTRACT  \nIn this work, Ni-based mixed metal oxide (MMOs) materials were synthesized by coprecipitation, and then ceria \n(CeO2) was incorporated.",
+    "numeric_spans": [
+      "52-21"
+    ],
+    "unit_spans": [
+      "k"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ed245a1538a5a2b2",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "8, the increase in temperature led to higher CO2 \nconversion percentages.",
+    "numeric_spans": [
+      "8"
+    ],
+    "unit_spans": [
+      "ag"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-6d871c6d51c2e219",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+    "snippet": "The incorporation of ceria as a support improved the selectivity toward \nmethane at low temperatures (250–350 ◦C) and this led to a greater \nextent of the process when CeO2 was present and MMONi had Co as a \ndopant.",
+    "numeric_spans": [
+      "250–350"
+    ],
+    "unit_spans": [
+      "◦C",
+      "a g"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-0db2aa02b0781148",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2. Catalytic activity of the materials in the methanation reaction",
+    "snippet": "Catalytic activity of the materials in the methanation reaction \n3.2.1.",
+    "numeric_spans": [
+      "3.2.1"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-cb54ccfe4413c80e",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "(12)) becomes more favorable [1,3,52] and thus decreases the \nconversion of CO2.",
+    "numeric_spans": [
+      "12"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-d5c9bd5ee4ea85ae",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 8,
+    "section": "3.2.1. Impact of the catalyst mass and amount of Ni on the catalytic",
+    "snippet": "At \n60 mg of MMONi, there was no enhancement of CO2 conversion.",
+    "numeric_spans": [
+      "60"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-56182702b4ef19da",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "page": 10,
+    "snippet": "The improvement in \nselectivity to methane for MMONiCo + Ce and MMONi + Ce at low \ntemperatures can be linked to how ceria helps to reduce the catalysts (as \ndemonstrated in section 3.1.2.) and CO2 adsorption, thereby, limiting \nthe formation of coke (Eqs.",
+    "numeric_spans": [
+      "3.1.2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  }
+]

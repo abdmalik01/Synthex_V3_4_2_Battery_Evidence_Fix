@@ -1,0 +1,2014 @@
+[
+  {
+    "candidate_id": "catcand-1f43318e214eb686",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 10,
+    "section": "2.1.2. Carbon materials",
+    "snippet": "The Fe, Ni, and Co nanoparticles on the \nbio-char surface showed high catalytic activity in breaking C–C and \nC–H bonds in the bio-oil, significantly increasing bio-oil yields (91 %, \n82 %, and 90 % for Fe-MEC, Ni-MEC, and Co-MEC, respectively) and \nenhancing bio-oil quality.",
+    "numeric_spans": [
+      "91",
+      "82",
+      "90"
+    ],
+    "unit_spans": [
+      "H",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d4ecaf6fa45170da",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 16,
+    "snippet": "For \nexample, while zeolite-based catalysts such as Ni-modified ZSM-5 \nexhibited high selectivity towards aromatics, Fe-modified ZSM-5 fav-\noured olefin production in the conversion of bioethanol to hydrocarbons \n[199], their regeneration efficiency and cost-effectiveness vary signifi-\ncantly under industrial conditions [200].",
+    "numeric_spans": [
+      "5",
+      "5"
+    ],
+    "unit_spans": [
+      "v"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ac04ea69a34934ab",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "snippet": "PCO2 = 0.16 bar \nGHSV = 86,100 \nmL⋅h\u0000 1⋅gcat\u0000 1\nCH4 (%) yield = 73  \nCH4 selectivity (%) =\n86–97\n[224]\nNatural \ngraphite \npowder\nCu–Ni/graphite IWI 107 0.43 The durability and activity \nof the catalyst developed \nin this study for the direct \nsynthesis of DMC in less \nthan 10 h were \ncomparatively high.",
+    "numeric_spans": [
+      "0.16",
+      "86,100",
+      "1",
+      "1",
+      "73",
+      "86–97",
+      "107",
+      "0.43",
+      "10"
+    ],
+    "unit_spans": [
+      "bar",
+      "V",
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "product_selectivity",
+      "yield",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ad294ad7904f538a",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "snippet": "T (◦C) =100 \nTime (h) = 3\nMethanol conversion \n(%) = 10.13 \nDMC yield (%)/mmol =\n0.91\n[225]\nMethanol and \ncarbon \ndioxide\nCu–Ni/ \nMWCNTs\nIWI 107 0.43 The catalyst synthesised in \nthis study showed good \ndurability and activity in \nthe direct synthesis of \nDMC in less than 10 h\nCalcination T (◦C) = 600 \nPressure (MPa) = 1.2 \nRxn.",
+    "numeric_spans": [
+      "100",
+      "3",
+      "10.13",
+      "0.91",
+      "107",
+      "0.43",
+      "10",
+      "600",
+      "1.2"
+    ],
+    "unit_spans": [
+      "◦C",
+      "h",
+      "%",
+      "Pa"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "yield",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-7c839c6f8fb4de88",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "Lower space velocities (5 h\u0000 1) favoured gaseous hydrocarbons (C1-C4), \nwhile higher velocities (12h\u0000 1) increased liquid fuel blendstocks (C5+), \nwith metal-doped catalysts showing higher selectivity (>79 %) and \nenhanced aromatic production, particularly benzene.",
+    "numeric_spans": [
+      "5",
+      "1",
+      "1",
+      ">79"
+    ],
+    "unit_spans": [
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ff1938578c372e52",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "However, a dual catalyst bed (HSAPO-34 and Ni/ \nHBET) improved bio-jet fuel production, achieving a 95.3 % conversion \nrate and 83.0 % selectivity for C9-C16 hydrocarbons by reducing ether \nformation and increasing lighter olefin selectivity.",
+    "numeric_spans": [
+      "34",
+      "95.3",
+      "83.0",
+      "6"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ec048a988ca969a8",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 10,
+    "section": "2.1.2. Carbon materials",
+    "snippet": "Sulphonated CMK-3 (ordered mesoporous carbon) was used for \ncellulose hydrolysis and achieved a conversion rate of 94.4 % and a \nglucose yield of 74.5 % [99].",
+    "numeric_spans": [
+      "3",
+      "94.4",
+      "74.5"
+    ],
+    "unit_spans": [
+      "K",
+      "%",
+      "a \ng"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "yield",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-283c1ab2520ff7f1",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 11,
+    "snippet": "The best results were obtained with \nRu/NC3 for the hydrogenation of levulinic acid, where γ-valerolactone \nwas obtained with 97 % yield and 100 % selectivity under the following \nconditions: Levulinic acid (1.36 mmol), H₂O (20 mL), 2 MPa N₂, 130 ◦C, \n6 h, Ru/NC3 (Ru 8.64 μmol), with a catalyst-to-reactant ratio of 1:160 \n[120].",
+    "numeric_spans": [
+      "97",
+      "100",
+      "1.36",
+      "20",
+      "2",
+      "130",
+      "6",
+      "8.64",
+      "1",
+      "160"
+    ],
+    "unit_spans": [
+      "%",
+      "Pa",
+      "◦C",
+      "h"
+    ],
+    "lexical_cues": [
+      "product_selectivity",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-53a7ef01feaabcd9",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 12,
+    "section": "2.1.5. Versatile heterogeneous catalytic systems",
+    "snippet": "[149] showed that incorporating the bifunctional catalyst 9- \nthiourea-epi-quinine into the channels of mesoporous silica SBA-15 \nsignificantly enhanced the selectivity and enantioselectivity of the het-\nerogeneous catalyst (92.5 % selectivity and 99.2 % ee compared to 83.8 \n% selectivity and 93.2 % ee) in the asymmetric Friedel-Crafts reaction \nbetween indoles and imines.",
+    "numeric_spans": [
+      "9",
+      "15",
+      "92.5",
+      "99.2",
+      "83.8",
+      "93.2"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-de7f58c7544cb6a6",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "[164] demonstrated that hydrolyzed \ncorn stalk diluted in [BMIM][HSO₄] and [BMIM]Cl achieved reducing \nsugar yields of approximately 68 % and 71 %, respectively.",
+    "numeric_spans": [
+      "approximately 68",
+      "71"
+    ],
+    "unit_spans": [
+      "k",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d296defd80f85de1",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 18,
+    "section": "35.22 MJ/kg",
+    "snippet": "Modelled on a pilot plant, and operational \nconditions were validated\n[237]\nActivated carbon derived from \nspent coconut shell with 90 % CaO\nBiomass/green \ndiesel\n9000 kg/h federate, running time of \n335 days/year, life span 20 years\nProduced 3091 tons of green diesel, 862 activated carbon, \n4953 tons of coconut meal and 269 tons of tar annually\nEconomically viable with a 14 % rate of return and a \nproduction efficiency of 47 % at a payback period of 7 \nyears for refinery scale implementation\n[238]\nAlkaline-based catalysts of order \nK2CO3 > KOH > NaOH and noble \nmetals (Fe, Cu, Ni)\nMunicipal waste/ \nbiocrude\n300–500 ◦C, 10–15 MPa, High yield with a profitability index of 5.5–6 and 31 % \nreturn on investment at 20 years payback\nHydrothermal liquefaction pilot plant of municipal \nwaste with technoeconomic analysis and life cycle \nassessment.",
+    "numeric_spans": [
+      "90",
+      "9000",
+      "335",
+      "20",
+      "3091",
+      "862",
+      "4953",
+      "269",
+      "14",
+      "47",
+      "7",
+      "300–500",
+      "10–15",
+      "5.5–6",
+      "31",
+      "20"
+    ],
+    "unit_spans": [
+      "%",
+      "h",
+      "k",
+      "◦C",
+      "Pa"
+    ],
+    "lexical_cues": [
+      "yield",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fa83e77ff6444ecb",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "T (◦C) = 180 \nReaction Time (h) = 6\nPropylene carbonate \n(PC) yield (%) = 58.7  \nDimethyl carbonate \n(DMC) yield \n(%) = 16.8  \nSelectivity of PO to DMC \n(SDMC) = 16.8\n[240]\nWaste tire Natural zeolite – 590 – – T (◦C) = 300–600 \nTime (min) = 25,30,60, \n85 \nReactor = BR\nLight hidrocarbon \n(biogasoline, biodiesel) \n12 %,\n[241]\nCottonseed \noil\nY-Zeolite, \nhalloysite- \nYzeolite\n– 25.6 0.08 – T (◦C) = 480–540 \nTime (min) = 1 h \nReactor = FBR\nBigasoline (46–55 %) [242]\nHierarchical zeolites\nBeech wood ZSM-5 Desilication by a \nsolution of 0.1–0.5 \nM NaOH\n406.8 0.058 The results also show that \ndesilication has no \nsignificant effect on the \nthermal stability of ZSM-5 \nzeolite, allowing thermal \nregeneration and \nsubsequent regeneration.",
+    "numeric_spans": [
+      "180",
+      "6",
+      "58.7",
+      "16.8",
+      "16.8",
+      "590",
+      "300–600",
+      "25,30,60",
+      "85",
+      "12",
+      "25.6",
+      "0.08",
+      "480–540",
+      "1",
+      "46–55",
+      "5",
+      "0.1–0.5",
+      "406.8",
+      "0.058",
+      "5"
+    ],
+    "unit_spans": [
+      "◦C",
+      "h",
+      "%",
+      "min"
+    ],
+    "lexical_cues": [
+      "product_selectivity",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-0df4b00a45795357",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "95.4\n[227]",
+    "snippet": "T (◦C) = 300 \nMass of catalyst (g) = 1 \nCO2 Conversion (%) =\n20\nCO2 Conversion (%) = 20  \nSelectivity (%) =\nCO = 23, CH4 = 21, C2- \nC4\n\u0000 = 23, C2-C4\n\u0000 = 21, \nC5+= 12\n[247]\nMesoporous materials\nSyngas Ni–3 %Mo/ \nMCM-41\nIWI 473 0.28 The CH4 selectivity over \nthe Ni–3 %Mo/M catalyst \ngradually decreased from \n93 % to 89 % in the first \n50 h and remained stable \nat around 89 % for the \nnext 50 h.",
+    "numeric_spans": [
+      "300",
+      "1",
+      "20",
+      "20",
+      "23",
+      "21",
+      "23",
+      "21",
+      "12",
+      "3",
+      "41",
+      "473",
+      "0.28",
+      "3",
+      "93",
+      "89",
+      "50",
+      "89",
+      "50"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%",
+      "h"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-76337f9dacd0a345",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "0.91\n[225]",
+    "snippet": "T (◦C) =120 \nTime (h) = 3\nMethanol conversion \n(%) = 4.3 \nDMC yield (%)/mmol =\n3.74\n[245]\nMetal-Organic Frameworks (MOFs)\nBenzyl \nbromide \nand toluene\nMOF-5/SBA-15 SG 571 0.68 The hydrostability of \nMOF-5 increases \nsignificantly when it is \nenclosed.",
+    "numeric_spans": [
+      "120",
+      "3",
+      "4.3",
+      "3.74",
+      "5",
+      "15",
+      "571",
+      "0.68",
+      "5"
+    ],
+    "unit_spans": [
+      "◦C",
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-7dcc0f6dffc85952",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "3.74\n[245]",
+    "snippet": "Catalyst = 100 mg \nT (◦C) = 80 \nTime = 3 h\n100 % conversion [226]\nSoybean oil ZIF-90-Gua SG 830.4 0.42 The solid catalyst was \neasily recovered by \nfiltering and retained its \ncatalytic activity after five \nreuse cycles, indicating its \ngood reusability.",
+    "numeric_spans": [
+      "100",
+      "80",
+      "3",
+      "100",
+      "90",
+      "830.4",
+      "0.42"
+    ],
+    "unit_spans": [
+      "◦C",
+      "h\n1",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-83ea0310452d28e5",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "95.4\n[227]",
+    "snippet": "T (◦C) = 300 \nMass of catalyst (g) = 1 \nCO2 Conversion (%) =\n20\nCO2 Conversion (%) = 20  \nSelectivity (%) =\nCO = 20, CH4 = 41, C2- \nC4\n\u0000 = 34, C2-C4\n\u0000 - = 0, C5+\n= 5\n[247]\nCarbon \ndioxide\nZIF-8(a)(Zn)/ \nFe2O3\nSG 1900 0.89 The catalysts were \nreported to be stable \nenough under the selected \nreaction conditions.",
+    "numeric_spans": [
+      "300",
+      "1",
+      "20",
+      "20",
+      "20",
+      "41",
+      "34",
+      "0",
+      "5",
+      "8",
+      "1900",
+      "0.89"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fd27be8a62b9f667",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "3.74\n[245]",
+    "snippet": "Methanol/oil molar \nratio Time = 15:1 \nT (◦C) = 65 \nCatalyst amount = 1 wt \n%\nBiodiesel yield (%) =\n95.4\n[227]\nFurfural M-MOF-808 IWI 1313 – A slight decrease in \ncatalytic activity was \nobserved in the second \ncycle, with the conversion \nrate dropping from about \n75 % in the first cycle to \n64 % in the second cycle.",
+    "numeric_spans": [
+      "15",
+      "1",
+      "65",
+      "1",
+      "95.4",
+      "808",
+      "1313",
+      "about \n75",
+      "64"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "yield",
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-aecf9212f59ab30c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.85   \n0.56",
+    "snippet": "After six cycles, the \ngrafting procedure \nproduced Fe3O4@SBA- \n15-NH2-HPW with better \nreusability and a yield of \nmore than 80 % biodiesel.",
+    "numeric_spans": [
+      "15",
+      "80"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-df8e9d639cdcf08e",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.71  \n0.83",
+    "snippet": "The highest ethylene \nselectivity (84.70 %), \nand ethanol conversion \n(73.33 %) were achieved \nwith POC-SBA-15(5) at \n400 ◦C, 50 wt% ethanol \nfeed, and LHSV of 16 mL/ \ng/h.",
+    "numeric_spans": [
+      "84.70",
+      "73.33",
+      "15",
+      "5",
+      "400",
+      "50",
+      "16"
+    ],
+    "unit_spans": [
+      "%",
+      "◦C",
+      "V",
+      "h"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-0a79154f7d7a8572",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 24,
+    "section": "3.2. Environmental impacts and life cycle assessment (LCA) of different",
+    "snippet": "• - Harvesting: ~25–30 % of costs\nEfficient for algae-based biofuel, rapid productivity, \nsignificant biofuel in 3.5 h compared to other substrates\n[263]\nBiodiesel from Microalgae • Catalyst concentration impacts costs \n• 2 % KOH (optimum): $4.77/kg\n• In-situ transesterification: $9.92/kg\n• Enzymatic transesterification: $12.53/kg\n• Lipid content increase: costs decrease from $0.89 to $0.59 \nper litre\nCost-effective at optimal catalyst concentration, lipid \ncontent crucial for cost reduction\n[268]\nLipid Cane for Biodiesel\n• Biodiesel cost: $0.59 - $0.89/L for lipid (2–20 %), which is \ncheaper compared to soybean ($1.08/L)\n• Ethanol from lipid cane: $0.40 - $0.46/L\n• Soybean-based diesel: 15 % IRR\n• Lipid-cane diesel: 13.7 % - 24.0 % IRR\nLipid cane provides a cheaper alternative to soybeans, \npromising economic returns.",
+    "numeric_spans": [
+      "~25–30",
+      "3.5",
+      "2",
+      "4.77",
+      "9.92",
+      "12.53",
+      "0.89",
+      "0.59",
+      "0.59",
+      "0.89",
+      "2–20",
+      "1.08",
+      "0.40",
+      "0.46",
+      "15",
+      "13.7",
+      "24.0"
+    ],
+    "unit_spans": [
+      "%",
+      "h"
+    ],
+    "lexical_cues": [
+      "productivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d28cce459ecc44fd",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 24,
+    "section": "3.2. Environmental impacts and life cycle assessment (LCA) of different",
+    "snippet": "[269] \n[268]\nLow-cost Acid Oil Biodiesel • Catalysts: bulk CaO, nano-CaO\n• CaO: Better economic efficiency\n• Homogeneous catalyst impractical: high costs, larger \nreactor size\nBulk CaO catalyst offers the best economic performance; \nhomogeneous (enzyme) catalysts are too costly\n[264]\nAnaerobic Digestion (Vinasse) • Initial investment costs for digesters and treatment units\n• H2S removal cost: $20,797\n• Rate of return: 11 %\nSignificant initial investment, moderate return rate [270]\nBiogas and Biomethane • Net cost: $6.29 (biomethane), $4.68 (biogas)\n• Assumes 20-year lifespan, 11 % interest rate, 270 opera-\ntional days/year\nBiomethane production is more costly than biogas, and has \nsubstantial profit potential\n[273]\nFischer-Tropsch (FT) process • FT Net cost: $146/bbl, not comparable to:\n• Traditional fossil fuels: $115 - $206/bbl\nFischer-Tropsch synthesis faces competitiveness issues, but \nbreakeven is achievable with careful planning.",
+    "numeric_spans": [
+      "20,797",
+      "11",
+      "6.29",
+      "4.68",
+      "20",
+      "11",
+      "270",
+      "146",
+      "115",
+      "206"
+    ],
+    "unit_spans": [
+      "k",
+      "S",
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-815793f51019677f",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 3,
+    "snippet": "As of April 2025, \n23 publications have been recorded; extrapolating based on the average \nmonthly publication rate suggests that approximately 65–75 papers \ncould be published by the end of the year.",
+    "numeric_spans": [
+      "2025",
+      "23",
+      "approximately 65–75"
+    ],
+    "unit_spans": [
+      "ag"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-45b63870f27cf65c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "Consequently, the conversion of methanol to \naromatics resulted in a higher yield of aromatics when hierarchical Zn/ \nZSM-5 was treated with 0.2 M NaOH.",
+    "numeric_spans": [
+      "5",
+      "0.2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-479ef15f827b4194",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "[84] explored various \nzeolite catalysts (HZSM-5, NaZSM-5, HY, ReY) for biomass conversion \ninto aromatic compounds, with HZSM-5 showing the highest activity.",
+    "numeric_spans": [
+      "5",
+      "5",
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-943ab976dbabb697",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "Lower NaOH concentrations \n(≤0.4) had a remarkable effect on the catalytic activity, namely on the \nlifespan of hierarchical HZSM-5 and its selectivity towards BTX in the \naromatisation of glycerol [88].",
+    "numeric_spans": [
+      "≤0.4",
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-f0783ae0e0dcb784",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "[82] evaluated hierarchical Co/ \nHZSM-5 and Fe/HZSM-5 for bioethanol conversion into fuel blend-\nstocks and petrochemicals, achieving over 97 % bioethanol conversion.",
+    "numeric_spans": [
+      "5",
+      "5",
+      "97"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-f08063ad91861edb",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "[83] \nfound that catalytic conversion of acetone, butanol, and ethanol using 2 \n% Ni/HBET led to excessive ether formation, reducing bio-jet fuel \nquality and selectivity.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-58fcf1408da8b200",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 12,
+    "snippet": "In addition, the combination of ZnZrOx and \nHZSM-5 achieved 74.7 % selectivity for aromatic compounds [143].",
+    "numeric_spans": [
+      "5",
+      "74.7"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fa45eeb9b3d17161",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 13,
+    "snippet": "EXAFS analysis confirmed single- \natom dispersion, and the resulting Rh-SACs demonstrated excellent \nperformance in nitric oxide reduction using hydrogen, achieving 87 % \nselectivity for N₂ at 220 ◦C and 97 % at 300 ◦C.",
+    "numeric_spans": [
+      "87",
+      "220",
+      "97",
+      "300"
+    ],
+    "unit_spans": [
+      "%",
+      "◦C"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-0bc96754db2fa8e4",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "Among these, [EMIM][DEP] produced the highest yield of \nreducing sugars, approximately 50 % after a 1-h pretreatment at 100 ◦C.",
+    "numeric_spans": [
+      "approximately 50",
+      "1",
+      "100"
+    ],
+    "unit_spans": [
+      "%",
+      "h",
+      "◦C"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-8fa1b0aaee57116b",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "The highest \nyields reported were 83 % for fructose and 70 % for glucose.",
+    "numeric_spans": [
+      "83",
+      "70"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-befcc50446c46030",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "(2020) reported that rice straw could be converted into LA via a \none-pot reaction using an acidic IL, [C3SO3HMIM]HSO4, at 180 ◦C for \n30 min, achieving a yield of 21 %.",
+    "numeric_spans": [
+      "2020",
+      "180",
+      "30",
+      "21"
+    ],
+    "unit_spans": [
+      "◦C",
+      "min",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d920e3468f3640db",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "snippet": "At 160 ◦C and 0.1 % sulfuric acid, the Co- \nSACs achieved a monophenol yield of 41.7 %, further validating their \npotential in biomass valorization processes.",
+    "numeric_spans": [
+      "160",
+      "0.1",
+      "41.7"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-c40a6de01ed89b51",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 16,
+    "section": "2.3. Feedstock–catalyst–process compatibility",
+    "snippet": "Application Area Catalytic System Simulation Details Key Findings Benefits Limitations Reference\nHydrocarbon \nconfiguration \nanalysis\nCu@4A zeolite \nnanocatalyst\nMD with energy \nminimization, NPT/ \nNVT ensembles\nC₃H₆ density peak dropped by \n68.3 % at 300◦C; interaction \nenergy decreases with \ntemperature\nClarified catalytic \nmechanism and \nthermal behaviour\nHigh reaction \ntemperature and limited \nhydrocarbon recovery\n[182]\nHydrocarbon \ncracking\nAmorphous silica, \nhydrated amorphous \nsilica, amorphous \naluminosilicate\nReaxFF; T =\n1477–1677◦C, P =\n4–7MPa\nHydrocarbon cracking via \nC–C scission and radical \nformation; yields H₂ and \nhydrocarbons.",
+    "numeric_spans": [
+      "68.3",
+      "300",
+      "1477–1677",
+      "4"
+    ],
+    "unit_spans": [
+      "k",
+      "%",
+      "◦C",
+      "Pa"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-37c5e0c8dcdd59df",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 17,
+    "snippet": "Similarly, mesoporous catalysts such as Ni–Mo/ \nMCM-41 and Fe3O4@SBA-15@HPW have shown sustained activity and \nlongevity, providing effective and sustainable options for syngas and \nbiodiesel conversion [228,229].",
+    "numeric_spans": [
+      "41",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-d76bd251f96f06e5",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 17,
+    "snippet": "As summarised in \nTable 6, supported zeolite catalysts, including NiMo/zeolite and HZSM- \n5, show exceptional hydrothermal stability and high selectivity for ar-\nomatic hydrocarbons when used with palm oil and microalgae as feed-\nstock, respectively [220,221].",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [
+      "k"
+    ],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fdf6b65ad1586828",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 17,
+    "snippet": "In liquid-phase conversion, MOF catalysts such as MOF-5/SBA-15 and \nZIF-90-Gua exhibit excellent stability and high product yields, prom-\nising candidates for producing biodiesel and chemicals from oils and \nalcohols [226,227].",
+    "numeric_spans": [
+      "5",
+      "15",
+      "90"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-86697f199fd54a65",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 18,
+    "section": "35.22 MJ/kg",
+    "snippet": "[234]\nHeterogeneous-based catalysts \n(Fe/Ni /ZSM-5)\nBiomass (Chinese \nherb residue)/bio- \noil\n320 ◦C, inert atmosphere for 10 min High heat value (29.39 MJ/kg) and bio-oil yield (24.7 %) \nwith reduced oxygenation and aliphatic compounds in the \nbio-oil with yield of 73 %\nHigh recyclability potential of Fe-ZSM-5 recommended \nfor industrial application\n[235]\nPilot scale Heterogeneous acid catalyst \n(CoMo and NiMo/Al2O3)\nBiomass /Jet fuel 350–450 ◦C \n3- 6 MPa, 100 h\nHigh yield of 30–75 % and moderate cost Ni-W/SiO2-Al20 has the potential for upscaling bio-jet \nfuel systems\n[236]\nNi/Cu/TiO2 Glycerol/Proylene \nglycol\n20 % wt.",
+    "numeric_spans": [
+      "5",
+      "320",
+      "10",
+      "29.39",
+      "24.7",
+      "73",
+      "5",
+      "350–450",
+      "3- 6",
+      "100",
+      "30–75",
+      "0",
+      "20"
+    ],
+    "unit_spans": [
+      "◦C",
+      "min",
+      "%",
+      "Pa",
+      "h"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-88b549d9a33fe4b5",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 18,
+    "section": "35.22 MJ/kg",
+    "snippet": "glycerol concentration, \n200 ◦C–250 ◦C, and 3.5 MPa\n83 % conversion with 7 % reduction of total cost and 71 % \nCO2 emission reduction\nWith low cost and potential for next-generation bio- \nrefineries.",
+    "numeric_spans": [
+      "200",
+      "250",
+      "3.5",
+      "83",
+      "7",
+      "71"
+    ],
+    "unit_spans": [
+      "◦C",
+      "Pa",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-4c2bc98036bd96fc",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "T (◦C) = 300–320 \nTime (h) = 1, 1.5, 2 \nReactor = BR\n% Yield of biogasoline =\n11.93 %\n[220]\nChlorella \nvulgaris\nHZSM-5 – 425 – – Fixed-bed reactor at 510 \n± 5 ◦C.",
+    "numeric_spans": [
+      "300–320",
+      "1",
+      "1.5",
+      "2",
+      "11.93",
+      "5 – 425",
+      "510",
+      "5"
+    ],
+    "unit_spans": [
+      "◦C",
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-86aeb840fc5dd147",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "When the catalyst \nconcentration increased \nfrom 0 to 9 times the \nbiomass, the yield of \naromatic hydrocarbons \nincreased from 0.9 wt% \nto 25.8 wt%.",
+    "numeric_spans": [
+      "0",
+      "9",
+      "0.9",
+      "25.8"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-f9dae5ab86f46cba",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "Complete conversion of \nPO was still possible, and \nthe catalyst experienced at \nleast a 10 % change in PC \nand DMC yield after eight \nrecycling cycles.",
+    "numeric_spans": [
+      "10"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a214be05ad63d502",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 21,
+    "section": "95.4\n[227]",
+    "snippet": "During the following \ncatalytic cycles, the \nconversion rate remained \nconstant at around 64 %.",
+    "numeric_spans": [
+      "64"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1593d622e737e11c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.71  \n0.83",
+    "snippet": "At 400 ◦C and 50 % \nethanol feed, the \ncatalytic activity for \nethanol dehydration was \ngraded as follows: SBA- \n15(Comm.) < POC-SBA- \n15(3) < POC-SBA-15(7) \n< POC-SBA-15(5).",
+    "numeric_spans": [
+      "400",
+      "50",
+      "15",
+      "15",
+      "3",
+      "15",
+      "7",
+      "15",
+      "5"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5de3c1d94378240e",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.85   \n0.56",
+    "snippet": "[229]\nEthanol SBA-15 \n(Commercial)  \nPOC-SBA-15(3)  \nPOC-SBA-15(5)  \nPOC-SBA-15(7)\nSG   \nSG  \nSG  \nSG\n486   \n508  \n537  \n642\n0.59   \n0.63  \n0.71  \n0.83\nThe coking deactivation \nled to a slight reduction in \nthe catalytic activity of the \nfresh POC-SBA-15(5) \ncatalyst after 105 h.",
+    "numeric_spans": [
+      "15",
+      "15",
+      "3",
+      "15",
+      "5",
+      "15",
+      "7",
+      "486",
+      "508",
+      "537",
+      "642",
+      "0.59",
+      "0.63",
+      "0.71",
+      "0.83",
+      "15",
+      "5",
+      "105"
+    ],
+    "unit_spans": [
+      "h"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-c33305246fc491d5",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.85   \n0.56",
+    "snippet": "Fe3O4@SBA-15-NH2- \nHPW exhibited higher \ncatalytic activity than \nFe3O4@SBA-15@HPW.",
+    "numeric_spans": [
+      "15",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-c89e9a152ad160a2",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.71  \n0.83",
+    "snippet": "A maximum oil \nconversion of 93.5 % was \nachieved with a \nmethanol/oil molar ratio \nof 15:1, a catalyst \namount of 8 wt%, and a \nreaction time of 15 h.",
+    "numeric_spans": [
+      "93.5",
+      "15",
+      "1",
+      "8",
+      "15"
+    ],
+    "unit_spans": [
+      "%",
+      "h"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5d64d1910c4f183c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 26,
+    "section": "4.1. Challenges of heterogeneous catalysis",
+    "snippet": "A \nstudy done at calcined temperatures between 600 and 700 ◦C of zirconia \n(ZrO2), improved biodiesel yield from 77 % to 88 %, whereby at 800 ◦C \nthe yield reduced to 60 % [296].",
+    "numeric_spans": [
+      "600",
+      "700",
+      "77",
+      "88",
+      "800",
+      "60"
+    ],
+    "unit_spans": [
+      "◦C",
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-2e6d6c07a8b9f060",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 27,
+    "section": "4.2. Current perspective and prospects of heterogeneous catalysis",
+    "snippet": "[306] reported novel \ncarbon-supported Sn electrocatalysts with a tin size ranging from single \natoms to ultrasmall clusters to nanocrystallites for the conversion of CO2 \nto acetate, ethanol, and formate with a selectivity of over 90 % for each \nof these chemicals.",
+    "numeric_spans": [
+      "90"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b4e779491f11baff",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 30,
+    "snippet": "De Vos, \nProbing the Lewis acidity and catalytic activity of the metal–organic framework \n[Cu3 (btc) 2](BTC= Benzene-1, 3, 5-tricarboxylate), Chemistry 12 (28) (2006) \n7353–7363.",
+    "numeric_spans": [
+      "1",
+      "3",
+      "5",
+      "12",
+      "28",
+      "2006",
+      "7353–7363"
+    ],
+    "unit_spans": [
+      "k"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-19e8b1b60c7b51c1",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Saffron, \nComparative life cycle assessment of corn Stover conversion by decentralized \nbiomass pyrolysis-electrocatalytic hydrogenation versus ethanol fermentation, \nSustainable Energy Fuels 7 (3) (2023) 797–811.",
+    "numeric_spans": [
+      "7",
+      "3",
+      "2023",
+      "797–811"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-acd7100d3c94a3fc",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Melero, Sustainable Catalytic Conversion of Biomass \nfor the Production of Biofuels and Bioproducts 10, MDPI, 2020, p.",
+    "numeric_spans": [
+      "10",
+      "2020"
+    ],
+    "unit_spans": [
+      "s 1"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e1e588fa678097cb",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "Hierarchical ZSM-5 treated with Na2CO3 (0.6 M) exhibited increased \nselectivity towards BTX (benzene, toluene, and xylenes), which reduced \nthe amount of polyaromatic hydrocarbons produced.",
+    "numeric_spans": [
+      "5",
+      "0.6"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ed312e0630f9046d",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "After desilicating hierarchical HZSM-5 with 0.3 M NaOH [87], the car-\nbon yield of BTX had increased, and the micropores and mesopores \nformed had been preserved.",
+    "numeric_spans": [
+      "5",
+      "0.3"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-5e881d0089dea0f8",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 9,
+    "snippet": "Research shows that hierarchical zeo-\nlites, like ZSM-5, significantly improve desired product yields while \nreducing by-products like coke during reactions.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e3153291eb8f34bb",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 10,
+    "section": "2.1.2. Carbon materials",
+    "snippet": "Another example of a \nmultifunctional catalyst is tungsten carbide nanoparticles on three- \ndimensional mesoporous carbon (MC), which achieve an efficiency of \n72.9 % in the direct conversion of cellulose to ethylene glycol [102].",
+    "numeric_spans": [
+      "72.9"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-3c7dc453d0545675",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "Given the high oxygen content in lignocel-\nlulosic biomass, approximately 40–45 %, partial deoxygenation is \nnecessary, typically through the release of CO₂ and H₂O, to facilitate the \nsubsequent conversion of biomass into liquid biofuels.",
+    "numeric_spans": [
+      "approximately 40–45"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-58bf5d8af288a99c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "snippet": "The \nprocess achieved a high monophenol yield and nearly complete \ndelignification (>99 %).",
+    "numeric_spans": [
+      ">99"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ae9586afdeb12426",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 16,
+    "snippet": "Demonstration-scale initiatives such as those undertaken by the Na-\ntional Renewable Energy Laboratory (NREL) and the IEA Bioenergy Task \n39 have revealed critical performance criteria such as catalyst deacti-\nvation rates, regeneration intervals, tolerance to feedstock variability, \nand compatibility with continuous processing systems [196–198].",
+    "numeric_spans": [
+      "39"
+    ],
+    "unit_spans": [
+      "k"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-64923383ae1566ba",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 19,
+    "section": "3.1. Economic evaluation of different biomass conversion methods for",
+    "snippet": "Their \neconomic evaluation revealed a return on investment of 15.8 %, \naffirming the economic viability and sustainability of waste biomass \nconversion.",
+    "numeric_spans": [
+      "15.8"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-073f4225edb702f3",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "Nitrogen flow rate of 30 \nmL/min.",
+    "numeric_spans": [
+      "30"
+    ],
+    "unit_spans": [
+      "min"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-27af32a1a7d972a9",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "snippet": "[221]\nMethanol KOH/4 A \nmolecular sieve\nIWI – – The catalyst showed a \nsustained high selectivity \ntowards DMC and the \nconversion of PO even \nafter multiple uses.",
+    "numeric_spans": [
+      "4"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-5973b3618e46dbd6",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.85   \n0.56",
+    "snippet": "The yield of biodiesel \nreached over 91 %.",
+    "numeric_spans": [
+      "91"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-6b04c78ffb2a4184",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 22,
+    "section": "0.71  \n0.83",
+    "snippet": "The conversion of \nsoybean oil increased \nwith increasing DCOG \nloading up to a DCOG/ \nSBA-15 ratio of 5:2 (g/g).",
+    "numeric_spans": [
+      "15",
+      "5",
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-d3d33a4ab6c40894",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 28,
+    "section": "4.0 (report); CC BY NC SA 4.0 (Annex A). Accessed: May 5, 2024. [Online].",
+    "snippet": "Zhang, et al., Enabling heterogeneous catalysis to achieve carbon neutrality: \ndirectional catalytic conversion of CO2 into carboxylic acids, Carbon Energy 6 (3) \n(2024) e362.",
+    "numeric_spans": [
+      "6",
+      "3",
+      "2024",
+      "62"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-af8ca7ba4ebc13ad",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 29,
+    "snippet": "He, et al., Catalytic conversion of pure glycerol over an un-modified H-ZSM-5 \nzeolite to bio-based aromatics, Appl.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [
+      "H"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-f49024d798031675",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 29,
+    "snippet": "Soto-Moscoso, The \nconversion of biomass to fuels via cutting-edge technologies: explorations from \nnatural utilization systems, Fuel 331 (2023) 125668.",
+    "numeric_spans": [
+      "331",
+      "2023",
+      "125668"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-189031bac6e7b3a4",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 31,
+    "snippet": "Boopathy, The \nperformance of 1, 3-dipropyl-2-(2-propoxyphenyl)-4, 5-diphenylimidazolium \niodide based ionic liquid for biomass conversion into levulinic acid and formic \nacid, Bioresour.",
+    "numeric_spans": [
+      "1",
+      "3",
+      "2",
+      "2",
+      "-4",
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-9a086e1caa58dc5a",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 32,
+    "snippet": "Kim, Biomass into chemicals: green chemical \nconversion of carbohydrates into 5-hydroxymethylfurfural in ionic liquids, RSC \nAdv.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [
+      "v"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ae6403cd0cac91e1",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 32,
+    "snippet": "Yang, Enhanced \naromatic yield from WEEE via ex situ catalytic pyrolysis: a comparative study of \nHZSM-5, Fe/HZSM-5, and CaO catalysts in single and dual modes, ACS Sustain.",
+    "numeric_spans": [
+      "5",
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-35af5da2cc205b4c",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Joseph, Techno-economic analysis of producing liquid fuels \nfrom biomass via anaerobic digestion and thermochemical conversion, Biomass \nBioenergy 130 (2019) 105395.",
+    "numeric_spans": [
+      "130",
+      "2019",
+      "105395"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ae2d03afc032d770",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Sun, et al., Life-cycle assessment of biofuel production from microalgae via \nvarious bioenergy conversion systems, Energy 171 (2019) 1033–1045.",
+    "numeric_spans": [
+      "171",
+      "2019",
+      "1033–1045"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-0a68795818705a9d",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 3,
+    "snippet": "After \n2019, research activity rebounded strongly, reflecting renewed inter-\nnational commitment to sustainable energy transitions.",
+    "numeric_spans": [
+      "2019"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-522da9734e64366d",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 6,
+    "section": "1.2.2.1. Biomass as a source of clean energy. Biomass, which includes",
+    "snippet": "4\nshows some common biomass-to-energy conversion technologies and \ntheir derivatives.",
+    "numeric_spans": [
+      "4"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-046469f9e3fbf93a",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "[81] showed that MgO-loaded hierarchical \nHZSM-5 produced bio-oil with higher energy yields and lower oxygen \ncontent.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-378f16efa25577b6",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 8,
+    "snippet": "After the treatment \nof hierarchical HZSM-5 with NaOH solution, the yield and physical \nproperties of the organic phase were improved, and a significant \nreduction in coke formation on the catalyst surface was observed [86].",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-67193174d93e1a93",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 12,
+    "snippet": "Zeolite catalysts such as \nHZSM-5 are known for their strong acidity and shape selectivity, facil-\nitating the production of lower olefins and aromatic compounds.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-be2bafce44b44bd3",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "10, ILs enhance the efficiency of monosaccharide-to-HMF con-\nversion, improve product selectivity, and facilitate recovery.",
+    "numeric_spans": [
+      "10"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e1a3a264e08987c4",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 14,
+    "section": "2.1.6.2. Ionic liquid-based catalysts in biomass volarisation. To date,",
+    "snippet": "Hydroxymethylfurfural (5-HMF) has gained significant attention as a \nversatile platform chemical, primarily due to its potential for conversion \ninto various biofuel precursors and value-added chemicals.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-510de287c8eee280",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 17,
+    "snippet": "In addition, hierarchical zeolites produced by desilication (e.g., ZSM- \n5, Hβ) have been shown to provide consistent aromatic yields and su-\nperior thermal stability, even over multiple regeneration cycles, an \nessential property for lignocellulosic biomass such as beechwood and \nkraft lignin [222,223].",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-2d25e0df9bd74e1e",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 20,
+    "section": "406.8 0.058 The results also show that",
+    "snippet": "CTF =10 The study shows that the \naromatic yield of both \nthe parent zeolites and \nthe desilicated zeolites \ndid not change \nsignificantly throughout \nthe three regeneration \ncycles.",
+    "numeric_spans": [
+      "10"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "yield"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-82c6aa7972b8ecc8",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 24,
+    "section": "3.2. Environmental impacts and life cycle assessment (LCA) of different",
+    "snippet": "[271]\nThermochemical conversion and \nanaerobic digestion process\n• Breakeven cost of diesel via anaerobic digestion and \nthermochemical conversion: $1.30/L of diesel\nThermochemical conversion methods for transforming \nbiomass into fuel are considered promising integrated \nsolutions.",
+    "numeric_spans": [
+      "1.30"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-8d5b5ec2ecaa3c0f",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 24,
+    "section": "3.2. Environmental impacts and life cycle assessment (LCA) of different",
+    "snippet": "Pyrolysis gave the maximum NER of 2.45 among \nTable 7 \nEconomic evaluation of different biomass conversion methods (summary).",
+    "numeric_spans": [
+      "2.45"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-4d840e5633f48b0b",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 29,
+    "snippet": "Isa, Catalytic conversion of bioethanol over \ncobalt and nickel-doped HZSM-5 zeolite catalysts, Biofuels Bioprod.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ec7741b8c3eff074",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 29,
+    "snippet": "Wang, A critical review of recent advances in the \nproduction of furfural and 5-hydroxymethylfurfural from lignocellulosic biomass \nthrough homogeneous catalytic hydrothermal conversion, Renew.",
+    "numeric_spans": [
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-383c59f2603efa98",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Brown, Introduction to thermochemical processing of biomass into \nfuels, chemicals, and power, in: Thermochemical Processing of Biomass: \nConversion into Fuels, Chemicals and Power, 2019, pp.",
+    "numeric_spans": [
+      "2019"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-8ed878fc15dac145",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 33,
+    "snippet": "Changez, Conversion of CO2 into Energy-dense Chemicals and \nthe Commercialization Using Two-dimensional Nanomaterials as Catalysts, 2022.",
+    "numeric_spans": [
+      "2022"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-6d8ffc593ab21ae4",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "page": 12,
+    "snippet": "Na-Fe₃O₄/HZSM-5, for example, showed a 73 % selectivity to-\nwards C5–C11 hydrocarbons, including 40 % aromatics, at a CO₂ con-\nversion rate of 33.6 % [142].",
+    "numeric_spans": [
+      "5",
+      "73",
+      "1",
+      "40",
+      "33.6"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "product_selectivity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 2,
+    "priority": "low"
+  }
+]

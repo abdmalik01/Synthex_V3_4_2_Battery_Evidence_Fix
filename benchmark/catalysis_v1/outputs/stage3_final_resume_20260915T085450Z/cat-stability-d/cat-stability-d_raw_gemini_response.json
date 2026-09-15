@@ -1,0 +1,603 @@
+{
+  "source": {
+    "title": "Improving CO Oxidation Catalysis Over High Entropy Spinels by Increasing Disorder",
+    "doi": "10.1002/advs.202413424",
+    "url": "https://doi.org/10.1002/advs.202413424",
+    "year": 2025,
+    "authors": [
+      "Joshua D. Swindell",
+      "Gareth R.M. Tainton",
+      "Sarayute Chansai",
+      "Kerry Hazeldine",
+      "Mark A. Buckingham",
+      "Alex S. Walton",
+      "Christopher Hardacre",
+      "Sarah J. Haigh",
+      "David J. Lewis"
+    ],
+    "pdf_text_parser": "pypdf"
+  },
+  "paper_types": [
+    "catalyst_synthesis",
+    "catalyst_characterization",
+    "heterogeneous_catalysis",
+    "stability_deactivation"
+  ],
+  "scope_status": "supported",
+  "catalysts": [
+    {
+      "local_id": "cat_4metal",
+      "reported_name": "4-metal",
+      "reported_formula": "(CrMnFeCo)3O4",
+      "state": "as_synthesized",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_5metal",
+      "reported_name": "5-metal",
+      "reported_formula": "(CrMnFeCoNi)3O4",
+      "state": "as_synthesized",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_6metal",
+      "reported_name": "6-metal",
+      "reported_formula": "(CrMnFeCoNiCu)3O4",
+      "state": "as_synthesized",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_7metal",
+      "reported_name": "7-metal",
+      "reported_formula": "(CrMnFeCoNiCuZn)3O4",
+      "state": "as_synthesized",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_fe3o4",
+      "reported_name": "commercially sourced Fe3O4",
+      "reported_formula": "Fe3O4",
+      "state": "as_synthesized",
+      "ownership": "comparison_table"
+    }
+  ],
+  "preparations": [
+    {
+      "preparation_id": "prep_heso",
+      "name": "Solventless thermolysis",
+      "ownership": "focal_work",
+      "steps": [
+        {
+          "step": "mixing",
+          "details": "equimolar amounts of transition metal diethyldithiocarbamate precursors dissolved in dichloromethane",
+          "solvents": [
+            "dichloromethane"
+          ],
+          "evidence": [
+            {
+              "page": 9,
+              "section": "HE Spinel Oxide Synthesis",
+              "text_snippet": "equimolar amounts (0.1 mmol per precursor) of transition metal diethyldithiocarbamate precursors, M(S2CNEt2)x (where M = Cr, Mn, Fe, Co, Ni, Cu, Zn and x = 2 or 3), were dissolved in a minimum volume of dichloromethane.",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "step": "drying",
+          "details": "solvent allowed to evaporate leaving a powder of mixed precursors",
+          "evidence": [
+            {
+              "page": 9,
+              "section": "HE Spinel Oxide Synthesis",
+              "text_snippet": "The solvent was allowed to evaporate, leaving a powder of mixed precursors.",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "step": "calcination",
+          "details": "heated to 900 °C at 15 °C min-1 ramp rate in static air and held for 4 h",
+          "temperature": {
+            "raw_value": "900°C",
+            "value": 900.0,
+            "unit": "°C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "4 h",
+            "value": 4.0,
+            "unit": "h",
+            "qualifier": "exact"
+          },
+          "atmosphere": "static air",
+          "evidence": [
+            {
+              "page": 9,
+              "section": "HE Spinel Oxide Synthesis",
+              "text_snippet": "This powder was transferred to a ceramic boat in a hot-walled box furnace and heated to 900°C( 1 5°Cm i n−1 ramp rate) whilst exposed to static air, then held for 4 h unless stated otherwise.",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "heterogeneous_experiments": [
+    {
+      "experiment_id": "exp_co_ox_4metal",
+      "catalyst_ref": "cat_4metal",
+      "reaction": {
+        "reported_reaction": "CO oxidation",
+        "reaction_class": "co_oxidation",
+        "reactants": [
+          {
+            "reported_name": "CO",
+            "formula": "CO"
+          },
+          {
+            "reported_name": "O2",
+            "formula": "O2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          }
+        ]
+      },
+      "reactor_type": "quartz tubular reactor",
+      "catalyst_mass": {
+        "raw_value": "≈35mg",
+        "value": 35.0,
+        "unit": "mg",
+        "qualifier": "approx"
+      },
+      "feed_composition": [
+        {
+          "species": "CO",
+          "fraction": {
+            "raw_value": "1 vol.%",
+            "value": 1.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "O2",
+          "fraction": {
+            "raw_value": "5 vol.%",
+            "value": 5.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "Ar",
+          "fraction": {
+            "raw_value": "balance",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min−1",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "conversion",
+          "raw_value": "10% CO oxidation",
+          "value": 10.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO",
+          "conditions": {
+            "temperature": "454°C"
+          },
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Catalytic Testing",
+              "text_snippet": "The 7-metal HESO showed a T10 value of 168 °C, which was 63% lower than the 4-metal MESO (at 454°C)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp_co_ox_5metal",
+      "catalyst_ref": "cat_5metal",
+      "reaction": {
+        "reported_reaction": "CO oxidation",
+        "reaction_class": "co_oxidation",
+        "reactants": [
+          {
+            "reported_name": "CO",
+            "formula": "CO"
+          },
+          {
+            "reported_name": "O2",
+            "formula": "O2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          }
+        ]
+      },
+      "reactor_type": "quartz tubular reactor",
+      "catalyst_mass": {
+        "raw_value": "≈35mg",
+        "value": 35.0,
+        "unit": "mg",
+        "qualifier": "approx"
+      },
+      "feed_composition": [
+        {
+          "species": "CO",
+          "fraction": {
+            "raw_value": "1 vol.%",
+            "value": 1.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "O2",
+          "fraction": {
+            "raw_value": "5 vol.%",
+            "value": 5.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "Ar",
+          "fraction": {
+            "raw_value": "balance",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min−1",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "conversion",
+          "raw_value": "50% CO conversion",
+          "value": 50.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO",
+          "conditions": {
+            "temperature": "569 °C"
+          },
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Catalytic Testing",
+              "text_snippet": "and a T50 value of 250°C, which was 56% lower than the 5-metal HESO (at 569 °C).",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp_co_ox_7metal",
+      "catalyst_ref": "cat_7metal",
+      "reaction": {
+        "reported_reaction": "CO oxidation",
+        "reaction_class": "co_oxidation",
+        "reactants": [
+          {
+            "reported_name": "CO",
+            "formula": "CO"
+          },
+          {
+            "reported_name": "O2",
+            "formula": "O2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          }
+        ]
+      },
+      "reactor_type": "quartz tubular reactor",
+      "catalyst_mass": {
+        "raw_value": "≈35mg",
+        "value": 35.0,
+        "unit": "mg",
+        "qualifier": "approx"
+      },
+      "feed_composition": [
+        {
+          "species": "CO",
+          "fraction": {
+            "raw_value": "1 vol.%",
+            "value": 1.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "O2",
+          "fraction": {
+            "raw_value": "5 vol.%",
+            "value": 5.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "Ar",
+          "fraction": {
+            "raw_value": "balance",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min−1",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "conversion",
+          "raw_value": "10% CO oxidation",
+          "value": 10.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO",
+          "conditions": {
+            "temperature": "168 °C"
+          },
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Catalytic Testing",
+              "text_snippet": "The 7-metal HESO showed a T10 value of 168 °C, which was 63% lower than the 4-metal MESO (at 454°C)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "conversion",
+          "raw_value": "50% CO conversion",
+          "value": 50.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO",
+          "conditions": {
+            "temperature": "250°C"
+          },
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Catalytic Testing",
+              "text_snippet": "and a T50 value of 250°C, which was 56% lower than the 5-metal HESO (at 569 °C).",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp_co_ox_fe3o4",
+      "catalyst_ref": "cat_fe3o4",
+      "reaction": {
+        "reported_reaction": "CO oxidation",
+        "reaction_class": "co_oxidation",
+        "reactants": [
+          {
+            "reported_name": "CO",
+            "formula": "CO"
+          },
+          {
+            "reported_name": "O2",
+            "formula": "O2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          }
+        ]
+      },
+      "reactor_type": "quartz tubular reactor",
+      "catalyst_mass": {
+        "raw_value": "≈35mg",
+        "value": 35.0,
+        "unit": "mg",
+        "qualifier": "approx"
+      },
+      "feed_composition": [
+        {
+          "species": "CO",
+          "fraction": {
+            "raw_value": "1 vol.%",
+            "value": 1.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "O2",
+          "fraction": {
+            "raw_value": "5 vol.%",
+            "value": 5.0,
+            "unit": "vol.%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "Ar",
+          "fraction": {
+            "raw_value": "balance",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min−1",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "conversion",
+          "raw_value": "50% CO conversion",
+          "value": 50.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO",
+          "conditions": {
+            "temperature": "371°C"
+          },
+          "evidence": [
+            {
+              "page": 7,
+              "section": "Catalytic Testing",
+              "text_snippet": "The activity of commercially sourced Fe3O4 was also evaluated as a comparison and was found to have an intermediate T50 of 371°C.",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stability_tests": [
+    {
+      "stability_id": "stab_4metal",
+      "experiment_ref": "exp_co_ox_4metal",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "14 h",
+        "value": 14.0,
+        "unit": "h",
+        "qualifier": "exact"
+      },
+      "operating_temperature": {
+        "raw_value": "647°C",
+        "value": 647.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "conversion_loss": {
+        "raw_value": "12.2% ± 0.4%",
+        "value": 12.2,
+        "unit": "%",
+        "qualifier": "exact"
+      },
+      "evidence": [
+        {
+          "page": 8,
+          "section": "Catalytic Testing",
+          "text_snippet": "Overall, the 4-metal spinel oxide degraded more during the stability test compared to the 7-metal spinel oxide (4.7% ± 0.3% versus 12.2% ± 0.4% decrease in activity, respectively).",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    },
+    {
+      "stability_id": "stab_7metal",
+      "experiment_ref": "exp_co_ox_7metal",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "14 h",
+        "value": 14.0,
+        "unit": "h",
+        "qualifier": "exact"
+      },
+      "operating_temperature": {
+        "raw_value": "208°C",
+        "value": 208.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "conversion_loss": {
+        "raw_value": "4.7% ± 0.3%",
+        "value": 4.7,
+        "unit": "%",
+        "qualifier": "exact"
+      },
+      "evidence": [
+        {
+          "page": 8,
+          "section": "Catalytic Testing",
+          "text_snippet": "Overall, the 4-metal spinel oxide degraded more during the stability test compared to the 7-metal spinel oxide (4.7% ± 0.3% versus 12.2% ± 0.4% decrease in activity, respectively).",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+            }
+          ]
+    },
+    {
+      "stability_id": "stab_fe3o4",
+      "experiment_ref": "exp_co_ox_fe3o4",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "14 h",
+        "value": 14.0,
+        "unit": "h",
+        "qualifier": "exact"
+      },
+      "operating_temperature": {
+        "raw_value": "331 0C",
+        "value": 331.0,
+        "unit": "°C",
+        "qualifier": "exact"
+      },
+      "conversion_loss": {
+        "raw_value": "3.6%± 0.3%",
+        "value": 3.6,
+        "unit": "%",
+        "qualifier": "exact"
+      },
+      "evidence": [
+        {
+          "page": 9,
+          "section": "Catalytic Testing",
+          "text_snippet": "The decrease in catalytic activity (3.6%± 0.3%) was comparable to the 7-metal spinel oxide.",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    }
+  ]
+}

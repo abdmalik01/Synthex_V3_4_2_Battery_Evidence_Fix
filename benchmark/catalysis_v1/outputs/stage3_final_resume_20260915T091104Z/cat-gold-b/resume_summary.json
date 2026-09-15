@@ -1,0 +1,4229 @@
+{
+  "run_at": "2026-09-15T09:15:06.397682+00:00",
+  "model": "gemini-3.5-flash",
+  "serper_enabled": false,
+  "temperature": 0,
+  "seed": 0,
+  "results": [
+    {
+      "benchmark_id": "CAT-GOLD-B",
+      "filename": "s41467-020-17690-8.pdf",
+      "route": {
+        "domain": "catalysis",
+        "confidence": 0.915,
+        "paper_types": [
+          "electrocatalysis",
+          "computational_dft",
+          "heterogeneous_catalysis",
+          "catalyst_characterization",
+          "review",
+          "stability_deactivation"
+        ],
+        "scope_status": "supported",
+        "ambiguity_reason": null
+      },
+      "route_correct": true,
+      "scope_correct": true,
+      "subtypes_correct": true,
+      "source_context": {
+        "source_id": "src-3626736bc803a292",
+        "filename": "s41467-020-17690-8.pdf",
+        "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+        "primary_native_parser": "pypdf",
+        "page_parsers": [
+          {
+            "page": 1,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 2,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 3,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 4,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 5,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 6,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 7,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 8,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 9,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 10,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          }
+        ],
+        "tables_detected": 0,
+        "figures_detected": 13,
+        "ocr_pages_used": [],
+        "digitizations_available": 0,
+        "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-gold-b\\sidecars\\visual\\src-3626736bc803a292\\visual_document.json"
+      },
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "schema_valid_first_response": true,
+      "schema_valid_repaired_response": false,
+      "persistent_failure": false,
+      "provider": {
+        "mode": "benchmark",
+        "requested_model": "gemini-3.5-flash",
+        "actual_model": "gemini-3.5-flash",
+        "configured_model_order": [
+          "gemini-3.5-flash"
+        ],
+        "models_attempted": [
+          "gemini-3.5-flash"
+        ],
+        "fallback_occurred": false,
+        "attempts": [
+          {
+            "order": 1,
+            "model": "gemini-3.5-flash",
+            "phase": "primary",
+            "status": "succeeded",
+            "failure_class": null,
+            "provider_message": null,
+            "timestamp": "2026-09-15T09:15:04.972714+00:00"
+          },
+          {
+            "order": 2,
+            "model": "gemini-3.5-flash",
+            "phase": "coverage_recovery",
+            "status": "failed",
+            "failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+            "timestamp": "2026-09-15T09:15:06.302516+00:00"
+          }
+        ],
+        "provider_failures": [
+          {
+            "model": "gemini-3.5-flash",
+            "phase": "coverage_recovery",
+            "failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          }
+        ]
+      },
+      "primary_calls": 1,
+      "schema_repair_calls": 0,
+      "coverage_calls": 1,
+      "candidates_detected": 40,
+      "high_priority_candidates": 20,
+      "candidates_covered": 1,
+      "candidates_sent": 20,
+      "coverage_candidates_accepted": 0,
+      "coverage_candidates_rejected": 20,
+      "coverage_validation_error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "archive": {
+        "metadata": {
+          "archive_id": "arc-581738a9181e27a8",
+          "schema_name": "synthex-archive",
+          "schema_version": "3.4.0",
+          "software_version": "3.4.2",
+          "created_at": "2026-09-15T09:15:06.378745+00:00",
+          "generator": "Synthex V3.4.2",
+          "extractor_model": "gemini-3.5-flash",
+          "domain": "catalysis"
+        },
+        "sources": [
+          {
+            "source_id": "src-1e22eb63a995a554",
+            "source_type": "paper",
+            "title": "Oxygen induced promotion of electrochemical reduction of CO 2 via co-electrolysis",
+            "doi": "10.1038/s41467-020-17690-8",
+            "url": "https://doi.org/10.1038/s41467-020-17690-8",
+            "year": 2020,
+            "authors": [
+              "Ming He",
+              "Chunsong Li",
+              "Haochen Zhang",
+              "Xiaoxia Chang",
+              "Jingguang G. Chen",
+              "William A. Goddard III",
+              "Mu-jeng Cheng",
+              "Bingjun Xu",
+              "Qi Lu"
+            ],
+            "checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93"
+          }
+        ],
+        "materials": [
+          {
+            "material_id": "mat-e5b63efaa966d789",
+            "name": "polycrystalline Cu powder",
+            "formula": "Cu",
+            "composition": {},
+            "elements": [],
+            "structure": {
+              "catalyst_state": "unknown",
+              "components": []
+            },
+            "morphology": {},
+            "defects": [],
+            "dopants": [],
+            "tags": [
+              "catalyst",
+              "state:unknown",
+              "ownership:focal_work"
+            ],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 2,
+                "section": "Results",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "Cu electrodes are prepared by depositing commercial polycrystalline Cu powders (~1 μm) (Supplementary Fig. 2) onto a PTFE-treated carbon ﬁber paper."
+              }
+            ]
+          },
+          {
+            "material_id": "mat-38cad102bef1f6f1",
+            "name": "polycrystalline Cu foil",
+            "formula": "Cu",
+            "composition": {},
+            "elements": [],
+            "structure": {
+              "catalyst_state": "unknown",
+              "components": []
+            },
+            "morphology": {},
+            "defects": [],
+            "dopants": [],
+            "tags": [
+              "catalyst",
+              "state:unknown",
+              "ownership:focal_work"
+            ],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 2,
+                "section": "Results",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "Compared to planar polycrystalline Cu foil electrodes, these electrodes can effectively improve the mass transport of dissolved gas molecules in H-cell con ﬁguration27– 29."
+              }
+            ]
+          }
+        ],
+        "devices": [],
+        "processes": [
+          {
+            "process_id": "proc-cb62223e74c63ff8",
+            "name": "mixing",
+            "family": "catalyst_preparation",
+            "sequence_index": 0,
+            "inputs": [
+              "Cu powder"
+            ],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [
+              {
+                "property": "duration",
+                "raw_value": "20 min",
+                "value": 20.0,
+                "unit": "min",
+                "qualifier": "exact",
+                "conditions": {},
+                "evidence": [
+                  {
+                    "source_id": "src-1e22eb63a995a554",
+                    "page": 8,
+                    "section": "Methods",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+                  }
+                ]
+              }
+            ],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-d4d51b62884b6c77",
+            "name": "deposition",
+            "family": "catalyst_preparation",
+            "sequence_index": 1,
+            "inputs": [],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-e43271facddea88c",
+            "name": "drying",
+            "family": "catalyst_preparation",
+            "sequence_index": 2,
+            "inputs": [],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-f137128d3fb5549a",
+            "name": "deposition",
+            "family": "catalyst_preparation",
+            "sequence_index": 3,
+            "inputs": [],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-166306c1c210f8ac",
+            "name": "drying",
+            "family": "catalyst_preparation",
+            "sequence_index": 4,
+            "inputs": [],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-897e93fc43ab618e",
+            "name": "other",
+            "family": "catalyst_preparation",
+            "sequence_index": 5,
+            "inputs": [],
+            "outputs": [
+              "mat-e5b63efaa966d789"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-903c92189d824969",
+            "name": "other",
+            "family": "catalyst_preparation",
+            "sequence_index": 0,
+            "inputs": [],
+            "outputs": [
+              "mat-38cad102bef1f6f1"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-36eb548fcc3929ce",
+            "name": "other",
+            "family": "catalyst_preparation",
+            "sequence_index": 1,
+            "inputs": [],
+            "outputs": [
+              "mat-38cad102bef1f6f1"
+            ],
+            "parameters": [
+              {
+                "property": "duration",
+                "raw_value": "5 min",
+                "value": 5.0,
+                "unit": "min",
+                "qualifier": "exact",
+                "conditions": {},
+                "evidence": [
+                  {
+                    "source_id": "src-1e22eb63a995a554",
+                    "page": 8,
+                    "section": "Methods",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+                  }
+                ]
+              }
+            ],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+              }
+            ]
+          },
+          {
+            "process_id": "proc-e87ee911467ad482",
+            "name": "washing",
+            "family": "catalyst_preparation",
+            "sequence_index": 2,
+            "inputs": [],
+            "outputs": [
+              "mat-38cad102bef1f6f1"
+            ],
+            "parameters": [],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+              }
+            ]
+          }
+        ],
+        "experiments": [],
+        "calculations": [
+          {
+            "calculation_id": "calc-0987d258cb46172a",
+            "calculation_type": "dft",
+            "material_ids": [
+              "mat-e5b63efaa966d789"
+            ],
+            "code": "VASP",
+            "method": "dft",
+            "functional": "PBE",
+            "model": {
+              "dispersion_correction": "D2",
+              "plane_wave_cutoff_or_basis": null,
+              "k_points": "3 x 3 x 1",
+              "slab_or_facet": "Cu(100)",
+              "layers": 3,
+              "solvation_model": "VASPsol",
+              "adsorbate_coverage": null,
+              "spin_treatment": null,
+              "vacuum_thickness": {
+                "raw_value": "25 Å",
+                "value": 25.0,
+                "unit": "Å",
+                "qualifier": "exact"
+              }
+            },
+            "parameters": [],
+            "outputs": [
+              {
+                "property": "reaction_free_energy",
+                "raw_value": "0.2 eV",
+                "value": 0.2,
+                "unit": "eV",
+                "qualifier": "exact",
+                "conditions": {},
+                "evidence": [
+                  {
+                    "source_id": "src-1e22eb63a995a554",
+                    "page": 6,
+                    "section": "Results",
+                    "source_type": "text",
+                    "original_source_type": "native_text",
+                    "verbatim_match": true,
+                    "text_snippet": "The energies of initial structures ﬂuctuate slightly within an energy range of 0.2 eV when *OH coverage increases"
+                  }
+                ]
+              }
+            ],
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu."
+              }
+            ]
+          }
+        ],
+        "relationships": [
+          {
+            "relation_id": "rel-bf115e5ffd345a69",
+            "subject_id": "arc-581738a9181e27a8",
+            "predicate": "reported_by",
+            "object_id": "src-1e22eb63a995a554",
+            "attributes": {},
+            "evidence": []
+          },
+          {
+            "relation_id": "rel-4787981c2ca11d06",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-cb62223e74c63ff8",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-6be58caf0b69c093",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-d4d51b62884b6c77",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-c528365deafbefbb",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-e43271facddea88c",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-c0aaf3af94a3e7a4",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-f137128d3fb5549a",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-643eb38f11902ba7",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-166306c1c210f8ac",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-72c06f3e1c8e2739",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "processed_by",
+            "object_id": "proc-897e93fc43ab618e",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-f9883927affdb250",
+            "subject_id": "mat-38cad102bef1f6f1",
+            "predicate": "processed_by",
+            "object_id": "proc-903c92189d824969",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-2922948e1e86f452",
+            "subject_id": "mat-38cad102bef1f6f1",
+            "predicate": "processed_by",
+            "object_id": "proc-36eb548fcc3929ce",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-2a82787f10690a67",
+            "subject_id": "mat-38cad102bef1f6f1",
+            "predicate": "processed_by",
+            "object_id": "proc-e87ee911467ad482",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm)."
+              }
+            ]
+          },
+          {
+            "relation_id": "rel-4246a1fee1f03213",
+            "subject_id": "mat-e5b63efaa966d789",
+            "predicate": "calculated_for",
+            "object_id": "calc-0987d258cb46172a",
+            "attributes": {},
+            "evidence": [
+              {
+                "source_id": "src-1e22eb63a995a554",
+                "page": 8,
+                "section": "Methods",
+                "source_type": "text",
+                "original_source_type": "native_text",
+                "verbatim_match": true,
+                "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu."
+              }
+            ]
+          }
+        ],
+        "domain_payloads": [
+          {
+            "domain": "catalysis",
+            "schema_version": "1.0-stage2",
+            "tags": [],
+            "values": {
+              "validated_document": {
+                "source": {
+                  "title": "Oxygen induced promotion of electrochemical reduction of CO 2 via co-electrolysis",
+                  "doi": "10.1038/s41467-020-17690-8",
+                  "url": "https://doi.org/10.1038/s41467-020-17690-8",
+                  "year": 2020,
+                  "authors": [
+                    "Ming He",
+                    "Chunsong Li",
+                    "Haochen Zhang",
+                    "Xiaoxia Chang",
+                    "Jingguang G. Chen",
+                    "William A. Goddard III",
+                    "Mu-jeng Cheng",
+                    "Bingjun Xu",
+                    "Qi Lu"
+                  ],
+                  "pdf_text_parser": "pypdf"
+                },
+                "paper_types": [
+                  "catalyst_synthesis",
+                  "catalyst_characterization",
+                  "electrocatalysis",
+                  "computational_dft"
+                ],
+                "scope_status": "supported",
+                "catalysts": [
+                  {
+                    "local_id": "cat_cu_powder",
+                    "reported_name": "polycrystalline Cu powder",
+                    "canonical_name": null,
+                    "reported_formula": "Cu",
+                    "formula": "Cu",
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": {
+                      "raw_value": "~1 μm",
+                      "value": 1.0,
+                      "unit": "μm",
+                      "qualifier": "approx"
+                    },
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": null,
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "Cu electrodes are prepared by depositing commercial polycrystalline Cu powders (~1 μm) (Supplementary Fig. 2) onto a PTFE-treated carbon ﬁber paper.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_cu_foil",
+                    "reported_name": "polycrystalline Cu foil",
+                    "canonical_name": null,
+                    "reported_formula": "Cu",
+                    "formula": "Cu",
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": null,
+                        "page": 2,
+                        "section": "Results",
+                        "text_snippet": "Compared to planar polycrystalline Cu foil electrodes, these electrodes can effectively improve the mass transport of dissolved gas molecules in H-cell con ﬁguration27– 29.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "preparations": [
+                  {
+                    "preparation_id": "prep_cu_powder",
+                    "material_ref": "cat_cu_powder",
+                    "name": "deposition of Cu powder on carbon fiber paper",
+                    "ownership": "focal_work",
+                    "steps": [
+                      {
+                        "step": "mixing",
+                        "details": "mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min",
+                        "precursors": [
+                          "Cu powder"
+                        ],
+                        "precursor_ratio_raw": null,
+                        "solvents": [
+                          "isopropanol"
+                        ],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": {
+                          "raw_value": "20 min",
+                          "value": 20.0,
+                          "unit": "min",
+                          "qualifier": "exact"
+                        },
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "To prepare the polycrystalline Cu power electrode, an ink solution is ﬁrst prepared by mixing 1 mg Cu powder and 1 mL isopropanol followed by sonicating for 20 min.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "deposition",
+                        "details": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "900 μL of ink solution is dropcasted onto the microporous layer of a 3 × 3 cm 2 Sigracet 39 BC carbon ﬁber paper.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "drying",
+                        "details": "drying in air",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "deposition",
+                        "details": "180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "After drying in air, 180 μL of 2.5 wt% Na ﬁon solution (diluted with isopropanol) is uniformly deposited onto the catalyst surface.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "drying",
+                        "details": "dried in the air again",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "other",
+                        "details": "transferred into a vacuum box to thoroughly remove the residual solvent",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "The catalyst is dried in the air again and transferred into a vacuum box to thoroughly remove the residual solvent.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "evidence": []
+                  },
+                  {
+                    "preparation_id": "prep_cu_foil",
+                    "material_ref": "cat_cu_foil",
+                    "name": "electropolishing of Cu foil",
+                    "ownership": "focal_work",
+                    "steps": [
+                      {
+                        "step": "other",
+                        "details": "a nickel wire current collector is welded to a piece of Cu foil",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "To prepare the electropolished Cu foil electrode, a nickel wire current collector is welded to a piece of Cu foil.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "other",
+                        "details": "electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": {
+                          "raw_value": "5 min",
+                          "value": 5.0,
+                          "unit": "min",
+                          "qualifier": "exact"
+                        },
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "step": "washing",
+                        "details": "rinsing with Mill-Q water (18.2 M Ω cm)",
+                        "precursors": [],
+                        "precursor_ratio_raw": null,
+                        "solvents": [],
+                        "pH": null,
+                        "temperature": null,
+                        "duration": null,
+                        "atmosphere": null,
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 8,
+                            "section": "Methods",
+                            "text_snippet": "The electrode is then electropolished in 85% phosphoric acid at 2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q water (18.2 M Ω cm).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "evidence": []
+                  }
+                ],
+                "characterizations": [
+                  {
+                    "characterization_id": "char_raman",
+                    "material_ref": "cat_cu_powder",
+                    "method": "Raman spectroscopy",
+                    "conditions": {},
+                    "results": [
+                      {
+                        "property": "Raman band",
+                        "raw_value": "706 cm-1",
+                        "value": 706.0,
+                        "unit": "cm-1",
+                        "qualifier": "exact",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 3,
+                            "section": "Results",
+                            "text_snippet": "A prominent band at 706 cm−1 appears at potentials below 0 V RHE in the O 2 atmosphere (Fig. 3c), which has been assigned to the surface hydroxyl spe-cies21.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": []
+                  }
+                ],
+                "heterogeneous_experiments": [],
+                "electrocatalysis_experiments": [
+                  {
+                    "experiment_id": "exp_cu_powder_pure_co2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "CO2 reduction reaction",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "working_electrode": null,
+                    "catalyst_loading": null,
+                    "substrate_or_current_collector": null,
+                    "binder": null,
+                    "geometric_area": null,
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "100%",
+                          "value": 100.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "temperature": null,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "rotation_speed": null,
+                    "scan_rate": null,
+                    "potential_window": null,
+                    "controlled_potential": null,
+                    "controlled_current": null,
+                    "ir_compensation": null,
+                    "metrics": [
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.90 V RHE",
+                        "value": -0.9,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.90 V",
+                            "value": -0.9,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "partial_current_density",
+                        "raw_value": "~0.5 mA cm-2",
+                        "value": 0.5,
+                        "unit": "mA cm-2",
+                        "qualifier": "approx",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−1.00 VRHE",
+                            "value": -1.0,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.95 VRHE",
+                        "value": -0.95,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "methane",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.95 VRHE",
+                            "value": -0.95,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_cu_powder_10_o2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "co-electrolysis of CO2 and O2",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "working_electrode": null,
+                    "catalyst_loading": null,
+                    "substrate_or_current_collector": null,
+                    "binder": null,
+                    "geometric_area": null,
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "90%",
+                          "value": 90.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      },
+                      {
+                        "species": "O2",
+                        "fraction": {
+                          "raw_value": "10%",
+                          "value": 10.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "temperature": null,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "rotation_speed": null,
+                    "scan_rate": null,
+                    "potential_window": null,
+                    "controlled_potential": null,
+                    "controlled_current": null,
+                    "ir_compensation": null,
+                    "metrics": [
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "slightly greater than 5-fold increase",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "CO",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "approximately two to three times increase",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "formate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_cu_powder_20_o2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "co-electrolysis of CO2 and O2",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "working_electrode": null,
+                    "catalyst_loading": null,
+                    "substrate_or_current_collector": null,
+                    "binder": null,
+                    "geometric_area": null,
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "80%",
+                          "value": 80.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      },
+                      {
+                        "species": "O2",
+                        "fraction": {
+                          "raw_value": "20%",
+                          "value": 20.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        },
+                        "basis": null
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "temperature": null,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "rotation_speed": null,
+                    "scan_rate": null,
+                    "potential_window": null,
+                    "controlled_potential": null,
+                    "controlled_current": null,
+                    "ir_compensation": null,
+                    "metrics": [
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 170-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 55-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 35-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "partial_current_density",
+                        "raw_value": "~0.5 mA cm-2",
+                        "value": 0.5,
+                        "unit": "mA cm-2",
+                        "qualifier": "approx",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 200-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 100-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 70-fold",
+                        "value": null,
+                        "unit": null,
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.75 V RHE",
+                        "value": -0.75,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "methane",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "reported_reference_text": null,
+                          "filling_solution": null,
+                          "filling_solution_concentration": null,
+                          "pH": null,
+                          "temperature": null,
+                          "converted_potential": null,
+                          "converted_reference": null,
+                          "conversion_status": "not_attempted",
+                          "author_formula": null
+                        },
+                        "applied_current": null,
+                        "normalization_basis": null,
+                        "duration": null,
+                        "analytical_method": null,
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  }
+                ],
+                "stability_tests": [],
+                "calculations": [
+                  {
+                    "calculation_id": "calc_dft_1",
+                    "material_refs": [
+                      "cat_cu_powder"
+                    ],
+                    "calculation_type": "dft",
+                    "code": "VASP",
+                    "functional": "PBE",
+                    "dispersion_correction": "D2",
+                    "plane_wave_cutoff_or_basis": null,
+                    "k_points": "3 x 3 x 1",
+                    "slab_or_facet": "Cu(100)",
+                    "layers": 3,
+                    "vacuum_thickness": {
+                      "raw_value": "25 Å",
+                      "value": 25.0,
+                      "unit": "Å",
+                      "qualifier": "exact"
+                    },
+                    "solvation_model": "VASPsol",
+                    "adsorbate_coverage": null,
+                    "spin_treatment": null,
+                    "outputs": [
+                      {
+                        "property": "reaction_free_energy",
+                        "raw_value": "0.2 eV",
+                        "value": 0.2,
+                        "unit": "eV",
+                        "qualifier": "exact",
+                        "adsorbate_or_intermediate": null,
+                        "site": null,
+                        "facet": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": null,
+                            "page": 6,
+                            "section": "Results",
+                            "text_snippet": "The energies of initial structures ﬂuctuate slightly within an energy range of 0.2 eV when *OH coverage increases",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "table_id": null,
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": true,
+                            "confidence": null,
+                            "evidence_strength": "verified_native",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "focal_work",
+                    "evidence": [
+                      {
+                        "source_id": null,
+                        "page": 8,
+                        "section": "Methods",
+                        "text_snippet": "The Cu(100) metal slab (3 × 3) consisting of three layers with the bottom layer ﬁxed in its bulk position is employed to simulate the surface of Cu.",
+                        "source_type": "text",
+                        "original_source_type": "native_text",
+                        "table_id": null,
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": true,
+                        "confidence": null,
+                        "evidence_strength": "verified_native",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "condition_conflicts": [],
+                "extraction_notes": [],
+                "semantic_warnings": []
+              },
+              "admissibility_audit": {
+                "policy": "catalysis_focal_value_specific_verified_v1",
+                "admitted_quantitative_values": 3,
+                "quarantined_objects_or_values": 3,
+                "quarantine": [
+                  {
+                    "path": "experiments.exp_cu_powder_pure_co2",
+                    "reason": "ownership_unknown",
+                    "ownership": "unknown",
+                    "object": {
+                      "experiment_id": "exp_cu_powder_pure_co2",
+                      "catalyst_ref": "cat_cu_powder",
+                      "reaction": {
+                        "reported_reaction": "CO2 reduction reaction",
+                        "reaction_class": "co2rr",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "CO2",
+                          "fraction": {
+                            "raw_value": "100%",
+                            "value": 100.0,
+                            "unit": "%",
+                            "qualifier": "exact"
+                          }
+                        }
+                      ],
+                      "electrolyte": "KHCO3",
+                      "electrolyte_concentration": {
+                        "raw_value": "0.1 M",
+                        "value": 0.1,
+                        "unit": "M",
+                        "qualifier": "exact"
+                      },
+                      "pH": 6.8,
+                      "cell_configuration": "H-type electrochemical cell",
+                      "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                      "reference_electrode": "Ag/AgCl",
+                      "counter_electrode": "graphite rod",
+                      "metrics": [
+                        {
+                          "property": "onset_potential",
+                          "raw_value": "−0.90 V RHE",
+                          "value": -0.9,
+                          "unit": "V",
+                          "qualifier": "exact",
+                          "product": "n-propanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.90 V",
+                              "value": -0.9,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "partial_current_density",
+                          "raw_value": "~0.5 mA cm-2",
+                          "value": 0.5,
+                          "unit": "mA cm-2",
+                          "qualifier": "approx",
+                          "product": "n-propanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−1.00 VRHE",
+                              "value": -1.0,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "onset_potential",
+                          "raw_value": "−0.95 VRHE",
+                          "value": -0.95,
+                          "unit": "V",
+                          "qualifier": "exact",
+                          "product": "methane",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.95 VRHE",
+                              "value": -0.95,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d).",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "unknown",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_cu_powder_10_o2",
+                    "reason": "ownership_unknown",
+                    "ownership": "unknown",
+                    "object": {
+                      "experiment_id": "exp_cu_powder_10_o2",
+                      "catalyst_ref": "cat_cu_powder",
+                      "reaction": {
+                        "reported_reaction": "co-electrolysis of CO2 and O2",
+                        "reaction_class": "co2rr",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "CO2",
+                          "fraction": {
+                            "raw_value": "90%",
+                            "value": 90.0,
+                            "unit": "%",
+                            "qualifier": "exact"
+                          }
+                        },
+                        {
+                          "species": "O2",
+                          "fraction": {
+                            "raw_value": "10%",
+                            "value": 10.0,
+                            "unit": "%",
+                            "qualifier": "exact"
+                          }
+                        }
+                      ],
+                      "electrolyte": "KHCO3",
+                      "electrolyte_concentration": {
+                        "raw_value": "0.1 M",
+                        "value": 0.1,
+                        "unit": "M",
+                        "qualifier": "exact"
+                      },
+                      "pH": 6.8,
+                      "cell_configuration": "H-type electrochemical cell",
+                      "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                      "reference_electrode": "Ag/AgCl",
+                      "counter_electrode": "graphite rod",
+                      "metrics": [
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "more than 20-fold increase",
+                          "qualifier": "exact",
+                          "product": "ethylene",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "more than 20-fold increase",
+                          "qualifier": "exact",
+                          "product": "ethanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "more than 20-fold increase",
+                          "qualifier": "exact",
+                          "product": "acetate",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "slightly greater than 5-fold increase",
+                          "qualifier": "exact",
+                          "product": "CO",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 V RHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "approximately two to three times increase",
+                          "qualifier": "exact",
+                          "product": "formate",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 V RHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "unknown",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_cu_powder_20_o2",
+                    "reason": "ownership_unknown",
+                    "ownership": "unknown",
+                    "object": {
+                      "experiment_id": "exp_cu_powder_20_o2",
+                      "catalyst_ref": "cat_cu_powder",
+                      "reaction": {
+                        "reported_reaction": "co-electrolysis of CO2 and O2",
+                        "reaction_class": "co2rr",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "CO2",
+                          "fraction": {
+                            "raw_value": "80%",
+                            "value": 80.0,
+                            "unit": "%",
+                            "qualifier": "exact"
+                          }
+                        },
+                        {
+                          "species": "O2",
+                          "fraction": {
+                            "raw_value": "20%",
+                            "value": 20.0,
+                            "unit": "%",
+                            "qualifier": "exact"
+                          }
+                        }
+                      ],
+                      "electrolyte": "KHCO3",
+                      "electrolyte_concentration": {
+                        "raw_value": "0.1 M",
+                        "value": 0.1,
+                        "unit": "M",
+                        "qualifier": "exact"
+                      },
+                      "pH": 6.8,
+                      "cell_configuration": "H-type electrochemical cell",
+                      "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                      "reference_electrode": "Ag/AgCl",
+                      "counter_electrode": "graphite rod",
+                      "metrics": [
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "exceeds 170-fold",
+                          "qualifier": "exact",
+                          "product": "ethylene",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "exceeds 55-fold",
+                          "qualifier": "exact",
+                          "product": "ethanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "exceeds 35-fold",
+                          "qualifier": "exact",
+                          "product": "acetate",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 VRHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "partial_current_density",
+                          "raw_value": "~0.5 mA cm-2",
+                          "value": 0.5,
+                          "unit": "mA cm-2",
+                          "qualifier": "approx",
+                          "product": "n-propanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 V RHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "higher than 200-fold",
+                          "qualifier": "exact",
+                          "product": "ethylene",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.80 V RHE",
+                              "value": -0.8,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "higher than 100-fold",
+                          "qualifier": "exact",
+                          "product": "ethanol",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.80 V RHE",
+                              "value": -0.8,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "product_formation_rate",
+                          "raw_value": "higher than 70-fold",
+                          "qualifier": "exact",
+                          "product": "acetate",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.80 V RHE",
+                              "value": -0.8,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "onset_potential",
+                          "raw_value": "−0.75 V RHE",
+                          "value": -0.75,
+                          "unit": "V",
+                          "qualifier": "exact",
+                          "product": "methane",
+                          "potential": {
+                            "raw_potential": {
+                              "raw_value": "−0.75 V RHE",
+                              "value": -0.75,
+                              "unit": "V",
+                              "qualifier": "exact"
+                            },
+                            "reported_reference": "RHE",
+                            "conversion_status": "not_attempted"
+                          },
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "page": 2,
+                              "section": "Results",
+                              "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)",
+                              "source_type": "text",
+                              "original_source_type": "native_text",
+                              "verbatim_match": true,
+                              "evidence_strength": "verified_native",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "unknown",
+                      "evidence": []
+                    }
+                  }
+                ],
+                "canonical_admission_count": 12
+              },
+              "quarantined_objects_measurements": [
+                {
+                  "path": "experiments.exp_cu_powder_pure_co2",
+                  "reason": "ownership_unknown",
+                  "ownership": "unknown",
+                  "object": {
+                    "experiment_id": "exp_cu_powder_pure_co2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "CO2 reduction reaction",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "100%",
+                          "value": 100.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        }
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "metrics": [
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.90 V RHE",
+                        "value": -0.9,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.90 V",
+                            "value": -0.9,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The onset potential of n-propanol in the oxygen-free atmosphere occurs at as negative as −0.90 V RHE (Fig. 1d)",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "partial_current_density",
+                        "raw_value": "~0.5 mA cm-2",
+                        "value": 0.5,
+                        "unit": "mA cm-2",
+                        "qualifier": "approx",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−1.00 VRHE",
+                            "value": -1.0,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "to achieve a similar rate of ~0.5 mA cm −2 requires an additional 250 mV overpotential, i.e., −1.00 VRHE (Fig. 1f).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.95 VRHE",
+                        "value": -0.95,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "methane",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.95 VRHE",
+                            "value": -0.95,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "while in the absence of O 2, it is not observed until a much more negative potential of −0.95 VRHE (Fig. 2d).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_cu_powder_10_o2",
+                  "reason": "ownership_unknown",
+                  "ownership": "unknown",
+                  "object": {
+                    "experiment_id": "exp_cu_powder_10_o2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "co-electrolysis of CO2 and O2",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "90%",
+                          "value": 90.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        }
+                      },
+                      {
+                        "species": "O2",
+                        "fraction": {
+                          "raw_value": "10%",
+                          "value": 10.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        }
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "metrics": [
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "more than 20-fold increase",
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "the production rate of ethylene, ethanol and acetate shows a more than 20-fold increase with 10% O 2 in the feed.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "slightly greater than 5-fold increase",
+                        "qualifier": "exact",
+                        "product": "CO",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "approximately two to three times increase",
+                        "qualifier": "exact",
+                        "product": "formate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "At −0.75 V RHE, the CO formation shows a slightly greater than 5-fold increase and the formate formation shows an approximately two to three times increase with 10 – 20% oxygen in the reaction atmosphere (Fig. 2a).",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_cu_powder_20_o2",
+                  "reason": "ownership_unknown",
+                  "ownership": "unknown",
+                  "object": {
+                    "experiment_id": "exp_cu_powder_20_o2",
+                    "catalyst_ref": "cat_cu_powder",
+                    "reaction": {
+                      "reported_reaction": "co-electrolysis of CO2 and O2",
+                      "reaction_class": "co2rr",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "CO2",
+                        "fraction": {
+                          "raw_value": "80%",
+                          "value": 80.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        }
+                      },
+                      {
+                        "species": "O2",
+                        "fraction": {
+                          "raw_value": "20%",
+                          "value": 20.0,
+                          "unit": "%",
+                          "qualifier": "exact"
+                        }
+                      }
+                    ],
+                    "electrolyte": "KHCO3",
+                    "electrolyte_concentration": {
+                      "raw_value": "0.1 M",
+                      "value": 0.1,
+                      "unit": "M",
+                      "qualifier": "exact"
+                    },
+                    "pH": 6.8,
+                    "cell_configuration": "H-type electrochemical cell",
+                    "membrane": "anion-exchange membrane (Selemion AMV, AGC Inc.)",
+                    "reference_electrode": "Ag/AgCl",
+                    "counter_electrode": "graphite rod",
+                    "metrics": [
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 170-fold",
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 55-fold",
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "exceeds 35-fold",
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 VRHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "With 20% O 2, the enhancement for ethylene, ethanol and acetate exceeds 170-fold, 55-fold, and 35-fold, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "partial_current_density",
+                        "raw_value": "~0.5 mA cm-2",
+                        "value": 0.5,
+                        "unit": "mA cm-2",
+                        "qualifier": "approx",
+                        "product": "n-propanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The formation of n-propanol is also observed at −0.75 V RHE with a partial current density of ~0.5 mA cm −2 in the presence of O 2",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 200-fold",
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 100-fold",
+                        "qualifier": "exact",
+                        "product": "ethanol",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "product_formation_rate",
+                        "raw_value": "higher than 70-fold",
+                        "qualifier": "exact",
+                        "product": "acetate",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.80 V RHE",
+                            "value": -0.8,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The oxygen induced enhancement of all C 2+ products is more pronounced at −0.80 V RHE (Fig. 1b), with higher than 200-fold, 100-fold, and 70-fold increases for ethylene, ethanol and acetate, respectively.",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "onset_potential",
+                        "raw_value": "−0.75 V RHE",
+                        "value": -0.75,
+                        "unit": "V",
+                        "qualifier": "exact",
+                        "product": "methane",
+                        "potential": {
+                          "raw_potential": {
+                            "raw_value": "−0.75 V RHE",
+                            "value": -0.75,
+                            "unit": "V",
+                            "qualifier": "exact"
+                          },
+                          "reported_reference": "RHE",
+                          "conversion_status": "not_attempted"
+                        },
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "page": 2,
+                            "section": "Results",
+                            "text_snippet": "The onset of methane production is improved to as early as −0.75 V RHE in an oxygen-containing atmosphere (Fig. 2a)",
+                            "source_type": "text",
+                            "original_source_type": "native_text",
+                            "verbatim_match": true,
+                            "evidence_strength": "verified_native",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "unknown",
+                    "evidence": []
+                  }
+                }
+              ],
+              "normalization_comparability_warnings": [],
+              "conflicts": [],
+              "extraction_notes": [],
+              "source_context": {
+                "source_id": "src-3626736bc803a292",
+                "filename": "s41467-020-17690-8.pdf",
+                "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+                "primary_native_parser": "pypdf",
+                "page_parsers": [
+                  {
+                    "page": 1,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 2,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 3,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 4,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 5,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 6,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 7,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 8,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 9,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 10,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  }
+                ],
+                "tables_detected": 0,
+                "figures_detected": 13,
+                "ocr_pages_used": [],
+                "digitizations_available": 0,
+                "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-gold-b\\sidecars\\visual\\src-3626736bc803a292\\visual_document.json"
+              }
+            }
+          },
+          {
+            "domain": "llm_provider",
+            "schema_version": "1.0.0",
+            "tags": [
+              "benchmark_pinned"
+            ],
+            "values": {
+              "mode": "benchmark",
+              "requested_model": "gemini-3.5-flash",
+              "actual_model": "gemini-3.5-flash",
+              "configured_model_order": [
+                "gemini-3.5-flash"
+              ],
+              "models_attempted": [
+                "gemini-3.5-flash"
+              ],
+              "fallback_occurred": false,
+              "attempts": [
+                {
+                  "order": 1,
+                  "model": "gemini-3.5-flash",
+                  "phase": "primary",
+                  "status": "succeeded",
+                  "failure_class": null,
+                  "provider_message": null,
+                  "timestamp": "2026-09-15T09:15:04.972714+00:00"
+                },
+                {
+                  "order": 2,
+                  "model": "gemini-3.5-flash",
+                  "phase": "coverage_recovery",
+                  "status": "failed",
+                  "failure_class": "provider_unavailable",
+                  "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+                  "timestamp": "2026-09-15T09:15:06.302516+00:00"
+                }
+              ],
+              "provider_failures": [
+                {
+                  "model": "gemini-3.5-flash",
+                  "phase": "coverage_recovery",
+                  "failure_class": "provider_unavailable",
+                  "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+                }
+              ]
+            }
+          }
+        ],
+        "quality": {
+          "completeness": 0.5,
+          "provenance_coverage": 0.9615384615384616,
+          "unit_normalization_coverage": 0.0,
+          "extraction_confidence": 0.5,
+          "semantic_warnings": [
+            "canonical_admission_count:12",
+            "quarantine_count:3",
+            "unresolved_conflict_count:0"
+          ],
+          "validation_status": "schema_validated"
+        }
+      },
+      "safety": {
+        "dft_experimental_leakage": 0,
+        "review_contamination": 0,
+        "digitized_canonical_leakage": 0,
+        "referential_integrity_violations": []
+      },
+      "gold_score": {
+        "catalyst_identity": {
+          "expected_count": 2,
+          "matched_count": 1,
+          "missing": [
+            "polycrystalline Cu with surface hydroxyl species during co-electrolysis"
+          ]
+        },
+        "catalyst_components": {
+          "expected_count": 1,
+          "matched_count": 0,
+          "missing": [
+            "commercial polycrystalline Cu powder"
+          ]
+        },
+        "catalyst_state": {
+          "expected_count": 2,
+          "matched_count": 0,
+          "missing": [
+            "commercial polycrystalline Cu powder",
+            "polycrystalline Cu with surface hydroxyl species during co-electrolysis"
+          ]
+        },
+        "metric_association": {
+          "expected_count": 4,
+          "matched_count": 1,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "qualifier": "approx",
+                "product": "n-propanol",
+                "potential": "-0.75 V RHE",
+                "reference_electrode": "RHE",
+                "normalization_basis": "geometric_area",
+                "context": {
+                  "catalyst": "commercial polycrystalline Cu powder",
+                  "reaction": "co2rr",
+                  "feed": "O2-containing CO2 feed"
+                },
+                "evidence_locator": {
+                  "page": 2,
+                  "section": "Co-reduction of CO2 with O2"
+                }
+              },
+              "matched": false
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "qualifier": "approx",
+                "product": "n-propanol",
+                "potential": "-1.00 V RHE",
+                "reference_electrode": "RHE",
+                "normalization_basis": "geometric_area",
+                "context": {
+                  "catalyst": "commercial polycrystalline Cu powder",
+                  "reaction": "co2rr",
+                  "feed": "pure CO2"
+                },
+                "evidence_locator": {
+                  "page": 2,
+                  "section": "Co-reduction of CO2 with O2"
+                }
+              },
+              "matched": false
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "raw_value": "-0.75 V RHE",
+                "value": -0.75,
+                "unit": "V",
+                "product": "methane",
+                "potential": "-0.75 V RHE",
+                "reference_electrode": "RHE",
+                "context": {
+                  "feed": "O2-containing CO2 feed"
+                },
+                "evidence_locator": {
+                  "page": 2,
+                  "section": "Co-reduction of CO2 with O2"
+                }
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "raw_value": "-0.95 V RHE",
+                "value": -0.95,
+                "unit": "V",
+                "product": "methane",
+                "potential": "-0.95 V RHE",
+                "reference_electrode": "RHE",
+                "context": {
+                  "feed": "pure CO2"
+                },
+                "evidence_locator": {
+                  "page": 2,
+                  "section": "Co-reduction of CO2 with O2"
+                }
+              },
+              "matched": false
+            }
+          ]
+        },
+        "property_value_unit": {
+          "expected_count": 4,
+          "matched_count": 4,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.75,
+                "unit": "V"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.95,
+                "unit": "V"
+              },
+              "matched": true
+            }
+          ]
+        },
+        "condition_association": {
+          "expected_count": 4,
+          "matched_count": 4,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "context": {
+                  "catalyst": "commercial polycrystalline Cu powder",
+                  "reaction": "co2rr",
+                  "feed": "O2-containing CO2 feed"
+                }
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "context": {
+                  "catalyst": "commercial polycrystalline Cu powder",
+                  "reaction": "co2rr",
+                  "feed": "pure CO2"
+                }
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.75,
+                "unit": "V",
+                "context": {
+                  "feed": "O2-containing CO2 feed"
+                }
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.95,
+                "unit": "V",
+                "context": {
+                  "feed": "pure CO2"
+                }
+              },
+              "matched": true
+            }
+          ]
+        },
+        "product_association": {
+          "expected_count": 4,
+          "matched_count": 4,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "product": "n-propanol"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "product": "n-propanol"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.75,
+                "unit": "V",
+                "product": "methane"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.95,
+                "unit": "V",
+                "product": "methane"
+              },
+              "matched": true
+            }
+          ]
+        },
+        "potential_reference_association": {
+          "expected_count": 4,
+          "matched_count": 2,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "potential": "-0.75 V RHE",
+                "reference_electrode": "RHE"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "potential": "-1.00 V RHE",
+                "reference_electrode": "RHE"
+              },
+              "matched": false
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.75,
+                "unit": "V",
+                "potential": "-0.75 V RHE",
+                "reference_electrode": "RHE"
+              },
+              "matched": true
+            },
+            {
+              "expected": {
+                "property": "onset_potential",
+                "value": -0.95,
+                "unit": "V",
+                "potential": "-0.95 V RHE",
+                "reference_electrode": "RHE"
+              },
+              "matched": false
+            }
+          ]
+        },
+        "normalization_basis_association": {
+          "expected_count": 2,
+          "matched_count": 0,
+          "results": [
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "normalization_basis": "geometric_area"
+              },
+              "matched": false
+            },
+            {
+              "expected": {
+                "property": "partial_current_density",
+                "value": 0.5,
+                "unit": "mA cm-2",
+                "normalization_basis": "geometric_area"
+              },
+              "matched": false
+            }
+          ]
+        },
+        "process_extraction": {
+          "expected_preparation_count": 1,
+          "observed_preparation_count": 2
+        },
+        "reaction_identity": {
+          "observed_heterogeneous": 0,
+          "observed_electrocatalysis": 3
+        },
+        "stability_association": {
+          "expected_count": 0,
+          "matched_count": 0,
+          "observed_count": 0,
+          "results": []
+        },
+        "calculation_separation": {
+          "expected_count": 1,
+          "observed_count": 1
+        },
+        "canonical_admission": {
+          "true_canonical_admissions": 3,
+          "false_canonical_admissions": 0,
+          "correct_quarantines": 3,
+          "incorrect_quarantines": 0,
+          "canonical_precision": 1.0
+        },
+        "provenance": {
+          "native_text": 30,
+          "native_table": 0,
+          "figure_caption_or_annotation": 0,
+          "ocr_extracted": 0,
+          "figure_digitized": 0,
+          "other": 0
+        },
+        "ownership": {
+          "focal_work": 6,
+          "unknown": 20
+        },
+        "conflict_handling": {
+          "expected_count": 0,
+          "observed_count": 0
+        },
+        "referential_integrity_violations": [],
+        "unsupported_potential_conversions": 0
+      },
+      "candidate_artifacts": {
+        "inventory": "cat-gold-b_candidate_inventory.json",
+        "coverage": "cat-gold-b_candidate_coverage.json"
+      },
+      "captured_model_outputs": {
+        "raw": "cat-gold-b_raw_gemini_response.json"
+      }
+    }
+  ],
+  "totals": {
+    "gemini_calls": 2,
+    "repair_calls": 0,
+    "persistent_failures": 0
+  }
+}

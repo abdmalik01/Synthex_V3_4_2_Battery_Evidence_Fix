@@ -1,0 +1,215 @@
+{
+  "benchmark_id": "CAT-COMPUTE-C",
+  "filename": "molecules-28-03888-v2.pdf",
+  "route": {
+    "domain": "catalysis",
+    "confidence": 0.957,
+    "paper_types": [
+      "computational_dft",
+      "electrocatalysis",
+      "stability_deactivation",
+      "review",
+      "catalyst_synthesis",
+      "heterogeneous_catalysis"
+    ],
+    "scope_status": "supported",
+    "ambiguity_reason": null
+  },
+  "route_correct": true,
+  "scope_correct": true,
+  "subtypes_correct": true,
+  "source_context": {
+    "source_id": "src-bbd6b9071cef5e09",
+    "filename": "molecules-28-03888-v2.pdf",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 3,
+    "figures_detected": 20,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\sidecars\\visual\\src-bbd6b9071cef5e09\\visual_document.json"
+  },
+  "extraction_status": "pipeline_error",
+  "gemini_calls": 1,
+  "repair_calls": 0,
+  "schema_valid_first_response": false,
+  "schema_valid_repaired_response": false,
+  "persistent_failure": false,
+  "provider": {
+    "mode": "benchmark",
+    "requested_model": "gemini-3.5-flash",
+    "actual_model": null,
+    "configured_model_order": [
+      "gemini-3.5-flash"
+    ],
+    "models_attempted": [
+      "gemini-3.5-flash"
+    ],
+    "fallback_occurred": false,
+    "attempts": [
+      {
+        "order": 1,
+        "model": "gemini-3.5-flash",
+        "phase": "primary",
+        "status": "failed",
+        "failure_class": "provider_unavailable",
+        "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+        "timestamp": "2026-09-14T23:03:05.323061+00:00"
+      }
+    ],
+    "provider_failures": [
+      {
+        "model": "gemini-3.5-flash",
+        "phase": "primary",
+        "failure_class": "provider_unavailable",
+        "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "primary_calls": 1,
+  "schema_repair_calls": 0,
+  "coverage_calls": 0,
+  "error_type": "ServerError",
+  "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+  "candidate_artifacts": {
+    "inventory": "cat-compute-c_candidate_inventory.json",
+    "coverage": "cat-compute-c_candidate_coverage.json"
+  }
+}

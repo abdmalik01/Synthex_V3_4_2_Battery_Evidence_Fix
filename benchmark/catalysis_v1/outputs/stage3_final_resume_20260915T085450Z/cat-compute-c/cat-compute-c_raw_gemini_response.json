@@ -1,0 +1,1131 @@
+{
+  "source": {
+    "title": "Theoretical Investigation of HER and OER Electrocatalysts Based on the 2D R-graphyne Completely Composed of Anti-Aromatic Carbon Rings",
+    "doi": "10.3390/molecules28093888",
+    "url": "https://doi.org/10.3390/molecules28093888",
+    "year": 2023,
+    "authors": [
+      "Cuimei Li",
+      "Tianya Li",
+      "Guangtao Yu",
+      "Wei Chen"
+    ],
+    "pdf_text_parser": "pypdf"
+  },
+  "paper_types": [
+    "computational_dft"
+  ],
+  "scope_status": "supported",
+  "catalysts": [
+    {
+      "local_id": "cat_r_graphyne",
+      "reported_name": "R-graphyne",
+      "formula": "C",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_graphene",
+      "reported_name": "graphene",
+      "formula": "C",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_fe_r_graphyne",
+      "reported_name": "Fe@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_ru_r_graphyne",
+      "reported_name": "Ru@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_os_r_graphyne",
+      "reported_name": "Os@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_co_r_graphyne",
+      "reported_name": "Co@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_rh_r_graphyne",
+      "reported_name": "Rh@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_ir_r_graphyne",
+      "reported_name": "Ir@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_ni_r_graphyne",
+      "reported_name": "Ni@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_pd_r_graphyne",
+      "reported_name": "Pd@R-graphyne",
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat_pt_r_graphyne",
+      "reported_name": "Pt@R-graphyne",
+      "ownership": "focal_work"
+    }
+  ],
+  "calculations": [
+    {
+      "calculation_id": "calc_r_graphyne",
+      "material_refs": [
+        "cat_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.450 eV",
+          "value": 0.450,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC1",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 4,
+              "section": "2.1. Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine R-graphyne",
+              "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.423 eV",
+          "value": 0.423,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 4,
+              "section": "2.1. Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine R-graphyne",
+              "text_snippet": "two different adsorption sites (namely, TC1 and TC2) can be obtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_graphene",
+      "material_refs": [
+        "cat_graphene"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "1.642 eV",
+          "value": 1.642,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 4,
+              "section": "2.1. Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine R-graphyne",
+              "text_snippet": "compared with the inert HER activity of graphene (1.642 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_fe_r_graphyne",
+      "material_refs": [
+        "cat_fe_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.239 eV",
+          "value": 0.239,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.140 eV",
+          "value": -0.140,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.122 eV",
+          "value": 0.122,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC4",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.181 eV",
+          "value": 0.181,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC5",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.235 eV",
+          "value": 0.235,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC6",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.250 eV",
+          "value": 0.250,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC7",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.237 eV",
+          "value": 0.237,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC8",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as 0.239, −0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.142 eV",
+          "value": 0.142,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TFe",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TFe site can also exhibit considerably high HER activity, in view of the small ∆GH* value of 0.142 eV",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_ru_r_graphyne",
+      "material_refs": [
+        "cat_ru_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.104 eV",
+          "value": -0.104,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.014 eV",
+          "value": -0.014,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.316 eV",
+          "value": 0.316,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC4",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.328 eV",
+          "value": 0.328,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC5",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping Ru can make the ∆GH* values of some C-sites become smaller, including TC2 (−0.104), TC3 (−0.014), TC4 (0.316) and TC5 (0.328 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.501 eV",
+          "value": -0.501,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TRu",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TRu (−0.501 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "theoretical_overpotential",
+          "raw_value": "1.43 V",
+          "value": 1.43,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 8,
+              "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+              "text_snippet": "the calculated ηOER values of Ru@R-graphyne (1.43 V) and Ir@R-graphyne (1.16 V) can be largely positive",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_os_r_graphyne",
+      "material_refs": [
+        "cat_os_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.140 eV",
+          "value": -0.140,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC1",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.272 eV",
+          "value": 0.272,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.263 eV",
+          "value": -0.263,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.196 eV",
+          "value": 0.196,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC4",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.334 eV",
+          "value": 0.334,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC5",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "doping of Os can also bring the smaller ∆GH* values to most of the C-sites, including TC1 (−0.140 eV), TC2 (0.272 eV), TC3 (−0.263 eV), TC4 (0.196 eV) and TC5 (0.334 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.778 eV",
+          "value": -0.778,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TOs",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 5,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TOs (−0.778 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_co_r_graphyne",
+      "material_refs": [
+        "cat_co_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.068 eV",
+          "value": 0.068,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 6,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.069 eV",
+          "value": 0.069,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TCo",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 6,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have the near-zero ∆GH* value",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "theoretical_overpotential",
+          "raw_value": "0.74 V",
+          "value": 0.74,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 8,
+              "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+              "text_snippet": "Co@R-graphyne (0.74 V) can have certain OER activity",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_rh_r_graphyne",
+      "material_refs": [
+        "cat_rh_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.118 eV",
+          "value": -0.118,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 6,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.037 eV",
+          "value": -0.037,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 6,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC2 (−0.118 eV) and TC3 (−0.037 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.497 eV",
+          "value": -0.497,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TRh",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TRh (−0.497 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "theoretical_overpotential",
+          "raw_value": "0.48 V",
+          "value": 0.48,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 8,
+              "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+              "text_snippet": "especially Rh@R-graphyne can exhibit considerably high OER performance considering the very low ηOER value of 0.48 V",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_ir_r_graphyne",
+      "material_refs": [
+        "cat_ir_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.005 eV",
+          "value": -0.005,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC1",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as −0.005, 0.246, −0.099 and 0.241 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.246 eV",
+          "value": 0.246,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC2",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as −0.005, 0.246, −0.099 and 0.241 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.099 eV",
+          "value": -0.099,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as −0.005, 0.246, −0.099 and 0.241 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.241 eV",
+          "value": 0.241,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC4",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "the calculated ∆GH* values of carbon sites (including TC1, TC2, TC3 and TC4) near the Ir-doping site can be as small as −0.005, 0.246, −0.099 and 0.241 eV, respectively",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "-0.581 eV",
+          "value": -0.581,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TIr",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TIr (−0.581 eV)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "theoretical_overpotential",
+          "raw_value": "1.16 V",
+          "value": 1.16,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 8,
+              "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+              "text_snippet": "the calculated ηOER values of Ru@R-graphyne (1.43 V) and Ir@R-graphyne (1.16 V) can be largely positive",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_ni_r_graphyne",
+      "material_refs": [
+        "cat_ni_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.210 eV",
+          "value": 0.210,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC3 site (0.210 eV) on Ni@R-graphyne",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "theoretical_overpotential",
+          "raw_value": "0.31 V",
+          "value": 0.31,
+          "unit": "V",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 8,
+              "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+              "text_snippet": "As for Ni@R-graphyne, the second step (OH* →*O) can be considered as the PDS step of OER (Figure 5b), and the calculated ηOER value can be as small as 0.31 V",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_pd_r_graphyne",
+      "material_refs": [
+        "cat_pd_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.240 eV",
+          "value": 0.240,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC1",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.282 eV",
+          "value": 0.282,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC3",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "calculation_id": "calc_pt_r_graphyne",
+      "material_refs": [
+        "cat_pt_r_graphyne"
+      ],
+      "calculation_type": "dft",
+      "code": "VASP",
+      "functional": "PBE",
+      "dispersion_correction": "DFT-D2",
+      "plane_wave_cutoff_or_basis": "400 eV",
+      "k_points": "3 x 3 x 1",
+      "vacuum_thickness": {
+        "raw_value": "20 Å",
+        "value": 20.0,
+        "unit": "Å",
+        "qualifier": "exact"
+      },
+      "spin_treatment": "spin-polarized",
+      "ownership": "focal_work",
+      "outputs": [
+        {
+          "property": "adsorption_free_energy",
+          "raw_value": "0.267 eV",
+          "value": 0.267,
+          "unit": "eV",
+          "qualifier": "exact",
+          "adsorbate_or_intermediate": "H*",
+          "site": "TC1",
+          "evidence": [
+            {
+              "source_id": "src-bbd6b9071cef5e09",
+              "page": 7,
+              "section": "2.2. The HER Performance of TM@R-graphyne",
+              "text_snippet": "TC1 site (0.267 eV) on Pt@R-graphyne",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

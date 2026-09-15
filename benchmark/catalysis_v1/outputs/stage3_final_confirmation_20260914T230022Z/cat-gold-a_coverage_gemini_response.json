@@ -1,0 +1,316 @@
+{
+  "dispositions": [
+    {
+      "candidate_id": "catcand-5c28835fdf4fded7",
+      "status": "rejected",
+      "reason": "The candidate describes mathematical formulas for calculating conversion, selectivity, and space-time yield rather than reporting specific experimental observations."
+    },
+    {
+      "candidate_id": "catcand-4d8b25e628df61b4",
+      "status": "rejected",
+      "reason": "The candidate reports a general, non-specific observation for multiple materials with an upper-bound estimate rather than a precise experimental measurement for a specific catalyst."
+    },
+    {
+      "candidate_id": "catcand-d993e51db7fe1ace",
+      "status": "accepted",
+      "reason": "The candidate reports explicit CO2 conversion values for MMONiCo (~80 % at 350 ◦C) and MMONiFe (50 % at 350 ◦C) during catalytic methanation.",
+      "catalysts": [
+        {
+          "local_id": "cat-MMONiCo",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 9,
+              "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+              "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        },
+        {
+          "local_id": "cat-MMONiFe",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 9,
+              "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+              "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ],
+      "heterogeneous_experiments": [
+        {
+          "experiment_id": "exp-MMONiCo-conversion-350",
+          "catalyst_ref": "cat-MMONiCo",
+          "reaction": {
+            "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+            "reaction_class": "hydrogenation",
+            "reactants": [
+              {
+                "reported_name": "carbon dioxide",
+                "formula": "CO2"
+              },
+              {
+                "reported_name": "hydrogen",
+                "formula": "H2"
+              }
+            ],
+            "products": [
+              {
+                "reported_name": "methane",
+                "formula": "CH4"
+              },
+              {
+                "reported_name": "water",
+                "formula": "H2O"
+              }
+            ]
+          },
+          "temperature": {
+            "raw_value": "350 ◦C",
+            "value": 350,
+            "unit": "◦C",
+            "qualifier": "exact"
+          },
+          "metrics": [
+            {
+              "property": "conversion",
+              "raw_value": "~80 %",
+              "value": 80,
+              "unit": "%",
+              "qualifier": "approx",
+              "reactant": "CO2",
+              "evidence": [
+                {
+                  "source_id": "src-9d231e2b3a31eb2a",
+                  "page": 9,
+                  "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+                  "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+                  "source_type": "text",
+                  "original_source_type": "native_text"
+                }
+              ]
+            }
+          ],
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 9,
+              "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+              "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        },
+        {
+          "experiment_id": "exp-MMONiFe-conversion-350",
+          "catalyst_ref": "cat-MMONiFe",
+          "reaction": {
+            "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+            "reaction_class": "hydrogenation",
+            "reactants": [
+              {
+                "reported_name": "carbon dioxide",
+                "formula": "CO2"
+              },
+              {
+                "reported_name": "hydrogen",
+                "formula": "H2"
+              }
+            ],
+            "products": [
+              {
+                "reported_name": "methane",
+                "formula": "CH4"
+              },
+              {
+                "reported_name": "water",
+                "formula": "H2O"
+              }
+            ]
+          },
+          "temperature": {
+            "raw_value": "350 ◦C",
+            "value": 350,
+            "unit": "◦C",
+            "qualifier": "exact"
+          },
+          "metrics": [
+            {
+              "property": "conversion",
+              "raw_value": "50 %",
+              "value": 50,
+              "unit": "%",
+              "qualifier": "exact",
+              "reactant": "CO2",
+              "evidence": [
+                {
+                  "source_id": "src-9d231e2b3a31eb2a",
+                  "page": 9,
+                  "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+                  "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+                  "source_type": "text",
+                  "original_source_type": "native_text"
+                }
+              ]
+            }
+          ],
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 9,
+              "section": "3.2.2. Effect of adding Co, Ce, and Fe to the MMONi structure",
+              "text_snippet": "Fig. 9B shows the results for catalytic methanation using \nMMONiCo and MMONiFe. The material containing Co experienced \nbetter CO2 conversions (~80 % at 350 ◦C) than that containing Fe (50 % \nat 350 ◦C).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "catcand-115196c55da81874",
+      "status": "rejected",
+      "reason": "The candidate describes general optimization findings rather than reporting a specific experimental measurement of catalytic activity."
+    },
+    {
+      "candidate_id": "catcand-9c5c97a3f86238b1",
+      "status": "rejected",
+      "reason": "The candidate describes a characterization heating ramp rather than a catalytic reaction experiment."
+    },
+    {
+      "candidate_id": "catcand-2fd1a52a69929250",
+      "status": "rejected",
+      "reason": "The candidate describes the experimental feed composition and reactor setup rather than reporting a specific catalytic activity metric."
+    },
+    {
+      "candidate_id": "catcand-a2d8d0d0f73ad2b2",
+      "status": "rejected",
+      "reason": "The candidate describes a catalyst reduction pretreatment procedure rather than a catalytic reaction experiment."
+    },
+    {
+      "candidate_id": "catcand-b33013e3324df795",
+      "status": "rejected",
+      "reason": "The candidate describes the variables used to calculate space-time yield rather than reporting a specific experimental measurement."
+    },
+    {
+      "candidate_id": "catcand-f661c6ce18419744",
+      "status": "rejected",
+      "reason": "The candidate describes a catalyst reduction pretreatment procedure rather than a catalytic reaction experiment."
+    },
+    {
+      "candidate_id": "catcand-2d41e2b1481a680c",
+      "status": "rejected",
+      "reason": "The candidate reports a general temperature range for maximum conversion across multiple catalysts without specific conversion values."
+    },
+    {
+      "candidate_id": "catcand-343b69c3f7d31dca",
+      "status": "rejected",
+      "reason": "The candidate describes a qualitative trend of conversion enhancement with catalyst mass rather than reporting a specific quantitative measurement."
+    },
+    {
+      "candidate_id": "catcand-9412e02fc390d953",
+      "status": "rejected",
+      "reason": "The candidate describes the lack of significant differences in conversion at 350 ◦C rather than reporting a specific quantitative measurement."
+    },
+    {
+      "candidate_id": "catcand-1d064a65adc71036",
+      "status": "rejected",
+      "reason": "The candidate describes what is depicted in a figure rather than reporting a specific quantitative measurement."
+    },
+    {
+      "candidate_id": "catcand-e3e9a9f061285b36",
+      "status": "accepted",
+      "reason": "The candidate reports an explicit CO2 conversion value of ~85 % after 1400 min of continuous use for the MMONiCo + Ce catalyst.",
+      "catalysts": [
+        {
+          "local_id": "cat-MMONiCoCe",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "Additionally, the MMONiCo + Ce material showed high \nstability, achieving elevated CO2 conversion (~85 %) even after 1400 \nmin of continuous use.",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ],
+      "heterogeneous_experiments": [
+        {
+          "experiment_id": "exp-MMONiCoCe-stability",
+          "catalyst_ref": "cat-MMONiCoCe",
+          "reaction": {
+            "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+            "reaction_class": "hydrogenation",
+            "reactants": [
+              {
+                "reported_name": "carbon dioxide",
+                "formula": "CO2"
+              },
+              {
+                "reported_name": "hydrogen",
+                "formula": "H2"
+              }
+            ],
+            "products": [
+              {
+                "reported_name": "methane",
+                "formula": "CH4"
+              },
+              {
+                "reported_name": "water",
+                "formula": "H2O"
+              }
+            ]
+          },
+          "metrics": [
+            {
+              "property": "conversion",
+              "raw_value": "~85 %",
+              "value": 85,
+              "unit": "%",
+              "qualifier": "approx",
+              "reactant": "CO2",
+              "duration": {
+                "raw_value": "1400 min",
+                "value": 1400,
+                "unit": "min",
+                "qualifier": "exact"
+              },
+              "evidence": [
+                {
+                  "source_id": "src-9d231e2b3a31eb2a",
+                  "page": 10,
+                  "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+                  "text_snippet": "Additionally, the MMONiCo + Ce material showed high \nstability, achieving elevated CO2 conversion (~85 %) even after 1400 \nmin of continuous use.",
+                  "source_type": "text",
+                  "original_source_type": "native_text"
+                }
+              ]
+            }
+          ],
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "Additionally, the MMONiCo + Ce material showed high \nstability, achieving elevated CO2 conversion (~85 %) even after 1400 \nmin of continuous use.",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

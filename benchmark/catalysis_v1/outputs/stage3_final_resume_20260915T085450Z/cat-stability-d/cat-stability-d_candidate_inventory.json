@@ -1,0 +1,498 @@
+[
+  {
+    "candidate_id": "catcand-a9387bb2f0dd262e",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 7,
+    "snippet": "The activity toward CO oxidation improved with an increasing\nnumber of transition metals (from 4 to 7), as shown by the re-\nquiredtemperaturefor50%and10%conversion(T 50 andT10 re-\nspectively,Figure 6b).MESOandHESOscontaining4to6met-\nals did not achieve 100% conversion, with the 4-metal MESO\nfound to not reach 50% conversion (hence no T50 can be re-\nported).The7-metalHESOshowedaT 10 valueof168 °C,which\nwas 63% lower than the 4-metal MESO (at 454°C), and a T50\nvalue of 250°C, which was 56% lower than the 5-metal HESO\n(at569 °C).TheactivityofcommerciallysourcedFe 3O4 wasalso\nevaluated asacomparisonandwasfoundtohaveanintermedi-\nate T50 of 371°C.",
+    "numeric_spans": [
+      "4",
+      "7",
+      "0",
+      "0",
+      "50",
+      "0",
+      "100",
+      "4",
+      "50",
+      "0",
+      "10",
+      "68",
+      "63",
+      "4",
+      "454",
+      "0",
+      "250",
+      "56",
+      "5",
+      "69",
+      "0",
+      "371"
+    ],
+    "unit_spans": [
+      "%",
+      "°C"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-8404a2937fdc0c8b",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 8,
+    "snippet": "To assess the changing rate of CO conversion\novertime,alinearﬁtwasappliedbetween0and2hand2and10\nh(F igureS25,SupportingInformation).Between0and2h,the\n7-metalspineloxidesawanimprovementintheCOconversion\nwithanincreasedrateofCOconversionperhour( +0.62 ±0.13%\nh−1).Conversely,the4-metalspineloxideresultedinadecreasein\nCOconversionof–0.85 ±0.07%h −1.Bothspineloxideshadade-\ncreaseintheCOconversioninthe2–10hregion( −0.34 ±0.01%\nh−1 versus–0.31 ±0.01%h −1 forthe7-and4-metalspineloxides,\nrespectively).",
+    "numeric_spans": [
+      "0",
+      "5",
+      "7",
+      "+0.62",
+      "0.13",
+      "1",
+      "0.85",
+      "0.07",
+      "1",
+      "0.34",
+      "0.01",
+      "1",
+      "0.31",
+      "0.01",
+      "1"
+    ],
+    "unit_spans": [
+      "h",
+      "%",
+      "h−1",
+      "h −1"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-9da6acc3a39ba685",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 8,
+    "snippet": "Figure 6. a) CO oxidation catalytic light-oﬀcurves showing CO conversion as a function of temperature for diﬀerent spinel oxide catalysts b) Comparison of T10 and T50 values as a function of the number of transition metals in each catalyst. * indicates that the 4-metal spinel oxide did not reach 50% conversion. Catalyst stability testing for c) 4 and d) 7-metal spinel oxides held at 647 °C and 208 °C for 14 h respectively. The dotted line indicates the initial activity at the start of the stability test, the raw data is shown behind a smoothed average. Operation conditions: total ﬂow rate of 50 mL min−1, ramp rate of 10 °C min−1, reaction feed of 1 vol% CO/5 vol.% O2 and Ar balance.",
+    "numeric_spans": [
+      "0",
+      "0",
+      "4",
+      "50",
+      "4",
+      "7",
+      "647",
+      "208",
+      "14",
+      "50",
+      "1",
+      "10",
+      "1",
+      "1",
+      "5"
+    ],
+    "unit_spans": [
+      "%",
+      "°C",
+      "h",
+      "ag",
+      "mL min−1",
+      "min−1"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-a363dd4f7a850910",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-35d27988fcc9c639",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 9,
+    "snippet": "The 7-metal\nHESO demonstrated the best catalytic activity with a 10% CO\nconversion temperature (T10)o f1 6 8°C, which was a 63% de-\ncrease compared to the 4-metal MESO (at 454°C).",
+    "numeric_spans": [
+      "7",
+      "10",
+      "0",
+      "6",
+      "8",
+      "63",
+      "4",
+      "454"
+    ],
+    "unit_spans": [
+      "%",
+      "°C"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a0ff249f18c01f6e",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 1,
+    "snippet": "[2]\nSpinel oxides, with the general formula\nof AB2O4, have demonstrated promising\nCOoxidationactivitiesatrelativelylowtem-\nperatures using earth-abundant transition\nmetals.[3] Spinel oxides contain tetrahe-\ndral (A) and octahedral (B) coordinated\ncation sites (Figure 1), which can both be\ntailored to improve catalytic performance\nand speciﬁcity.[4] Octahedral-terminated\nsurfaces (e.g., (111) and (110)) are the pri-\nmary contributors to catalytic activity (e.g.,\nnitrobenzene reduction and oxygen evolu-\ntion reaction) as observed simulations and\nthrough Low Energy Ion Scattering (LEIS)\nexperiments monitoring surface cations.[5]\nWhilethesurfaceisoctahedral-terminated,\nsubsurfacecationspresentintetrahedralsitesareknowntopro-\nduce surface reconstructions and changes to catalytic selectivity\nandperformance.[4,6] Catalyticactivityisfurtherinﬂuencedbythe\nidentity,valence,anddistributionofmetalsbetweencationsites\nas well as the concentration of surface oxygen vacancies (Ov).[6]\nDespitepromisingactivitiesandcatalysttunability,themainlim-\nitations of traditional spinel oxide catalysts remain poor long-\nterm stability and catalyst deactivation, particularly in the pres-\nenceofwaterorsulfur.",
+    "numeric_spans": [
+      "111",
+      "110"
+    ],
+    "unit_spans": [
+      "v"
+    ],
+    "lexical_cues": [
+      "product_selectivity",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-734d5095e704f956",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 2,
+    "snippet": "observed the same improved resistance for the HESO\n(MnCuCo3NiFe)xOy whencomparedtoCo 3O4.[20] Zhangandco-\nworkers then expanded this concept recently for water-resistant\nspinel ACr2O4 (A = Ni, Mg, Cu, Zn, Co) catalyst for C3H6 oxi-\ndation,thatoutperformedsinglemetalspinelswhenexposedto\nwater during operation (stable activity for>100 h versus 20 h,\nrespectively).[21] However, to the best of our knowledge, a sys-\ntematic study of PGM-free HE oxides with increasing disorder\nhasnotyetbeenconductedfortheCOoxidationreaction.",
+    "numeric_spans": [
+      "100",
+      "20"
+    ],
+    "unit_spans": [
+      "h"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-86acffe265d15f62",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 2,
+    "snippet": "evaluated the SO2 resistance of a sin-\ngle HESO (ZnMgCuMnCo)Al2O4 produced via ball milling.[19]\nThe HESO was found to better resist SO2 poisoning in CO oxi-\ndationthanconventionalspinels(e.g.,Co 3O4)andshowedgood\ncatalytic activity (210°C produced 50% CO conversion).",
+    "numeric_spans": [
+      "210",
+      "50"
+    ],
+    "unit_spans": [
+      "°C",
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-c96988c47023962c",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 3,
+    "snippet": "Figure 2. Thermogravimetric analysis (TGA) proﬁles for individual transition metal diethyldithiocarbamate (DDTC) precursors in air a,b) argon. c,d) refer to the pre-ʼmixedʼ precursor powder for 4 (Cr, Mn, Fe, and Co), 5 (Cr, Mn, Fe, Co, and Ni), 6 (Cr, Mn, Fe, Co, Ni, and Cu), and 7 (Cr, Mn, Fe, Co, Ni, Cu, and Zn) metals in air and argon, respectively. Detailed TGA-diﬀerential thermal analysis (TGA-DSC) proﬁles for seven metals pre-ʼmixedʼ in argon e) and air f) conditions highlight a high-temperature mass loss. All TGA proﬁles were collected with a ramp rate of 15 °C min−1 between 50 and 1000 °C. For the DSC proﬁles shown in e,f), positive peaks represent an exothermic transition, and negative peaks an endothermic transition.",
+    "numeric_spans": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "15",
+      "1",
+      "50",
+      "1000"
+    ],
+    "unit_spans": [
+      "°C",
+      "min−1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-c6143ba41496b1a9",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a647b820320e9a8a",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 7,
+    "snippet": "2.5.CatalyticTesting\nThe catalyst activity and stability of the spinel oxides were as-\nsessed using a plug-ﬂow reactor with a total ﬂow rate of 50\nmL min−1 under lean conditions (excess O2).",
+    "numeric_spans": [
+      "2.5",
+      "50",
+      "1"
+    ],
+    "unit_spans": [
+      "mL min−1"
+    ],
+    "lexical_cues": [
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b191938e4eaf986e",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 7,
+    "snippet": "To adjust for catalyst mass loadings, the\nrate of CO conversion (μmol g−1 s−1) was calculated as a func-\ntion of temperature (FigureS20 and EquationS3, Supporting\nInformation).",
+    "numeric_spans": [
+      "1",
+      "1",
+      "0"
+    ],
+    "unit_spans": [
+      "μmol g−1 s−1"
+    ],
+    "lexical_cues": [
+      "conversion",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-10a9049929963632",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 7,
+    "snippet": "The same trend was observed between spinel ox-\nidesinFigure 6,withthecommerciallysourcedFe 3O4 perform-\ning more closely to the CO conversion rates of the 5 and 6-\nmetal HESO.",
+    "numeric_spans": [
+      "5",
+      "6"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-2077f54f4c9351dc",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 8,
+    "snippet": "The 7-metal spinel oxide also recovered some cat-\nalytic activity at≈10 h, which could be the result of changes to\nAdv.",
+    "numeric_spans": [
+      "7",
+      "10"
+    ],
+    "unit_spans": [
+      "h",
+      "v"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-7c30eeb7c7cdcf28",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 8,
+    "snippet": "Operation conditions: total ﬂow rate of 50 mL min−1,\nramprateof10 °Cmin −1,reactionfeedof1vol%CO/5vol.%O 2 andArbalance.",
+    "numeric_spans": [
+      "50",
+      "1",
+      "0",
+      "1",
+      "2"
+    ],
+    "unit_spans": [
+      "mL min−1",
+      "°C",
+      "min −1",
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a43f25adccdd0c95",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 8,
+    "snippet": "a)COoxidationcatalyticlight-oﬀcurvesshowingCOconversionasafunctionoftemperaturefordiﬀerentspineloxidecatalystsb)Comparison\nof T10 and T50 values as a function of the number of transition metals in each catalyst.* indicates that the 4-metal spinel oxide did not reach 50%\nconversion.",
+    "numeric_spans": [
+      "0",
+      "0",
+      "4",
+      "50"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-3741c4c01eef722b",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 9,
+    "snippet": "In addition, the long-term stability of the commercial\nFe3O4 wasassessed(Figure S26,SupportingInformation)forthe\nsameperiod(14h)byholdingat331 0C.Thedecreaseincatalytic\nactivity (3.6%± 0.3%) was comparable to the 7-metal spinel ox-\nide.",
+    "numeric_spans": [
+      "6",
+      "31",
+      "3.6",
+      "0.3",
+      "7"
+    ],
+    "unit_spans": [
+      "h",
+      "%"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-c4f111885bfb439b",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 9,
+    "snippet": "Ther-\nmogravimetricanalysis(TGA)anddiﬀerentialscanningcalorimetry(DSC)\nwereconductedonaMettler-ToledoTGA/DSC1analyzerwitharamprate\nof15 °Cmin −1,atemperaturerangeof25–1000 °CunderbothN 2 andAir\natmospheres.Elementalanalysis(EA)wasundertakenonaThermoﬁsher\nScientiﬁcFlash2000OrganicElementalAnalyzer.Massspectrometrydata\nwascollectedinESI + modeusinganAgilent6120Quadrupolemassspec-\ntrometer.",
+    "numeric_spans": [
+      "5",
+      "1",
+      "5–1000",
+      "2"
+    ],
+    "unit_spans": [
+      "°C",
+      "min −1",
+      "nAg"
+    ],
+    "lexical_cues": [
+      "activation_energy"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-199b69815100e542",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 10,
+    "snippet": "www.advancedsciencenews.com www.advancedscience.com\nand heated to 900°C( 1 5°Cm i n−1 ramp rate) whilst exposed to static\nair,thenheldfor4hunlessstatedotherwise.Forinertatmospherecondi-\ntions, an argon cylinder was used to initially ﬂush the system for 20 min\nat a high ﬂow rate (>250 cm3 min−1) which was reduced to between 60\nand 150 cm3 min−1 when annealing.",
+    "numeric_spans": [
+      "900",
+      "1",
+      "5",
+      "1",
+      "20",
+      ">250",
+      "1",
+      "60",
+      "150",
+      "1"
+    ],
+    "unit_spans": [
+      "°C",
+      "min",
+      "min−1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-4ef99a785de85f21",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 10,
+    "snippet": "The catalysts were pretreated in 20 vol.% O2/Ar at a\nﬂow rate of 50 mL min−1 at 450°C for 1 h at a ramp rate of 10°Cm i n−1\nbeforethereactiontoreducesurfacecontaminationasseenpreviously.",
+    "numeric_spans": [
+      "20",
+      "50",
+      "1",
+      "450",
+      "1",
+      "10",
+      "1"
+    ],
+    "unit_spans": [
+      "%",
+      "mL min−1",
+      "°C",
+      "h"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-04bade956f479b57",
+    "source_id": "src-735893b662b2fd94",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "page": 6,
+    "snippet": "Some Cr\nsegregation was also observed by STEM-EDS for all samples at\ntheshortest-lengthscales,butnotdetectedatlonger-lengthscales\n(≈50nm).OnepossibleexplanationforCrsegregationcouldbe\nthe higher onset temperature of decomposition for Cr(DDTC)3,\northeincompletedissolutionofindividualprecursorsleadingto\nsome local inhomogeneity.[24d,e] Further synthetic optimization\ncould potentially mitigate both instances of segregation, for ex-\nample by changing the annealing temperature, time, or ramp\nrate.[40]\n2.4.SurfaceCharacterizationviaXPS\nTo better understand the surface chemistry of HESO powders\npre-catalysis, XPS was conducted on all 5 samples.",
+    "numeric_spans": [
+      "3",
+      "2.4",
+      "5"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  }
+]

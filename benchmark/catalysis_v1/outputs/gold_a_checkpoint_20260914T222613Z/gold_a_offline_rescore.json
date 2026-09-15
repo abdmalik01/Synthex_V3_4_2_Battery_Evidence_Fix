@@ -1,0 +1,312 @@
+{
+  "mode": "offline_saved_checkpoint_rescore",
+  "external_calls": 0,
+  "checkpoint": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\gold_a_checkpoint_20260914T222613Z",
+  "benchmark_id": "CAT-GOLD-A",
+  "original_metric_association": {
+    "expected_count": 8,
+    "matched_count": 0,
+    "results": [
+      {
+        "expected": {
+          "property": "conversion",
+          "value": 80,
+          "unit": "%",
+          "qualifier": "approx",
+          "reactant": "CO2",
+          "context": {
+            "catalyst": "MMONiCo",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 9,
+            "section": "3.2.2"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "conversion",
+          "value": 50,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO2",
+          "context": {
+            "catalyst": "MMONiFe",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 9,
+            "section": "3.2.2"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 168,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiCo + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 150,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiCo",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 148,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONi + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 108,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiFe + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 105,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONi",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 80,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiFe",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": false
+      }
+    ]
+  },
+  "normalized_metric_association": {
+    "expected_count": 8,
+    "matched_count": 8,
+    "results": [
+      {
+        "expected": {
+          "property": "conversion",
+          "value": 80,
+          "unit": "%",
+          "qualifier": "approx",
+          "reactant": "CO2",
+          "context": {
+            "catalyst": "MMONiCo",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 9,
+            "section": "3.2.2"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "conversion",
+          "value": 50,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO2",
+          "context": {
+            "catalyst": "MMONiFe",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 9,
+            "section": "3.2.2"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 168,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiCo + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 150,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiCo",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 148,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONi + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 108,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiFe + Ce",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 105,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONi",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      },
+      {
+        "expected": {
+          "property": "productivity",
+          "value": 80,
+          "unit": "mol CH4 h-1 L-1",
+          "product": "CH4",
+          "context": {
+            "catalyst": "MMONiFe",
+            "temperature": "350 °C",
+            "reaction": "hydrogenation"
+          },
+          "evidence_locator": {
+            "page": 10,
+            "section": "3.2.3"
+          }
+        },
+        "matched": true
+      }
+    ]
+  },
+  "scientific_record_modified": false,
+  "gold_record_modified": false
+}

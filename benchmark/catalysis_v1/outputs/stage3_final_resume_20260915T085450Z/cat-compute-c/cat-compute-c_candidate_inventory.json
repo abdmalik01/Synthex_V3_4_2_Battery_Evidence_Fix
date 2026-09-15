@@ -1,0 +1,1082 @@
+[
+  {
+    "candidate_id": "catcand-79ea455d4524345f",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "As shown in Figure 1e, two different adsorption sites (namely, TC1 and TC2) can be\nobtained on the 2D R-graphyne, and the calculated ∆GH* values are 0.450 eV and 0.423 eV ,\nrespectively, indicating a certain catalytic activity of the HER.",
+    "numeric_spans": [
+      "0.450",
+      "0.423"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b12e8046c47ea87b",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "Obviously,  compared \nwith the inert HER  activity of graphene (1.642 eV), the R-graphyne can show a good  \ntrend of change in HER catalytic performance, although both of them can be regarded as \n2D π-conjugated structures composed of sp 2- or sp -hybridized C atoms.",
+    "numeric_spans": [
+      "1.642",
+      "2"
+    ],
+    "unit_spans": [
+      "eV",
+      "a g"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e838d29e8201ca46",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "As shown in Figure 1 e, two different adsorption sites (namely, TC1 and TC2) can be \nobtained on the 2D R-graphyne, and the calculated ΔG H* values are 0.450 eV and 0.423 \neV , respectively, indicating a certain catalytic activity of the HER.",
+    "numeric_spans": [
+      "0.450",
+      "0.423"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-00708847d1e8758f",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 5,
+    "snippet": "Speciﬁcally, the calculated ∆GH*\nvalues of TC2, TC3, TC4, TC5, TC6, TC7 and TC8 sites on Fe@R-graphyne can be as small as\n0.239,−0.140, 0.122, 0.181, 0.235, 0.250 and 0.237 eV , respectively, uniformly suggesting\nconsiderably high HER catalytic activity.",
+    "numeric_spans": [
+      "0.239",
+      "0.140",
+      "0.122",
+      "0.181",
+      "0.235",
+      "0.250",
+      "0.237"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d37e1953a9386fa2",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 5,
+    "snippet": "Speciﬁcally, doping Ru\ncan make the ∆GH* values of some C-sites become smaller, including T C2 (−0.104), TC3\n(−0.014), TC4 (0.316) and TC5 (0.328 eV), all of which can possess higher HER activity than\nthe pristine R-graphyne.",
+    "numeric_spans": [
+      "0.104",
+      "0.014",
+      "0.316",
+      "0.328"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-2aba6a11dc628842",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "Specifically, doping \nRu can make the ΔG H* values of some C-sites become smaller, including T C2 (−0.104), TC3 \n(−0.014), TC4 (0.316) and T C5 (0.328 eV), all of which can possess higher HER activity than \nthe pristine R-graphyne.",
+    "numeric_spans": [
+      "0.104",
+      "0.014",
+      "0.316",
+      "0.328"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-7f5d12a80aea65eb",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "As for Rh@R-graphyne, most of the C-sites (including T C2,\nTC3, TC4, TC5 and TC6) can also exhibit enhanced HER activity compared with the pristine\nR-graphyne, as reﬂected by their much smaller∆GH* values in the range of−0.118~0.399 eV .",
+    "numeric_spans": [
+      "0.118",
+      "~0.399"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-33d412a48c16c97f",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 7,
+    "snippet": "Molecules 2023, 28, 3888 7 of 15\nTC3 and TC4) near the Ir-doping site can be as small as−0.005, 0.246,−0.099 and 0.241 eV ,\nrespectively, reﬂecting considerably high HER activity.",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "7",
+      "15",
+      "0.005",
+      "0.246",
+      "0.099",
+      "0.241"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-edd9d17ef88a4f06",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 7,
+    "snippet": "The calculated\nabsolute ∆GH* values of the remaining C-sites on TM@R-graphyne can be in the range of\n0.372~0.600 eV , 0.351~0.421 eV and 0.303~0.429 eV for TM = Ni, Pd and Pt, respectively,\nmost of which can be comparable to the corresponding values of pristine R-graphyne,\nsuggesting that these C-sites can basically maintain the original HER activity.",
+    "numeric_spans": [
+      "0.372",
+      "~0.600",
+      "0.351",
+      "~0.421",
+      "0.303",
+      "~0.429"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1cd7882110ebd6f2",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "It is worth mentioning that the \noverpotentials of Ni@R-graphyne (0.31 V) and Rh@R-graphyne (0.48 V) can be compar a-\nble to or even lower than those of the state -of-the-art IrO2 (0.56 V) [12] and other pr evi-\nously reported MoC2 (0.45 V) [16] and RuO2 (0.42 V) [49] systems.",
+    "numeric_spans": [
+      "0.31",
+      "0.48",
+      "0.56",
+      "0.45",
+      "0.42"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-657d1ebba41b84c7",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "It is worth mentioning that the \noverpotentials of Ni@R-graphyne (0.31 V) and Rh@R-graphyne (0.48 V) can be compar a-\nble to or even lower than those of the state -of-the-art IrO2 (0.56 V) [12] and other pr evi-\nously reported MoC2 (0.45 V) [16] and RuO2 (0.42 V) [49] systems.",
+    "numeric_spans": [
+      "0.31",
+      "0.48",
+      "0.56",
+      "0.45",
+      "0.42"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a9e9bbb1d626055e",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 12,
+    "snippet": "In particular, Ni@R-graphyne and Rh@R-graphyne\ncan be identiﬁed as promising electrocatalysts, being capable of driving OER under very\nsmall overpotentials of 0.31 V and 0.48 V , respectively.∆GO* can be considered to be a good\ndescriptor for their OER activities.",
+    "numeric_spans": [
+      "0.31",
+      "0.48"
+    ],
+    "unit_spans": [
+      "V",
+      "a g"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5dffe54fd8a10b88",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "Obviously, compared with\nthe inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend\nof change in HER catalytic performance, although both of them can be regarded as 2D\nπ-conjugated structures composed of sp2- or sp-hybridized C atoms.",
+    "numeric_spans": [
+      "1.642"
+    ],
+    "unit_spans": [
+      "eV",
+      "a g"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1e955a68015cc2f7",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 5,
+    "snippet": "Comparatively, the calculated ∆GH*\nvalues of the remaining C-sites on Os@R-graphyne are in the range of 0.461~0.496 eV ,\nindicating that these C-sites can maintain the original HER activity.",
+    "numeric_spans": [
+      "0.461",
+      "~0.496"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-984b814d8df05aaf",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 5,
+    "snippet": "In contrast, the absolute ∆GH* values of the\nremaining C-sites (except for T C1) are in the range of 0.425~0.503 eV , all of which are\ncomparable to the corresponding those of pristine R-graphyne, implying that these C-sites\ncan maintain the original HER activity.",
+    "numeric_spans": [
+      "0.425",
+      "~0.503"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-14d3eca70ab0dbcb",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "In contrast, the absolute ΔG H* values of \nthe remaining C-sites (except for TC1) are in the range of 0.425~0.503 eV , all of which are \ncomparable to the corresponding those of pristine R -graphyne, implying that these \nC-sites can maintain the original HER activity.",
+    "numeric_spans": [
+      "0.425",
+      "~0.503"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1dc5a2476cf4ea9d",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "Our computed\nresults show that for Co@R-graphyne, both the TC3 (0.068) and TCo (0.069 eV) sites can have\nthe near-zero ∆GH* value, indicating the remarkable HER activity of these two sites.",
+    "numeric_spans": [
+      "0.068",
+      "0.069"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5c2cf56adab144ff",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "Particularly, some C-sites near the Rh-doping site can even present very small∆GH* values,\nnamely TC2 (−0.118 eV) and TC3 (−0.037 eV), indicating the considerably high HER activity.",
+    "numeric_spans": [
+      "0.118",
+      "0.037"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-894f699f24d26f16",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "In addition, with the increase in the\nperiodic number of the doped TM atom, the adsorption strength of H* at the metal site will\nincrease, and the corresponding HER catalytic activity will gradually decrease, as revealed\nby the calculated ∆GH* results of three TM sites including TFe (0.142 eV), TRu (−0.501 eV)\nand TOs (−0.778 eV).",
+    "numeric_spans": [
+      "0.142",
+      "0.501",
+      "0.778"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ca04cf7dc0071be0",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "In addition, with the increase in the \nperiodic number of the doped TM atom, the adsorption strength of H* at the m etal site \nwill increase, and the corresponding HER catalytic activity will gradually decrease,  as \nrevealed by the calculated ΔGH* results of three TM  sites including T Fe (0.142 eV), T Ru \n(−0.501 eV) and TOs (−0.778 eV).",
+    "numeric_spans": [
+      "0.142",
+      "0.501",
+      "0.778"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e5202e3d10d35946",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "Comparatively, the calculated ΔG H* \nvalues of the remaining C-sites on Os@R-graphyne are in the range of 0.461~0.496 eV , in-\ndicating that these C-sites can maintain the original HER activity.",
+    "numeric_spans": [
+      "0.461",
+      "~0.496"
+    ],
+    "unit_spans": [
+      "H",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-f0c3cce04b2bbccd",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "The\nabsolute values of ∆GH* for other C-sites (except for TC1) are in the range of 0.369~0.449 eV ,\nindicating that their HER activity can be superior to or comparable to the corresponding\nactivity of pure R-graphyne.",
+    "numeric_spans": [
+      "0.369",
+      "~0.449"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-6ea72394024d35d2",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 7,
+    "snippet": "In addition,\nall three relevant TM sites (Ni, Pd and Pt) can have largely positive ∆GH* values in the\nrange of 0.586~0.887 eV (Table S2), indicating relatively poor HER activity.",
+    "numeric_spans": [
+      "0.586",
+      "~0.887"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ae49884eb2ff025b",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 7,
+    "snippet": "Similarly, with the increase inthe\nperiodic number of TM atoms from Co to Ir, the HER catalytic activity of the TM site can\npresent a gradually decreasing trend, which is reﬂected in the corresponding ∆GH* results\nof three TM sites including TCo (0.069 eV), TRh (−0.497 eV) and TIr (−0.581 eV).",
+    "numeric_spans": [
+      "0.069",
+      "0.497",
+      "0.581"
+    ],
+    "unit_spans": [
+      "a g",
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-c5773539e4d5ed1d",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 7,
+    "snippet": "Speciﬁcally, the T C3 site (0.210 eV) on\nNi@R-graphyne, the TC1 (0.240 eV) and TC3 (0.282 eV) sites on Pd@R-graphyne and the TC1\nsite (0.267 eV) on Pt@R-graphyne can exhibit relatively high HER activity.",
+    "numeric_spans": [
+      "0.210",
+      "0.240",
+      "0.282",
+      "0.267"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1677aac666b1a18d",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "Comparatively, Co@R-graphyne (0.74 V) can have certain OER activity, and\nespecially Rh@R-graphyne can exhibit considerably high OER performance considering\nthe very low ηOER value of 0.48 V .",
+    "numeric_spans": [
+      "0.74",
+      "0.48"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-6f46ace026d62597",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "Among them, the calculated η OER values of Ru@R-graphyne (1.43 \nV) and Ir@R-graphyne (1.16 V) can be largely positive, indicating the inert OER catalytic \nactivity.",
+    "numeric_spans": [
+      "1.43",
+      "1.16"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-70f102e459af88cf",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "Comparatively, Co@R-graphyne (0.74 V) can have certain OER activity, and es-\npecially Rh@R-graphyne can exhibit considerably high OER performance considering the \nvery low ηOER value of 0.48 V .",
+    "numeric_spans": [
+      "0.74",
+      "0.48"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-99eee53c5fcaf8de",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "Among them, the calculated ηOER values of Ru@R-graphyne\n(1.43 V) and Ir@R-graphyne (1.16 V) can be largely positive, indicating the inert OER cat-\nalytic activity.",
+    "numeric_spans": [
+      "1.43",
+      "1.16"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1dabfd2d99489de8",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "Among them, the calculated η OER values of Ru@R-graphyne (1.43 \nV) and Ir@R-graphyne (1.16 V) can be largely positive, indicating the inert OER catalytic \nactivity.",
+    "numeric_spans": [
+      "1.43",
+      "1.16"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-fa9fcd9b19dbb80f",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "Comparatively, Co@R-graphyne (0.74 V) can have certain OER activity, and es-\npecially Rh@R-graphyne can exhibit considerably high OER performance considering the \nvery low ηOER value of 0.48 V .",
+    "numeric_spans": [
+      "0.74",
+      "0.48"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a48da25393ad03c9",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 1,
+    "snippet": "molecules\nArticle\nTheoretical Investigation of HER and OER Electrocatalysts\nBased on the 2D R-graphyne Completely Composed of\nAnti-Aromatic Carbon Rings\nCuimei Li 1,3 , Tianya Li 1, Guangtao Yu 1,* and Wei Chen 1,2, *\n1 Engineering Research Center of Industrial Biocatalysis, Fujian Provincial Key Laboratory of Advanced\nMaterials Oriented Chemical Engineering, College of Chemistry and Materials Science, Fujian Normal\nUniversity, Fuzhou 350007, China; lcm19@mails.jlu.edu.cn (C.L.); leechemistry@163.com (T.L.)\n2 Academy of Carbon Neutrality of Fujian Normal University, Fuzhou 350007, China\n3 Laboratory of Theoretical and Computational Chemistry, Institute of Theoretical Chemistry, Jilin University,\nChangchun 130023, China\n* Correspondence: yugt@fjnu.edu.cn (G.Y.); chenwei@fjnu.edu.cn (W.C.)\nAbstract: Based on the DFT calculations, two-dimensional (2D) R-graphyne has been demonstrated\nto have high stability and good conductivity, which can be conducive to the relevant electrocatalytic\nactivity of the material.",
+    "numeric_spans": [
+      "1,3",
+      "1",
+      "1",
+      "1,2",
+      "1",
+      "350007",
+      "9",
+      "163",
+      "2",
+      "350007",
+      "3",
+      "130023"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-c639309e619924a6",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 2,
+    "snippet": "Molecules 2023, 28, 3888 2 of 15\nwith other materials and affording them good catalytic activity by introducing defects\nor heteroatoms.",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "2",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-98b1eeabcd5bef16",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 3,
+    "section": "2.1. Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine",
+    "snippet": "Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine\nR-graphyne\nThe dynamically and mechanically stable R-graphyne with a space group of P4/MMM\ncan be considered to be composed of a four-membered carbon ring (C 4) and a sixteen-\nmembered carbon ring (C16), as shown in Figure 1a.",
+    "numeric_spans": [
+      "4",
+      "6"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e9b9e158d744cbbe",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 3,
+    "section": "2.1. Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine",
+    "snippet": "Structure, Stability, Electronic Property and HER Electrocatalytic Activity of Pristine \nR-graphyne \nThe dynamically and mechanically stable R -graphyne with a space group of \nP4/MMM can be considered to be composed of a four -membered carbon ring (C 4) and a \nsixteen-membered carbon ring (C16), as shown in Figure 1a.",
+    "numeric_spans": [
+      "4",
+      "6"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-1d33bcfd88d6b5b5",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "Molecules 2023, 28, 3888 4 of 15\nmeasure HER activity [13,18,23,30,47].",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "4",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-40930699d694faa5",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 4,
+    "snippet": "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+    "numeric_spans": [
+      "1.642"
+    ],
+    "unit_spans": [
+      "eV",
+      "a g"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "table_reported",
+    "table_id": "tbl-20f5b5fea4ee0323",
+    "row": 0,
+    "column": 1,
+    "cell_id": "tbl-20f5b5fea4ee0323:r0:c1",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ebca62d684458ae0",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 5,
+    "snippet": "Moreover, the TFe site can also exhibit considerably\nhigh HER activity, in view of the small ∆GH* value of 0.142 eV .",
+    "numeric_spans": [
+      "0.142"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-818cc5e98db41ac5",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 6,
+    "snippet": "Molecules 2023, 28, 3888 6 of 15\nand the TM-doping site can generally bring a better HER catalytic activity of the C-site,\nmainly because it can be activated more effectively.",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "6",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-44519876cbfd0ae5",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "snippet": "Molecules 2023, 28, 3888 8 of 15\nMolecules 2023, 28, x FOR PEER REVIEW 8 of 16 \n \n \nObviously, embedding the TM atoms in Group VIIIB can be considered an effective \nstrategy to improve the HER catalytic activity of 2D R-graphyne completely composed of \nanti-aromatic structural units.",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "8",
+      "15",
+      "2023",
+      "28",
+      "8",
+      "16"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-7fe73ff2324af9f5",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "As for Ni@R-graphyne, the second step (OH* →*O) can be \nconsidered as the PDS step of OER (Figure 5b), and the calculated η OER value can be as \nsmall as 0.31 V , indicating excellent OER catalytic activity.",
+    "numeric_spans": [
+      "0.31"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-fa0946228769169b",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "As for Ni@R-graphyne, the second step (OH*→*O) can\nbe considered as the PDS step of OER (Figure 5b), and the calculated ηOER value can be as\nsmall as 0.31 V , indicating excellent OER catalytic activity.",
+    "numeric_spans": [
+      "0.31"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-3ea7af693ff2bee8",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "As for Ni@R-graphyne, the second step (OH* →*O) can be \nconsidered as the PDS step of OER (Figure 5b), and the calculated η OER value can be as \nsmall as 0.31 V , indicating excellent OER catalytic activity.",
+    "numeric_spans": [
+      "0.31"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-510e9e767d5f28f4",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "The pink region in Figure 7 predicts the limiting overpotentials η of the TM@R-graphyne \nseries, which can be as small as 0.29 V .",
+    "numeric_spans": [
+      "0.29"
+    ],
+    "unit_spans": [
+      "k",
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-537155fdbca3a069",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 9,
+    "snippet": "The pink\nregion in Figure 7 predicts the limiting overpotentials η of the TM@R-graphyne series,\nwhich can be as small as 0.29 V .",
+    "numeric_spans": [
+      "0.29"
+    ],
+    "unit_spans": [
+      "k",
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-6f24d8b1ecb79763",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 11,
+    "snippet": "Molecules 2023, 28, 3888 11 of 15\nIn general, in addition to HER activity, the OER catalytic performance of 2D R-\ngraphyne composed entirely of anti-aromatic structural units can also be effectively im-\nproved by doping the TM atoms in Group VIIIB.",
+    "numeric_spans": [
+      "2023",
+      "28",
+      "3888",
+      "11",
+      "15"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-4e82394d4ac9f4f2",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 12,
+    "snippet": "The following interesting ﬁndings can be mainly obtained:\n(1) Compared with the inert graphene, 2D R-graphyne can exhibit certain HER elec-\ntrocatalytic activity, which is mainly due to the anti-aromaticity of all its structural unit\nrings.",
+    "numeric_spans": [
+      "1"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e8c9e88d24c49b3a",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 12,
+    "snippet": "(2) Embedding the Group VIIIB atoms (i.e., Fe, Ru, Os, Co, Rh, Ir, Ni, Pd and Pt)\ncan be considered as an effective approach to improve the HER catalytic activity of R-\ngraphyne, where the C-atoms near the TM-doping site can usually be used as highly active\nsites.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-46a3b05e33cf2952",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 14,
+    "snippet": "Increasing Silicon Concentration and Doping Heteroatom to Successfully Realize High HER\nCatalytic Activity in 2D Metal-Free BSi n (n = 1–4) Structures: A First-Principles Study.",
+    "numeric_spans": [
+      "1–4"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-248b90cb12f7cfd6",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 8,
+    "section": "2.3. Evaluation of OER Catalytic Activity of TM@R-graphyne",
+    "snippet": "It is worth mentioning that the\noverpotentials of Ni@R-graphyne (0.31 V) and Rh@R-graphyne (0.48 V) can be comparable\nto or even lower than those of the state-of-the-art IrO2 (0.56 V) [12] and other previously\nreported MoC2 (0.45 V) [16] and RuO2 (0.42 V) [49] systems.",
+    "numeric_spans": [
+      "0.31",
+      "0.48",
+      "0.56",
+      "0.45",
+      "0.42"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 2,
+    "priority": "low"
+  },
+  {
+    "candidate_id": "catcand-b43ac687a639660f",
+    "source_id": "src-bbd6b9071cef5e09",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "page": 12,
+    "snippet": "The overpotential for OER (ηOER) was\ncalculated according to Nørskov’s assumption [49]:\nηOER = max{∆G1, ∆G2, ∆G3, ∆G4}/e− 1.23 (8)\nwhere ∆Gi (i = 1–4) and 1.23 represent the Gibbs free energy change for step (i) and the\nequilibrium potential.",
+    "numeric_spans": [
+      "1.23",
+      "8",
+      "1–4",
+      "1.23"
+    ],
+    "unit_spans": [
+      "v",
+      "s"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 1,
+    "priority": "low"
+  }
+]

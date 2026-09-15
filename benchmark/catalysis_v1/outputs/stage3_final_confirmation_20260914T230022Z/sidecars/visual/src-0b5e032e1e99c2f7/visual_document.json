@@ -1,0 +1,1984 @@
+{
+  "source_id": "src-0b5e032e1e99c2f7",
+  "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-0b5e032e1e99c2f7",
+    "filename": "1-s2.0-S0378382025000918-main.pdf",
+    "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 16,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 17,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 18,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 19,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 20,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 21,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 22,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 23,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 24,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 25,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 26,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 27,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 28,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 29,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 30,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 31,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 32,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 33,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 36,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\sidecars\\visual\\src-0b5e032e1e99c2f7\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 12,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 13,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 14,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 15,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 16,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 17,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 18,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 19,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 20,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 21,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 22,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 23,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 24,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 25,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 26,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 27,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 28,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 29,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 30,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 31,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 32,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 33,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-57b5de4428a37646",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 1,
+      "bbox": {
+        "x0": 36.793701171875,
+        "y0": 61.965087890625,
+        "x1": 96.37800598144531,
+        "y1": 127.1619873046875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 1,
+        "object_id": "fig-57b5de4428a37646",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 36.793701171875,
+          "y0": 61.965087890625,
+          "x1": 96.37800598144531,
+          "y1": 127.1619873046875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-877bc5149b5f1543",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 1,
+      "bbox": {
+        "x0": 501.052001953125,
+        "y0": 55.44550323486328,
+        "x1": 557.744873046875,
+        "y1": 126.99200439453125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 1,
+        "object_id": "fig-877bc5149b5f1543",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 501.052001953125,
+          "y0": 55.44550323486328,
+          "x1": 557.744873046875,
+          "y1": 126.99200439453125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b33a4428c14e2d34",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 1,
+      "bbox": {
+        "x0": 501.0400085449219,
+        "y0": 148.7432861328125,
+        "x1": 529.0400390625,
+        "y1": 176.7432861328125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 1,
+        "object_id": "fig-b33a4428c14e2d34",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 501.0400085449219,
+          "y0": 148.7432861328125,
+          "x1": 529.0400390625,
+          "y1": 176.7432861328125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-00bd06113374b11b",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 1,
+      "bbox": {
+        "x0": 37.500099182128906,
+        "y0": 55.635009765625,
+        "x1": 557.6630249023438,
+        "y1": 668.6649780273438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 1,
+        "object_id": "fig-00bd06113374b11b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.500099182128906,
+          "y0": 55.635009765625,
+          "x1": 557.6630249023438,
+          "y1": 668.6649780273438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-530779b8821b299f",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 2,
+      "figure_number": "1",
+      "caption": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24].",
+      "bbox": {
+        "x0": 302.51300048828125,
+        "y0": 525.068359375,
+        "x1": 547.7449951171875,
+        "y1": 726.236328125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 2,
+        "object_id": "fig-530779b8821b299f",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 302.51300048828125,
+          "y0": 525.068359375,
+          "x1": 547.7449951171875,
+          "y1": 726.236328125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f9490de46ab3205f",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 2,
+      "figure_number": "1",
+      "caption": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24].",
+      "bbox": {
+        "x0": 46.779232025146484,
+        "y0": 527.8834228515625,
+        "x1": 290.55169677734375,
+        "y1": 722.5382080078125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 2,
+        "object_id": "fig-f9490de46ab3205f",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 46.779232025146484,
+          "y0": 527.8834228515625,
+          "x1": 290.55169677734375,
+          "y1": 722.5382080078125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 1. CO2 Emissions by (a) sectors and (b) energy sources from 1990 to 2021 [24]. (c) CO2 emission drivers showing trends from 1990 to 2021 [24].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b76163690f3387b9",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 3,
+      "bbox": {
+        "x0": 69.618896484375,
+        "y0": 247.56097412109375,
+        "x1": 524.6239013671875,
+        "y1": 503.71697998046875
+      },
+      "panels": [
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 176.4730987548828,
+            "y0": 512.1963500976562,
+            "x1": 181.4770965576172,
+            "y1": 521.1963500976562
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 3,
+        "object_id": "fig-b76163690f3387b9",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 69.618896484375,
+          "y0": 247.56097412109375,
+          "x1": 524.6239013671875,
+          "y1": 503.71697998046875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7689235706e2e663",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 3,
+      "figure_number": "2",
+      "caption": "Fig. 2. a. Overlay visual of keyword distribution across average publication year. b. Research/publication trends on heterogeneous catalysis from 2000 to 2025.",
+      "bbox": {
+        "x0": 175.7554931640625,
+        "y0": 523.4343872070312,
+        "x1": 419.5269775390625,
+        "y1": 726.2279052734375
+      },
+      "panels": [
+        {
+          "label": "b",
+          "bbox": {
+            "x0": 176.4730987548828,
+            "y0": 512.1963500976562,
+            "x1": 181.4770965576172,
+            "y1": 521.1963500976562
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 2. a. Overlay visual of keyword distribution across average publication year. b. Research/publication trends on heterogeneous catalysis from 2000 to 2025."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 3,
+        "object_id": "fig-7689235706e2e663",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 175.7554931640625,
+          "y0": 523.4343872070312,
+          "x1": 419.5269775390625,
+          "y1": 726.2279052734375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 2. a. Overlay visual of keyword distribution across average publication year. b. Research/publication trends on heterogeneous catalysis from 2000 to 2025.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5d4197d994c8dd92",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 4,
+      "bbox": {
+        "x0": 306.60400390625,
+        "y0": 74.66998291015625,
+        "x1": 557.6619873046875,
+        "y1": 727.03271484375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 4,
+        "object_id": "fig-5d4197d994c8dd92",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 306.60400390625,
+          "y0": 74.66998291015625,
+          "x1": 557.6619873046875,
+          "y1": 727.03271484375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e4b36680df59a26d",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 5,
+      "bbox": {
+        "x0": 103.29920196533203,
+        "y0": 449.7972717285156,
+        "x1": 285.7681884765625,
+        "y1": 555.9302978515625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 5,
+        "object_id": "fig-e4b36680df59a26d",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 103.29920196533203,
+          "y0": 449.7972717285156,
+          "x1": 285.7681884765625,
+          "y1": 555.9302978515625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f315cd902bfa2b4b",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 5,
+      "bbox": {
+        "x0": 304.66058349609375,
+        "y0": 454.7542724609375,
+        "x1": 493.62860107421875,
+        "y1": 556.3712768554688
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 5,
+        "object_id": "fig-f315cd902bfa2b4b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 304.66058349609375,
+          "y0": 454.7542724609375,
+          "x1": 493.62860107421875,
+          "y1": 556.3712768554688
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-91860378eebf9984",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+      "bbox": {
+        "x0": 99.22354125976562,
+        "y0": 597.1832885742188,
+        "x1": 284.446533203125,
+        "y1": 712.6792602539062
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 5,
+        "object_id": "fig-91860378eebf9984",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 99.22354125976562,
+          "y0": 597.1832885742188,
+          "x1": 284.446533203125,
+          "y1": 712.6792602539062
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ab8b31205545cc65",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+      "bbox": {
+        "x0": 304.32958984375,
+        "y0": 590.6842651367188,
+        "x1": 496.006591796875,
+        "y1": 716.645263671875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 5,
+        "object_id": "fig-ab8b31205545cc65",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 304.32958984375,
+          "y0": 590.6842651367188,
+          "x1": 496.006591796875,
+          "y1": 716.645263671875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-064b313b31c50957",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+      "bbox": {
+        "x0": 99.21258544921875,
+        "y0": 150.19900512695312,
+        "x1": 496.0526123046875,
+        "y1": 716.6552734375
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 129.13516235351562,
+            "y0": 139.37416076660156,
+            "x1": 134.13916015625,
+            "y1": 148.37416076660156
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 5,
+        "object_id": "fig-064b313b31c50957",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 99.21258544921875,
+          "y0": 150.19900512695312,
+          "x1": 496.0526123046875,
+          "y1": 716.6552734375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3. a. Global Total Energy Supply (TES) from various energy sources (1990–2021) [24]. b. Global Total Energy Production (TEP), (c) Renewable energy (biofuel) consumption. (3d & e). Total Final Consumption (TFC) by (d) energy sources (e) sectors from 1990 to 2022 [24].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5790ad5b8e3490d1",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 6,
+      "figure_number": "4",
+      "caption": "Fig. 4. Biomass conversion routes to energy.",
+      "bbox": {
+        "x0": 123.64700317382812,
+        "y0": 514.432373046875,
+        "x1": 470.7980041503906,
+        "y1": 726.2363891601562
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 4. Biomass conversion routes to energy."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 6,
+        "object_id": "fig-5790ad5b8e3490d1",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 123.64700317382812,
+          "y0": 514.432373046875,
+          "x1": 470.7980041503906,
+          "y1": 726.2363891601562
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 4. Biomass conversion routes to energy.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-fc3e85b3624ea801",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 7,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 640.2329711914062,
+        "x1": 557.6619873046875,
+        "y1": 735.67578125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 7,
+        "object_id": "fig-fc3e85b3624ea801",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 640.2329711914062,
+          "x1": 557.6619873046875,
+          "y1": 735.67578125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-293308b5e62b27bc",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 8,
+      "figure_number": "5",
+      "caption": "Fig. 5. Classification of homogeneous and heterogeneous catalysts for energy production.",
+      "bbox": {
+        "x0": 127.19200134277344,
+        "y0": 56.177947998046875,
+        "x1": 468.11297607421875,
+        "y1": 448.41094970703125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 5. Classification of homogeneous and heterogeneous catalysts for energy production."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 8,
+        "object_id": "fig-293308b5e62b27bc",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 127.19200134277344,
+          "y0": 56.177947998046875,
+          "x1": 468.11297607421875,
+          "y1": 448.41094970703125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 5. Classification of homogeneous and heterogeneous catalysts for energy production.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2d4ef92eee51cb35",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 9,
+      "bbox": {
+        "x0": 126.6520004272461,
+        "y0": 55.47502136230469,
+        "x1": 468.3110046386719,
+        "y1": 228.416015625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 9,
+        "object_id": "fig-2d4ef92eee51cb35",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 126.6520004272461,
+          "y0": 55.47502136230469,
+          "x1": 468.3110046386719,
+          "y1": 228.416015625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-529498fa2393215f",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 9,
+      "figure_number": "6",
+      "caption": "Fig. 6. a. Representative structures of various zeolite frameworks, illustrating their pore openings and dimensionalities: (a) Zeolite L with a one-dimensional (1D) channel system and a pore opening of 7.1 Å; (b) Zeolite Y featuring a three-dimensional (3D) pore network with 7.4 Å openings; (c) Zeolite A, also with a three- dimensional channel structure and 4.2 Å pore openings; (d) ZSM-5 (silicalite), exhibiting a two-dimensional (2D) channel system with pore openings of 5.3 × 5.6 Å and 5.1 × 5.5 Å. These frameworks demonstrate the diversity of zeolite pore structures, which are key to their catalytic performance in various applications. Adapted from Ref. [92]. e. Hierarchical zeolites and their applications in catalytic reactions.",
+      "bbox": {
+        "x0": 174.61399841308594,
+        "y0": 236.71600341796875,
+        "x1": 419.7019958496094,
+        "y1": 350.3320007324219
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 6. a. Representative structures of various zeolite frameworks, illustrating their pore openings and dimensionalities: (a) Zeolite L with a one-dimensional (1D) channel system and a pore opening of 7.1 Å; (b) Zeolite Y featuring a three-dimensional (3D) pore network with 7.4 Å openings; (c) Zeolite A, also with a three- dimensional channel structure and 4.2 Å pore openings; (d) ZSM-5 (silicalite), exhibiting a two-dimensional (2D) channel system with pore openings of 5.3 × 5.6 Å and 5.1 × 5.5 Å. These frameworks demonstrate the diversity of zeolite pore structures, which are key to their catalytic performance in various applications. Adapted from Ref. [92]. e. Hierarchical zeolites and their applications in catalytic reactions."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 9,
+        "object_id": "fig-529498fa2393215f",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 174.61399841308594,
+          "y0": 236.71600341796875,
+          "x1": 419.7019958496094,
+          "y1": 350.3320007324219
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 6. a. Representative structures of various zeolite frameworks, illustrating their pore openings and dimensionalities: (a) Zeolite L with a one-dimensional (1D) channel system and a pore opening of 7.1 Å; (b) Zeolite Y featuring a three-dimensional (3D) pore network with 7.4 Å openings; (c) Zeolite A, also with a three- dimensional channel structure and 4.2 Å pore openings; (d) ZSM-5 (silicalite), exhibiting a two-dimensional (2D) channel system with pore openings of 5.3 × 5.6 Å and 5.1 × 5.5 Å. These frameworks demonstrate the diversity of zeolite pore structures, which are key to their catalytic performance in various applications. Adapted from Ref. [92]. e. Hierarchical zeolites and their applications in catalytic reactions.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2a24d843c60920f4",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 9,
+      "figure_number": "7",
+      "caption": "Fig. 7. Allotropes of the element carbon. Adapted and modified from Ref. [103].",
+      "bbox": {
+        "x0": 127.19200134277344,
+        "y0": 500.7453918457031,
+        "x1": 468.11297607421875,
+        "y1": 726.2363891601562
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 7. Allotropes of the element carbon. Adapted and modified from Ref. [103]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 9,
+        "object_id": "fig-2a24d843c60920f4",
+        "object_type": "figure",
+        "table_or_figure_number": "7",
+        "bbox": {
+          "x0": 127.19200134277344,
+          "y0": 500.7453918457031,
+          "x1": 468.11297607421875,
+          "y1": 726.2363891601562
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 7. Allotropes of the element carbon. Adapted and modified from Ref. [103].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b2cc9e7c9b3f589b",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 11,
+      "bbox": {
+        "x0": 127.19200134277344,
+        "y0": 55.74797821044922,
+        "x1": 468.11297607421875,
+        "y1": 157.40597534179688
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 11,
+        "object_id": "fig-b2cc9e7c9b3f589b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 127.19200134277344,
+          "y0": 55.74797821044922,
+          "x1": 468.11297607421875,
+          "y1": 157.40597534179688
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-0b56f4906c6fd135",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 11,
+      "figure_number": "8",
+      "caption": "Fig. 8. a. The illustration of the Porous MOFs Postsynthetic Modification Principle. Adapted from Ref. [121]. b. Pyrolysis-based production of various porous materials from MOFs and MOF-based composites. Adapted and modified from Ref. [121].",
+      "bbox": {
+        "x0": 126.6520004272461,
+        "y0": 165.59298706054688,
+        "x1": 468.2200012207031,
+        "y1": 423.3529968261719
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 8. a. The illustration of the Porous MOFs Postsynthetic Modification Principle. Adapted from Ref. [121]. b. Pyrolysis-based production of various porous materials from MOFs and MOF-based composites. Adapted and modified from Ref. [121]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 11,
+        "object_id": "fig-0b56f4906c6fd135",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 126.6520004272461,
+          "y0": 165.59298706054688,
+          "x1": 468.2200012207031,
+          "y1": 423.3529968261719
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 8. a. The illustration of the Porous MOFs Postsynthetic Modification Principle. Adapted from Ref. [121]. b. Pyrolysis-based production of various porous materials from MOFs and MOF-based composites. Adapted and modified from Ref. [121].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-42f5a40eb78d31bb",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 13,
+      "figure_number": "9",
+      "caption": "Fig. 9. (a) the synthesis pathway for Co-SACs derived from lignin; (b) depolymerization strategies for woody biomass employing Co-SACs; (c) EXAFS spectra and (d) corresponding fitting curves confirming the atomic structure of Co-SACs; (e) structural comparison between Co-SACs and Co cluster catalysts; (f) Gibbs free energy profiles; and (g) potential energy distribution during the initial decomposition process on Co-SACs. Adapted from Ref. [163].",
+      "bbox": {
+        "x0": 71.14959716796875,
+        "y0": 248.60482788085938,
+        "x1": 523.8856201171875,
+        "y1": 707.100830078125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 9. (a) the synthesis pathway for Co-SACs derived from lignin; (b) depolymerization strategies for woody biomass employing Co-SACs; (c) EXAFS spectra and (d) corresponding fitting curves confirming the atomic structure of Co-SACs; (e) structural comparison between Co-SACs and Co cluster catalysts; (f) Gibbs free energy profiles; and (g) potential energy distribution during the initial decomposition process on Co-SACs. Adapted from Ref. [163]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 13,
+        "object_id": "fig-42f5a40eb78d31bb",
+        "object_type": "figure",
+        "table_or_figure_number": "9",
+        "bbox": {
+          "x0": 71.14959716796875,
+          "y0": 248.60482788085938,
+          "x1": 523.8856201171875,
+          "y1": 707.100830078125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 9. (a) the synthesis pathway for Co-SACs derived from lignin; (b) depolymerization strategies for woody biomass employing Co-SACs; (c) EXAFS spectra and (d) corresponding fitting curves confirming the atomic structure of Co-SACs; (e) structural comparison between Co-SACs and Co cluster catalysts; (f) Gibbs free energy profiles; and (g) potential energy distribution during the initial decomposition process on Co-SACs. Adapted from Ref. [163].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f9fccccaae8fca39",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 14,
+      "figure_number": "10",
+      "caption": "Fig. 10. Illustrative pathway for the conversion of glucose to HMF. Adapted from Ref. [170].",
+      "bbox": {
+        "x0": 127.19200134277344,
+        "y0": 524.50439453125,
+        "x1": 468.11297607421875,
+        "y1": 726.2363891601562
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 10. Illustrative pathway for the conversion of glucose to HMF. Adapted from Ref. [170]."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 14,
+        "object_id": "fig-f9fccccaae8fca39",
+        "object_type": "figure",
+        "table_or_figure_number": "10",
+        "bbox": {
+          "x0": 127.19200134277344,
+          "y0": 524.50439453125,
+          "x1": 468.11297607421875,
+          "y1": 726.2363891601562
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 10. Illustrative pathway for the conversion of glucose to HMF. Adapted from Ref. [170].",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-f04e89db1d7b5093",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 16,
+      "figure_number": "11",
+      "caption": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)",
+      "bbox": {
+        "x0": 71.14959716796875,
+        "y0": 56.3079833984375,
+        "x1": 523.4195556640625,
+        "y1": 321.3919982910156
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)"
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 16,
+        "object_id": "fig-f04e89db1d7b5093",
+        "object_type": "figure",
+        "table_or_figure_number": "11",
+        "bbox": {
+          "x0": 71.14959716796875,
+          "y0": 56.3079833984375,
+          "x1": 523.4195556640625,
+          "y1": 321.3919982910156
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ecc6dd7044d617be",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 16,
+      "figure_number": "11",
+      "caption": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)",
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 436.35498046875,
+        "x1": 557.6630249023438,
+        "y1": 583.2059936523438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)"
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 16,
+        "object_id": "fig-ecc6dd7044d617be",
+        "object_type": "figure",
+        "table_or_figure_number": "11",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 436.35498046875,
+          "x1": 557.6630249023438,
+          "y1": 583.2059936523438
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 11. (a) A three-dimensional AFM rendering and (b) an AFM micrograph paired with infrared spectra (right), annotated by numerical labels and categorized by morphological distinctions: red indicates grain structures, green represents circular or patch-like areas, and blue corresponds to the regions between patches. The absence of the C––O stretching band in the blue regions signifies the desorption/removal of the self-assembled monolayer. The scale bar in (b) denotes 1 μm. Figs (a) and (b) are adapted from Ref. [177]. (c) A 3D AFM image illustrating height-based segmentation, used in (d) to demarcate zones for Raman spectral averaging. These spectroscopic fingerprints provide chemical insight correlated with surface morphology. The Raman spectral colours directly correspond to the regional colour coding on the left. Figs. (c) and (d) are adapted from Ref. [178]. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-763d3caa9974a271",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 17,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 557.6630249023438,
+        "y1": 212.9530029296875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 17,
+        "object_id": "fig-763d3caa9974a271",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 557.6630249023438,
+          "y1": 212.9530029296875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-afc3da3a380fc303",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 18,
+      "bbox": {
+        "x0": 136.9770050048828,
+        "y0": 54.58001708984375,
+        "x1": 403.7799987792969,
+        "y1": 740.5643920898438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 18,
+        "object_id": "fig-afc3da3a380fc303",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 136.9770050048828,
+          "y0": 54.58001708984375,
+          "x1": 403.7799987792969,
+          "y1": 740.5643920898438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-62bf2a427401a992",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 19,
+      "figure_number": "12",
+      "caption": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric.",
+      "bbox": {
+        "x0": 62.64569854736328,
+        "y0": 99.09199523925781,
+        "x1": 307.877685546875,
+        "y1": 320.85198974609375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 19,
+        "object_id": "fig-62bf2a427401a992",
+        "object_type": "figure",
+        "table_or_figure_number": "12",
+        "bbox": {
+          "x0": 62.64569854736328,
+          "y0": 99.09199523925781,
+          "x1": 307.877685546875,
+          "y1": 320.85198974609375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-659c715ab8798e42",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 19,
+      "figure_number": "12",
+      "caption": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric.",
+      "bbox": {
+        "x0": 320.62799072265625,
+        "y0": 56.2030029296875,
+        "x1": 532.0689697265625,
+        "y1": 364.3919982910156
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 19,
+        "object_id": "fig-659c715ab8798e42",
+        "object_type": "figure",
+        "table_or_figure_number": "12",
+        "bbox": {
+          "x0": 320.62799072265625,
+          "y0": 56.2030029296875,
+          "x1": 532.0689697265625,
+          "y1": 364.3919982910156
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 12. a. Biomass conversion roadmap to renewable energy sources. b. Radar chart for the catalyst performance metric.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ead69dc07872c784",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 20,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 557.6630249023438,
+        "y1": 118.5899658203125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 20,
+        "object_id": "fig-ead69dc07872c784",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 557.6630249023438,
+          "y1": 118.5899658203125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-8e4876b31d753cfc",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 21,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 65.10601806640625,
+        "x1": 557.6630249023438,
+        "y1": 109.0260009765625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 21,
+        "object_id": "fig-8e4876b31d753cfc",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 65.10601806640625,
+          "x1": 557.6630249023438,
+          "y1": 109.0260009765625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b730e3f617fa6296",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 22,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 65.10601806640625,
+        "x1": 557.6630249023438,
+        "y1": 109.0260009765625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 22,
+        "object_id": "fig-b730e3f617fa6296",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 65.10601806640625,
+          "x1": 557.6630249023438,
+          "y1": 109.0260009765625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-1e497e163b220b03",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 23,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 65.10601806640625,
+        "x1": 557.6630249023438,
+        "y1": 276.5
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 23,
+        "object_id": "fig-1e497e163b220b03",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 65.10601806640625,
+          "x1": 557.6630249023438,
+          "y1": 276.5
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3f7714171167ed06",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 24,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 557.6619873046875,
+        "y1": 529.968994140625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 24,
+        "object_id": "fig-3f7714171167ed06",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 557.6619873046875,
+          "y1": 529.968994140625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-cd09ee9583216283",
+      "source_id": "src-0b5e032e1e99c2f7",
+      "page": 25,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 557.6619873046875,
+        "y1": 272.92901611328125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-0b5e032e1e99c2f7",
+        "page": 25,
+        "object_id": "fig-cd09ee9583216283",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 557.6619873046875,
+          "y1": 272.92901611328125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

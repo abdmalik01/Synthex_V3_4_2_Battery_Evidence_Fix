@@ -1,0 +1,892 @@
+{
+  "source_id": "src-735893b662b2fd94",
+  "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-735893b662b2fd94",
+    "filename": "Advanced Science - 2025 - Swindell - Improving CO Oxidation Catalysis Over High Entropy Spinels by Increasing Disorder.pdf",
+    "source_checksum": "133d64e9df08f1829f398f21efd7924df9076871577749a8f7e12623039226f7",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 18,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\sidecars\\visual\\src-735893b662b2fd94\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-770cfa6d1170f638",
+      "source_id": "src-735893b662b2fd94",
+      "page": 1,
+      "bbox": {
+        "x0": 519.280029296875,
+        "y0": 0.00201416015625,
+        "x1": 595.2760009765625,
+        "y1": 15.00201416015625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 1,
+        "object_id": "fig-770cfa6d1170f638",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 519.280029296875,
+          "y0": 0.00201416015625,
+          "x1": 595.2760009765625,
+          "y1": 15.00201416015625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-37e6d72020779b36",
+      "source_id": "src-735893b662b2fd94",
+      "page": 1,
+      "bbox": {
+        "x0": 50.810935974121094,
+        "y0": 18.45397186279297,
+        "x1": 546.4429931640625,
+        "y1": 664.714111328125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 1,
+        "object_id": "fig-37e6d72020779b36",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.810935974121094,
+          "y0": 18.45397186279297,
+          "x1": 546.4429931640625,
+          "y1": 664.714111328125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3959629bcdf4015c",
+      "source_id": "src-735893b662b2fd94",
+      "page": 2,
+      "bbox": {
+        "x0": 47.97600173950195,
+        "y0": 23.98699951171875,
+        "x1": 136.67999267578125,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 2,
+        "object_id": "fig-3959629bcdf4015c",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 47.97600173950195,
+          "y0": 23.98699951171875,
+          "x1": 136.67999267578125,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5a9836d58cd41acd",
+      "source_id": "src-735893b662b2fd94",
+      "page": 2,
+      "figure_number": "1",
+      "caption": "Figure 1. a) Schematic of the solventless thermolysis approach to form high entropy (HE) spinel oxides. b) The proposed unit cell for the 7-metal containing HE spinel oxide (AB2O4) with assumed equimolar occupancies across the A and B sites. Red spheres = oxygen atoms and the beachball- shaded spheres = the mixed cation sites. The lattice parameter of this unit cell is 8.33 Å as calculated vide infra. Geometry of c) tetrahedral A site, and d) octahedral B site shown.",
+      "bbox": {
+        "x0": 116.00700378417969,
+        "y0": 77.19400024414062,
+        "x1": 476.00701904296875,
+        "y1": 299.718994140625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. a) Schematic of the solventless thermolysis approach to form high entropy (HE) spinel oxides. b) The proposed unit cell for the 7-metal containing HE spinel oxide (AB2O4) with assumed equimolar occupancies across the A and B sites. Red spheres = oxygen atoms and the beachball- shaded spheres = the mixed cation sites. The lattice parameter of this unit cell is 8.33 Å as calculated vide infra. Geometry of c) tetrahedral A site, and d) octahedral B site shown."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 2,
+        "object_id": "fig-5a9836d58cd41acd",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 116.00700378417969,
+          "y0": 77.19400024414062,
+          "x1": 476.00701904296875,
+          "y1": 299.718994140625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. a) Schematic of the solventless thermolysis approach to form high entropy (HE) spinel oxides. b) The proposed unit cell for the 7-metal containing HE spinel oxide (AB2O4) with assumed equimolar occupancies across the A and B sites. Red spheres = oxygen atoms and the beachball- shaded spheres = the mixed cation sites. The lattice parameter of this unit cell is 8.33 Å as calculated vide infra. Geometry of c) tetrahedral A site, and d) octahedral B site shown.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b79443d85614d2e9",
+      "source_id": "src-735893b662b2fd94",
+      "page": 3,
+      "bbox": {
+        "x0": 50.81100082397461,
+        "y0": 23.98699951171875,
+        "x1": 139.51499938964844,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 3,
+        "object_id": "fig-b79443d85614d2e9",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.81100082397461,
+          "y0": 23.98699951171875,
+          "x1": 139.51499938964844,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c6143ba41496b1a9",
+      "source_id": "src-735893b662b2fd94",
+      "page": 3,
+      "figure_number": "2",
+      "caption": "Figure 2. Thermogravimetric analysis (TGA) proﬁles for individual transition metal diethyldithiocarbamate (DDTC) precursors in air a,b) argon. c,d) refer to the pre-ʼmixedʼ precursor powder for 4 (Cr, Mn, Fe, and Co), 5 (Cr, Mn, Fe, Co, and Ni), 6 (Cr, Mn, Fe, Co, Ni, and Cu), and 7 (Cr, Mn, Fe, Co, Ni, Cu, and Zn) metals in air and argon, respectively. Detailed TGA-diﬀerential thermal analysis (TGA-DSC) proﬁles for seven metals pre-ʼmixedʼ in argon e) and air f) conditions highlight a high-temperature mass loss. All TGA proﬁles were collected with a ramp rate of 15 °C min−1 between 50 and 1000 °C. For the DSC proﬁles shown in e,f), positive peaks represent an exothermic transition, and negative peaks an endothermic transition.",
+      "bbox": {
+        "x0": 52.844940185546875,
+        "y0": 76.98699951171875,
+        "x1": 545.0849609375,
+        "y1": 324.7120056152344
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. Thermogravimetric analysis (TGA) proﬁles for individual transition metal diethyldithiocarbamate (DDTC) precursors in air a,b) argon. c,d) refer to the pre-ʼmixedʼ precursor powder for 4 (Cr, Mn, Fe, and Co), 5 (Cr, Mn, Fe, Co, and Ni), 6 (Cr, Mn, Fe, Co, Ni, and Cu), and 7 (Cr, Mn, Fe, Co, Ni, Cu, and Zn) metals in air and argon, respectively. Detailed TGA-diﬀerential thermal analysis (TGA-DSC) proﬁles for seven metals pre-ʼmixedʼ in argon e) and air f) conditions highlight a high-temperature mass loss. All TGA proﬁles were collected with a ramp rate of 15 °C min−1 between 50 and 1000 °C. For the DSC proﬁles shown in e,f), positive peaks represent an exothermic transition, and negative peaks an endothermic transition."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 3,
+        "object_id": "fig-c6143ba41496b1a9",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 52.844940185546875,
+          "y0": 76.98699951171875,
+          "x1": 545.0849609375,
+          "y1": 324.7120056152344
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. Thermogravimetric analysis (TGA) proﬁles for individual transition metal diethyldithiocarbamate (DDTC) precursors in air a,b) argon. c,d) refer to the pre-ʼmixedʼ precursor powder for 4 (Cr, Mn, Fe, and Co), 5 (Cr, Mn, Fe, Co, and Ni), 6 (Cr, Mn, Fe, Co, Ni, and Cu), and 7 (Cr, Mn, Fe, Co, Ni, Cu, and Zn) metals in air and argon, respectively. Detailed TGA-diﬀerential thermal analysis (TGA-DSC) proﬁles for seven metals pre-ʼmixedʼ in argon e) and air f) conditions highlight a high-temperature mass loss. All TGA proﬁles were collected with a ramp rate of 15 °C min−1 between 50 and 1000 °C. For the DSC proﬁles shown in e,f), positive peaks represent an exothermic transition, and negative peaks an endothermic transition.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-0c2fab5bfe73f563",
+      "source_id": "src-735893b662b2fd94",
+      "page": 4,
+      "bbox": {
+        "x0": 47.97600173950195,
+        "y0": 23.98699951171875,
+        "x1": 136.67999267578125,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 4,
+        "object_id": "fig-0c2fab5bfe73f563",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 47.97600173950195,
+          "y0": 23.98699951171875,
+          "x1": 136.67999267578125,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e3bf94ebe40f38b0",
+      "source_id": "src-735893b662b2fd94",
+      "page": 5,
+      "bbox": {
+        "x0": 50.81100082397461,
+        "y0": 23.98699951171875,
+        "x1": 139.51499938964844,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 5,
+        "object_id": "fig-e3bf94ebe40f38b0",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.81100082397461,
+          "y0": 23.98699951171875,
+          "x1": 139.51499938964844,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-9b514c852ee81a9c",
+      "source_id": "src-735893b662b2fd94",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Figure 3. a) Powder X-ray diﬀraction (pXRD) patterns for 4-metal medium entropy spinel oxide (MESO), and high entropy spinel oxide (HESO) 5, 6, and 7-metal powders compared to the reference spectra Fe3O4 (Cubic, ICSD: 26410). * refers to peaks associated with CuO (Monoclinic, ICSD: 67850). b) Rietveld reﬁnement for the 7-metal HESO powder. Error for weight percent (wt.%) is 0.3% and the weighted residual parameter (Rw) of the ﬁt is 6.8. c) Lattice parameters, a, calculated from the Rietveld reﬁnements as a function of the number of metal ions present in the cationic sub-lattice. d) atomic resolution HAADF-STEM image of the 7-metal HESO along the [110] direction. The 100 lattice spacing, corresponding to lattice parameter a, is highlighted in the image. The inset to (d) shows the fast Fourier transform (FFT) of the image, which demonstrates the particle is being viewed along the [110] direction.",
+      "bbox": {
+        "x0": 118.8419418334961,
+        "y0": 76.86099243164062,
+        "x1": 478.8419494628906,
+        "y1": 361.71099853515625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. a) Powder X-ray diﬀraction (pXRD) patterns for 4-metal medium entropy spinel oxide (MESO), and high entropy spinel oxide (HESO) 5, 6, and 7-metal powders compared to the reference spectra Fe3O4 (Cubic, ICSD: 26410). * refers to peaks associated with CuO (Monoclinic, ICSD: 67850). b) Rietveld reﬁnement for the 7-metal HESO powder. Error for weight percent (wt.%) is 0.3% and the weighted residual parameter (Rw) of the ﬁt is 6.8. c) Lattice parameters, a, calculated from the Rietveld reﬁnements as a function of the number of metal ions present in the cationic sub-lattice. d) atomic resolution HAADF-STEM image of the 7-metal HESO along the [110] direction. The 100 lattice spacing, corresponding to lattice parameter a, is highlighted in the image. The inset to (d) shows the fast Fourier transform (FFT) of the image, which demonstrates the particle is being viewed along the [110] direction."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 5,
+        "object_id": "fig-9b514c852ee81a9c",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 118.8419418334961,
+          "y0": 76.86099243164062,
+          "x1": 478.8419494628906,
+          "y1": 361.71099853515625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. a) Powder X-ray diﬀraction (pXRD) patterns for 4-metal medium entropy spinel oxide (MESO), and high entropy spinel oxide (HESO) 5, 6, and 7-metal powders compared to the reference spectra Fe3O4 (Cubic, ICSD: 26410). * refers to peaks associated with CuO (Monoclinic, ICSD: 67850). b) Rietveld reﬁnement for the 7-metal HESO powder. Error for weight percent (wt.%) is 0.3% and the weighted residual parameter (Rw) of the ﬁt is 6.8. c) Lattice parameters, a, calculated from the Rietveld reﬁnements as a function of the number of metal ions present in the cationic sub-lattice. d) atomic resolution HAADF-STEM image of the 7-metal HESO along the [110] direction. The 100 lattice spacing, corresponding to lattice parameter a, is highlighted in the image. The inset to (d) shows the fast Fourier transform (FFT) of the image, which demonstrates the particle is being viewed along the [110] direction.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5cd1d1d7d786240c",
+      "source_id": "src-735893b662b2fd94",
+      "page": 6,
+      "bbox": {
+        "x0": 47.97600173950195,
+        "y0": 23.98699951171875,
+        "x1": 136.67999267578125,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 6,
+        "object_id": "fig-5cd1d1d7d786240c",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 47.97600173950195,
+          "y0": 23.98699951171875,
+          "x1": 136.67999267578125,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-6045a33b4bd011bc",
+      "source_id": "src-735893b662b2fd94",
+      "page": 6,
+      "figure_number": "4",
+      "caption": "Figure 4. HAADF-STEM images and energy dispersive spectroscopy (EDS) (200 kV) mapping of constituent elements within individual particles at diﬀerent length scales for all 4- to 7-metal-containing spinel oxide samples. A uniform, random distribution of metals was observed with little to no segregation for all metals (except a small amount of Cr segregation) as indicated by the variation of intensities matching between diﬀerent metals. The sulfur content was below 0.2 at.% or undetectable.",
+      "bbox": {
+        "x0": 116.00700378417969,
+        "y0": 76.78898620605469,
+        "x1": 476.00701904296875,
+        "y1": 232.7139892578125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 4. HAADF-STEM images and energy dispersive spectroscopy (EDS) (200 kV) mapping of constituent elements within individual particles at diﬀerent length scales for all 4- to 7-metal-containing spinel oxide samples. A uniform, random distribution of metals was observed with little to no segregation for all metals (except a small amount of Cr segregation) as indicated by the variation of intensities matching between diﬀerent metals. The sulfur content was below 0.2 at.% or undetectable."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 6,
+        "object_id": "fig-6045a33b4bd011bc",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 116.00700378417969,
+          "y0": 76.78898620605469,
+          "x1": 476.00701904296875,
+          "y1": 232.7139892578125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 4. HAADF-STEM images and energy dispersive spectroscopy (EDS) (200 kV) mapping of constituent elements within individual particles at diﬀerent length scales for all 4- to 7-metal-containing spinel oxide samples. A uniform, random distribution of metals was observed with little to no segregation for all metals (except a small amount of Cr segregation) as indicated by the variation of intensities matching between diﬀerent metals. The sulfur content was below 0.2 at.% or undetectable.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e454a88f383372e0",
+      "source_id": "src-735893b662b2fd94",
+      "page": 7,
+      "bbox": {
+        "x0": 50.81100082397461,
+        "y0": 23.98699951171875,
+        "x1": 139.51499938964844,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 7,
+        "object_id": "fig-e454a88f383372e0",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.81100082397461,
+          "y0": 23.98699951171875,
+          "x1": 139.51499938964844,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e5f18e15f6a6c445",
+      "source_id": "src-735893b662b2fd94",
+      "page": 7,
+      "figure_number": "5",
+      "caption": "Figure 5. High-resolution X-ray photoelectron spectroscopy (XPS) scans of the O 1s and S 2p core levels for 4-metal MESO (CrMnFeCo)3O4, and 5, 6, 7- metal HESO (CrMnFeCoNi)3O4, (CrMnFeCoNiCu)3O4, (CrMnFeCoNiCuZn)3O4 powders a–d), respectively. The scans are plotted on the same intensity scale with no normalization to highlight the relatively low sulfur content. The ﬁt and background are represented in blue and orange respectively. OA refers to the lattice oxygen bond (M-O) and OB refers to a second oxygen environment with adventitious oxygen and M-OR species.",
+      "bbox": {
+        "x0": 118.8419418334961,
+        "y0": 76.36599731445312,
+        "x1": 478.8419494628906,
+        "y1": 392.71600341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 5. High-resolution X-ray photoelectron spectroscopy (XPS) scans of the O 1s and S 2p core levels for 4-metal MESO (CrMnFeCo)3O4, and 5, 6, 7- metal HESO (CrMnFeCoNi)3O4, (CrMnFeCoNiCu)3O4, (CrMnFeCoNiCuZn)3O4 powders a–d), respectively. The scans are plotted on the same intensity scale with no normalization to highlight the relatively low sulfur content. The ﬁt and background are represented in blue and orange respectively. OA refers to the lattice oxygen bond (M-O) and OB refers to a second oxygen environment with adventitious oxygen and M-OR species."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 7,
+        "object_id": "fig-e5f18e15f6a6c445",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 118.8419418334961,
+          "y0": 76.36599731445312,
+          "x1": 478.8419494628906,
+          "y1": 392.71600341796875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 5. High-resolution X-ray photoelectron spectroscopy (XPS) scans of the O 1s and S 2p core levels for 4-metal MESO (CrMnFeCo)3O4, and 5, 6, 7- metal HESO (CrMnFeCoNi)3O4, (CrMnFeCoNiCu)3O4, (CrMnFeCoNiCuZn)3O4 powders a–d), respectively. The scans are plotted on the same intensity scale with no normalization to highlight the relatively low sulfur content. The ﬁt and background are represented in blue and orange respectively. OA refers to the lattice oxygen bond (M-O) and OB refers to a second oxygen environment with adventitious oxygen and M-OR species.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-fad9525bfe839434",
+      "source_id": "src-735893b662b2fd94",
+      "page": 8,
+      "bbox": {
+        "x0": 47.97600173950195,
+        "y0": 23.98699951171875,
+        "x1": 136.67999267578125,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 8,
+        "object_id": "fig-fad9525bfe839434",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 47.97600173950195,
+          "y0": 23.98699951171875,
+          "x1": 136.67999267578125,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a363dd4f7a850910",
+      "source_id": "src-735893b662b2fd94",
+      "page": 8,
+      "figure_number": "6",
+      "caption": "Figure 6. a) CO oxidation catalytic light-oﬀcurves showing CO conversion as a function of temperature for diﬀerent spinel oxide catalysts b) Comparison of T10 and T50 values as a function of the number of transition metals in each catalyst. * indicates that the 4-metal spinel oxide did not reach 50% conversion. Catalyst stability testing for c) 4 and d) 7-metal spinel oxides held at 647 °C and 208 °C for 14 h respectively. The dotted line indicates the initial activity at the start of the stability test, the raw data is shown behind a smoothed average. Operation conditions: total ﬂow rate of 50 mL min−1, ramp rate of 10 °C min−1, reaction feed of 1 vol% CO/5 vol.% O2 and Ar balance.",
+      "bbox": {
+        "x0": 123.20700073242188,
+        "y0": 76.33599853515625,
+        "x1": 468.84100341796875,
+        "y1": 346.4739990234375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. a) CO oxidation catalytic light-oﬀcurves showing CO conversion as a function of temperature for diﬀerent spinel oxide catalysts b) Comparison of T10 and T50 values as a function of the number of transition metals in each catalyst. * indicates that the 4-metal spinel oxide did not reach 50% conversion. Catalyst stability testing for c) 4 and d) 7-metal spinel oxides held at 647 °C and 208 °C for 14 h respectively. The dotted line indicates the initial activity at the start of the stability test, the raw data is shown behind a smoothed average. Operation conditions: total ﬂow rate of 50 mL min−1, ramp rate of 10 °C min−1, reaction feed of 1 vol% CO/5 vol.% O2 and Ar balance."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-735893b662b2fd94",
+        "page": 8,
+        "object_id": "fig-a363dd4f7a850910",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 123.20700073242188,
+          "y0": 76.33599853515625,
+          "x1": 468.84100341796875,
+          "y1": 346.4739990234375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. a) CO oxidation catalytic light-oﬀcurves showing CO conversion as a function of temperature for diﬀerent spinel oxide catalysts b) Comparison of T10 and T50 values as a function of the number of transition metals in each catalyst. * indicates that the 4-metal spinel oxide did not reach 50% conversion. Catalyst stability testing for c) 4 and d) 7-metal spinel oxides held at 647 °C and 208 °C for 14 h respectively. The dotted line indicates the initial activity at the start of the stability test, the raw data is shown behind a smoothed average. Operation conditions: total ﬂow rate of 50 mL min−1, ramp rate of 10 °C min−1, reaction feed of 1 vol% CO/5 vol.% O2 and Ar balance.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-0cd1aaab75787bf7",
+      "source_id": "src-735893b662b2fd94",
+      "page": 9,
+      "bbox": {
+        "x0": 50.81100082397461,
+        "y0": 23.98699951171875,
+        "x1": 139.51499938964844,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 9,
+        "object_id": "fig-0cd1aaab75787bf7",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.81100082397461,
+          "y0": 23.98699951171875,
+          "x1": 139.51499938964844,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-25fb025b6c1a58c0",
+      "source_id": "src-735893b662b2fd94",
+      "page": 10,
+      "bbox": {
+        "x0": 47.97600173950195,
+        "y0": 23.98699951171875,
+        "x1": 136.67999267578125,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 10,
+        "object_id": "fig-25fb025b6c1a58c0",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 47.97600173950195,
+          "y0": 23.98699951171875,
+          "x1": 136.67999267578125,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-320a41553d23be02",
+      "source_id": "src-735893b662b2fd94",
+      "page": 11,
+      "bbox": {
+        "x0": 50.81100082397461,
+        "y0": 23.98699951171875,
+        "x1": 139.51499938964844,
+        "y1": 45.61297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-735893b662b2fd94",
+        "page": 11,
+        "object_id": "fig-320a41553d23be02",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 50.81100082397461,
+          "y0": 23.98699951171875,
+          "x1": 139.51499938964844,
+          "y1": 45.61297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

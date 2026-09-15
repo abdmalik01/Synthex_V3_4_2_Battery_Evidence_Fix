@@ -1,0 +1,493 @@
+{
+  "run_at": "2026-09-15T09:17:02.506335+00:00",
+  "base_final_confirmation": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z",
+  "model": "gemini-3.5-flash",
+  "provider_mode": "benchmark",
+  "serper_enabled": false,
+  "prior_state": {
+    "CAT-GOLD-A": {
+      "benchmark_id": "CAT-GOLD-A",
+      "status": "SCIENTIFIC_GAP",
+      "extraction_status": "schema_valid",
+      "gold_metric_association_v2": {
+        "expected_count": 8,
+        "matched_count": 6,
+        "results": [
+          {
+            "expected": {
+              "property": "conversion",
+              "value": 80,
+              "unit": "%",
+              "qualifier": "approx",
+              "reactant": "CO2",
+              "context": {
+                "catalyst": "MMONiCo",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 9,
+                "section": "3.2.2"
+              }
+            },
+            "matched": false
+          },
+          {
+            "expected": {
+              "property": "conversion",
+              "value": 50,
+              "unit": "%",
+              "qualifier": "exact",
+              "reactant": "CO2",
+              "context": {
+                "catalyst": "MMONiFe",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 9,
+                "section": "3.2.2"
+              }
+            },
+            "matched": false
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 168,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiCo + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 150,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiCo",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 148,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONi + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 108,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiFe + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 105,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONi",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 80,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiFe",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          }
+        ]
+      },
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\cat-gold-a_result.json"
+    },
+    "CAT-GOLD-B": {
+      "benchmark_id": "CAT-GOLD-B",
+      "status": "PROVIDER_BLOCKED",
+      "extraction_status": "pipeline_error",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\resume_report.json"
+    },
+    "CAT-COMPUTE-C": {
+      "benchmark_id": "CAT-COMPUTE-C",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\resume_report.json"
+    },
+    "CAT-STABILITY-D": {
+      "benchmark_id": "CAT-STABILITY-D",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\resume_report.json"
+    },
+    "CAT-REVIEW-E": {
+      "benchmark_id": "CAT-REVIEW-E",
+      "status": "PROVIDER_BLOCKED",
+      "extraction_status": "pipeline_error",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\resume_report.json"
+    },
+    "CAT-PHOTO-F": {
+      "benchmark_id": "CAT-PHOTO-F",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\resume_report.json"
+    },
+    "CAT-NEGATIVE-G": {
+      "benchmark_id": "CAT-NEGATIVE-G",
+      "status": "PASS",
+      "extraction_status": "routing_only_negative_control",
+      "gold_metric_association_v2": null,
+      "source": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\cat-negative-g_result.json"
+    }
+  },
+  "requested_unresolved_ids": [
+    "CAT-GOLD-A",
+    "CAT-GOLD-B",
+    "CAT-REVIEW-E"
+  ],
+  "results": [
+    {
+      "benchmark_id": "CAT-GOLD-A",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": {
+        "expected_count": 8,
+        "matched_count": 8,
+        "results": [
+          {
+            "expected": {
+              "property": "conversion",
+              "value": 80,
+              "unit": "%",
+              "qualifier": "approx",
+              "reactant": "CO2",
+              "context": {
+                "catalyst": "MMONiCo",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 9,
+                "section": "3.2.2"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "conversion",
+              "value": 50,
+              "unit": "%",
+              "qualifier": "exact",
+              "reactant": "CO2",
+              "context": {
+                "catalyst": "MMONiFe",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 9,
+                "section": "3.2.2"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 168,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiCo + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 150,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiCo",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 148,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONi + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 108,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiFe + Ce",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 105,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONi",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          },
+          {
+            "expected": {
+              "property": "productivity",
+              "value": 80,
+              "unit": "mol CH4 h-1 L-1",
+              "product": "CH4",
+              "context": {
+                "catalyst": "MMONiFe",
+                "temperature": "350 °C",
+                "reaction": "hydrogenation"
+              },
+              "evidence_locator": {
+                "page": 10,
+                "section": "3.2.3"
+              }
+            },
+            "matched": true
+          }
+        ]
+      },
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-gold-a"
+    },
+    {
+      "benchmark_id": "CAT-GOLD-B",
+      "status": "SCIENTIFIC_GAP",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": {
+        "expected_count": 4,
+        "matched_count": 0,
+        "results": [
+          {
+            "expected": {
+              "property": "partial_current_density",
+              "value": 0.5,
+              "unit": "mA cm-2",
+              "qualifier": "approx",
+              "product": "n-propanol",
+              "potential": "-0.75 V RHE",
+              "reference_electrode": "RHE",
+              "normalization_basis": "geometric_area",
+              "context": {
+                "catalyst": "commercial polycrystalline Cu powder",
+                "reaction": "co2rr",
+                "feed": "O2-containing CO2 feed"
+              },
+              "evidence_locator": {
+                "page": 2,
+                "section": "Co-reduction of CO2 with O2"
+              }
+            },
+            "matched": false
+          },
+          {
+            "expected": {
+              "property": "partial_current_density",
+              "value": 0.5,
+              "unit": "mA cm-2",
+              "qualifier": "approx",
+              "product": "n-propanol",
+              "potential": "-1.00 V RHE",
+              "reference_electrode": "RHE",
+              "normalization_basis": "geometric_area",
+              "context": {
+                "catalyst": "commercial polycrystalline Cu powder",
+                "reaction": "co2rr",
+                "feed": "pure CO2"
+              },
+              "evidence_locator": {
+                "page": 2,
+                "section": "Co-reduction of CO2 with O2"
+              }
+            },
+            "matched": false
+          },
+          {
+            "expected": {
+              "property": "onset_potential",
+              "raw_value": "-0.75 V RHE",
+              "value": -0.75,
+              "unit": "V",
+              "product": "methane",
+              "potential": "-0.75 V RHE",
+              "reference_electrode": "RHE",
+              "context": {
+                "feed": "O2-containing CO2 feed"
+              },
+              "evidence_locator": {
+                "page": 2,
+                "section": "Co-reduction of CO2 with O2"
+              }
+            },
+            "matched": false
+          },
+          {
+            "expected": {
+              "property": "onset_potential",
+              "raw_value": "-0.95 V RHE",
+              "value": -0.95,
+              "unit": "V",
+              "product": "methane",
+              "potential": "-0.95 V RHE",
+              "reference_electrode": "RHE",
+              "context": {
+                "feed": "pure CO2"
+              },
+              "evidence_locator": {
+                "page": 2,
+                "section": "Co-reduction of CO2 with O2"
+              }
+            },
+            "matched": false
+          }
+        ]
+      },
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-gold-b"
+    },
+    {
+      "benchmark_id": "CAT-REVIEW-E",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": null,
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-review-e"
+    }
+  ],
+  "stopped_for_quota": false,
+  "skipped_due_quota": [],
+  "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z"
+}

@@ -1,0 +1,159 @@
+{
+  "dispositions": [
+    {
+      "candidate_id": "catcand-79ea455d4524345f",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-b12e8046c47ea87b",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-e838d29e8201ca46",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-00708847d1e8758f",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-d37e1953a9386fa2",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-2aba6a11dc628842",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-7f5d12a80aea65eb",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-33d412a48c16c97f",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-edd9d17ef88a4f06",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-1cd7882110ebd6f2",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-657d1ebba41b84c7",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-a9e9bbb1d626055e",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-5dffe54fd8a10b88",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-1e955a68015cc2f7",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-984b814d8df05aaf",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-14d3eca70ab0dbcb",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-1dc5a2476cf4ea9d",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-5c2cf56adab144ff",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-894f699f24d26f16",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-ca04cf7dc0071be0",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-e5202e3d10d35946",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-f0c3cce04b2bbccd",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-6ea72394024d35d2",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-ae49884eb2ff025b",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-c5773539e4d5ed1d",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-1677aac666b1a18d",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-6f46ace026d62597",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-70f102e459af88cf",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-99eee53c5fcaf8de",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-1dabfd2d99489de8",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    },
+    {
+      "candidate_id": "catcand-fa9fcd9b19dbb80f",
+      "status": "rejected",
+      "reason": "The candidate reports DFT-calculated (theoretical/computational) values rather than experimental observations."
+    }
+  ]
+}

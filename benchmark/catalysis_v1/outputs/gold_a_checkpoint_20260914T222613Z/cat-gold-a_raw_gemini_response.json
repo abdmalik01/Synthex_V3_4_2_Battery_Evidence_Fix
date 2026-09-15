@@ -1,0 +1,1003 @@
+{
+  "source": {
+    "title": "Improved conversion, selectivity, and stability during CO2 methanation by the incorporation of Ce in Ni, Co, and Fe-hydrotalcite-derived catalysts",
+    "doi": "10.1016/j.ijhydene.2024.02.149",
+    "url": "https://doi.org/10.1016/j.ijhydene.2024.02.149",
+    "year": 2024,
+    "authors": [
+      "Carlos Mendoza-Merlano",
+      "Juan Tapia-P\u00b4erez",
+      "Efra\u00edm Serna-Galvis",
+      "Dora Hoyos-Ayala",
+      "Johana Arboleda-Echavarr\u00eda",
+      "Adriana Echavarr\u00eda-Isaza"
+    ]
+  },
+  "paper_types": [
+    "catalyst_synthesis",
+    "catalyst_characterization",
+    "heterogeneous_catalysis",
+    "stability_deactivation"
+  ],
+  "scope_status": "supported",
+  "catalysts": [
+    {
+      "local_id": "MMONi",
+      "reported_name": "MMONi",
+      "reported_formula": "Mg5NiAl2O9",
+      "formula": "Mg5NiAl2O9",
+      "bet_surface_area": {
+        "raw_value": "218",
+        "value": 218.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONi1.5",
+      "reported_name": "MMONi1.5",
+      "reported_formula": "Mg4.5Ni1.5Al1.9O8.8",
+      "formula": "Mg4.5Ni1.5Al1.9O8.8",
+      "bet_surface_area": {
+        "raw_value": "245",
+        "value": 245.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONi2",
+      "reported_name": "MMONi2",
+      "reported_formula": "Mg4.0Ni2.0Al1.8O8.7",
+      "formula": "Mg4.0Ni2.0Al1.8O8.7",
+      "bet_surface_area": {
+        "raw_value": "235",
+        "value": 235.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONiCo",
+      "reported_name": "MMONiCo",
+      "reported_formula": "Mg4.6Ni1.0Co0.3Al1.9O8.7",
+      "formula": "Mg4.6Ni1.0Co0.3Al1.9O8.7",
+      "bet_surface_area": {
+        "raw_value": "235",
+        "value": 235.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONiFe",
+      "reported_name": "MMONiFe",
+      "reported_formula": "Mg5.0Ni1.0Al1.6Fe0.3O8.8",
+      "formula": "Mg5.0Ni1.0Al1.6Fe0.3O8.8",
+      "bet_surface_area": {
+        "raw_value": "245",
+        "value": 245.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONi_Ce",
+      "reported_name": "MMONi + Ce",
+      "reported_formula": "Mg4.8Ni0.7Al2.1O8.1+0.3CeO2",
+      "formula": "Mg4.8Ni0.7Al2.1O8.1+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "160",
+        "value": 160.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONiCo_Ce",
+      "reported_name": "MMONiCo + Ce",
+      "reported_formula": "Mg4.5Ni0.8Co0.2Al1.9O7.8+0.3CeO2",
+      "formula": "Mg4.5Ni0.8Co0.2Al1.9O7.8+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "192",
+        "value": 192.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "MMONiFe_Ce",
+      "reported_name": "MMONiFe + Ce",
+      "reported_formula": "Mg4.5Ni1.0Al1.9Fe0.4O8.2+0.3CeO2",
+      "formula": "Mg4.5Ni1.0Al1.9Fe0.4O8.2+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "200",
+        "value": 200.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    }
+  ],
+  "preparations": [
+    {
+      "preparation_id": "prep_MMONi",
+      "material_ref": "MMONi",
+      "ownership": "focal_work",
+      "steps": [
+        {
+          "step": "precipitation",
+          "details": "Nitrates metallics such as Mg(NO3)2, Al(NO3)3, and Ni(NO3)2.6H2O were added gradually to sodium carbonate solution at 65 \u25e6C, stirred for 1 h and crystallized for 4 h.",
+          "temperature": {
+            "raw_value": "65 \u25e6C",
+            "value": 65.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "The resultant solid was washed until neutral pH"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 90 \u25e6C for 24 h",
+          "temperature": {
+            "raw_value": "90 \u25e6C",
+            "value": 90.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "calcination",
+          "details": "calcined at 500 \u25e6C for 8 h",
+          "temperature": {
+            "raw_value": "500 \u25e6C",
+            "value": 500.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "8 h",
+            "value": 8.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        }
+      ]
+    },
+    {
+      "preparation_id": "prep_MMONiCo_Ce",
+      "material_ref": "MMONiCo_Ce",
+      "ownership": "focal_work",
+      "steps": [
+        {
+          "step": "precipitation",
+          "details": "Nitrates metallics such as Mg(NO3)2, Al(NO3)3, Co(NO3)2.6H2O, and Ni(NO3)2.6H2O were added gradually to sodium carbonate solution at 65 \u25e6C, stirred for 1 h and crystallized for 4 h.",
+          "temperature": {
+            "raw_value": "65 \u25e6C",
+            "value": 65.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "The resultant solid was washed until neutral pH"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 90 \u25e6C for 24 h",
+          "temperature": {
+            "raw_value": "90 \u25e6C",
+            "value": 90.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "calcination",
+          "details": "calcined at 500 \u25e6C for 8 h",
+          "temperature": {
+            "raw_value": "500 \u25e6C",
+            "value": 500.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "8 h",
+            "value": 8.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "other",
+          "details": "Reconstruction methodology: A fixed amount of Ce(NO3)3.6H2O was complexed with EDTA solution at pH 10. The MMO from the HT was added to the solution and vigorously stirred for 24 h.",
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "filtered, washed"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 80 \u25e6C for 24 h",
+          "temperature": {
+            "raw_value": "80 \u25e6C",
+            "value": 80.0,
+            "unit": "\u25e6C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        }
+      ]
+    }
+  ],
+  "characterizations": [
+    {
+      "characterization_id": "char_MMONi",
+      "material_ref": "MMONi",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "11.8",
+          "value": 11.8,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONi1.5",
+      "material_ref": "MMONi1.5",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "11.1",
+          "value": 11.1,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONi2",
+      "material_ref": "MMONi2",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "13.8",
+          "value": 13.8,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONiCo",
+      "material_ref": "MMONiCo",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "11.3",
+          "value": 11.3,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONiFe",
+      "material_ref": "MMONiFe",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "0.1",
+          "value": 0.1,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONi_Ce",
+      "material_ref": "MMONi_Ce",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "4.9",
+          "value": 4.9,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONiCo_Ce",
+      "material_ref": "MMONiCo_Ce",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "5.3",
+          "value": 5.3,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "characterization_id": "char_MMONiFe_Ce",
+      "material_ref": "MMONiFe_Ce",
+      "method": "H2 chemisorption",
+      "results": [
+        {
+          "property": "active metal surface area",
+          "raw_value": "0.0",
+          "value": 0.0,
+          "unit": "m2 g-1",
+          "qualifier": "exact"
+        }
+      ],
+      "ownership": "focal_work"
+    }
+  ],
+  "heterogeneous_experiments": [
+    {
+      "experiment_id": "exp_MMONiCo_Ce",
+      "catalyst_ref": "MMONiCo_Ce",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "168 mol CH4 h\u22121 L\u22121",
+          "value": 168.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "MMONiCo + Ce (168 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "experiment_id": "exp_MMONiCo",
+      "catalyst_ref": "MMONiCo",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "150 mol CH4 h\u22121 L\u22121",
+          "value": 150.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "MMONiCo (150 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "conversion",
+          "raw_value": "~80 %",
+          "value": 80.0,
+          "unit": "%",
+          "qualifier": "approx",
+          "reactant": "CO2",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 9,
+              "text_snippet": "The material containing Co experienced better CO2 conversions (~80 % at 350 \u25e6C)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "experiment_id": "exp_MMONi_Ce",
+      "catalyst_ref": "MMONi_Ce",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "148 mol CH4 h\u22121 L\u22121",
+          "value": 148.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "MMONi + Ce (148 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "experiment_id": "exp_MMONiFe_Ce",
+      "catalyst_ref": "MMONiFe_Ce",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "108 mol CH4 h\u22121 L\u22121",
+          "value": 108.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "MMONiFe + Ce (108 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "experiment_id": "exp_MMONi",
+      "catalyst_ref": "MMONi",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "105 mol CH4 h\u22121 L\u22121",
+          "value": 105.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "OMNi (105 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    },
+    {
+      "experiment_id": "exp_MMONiFe",
+      "catalyst_ref": "MMONiFe",
+      "reaction": {
+        "reported_reaction": "CO2(g)+4H2(g) \u2192 CH4(g)+2H2O(l)",
+        "reaction_class": "other_heterogeneous",
+        "reactants": [
+          {
+            "reported_name": "CO2",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "H2",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "CH4",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "H2O",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "flow_rate": {
+        "raw_value": "50 mL min\u22121",
+        "value": 50.0,
+        "unit": "mL/min",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h\u22121",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u25e6C",
+        "value": 350.0,
+        "unit": "\u25e6C",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "80 mol CH4 h\u22121 L\u22121",
+          "value": 80.0,
+          "unit": "mol/L/h",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "text_snippet": "MMONiFe (80 mol CH4 h\u22121 L\u22121)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        },
+        {
+          "property": "conversion",
+          "raw_value": "50 %",
+          "value": 50.0,
+          "unit": "%",
+          "qualifier": "exact",
+          "reactant": "CO2",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 9,
+              "text_snippet": "than that containing Fe (50 % at 350 \u25e6C)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ],
+      "ownership": "focal_work"
+    }
+  ],
+  "stability_tests": [
+    {
+      "stability_id": "stab_MMONiCo_Ce",
+      "experiment_ref": "exp_MMONiCo_Ce",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "1400 min",
+        "value": 1400.0,
+        "unit": "min",
+        "qualifier": "exact"
+      },
+      "retained_metric": {
+        "property": "conversion",
+        "raw_value": "~85 %",
+        "value": 85.0,
+        "unit": "%",
+        "qualifier": "approx",
+        "reactant": "CO2"
+      },
+      "ownership": "focal_work",
+      "evidence": [
+        {
+          "page": 10,
+          "text_snippet": "Remarkably MMONiCo + Ce remained more stable than MMONiCo with no significant changes in catalytic activity (~85 % of CO2 conversion after 1400 min of continuous use).",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    },
+    {
+      "stability_id": "stab_MMONiCo",
+      "experiment_ref": "exp_MMONiCo",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "1400 min",
+        "value": 1400.0,
+        "unit": "min",
+        "qualifier": "exact"
+      },
+      "retained_metric": {
+        "property": "conversion",
+        "raw_value": "higher than 80 %",
+        "value": 80.0,
+        "unit": "%",
+        "qualifier": "lower_bound",
+        "reactant": "CO2"
+      },
+      "ownership": "focal_work",
+      "evidence": [
+        {
+          "page": 10,
+          "text_snippet": "exhibiting CO2 conversions higher than 80 % even after 1400 min.",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    }
+  ]
+}

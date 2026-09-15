@@ -1,0 +1,3274 @@
+{
+  "source_id": "src-bbd6b9071cef5e09",
+  "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-bbd6b9071cef5e09",
+    "filename": "molecules-28-03888-v2.pdf",
+    "source_checksum": "8042f2454de12e49180debf26e78707e2cf151948b65f6ace8a994dc4a50b456",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 12,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 13,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 14,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 15,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 3,
+    "figures_detected": 20,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z\\sidecars\\visual\\src-bbd6b9071cef5e09\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 12,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 13,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 14,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 15,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl-20f5b5fea4ee0323",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 4,
+      "headers": [
+        [
+          null,
+          "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "of change in HER catalytic performance, although both of them can be regarded as 2D",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "π-conjugated structures composed of sp2- or sp",
+          null,
+          null,
+          "-hybridiz",
+          "ed C atoms. This can",
+          "be mainly"
+        ],
+        [
+          "due to the different structural units they are composed of. Specifically, graphene consists of",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          "bered and sixteen-membered carbon rings with anti-aromatic",
+          null,
+          null,
+          null
+        ],
+        [
+          "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "of the related carbon rings (Figure 2).",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c0",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c0",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c1",
+          "raw_text": "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+          "text": "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+          "bbox": {
+            "x0": 182.47499084472656,
+            "y0": 170.96295166015625,
+            "x1": 558.0780592698318,
+            "y1": 183.74298095703125
+          },
+          "row_span": 1,
+          "column_span": 6,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c1",
+            "bbox": {
+              "x0": 182.47499084472656,
+              "y0": 170.96295166015625,
+              "x1": 558.0780592698318,
+              "y1": 183.74298095703125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r0:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 0,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r0:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c0",
+          "raw_text": "of change in HER catalytic performance, although both of them can be regarded as 2D",
+          "text": "of change in HER catalytic performance, although both of them can be regarded as 2D",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 183.74298095703125,
+            "x1": 558.0780592698318,
+            "y1": 196.58296712239584
+          },
+          "row_span": 1,
+          "column_span": 7,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 183.74298095703125,
+              "x1": 558.0780592698318,
+              "y1": 196.58296712239584
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "of change in HER catalytic performance, although both of them can be regarded as 2D",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r1:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 1,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r1:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c0",
+          "raw_text": "π-conjugated structures composed of sp2- or sp",
+          "text": "π-conjugated structures composed of sp2- or sp",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 196.58296712239584,
+            "x1": 378.7550048828125,
+            "y1": 209.4229736328125
+          },
+          "row_span": 1,
+          "column_span": 4,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 196.58296712239584,
+              "x1": 378.7550048828125,
+              "y1": 209.4229736328125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "π-conjugated structures composed of sp2- or sp",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c3",
+          "raw_text": "-hybridiz",
+          "text": "-hybridiz",
+          "bbox": {
+            "x0": 378.7550048828125,
+            "y0": 196.58296712239584,
+            "x1": 420.7750244140625,
+            "y1": 209.4229736328125
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c3",
+            "bbox": {
+              "x0": 378.7550048828125,
+              "y0": 196.58296712239584,
+              "x1": 420.7750244140625,
+              "y1": 209.4229736328125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "-hybridiz",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c4",
+          "raw_text": "ed C atoms. This can",
+          "text": "ed C atoms. This can",
+          "bbox": {
+            "x0": 420.7750244140625,
+            "y0": 196.58296712239584,
+            "x1": 512.2150115966797,
+            "y1": 209.4229736328125
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c4",
+            "bbox": {
+              "x0": 420.7750244140625,
+              "y0": 196.58296712239584,
+              "x1": 512.2150115966797,
+              "y1": 209.4229736328125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "ed C atoms. This can",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r2:c5",
+          "raw_text": "be mainly",
+          "text": "be mainly",
+          "bbox": {
+            "x0": 512.2150115966797,
+            "y0": 196.58296712239584,
+            "x1": 558.0780592698318,
+            "y1": 209.4229736328125
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 2,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r2:c5",
+            "bbox": {
+              "x0": 512.2150115966797,
+              "y0": 196.58296712239584,
+              "x1": 558.0780592698318,
+              "y1": 209.4229736328125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "be mainly",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c0",
+          "raw_text": "due to the different structural units they are composed of. Specifically, graphene consists of",
+          "text": "due to the different structural units they are composed of. Specifically, graphene consists of",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 209.4229736328125,
+            "x1": 558.0780592698318,
+            "y1": 222.2030029296875
+          },
+          "row_span": 1,
+          "column_span": 7,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 209.4229736328125,
+              "x1": 558.0780592698318,
+              "y1": 222.2030029296875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "due to the different structural units they are composed of. Specifically, graphene consists of",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r3:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 3,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r3:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c0",
+          "raw_text": "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+          "text": "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 222.2030029296875,
+            "x1": 558.0780592698318,
+            "y1": 235.04299926757812
+          },
+          "row_span": 1,
+          "column_span": 7,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 222.2030029296875,
+              "x1": 558.0780592698318,
+              "y1": 235.04299926757812
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r4:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 4,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r4:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c0",
+          "raw_text": "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+          "text": "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 235.04299926757812,
+            "x1": 558.0780592698318,
+            "y1": 247.822998046875
+          },
+          "row_span": 1,
+          "column_span": 7,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 235.04299926757812,
+              "x1": 558.0780592698318,
+              "y1": 247.822998046875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r5:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 5,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r5:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c0",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c0",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c2",
+          "raw_text": "bered and sixteen-membered carbon rings with anti-aromatic",
+          "text": "bered and sixteen-membered carbon rings with anti-aromatic",
+          "bbox": {
+            "x0": 279.0350036621094,
+            "y0": 247.822998046875,
+            "x1": 558.0780592698318,
+            "y1": 260.6629943847656
+          },
+          "row_span": 1,
+          "column_span": 5,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c2",
+            "bbox": {
+              "x0": 279.0350036621094,
+              "y0": 247.822998046875,
+              "x1": 558.0780592698318,
+              "y1": 260.6629943847656
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "bered and sixteen-membered carbon rings with anti-aromatic",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 6,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r6:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 6,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r6:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c0",
+          "raw_text": "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+          "text": "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 260.6629943847656,
+            "x1": 558.0780592698318,
+            "y1": 273.50299072265625
+          },
+          "row_span": 1,
+          "column_span": 7,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 260.6629943847656,
+              "x1": 558.0780592698318,
+              "y1": 273.50299072265625
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 7,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r7:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 7,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r7:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 0,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c0",
+          "raw_text": "of the related carbon rings (Figure 2).",
+          "text": "of the related carbon rings (Figure 2).",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 273.50299072265625,
+            "x1": 343.0550231933594,
+            "y1": 286.28302001953125
+          },
+          "row_span": 1,
+          "column_span": 3,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 0,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 273.50299072265625,
+              "x1": 343.0550231933594,
+              "y1": 286.28302001953125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "of the related carbon rings (Figure 2).",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 1,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 1,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 2,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 2,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 3,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c3",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 3,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c3",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 4,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c4",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 4,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c4",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 8,
+          "column": 5,
+          "cell_id": "tbl-20f5b5fea4ee0323:r8:c5",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-20f5b5fea4ee0323",
+            "object_type": "table",
+            "row": 8,
+            "column": 5,
+            "cell_id": "tbl-20f5b5fea4ee0323:r8:c5",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 165.1949920654297,
+        "y0": 170.96295166015625,
+        "x1": 558.0780592698318,
+        "y1": 286.28302001953125
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            null,
+            "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "of change in HER catalytic performance, although both of them can be regarded as 2D",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "π-conjugated structures composed of sp2- or sp",
+            null,
+            null,
+            "-hybridiz",
+            "ed C atoms. This can",
+            "be mainly"
+          ],
+          [
+            "due to the different structural units they are composed of. Specifically, graphene consists of",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "bered and sixteen-membered carbon rings with anti-aromatic",
+            null,
+            null,
+            null
+          ],
+          [
+            "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "of the related carbon rings (Figure 2).",
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            "inert HER activity of graphene (1.642 eV), the R-graphyne can show a good trend",
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "rows": [
+          [
+            "of change in HER catalytic performance, although both of them can be regarded as 2D",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "π-conjugated structures composed of sp2- or sp",
+            null,
+            null,
+            "-hybridiz",
+            "ed C atoms. This can",
+            "be mainly"
+          ],
+          [
+            "due to the different structural units they are composed of. Specifically, graphene consists of",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "aromatic six-membered carbon rings meeting the (4n + 2) rule of π electrons, which can be",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "reflected well by the relevant molecular orbitals (Figure 2). Comparatively, R-graphyne",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            "bered and sixteen-membered carbon rings with anti-aromatic",
+            null,
+            null,
+            null
+          ],
+          [
+            "characteristics satisfying the 4n rule, which can also be reflected by the molecular orbitals",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "of the related carbon rings (Figure 2).",
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 4,
+        "object_id": "tbl-20f5b5fea4ee0323",
+        "object_type": "table",
+        "bbox": {
+          "x0": 165.1949920654297,
+          "y0": 170.96295166015625,
+          "x1": 558.0780592698318,
+          "y1": 286.28302001953125
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-b3030ba5cc5584dc",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 4,
+      "headers": [
+        [
+          null,
+          null,
+          "CS tic- he on (1) ne, e- gs x- ed ed ac-"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": true
+      },
+      "rows": [
+        [
+          null,
+          null,
+          "ne"
+        ],
+        [
+          "the presence of anti-aro",
+          "ore active C atoms, which leads to a certain",
+          null
+        ],
+        [
+          "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+          null,
+          null
+        ],
+        [
+          "composed of ant",
+          null,
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-b3030ba5cc5584dc:r0:c0",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-b3030ba5cc5584dc:r0:c0",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-b3030ba5cc5584dc:r0:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-b3030ba5cc5584dc:r0:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-b3030ba5cc5584dc:r0:c2",
+          "raw_text": "ne",
+          "text": "ne",
+          "bbox": {
+            "x0": 550.0149536132812,
+            "y0": 337.5830078125,
+            "x1": 558.0780592698318,
+            "y1": 350.3630065917969
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-b3030ba5cc5584dc:r0:c2",
+            "bbox": {
+              "x0": 550.0149536132812,
+              "y0": 337.5830078125,
+              "x1": 558.0780592698318,
+              "y1": 350.3630065917969
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "ne",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-b3030ba5cc5584dc:r1:c0",
+          "raw_text": "the presence of anti-aro",
+          "text": "the presence of anti-aro",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 350.3630065917969,
+            "x1": 269.0150146484375,
+            "y1": 363.2030029296875
+          },
+          "row_span": 1,
+          "column_span": 2,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-b3030ba5cc5584dc:r1:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 350.3630065917969,
+              "x1": 269.0150146484375,
+              "y1": 363.2030029296875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "the presence of anti-aro",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-b3030ba5cc5584dc:r1:c1",
+          "raw_text": "ore active C atoms, which leads to a certain",
+          "text": "ore active C atoms, which leads to a certain",
+          "bbox": {
+            "x0": 365.375,
+            "y0": 350.3630065917969,
+            "x1": 558.0780592698318,
+            "y1": 363.2030029296875
+          },
+          "row_span": 1,
+          "column_span": 2,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-b3030ba5cc5584dc:r1:c1",
+            "bbox": {
+              "x0": 365.375,
+              "y0": 350.3630065917969,
+              "x1": 558.0780592698318,
+              "y1": 363.2030029296875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "ore active C atoms, which leads to a certain",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-b3030ba5cc5584dc:r1:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-b3030ba5cc5584dc:r1:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-b3030ba5cc5584dc:r2:c0",
+          "raw_text": "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+          "text": "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 363.2030029296875,
+            "x1": 558.0780592698318,
+            "y1": 376.0030059814453
+          },
+          "row_span": 1,
+          "column_span": 5,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-b3030ba5cc5584dc:r2:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 363.2030029296875,
+              "x1": 558.0780592698318,
+              "y1": 376.0030059814453
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-b3030ba5cc5584dc:r2:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-b3030ba5cc5584dc:r2:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "cell_id": "tbl-b3030ba5cc5584dc:r2:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 2,
+            "column": 2,
+            "cell_id": "tbl-b3030ba5cc5584dc:r2:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "cell_id": "tbl-b3030ba5cc5584dc:r3:c0",
+          "raw_text": "composed of ant",
+          "text": "composed of ant",
+          "bbox": {
+            "x0": 165.1949920654297,
+            "y0": 376.0030059814453,
+            "x1": 241.8949966430664,
+            "y1": 388.843017578125
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 3,
+            "column": 0,
+            "cell_id": "tbl-b3030ba5cc5584dc:r3:c0",
+            "bbox": {
+              "x0": 165.1949920654297,
+              "y0": 376.0030059814453,
+              "x1": 241.8949966430664,
+              "y1": 388.843017578125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "composed of ant",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "cell_id": "tbl-b3030ba5cc5584dc:r3:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 3,
+            "column": 1,
+            "cell_id": "tbl-b3030ba5cc5584dc:r3:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "cell_id": "tbl-b3030ba5cc5584dc:r3:c2",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 4,
+            "object_id": "tbl-b3030ba5cc5584dc",
+            "object_type": "table",
+            "row": 3,
+            "column": 2,
+            "cell_id": "tbl-b3030ba5cc5584dc:r3:c2",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 165.1949920654297,
+        "y0": 337.5830078125,
+        "x1": 558.0780592698318,
+        "y1": 388.843017578125
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            null,
+            null,
+            "ne"
+          ],
+          [
+            "the presence of anti-aro",
+            "ore active C atoms, which leads to a certain",
+            null
+          ],
+          [
+            "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+            null,
+            null
+          ],
+          [
+            "composed of ant",
+            null,
+            null
+          ]
+        ],
+        "header_external": true
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            null,
+            "CS tic- he on (1) ne, e- gs x- ed ed ac-"
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            null,
+            "ne"
+          ],
+          [
+            "the presence of anti-aro",
+            "ore active C atoms, which leads to a certain",
+            null
+          ],
+          [
+            "HER catalytic performance of R-graphyne. Designing the 2D carbon allotrope completely",
+            null,
+            null
+          ],
+          [
+            "composed of ant",
+            null,
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 4,
+        "object_id": "tbl-b3030ba5cc5584dc",
+        "object_type": "table",
+        "bbox": {
+          "x0": 165.1949920654297,
+          "y0": 337.5830078125,
+          "x1": 558.0780592698318,
+          "y1": 388.843017578125
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "table_id": "tbl-caea2e4fac47c2b1",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 10,
+      "headers": [
+        [
+          null,
+          "a), Rh@R-graphyne (b), and Ni@R-graphyne (c). Rh@R-graphyne (b), and Ni@R-graphyne (c)."
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": true
+      },
+      "rows": [
+        [
+          null,
+          "t: the molecular orbitals of the O atom adsorb"
+        ],
+        [
+          "",
+          null
+        ],
+        [
+          "the TM site in different ene",
+          null
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-caea2e4fac47c2b1:r0:c0",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-caea2e4fac47c2b1:r0:c0",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-caea2e4fac47c2b1:r0:c1",
+          "raw_text": "t: the molecular orbitals of the O atom adsorb",
+          "text": "t: the molecular orbitals of the O atom adsorb",
+          "bbox": {
+            "x0": 358.38995361328125,
+            "y0": 745.7390747070312,
+            "x1": 538.5859375,
+            "y1": 756.68310546875
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-caea2e4fac47c2b1:r0:c1",
+            "bbox": {
+              "x0": 358.38995361328125,
+              "y0": 745.7390747070312,
+              "x1": 538.5859375,
+              "y1": 756.68310546875
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "t: the molecular orbitals of the O atom adsorb",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-caea2e4fac47c2b1:r1:c0",
+          "raw_text": "",
+          "text": "",
+          "bbox": {
+            "x0": 165.25494384765625,
+            "y0": 756.68310546875,
+            "x1": 538.5859375,
+            "y1": 767.68408203125
+          },
+          "row_span": 1,
+          "column_span": 3,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-caea2e4fac47c2b1:r1:c0",
+            "bbox": {
+              "x0": 165.25494384765625,
+              "y0": 756.68310546875,
+              "x1": 538.5859375,
+              "y1": 767.68408203125
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-caea2e4fac47c2b1:r1:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-caea2e4fac47c2b1:r1:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "cell_id": "tbl-caea2e4fac47c2b1:r2:c0",
+          "raw_text": "the TM site in different ene",
+          "text": "the TM site in different ene",
+          "bbox": {
+            "x0": 165.25494384765625,
+            "y0": 767.68408203125,
+            "x1": 271.4649658203125,
+            "y1": 778.68505859375
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 2,
+            "column": 0,
+            "cell_id": "tbl-caea2e4fac47c2b1:r2:c0",
+            "bbox": {
+              "x0": 165.25494384765625,
+              "y0": 767.68408203125,
+              "x1": 271.4649658203125,
+              "y1": 778.68505859375
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "the TM site in different ene",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "cell_id": "tbl-caea2e4fac47c2b1:r2:c1",
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-bbd6b9071cef5e09",
+            "page": 10,
+            "object_id": "tbl-caea2e4fac47c2b1",
+            "object_type": "table",
+            "row": 2,
+            "column": 1,
+            "cell_id": "tbl-caea2e4fac47c2b1:r2:c1",
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {},
+      "footnotes": [],
+      "bbox": {
+        "x0": 165.25494384765625,
+        "y0": 745.7390747070312,
+        "x1": 538.5859375,
+        "y1": 778.68505859375
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            null,
+            "t: the molecular orbitals of the O atom adsorb"
+          ],
+          [
+            "",
+            null
+          ],
+          [
+            "the TM site in different ene",
+            null
+          ]
+        ],
+        "header_external": true
+      },
+      "normalized_representation": {
+        "status": "partial",
+        "headers": [
+          [
+            null,
+            "a), Rh@R-graphyne (b), and Ni@R-graphyne (c). Rh@R-graphyne (b), and Ni@R-graphyne (c)."
+          ]
+        ],
+        "rows": [
+          [
+            null,
+            "t: the molecular orbitals of the O atom adsorb"
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            "the TM site in different ene",
+            null
+          ]
+        ],
+        "row_mappings": [],
+        "reason": "header_structure_ambiguous"
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 10,
+        "object_id": "tbl-caea2e4fac47c2b1",
+        "object_type": "table",
+        "bbox": {
+          "x0": 165.25494384765625,
+          "y0": 745.7390747070312,
+          "x1": 538.5859375,
+          "y1": 778.68505859375
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "fig-b4e1cbdfc83748c1",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 35.715999603271484,
+        "y0": 656.8805541992188,
+        "x1": 92.40879821777344,
+        "y1": 676.7230224609375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-b4e1cbdfc83748c1",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 35.715999603271484,
+          "y0": 656.8805541992188,
+          "x1": 92.40879821777344,
+          "y1": 676.7230224609375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-895943b94acde9fd",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 516.91748046875,
+        "y0": 56.14537048339844,
+        "x1": 558.4683837890625,
+        "y1": 83.53314208984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-895943b94acde9fd",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 516.91748046875,
+          "y0": 56.14537048339844,
+          "x1": 558.4683837890625,
+          "y1": 83.53314208984375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-fc8f5bcb61fdc697",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 521.3795166015625,
+        "y0": 65.39972686767578,
+        "x1": 553.91796875,
+        "y1": 74.5966567993164
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-fc8f5bcb61fdc697",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 521.3795166015625,
+          "y0": 65.39972686767578,
+          "x1": 553.91796875,
+          "y1": 74.5966567993164
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-63a42729f5de8acb",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 537.1026000976562,
+        "y0": 63.402862548828125,
+        "x1": 558.3151245117188,
+        "y1": 83.53314208984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-63a42729f5de8acb",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 537.1026000976562,
+          "y0": 63.402862548828125,
+          "x1": 558.3151245117188,
+          "y1": 83.53314208984375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-6c1298196c9ddb6b",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 517.0963745117188,
+        "y0": 56.335289001464844,
+        "x1": 538.3087158203125,
+        "y1": 76.49215698242188
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-6c1298196c9ddb6b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 517.0963745117188,
+          "y0": 56.335289001464844,
+          "x1": 538.3087158203125,
+          "y1": 76.49215698242188
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e09458037bddd843",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 1,
+      "bbox": {
+        "x0": 35.715999603271484,
+        "y0": 50.29623794555664,
+        "x1": 323.1917724609375,
+        "y1": 473.9820251464844
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 1,
+        "object_id": "fig-e09458037bddd843",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 35.715999603271484,
+          "y0": 50.29623794555664,
+          "x1": 323.1917724609375,
+          "y1": 473.9820251464844
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-57fedfc145657f1c",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 3,
+      "figure_number": "1",
+      "caption": "Figure 1. (a) The optimized structure of 2D R-graphyne and the obtained adsorption sites of H*, (b) the total energy curve of ab initio molecular dynamics (AIMD) simulation for R-graphyne at 500 K, where the inset is the conﬁguration after 5000 fs, (c) the calculated electron location function (ELF) of the R-graphyne, (d) the density of states (DOS) of R-graphyne, where the Fermi level is set as 0, and (e) the calculated ∆GH* values for the different adsorption sites of R-graphyne and graphene at equilibrium potential.",
+      "bbox": {
+        "x0": 166.50399780273438,
+        "y0": 216.77301025390625,
+        "x1": 516.8670043945312,
+        "y1": 465.989013671875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 1. (a) The optimized structure of 2D R-graphyne and the obtained adsorption sites of H*, (b) the total energy curve of ab initio molecular dynamics (AIMD) simulation for R-graphyne at 500 K, where the inset is the conﬁguration after 5000 fs, (c) the calculated electron location function (ELF) of the R-graphyne, (d) the density of states (DOS) of R-graphyne, where the Fermi level is set as 0, and (e) the calculated ∆GH* values for the different adsorption sites of R-graphyne and graphene at equilibrium potential."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 3,
+        "object_id": "fig-57fedfc145657f1c",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 166.50399780273438,
+          "y0": 216.77301025390625,
+          "x1": 516.8670043945312,
+          "y1": 465.989013671875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 1. (a) The optimized structure of 2D R-graphyne and the obtained adsorption sites of H*, (b) the total energy curve of ab initio molecular dynamics (AIMD) simulation for R-graphyne at 500 K, where the inset is the conﬁguration after 5000 fs, (c) the calculated electron location function (ELF) of the R-graphyne, (d) the density of states (DOS) of R-graphyne, where the Fermi level is set as 0, and (e) the calculated ∆GH* values for the different adsorption sites of R-graphyne and graphene at equilibrium potential.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-24a0a307c8c85506",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 3,
+      "bbox": {
+        "x0": 34.604000091552734,
+        "y0": -111.2919921875,
+        "x1": 560.9840087890625,
+        "y1": -3.87200927734375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 3,
+        "object_id": "fig-24a0a307c8c85506",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 34.604000091552734,
+          "y0": -111.2919921875,
+          "x1": 560.9840087890625,
+          "y1": -3.87200927734375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-bb4d7cd141b22d21",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 4,
+      "figure_number": "2",
+      "caption": "Figure 2. The calculated NICS(0)/NICS(1) values at the center of the six-, four- and sixteen-membered rings, as well as the corresponding π molecular orbitals (top and side views).",
+      "bbox": {
+        "x0": 166.3939971923828,
+        "y0": 401.4850158691406,
+        "x1": 502.02801513671875,
+        "y1": 693.9100341796875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 2. The calculated NICS(0)/NICS(1) values at the center of the six-, four- and sixteen-membered rings, as well as the corresponding π molecular orbitals (top and side views)."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 4,
+        "object_id": "fig-bb4d7cd141b22d21",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 166.3939971923828,
+          "y0": 401.4850158691406,
+          "x1": 502.02801513671875,
+          "y1": 693.9100341796875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 2. The calculated NICS(0)/NICS(1) values at the center of the six-, four- and sixteen-membered rings, as well as the corresponding π molecular orbitals (top and side views).",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-09c504e793b2eca6",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 4,
+      "bbox": {
+        "x0": 33.29499816894531,
+        "y0": 31.0830078125,
+        "x1": 559.6749877929688,
+        "y1": 388.843017578125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 4,
+        "object_id": "fig-09c504e793b2eca6",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 33.29499816894531,
+          "y0": 31.0830078125,
+          "x1": 559.6749877929688,
+          "y1": 388.843017578125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c8cdd15e7dfb3f33",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 6,
+      "figure_number": "3",
+      "caption": "Figure 3. (a) The optimized structures of TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt), where the obtained adsorption sites of H* are marked. (b) The calculated ∆GH* values for different adsorption sites on TM@R-graphyne at equilibrium potential. Note that the HER catalytic performance can be indicated by the distinct colors, where the darker red color means higher activity.",
+      "bbox": {
+        "x0": 166.50399780273438,
+        "y0": 176.64703369140625,
+        "x1": 395.968994140625,
+        "y1": 475.62005615234375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 3. (a) The optimized structures of TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt), where the obtained adsorption sites of H* are marked. (b) The calculated ∆GH* values for different adsorption sites on TM@R-graphyne at equilibrium potential. Note that the HER catalytic performance can be indicated by the distinct colors, where the darker red color means higher activity."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 6,
+        "object_id": "fig-c8cdd15e7dfb3f33",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 166.50399780273438,
+          "y0": 176.64703369140625,
+          "x1": 395.968994140625,
+          "y1": 475.62005615234375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 3. (a) The optimized structures of TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt), where the obtained adsorption sites of H* are marked. (b) The calculated ∆GH* values for different adsorption sites on TM@R-graphyne at equilibrium potential. Note that the HER catalytic performance can be indicated by the distinct colors, where the darker red color means higher activity.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-275040adbc699330",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 6,
+      "bbox": {
+        "x0": 34.604000091552734,
+        "y0": 149.300048828125,
+        "x1": 560.9840087890625,
+        "y1": 834.7400512695312
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 6,
+        "object_id": "fig-275040adbc699330",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 34.604000091552734,
+          "y0": 149.300048828125,
+          "x1": 560.9840087890625,
+          "y1": 834.7400512695312
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5bc5109c55e3c012",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 8,
+      "figure_number": "4",
+      "caption": "Figure 4. The electron density for TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt) where the blue areas and yellow area mean the concentration of electron density and the depletion of electron density, respectively.",
+      "bbox": {
+        "x0": 166.3939971923828,
+        "y0": 94.85906982421875,
+        "x1": 431.322998046875,
+        "y1": 395.2030334472656
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 4. The electron density for TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt) where the blue areas and yellow area mean the concentration of electron density and the depletion of electron density, respectively."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 8,
+        "object_id": "fig-5bc5109c55e3c012",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 166.3939971923828,
+          "y0": 94.85906982421875,
+          "x1": 431.322998046875,
+          "y1": 395.2030334472656
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 4. The electron density for TM@R-graphyne (TM = Fe, Co, Ni, Ru, Rh, Pd, Os, Ir and Pt) where the blue areas and yellow area mean the concentration of electron density and the depletion of electron density, respectively.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3ccf9247fe0e8430",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 8,
+      "figure_number": "5",
+      "caption": "Figure 5. (a–c) The Gibbs free energy diagrams for OER on TM@R-graphyne (TM = Co, Ni and Rh) at an electrode potential of 0 V, where * denotes TM site.",
+      "bbox": {
+        "x0": 166.9409942626953,
+        "y0": 449.19097900390625,
+        "x1": 549.166015625,
+        "y1": 593.656982421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 5. (a–c) The Gibbs free energy diagrams for OER on TM@R-graphyne (TM = Co, Ni and Rh) at an electrode potential of 0 V, where * denotes TM site."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 8,
+        "object_id": "fig-3ccf9247fe0e8430",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 166.9409942626953,
+          "y0": 449.19097900390625,
+          "x1": 549.166015625,
+          "y1": 593.656982421875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 5. (a–c) The Gibbs free energy diagrams for OER on TM@R-graphyne (TM = Co, Ni and Rh) at an electrode potential of 0 V, where * denotes TM site.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-45df17088c8346ce",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 8,
+      "bbox": {
+        "x0": 32.85900115966797,
+        "y0": -59.4969482421875,
+        "x1": 561.4210205078125,
+        "y1": 424.0689697265625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 8,
+        "object_id": "fig-45df17088c8346ce",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 32.85900115966797,
+          "y0": -59.4969482421875,
+          "x1": 561.4210205078125,
+          "y1": 424.0689697265625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2f4fd03191643d84",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 9,
+      "figure_number": "6",
+      "caption": "Figure 6. Linear relationship between ∆GO* vs. GOH* (a) and ∆GO* vs. GOOH*(b) for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir), (c) the relationship between η and ∆GO* for TM@R-graphyne.",
+      "bbox": {
+        "x0": 59.19160079956055,
+        "y0": 240.76602172851562,
+        "x1": 535.801025390625,
+        "y1": 379.5160217285156
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 6. Linear relationship between ∆GO* vs. GOH* (a) and ∆GO* vs. GOOH*(b) for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir), (c) the relationship between η and ∆GO* for TM@R-graphyne."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 9,
+        "object_id": "fig-2f4fd03191643d84",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 59.19160079956055,
+          "y0": 240.76602172851562,
+          "x1": 535.801025390625,
+          "y1": 379.5160217285156
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 6. Linear relationship between ∆GO* vs. GOH* (a) and ∆GO* vs. GOOH*(b) for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir), (c) the relationship between η and ∆GO* for TM@R-graphyne.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-5edab026d9a084b8",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 9,
+      "figure_number": "7",
+      "caption": "Figure 7. The 2D colored contour plot of OER activity for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir) by showing the η values as a function of the Gibbs free energies.",
+      "bbox": {
+        "x0": 166.50399780273438,
+        "y0": 554.7050170898438,
+        "x1": 372.4010009765625,
+        "y1": 731.469970703125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 7. The 2D colored contour plot of OER activity for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir) by showing the η values as a function of the Gibbs free energies."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 9,
+        "object_id": "fig-5edab026d9a084b8",
+        "object_type": "figure",
+        "table_or_figure_number": "7",
+        "bbox": {
+          "x0": 166.50399780273438,
+          "y0": 554.7050170898438,
+          "x1": 372.4010009765625,
+          "y1": 731.469970703125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 7. The 2D colored contour plot of OER activity for TM@R-graphyne (TM = Co, Ni, Ru, Rh and Ir) by showing the η values as a function of the Gibbs free energies.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2b8125892794c379",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 9,
+      "bbox": {
+        "x0": 34.604000091552734,
+        "y0": -279.5339660644531,
+        "x1": 562.0230102539062,
+        "y1": 863.4720458984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 9,
+        "object_id": "fig-2b8125892794c379",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 34.604000091552734,
+          "y0": -279.5339660644531,
+          "x1": 562.0230102539062,
+          "y1": 863.4720458984375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-0e31b75e2934af60",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 10,
+      "figure_number": "8",
+      "caption": "Figure 8. Partial density of states (PDOS) about the p orbitals of O atoms and d orbitals of TM atoms after the O* adsorption of Ru@R-graphyne (a), Rh@R-graphyne (b), and Ni@R-graphyne (c). The Fermi level energy is set as zero (black line). Inset: the molecular orbitals of the O atom adsorbed at the TM site in different energy ranges are marked by black dash line. Blue arrow represents the p-d overlap center.",
+      "bbox": {
+        "x0": 166.3939971923828,
+        "y0": 352.6224365234375,
+        "x1": 358.78326416015625,
+        "y1": 716.6700439453125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Figure 8. Partial density of states (PDOS) about the p orbitals of O atoms and d orbitals of TM atoms after the O* adsorption of Ru@R-graphyne (a), Rh@R-graphyne (b), and Ni@R-graphyne (c). The Fermi level energy is set as zero (black line). Inset: the molecular orbitals of the O atom adsorbed at the TM site in different energy ranges are marked by black dash line. Blue arrow represents the p-d overlap center."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 10,
+        "object_id": "fig-0e31b75e2934af60",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 166.3939971923828,
+          "y0": 352.6224365234375,
+          "x1": 358.78326416015625,
+          "y1": 716.6700439453125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Figure 8. Partial density of states (PDOS) about the p orbitals of O atoms and d orbitals of TM atoms after the O* adsorption of Ru@R-graphyne (a), Rh@R-graphyne (b), and Ni@R-graphyne (c). The Fermi level energy is set as zero (black line). Inset: the molecular orbitals of the O atom adsorbed at the TM site in different energy ranges are marked by black dash line. Blue arrow represents the p-d overlap center.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-64bb761081e12043",
+      "source_id": "src-bbd6b9071cef5e09",
+      "page": 10,
+      "bbox": {
+        "x0": 39.949954986572266,
+        "y0": 324.98406982421875,
+        "x1": 540.010986328125,
+        "y1": 778.68505859375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-bbd6b9071cef5e09",
+        "page": 10,
+        "object_id": "fig-64bb761081e12043",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 39.949954986572266,
+          "y0": 324.98406982421875,
+          "x1": 540.010986328125,
+          "y1": 778.68505859375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

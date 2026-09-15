@@ -1,0 +1,79 @@
+{
+  "run_at": "2026-09-15T09:03:12.119558+00:00",
+  "base_final_confirmation": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_confirmation_20260914T230022Z",
+  "model": "gemini-3.5-flash",
+  "provider_mode": "benchmark",
+  "serper_enabled": false,
+  "requested_unresolved_ids": [
+    "CAT-GOLD-B",
+    "CAT-COMPUTE-C",
+    "CAT-STABILITY-D",
+    "CAT-REVIEW-E",
+    "CAT-PHOTO-F"
+  ],
+  "results": [
+    {
+      "benchmark_id": "CAT-GOLD-B",
+      "status": "PROVIDER_BLOCKED",
+      "extraction_status": "pipeline_error",
+      "gemini_calls": 1,
+      "repair_calls": 0,
+      "coverage_calls": 0,
+      "gold_metric_association_v2": null,
+      "error_type": "ServerError",
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-gold-b"
+    },
+    {
+      "benchmark_id": "CAT-COMPUTE-C",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": null,
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-compute-c"
+    },
+    {
+      "benchmark_id": "CAT-STABILITY-D",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": null,
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-stability-d"
+    },
+    {
+      "benchmark_id": "CAT-REVIEW-E",
+      "status": "PROVIDER_BLOCKED",
+      "extraction_status": "pipeline_error",
+      "gemini_calls": 1,
+      "repair_calls": 0,
+      "coverage_calls": 0,
+      "gold_metric_association_v2": null,
+      "error_type": "ServerError",
+      "error_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-review-e"
+    },
+    {
+      "benchmark_id": "CAT-PHOTO-F",
+      "status": "PASS",
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "coverage_calls": 1,
+      "gold_metric_association_v2": null,
+      "error_type": null,
+      "error_message": null,
+      "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z\\cat-photo-f"
+    }
+  ],
+  "stopped_for_quota": false,
+  "skipped_due_quota": [],
+  "output_dir": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T085450Z"
+}

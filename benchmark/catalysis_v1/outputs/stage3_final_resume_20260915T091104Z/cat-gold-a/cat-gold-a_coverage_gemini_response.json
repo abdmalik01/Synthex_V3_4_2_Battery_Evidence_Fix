@@ -1,0 +1,154 @@
+{
+  "dispositions": [
+    {
+      "candidate_id": "catcand-7c3a26ce9fc28a38",
+      "status": "accepted",
+      "reason": "Explicit focal-work experimental observation of CO2 conversion stability (~85% after 1400 min) for MMONiCo + Ce catalyst.",
+      "catalysts": [
+        {
+          "local_id": "MMONiCo_Ce",
+          "reported_name": "MMONiCo + Ce",
+          "reported_formula": "Mg4.7NiCo0.3Al2O9 + 0.3CeO2",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "Remarkably MMONiCo + Ce \nremained more stable than MMONiCo with no significant changes in \ncatalytic activity (~85 % of CO2 conversion after 1400 min of contin-\nuous use).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ],
+      "heterogeneous_experiments": [
+        {
+          "experiment_id": "exp_mmonico_ce_stability",
+          "catalyst_ref": "MMONiCo_Ce",
+          "reaction": {
+            "reported_reaction": "CO2(g)+4H2(g) -> CH4(g)+2H2O(l)",
+            "reaction_class": "other_heterogeneous",
+            "reactants": [
+              {
+                "reported_name": "carbon dioxide",
+                "formula": "CO2"
+              },
+              {
+                "reported_name": "hydrogen",
+                "formula": "H2"
+              }
+            ],
+            "products": [
+              {
+                "reported_name": "methane",
+                "formula": "CH4"
+              },
+              {
+                "reported_name": "water",
+                "formula": "H2O"
+              }
+            ]
+          },
+          "time_on_stream": {
+            "raw_value": "1400",
+            "value": 1400,
+            "unit": "min",
+            "qualifier": "exact"
+          },
+          "metrics": [
+            {
+              "property": "conversion",
+              "raw_value": "~85 %",
+              "value": 85,
+              "unit": "%",
+              "qualifier": "approx",
+              "reactant": "CO2",
+              "evidence": [
+                {
+                  "source_id": "src-9d231e2b3a31eb2a",
+                  "page": 10,
+                  "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+                  "text_snippet": "Remarkably MMONiCo + Ce \nremained more stable than MMONiCo with no significant changes in \ncatalytic activity (~85 % of CO2 conversion after 1400 min of contin-\nuous use).",
+                  "source_type": "text",
+                  "original_source_type": "native_text"
+                }
+              ]
+            }
+          ],
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "source_id": "src-9d231e2b3a31eb2a",
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "Remarkably MMONiCo + Ce \nremained more stable than MMONiCo with no significant changes in \ncatalytic activity (~85 % of CO2 conversion after 1400 min of contin-\nuous use).",
+              "source_type": "text",
+              "original_source_type": "native_text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "catcand-5c28835fdf4fded7",
+      "status": "rejected",
+      "reason": "Contains mathematical definitions and formulas for conversion, selectivity, and space time yield rather than experimental measurements."
+    },
+    {
+      "candidate_id": "catcand-4d8b25e628df61b4",
+      "status": "rejected",
+      "reason": "Ambiguous catalyst association ('these materials') and qualitative/range description of conversion ('lower than 40%')."
+    },
+    {
+      "candidate_id": "catcand-115196c55da81874",
+      "status": "rejected",
+      "reason": "General optimization statement and background/summary of conditions rather than a specific experimental run measurement."
+    },
+    {
+      "candidate_id": "catcand-9c5c97a3f86238b1",
+      "status": "rejected",
+      "reason": "Describes temperature ramp rate during characterization/pretreatment rather than a catalytic reaction metric."
+    },
+    {
+      "candidate_id": "catcand-2fd1a52a69929250",
+      "status": "rejected",
+      "reason": "Describes feed gas composition and experimental setup conditions rather than catalytic performance metrics."
+    },
+    {
+      "candidate_id": "catcand-a2d8d0d0f73ad2b2",
+      "status": "rejected",
+      "reason": "Describes catalyst pretreatment/reduction conditions rather than catalytic reaction metrics."
+    },
+    {
+      "candidate_id": "catcand-b33013e3324df795",
+      "status": "rejected",
+      "reason": "Describes the methodology/formula for calculating space time yield rather than reporting a specific experimental measurement."
+    },
+    {
+      "candidate_id": "catcand-f661c6ce18419744",
+      "status": "rejected",
+      "reason": "Describes catalyst pretreatment/reduction conditions rather than catalytic reaction metrics."
+    },
+    {
+      "candidate_id": "catcand-2d41e2b1481a680c",
+      "status": "rejected",
+      "reason": "General statement about temperature range for maximum conversion across multiple catalysts without specific quantitative metric values."
+    },
+    {
+      "candidate_id": "catcand-343b69c3f7d31dca",
+      "status": "rejected",
+      "reason": "Qualitative description of the effect of catalyst mass on conversion rather than reporting specific quantitative catalytic metrics."
+    },
+    {
+      "candidate_id": "catcand-9412e02fc390d953",
+      "status": "rejected",
+      "reason": "Qualitative comparison of catalyst masses showing no significant differences rather than reporting specific quantitative catalytic metrics."
+    },
+    {
+      "candidate_id": "catcand-1d064a65adc71036",
+      "status": "rejected",
+      "reason": "Refers to a figure description (Fig. 10B) without reporting specific quantitative catalytic metrics in the text."
+    }
+  ]
+}

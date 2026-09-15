@@ -1,0 +1,485 @@
+[
+  {
+    "candidate_id": "catcand-d66d28c500a70e11",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "3.2. Photocatalytic Hydrogen Generation",
+    "snippet": "The samples 3.5 wt.% Niacac-based NPs/TiO2 and 3.5 wt.% Niformate-based NPs/TiO2 were\ntested under visible light, showing a slight activity with hydrogen generation rates of\n1.5 and 0.6 µmol gcat.−1 h−1, respectively.",
+    "numeric_spans": [
+      "3.5",
+      "3.5",
+      "1.5",
+      "0.6",
+      "1",
+      "1"
+    ],
+    "unit_spans": [
+      "%",
+      "h−1"
+    ],
+    "lexical_cues": [
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-39cf5b938db8318b",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 13,
+    "snippet": "Among the modified samples, the 3.5 wt.% Niacac-based NPs/TiO2 sample demonstrated\nthe most outstanding increase in photocatalytic activity, with a rate approximately 42-fold\nhigher than that of bare TiO2.",
+    "numeric_spans": [
+      "3.5",
+      "approximately 42"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b06335a0503cf4aa",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "1.5 and 0.6 µmol gcat.−1 h−1, respectively. The sample 0.1 wt.% Ni acac-based NPs/TiO2",
+    "snippet": "The sample 0.1 wt.% Ni acac-based NPs/TiO2\nshows a higher TRMC signal than bare TiO2 (Figure 5b) under visible excitation, but the\nhydrogen generation rate (0.4 µmol gcat.−1 h−1) was lower than that of 3.5 wt.% Ni acac-\nbased NPs/TiO2.",
+    "numeric_spans": [
+      "0.1",
+      "0.4",
+      "1",
+      "1",
+      "3.5"
+    ],
+    "unit_spans": [
+      "%",
+      "h−1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-ca90b0d88284c066",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "3.2. Photocatalytic Hydrogen Generation",
+    "snippet": "The results demonstrate that the\nNiacac-based NPs/TiO2 samples with theoretical Ni loadings of 0.1, 0.5, 1.0, 3.5, and 5.0 wt.%\non the TiO2 surface exhibit increasingly higher and notable hydrogen generation rates,\ncorresponding to 95.9, 287.8, 563.3, 998.4, and 897.2µmol gcat.− 1 h−1, respectively, as shown\nin Figure 6b.",
+    "numeric_spans": [
+      "0.1",
+      "0.5",
+      "1.0",
+      "3.5",
+      "5.0",
+      "95.9",
+      "287.8",
+      "563.3",
+      "998.4",
+      "897.2",
+      "1",
+      "1"
+    ],
+    "unit_spans": [
+      "%",
+      "h−1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-73b5f3e9962a40b4",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 12,
+    "snippet": "The hydrogen generation rate\nof our best sample, 3.5 wt.% Niacac-based NPs/TiO2, is 998.4 µmol gcat.−1 h−1,∼42-fold\nhigher than that of bare TiO 2 NPs, under UV–visible light irradiation.",
+    "numeric_spans": [
+      "3.5",
+      "998.4",
+      "1",
+      "1",
+      "42",
+      "2"
+    ],
+    "unit_spans": [
+      "%",
+      "h−1",
+      "V"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1e44c683d03363c4",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 14,
+    "snippet": "The laser energy of these\nwavelengths was 1.1 and 2.3 mJ, respectively; Figure S7: (a) Photocatalytic hydrogen generation for\nNiformate-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen\ngeneration rates ( µmol g cat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol\naqueous solution; Figure S8: Survey XPS spectra of 3.5 wt.% Niacac-based NPs/TiO2 sample before\nand after cycling; Table S1: Doses for the modified samples; Table S2: Comparison of H2 evolution\nunder UV–visible light of the different photocatalysts.",
+    "numeric_spans": [
+      "1.1",
+      "2.3",
+      "1",
+      "1",
+      "25",
+      "3.5"
+    ],
+    "unit_spans": [
+      "s 1",
+      "V",
+      "h−1",
+      "%",
+      "v",
+      "S1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-df9559cf0dc7ed35",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 2,
+    "snippet": "However, its\nwide band gap (~3.2 eV for anatase and ~3.0 eV for rutile phases) [3] and fast charge-carriers’\nrecombination rate limit its efficiency under visible light.",
+    "numeric_spans": [
+      "~3.2",
+      "~3.0"
+    ],
+    "unit_spans": [
+      "eV"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-700fa90eb8169e39",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 9,
+    "snippet": "The sample with 3.5 wt.% Niacac-based NPs/TiO2 exhibits the\nfastest decay rate among the different metal loadings (0.1, 0.5, and 1 wt.%).",
+    "numeric_spans": [
+      "3.5",
+      "0.1",
+      "0.5",
+      "1"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-a1aa141c90f6e2ed",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "snippet": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+    "numeric_spans": [
+      "1",
+      "1",
+      "25"
+    ],
+    "unit_spans": [
+      "V",
+      "h−1",
+      "%",
+      "v"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-7b3bd0aa73d845a4",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e421e6c083bd47f4",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "3.2. Photocatalytic Hydrogen Generation",
+    "snippet": "(a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2\nunder UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible\nlight irradiation from 25% v/v methanol aqueous solution.",
+    "numeric_spans": [
+      "1",
+      "1",
+      "25"
+    ],
+    "unit_spans": [
+      "V",
+      "h−1",
+      "%",
+      "v"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e5905346fd95c3de",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "3.2. Photocatalytic Hydrogen Generation",
+    "snippet": "The decrease in the\nactivity with higher loading than 5.0% may be due to higher charge-carrier recombinations.",
+    "numeric_spans": [
+      "5.0"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e593bcdb5471e9c5",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "snippet": "Figure 6. (a) Photocatalytic hydrogen generation for Niacac-based NPs/TiO2 samples and bare TiO2 under UV–visible light, and (b) their hydrogen generation rates (µmol gcat.−1 h−1) under UV–visible light irradiation from 25% v/v methanol aqueous solution.",
+    "numeric_spans": [
+      "1",
+      "1",
+      "25"
+    ],
+    "unit_spans": [
+      "V",
+      "h−1",
+      "%",
+      "v"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-8eeb0d5b80e53487",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e845e334eee3c9d4",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 10,
+    "section": "3.2. Photocatalytic Hydrogen Generation",
+    "snippet": "The\nhydrogen evolution rate of TiO2 was 23.3 µmol gcat.−1 h−1.",
+    "numeric_spans": [
+      "23.3",
+      "1",
+      "1"
+    ],
+    "unit_spans": [
+      "h−1"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d6070302ab54aeb8",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 2,
+    "snippet": "In particular, surface modification of TiO 2 with noble metal NPs (e.g., Pt, Pd,\nRh, Au, and Ag) can lead to important enhancement of the photocatalytic activity for H2\nevolution [7–12].",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [
+      "Ag"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-1cc91a2cf14eafb5",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 12,
+    "section": "3.3. Proposed Photocatalytic Hydrogen Mechanism",
+    "snippet": "Additionally, the TRMC results provide strong evidence that Ni 0 NPs effectively\nscavenge electrons from the CB of TiO2 under UV light, which is beneficial for photocatalytic\nactivity [36,52].",
+    "numeric_spans": [
+      "0"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-c37eb52d764eacad",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 14,
+    "snippet": "Materials 2025, 18, 3513 14 of 18\na stable rate after the second cycle.",
+    "numeric_spans": [
+      "2025",
+      "18",
+      "3513",
+      "14",
+      "18"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-b4f0fa33e59eb8c6",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 9,
+    "snippet": "The TRMC results provide strong evidence that Ni 0-NPs effectively\nscavenge electrons from the conduction band of TiO2, which is beneficial for photocatalytic\nactivity.",
+    "numeric_spans": [
+      "0"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e4c44ab356e08a02",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 16,
+    "snippet": "Enhanced photocatalytic H2-production activity of TiO2 by Ni(OH)2 cluster modification.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-460627e124a9859d",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 17,
+    "snippet": "Enhanced Photocatalytic Activity of Surface-Modified TiO 2 with Bimetallic AuPd Nanoalloys for Hydrogen\nGeneration.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-60982a488c54c190",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 17,
+    "snippet": "Enhanced photocatalytic H2-production activity of TiO2 using Ni(NO3)2 as an additive.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-2111a2004a50ae26",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 18,
+    "snippet": "NiO nanosheet/TiO 2 nanorod-constructed p-n heterostructures for improved\nphotocatalytic activity.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-d63ac57a00d87b22",
+    "source_id": "src-7179b701538dafe0",
+    "source_checksum": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+    "page": 12,
+    "snippet": "For comparison\nwith other systems reported in the literature, Ni(OH) 2/TiO2 nanotubes demonstrated\napproximately 12 times higher rate than TiO2 [19], and Ni/C/TiO2 showed 9 times higher\nrate than TiO2 [58].",
+    "numeric_spans": [
+      "2",
+      "approximately 12",
+      "9"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 1,
+    "priority": "low"
+  }
+]

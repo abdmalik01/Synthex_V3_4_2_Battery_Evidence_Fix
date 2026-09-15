@@ -1,0 +1,815 @@
+{
+  "source_id": "src-3626736bc803a292",
+  "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-3626736bc803a292",
+    "filename": "s41467-020-17690-8.pdf",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 13,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260914T235032Z\\cat-gold-b\\sidecars\\visual\\src-3626736bc803a292\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-07668d3c095e0bea",
+      "source_id": "src-3626736bc803a292",
+      "page": 1,
+      "bbox": {
+        "x0": 480.8190002441406,
+        "y0": 125.7509765625,
+        "x1": 551.5800170898438,
+        "y1": 139.13800048828125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 1,
+        "object_id": "fig-07668d3c095e0bea",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 480.8190002441406,
+          "y0": 125.7509765625,
+          "x1": 551.5800170898438,
+          "y1": 139.13800048828125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-cd194ad559d21ab3",
+      "source_id": "src-3626736bc803a292",
+      "page": 1,
+      "bbox": {
+        "x0": 0.01501499954611063,
+        "y0": 17.00799560546875,
+        "x1": 595.2750244140625,
+        "y1": 81.24102783203125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 1,
+        "object_id": "fig-cd194ad559d21ab3",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 0.01501499954611063,
+          "y0": 17.00799560546875,
+          "x1": 595.2750244140625,
+          "y1": 81.24102783203125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-48ce56b63300e6c9",
+      "source_id": "src-3626736bc803a292",
+      "page": 1,
+      "bbox": {
+        "x0": 33.60300064086914,
+        "y0": 18.76201057434082,
+        "x1": 551.906005859375,
+        "y1": 686.6640014648438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 1,
+        "object_id": "fig-48ce56b63300e6c9",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 33.60300064086914,
+          "y0": 18.76201057434082,
+          "x1": 551.906005859375,
+          "y1": 686.6640014648438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-73994eeb8ed3efed",
+      "source_id": "src-3626736bc803a292",
+      "page": 3,
+      "figure_number": "1",
+      "caption": "Fig. 1 Comparison of C2+ product formations. The partial current densities of C2+ products measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+      "bbox": {
+        "x0": 87.68699645996094,
+        "y0": 59.427001953125,
+        "x1": 536.8250122070312,
+        "y1": 385.94500732421875
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        },
+        {
+          "label": "c"
+        },
+        {
+          "label": "d"
+        },
+        {
+          "label": "e"
+        },
+        {
+          "label": "f"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 1 Comparison of C2+ product formations. The partial current densities of C2+ products measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 3,
+        "object_id": "fig-73994eeb8ed3efed",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 87.68699645996094,
+          "y0": 59.427001953125,
+          "x1": 536.8250122070312,
+          "y1": 385.94500732421875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 1 Comparison of C2+ product formations. The partial current densities of C2+ products measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a506a9696a521b14",
+      "source_id": "src-3626736bc803a292",
+      "page": 4,
+      "figure_number": "2",
+      "caption": "Fig. 2 Comparison of C1 product and H2 formations. The partial current densities of C1 products and H2 measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+      "bbox": {
+        "x0": 85.0260009765625,
+        "y0": 58.551025390625,
+        "x1": 538.0230102539062,
+        "y1": 387.5890197753906
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        },
+        {
+          "label": "c"
+        },
+        {
+          "label": "d"
+        },
+        {
+          "label": "e"
+        },
+        {
+          "label": "f"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 2 Comparison of C1 product and H2 formations. The partial current densities of C1 products and H2 measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 4,
+        "object_id": "fig-a506a9696a521b14",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 85.0260009765625,
+          "y0": 58.551025390625,
+          "x1": 538.0230102539062,
+          "y1": 387.5890197753906
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 2 Comparison of C1 product and H2 formations. The partial current densities of C1 products and H2 measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-2e1c8d689469b03f",
+      "source_id": "src-3626736bc803a292",
+      "page": 5,
+      "bbox": {
+        "x0": 69.39797973632812,
+        "y0": 56.14501953125,
+        "x1": 531.5159912109375,
+        "y1": 261.70404052734375
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        },
+        {
+          "label": "c"
+        },
+        {
+          "label": "d"
+        },
+        {
+          "label": "e"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 5,
+        "object_id": "fig-2e1c8d689469b03f",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 69.39797973632812,
+          "y0": 56.14501953125,
+          "x1": 531.5159912109375,
+          "y1": 261.70404052734375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-befd99732eb7677e",
+      "source_id": "src-3626736bc803a292",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Fig. 3 In situ surface-enhanced Raman spectroscopy. Raman spectra of Cu catalyst at electrolysis with a pure Ar gas feed in 0.1 M KHCO3/H2O; b pure CO2 gas feed in 0.1 M KHCO3/H2O; c pure O2 gas feed in 0.1 M KHCO3/H2O and 0.1 M KDCO3/D2O; d 10% O2 + 90% CO2 in 0.1 M KHCO3/H2O. e Schematic of CO2RR on Cu surface at the presence of hydroxyl groups induced by ORR.",
+      "bbox": {
+        "x0": 69.40701293945312,
+        "y0": 300.4630126953125,
+        "x1": 531.2860107421875,
+        "y1": 518.5029907226562
+      },
+      "panels": [
+        {
+          "label": "d"
+        },
+        {
+          "label": "e"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3 In situ surface-enhanced Raman spectroscopy. Raman spectra of Cu catalyst at electrolysis with a pure Ar gas feed in 0.1 M KHCO3/H2O; b pure CO2 gas feed in 0.1 M KHCO3/H2O; c pure O2 gas feed in 0.1 M KHCO3/H2O and 0.1 M KDCO3/D2O; d 10% O2 + 90% CO2 in 0.1 M KHCO3/H2O. e Schematic of CO2RR on Cu surface at the presence of hydroxyl groups induced by ORR."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 5,
+        "object_id": "fig-befd99732eb7677e",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 69.40701293945312,
+          "y0": 300.4630126953125,
+          "x1": 531.2860107421875,
+          "y1": 518.5029907226562
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3 In situ surface-enhanced Raman spectroscopy. Raman spectra of Cu catalyst at electrolysis with a pure Ar gas feed in 0.1 M KHCO3/H2O; b pure CO2 gas feed in 0.1 M KHCO3/H2O; c pure O2 gas feed in 0.1 M KHCO3/H2O and 0.1 M KDCO3/D2O; d 10% O2 + 90% CO2 in 0.1 M KHCO3/H2O. e Schematic of CO2RR on Cu surface at the presence of hydroxyl groups induced by ORR.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-1f2120e458a5432b",
+      "source_id": "src-3626736bc803a292",
+      "page": 6,
+      "figure_number": "4",
+      "caption": "Fig. 4 Computational model. Representative structures of *CO dimerization at initial states (a), transition states (b), and ﬁnal states (c). Representative structures of *CO hydrogenation at initial states (d), transition states (e), and ﬁnal states (f).",
+      "bbox": {
+        "x0": 66.54000091552734,
+        "y0": 54.8079833984375,
+        "x1": 537.6580200195312,
+        "y1": 483.3069763183594
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        },
+        {
+          "label": "c"
+        },
+        {
+          "label": "d"
+        },
+        {
+          "label": "e"
+        },
+        {
+          "label": "f"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 4 Computational model. Representative structures of *CO dimerization at initial states (a), transition states (b), and ﬁnal states (c). Representative structures of *CO hydrogenation at initial states (d), transition states (e), and ﬁnal states (f)."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 6,
+        "object_id": "fig-1f2120e458a5432b",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 66.54000091552734,
+          "y0": 54.8079833984375,
+          "x1": 537.6580200195312,
+          "y1": 483.3069763183594
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 4 Computational model. Representative structures of *CO dimerization at initial states (a), transition states (b), and ﬁnal states (c). Representative structures of *CO hydrogenation at initial states (d), transition states (e), and ﬁnal states (f).",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b52c28cff895b2d2",
+      "source_id": "src-3626736bc803a292",
+      "page": 7,
+      "figure_number": "5",
+      "caption": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details).",
+      "bbox": {
+        "x0": 141.75100708007812,
+        "y0": 57.64898681640625,
+        "x1": 292.59100341796875,
+        "y1": 197.3280029296875
+      },
+      "panels": [
+        {
+          "label": "a"
+        },
+        {
+          "label": "b"
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details)."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 7,
+        "object_id": "fig-b52c28cff895b2d2",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 141.75100708007812,
+          "y0": 57.64898681640625,
+          "x1": 292.59100341796875,
+          "y1": 197.3280029296875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details).",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c2a719046f5d6982",
+      "source_id": "src-3626736bc803a292",
+      "page": 7,
+      "figure_number": "5",
+      "caption": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details).",
+      "bbox": {
+        "x0": 331.448974609375,
+        "y0": 57.66400146484375,
+        "x1": 482.2879943847656,
+        "y1": 197.343017578125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details)."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-3626736bc803a292",
+        "page": 7,
+        "object_id": "fig-c2a719046f5d6982",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 331.448974609375,
+          "y0": 57.66400146484375,
+          "x1": 482.2879943847656,
+          "y1": 197.343017578125
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 5 Free energy diagram. a *CO dimerization. b *CO hydrogenation. The binding free energies for initial states and transition states at different *OH coverage are calculated with reference to a Cu slab with speciﬁc numbers of *OH, gas phase CO, H2, and liquid H2O molecules. The potential is −0.5 VSHE (i.e., equivalent to −0.9 VRHE). ΔΔG (ΔΔG≠) is deﬁned as the reaction-free energy (free energy barrier) at certain *OH coverage referenced to the value obtained at zero *OH coverage (see “Methods” section for computational details).",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-a8eb515c2cc1271d",
+      "source_id": "src-3626736bc803a292",
+      "page": 8,
+      "bbox": {
+        "x0": 43.597015380859375,
+        "y0": 29.650020599365234,
+        "x1": 551.6790161132812,
+        "y1": 594.1419677734375
+      },
+      "panels": [
+        {
+          "label": "x",
+          "bbox": {
+            "x0": 430.7532653808594,
+            "y0": 520.9835205078125,
+            "x1": 441.490234375,
+            "y1": 528.455322265625
+          }
+        },
+        {
+          "label": "x",
+          "bbox": {
+            "x0": 415.388916015625,
+            "y0": 551.7110595703125,
+            "x1": 426.1258850097656,
+            "y1": 559.182861328125
+          }
+        },
+        {
+          "label": "x",
+          "bbox": {
+            "x0": 375.36370849609375,
+            "y0": 582.7783813476562,
+            "x1": 386.1006774902344,
+            "y1": 590.2501831054688
+          }
+        },
+        {
+          "label": "n",
+          "bbox": {
+            "x0": 347.64093017578125,
+            "y0": 616.907470703125,
+            "x1": 418.4019470214844,
+            "y1": 638.3031005859375
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 8,
+        "object_id": "fig-a8eb515c2cc1271d",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 43.597015380859375,
+          "y0": 29.650020599365234,
+          "x1": 551.6790161132812,
+          "y1": 594.1419677734375
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-c12566b8da7942b1",
+      "source_id": "src-3626736bc803a292",
+      "page": 9,
+      "bbox": {
+        "x0": 43.59700012207031,
+        "y0": 523.1620483398438,
+        "x1": 175.5780029296875,
+        "y1": 533.9340209960938
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 9,
+        "object_id": "fig-c12566b8da7942b1",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 43.59700012207031,
+          "y0": 523.1620483398438,
+          "x1": 175.5780029296875,
+          "y1": 533.9340209960938
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3dc012c751414661",
+      "source_id": "src-3626736bc803a292",
+      "page": 10,
+      "bbox": {
+        "x0": 43.597015380859375,
+        "y0": 29.650020599365234,
+        "x1": 551.6790161132812,
+        "y1": 582.3380126953125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-3626736bc803a292",
+        "page": 10,
+        "object_id": "fig-3dc012c751414661",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 43.597015380859375,
+          "y0": 29.650020599365234,
+          "x1": 551.6790161132812,
+          "y1": 582.3380126953125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

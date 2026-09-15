@@ -1,0 +1,4486 @@
+{
+  "run_at": "2026-09-15T09:17:02.500748+00:00",
+  "model": "gemini-3.5-flash",
+  "serper_enabled": false,
+  "temperature": 0,
+  "seed": 0,
+  "results": [
+    {
+      "benchmark_id": "CAT-REVIEW-E",
+      "filename": "1-s2.0-S0378382025000918-main.pdf",
+      "route": {
+        "domain": "catalysis",
+        "confidence": 0.944,
+        "paper_types": [
+          "heterogeneous_catalysis",
+          "catalyst_synthesis",
+          "stability_deactivation",
+          "review",
+          "catalyst_characterization",
+          "computational_dft"
+        ],
+        "scope_status": "supported",
+        "ambiguity_reason": null
+      },
+      "route_correct": true,
+      "scope_correct": true,
+      "subtypes_correct": true,
+      "source_context": {
+        "source_id": "src-0b5e032e1e99c2f7",
+        "filename": "1-s2.0-S0378382025000918-main.pdf",
+        "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+        "primary_native_parser": "pypdf",
+        "page_parsers": [
+          {
+            "page": 1,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 2,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 3,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 4,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 5,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 6,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 7,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 8,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 9,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 10,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 11,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 12,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 13,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 14,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 15,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 16,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 17,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 18,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 19,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 20,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 21,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 22,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 23,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 24,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 25,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 26,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 27,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 28,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 29,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 30,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 31,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 32,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          },
+          {
+            "page": 33,
+            "native_parser": "pypdf",
+            "parser": "pypdf",
+            "origin": "native_text",
+            "attempt_history": [
+              "pypdf"
+            ]
+          }
+        ],
+        "tables_detected": 0,
+        "figures_detected": 36,
+        "ocr_pages_used": [],
+        "digitizations_available": 0,
+        "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-review-e\\sidecars\\visual\\src-0b5e032e1e99c2f7\\visual_document.json"
+      },
+      "extraction_status": "schema_valid",
+      "gemini_calls": 2,
+      "repair_calls": 0,
+      "schema_valid_first_response": true,
+      "schema_valid_repaired_response": false,
+      "persistent_failure": false,
+      "provider": {
+        "mode": "benchmark",
+        "requested_model": "gemini-3.5-flash",
+        "actual_model": "gemini-3.5-flash",
+        "configured_model_order": [
+          "gemini-3.5-flash"
+        ],
+        "models_attempted": [
+          "gemini-3.5-flash"
+        ],
+        "fallback_occurred": false,
+        "attempts": [
+          {
+            "order": 1,
+            "model": "gemini-3.5-flash",
+            "phase": "primary",
+            "status": "succeeded",
+            "failure_class": null,
+            "provider_message": null,
+            "timestamp": "2026-09-15T09:16:59.476421+00:00"
+          },
+          {
+            "order": 2,
+            "model": "gemini-3.5-flash",
+            "phase": "coverage_recovery",
+            "status": "failed",
+            "failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+            "timestamp": "2026-09-15T09:17:02.472780+00:00"
+          }
+        ],
+        "provider_failures": [
+          {
+            "model": "gemini-3.5-flash",
+            "phase": "coverage_recovery",
+            "failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          }
+        ]
+      },
+      "primary_calls": 1,
+      "schema_repair_calls": 0,
+      "coverage_calls": 1,
+      "candidates_detected": 88,
+      "high_priority_candidates": 45,
+      "candidates_covered": 0,
+      "candidates_sent": 45,
+      "coverage_candidates_accepted": 0,
+      "coverage_candidates_rejected": 45,
+      "coverage_validation_error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "archive": {
+        "metadata": {
+          "archive_id": "arc-b5f43e3f9b19cde3",
+          "schema_name": "synthex-archive",
+          "schema_version": "3.4.0",
+          "software_version": "3.4.2",
+          "created_at": "2026-09-15T09:17:02.474690+00:00",
+          "generator": "Synthex V3.4.2",
+          "extractor_model": "gemini-3.5-flash",
+          "domain": "catalysis"
+        },
+        "sources": [
+          {
+            "source_id": "src-1090acdceb1729b9",
+            "source_type": "paper",
+            "title": "Progress in heterogeneous catalysis for renewable energy and petrochemical production from biomass",
+            "doi": "10.1016/j.fuproc.2025.108267",
+            "url": "https://doi.org/10.1016/j.fuproc.2025.108267",
+            "year": 2025,
+            "authors": [
+              "Ifeanyi Michael Smarte Anekwe",
+              "Stephen Okiemute Akpasi",
+              "Emmanuel Kweinor Tetteh",
+              "Atuman Samaila Joel",
+              "Sherif Ishola Mustapha",
+              "Yusuf Makarfi Isa"
+            ],
+            "checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707"
+          }
+        ],
+        "materials": [],
+        "devices": [],
+        "processes": [],
+        "experiments": [],
+        "calculations": [],
+        "relationships": [
+          {
+            "relation_id": "rel-4b359857def64ad3",
+            "subject_id": "arc-b5f43e3f9b19cde3",
+            "predicate": "reported_by",
+            "object_id": "src-1090acdceb1729b9",
+            "attributes": {},
+            "evidence": []
+          }
+        ],
+        "domain_payloads": [
+          {
+            "domain": "catalysis",
+            "schema_version": "1.0-stage2",
+            "tags": [],
+            "values": {
+              "validated_document": {
+                "source": {
+                  "title": "Progress in heterogeneous catalysis for renewable energy and petrochemical production from biomass",
+                  "doi": "10.1016/j.fuproc.2025.108267",
+                  "url": "https://doi.org/10.1016/j.fuproc.2025.108267",
+                  "year": 2025,
+                  "authors": [
+                    "Ifeanyi Michael Smarte Anekwe",
+                    "Stephen Okiemute Akpasi",
+                    "Emmanuel Kweinor Tetteh",
+                    "Atuman Samaila Joel",
+                    "Sherif Ishola Mustapha",
+                    "Yusuf Makarfi Isa"
+                  ],
+                  "pdf_text_parser": "pypdf"
+                },
+                "paper_types": [
+                  "review",
+                  "heterogeneous_catalysis"
+                ],
+                "scope_status": "supported",
+                "catalysts": [
+                  {
+                    "local_id": "cat_NiMo_Zeolite",
+                    "reported_name": "NiMo/Zeolite",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "340",
+                      "value": 340.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "NiMo/Zeolite",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_HZSM5_Chlorella",
+                    "reported_name": "HZSM-5",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "425",
+                      "value": 425.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "HZSM-5",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_KOH_4A",
+                    "reported_name": "KOH/4 A molecular sieve",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": null,
+                    "pore_size": null,
+                    "pore_volume": null,
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "KOH/4 A \nmolecular sieve",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_NiCe_ACN",
+                    "reported_name": "NiCe/ACN",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "403",
+                      "value": 403.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.12",
+                      "value": 0.12,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "NiCe/ACN",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_ZIF90_Gua",
+                    "reported_name": "ZIF-90-Gua",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "830.4",
+                      "value": 830.4,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.42",
+                      "value": 0.42,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "ZIF-90-Gua",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_Ni_3Mo_MCM41",
+                    "reported_name": "Ni–3 %Mo/MCM-41",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "473",
+                      "value": 473.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.28",
+                      "value": 0.28,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "Ni–3 %Mo/ \nMCM-41",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_Ni_MSN",
+                    "reported_name": "Ni/MSN",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "879",
+                      "value": 879.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.79",
+                      "value": 0.79,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "Ni/MSN",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_POC_SBA15_5",
+                    "reported_name": "POC-SBA-15(5)",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "537",
+                      "value": 537.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.71",
+                      "value": 0.71,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 22,
+                        "section": "Table 6",
+                        "text_snippet": "POC-SBA-15(5)",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  },
+                  {
+                    "local_id": "cat_MIL53_Fe2O3",
+                    "reported_name": "MIL-53(Al)/Fe2O3",
+                    "canonical_name": null,
+                    "reported_formula": null,
+                    "formula": null,
+                    "composition_raw": null,
+                    "composition": {},
+                    "catalyst_family": null,
+                    "state": "unknown",
+                    "state_parent_ref": null,
+                    "variant_of": null,
+                    "components": [],
+                    "phase": null,
+                    "particle_size": null,
+                    "morphology": null,
+                    "bet_surface_area": {
+                      "raw_value": "1535",
+                      "value": 1535.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_size": null,
+                    "pore_volume": {
+                      "raw_value": "0.59",
+                      "value": 0.59,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "oxidation_state": null,
+                    "exposed_facet": null,
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "MIL-53(Al)/ \nFe2O3",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "figure_id": null,
+                        "row": null,
+                        "column": null,
+                        "cell_id": null,
+                        "bounding_box": null,
+                        "locator": null,
+                        "verbatim_match": false,
+                        "confidence": null,
+                        "evidence_strength": "unverified",
+                        "estimated": false,
+                        "admission_status": null,
+                        "digitization_id": null
+                      }
+                    ]
+                  }
+                ],
+                "preparations": [],
+                "characterizations": [],
+                "heterogeneous_experiments": [
+                  {
+                    "experiment_id": "exp_NiMo_Zeolite",
+                    "catalyst_ref": "cat_NiMo_Zeolite",
+                    "reaction": {
+                      "reported_reaction": "cracking and hydrogenation of palm oil to biogasoline",
+                      "reaction_class": "hydrocarbon_conversion",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": "BR",
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "palm oil",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": {
+                      "raw_value": "300–320",
+                      "value": null,
+                      "unit": "°C",
+                      "qualifier": "range"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": {
+                      "raw_value": "1, 1.5, 2",
+                      "value": null,
+                      "unit": "h",
+                      "qualifier": "range"
+                    },
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "11.93 %",
+                        "value": 11.93,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "biogasoline",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_HZSM5_Chlorella",
+                    "catalyst_ref": "cat_HZSM5_Chlorella",
+                    "reaction": {
+                      "reported_reaction": "pyrolysis of Chlorella vulgaris",
+                      "reaction_class": "hydrocarbon_conversion",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": "Fixed-bed reactor",
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "Chlorella vulgaris",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": {
+                      "raw_value": "510 ± 5",
+                      "value": 510.0,
+                      "unit": "°C",
+                      "qualifier": "approx"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "25.8 wt%",
+                        "value": 25.8,
+                        "unit": "wt%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "aromatic hydrocarbons",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "When the catalyst \nconcentration increased \nfrom 0 to 9 times the \nbiomass, the yield of \naromatic hydrocarbons \nincreased from 0.9 wt% \nto 25.8 wt%.",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_KOH_4A",
+                    "catalyst_ref": "cat_KOH_4A",
+                    "reaction": {
+                      "reported_reaction": "synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "methanol",
+                        "fraction": null,
+                        "basis": null
+                      },
+                      {
+                        "species": "propylene oxide",
+                        "fraction": null,
+                        "basis": null
+                      },
+                      {
+                        "species": "carbon dioxide",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": {
+                      "raw_value": "3",
+                      "value": 3.0,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "180",
+                      "value": 180.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": {
+                      "raw_value": "6",
+                      "value": 6.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "58.7",
+                        "value": 58.7,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "propylene carbonate",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "Propylene carbonate \n(PC) yield (%) = 58.7",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "yield",
+                        "raw_value": "16.8",
+                        "value": 16.8,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "dimethyl carbonate",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "Dimethyl carbonate \n(DMC) yield \n(%) = 16.8",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_NiCe_ACN",
+                    "catalyst_ref": "cat_NiCe_ACN",
+                    "reaction": {
+                      "reported_reaction": "CO2 methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "H2",
+                        "fraction": null,
+                        "basis": null
+                      },
+                      {
+                        "species": "CO2",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": {
+                      "raw_value": "86,100",
+                      "value": 86100.0,
+                      "unit": "mL h-1 gcat-1",
+                      "qualifier": "exact"
+                    },
+                    "pressure": {
+                      "raw_value": "0.16",
+                      "value": 0.16,
+                      "unit": "bar",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "200–450",
+                      "value": null,
+                      "unit": "°C",
+                      "qualifier": "range"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "73",
+                        "value": 73.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "CH4",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 (%) yield = 73",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "86–97",
+                        "value": null,
+                        "unit": "%",
+                        "qualifier": "range",
+                        "reactant": null,
+                        "product": "CH4",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 selectivity (%) =\n86–97",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_ZIF90_Gua",
+                    "catalyst_ref": "cat_ZIF90_Gua",
+                    "reaction": {
+                      "reported_reaction": "transesterification of soybean oil with methanol",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "soybean oil",
+                        "fraction": null,
+                        "basis": null
+                      },
+                      {
+                        "species": "methanol",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": {
+                      "raw_value": "65",
+                      "value": 65.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "95.4",
+                        "value": 95.4,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "biodiesel",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "Biodiesel yield (%) =\n95.4",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_Ni_3Mo_MCM41",
+                    "catalyst_ref": "cat_Ni_3Mo_MCM41",
+                    "reaction": {
+                      "reported_reaction": "CO methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "syngas",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": {
+                      "raw_value": "12,000",
+                      "value": 12000.0,
+                      "unit": "mL g-1 h-1",
+                      "qualifier": "exact"
+                    },
+                    "ghsv": null,
+                    "pressure": {
+                      "raw_value": "0.1",
+                      "value": 0.1,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "280",
+                      "value": 280.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "100",
+                        "value": 100.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO",
+                        "product": null,
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "XCO/% = 100",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "80",
+                        "value": 80.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "CH4",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "SCH4/% = 80",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_Ni_MSN",
+                    "catalyst_ref": "cat_Ni_MSN",
+                    "reaction": {
+                      "reported_reaction": "CO2 methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "carbon dioxide",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": {
+                      "raw_value": "12,000",
+                      "value": 12000.0,
+                      "unit": "mL g-1 h-1",
+                      "qualifier": "exact"
+                    },
+                    "ghsv": null,
+                    "pressure": {
+                      "raw_value": "0.1",
+                      "value": 0.1,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "280",
+                      "value": 280.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "64.1",
+                        "value": 64.1,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO",
+                        "product": null,
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "XCO/% = 64.1",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "99.9",
+                        "value": 99.9,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "CH4",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "SCH4/% = 99.9",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_POC_SBA15_5",
+                    "catalyst_ref": "cat_POC_SBA15_5",
+                    "reaction": {
+                      "reported_reaction": "ethanol dehydration to ethylene",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": null,
+                    "feed_composition": [
+                      {
+                        "species": "ethanol",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": {
+                      "raw_value": "400",
+                      "value": 400.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "73.33 %",
+                        "value": 73.33,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "ethanol",
+                        "product": null,
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 22,
+                            "section": "Table 6",
+                            "text_snippet": "ethanol conversion \n(73.33 %) were achieved \nwith POC-SBA-15(5)",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "84.70 %",
+                        "value": 84.7,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "ethylene",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 22,
+                            "section": "Table 6",
+                            "text_snippet": "The highest ethylene \nselectivity (84.70 %)",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  },
+                  {
+                    "experiment_id": "exp_MIL53_Fe2O3",
+                    "catalyst_ref": "cat_MIL53_Fe2O3",
+                    "reaction": {
+                      "reported_reaction": "CO2 hydrogenation over iron-based catalyst to light olefins",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": null,
+                    "catalyst_mass": {
+                      "raw_value": "1",
+                      "value": 1.0,
+                      "unit": "g",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "carbon dioxide",
+                        "fraction": null,
+                        "basis": null
+                      }
+                    ],
+                    "flow_rate": null,
+                    "whsv": null,
+                    "ghsv": null,
+                    "pressure": null,
+                    "temperature": {
+                      "raw_value": "300",
+                      "value": 300.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "carrier_gas": null,
+                    "pretreatment_ref": null,
+                    "reaction_time": null,
+                    "time_on_stream": null,
+                    "analytical_method": null,
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "20",
+                        "value": 20.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO2",
+                        "product": null,
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CO2 Conversion (%) =\n20",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "20",
+                        "value": 20.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "CO",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CO = 20",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "41",
+                        "value": 41.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": null,
+                        "product": "CH4",
+                        "normalization_basis": null,
+                        "conditions": {},
+                        "derivation": null,
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 = 41",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "figure_id": null,
+                            "row": null,
+                            "column": null,
+                            "cell_id": null,
+                            "bounding_box": null,
+                            "locator": null,
+                            "verbatim_match": false,
+                            "confidence": null,
+                            "evidence_strength": "unverified",
+                            "estimated": false,
+                            "admission_status": null,
+                            "digitization_id": null
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                ],
+                "electrocatalysis_experiments": [],
+                "stability_tests": [],
+                "calculations": [],
+                "condition_conflicts": [],
+                "extraction_notes": [],
+                "semantic_warnings": []
+              },
+              "admissibility_audit": {
+                "policy": "catalysis_focal_value_specific_verified_v1",
+                "admitted_quantitative_values": 0,
+                "quarantined_objects_or_values": 18,
+                "quarantine": [
+                  {
+                    "path": "catalysts.cat_NiMo_Zeolite",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_NiMo_Zeolite",
+                      "reported_name": "NiMo/Zeolite",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "340",
+                        "value": 340.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "NiMo/Zeolite",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_HZSM5_Chlorella",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_HZSM5_Chlorella",
+                      "reported_name": "HZSM-5",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "425",
+                        "value": 425.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "HZSM-5",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_KOH_4A",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_KOH_4A",
+                      "reported_name": "KOH/4 A molecular sieve",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 20,
+                          "section": "Table 6",
+                          "text_snippet": "KOH/4 A \nmolecular sieve",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_NiCe_ACN",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_NiCe_ACN",
+                      "reported_name": "NiCe/ACN",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "403",
+                        "value": 403.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.12",
+                        "value": 0.12,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 21,
+                          "section": "Table 6",
+                          "text_snippet": "NiCe/ACN",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_ZIF90_Gua",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_ZIF90_Gua",
+                      "reported_name": "ZIF-90-Gua",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "830.4",
+                        "value": 830.4,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.42",
+                        "value": 0.42,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 21,
+                          "section": "Table 6",
+                          "text_snippet": "ZIF-90-Gua",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_Ni_3Mo_MCM41",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_Ni_3Mo_MCM41",
+                      "reported_name": "Ni–3 %Mo/MCM-41",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "473",
+                        "value": 473.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.28",
+                        "value": 0.28,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 21,
+                          "section": "Table 6",
+                          "text_snippet": "Ni–3 %Mo/ \nMCM-41",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_Ni_MSN",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_Ni_MSN",
+                      "reported_name": "Ni/MSN",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "879",
+                        "value": 879.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.79",
+                        "value": 0.79,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 21,
+                          "section": "Table 6",
+                          "text_snippet": "Ni/MSN",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_POC_SBA15_5",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_POC_SBA15_5",
+                      "reported_name": "POC-SBA-15(5)",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "537",
+                        "value": 537.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.71",
+                        "value": 0.71,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 22,
+                          "section": "Table 6",
+                          "text_snippet": "POC-SBA-15(5)",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "catalysts.cat_MIL53_Fe2O3",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "local_id": "cat_MIL53_Fe2O3",
+                      "reported_name": "MIL-53(Al)/Fe2O3",
+                      "composition": {},
+                      "state": "unknown",
+                      "components": [],
+                      "bet_surface_area": {
+                        "raw_value": "1535",
+                        "value": 1535.0,
+                        "unit": "m2/g",
+                        "qualifier": "exact"
+                      },
+                      "pore_volume": {
+                        "raw_value": "0.59",
+                        "value": 0.59,
+                        "unit": "cm3/g",
+                        "qualifier": "exact"
+                      },
+                      "active_site_claims": [],
+                      "ownership": "comparison_table",
+                      "evidence": [
+                        {
+                          "source_id": "src-0b5e032e1e99c2f7",
+                          "page": 21,
+                          "section": "Table 6",
+                          "text_snippet": "MIL-53(Al)/ \nFe2O3",
+                          "source_type": "table",
+                          "original_source_type": "table_reported",
+                          "table_id": "Table 6",
+                          "verbatim_match": false,
+                          "evidence_strength": "unverified",
+                          "estimated": false
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_NiMo_Zeolite",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_NiMo_Zeolite",
+                      "catalyst_ref": "cat_NiMo_Zeolite",
+                      "reaction": {
+                        "reported_reaction": "cracking and hydrogenation of palm oil to biogasoline",
+                        "reaction_class": "hydrocarbon_conversion",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "reactor_type": "BR",
+                      "feed_composition": [
+                        {
+                          "species": "palm oil"
+                        }
+                      ],
+                      "temperature": {
+                        "raw_value": "300–320",
+                        "unit": "°C",
+                        "qualifier": "range"
+                      },
+                      "reaction_time": {
+                        "raw_value": "1, 1.5, 2",
+                        "unit": "h",
+                        "qualifier": "range"
+                      },
+                      "metrics": [
+                        {
+                          "property": "yield",
+                          "raw_value": "11.93 %",
+                          "value": 11.93,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "biogasoline",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 20,
+                              "section": "Table 6",
+                              "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_HZSM5_Chlorella",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_HZSM5_Chlorella",
+                      "catalyst_ref": "cat_HZSM5_Chlorella",
+                      "reaction": {
+                        "reported_reaction": "pyrolysis of Chlorella vulgaris",
+                        "reaction_class": "hydrocarbon_conversion",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "reactor_type": "Fixed-bed reactor",
+                      "feed_composition": [
+                        {
+                          "species": "Chlorella vulgaris"
+                        }
+                      ],
+                      "temperature": {
+                        "raw_value": "510 ± 5",
+                        "value": 510.0,
+                        "unit": "°C",
+                        "qualifier": "approx"
+                      },
+                      "metrics": [
+                        {
+                          "property": "yield",
+                          "raw_value": "25.8 wt%",
+                          "value": 25.8,
+                          "unit": "wt%",
+                          "qualifier": "exact",
+                          "product": "aromatic hydrocarbons",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 20,
+                              "section": "Table 6",
+                              "text_snippet": "When the catalyst \nconcentration increased \nfrom 0 to 9 times the \nbiomass, the yield of \naromatic hydrocarbons \nincreased from 0.9 wt% \nto 25.8 wt%.",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_KOH_4A",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_KOH_4A",
+                      "catalyst_ref": "cat_KOH_4A",
+                      "reaction": {
+                        "reported_reaction": "synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "methanol"
+                        },
+                        {
+                          "species": "propylene oxide"
+                        },
+                        {
+                          "species": "carbon dioxide"
+                        }
+                      ],
+                      "pressure": {
+                        "raw_value": "3",
+                        "value": 3.0,
+                        "unit": "MPa",
+                        "qualifier": "exact"
+                      },
+                      "temperature": {
+                        "raw_value": "180",
+                        "value": 180.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "reaction_time": {
+                        "raw_value": "6",
+                        "value": 6.0,
+                        "unit": "h",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "yield",
+                          "raw_value": "58.7",
+                          "value": 58.7,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "propylene carbonate",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 20,
+                              "section": "Table 6",
+                              "text_snippet": "Propylene carbonate \n(PC) yield (%) = 58.7",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "yield",
+                          "raw_value": "16.8",
+                          "value": 16.8,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "dimethyl carbonate",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 20,
+                              "section": "Table 6",
+                              "text_snippet": "Dimethyl carbonate \n(DMC) yield \n(%) = 16.8",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_NiCe_ACN",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_NiCe_ACN",
+                      "catalyst_ref": "cat_NiCe_ACN",
+                      "reaction": {
+                        "reported_reaction": "CO2 methanation",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "H2"
+                        },
+                        {
+                          "species": "CO2"
+                        }
+                      ],
+                      "ghsv": {
+                        "raw_value": "86,100",
+                        "value": 86100.0,
+                        "unit": "mL h-1 gcat-1",
+                        "qualifier": "exact"
+                      },
+                      "pressure": {
+                        "raw_value": "0.16",
+                        "value": 0.16,
+                        "unit": "bar",
+                        "qualifier": "exact"
+                      },
+                      "temperature": {
+                        "raw_value": "200–450",
+                        "unit": "°C",
+                        "qualifier": "range"
+                      },
+                      "metrics": [
+                        {
+                          "property": "yield",
+                          "raw_value": "73",
+                          "value": 73.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "CH4",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "CH4 (%) yield = 73",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "86–97",
+                          "unit": "%",
+                          "qualifier": "range",
+                          "product": "CH4",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "CH4 selectivity (%) =\n86–97",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_ZIF90_Gua",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_ZIF90_Gua",
+                      "catalyst_ref": "cat_ZIF90_Gua",
+                      "reaction": {
+                        "reported_reaction": "transesterification of soybean oil with methanol",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "soybean oil"
+                        },
+                        {
+                          "species": "methanol"
+                        }
+                      ],
+                      "temperature": {
+                        "raw_value": "65",
+                        "value": 65.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "yield",
+                          "raw_value": "95.4",
+                          "value": 95.4,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "biodiesel",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "Biodiesel yield (%) =\n95.4",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_Ni_3Mo_MCM41",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_Ni_3Mo_MCM41",
+                      "catalyst_ref": "cat_Ni_3Mo_MCM41",
+                      "reaction": {
+                        "reported_reaction": "CO methanation",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "syngas"
+                        }
+                      ],
+                      "whsv": {
+                        "raw_value": "12,000",
+                        "value": 12000.0,
+                        "unit": "mL g-1 h-1",
+                        "qualifier": "exact"
+                      },
+                      "pressure": {
+                        "raw_value": "0.1",
+                        "value": 0.1,
+                        "unit": "MPa",
+                        "qualifier": "exact"
+                      },
+                      "temperature": {
+                        "raw_value": "280",
+                        "value": 280.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "conversion",
+                          "raw_value": "100",
+                          "value": 100.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "reactant": "CO",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "XCO/% = 100",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "80",
+                          "value": 80.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "CH4",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "SCH4/% = 80",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_Ni_MSN",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_Ni_MSN",
+                      "catalyst_ref": "cat_Ni_MSN",
+                      "reaction": {
+                        "reported_reaction": "CO2 methanation",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "carbon dioxide"
+                        }
+                      ],
+                      "whsv": {
+                        "raw_value": "12,000",
+                        "value": 12000.0,
+                        "unit": "mL g-1 h-1",
+                        "qualifier": "exact"
+                      },
+                      "pressure": {
+                        "raw_value": "0.1",
+                        "value": 0.1,
+                        "unit": "MPa",
+                        "qualifier": "exact"
+                      },
+                      "temperature": {
+                        "raw_value": "280",
+                        "value": 280.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "conversion",
+                          "raw_value": "64.1",
+                          "value": 64.1,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "reactant": "CO",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "XCO/% = 64.1",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "99.9",
+                          "value": 99.9,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "CH4",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "SCH4/% = 99.9",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_POC_SBA15_5",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_POC_SBA15_5",
+                      "catalyst_ref": "cat_POC_SBA15_5",
+                      "reaction": {
+                        "reported_reaction": "ethanol dehydration to ethylene",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "ethanol"
+                        }
+                      ],
+                      "temperature": {
+                        "raw_value": "400",
+                        "value": 400.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "conversion",
+                          "raw_value": "73.33 %",
+                          "value": 73.33,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "reactant": "ethanol",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 22,
+                              "section": "Table 6",
+                              "text_snippet": "ethanol conversion \n(73.33 %) were achieved \nwith POC-SBA-15(5)",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "84.70 %",
+                          "value": 84.7,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "ethylene",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 22,
+                              "section": "Table 6",
+                              "text_snippet": "The highest ethylene \nselectivity (84.70 %)",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  },
+                  {
+                    "path": "experiments.exp_MIL53_Fe2O3",
+                    "reason": "ownership_comparison_table",
+                    "ownership": "comparison_table",
+                    "object": {
+                      "experiment_id": "exp_MIL53_Fe2O3",
+                      "catalyst_ref": "cat_MIL53_Fe2O3",
+                      "reaction": {
+                        "reported_reaction": "CO2 hydrogenation over iron-based catalyst to light olefins",
+                        "reaction_class": "other_heterogeneous",
+                        "reactants": [],
+                        "products": []
+                      },
+                      "catalyst_mass": {
+                        "raw_value": "1",
+                        "value": 1.0,
+                        "unit": "g",
+                        "qualifier": "exact"
+                      },
+                      "feed_composition": [
+                        {
+                          "species": "carbon dioxide"
+                        }
+                      ],
+                      "temperature": {
+                        "raw_value": "300",
+                        "value": 300.0,
+                        "unit": "°C",
+                        "qualifier": "exact"
+                      },
+                      "metrics": [
+                        {
+                          "property": "conversion",
+                          "raw_value": "20",
+                          "value": 20.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "reactant": "CO2",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "CO2 Conversion (%) =\n20",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "20",
+                          "value": 20.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "CO",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "CO = 20",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        },
+                        {
+                          "property": "selectivity",
+                          "raw_value": "41",
+                          "value": 41.0,
+                          "unit": "%",
+                          "qualifier": "exact",
+                          "product": "CH4",
+                          "conditions": {},
+                          "ownership": "unknown",
+                          "evidence": [
+                            {
+                              "source_id": "src-0b5e032e1e99c2f7",
+                              "page": 21,
+                              "section": "Table 6",
+                              "text_snippet": "CH4 = 41",
+                              "source_type": "table",
+                              "original_source_type": "table_reported",
+                              "table_id": "Table 6",
+                              "verbatim_match": false,
+                              "evidence_strength": "unverified",
+                              "estimated": false
+                            }
+                          ]
+                        }
+                      ],
+                      "ownership": "comparison_table",
+                      "evidence": []
+                    }
+                  }
+                ],
+                "canonical_admission_count": 0
+              },
+              "quarantined_objects_measurements": [
+                {
+                  "path": "catalysts.cat_NiMo_Zeolite",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_NiMo_Zeolite",
+                    "reported_name": "NiMo/Zeolite",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "340",
+                      "value": 340.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "NiMo/Zeolite",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_HZSM5_Chlorella",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_HZSM5_Chlorella",
+                    "reported_name": "HZSM-5",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "425",
+                      "value": 425.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "HZSM-5",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_KOH_4A",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_KOH_4A",
+                    "reported_name": "KOH/4 A molecular sieve",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 20,
+                        "section": "Table 6",
+                        "text_snippet": "KOH/4 A \nmolecular sieve",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_NiCe_ACN",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_NiCe_ACN",
+                    "reported_name": "NiCe/ACN",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "403",
+                      "value": 403.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.12",
+                      "value": 0.12,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "NiCe/ACN",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_ZIF90_Gua",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_ZIF90_Gua",
+                    "reported_name": "ZIF-90-Gua",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "830.4",
+                      "value": 830.4,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.42",
+                      "value": 0.42,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "ZIF-90-Gua",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_Ni_3Mo_MCM41",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_Ni_3Mo_MCM41",
+                    "reported_name": "Ni–3 %Mo/MCM-41",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "473",
+                      "value": 473.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.28",
+                      "value": 0.28,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "Ni–3 %Mo/ \nMCM-41",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_Ni_MSN",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_Ni_MSN",
+                    "reported_name": "Ni/MSN",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "879",
+                      "value": 879.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.79",
+                      "value": 0.79,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "Ni/MSN",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_POC_SBA15_5",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_POC_SBA15_5",
+                    "reported_name": "POC-SBA-15(5)",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "537",
+                      "value": 537.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.71",
+                      "value": 0.71,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 22,
+                        "section": "Table 6",
+                        "text_snippet": "POC-SBA-15(5)",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "catalysts.cat_MIL53_Fe2O3",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "local_id": "cat_MIL53_Fe2O3",
+                    "reported_name": "MIL-53(Al)/Fe2O3",
+                    "composition": {},
+                    "state": "unknown",
+                    "components": [],
+                    "bet_surface_area": {
+                      "raw_value": "1535",
+                      "value": 1535.0,
+                      "unit": "m2/g",
+                      "qualifier": "exact"
+                    },
+                    "pore_volume": {
+                      "raw_value": "0.59",
+                      "value": 0.59,
+                      "unit": "cm3/g",
+                      "qualifier": "exact"
+                    },
+                    "active_site_claims": [],
+                    "ownership": "comparison_table",
+                    "evidence": [
+                      {
+                        "source_id": "src-0b5e032e1e99c2f7",
+                        "page": 21,
+                        "section": "Table 6",
+                        "text_snippet": "MIL-53(Al)/ \nFe2O3",
+                        "source_type": "table",
+                        "original_source_type": "table_reported",
+                        "table_id": "Table 6",
+                        "verbatim_match": false,
+                        "evidence_strength": "unverified",
+                        "estimated": false
+                      }
+                    ]
+                  }
+                },
+                {
+                  "path": "experiments.exp_NiMo_Zeolite",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_NiMo_Zeolite",
+                    "catalyst_ref": "cat_NiMo_Zeolite",
+                    "reaction": {
+                      "reported_reaction": "cracking and hydrogenation of palm oil to biogasoline",
+                      "reaction_class": "hydrocarbon_conversion",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": "BR",
+                    "feed_composition": [
+                      {
+                        "species": "palm oil"
+                      }
+                    ],
+                    "temperature": {
+                      "raw_value": "300–320",
+                      "unit": "°C",
+                      "qualifier": "range"
+                    },
+                    "reaction_time": {
+                      "raw_value": "1, 1.5, 2",
+                      "unit": "h",
+                      "qualifier": "range"
+                    },
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "11.93 %",
+                        "value": 11.93,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "biogasoline",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "% Yield of biogasoline =\n11.93 %",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_HZSM5_Chlorella",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_HZSM5_Chlorella",
+                    "catalyst_ref": "cat_HZSM5_Chlorella",
+                    "reaction": {
+                      "reported_reaction": "pyrolysis of Chlorella vulgaris",
+                      "reaction_class": "hydrocarbon_conversion",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "reactor_type": "Fixed-bed reactor",
+                    "feed_composition": [
+                      {
+                        "species": "Chlorella vulgaris"
+                      }
+                    ],
+                    "temperature": {
+                      "raw_value": "510 ± 5",
+                      "value": 510.0,
+                      "unit": "°C",
+                      "qualifier": "approx"
+                    },
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "25.8 wt%",
+                        "value": 25.8,
+                        "unit": "wt%",
+                        "qualifier": "exact",
+                        "product": "aromatic hydrocarbons",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "When the catalyst \nconcentration increased \nfrom 0 to 9 times the \nbiomass, the yield of \naromatic hydrocarbons \nincreased from 0.9 wt% \nto 25.8 wt%.",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_KOH_4A",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_KOH_4A",
+                    "catalyst_ref": "cat_KOH_4A",
+                    "reaction": {
+                      "reported_reaction": "synthesis of dimethyl carbonate from methanol, propylene oxide and carbon dioxide",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "methanol"
+                      },
+                      {
+                        "species": "propylene oxide"
+                      },
+                      {
+                        "species": "carbon dioxide"
+                      }
+                    ],
+                    "pressure": {
+                      "raw_value": "3",
+                      "value": 3.0,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "180",
+                      "value": 180.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "reaction_time": {
+                      "raw_value": "6",
+                      "value": 6.0,
+                      "unit": "h",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "58.7",
+                        "value": 58.7,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "propylene carbonate",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "Propylene carbonate \n(PC) yield (%) = 58.7",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "yield",
+                        "raw_value": "16.8",
+                        "value": 16.8,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "dimethyl carbonate",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 20,
+                            "section": "Table 6",
+                            "text_snippet": "Dimethyl carbonate \n(DMC) yield \n(%) = 16.8",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_NiCe_ACN",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_NiCe_ACN",
+                    "catalyst_ref": "cat_NiCe_ACN",
+                    "reaction": {
+                      "reported_reaction": "CO2 methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "H2"
+                      },
+                      {
+                        "species": "CO2"
+                      }
+                    ],
+                    "ghsv": {
+                      "raw_value": "86,100",
+                      "value": 86100.0,
+                      "unit": "mL h-1 gcat-1",
+                      "qualifier": "exact"
+                    },
+                    "pressure": {
+                      "raw_value": "0.16",
+                      "value": 0.16,
+                      "unit": "bar",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "200–450",
+                      "unit": "°C",
+                      "qualifier": "range"
+                    },
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "73",
+                        "value": 73.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "CH4",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 (%) yield = 73",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "86–97",
+                        "unit": "%",
+                        "qualifier": "range",
+                        "product": "CH4",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 selectivity (%) =\n86–97",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_ZIF90_Gua",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_ZIF90_Gua",
+                    "catalyst_ref": "cat_ZIF90_Gua",
+                    "reaction": {
+                      "reported_reaction": "transesterification of soybean oil with methanol",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "soybean oil"
+                      },
+                      {
+                        "species": "methanol"
+                      }
+                    ],
+                    "temperature": {
+                      "raw_value": "65",
+                      "value": 65.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "yield",
+                        "raw_value": "95.4",
+                        "value": 95.4,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "biodiesel",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "Biodiesel yield (%) =\n95.4",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_Ni_3Mo_MCM41",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_Ni_3Mo_MCM41",
+                    "catalyst_ref": "cat_Ni_3Mo_MCM41",
+                    "reaction": {
+                      "reported_reaction": "CO methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "syngas"
+                      }
+                    ],
+                    "whsv": {
+                      "raw_value": "12,000",
+                      "value": 12000.0,
+                      "unit": "mL g-1 h-1",
+                      "qualifier": "exact"
+                    },
+                    "pressure": {
+                      "raw_value": "0.1",
+                      "value": 0.1,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "280",
+                      "value": 280.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "100",
+                        "value": 100.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "XCO/% = 100",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "80",
+                        "value": 80.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "CH4",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "SCH4/% = 80",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_Ni_MSN",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_Ni_MSN",
+                    "catalyst_ref": "cat_Ni_MSN",
+                    "reaction": {
+                      "reported_reaction": "CO2 methanation",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "carbon dioxide"
+                      }
+                    ],
+                    "whsv": {
+                      "raw_value": "12,000",
+                      "value": 12000.0,
+                      "unit": "mL g-1 h-1",
+                      "qualifier": "exact"
+                    },
+                    "pressure": {
+                      "raw_value": "0.1",
+                      "value": 0.1,
+                      "unit": "MPa",
+                      "qualifier": "exact"
+                    },
+                    "temperature": {
+                      "raw_value": "280",
+                      "value": 280.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "64.1",
+                        "value": 64.1,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "XCO/% = 64.1",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "99.9",
+                        "value": 99.9,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "CH4",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "SCH4/% = 99.9",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_POC_SBA15_5",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_POC_SBA15_5",
+                    "catalyst_ref": "cat_POC_SBA15_5",
+                    "reaction": {
+                      "reported_reaction": "ethanol dehydration to ethylene",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "ethanol"
+                      }
+                    ],
+                    "temperature": {
+                      "raw_value": "400",
+                      "value": 400.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "73.33 %",
+                        "value": 73.33,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "ethanol",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 22,
+                            "section": "Table 6",
+                            "text_snippet": "ethanol conversion \n(73.33 %) were achieved \nwith POC-SBA-15(5)",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "84.70 %",
+                        "value": 84.7,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "ethylene",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 22,
+                            "section": "Table 6",
+                            "text_snippet": "The highest ethylene \nselectivity (84.70 %)",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                },
+                {
+                  "path": "experiments.exp_MIL53_Fe2O3",
+                  "reason": "ownership_comparison_table",
+                  "ownership": "comparison_table",
+                  "object": {
+                    "experiment_id": "exp_MIL53_Fe2O3",
+                    "catalyst_ref": "cat_MIL53_Fe2O3",
+                    "reaction": {
+                      "reported_reaction": "CO2 hydrogenation over iron-based catalyst to light olefins",
+                      "reaction_class": "other_heterogeneous",
+                      "reactants": [],
+                      "products": []
+                    },
+                    "catalyst_mass": {
+                      "raw_value": "1",
+                      "value": 1.0,
+                      "unit": "g",
+                      "qualifier": "exact"
+                    },
+                    "feed_composition": [
+                      {
+                        "species": "carbon dioxide"
+                      }
+                    ],
+                    "temperature": {
+                      "raw_value": "300",
+                      "value": 300.0,
+                      "unit": "°C",
+                      "qualifier": "exact"
+                    },
+                    "metrics": [
+                      {
+                        "property": "conversion",
+                        "raw_value": "20",
+                        "value": 20.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "reactant": "CO2",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CO2 Conversion (%) =\n20",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "20",
+                        "value": 20.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "CO",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CO = 20",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      },
+                      {
+                        "property": "selectivity",
+                        "raw_value": "41",
+                        "value": 41.0,
+                        "unit": "%",
+                        "qualifier": "exact",
+                        "product": "CH4",
+                        "conditions": {},
+                        "ownership": "unknown",
+                        "evidence": [
+                          {
+                            "source_id": "src-0b5e032e1e99c2f7",
+                            "page": 21,
+                            "section": "Table 6",
+                            "text_snippet": "CH4 = 41",
+                            "source_type": "table",
+                            "original_source_type": "table_reported",
+                            "table_id": "Table 6",
+                            "verbatim_match": false,
+                            "evidence_strength": "unverified",
+                            "estimated": false
+                          }
+                        ]
+                      }
+                    ],
+                    "ownership": "comparison_table",
+                    "evidence": []
+                  }
+                }
+              ],
+              "normalization_comparability_warnings": [],
+              "conflicts": [],
+              "extraction_notes": [],
+              "source_context": {
+                "source_id": "src-0b5e032e1e99c2f7",
+                "filename": "1-s2.0-S0378382025000918-main.pdf",
+                "source_checksum": "1492c9a282e5668ba3ba087073b6e3693d3d31e05d45eafe857d7d2ca6e3b707",
+                "primary_native_parser": "pypdf",
+                "page_parsers": [
+                  {
+                    "page": 1,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 2,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 3,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 4,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 5,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 6,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 7,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 8,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 9,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 10,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 11,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 12,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 13,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 14,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 15,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 16,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 17,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 18,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 19,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 20,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 21,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 22,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 23,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 24,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 25,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 26,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 27,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 28,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 29,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 30,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 31,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 32,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  },
+                  {
+                    "page": 33,
+                    "native_parser": "pypdf",
+                    "parser": "pypdf",
+                    "origin": "native_text",
+                    "attempt_history": [
+                      "pypdf"
+                    ]
+                  }
+                ],
+                "tables_detected": 0,
+                "figures_detected": 36,
+                "ocr_pages_used": [],
+                "digitizations_available": 0,
+                "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\catalysis_v1\\outputs\\stage3_final_resume_20260915T091104Z\\cat-review-e\\sidecars\\visual\\src-0b5e032e1e99c2f7\\visual_document.json"
+              }
+            }
+          },
+          {
+            "domain": "llm_provider",
+            "schema_version": "1.0.0",
+            "tags": [
+              "benchmark_pinned"
+            ],
+            "values": {
+              "mode": "benchmark",
+              "requested_model": "gemini-3.5-flash",
+              "actual_model": "gemini-3.5-flash",
+              "configured_model_order": [
+                "gemini-3.5-flash"
+              ],
+              "models_attempted": [
+                "gemini-3.5-flash"
+              ],
+              "fallback_occurred": false,
+              "attempts": [
+                {
+                  "order": 1,
+                  "model": "gemini-3.5-flash",
+                  "phase": "primary",
+                  "status": "succeeded",
+                  "failure_class": null,
+                  "provider_message": null,
+                  "timestamp": "2026-09-15T09:16:59.476421+00:00"
+                },
+                {
+                  "order": 2,
+                  "model": "gemini-3.5-flash",
+                  "phase": "coverage_recovery",
+                  "status": "failed",
+                  "failure_class": "provider_unavailable",
+                  "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+                  "timestamp": "2026-09-15T09:17:02.472780+00:00"
+                }
+              ],
+              "provider_failures": [
+                {
+                  "model": "gemini-3.5-flash",
+                  "phase": "coverage_recovery",
+                  "failure_class": "provider_unavailable",
+                  "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+                }
+              ]
+            }
+          }
+        ],
+        "quality": {
+          "completeness": 0.0,
+          "provenance_coverage": 0.0,
+          "unit_normalization_coverage": 0.0,
+          "extraction_confidence": 0.0,
+          "semantic_warnings": [
+            "canonical_admission_count:0",
+            "quarantine_count:18",
+            "unresolved_conflict_count:0"
+          ],
+          "validation_status": "schema_validated"
+        }
+      },
+      "safety": {
+        "dft_experimental_leakage": 0,
+        "review_contamination": 0,
+        "digitized_canonical_leakage": 0,
+        "referential_integrity_violations": []
+      },
+      "candidate_artifacts": {
+        "inventory": "cat-review-e_candidate_inventory.json",
+        "coverage": "cat-review-e_candidate_coverage.json"
+      },
+      "captured_model_outputs": {
+        "raw": "cat-review-e_raw_gemini_response.json"
+      }
+    }
+  ],
+  "totals": {
+    "gemini_calls": 2,
+    "repair_calls": 0,
+    "persistent_failures": 0
+  }
+}

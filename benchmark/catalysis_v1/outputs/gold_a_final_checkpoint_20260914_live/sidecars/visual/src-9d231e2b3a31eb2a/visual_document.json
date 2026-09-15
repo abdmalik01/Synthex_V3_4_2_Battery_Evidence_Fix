@@ -1,0 +1,1049 @@
+{
+  "source_id": "src-9d231e2b3a31eb2a",
+  "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-9d231e2b3a31eb2a",
+    "filename": "1-s2.0-S0360319924005640-main.pdf",
+    "source_checksum": "0cacbb0547c40c4ac82ae8d1a44d3c5b4f17cbb8b8120c1e4df4e0c355ed0285",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 2,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 3,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 4,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 5,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 6,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 7,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 8,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 9,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 10,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      },
+      {
+        "page": 11,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 0,
+    "figures_detected": 21,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "benchmark\\catalysis_v1\\outputs\\gold_a_final_checkpoint_20260914_live\\sidecars\\visual\\src-9d231e2b3a31eb2a\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 2,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 3,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 4,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 5,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 6,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 7,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 8,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 9,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 10,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    },
+    {
+      "page": 11,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [],
+  "figures": [
+    {
+      "figure_id": "fig-ddda60359f6f2638",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 1,
+      "bbox": {
+        "x0": 501.1556396484375,
+        "y0": 148.863525390625,
+        "x1": 529.3749389648438,
+        "y1": 177.08287048339844
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 1,
+        "object_id": "fig-ddda60359f6f2638",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 501.1556396484375,
+          "y0": 148.863525390625,
+          "x1": 529.3749389648438,
+          "y1": 177.08287048339844
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-8df3082483fa1a0a",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 1,
+      "bbox": {
+        "x0": 36.793701171875,
+        "y0": 61.965087890625,
+        "x1": 96.37800598144531,
+        "y1": 127.1619873046875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 1,
+        "object_id": "fig-8df3082483fa1a0a",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 36.793701171875,
+          "y0": 61.965087890625,
+          "x1": 96.37800598144531,
+          "y1": 127.1619873046875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-03c9c88ef496a856",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 1,
+      "bbox": {
+        "x0": 501.052001953125,
+        "y0": 55.44550323486328,
+        "x1": 557.744873046875,
+        "y1": 126.99200439453125
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 1,
+        "object_id": "fig-03c9c88ef496a856",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 501.052001953125,
+          "y0": 55.44550323486328,
+          "x1": 557.744873046875,
+          "y1": 126.99200439453125
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-34d073e1fafe1a6b",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 1,
+      "bbox": {
+        "x0": 37.500099182128906,
+        "y0": 55.635009765625,
+        "x1": 557.6630249023438,
+        "y1": 668.6649780273438
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 1,
+        "object_id": "fig-34d073e1fafe1a6b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.500099182128906,
+          "y0": 55.635009765625,
+          "x1": 557.6630249023438,
+          "y1": 668.6649780273438
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-e8e9c501ab5cfef8",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 2,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 557.6630249023438,
+        "y1": 170.11297607421875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 2,
+        "object_id": "fig-e8e9c501ab5cfef8",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 557.6630249023438,
+          "y1": 170.11297607421875
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-1fb98e801d76e08b",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 3,
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 74.66998291015625,
+        "x1": 486.8219909667969,
+        "y1": 597.260009765625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": null
+      },
+      "provenance": {
+        "origin": "text_reported",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 3,
+        "object_id": "fig-1fb98e801d76e08b",
+        "object_type": "figure",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 74.66998291015625,
+          "x1": 486.8219909667969,
+          "y1": 597.260009765625
+        },
+        "parser_or_method": "pymupdf",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4e8c2ad6701438ff",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 4,
+      "figure_number": "1",
+      "caption": "Fig. 1. XRD patterns of A) HTs. B) MMOs with different Ni loadings. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO.",
+      "bbox": {
+        "x0": 39.628299713134766,
+        "y0": 55.44598388671875,
+        "x1": 287.43328857421875,
+        "y1": 364.8759765625
+      },
+      "panels": [
+        {
+          "label": "a",
+          "bbox": {
+            "x0": 37.587398529052734,
+            "y0": 402.5117492675781,
+            "x1": 291.0254211425781,
+            "y1": 446.8948669433594
+          }
+        }
+      ],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 1. XRD patterns of A) HTs. B) MMOs with different Ni loadings. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 4,
+        "object_id": "fig-4e8c2ad6701438ff",
+        "object_type": "figure",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 39.628299713134766,
+          "y0": 55.44598388671875,
+          "x1": 287.43328857421875,
+          "y1": 364.8759765625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 1. XRD patterns of A) HTs. B) MMOs with different Ni loadings. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-ca2ade710f885406",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 4,
+      "figure_number": "2",
+      "caption": "Fig. 2. XRD patterns of A) Ni, Fe, and Co HTs, B) Ni, Fe, and Co MMOs, C) Ni, Fe, and Co HTs with the addition of Ce, and D) Ni-, NiFe-, and NiCo-based MMOs with ceria. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO, (■) CeO2.",
+      "bbox": {
+        "x0": 126.99199676513672,
+        "y0": 467.8869934082031,
+        "x1": 468.22698974609375,
+        "y1": 716.7119750976562
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 2. XRD patterns of A) Ni, Fe, and Co HTs, B) Ni, Fe, and Co MMOs, C) Ni, Fe, and Co HTs with the addition of Ce, and D) Ni-, NiFe-, and NiCo-based MMOs with ceria. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO, (■) CeO2."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 4,
+        "object_id": "fig-ca2ade710f885406",
+        "object_type": "figure",
+        "table_or_figure_number": "2",
+        "bbox": {
+          "x0": 126.99199676513672,
+          "y0": 467.8869934082031,
+          "x1": 468.22698974609375,
+          "y1": 716.7119750976562
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 2. XRD patterns of A) Ni, Fe, and Co HTs, B) Ni, Fe, and Co MMOs, C) Ni, Fe, and Co HTs with the addition of Ce, and D) Ni-, NiFe-, and NiCo-based MMOs with ceria. (*) Hydrotalcite, (◆) NiAl2O4, (●) MgAl2O4, (▾) MgO, (▴) NiO, (■) CeO2.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4cc2be16fd20b225",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 5,
+      "figure_number": "3",
+      "caption": "Fig. 3. H2-TPR results for the synthesized MMOs. A) MMO with different Ni loadings, B) Effect of Co and Fe on Ni-based MMOs, and C) Effect of ceria on Ni- based MMOs.",
+      "bbox": {
+        "x0": 39.628299713134766,
+        "y0": 55.44598388671875,
+        "x1": 287.2633056640625,
+        "y1": 322.97998046875
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3. H2-TPR results for the synthesized MMOs. A) MMO with different Ni loadings, B) Effect of Co and Fe on Ni-based MMOs, and C) Effect of ceria on Ni- based MMOs."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 5,
+        "object_id": "fig-4cc2be16fd20b225",
+        "object_type": "figure",
+        "table_or_figure_number": "3",
+        "bbox": {
+          "x0": 39.628299713134766,
+          "y0": 55.44598388671875,
+          "x1": 287.2633056640625,
+          "y1": 322.97998046875
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3. H2-TPR results for the synthesized MMOs. A) MMO with different Ni loadings, B) Effect of Co and Fe on Ni-based MMOs, and C) Effect of ceria on Ni- based MMOs.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-8544cfb6d42df270",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 5,
+      "figure_number": "3C",
+      "caption": "Fig. 3C presents the results of the H2-TPR analyses for the MMOs produced from hydrotalcite reconstructed with Ce (i.e., MMONi + Ce, MMONiCo + Ce, and MMONiFe + Ce), exhibiting an increase in the intensity and reduction temperature (>850 ◦C) and such a high- temperature peak can be attributed to the reduction of bulk CeO2 [39]. This reinforces the strong metal-support interaction among Ni, Co, and Fe to CeO2. Moreover, these materials had two peaks at 380 and 480 ◦C (which are absent in MMONi, Fig. 3A), belonging to the surface and partial reduction of ceria underneath the surface (Eq. (6)), respec­ tively. The signals increase and overlap with the most oxidized species of Co and Fe in MMONiCo + Ce and MMONiFe + Ce, respectively [40,41]. Therefore, the ceria support contributes to the reducibility capacity at",
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 606.1190185546875,
+        "x1": 557.6630249023438,
+        "y1": 731.833984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 3C presents the results of the H2-TPR analyses for the MMOs produced from hydrotalcite reconstructed with Ce (i.e., MMONi + Ce, MMONiCo + Ce, and MMONiFe + Ce), exhibiting an increase in the intensity and reduction temperature (>850 ◦C) and such a high- temperature peak can be attributed to the reduction of bulk CeO2 [39]. This reinforces the strong metal-support interaction among Ni, Co, and Fe to CeO2. Moreover, these materials had two peaks at 380 and 480 ◦C (which are absent in MMONi, Fig. 3A), belonging to the surface and partial reduction of ceria underneath the surface (Eq. (6)), respec­ tively. The signals increase and overlap with the most oxidized species of Co and Fe in MMONiCo + Ce and MMONiFe + Ce, respectively [40,41]. Therefore, the ceria support contributes to the reducibility capacity at"
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 5,
+        "object_id": "fig-8544cfb6d42df270",
+        "object_type": "figure",
+        "table_or_figure_number": "3C",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 606.1190185546875,
+          "x1": 557.6630249023438,
+          "y1": 731.833984375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 3C presents the results of the H2-TPR analyses for the MMOs produced from hydrotalcite reconstructed with Ce (i.e., MMONi + Ce, MMONiCo + Ce, and MMONiFe + Ce), exhibiting an increase in the intensity and reduction temperature (>850 ◦C) and such a high- temperature peak can be attributed to the reduction of bulk CeO2 [39]. This reinforces the strong metal-support interaction among Ni, Co, and Fe to CeO2. Moreover, these materials had two peaks at 380 and 480 ◦C (which are absent in MMONi, Fig. 3A), belonging to the surface and partial reduction of ceria underneath the surface (Eq. (6)), respec­ tively. The signals increase and overlap with the most oxidized species of Co and Fe in MMONiCo + Ce and MMONiFe + Ce, respectively [40,41]. Therefore, the ceria support contributes to the reducibility capacity at",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-259b8404d5b2b906",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 6,
+      "figure_number": "4",
+      "caption": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites.",
+      "bbox": {
+        "x0": 39.628299713134766,
+        "y0": 55.44598388671875,
+        "x1": 287.43328857421875,
+        "y1": 380.4100036621094
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 6,
+        "object_id": "fig-259b8404d5b2b906",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 39.628299713134766,
+          "y0": 55.44598388671875,
+          "x1": 287.43328857421875,
+          "y1": 380.4100036621094
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7c6f6885f415ca90",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 6,
+      "figure_number": "5",
+      "caption": "Fig. 5. O1s X-photoelectron spectra for the MMOs based on Ni and NiCo, and doped with ceria.",
+      "bbox": {
+        "x0": 308.5799865722656,
+        "y0": 55.44598388671875,
+        "x1": 556.385009765625,
+        "y1": 486.708984375
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 5. O1s X-photoelectron spectra for the MMOs based on Ni and NiCo, and doped with ceria."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 6,
+        "object_id": "fig-7c6f6885f415ca90",
+        "object_type": "figure",
+        "table_or_figure_number": "5",
+        "bbox": {
+          "x0": 308.5799865722656,
+          "y0": 55.44598388671875,
+          "x1": 556.385009765625,
+          "y1": 486.708984375
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 5. O1s X-photoelectron spectra for the MMOs based on Ni and NiCo, and doped with ceria.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7efd809831f095a8",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 6,
+      "figure_number": "4",
+      "caption": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites.",
+      "bbox": {
+        "x0": 37.61289978027344,
+        "y0": 447.31500244140625,
+        "x1": 288.6709899902344,
+        "y1": 534.1900024414062
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 6,
+        "object_id": "fig-7efd809831f095a8",
+        "object_type": "figure",
+        "table_or_figure_number": "4",
+        "bbox": {
+          "x0": 37.61289978027344,
+          "y0": 447.31500244140625,
+          "x1": 288.6709899902344,
+          "y1": 534.1900024414062
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 4. CO2-TPD of the MMOs. Basicity (1): weak, (2): medium, and (3): strong basic sites.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-7933ae0d689a122f",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 7,
+      "figure_number": "6",
+      "caption": "Fig. 6. TEM of the samples, A) MMONi and B) MMONi + Ce. Mapping of metals in the samples, C) MMONi and D) MMONi + Ce.",
+      "bbox": {
+        "x0": 77.38580322265625,
+        "y0": 55.44598388671875,
+        "x1": 517.832763671875,
+        "y1": 371.5090026855469
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 6. TEM of the samples, A) MMONi and B) MMONi + Ce. Mapping of metals in the samples, C) MMONi and D) MMONi + Ce."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 7,
+        "object_id": "fig-7933ae0d689a122f",
+        "object_type": "figure",
+        "table_or_figure_number": "6",
+        "bbox": {
+          "x0": 77.38580322265625,
+          "y0": 55.44598388671875,
+          "x1": 517.832763671875,
+          "y1": 371.5090026855469
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 6. TEM of the samples, A) MMONi and B) MMONi + Ce. Mapping of metals in the samples, C) MMONi and D) MMONi + Ce.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-b478faf1a1c4b891",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 8,
+      "figure_number": "8",
+      "caption": "Fig. 8. Effect of catalyst mass (space velocity) on the methanation reaction profiles for MMONi.",
+      "bbox": {
+        "x0": 39.628299713134766,
+        "y0": 458.9289855957031,
+        "x1": 287.43328857421875,
+        "y1": 665.9719848632812
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 8. Effect of catalyst mass (space velocity) on the methanation reaction profiles for MMONi."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 8,
+        "object_id": "fig-b478faf1a1c4b891",
+        "object_type": "figure",
+        "table_or_figure_number": "8",
+        "bbox": {
+          "x0": 39.628299713134766,
+          "y0": 458.9289855957031,
+          "x1": 287.43328857421875,
+          "y1": 665.9719848632812
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 8. Effect of catalyst mass (space velocity) on the methanation reaction profiles for MMONi.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4ff927b5a6a79ce5",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 8,
+      "figure_number": "7",
+      "caption": "Fig. 7. Metal particle size distribution of the MMOs analyzed by TEM (mini­ mum 100 particles counted). A) Ni, B) Ni–Co, and C) Ni–Fe.",
+      "bbox": {
+        "x0": 39.85519790649414,
+        "y0": 55.41510772705078,
+        "x1": 285.43310546875,
+        "y1": 410.9106140136719
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 7. Metal particle size distribution of the MMOs analyzed by TEM (mini­ mum 100 particles counted). A) Ni, B) Ni–Co, and C) Ni–Fe."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 8,
+        "object_id": "fig-4ff927b5a6a79ce5",
+        "object_type": "figure",
+        "table_or_figure_number": "7",
+        "bbox": {
+          "x0": 39.85519790649414,
+          "y0": 55.41510772705078,
+          "x1": 285.43310546875,
+          "y1": 410.9106140136719
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 7. Metal particle size distribution of the MMOs analyzed by TEM (mini­ mum 100 particles counted). A) Ni, B) Ni–Co, and C) Ni–Fe.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-3a0a32361d1dce67",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 9,
+      "figure_number": "9",
+      "caption": "Fig. 9. Methanation reaction profiles for different MMOs based on Ni, Mg, Al, Co, Fe, and Ce. A) MMO with different Ni loading B) Effect of Co and Fe on MMO and C) MMO with the addition of ceria.",
+      "bbox": {
+        "x0": 77.38580322265625,
+        "y0": 55.44500732421875,
+        "x1": 517.832763671875,
+        "y1": 290.5509948730469
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 9. Methanation reaction profiles for different MMOs based on Ni, Mg, Al, Co, Fe, and Ce. A) MMO with different Ni loading B) Effect of Co and Fe on MMO and C) MMO with the addition of ceria."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 9,
+        "object_id": "fig-3a0a32361d1dce67",
+        "object_type": "figure",
+        "table_or_figure_number": "9",
+        "bbox": {
+          "x0": 77.38580322265625,
+          "y0": 55.44500732421875,
+          "x1": 517.832763671875,
+          "y1": 290.5509948730469
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 9. Methanation reaction profiles for different MMOs based on Ni, Mg, Al, Co, Fe, and Ce. A) MMO with different Ni loading B) Effect of Co and Fe on MMO and C) MMO with the addition of ceria.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-15c05d67a06f32e2",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 9,
+      "figure_number": "10",
+      "caption": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+      "bbox": {
+        "x0": 227.75552368164062,
+        "y0": 375.0660400390625,
+        "x1": 245.61102294921875,
+        "y1": 445.18603515625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 9,
+        "object_id": "fig-15c05d67a06f32e2",
+        "object_type": "figure",
+        "table_or_figure_number": "10",
+        "bbox": {
+          "x0": 227.75552368164062,
+          "y0": 375.0660400390625,
+          "x1": 245.61102294921875,
+          "y1": 445.18603515625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-4ba502f6039d4f56",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 9,
+      "figure_number": "10",
+      "caption": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+      "bbox": {
+        "x0": 249.78753662109375,
+        "y0": 365.56201171875,
+        "x1": 267.64300537109375,
+        "y1": 445.18603515625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 9,
+        "object_id": "fig-4ba502f6039d4f56",
+        "object_type": "figure",
+        "table_or_figure_number": "10",
+        "bbox": {
+          "x0": 249.78753662109375,
+          "y0": 365.56201171875,
+          "x1": 267.64300537109375,
+          "y1": 445.18603515625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-1ccd45e3e7bd68dc",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 9,
+      "figure_number": "10",
+      "caption": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+      "bbox": {
+        "x0": 271.9635314941406,
+        "y0": 393.9300231933594,
+        "x1": 289.81903076171875,
+        "y1": 445.18603515625
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 9,
+        "object_id": "fig-1ccd45e3e7bd68dc",
+        "object_type": "figure",
+        "table_or_figure_number": "10",
+        "bbox": {
+          "x0": 271.9635314941406,
+          "y0": 393.9300231933594,
+          "x1": 289.81903076171875,
+          "y1": 445.18603515625
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+        "verification_status": "extracted"
+      }
+    },
+    {
+      "figure_id": "fig-6885dad7056269b2",
+      "source_id": "src-9d231e2b3a31eb2a",
+      "page": 9,
+      "figure_number": "10",
+      "caption": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+      "bbox": {
+        "x0": 127.61624908447266,
+        "y0": 338.34478759765625,
+        "x1": 467.6960754394531,
+        "y1": 469.4179382324219
+      },
+      "panels": [],
+      "figure_type": "unknown",
+      "axes": [],
+      "legend_entries": [],
+      "annotations": [],
+      "sample_material_labels": [],
+      "warnings": [],
+      "raw_candidate": {
+        "detector": "pymupdf_layout_v1",
+        "caption_raw": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts."
+      },
+      "provenance": {
+        "origin": "figure_caption",
+        "source_id": "src-9d231e2b3a31eb2a",
+        "page": 9,
+        "object_id": "fig-6885dad7056269b2",
+        "object_type": "figure",
+        "table_or_figure_number": "10",
+        "bbox": {
+          "x0": 127.61624908447266,
+          "y0": 338.34478759765625,
+          "x1": 467.6960754394531,
+          "y1": 469.4179382324219
+        },
+        "parser_or_method": "pymupdf",
+        "raw_text": "Fig. 10. Extent of the catalytic process. A. STY of the prepared materials. B. Stability test for the two best catalysts.",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

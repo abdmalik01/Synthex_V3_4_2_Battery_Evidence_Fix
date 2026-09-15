@@ -1,0 +1,494 @@
+[
+  {
+    "candidate_id": "catcand-168a031cede73a99",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "1.0",
+      "2",
+      "20",
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-b3c3ab7b163d0ed4",
+    "covered": false,
+    "matched_record_paths": [
+      "electrocatalysis_experiments.exp_cu_powder_20_o2.metrics.3"
+    ],
+    "observed_numeric_spans": [
+      "-0.75",
+      "0.5",
+      "0.75"
+    ],
+    "missing_numeric_spans": [
+      "2",
+      "2"
+    ],
+    "reason": "evidence_linked_missing_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-5eded825e2c9e4cf",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "20"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-69b296e7f0c86767",
+    "covered": false,
+    "matched_record_paths": [
+      "electrocatalysis_experiments.exp_cu_powder_10_o2.metrics.0",
+      "electrocatalysis_experiments.exp_cu_powder_10_o2.metrics.1",
+      "electrocatalysis_experiments.exp_cu_powder_10_o2.metrics.2"
+    ],
+    "observed_numeric_spans": [
+      "-0.75",
+      "0.75",
+      "20"
+    ],
+    "missing_numeric_spans": [
+      "10",
+      "2"
+    ],
+    "reason": "evidence_linked_missing_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-e2d606ccf5494b07",
+    "covered": false,
+    "matched_record_paths": [
+      "electrocatalysis_experiments.exp_cu_powder_pure_co2.metrics.1"
+    ],
+    "observed_numeric_spans": [
+      "-1",
+      "0.5",
+      "1"
+    ],
+    "missing_numeric_spans": [
+      "2",
+      "250"
+    ],
+    "reason": "evidence_linked_missing_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-333ba2126a74515e",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "100",
+      "10",
+      "90",
+      "20",
+      "80",
+      "0.75",
+      "0.80",
+      "0.85",
+      "0.90",
+      "0.95",
+      "1.0"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-1ed15361ddfe5916",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "10",
+      "2",
+      "10"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-5d55411fd46ad55c",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "100",
+      "10",
+      "90",
+      "20",
+      "80",
+      "0.75",
+      "0.80",
+      "0.85",
+      "0.90",
+      "0.95",
+      "1.0"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-6d31bb668a5cba95",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "2",
+      "43",
+      "2",
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-b78a8acbd8b0f3bd",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "≤20"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-1a0910005240d6f9",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "33,34"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-2bb2e0db8a9139ff",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "4,5",
+      "6",
+      "9"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-489a8daf57e2e4e4",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "200"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-4adf5cf0b6297be3",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "10",
+      "20",
+      "29,31,32"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-59062121535d3c1b",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-ee13751544f29667",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "216",
+      "2",
+      "20"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-4fd26fa79f799e6c",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "6,41",
+      "0.4"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-988792232ad3eb35",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "1",
+      "0.90"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-5e5b8e313374e643",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "29,31,44,45",
+      "29,44,46",
+      "100"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-bd55c1021173bf48",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "9– 62"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-d4e77f334f7ef1dc",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "20"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-46bd9f376eb6d4b2",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "2",
+      "2",
+      "10"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-90520b91d1c01af8",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "400",
+      "625",
+      "900",
+      "1225",
+      "1600",
+      "2025",
+      "2500",
+      "10"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-0346e20de8d4d1cb",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "2",
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-cc019d81663d30bf",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-731c5ba627dc755b",
+    "covered": true,
+    "matched_record_paths": [
+      "electrocatalysis_experiments.exp_cu_powder_pure_co2.metrics.0"
+    ],
+    "observed_numeric_spans": [
+      "-0.9",
+      "0.9"
+    ],
+    "missing_numeric_spans": [],
+    "reason": "evidence_linked_all_numeric_spans"
+  },
+  {
+    "candidate_id": "catcand-e9956d3f41328fa4",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-ef275f7b23d47c0f",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "1– 3"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-a7fe99fcce6bc5b7",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "2",
+      "36"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-e176b8c30a043eb8",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2",
+      "4",
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-4dac39a72012b349",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-d7ee691c6b7718d1",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      ">1.8"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-e961eadbc26a404c",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "10"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-daedef19a3f0009b",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-601ccc076fc99896",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-41f6d9912e6b6bc0",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-486dd0b9c25cafa0",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-53582a9597d34172",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "2"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-84d27277df073881",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "111"
+    ],
+    "reason": "no_contextual_evidence_match"
+  },
+  {
+    "candidate_id": "catcand-4040f6d7ce22e904",
+    "covered": false,
+    "matched_record_paths": [],
+    "observed_numeric_spans": [],
+    "missing_numeric_spans": [
+      "10",
+      "2500"
+    ],
+    "reason": "no_contextual_evidence_match"
+  }
+]

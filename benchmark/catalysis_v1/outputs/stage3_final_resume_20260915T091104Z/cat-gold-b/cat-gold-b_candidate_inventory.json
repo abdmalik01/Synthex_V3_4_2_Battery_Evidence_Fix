@@ -1,0 +1,839 @@
+[
+  {
+    "candidate_id": "catcand-168a031cede73a99",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "At −1.0 V RHE, the increases of C 2+ product\nformation rates become less than ten times at 20% O 2.",
+    "numeric_spans": [
+      "1.0",
+      "2",
+      "20",
+      "2"
+    ],
+    "unit_spans": [
+      "V",
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate",
+      "product_formation_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b3c3ab7b163d0ed4",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "The\nformation of n-propanol is also observed at −0.75 V RHE with a\npartial current density of ~0.5 mA cm −2 in the presence of O 2,\nwhile no detectable amount of n-propanol is observed at\nthis potential in the oxygen-free atmosphere.",
+    "numeric_spans": [
+      "0.75",
+      "~0.5",
+      "2",
+      "2"
+    ],
+    "unit_spans": [
+      "V",
+      "mA cm −2"
+    ],
+    "lexical_cues": [
+      "current_density",
+      "partial_current_density"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5eded825e2c9e4cf",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "We note that at higher O 2\nconcentrations than 20%, a limited increase in the production\nrate of the CO 2RR with elevated ORR activity and reduced Far-\nadaic ef ﬁciency for the CO 2RR are expected based on current\nresults.",
+    "numeric_spans": [
+      "2",
+      "20"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 7,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-69b296e7f0c86767",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "1a), the production rate of ethylene, ethanol and\nacetate shows a more than 20-fold increase with 10% O 2 in the\nfeed.",
+    "numeric_spans": [
+      "20",
+      "10",
+      "2"
+    ],
+    "unit_spans": [
+      "h 1",
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-e2d606ccf5494b07",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "1d), and to achieve a similar rate\nof ~0.5 mA cm −2 requires an additional 250 mV overpotential,\ni.e., −1.00 VRHE (Fig.",
+    "numeric_spans": [
+      "~0.5",
+      "2",
+      "250",
+      "1.00"
+    ],
+    "unit_spans": [
+      "mA cm −2",
+      "mV"
+    ],
+    "lexical_cues": [
+      "reaction_rate",
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-333ba2126a74515e",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 3,
+    "snippet": "Fig. 1 Comparison of C2+ product formations. The partial current densities of C2+ products measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+    "numeric_spans": [
+      "100",
+      "10",
+      "90",
+      "20",
+      "80",
+      "0.75",
+      "0.80",
+      "0.85",
+      "0.90",
+      "0.95",
+      "1.0"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-73994eeb8ed3efed",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1ed15361ddfe5916",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 4,
+    "snippet": "Introducing up to 10\nmM of H 2O2 in the electrolyte of the CO 2RR (with a pure CO 2\nfeed) leads to a relatively modest change, i.e., less than 10-fold\nincrease, in the production rates of oxygenates and hydrocarbons\n(Supplementary Fig.",
+    "numeric_spans": [
+      "10",
+      "2",
+      "10"
+    ],
+    "unit_spans": [
+      "H"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-5d55411fd46ad55c",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 4,
+    "snippet": "Fig. 2 Comparison of C1 product and H2 formations. The partial current densities of C1 products and H2 measured at 100% CO2, 10% O2 + 90% CO2, and 20% O2 + 80% CO2 are compared at different potentials of a −0.75 VRHE, b −0.80 VRHE, c −0.85 VRHE, d −0.90 VRHE, e −0.95 VRHE, and f −1.0 VRHE. The numbers stand for the enhancement relative to the rates at pure CO2. The error bars represent the standard deviation from at least three independent measurements.",
+    "numeric_spans": [
+      "100",
+      "10",
+      "90",
+      "20",
+      "80",
+      "0.75",
+      "0.80",
+      "0.85",
+      "0.90",
+      "0.95",
+      "1.0"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "figure_caption",
+    "figure_id": "fig-a506a9696a521b14",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-6d31bb668a5cba95",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 4,
+    "snippet": "The CO 2RR activity and spectroscopic results show that the\nformation of H 2O2 is unlikely the cause of the enhanced CO 2RR\nperformance during the co-electrolysis with O 2.H 2O2 is a\npossible product of the ORR via the 2-electron pathway 43.I f\nproduced during the co-electrolysis of CO 2 and O 2 on Cu, H 2O2\ncould potentially modify the surface speciation and impact of the\nrate and product distribution of the CO 2RR.",
+    "numeric_spans": [
+      "2",
+      "2",
+      "43",
+      "2",
+      "2"
+    ],
+    "unit_spans": [
+      "H"
+    ],
+    "lexical_cues": [
+      "activity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-b78a8acbd8b0f3bd",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 6,
+    "snippet": "This is consistent with the observed enhancement of C 2+ product\nformation rate with ≤20% O2 in the gas feed (Fig.",
+    "numeric_spans": [
+      "2",
+      "≤20"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate",
+      "product_formation_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 6,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-1a0910005240d6f9",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "This could\nbe attributed to the enhanced ORR kinetics at higher over-\npotentials reducing the surface coverage of its intermediates that\nfacilitate the C– C coupling chemistry in the CO 2RR, as well as the\nreduced local CO 2 concentration caused by the increased proton\nconsumption rate 33,34.",
+    "numeric_spans": [
+      "2",
+      "33,34"
+    ],
+    "unit_spans": [
+      "ag"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-2bb2e0db8a9139ff",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "Oxidative treatments of polycrystalline Cu surfaces have been\nshown to improve the activity and selectivity towards the pro-\nduction of value-added hydrocarbons and oxygenates, for\nexample, thermal oxidation followed by reduction (so called\noxide-derived Cu) 4,5, oxygen plasma activation 6, and anodic\noxidation7– 9.",
+    "numeric_spans": [
+      "4,5",
+      "6",
+      "9"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-489a8daf57e2e4e4",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "We\nemphasize that an increase in the onset potential of at least 200\nmV for methane formation with oxygen indicates signi ﬁcantly\naccelerated reaction kinetics, because an increase in overpotential\non this scale could lead to a signi ﬁcant rise in reaction rates\n(depending on the Tafel slope) assuming the reaction is\nkinetically controlled near the onset potential.",
+    "numeric_spans": [
+      "200"
+    ],
+    "unit_spans": [
+      "mV"
+    ],
+    "lexical_cues": [
+      "reaction_rate",
+      "overpotential",
+      "onset_potential",
+      "tafel_slope"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-4adf5cf0b6297be3",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "Unlike C 2 products, the formation rate\nof n-propanol does not show a drastic further enhancement as the\nO2 ratio increases from 10 to 20%, suggesting its distinct\nchemistry in forming an additional carbon bond after their\ncommon rate-determining step of C – C coupling between two\nadsorbed CO molecules 29,31,32.",
+    "numeric_spans": [
+      "2",
+      "10",
+      "20",
+      "29,31,32"
+    ],
+    "unit_spans": [
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-59062121535d3c1b",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "Remarkably, all C 2+ product formation rates are signi ﬁcantly\nenhanced in the presence of O 2 in the gas stream (Fig.",
+    "numeric_spans": [
+      "2",
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate",
+      "product_formation_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ee13751544f29667",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "In this work, we demonstrate that the production rate of\noxygenates and hydrocarbons in the CO 2RR is enhanced by up to\n216-fold when coupled with the oxygen reduction reaction (ORR)\nby co-feeding CO 2 and O2 (up to 20%).",
+    "numeric_spans": [
+      "216",
+      "2",
+      "20"
+    ],
+    "unit_spans": [
+      "k",
+      "%"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-4fd26fa79f799e6c",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 3,
+    "snippet": "3b), whose assignment remains debated in the\nliterature36,41, This band disappears at −0.4 V RHE, likely due to\nthe conversion of adsorbed CO to other products at more\nnegative potentials, and thus the corresponding species is unlikely\nto have a major impact on the CO 2RR.",
+    "numeric_spans": [
+      "6,41",
+      "0.4"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-988792232ad3eb35",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 3,
+    "snippet": "2b– f), the O 2 induced enhancement in C 1 product\nformation rates becomes increasingly marginal and turns negative\nfor CO and formate at −0.90 VRHE and below.",
+    "numeric_spans": [
+      "2",
+      "1",
+      "0.90"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate",
+      "product_formation_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-5e5b8e313374e643",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 5,
+    "snippet": "The free\nenergy pro ﬁles of the rate-determining steps (RDS) in the for-\nmation of C 2+ products, i.e., *CO dimerization 29,31,44,45 and\nmethane, i.e., *CO hydrogenation 29,44,46, are calculated at dif-\nferent *OH coverage on the Cu(100) facet, with the representative\nmodel structures and results shown in Figs.",
+    "numeric_spans": [
+      "2",
+      "29,31,44,45",
+      "29,44,46",
+      "100"
+    ],
+    "unit_spans": [
+      "ag"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-bd55c1021173bf48",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "Systematic investigations of the impact of O 2\npartial pressure on the CO 2RR activity require enhanced mass\ntransport which could be more easily accomplished in ﬂow cell\nconﬁgurations59– 62, and are outside the scope of this proof-of-\nconcept work.",
+    "numeric_spans": [
+      "2",
+      "9– 62"
+    ],
+    "unit_spans": [
+      "k"
+    ],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-d4e77f334f7ef1dc",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "Higher partial\npressure of O 2 in the feed (up to 20%) is expected to increase the\nsurface coverage of the adsorbed hydroxyl species, which is\ngenerally bene ﬁcial toward the improvement of production rates\nof oxygenates and hydrocarbons.",
+    "numeric_spans": [
+      "2",
+      "20"
+    ],
+    "unit_spans": [
+      "%",
+      "ag"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-46bd9f376eb6d4b2",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 8,
+    "section": "2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q",
+    "snippet": "The O 2 + CO2 mixture is prepared by mixing CO 2 and O 2 at desired ratio using\nmass ﬂow controllers at a total ﬂow rate of 10 mL/min.",
+    "numeric_spans": [
+      "2",
+      "2",
+      "2",
+      "10"
+    ],
+    "unit_spans": [
+      "min"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-90520b91d1c01af8",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 8,
+    "section": "2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q",
+    "snippet": "CVs in O 2 atmosphere are recorded at\nvarious rotation speed (400, 625, 900, 1225, 1600, 2025, and 2500 rpm) at a scan\nrate of 10 mV/s.",
+    "numeric_spans": [
+      "2",
+      "400",
+      "625",
+      "900",
+      "1225",
+      "1600",
+      "2025",
+      "2500",
+      "10"
+    ],
+    "unit_spans": [
+      "rpm",
+      "mV",
+      "s"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 5,
+    "priority": "high"
+  },
+  {
+    "candidate_id": "catcand-0346e20de8d4d1cb",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 1,
+    "snippet": "Here, we combine reactivity, in-situ surface-enhanced Raman spectroscopy, and\ncomputational investigations to demonstrate that the presence of surface hydroxyl species by\nco-electrolysis of CO 2 with low concentrations of O 2 can dramatically enhance the activity of\ncopper catalyzed CO 2 electroreduction.",
+    "numeric_spans": [
+      "2",
+      "2",
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-cc019d81663d30bf",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 1,
+    "snippet": "Copper is\nthe only monometallic electrocatalyst capable of converting CO 2 to value-added products,\ne.g., hydrocarbons and oxygenates, but suffers from poor selectivity and mediocre activity.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity",
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-731c5ba627dc755b",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "The onset potential\nof n-propanol in the oxygen-free atmosphere occurs at as\nnegative as −0.90 V RHE (Fig.",
+    "numeric_spans": [
+      "0.90"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "onset_potential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e9956d3f41328fa4",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "C1 product formation rates in the CO 2RR are also enhanced in\nthe presence of O 2 (Fig.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate",
+      "product_formation_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-ef275f7b23d47c0f",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 2,
+    "snippet": "However, signi ﬁcant\nenhancement in the rate and selectivity for valuable products and\nin energy ef ﬁciency for Cu-based electrocatalysis remains\nimperative for this strategy to become industrially viable 1– 3.",
+    "numeric_spans": [
+      "1– 3"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "product_selectivity",
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-a7fe99fcce6bc5b7",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 3,
+    "snippet": "To understand\nthe mechanism through which co-electrolysis of CO 2 and O 2\nboosts the CO 2RR activity, in situ SERS is employed to identify\nsurface species presenting during the co-electrolysis 36.",
+    "numeric_spans": [
+      "2",
+      "2",
+      "36"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e176b8c30a043eb8",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 4,
+    "snippet": "Surface hydroxyl species in the O 2\natmosphere is likely formed during the 4-electron pathway in the\nconversion of O 2 to H2O (Supplementary Fig.",
+    "numeric_spans": [
+      "2",
+      "4",
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-4dac39a72012b349",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "In addi-\ntion to enhancing the CO 2RR rates, the introduction of O 2 also\nsigniﬁcantly reduces the Faradaic ef ﬁciency (FE) of CO 2RR pro-\nducts (Supplementary Fig.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate",
+      "faradaic_efficiency"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-d7ee691c6b7718d1",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "This is likely due to\nthe interfacial pH at the cathode does not change signi ﬁcantly\nwith electrolysis potentials because the ORR is severely mass-\ntransport limited at such large overpotentials (>1.8 V).",
+    "numeric_spans": [
+      ">1.8"
+    ],
+    "unit_spans": [
+      "V"
+    ],
+    "lexical_cues": [
+      "overpotential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-e961eadbc26a404c",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 8,
+    "section": "2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q",
+    "snippet": "All\ngases are directly delivered into electrolyte through a gas dispersion frit at a total\nﬂow rate of 10 mL/min.",
+    "numeric_spans": [
+      "10"
+    ],
+    "unit_spans": [
+      "a g",
+      "min"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 4,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-daedef19a3f0009b",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 3,
+    "section": "0.5\njpartial(mA cm–2)jpartial(mA cm–2)",
+    "snippet": "The numbers\nstand for the enhancement relative to the rates at pure CO 2.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-601ccc076fc99896",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 4,
+    "snippet": "The numbers stand for the enhancement relative to the rates at pure CO 2.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-41f6d9912e6b6bc0",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 7,
+    "snippet": "This is\nconsistent with the observed enhancement in the HER rate with\nthe addition of O 2 (Fig.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-486dd0b9c25cafa0",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 9,
+    "snippet": "Electrocatalytic production of C3-C4 compounds by\nconversion of CO 2 on a chloride-induced bi-phasic Cu 2O-Cu catalyst.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "conversion"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-53582a9597d34172",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 9,
+    "snippet": "Selective increase\nin CO 2 electroreduction activity at grain-boundary surface terminations.",
+    "numeric_spans": [
+      "2"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "activity"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-84d27277df073881",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 9,
+    "snippet": "Mechanistic\neplanation of the pH dependence and onset potentials for hydrocarbon\nproducts from electrochemical reduction of CO on Cu (111).",
+    "numeric_spans": [
+      "111"
+    ],
+    "unit_spans": [],
+    "lexical_cues": [
+      "onset_potential"
+    ],
+    "origin": "native_text",
+    "ranking_score": 3,
+    "priority": "medium"
+  },
+  {
+    "candidate_id": "catcand-4040f6d7ce22e904",
+    "source_id": "src-3626736bc803a292",
+    "source_checksum": "d6c4c08c374334d4d048be9fcffc14fb87aaf80b87e206c37e2f0f61157d7e93",
+    "page": 8,
+    "section": "2.1 V versus a graphite rod electrode for 5 min followed by rinsing with Mill-Q",
+    "snippet": "The cyclic voltammogram\n(CV) is ﬁrstly taken under Ar at a scan rate of 10 mV/s with a rotation speed of\n2500 rpm prior to ORR measurement.",
+    "numeric_spans": [
+      "10",
+      "2500"
+    ],
+    "unit_spans": [
+      "V",
+      "mV",
+      "s",
+      "rpm"
+    ],
+    "lexical_cues": [
+      "reaction_rate"
+    ],
+    "origin": "native_text",
+    "ranking_score": 1,
+    "priority": "low"
+  }
+]

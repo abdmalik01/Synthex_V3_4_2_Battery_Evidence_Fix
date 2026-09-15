@@ -1,0 +1,1019 @@
+{
+  "source": {
+    "title": "Improved conversion, selectivity, and stability during CO2 methanation by the incorporation of Ce in Ni, Co, and Fe-hydrotalcite-derived catalysts",
+    "doi": "10.1016/j.ijhydene.2024.02.149",
+    "url": "https://doi.org/10.1016/j.ijhydene.2024.02.149",
+    "year": 2024,
+    "authors": [
+      "Carlos Mendoza-Merlano",
+      "Juan Tapia-P\u00b4erez",
+      "Efra\u00edm Serna-Galvis",
+      "Dora Hoyos-Ayala",
+      "Johana Arboleda-Echavarr\u00eda",
+      "Adriana Echavarr\u00eda-Isaza"
+    ]
+  },
+  "paper_types": [
+    "catalyst_synthesis",
+    "catalyst_characterization",
+    "heterogeneous_catalysis",
+    "stability_deactivation"
+  ],
+  "scope_status": "supported",
+  "catalysts": [
+    {
+      "local_id": "cat-MMONi",
+      "reported_name": "MMONi",
+      "reported_formula": "Mg5.1Ni1.0Al1.8O8.8",
+      "bet_surface_area": {
+        "raw_value": "218",
+        "value": 218.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONi1.5",
+      "reported_name": "MMONi1.5",
+      "reported_formula": "Mg4.5Ni1.5Al1.9O8.8",
+      "bet_surface_area": {
+        "raw_value": "245",
+        "value": 245.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONi2",
+      "reported_name": "MMONi2",
+      "reported_formula": "Mg4.0Ni2.0Al1.8O8.7",
+      "bet_surface_area": {
+        "raw_value": "235",
+        "value": 235.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONiCo",
+      "reported_name": "MMONiCo",
+      "reported_formula": "Mg4.6Ni1.0Co0.3Al1.9O8.7",
+      "bet_surface_area": {
+        "raw_value": "235",
+        "value": 235.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONiFe",
+      "reported_name": "MMONiFe",
+      "reported_formula": "Mg5.0Ni1.0Al1.6Fe0.3O8.8",
+      "bet_surface_area": {
+        "raw_value": "245",
+        "value": 245.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONiCe",
+      "reported_name": "MMONi + Ce",
+      "reported_formula": "Mg4.8Ni0.7Al2.1O8.1+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "160",
+        "value": 160.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONiCoCe",
+      "reported_name": "MMONiCo + Ce",
+      "reported_formula": "Mg4.5Ni0.8Co0.2Al1.9O7.8+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "192",
+        "value": 192.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    },
+    {
+      "local_id": "cat-MMONiFeCe",
+      "reported_name": "MMONiFe + Ce",
+      "reported_formula": "Mg4.5Ni1.0Al1.9Fe0.4O8.2+0.3CeO2",
+      "bet_surface_area": {
+        "raw_value": "200",
+        "value": 200.0,
+        "unit": "m2 g-1",
+        "qualifier": "exact"
+      },
+      "ownership": "focal_work"
+    }
+  ],
+  "preparations": [
+    {
+      "preparation_id": "prep-MMONi",
+      "material_ref": "cat-MMONi",
+      "ownership": "focal_work",
+      "steps": [
+        {
+          "step": "mixing",
+          "details": "Nitrates added gradually to sodium carbonate solution at 65 \u00b0C",
+          "precursors": [
+            "Mg(NO3)2",
+            "Al(NO3)3",
+            "Ni(NO3)2\u00b76H2O"
+          ],
+          "temperature": {
+            "raw_value": "65 \u00b0C",
+            "value": 65.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "1 h",
+            "value": 1.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "other",
+          "details": "crystallized for 4 h",
+          "duration": {
+            "raw_value": "4 h",
+            "value": 4.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "washed until neutral pH"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 90 \u00b0C for 24 h",
+          "temperature": {
+            "raw_value": "90 \u00b0C",
+            "value": 90.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "calcination",
+          "details": "calcined at 500 \u00b0C for 8 h",
+          "temperature": {
+            "raw_value": "500 \u00b0C",
+            "value": 500.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "8 h",
+            "value": 8.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        }
+      ]
+    },
+    {
+      "preparation_id": "prep-MMONiCoCe",
+      "material_ref": "cat-MMONiCoCe",
+      "ownership": "focal_work",
+      "steps": [
+        {
+          "step": "mixing",
+          "details": "Nitrates added gradually to sodium carbonate solution at 65 \u00b0C",
+          "precursors": [
+            "Mg(NO3)2",
+            "Al(NO3)3",
+            "Ni(NO3)2\u00b76H2O",
+            "Co(NO3)2\u00b76H2O"
+          ],
+          "temperature": {
+            "raw_value": "65 \u00b0C",
+            "value": 65.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "1 h",
+            "value": 1.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "other",
+          "details": "crystallized for 4 h",
+          "duration": {
+            "raw_value": "4 h",
+            "value": 4.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "washed until neutral pH"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 90 \u00b0C for 24 h",
+          "temperature": {
+            "raw_value": "90 \u00b0C",
+            "value": 90.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "calcination",
+          "details": "calcined at 500 \u00b0C for 8 h",
+          "temperature": {
+            "raw_value": "500 \u00b0C",
+            "value": 500.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "8 h",
+            "value": 8.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "impregnation",
+          "details": "reconstruction methodology: Ce(NO3)3\u00b76H2O complexed with EDTA solution at pH 10, MMO added, stirred for 24 h",
+          "precursors": [
+            "Ce(NO3)3\u00b76H2O",
+            "EDTA"
+          ],
+          "pH": 10.0,
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "step": "washing",
+          "details": "filtered, washed"
+        },
+        {
+          "step": "drying",
+          "details": "dried at 80 \u00b0C for 24 h",
+          "temperature": {
+            "raw_value": "80 \u00b0C",
+            "value": 80.0,
+            "unit": "\u00b0C",
+            "qualifier": "exact"
+          },
+          "duration": {
+            "raw_value": "24 h",
+            "value": 24.0,
+            "unit": "h",
+            "qualifier": "exact"
+          }
+        }
+      ]
+    }
+  ],
+  "characterizations": [
+    {
+      "characterization_id": "char-MMONiCoCe-BET",
+      "material_ref": "cat-MMONiCoCe",
+      "method": "BET",
+      "results": [
+        {
+          "property": "specific surface area",
+          "raw_value": "192",
+          "value": 192.0,
+          "unit": "m2 g-1",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "3.1.2. Reducibility, basicity, and active metal surface area of the mixed metal oxides",
+              "text_snippet": "192",
+              "source_type": "table",
+              "original_source_type": "table_reported",
+              "table_id": "Table 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "characterization_id": "char-MMONiCoCe-basicity",
+      "material_ref": "cat-MMONiCoCe",
+      "method": "CO2-TPD",
+      "results": [
+        {
+          "property": "total basicity",
+          "raw_value": "0.55",
+          "value": 0.55,
+          "unit": "mmol g-1",
+          "qualifier": "exact",
+          "evidence": [
+            {
+              "page": 5,
+              "section": "3.1.2. Reducibility, basicity, and active metal surface area of the mixed metal oxides",
+              "text_snippet": "0.55",
+              "source_type": "table",
+              "original_source_type": "table_reported",
+              "table_id": "Table 3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "heterogeneous_experiments": [
+    {
+      "experiment_id": "exp-MMONiCoCe",
+      "catalyst_ref": "cat-MMONiCoCe",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "168 mol CH4 h-1 L-1",
+          "value": 168.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "The SYT values followed the order MMONiCo + Ce (168 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp-MMONiCo",
+      "catalyst_ref": "cat-MMONiCo",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "150 mol CH4 h-1 L-1",
+          "value": 150.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "MMONiCo (150 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp-MMONiCe",
+      "catalyst_ref": "cat-MMONiCe",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "148 mol CH4 h-1 L-1",
+          "value": 148.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "MMONi + Ce (148 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp-MMONiFeCe",
+      "catalyst_ref": "cat-MMONiFeCe",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "108 mol CH4 h-1 L-1",
+          "value": 108.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "MMONiFe + Ce (108 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp-MMONi",
+      "catalyst_ref": "cat-MMONi",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "105 mol CH4 h-1 L-1",
+          "value": 105.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "OMNi (105 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "experiment_id": "exp-MMONiFe",
+      "catalyst_ref": "cat-MMONiFe",
+      "reaction": {
+        "reported_reaction": "CO2(g) + 4H2(g) -> CH4(g) + 2H2O(l)",
+        "reaction_class": "hydrogenation",
+        "reactants": [
+          {
+            "reported_name": "carbon dioxide",
+            "formula": "CO2"
+          },
+          {
+            "reported_name": "hydrogen",
+            "formula": "H2"
+          }
+        ],
+        "products": [
+          {
+            "reported_name": "methane",
+            "formula": "CH4"
+          },
+          {
+            "reported_name": "water",
+            "formula": "H2O"
+          }
+        ]
+      },
+      "reactor_type": "fixed bed reactor",
+      "catalyst_mass": {
+        "raw_value": "40 mg",
+        "value": 40.0,
+        "unit": "mg",
+        "qualifier": "exact"
+      },
+      "feed_composition": [
+        {
+          "species": "H2",
+          "fraction": {
+            "raw_value": "40 %",
+            "value": 40.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        },
+        {
+          "species": "CO2",
+          "fraction": {
+            "raw_value": "10 %",
+            "value": 10.0,
+            "unit": "%",
+            "qualifier": "exact"
+          }
+        }
+      ],
+      "flow_rate": {
+        "raw_value": "50 mL min-1",
+        "value": 50.0,
+        "unit": "mL min-1",
+        "qualifier": "exact"
+      },
+      "ghsv": {
+        "raw_value": "36000 h-1",
+        "value": 36000.0,
+        "unit": "h-1",
+        "qualifier": "exact"
+      },
+      "temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "metrics": [
+        {
+          "property": "productivity",
+          "raw_value": "80 mol CH4 h-1 L-1",
+          "value": 80.0,
+          "unit": "mol CH4 h-1 L-1",
+          "qualifier": "exact",
+          "product": "CH4",
+          "ownership": "focal_work",
+          "evidence": [
+            {
+              "page": 10,
+              "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+              "text_snippet": "MMONiFe (80 mol CH4 h-1 L-1)",
+              "source_type": "text",
+              "original_source_type": "native_text",
+              "verbatim_match": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stability_tests": [
+    {
+      "stability_id": "stab-MMONiCoCe",
+      "experiment_ref": "exp-MMONiCoCe",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "1400 min",
+        "value": 1400.0,
+        "unit": "min",
+        "qualifier": "exact"
+      },
+      "operating_temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "retained_metric": {
+        "property": "conversion",
+        "raw_value": "~85%",
+        "value": 85.0,
+        "unit": "%",
+        "qualifier": "approx",
+        "reactant": "CO2",
+        "ownership": "focal_work",
+        "evidence": [
+          {
+            "page": 1,
+            "section": "ABSTRACT",
+            "text_snippet": "showing ~85% conversion of CO2 after 1400 min of continuous use.",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true
+          }
+        ]
+      },
+      "ownership": "focal_work",
+      "evidence": [
+        {
+          "page": 10,
+          "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+          "text_snippet": "Remarkably MMONiCo + Ce remained more stable than MMONiCo with no significant changes in catalytic activity (~85 % of CO2 conversion after 1400 min of continuous use).",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    },
+    {
+      "stability_id": "stab-MMONiCo",
+      "experiment_ref": "exp-MMONiCo",
+      "mode": "time_on_stream",
+      "duration": {
+        "raw_value": "1400 min",
+        "value": 1400.0,
+        "unit": "min",
+        "qualifier": "exact"
+      },
+      "operating_temperature": {
+        "raw_value": "350 \u00b0C",
+        "value": 350.0,
+        "unit": "\u00b0C",
+        "qualifier": "exact"
+      },
+      "retained_metric": {
+        "property": "conversion",
+        "raw_value": "higher than 80 %",
+        "value": 80.0,
+        "unit": "%",
+        "qualifier": "lower_bound",
+        "reactant": "CO2",
+        "ownership": "focal_work",
+        "evidence": [
+          {
+            "page": 10,
+            "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+            "text_snippet": "exhibiting CO2 conversions higher than 80 % even after 1400 min.",
+            "source_type": "text",
+            "original_source_type": "native_text",
+            "verbatim_match": true
+          }
+        ]
+      },
+      "ownership": "focal_work",
+      "evidence": [
+        {
+          "page": 10,
+          "section": "3.2.3. Extent of the process: yield and stability of the best MMO",
+          "text_snippet": "exhibiting CO2 conversions higher than 80 % even after 1400 min.",
+          "source_type": "text",
+          "original_source_type": "native_text",
+          "verbatim_match": true
+        }
+      ]
+    }
+  ]
+}
