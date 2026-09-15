@@ -252,10 +252,11 @@ def test_archive_explorer_streamlit_smoke_uses_session_archive_without_extractio
     assert at.dataframe
 
 
-def test_research_ui_home_has_primary_workflows_and_advanced_navigation():
+def test_research_ui_home_has_primary_workflows_and_public_navigation():
     at = AppTest.from_file(Path(__file__).parents[1] / "platform_app.py", default_timeout=25).run()
     assert not at.exception
     assert any(item.value == "SYNTHEX" for item in at.title)
-    assert {button.label for button in at.button} >= {"Analyze a paper", "Discover papers"}
+    assert {button.label for button in at.button} >= {"Analyze papers", "Discover papers"}
     options = set(at.sidebar.radio[0].options)
-    assert {"Analyze Paper", "Explore Results", "Visualize Data", "Advanced · Diagnostics"} <= options
+    assert {"Analyze Papers", "Explore Results", "Visualize Data", "Gas Sensing Analytics", "Figure Data"} <= options
+    assert not any(option.startswith("Developer ·") for option in options)
