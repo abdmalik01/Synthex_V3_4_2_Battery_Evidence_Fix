@@ -1,4 +1,4 @@
-"""Auditable, bounded Gemini model selection for Synthex production requests."""
+"""Auditable, bounded Gemini model and credential selection for Synthex requests."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ DEFAULT_GEMINI_MODELS = (
     "gemini-3.7-flash",
     "gemini-3.8-flash",
 )
+MAX_GEMINI_CREDENTIAL_SLOTS = 10
 
 
 class ProviderFailureClass(str, Enum):
@@ -39,6 +40,10 @@ _FAILOVER_ELIGIBLE = {
     ProviderFailureClass.model_unavailable,
     ProviderFailureClass.timeout,
     ProviderFailureClass.transport_failure,
+}
+_CREDENTIAL_FAILOVER_ELIGIBLE = {
+    ProviderFailureClass.quota,
+    ProviderFailureClass.authentication,
 }
 _SECRET_PATTERN = re.compile(
     r"(?i)(api[_ -]?key|key|credential|token)(\s*[=:]\s*)([^\s,;'\"}]+)"
@@ -97,6 +102,34 @@ def configured_gemini_models(
     return _deduplicate_models((preferred, *fallback_models))
 
 
+def configured_gemini_credential_slots() -> tuple[str, ...]:
+    """Return configured credential slot names without ever exposing credential values."""
+    slots: list[str] = []
+    if os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY"):
+        slots.append("primary")
+    for index in range(2, MAX_GEMINI_CREDENTIAL_SLOTS + 1):
+        if os.getenv(f"GEMINI_API_KEY_{index}"):
+            slots.append(f"GEMINI_API_KEY_{index}")
+    return tuple(slots)
+
+
+def _environment_credential_clients() -> tuple[tuple[str, Any], ...]:
+    """Build only numbered fallback clients; primary client is supplied by the caller."""
+    if genai is None:
+        return ()
+    primary_value = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+    seen_values = {primary_value} if primary_value else set()
+    clients: list[tuple[str, Any]] = []
+    for index in range(2, MAX_GEMINI_CREDENTIAL_SLOTS + 1):
+        slot = f"GEMINI_API_KEY_{index}"
+        value = os.getenv(slot)
+        if not value or value in seen_values:
+            continue
+        seen_values.add(value)
+        clients.append((slot, genai.Client(api_key=value)))
+    return tuple(clients)
+
+
 class GeminiModelsUnavailableError(RuntimeError):
     """Every permitted model failed for a provider-level availability reason."""
 
@@ -106,7 +139,12 @@ class GeminiModelsUnavailableError(RuntimeError):
 
 
 class GeminiGateway:
-    """Try approved models once in production; pin one model in benchmark mode."""
+    """Bounded model failover plus production-only credential failover.
+
+    Model failover handles provider/model availability failures. Credential failover handles
+    quota/authentication failures and never exposes key values in diagnostics. Benchmark mode
+    remains pinned to the caller-supplied primary credential and one model.
+    """
 
     def __init__(
         self,
@@ -115,6 +153,7 @@ class GeminiGateway:
         preferred_model: str | None = None,
         fallback_models: Iterable[str] | None = None,
         mode: Literal["production", "benchmark"] = "production",
+        credential_clients: Iterable[tuple[str, Any]] | None = None,
     ) -> None:
         if mode not in {"production", "benchmark"}:
             raise ValueError("Gemini gateway mode must be 'production' or 'benchmark'.")
@@ -123,7 +162,13 @@ class GeminiGateway:
         chain = configured_gemini_models(preferred_model, fallback_models)
         self.preferred_model = chain[0]
         self.model_chain = chain if mode == "production" else chain[:1]
+        extras = tuple(credential_clients) if credential_clients is not None else _environment_credential_clients()
+        self._credential_clients: tuple[tuple[str, Any], ...] = (
+            (("primary", client), *extras) if mode == "production" else (("primary", client),)
+        )
         self.actual_model: str | None = None
+        self.actual_credential_slot: str | None = None
+        self._disabled_credential_slots: set[str] = set()
         self._attempts: list[dict[str, Any]] = []
 
     def _record(
@@ -132,12 +177,14 @@ class GeminiGateway:
         model: str,
         phase: str,
         status: str,
+        credential_slot: str = "primary",
         failure_class: ProviderFailureClass | None = None,
         error: BaseException | None = None,
     ) -> None:
         self._attempts.append({
             "order": len(self._attempts) + 1,
             "model": model,
+            "credential_slot": credential_slot,
             "phase": phase,
             "status": status,
             "failure_class": failure_class.value if failure_class else None,
@@ -145,43 +192,102 @@ class GeminiGateway:
             "timestamp": datetime.now(timezone.utc).isoformat(),
         })
 
+    def _available_credentials(self, *, preferred_slot: str | None = None) -> tuple[tuple[str, Any], ...]:
+        active = [item for item in self._credential_clients if item[0] not in self._disabled_credential_slots]
+        if preferred_slot:
+            active.sort(key=lambda item: item[0] != preferred_slot)
+        return tuple(active)
+
     def generate_primary(self, *, contents: Any, config: Any) -> Any:
-        """Issue one primary call per eligible model, with no same-model retry."""
+        """Issue bounded calls: rotate credentials only for quota/auth, models only for availability."""
+        last_credential_error: BaseException | None = None
         for model in self.model_chain:
-            try:
-                response = self.client.models.generate_content(model=model, contents=contents, config=config)
-            except Exception as error:
-                failure_class = classify_provider_failure(error)
+            credentials = self._available_credentials()
+            if not credentials and last_credential_error is not None:
+                raise last_credential_error
+            model_should_fallback = False
+            for credential_slot, client in credentials:
+                try:
+                    response = client.models.generate_content(model=model, contents=contents, config=config)
+                except Exception as error:
+                    failure_class = classify_provider_failure(error)
+                    self._record(
+                        model=model,
+                        credential_slot=credential_slot,
+                        phase="primary",
+                        status="failed",
+                        failure_class=failure_class,
+                        error=error,
+                    )
+                    if self.mode == "production" and failure_class in _CREDENTIAL_FAILOVER_ELIGIBLE:
+                        self._disabled_credential_slots.add(credential_slot)
+                        last_credential_error = error
+                        continue
+                    if self.mode == "production" and failure_class in _FAILOVER_ELIGIBLE:
+                        model_should_fallback = True
+                        break
+                    raise
+                self.actual_model = model
+                self.actual_credential_slot = credential_slot
+                self.client = client
                 self._record(
-                    model=model, phase="primary", status="failed",
-                    failure_class=failure_class, error=error,
+                    model=model,
+                    credential_slot=credential_slot,
+                    phase="primary",
+                    status="succeeded",
                 )
-                if self.mode == "production" and failure_class in _FAILOVER_ELIGIBLE:
-                    continue
-                raise
-            self.actual_model = model
-            self._record(model=model, phase="primary", status="succeeded")
-            return response
+                return response
+            if model_should_fallback:
+                continue
+            if last_credential_error is not None and not self._available_credentials():
+                raise last_credential_error
         raise GeminiModelsUnavailableError(self.audit())
 
     def generate_pinned(self, *, contents: Any, config: Any, phase: str) -> Any:
-        """Run repair/secondary calls on the selected model without cross-model failover."""
+        """Run repair/secondary calls on the selected model, allowing only credential failover in production."""
         model = self.actual_model or self.preferred_model
-        try:
-            response = self.client.models.generate_content(model=model, contents=contents, config=config)
-        except Exception as error:
+        last_credential_error: BaseException | None = None
+        credentials = self._available_credentials(preferred_slot=self.actual_credential_slot)
+        if not credentials and self.actual_credential_slot:
+            credentials = tuple(item for item in self._credential_clients if item[0] == self.actual_credential_slot)
+        for credential_slot, client in credentials:
+            try:
+                response = client.models.generate_content(model=model, contents=contents, config=config)
+            except Exception as error:
+                failure_class = classify_provider_failure(error)
+                self._record(
+                    model=model,
+                    credential_slot=credential_slot,
+                    phase=phase,
+                    status="failed",
+                    failure_class=failure_class,
+                    error=error,
+                )
+                if self.mode == "production" and failure_class in _CREDENTIAL_FAILOVER_ELIGIBLE:
+                    self._disabled_credential_slots.add(credential_slot)
+                    last_credential_error = error
+                    continue
+                raise
+            self.client = client
+            self.actual_credential_slot = credential_slot
             self._record(
-                model=model, phase=phase, status="failed",
-                failure_class=classify_provider_failure(error), error=error,
+                model=model,
+                credential_slot=credential_slot,
+                phase=phase,
+                status="succeeded",
             )
-            raise
-        self._record(model=model, phase=phase, status="succeeded")
-        return response
+            return response
+        if last_credential_error is not None:
+            raise last_credential_error
+        raise RuntimeError("No usable Gemini credential remained for the pinned provider call.")
 
     def audit(self) -> dict[str, Any]:
         attempted_models = _deduplicate_models(
             item["model"] for item in self._attempts if item["phase"] == "primary"
         )
+        credential_slots_attempted = tuple(dict.fromkeys(
+            item["credential_slot"] for item in self._attempts
+        ))
         return {
             "mode": self.mode,
             "requested_model": self.preferred_model,
@@ -189,9 +295,18 @@ class GeminiGateway:
             "configured_model_order": list(self.model_chain),
             "models_attempted": list(attempted_models),
             "fallback_occurred": bool(self.actual_model and self.actual_model != self.preferred_model),
+            "configured_credential_count": len(self._credential_clients),
+            "credential_slots_attempted": list(credential_slots_attempted),
+            "actual_credential_slot": self.actual_credential_slot,
+            "credential_failover_occurred": bool(
+                self.actual_credential_slot and self.actual_credential_slot != "primary"
+            ),
             "attempts": [dict(item) for item in self._attempts],
             "provider_failures": [
-                {key: item[key] for key in ("model", "phase", "failure_class", "provider_message")}
+                {
+                    key: item[key]
+                    for key in ("model", "credential_slot", "phase", "failure_class", "provider_message")
+                }
                 for item in self._attempts if item["status"] == "failed"
             ],
         }
@@ -231,7 +346,7 @@ def probe_gemini_models(client: Any, models: Iterable[str]) -> tuple[dict[str, A
 def probe_configured_gemini(
     *, preferred_model: str | None = None, fallback_models: Iterable[str] | None = None,
 ) -> tuple[dict[str, Any], ...]:
-    """Explicit environment-backed health check for the Advanced UI only."""
+    """Explicit health check for the primary environment credential only."""
     if genai is None:
         raise RuntimeError("google-genai is not installed.")
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
