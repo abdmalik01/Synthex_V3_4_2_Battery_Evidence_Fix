@@ -273,11 +273,12 @@ def test_non_archive_input_is_rejected():
 
 def test_primary_streamlit_app_exposes_existing_archive_downloads_without_extraction_call():
     source = Path("platform_app.py").read_text(encoding="utf-8")
-    assert 'st.subheader("Export Results")' in source
     assert '"Download JSON"' in source
     assert '"Download CSV"' in source
     assert '"Download CSV Bundle"' in source
     assert 'st.session_state.get("synthex_last_archive")' in source
+    assert "export_results_csv(archive)" in source
+    assert "export_csv_bundle_zip(archive)" in source
 
 
 def test_existing_battery_and_catalysis_archives_export_offline():
