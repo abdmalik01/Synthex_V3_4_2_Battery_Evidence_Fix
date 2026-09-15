@@ -72,10 +72,23 @@ Synthex is being developed toward a materials-intelligence platform that links l
 
 ## Catalysis / Electrocatalysis status
 
-Stages 1–3 are implemented. The fixed seven-paper Stage 3 benchmark is historically complete with
-its strict schema, routing, evidence, ownership, admission, and safety acceptance targets intact.
-The bounded follow-up did not close the demonstrated Gold A completeness and Gold B association
-gaps. Catalysis is therefore **not frozen and not ready for Stage 4**; Stage 4 has not begun.
+Stages 1–3 are **complete and closed**. The fixed seven-paper Stage 3 corpus is cumulatively resolved with routing, strict schema validation, evidence, ownership, admission/quarantine, DFT separation and safety controls intact.
+
+Final closure status:
+
+- `CAT-GOLD-A`: PASS, **8/8** metric association.
+- `CAT-GOLD-B`: PASS, **4/4** metric association plus **2/2** normalization-source review.
+- `CAT-COMPUTE-C`: PASS.
+- `CAT-STABILITY-D`: PASS.
+- `CAT-REVIEW-E`: PASS.
+- `CAT-PHOTO-F`: PASS under the deferred photocatalysis boundary.
+- `CAT-NEGATIVE-G`: PASS as the routing-only negative control.
+- Final full repository regression after scoring closure: **240 passed, 2 warnings**.
+- No additional seven-paper Gemini rerun is required for closure.
+
+Gold B's current-density normalization remains conservative: `mA cm-2` does not by itself prove geometric-area normalization, so the reviewed expectation remains unknown/absent unless explicitly stated by the source.
+
+**Stage 3 is closure-ready and Catalysis V1 is ready to begin Stage 4 hardening/freeze.** Stage 4 has not yet been executed. See `benchmark/catalysis_v1/STAGE3_FINAL_CLOSURE_REPORT.md`.
 
 ## Still platform scaffolds
 
