@@ -63,7 +63,7 @@
     {
       "id": "CORR-EIS-D",
       "doi": "10.3390/ma16020546",
-      "filename": "Corrosion 4.pdf",
+      "filename": "materials-16-00546-v2.pdf",
       "gold_status": "pending_manual_source_review",
       "assertions": {
         "materials": [],
@@ -121,7 +121,7 @@
     {
       "id": "CORR-NEGATIVE-H",
       "doi": "10.20964/2018.09.30",
-      "filename": "Corrosion 8.pdf",
+      "filename": "Corrosion 9.pdf",
       "gold_status": "pending_manual_source_review",
       "assertions": {
         "expected_route": "batteries",
@@ -132,7 +132,7 @@
     {
       "id": "CORR-HOLDOUT-I",
       "doi": "10.1016/j.jma.2020.12.005",
-      "filename": "Corrosion 9.pdf",
+      "filename": "Corrosion 8.pdf",
       "gold_status": "holdout_not_for_tuning",
       "assertions": {
         "expected_route": "corrosion",
