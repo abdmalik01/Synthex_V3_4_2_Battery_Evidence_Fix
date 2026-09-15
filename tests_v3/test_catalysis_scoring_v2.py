@@ -1,6 +1,13 @@
 from __future__ import annotations
 
-from benchmark_catalysis_scoring_v2 import metric_match, reaction_equal, score_metric_association, unit_equal
+from benchmark_catalysis_scoring_v2 import (
+    feed_equal,
+    metric_match,
+    potential_equal,
+    reaction_equal,
+    score_metric_association,
+    unit_equal,
+)
 
 
 def _observed_metric(**overrides):
@@ -109,6 +116,71 @@ def test_conversion_qualifier_is_preserved():
     }
     assert metric_match(expected, observed)
     assert not metric_match(expected, {**observed, "qualifier": "exact"})
+
+
+def test_typed_electrocatalysis_potential_and_feed_are_display_equivalent_only():
+    typed_potential = {
+        "raw_potential": {"raw_value": "−1.00 VRHE", "value": -1.0, "unit": "V"},
+        "reported_reference": "RHE",
+    }
+    assert potential_equal("-1.00 V RHE", typed_potential)
+    assert not potential_equal("-0.75 V RHE", typed_potential)
+    assert not potential_equal("-1.00 V SHE", typed_potential)
+
+    pure_co2 = [{"species": "CO2", "fraction": {"value": 100.0, "unit": "%"}}]
+    oxygen_feed = [
+        {"species": "CO2", "fraction": {"value": 80.0, "unit": "%"}},
+        {"species": "O2", "fraction": {"value": 20.0, "unit": "%"}},
+    ]
+    assert feed_equal("pure CO2", pure_co2)
+    assert feed_equal("O2-containing CO2 feed", oxygen_feed)
+    assert not feed_equal("pure CO2", oxygen_feed)
+
+
+def test_gold_b_typed_context_scores_four_of_four_without_inference():
+    catalyst = {"local_id": "cat_cu", "reported_name": "polycrystalline Cu powder", "state": "unknown"}
+
+    def potential(raw: str, value: float):
+        return {
+            "raw_potential": {"raw_value": raw, "value": value, "unit": "V", "qualifier": "exact"},
+            "reported_reference": "RHE",
+        }
+
+    pure = {
+        "experiment_id": "pure",
+        "catalyst_ref": "cat_cu",
+        "reaction": {"reported_reaction": "CO2 reduction reaction", "reaction_class": "co2rr"},
+        "feed_composition": [{"species": "CO2", "fraction": {"value": 100.0, "unit": "%"}}],
+        "metrics": [
+            {"property": "partial_current_density", "value": 0.5, "unit": "mA cm-2", "qualifier": "approx", "product": "n-propanol", "potential": potential("−1.00 VRHE", -1.0), "normalization_basis": None},
+            {"property": "onset_potential", "value": -0.95, "unit": "V", "qualifier": "exact", "product": "methane", "potential": potential("−0.95 VRHE", -0.95), "normalization_basis": None},
+        ],
+    }
+    oxygen = {
+        "experiment_id": "oxygen",
+        "catalyst_ref": "cat_cu",
+        "reaction": {"reported_reaction": "co-electrolysis of CO2 and O2", "reaction_class": "co2rr"},
+        "feed_composition": [
+            {"species": "CO2", "fraction": {"value": 80.0, "unit": "%"}},
+            {"species": "O2", "fraction": {"value": 20.0, "unit": "%"}},
+        ],
+        "metrics": [
+            {"property": "partial_current_density", "value": 0.5, "unit": "mA cm-2", "qualifier": "approx", "product": "n-propanol", "potential": potential("−0.75 V RHE", -0.75), "normalization_basis": None},
+            {"property": "onset_potential", "value": -0.75, "unit": "V", "qualifier": "exact", "product": "methane", "potential": potential("−0.75 V RHE", -0.75), "normalization_basis": None},
+        ],
+    }
+    document = {"catalysts": [catalyst], "heterogeneous_experiments": [], "electrocatalysis_experiments": [pure, oxygen]}
+    gold = {
+        "metrics": [
+            {"property": "partial_current_density", "value": 0.5, "unit": "mA cm-2", "qualifier": "approx", "product": "n-propanol", "potential": "-0.75 V RHE", "reference_electrode": "RHE", "context": {"catalyst": "commercial polycrystalline Cu powder", "reaction": "co2rr", "feed": "O2-containing CO2 feed"}},
+            {"property": "partial_current_density", "value": 0.5, "unit": "mA cm-2", "qualifier": "approx", "product": "n-propanol", "potential": "-1.00 V RHE", "reference_electrode": "RHE", "context": {"catalyst": "commercial polycrystalline Cu powder", "reaction": "co2rr", "feed": "pure CO2"}},
+            {"property": "onset_potential", "value": -0.75, "unit": "V", "product": "methane", "potential": "-0.75 V RHE", "reference_electrode": "RHE", "context": {"feed": "O2-containing CO2 feed"}},
+            {"property": "onset_potential", "value": -0.95, "unit": "V", "product": "methane", "potential": "-0.95 V RHE", "reference_electrode": "RHE", "context": {"feed": "pure CO2"}},
+        ]
+    }
+    score = score_metric_association(gold, document)
+    assert score["matched_count"] == 4
+    assert score["expected_count"] == 4
 
 
 def test_full_gold_a_style_projection_scores_all_eight_without_weakening_associations():
