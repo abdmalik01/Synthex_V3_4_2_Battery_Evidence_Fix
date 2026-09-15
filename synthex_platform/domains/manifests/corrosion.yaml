@@ -1,115 +1,197 @@
 slug: corrosion
 name: Corrosion
-version: 1.0.0
-description: Alloy/environment exposure, electrochemical corrosion tests, degradation
-  rates and inhibitor performance.
+version: 1.1.0
+description: Source-tracked corrosion materials intelligence covering alloy/substrate identity,
+  surface preparation, coatings and inhibitors, corrosive environments, electrochemical and
+  immersion tests, EIS, degradation metrics, and bounded computational corrosion results.
 recommended_sections:
-- materials
-- sample preparation
+- materials and methods
+- alloy or substrate preparation
+- surface preparation
+- coating or inhibitor preparation
 - corrosion testing
-- electrochemical measurements
-- surface analysis
-- results
+- potentiodynamic polarization
+- electrochemical impedance spectroscopy
+- immersion or weight-loss testing
+- surface characterization
+- computational methods
+- results and discussion
+paper_types:
+- material_preparation
+- coating_surface_treatment
+- inhibitor_study
+- polarization_corrosion
+- impedance_eis
+- immersion_weight_loss
+- localized_corrosion
+- computational_corrosion
+- review
 process_vocabulary:
+- grinding
 - polishing
+- degreasing
+- pickling
 - heat treatment
+- solution treatment
+- ageing
 - immersion
 - salt spray
 - potentiodynamic polarization
+- linear polarization resistance
+- electrochemical impedance spectroscopy
 - EIS
 - coating
+- electrodeposition
+- anodizing
+- conversion coating
 - inhibitor addition
+- passivation
+- weight loss
+- mass loss
 properties:
 - key: corrosion_rate
   name: Corrosion rate
   kind: performance
-  units:
-  - mm/year
-  - mpy
-  - mg/cm2/day
-  conditions:
-  - environment
-  - temperature
-  - exposure_time
-  aliases: []
+  units: [mm/year, mm/y, mpy, um/year, mg/cm2/day]
+  conditions: [environment, electrolyte, temperature, exposure_time, exposed_area]
+  aliases: [penetration rate]
 - key: corrosion_current_density
   name: Corrosion current density
   kind: electrochemical
-  units:
-  - A/cm2
-  conditions:
-  - electrolyte
-  - temperature
-  aliases: []
+  units: [A/cm2, mA/cm2, uA/cm2]
+  conditions: [electrolyte, temperature, reference_electrode, exposed_area, scan_rate]
+  aliases: [icorr, i_corr]
 - key: corrosion_potential
   name: Corrosion potential
   kind: electrochemical
-  units:
-  - V
-  conditions:
-  - reference_electrode
-  - electrolyte
-  aliases: []
+  units: [V, mV]
+  conditions: [reference_electrode, electrolyte, temperature]
+  aliases: [Ecorr, E_corr]
 - key: polarization_resistance
   name: Polarization resistance
   kind: electrochemical
-  units:
-  - ohm*cm2
-  conditions:
-  - electrolyte
-  aliases: []
+  units: [ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [electrolyte, temperature, exposed_area]
+  aliases: [Rp, R_p]
 - key: charge_transfer_resistance
   name: Charge-transfer resistance
   kind: electrochemical
-  units:
-  - ohm*cm2
-  conditions:
-  - frequency_range
-  aliases: []
+  units: [ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [electrolyte, frequency_range, perturbation_amplitude, exposure_time]
+  aliases: [Rct, R_ct]
+- key: solution_resistance
+  name: Solution resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2]
+  conditions: [electrolyte, temperature]
+  aliases: [Rs, R_s]
+- key: cpe_parameter
+  name: Constant phase element parameter
+  kind: electrochemical
+  units: [S*s^n, F*s^(n-1)]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [CPE, Q]
+- key: double_layer_capacitance
+  name: Double-layer capacitance
+  kind: electrochemical
+  units: [F/cm2, uF/cm2]
+  conditions: [electrolyte, exposure_time]
+  aliases: [Cdl, C_dl]
+- key: tafel_anodic_slope
+  name: Anodic Tafel slope
+  kind: electrochemical
+  units: [mV/dec, V/dec]
+  conditions: [electrolyte, scan_rate]
+  aliases: [beta_a, ba]
+- key: tafel_cathodic_slope
+  name: Cathodic Tafel slope
+  kind: electrochemical
+  units: [mV/dec, V/dec]
+  conditions: [electrolyte, scan_rate]
+  aliases: [beta_c, bc]
 - key: pitting_potential
   name: Pitting potential
-  kind: performance
-  units:
-  - V
-  conditions:
-  - chloride_concentration
-  aliases: []
+  kind: localized_corrosion
+  units: [V, mV]
+  conditions: [reference_electrode, chloride_concentration, temperature]
+  aliases: [Epit, E_pit]
+- key: repassivation_potential
+  name: Repassivation potential
+  kind: localized_corrosion
+  units: [V, mV]
+  conditions: [reference_electrode, chloride_concentration, temperature]
+  aliases: [Erp, E_rep]
+- key: breakdown_potential
+  name: Breakdown potential
+  kind: localized_corrosion
+  units: [V, mV]
+  conditions: [reference_electrode, electrolyte, temperature]
+  aliases: [Ebd]
 - key: inhibition_efficiency
   name: Inhibition efficiency
   kind: performance
-  units:
-  - '%'
-  conditions:
-  - inhibitor
-  - concentration
-  aliases: []
+  units: ['%']
+  conditions: [inhibitor, concentration, electrolyte, temperature, exposure_time]
+  aliases: [IE, inhibition efficiency]
+- key: protection_efficiency
+  name: Protection efficiency
+  kind: performance
+  units: ['%']
+  conditions: [coating, electrolyte, exposure_time]
+  aliases: [coating efficiency, protective efficiency]
 - key: mass_loss
   name: Mass loss
   kind: performance
-  units:
-  - mg
-  - mg/cm2
-  conditions:
-  - exposure_time
+  units: [mg, g, mg/cm2]
+  conditions: [exposure_time, exposed_area, environment]
+  aliases: [weight loss]
+- key: penetration_depth
+  name: Corrosion penetration depth
+  kind: performance
+  units: [um, mm]
+  conditions: [exposure_time, environment]
+  aliases: [attack depth, pit depth]
+- key: adsorption_energy
+  name: Adsorption energy
+  kind: computational
+  units: [eV, kJ/mol]
+  conditions: [surface, adsorbate, computational_method]
+  aliases: [Eads, adsorption energy]
+- key: work_function
+  name: Work function
+  kind: computational
+  units: [eV]
+  conditions: [surface, computational_method]
   aliases: []
+scientific_guardrails:
+- Preserve the reported reference electrode; do not silently convert corrosion or pitting potentials between reference scales.
+- A current-density unit does not by itself prove the exposed geometric area or normalization basis.
+- Do not calculate corrosion rate from icorr unless an explicitly supported derivation contract is used with all required inputs.
+- Keep EIS fitted parameters tied to the reported equivalent circuit and exposure condition; do not relabel them as polarization values.
+- Keep review, comparison-table, cited-prior-work and background values out of focal canonical results.
+- Keep DFT and molecular-simulation descriptors in calculations, not experimental corrosion measurements.
+- Preserve ambiguous or conflicting test conditions instead of silently choosing one.
 benchmarks:
 - id: corrosion.corrosion_rate_prediction
   name: Corrosion rate prediction
   target: corrosion_rate
-  group_by:
-  - alloy
-  - environment
+  group_by: [material, environment]
 - id: corrosion.inhibitor_efficiency_prediction
   name: Inhibitor efficiency prediction
   target: inhibition_efficiency
-  group_by:
-  - alloy
-  - inhibitor
+  group_by: [material, inhibitor]
+- id: corrosion.impedance_comparison
+  name: EIS resistance comparison
+  target: charge_transfer_resistance
+  group_by: [material, electrolyte, exposure_time]
 graph_relations:
 - derived_from
 - processed_by
+- coated_with
+- exposed_to
 - tested_in
 - calculated_for
 - has_property
+- inhibited_by
 - compared_with
 - reported_by
