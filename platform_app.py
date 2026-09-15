@@ -9,7 +9,13 @@ import zipfile
 
 import streamlit as st
 
-from synthex_platform.batch import MAX_BATCH_PAPERS, MIN_RESEARCH_BATCH, batch_source_summary, combined_result_rows, validate_batch_size
+from synthex_platform.batch import (
+    MAX_BATCH_PAPERS,
+    MIN_RESEARCH_BATCH,
+    batch_source_summary,
+    combined_result_rows,
+    validate_batch_size,
+)
 from synthex_platform.benchmarks import benchmark_matrix
 from synthex_platform.core.archive import SynthexArchive
 from synthex_platform.core.registry import DomainRegistry
@@ -25,6 +31,7 @@ from synthex_platform.export import export_csv_bundle_zip, export_results_csv, e
 from synthex_platform.extraction import DomainRouter, SynthexExtractionPipeline
 from synthex_platform.extraction.catalysis_extractor import CatalysisStructuredExtractionValidationError
 from synthex_platform.extraction.domain_extractor import StructuredExtractionValidationError
+from synthex_platform.gas_sensing_ui import render_gas_sensing_analytics
 from synthex_platform.graph import export_graph
 from synthex_platform.providers import GeminiModelsUnavailableError, configured_gemini_models, probe_configured_gemini
 from synthex_platform.retrieval import DiscoveryError, discover_papers
@@ -40,6 +47,7 @@ from synthex_platform.retrieval.discovery import (
 )
 from synthex_platform.storage import JsonlArchiveStore
 from synthex_platform.ui_empty_state import archive_empty_state
+from synthex_platform.ui_navigation import developer_mode_enabled, navigation_items
 from synthex_platform.ui_session import clear_research_workspace
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
 from synthex_platform.visual.analytics.render import VisualizationRenderer
@@ -47,6 +55,7 @@ from synthex_platform.visual.digitization import AxisCalibration, DigitizationRe
 from synthex_platform.visual.digitization.models import PixelBoundingBox
 
 st.set_page_config(page_title="Synthex · Materials Intelligence", page_icon="🧬", layout="wide")
+
 registry = DomainRegistry()
 store = JsonlArchiveStore("data/archive/archives.jsonl")
 router = DomainRouter(registry)
@@ -66,9 +75,8 @@ def _navigate(destination: str) -> None:
 
 
 def _start_new_analysis() -> None:
-    """Clear transient paper/batch state and return to a fresh uploader."""
     clear_research_workspace(st.session_state)
-    st.session_state["synthex_workspace"] = "Analyze Paper"
+    st.session_state["synthex_workspace"] = "Analyze Papers"
 
 
 def _session_archives() -> list[SynthexArchive]:
@@ -160,66 +168,62 @@ def _combined_records(archives: list[SynthexArchive], attribute: str, include_qu
     return rows
 
 
-NAVIGATION = (
-    "Home",
-    "Analyze Paper",
-    "Discover Papers",
-    "Explore Results",
-    "Visualize Data",
-    "Advanced · Figure Data",
-    "Advanced · Battery validation",
-    "Advanced · Benchmark catalog",
-    "Advanced · Diagnostics",
-    "Advanced · Domain registry",
-    "Advanced · Knowledge graph",
-    "Advanced · Gas sensing V2",
-)
+DEVELOPER_MODE = developer_mode_enabled()
+NAVIGATION = navigation_items(developer_mode=DEVELOPER_MODE)
+if st.session_state.get("synthex_workspace") not in NAVIGATION:
+    st.session_state["synthex_workspace"] = "Home"
+
 st.sidebar.title("SYNTHEX")
 st.sidebar.caption("Materials intelligence workspace")
 page = st.sidebar.radio("Workspace", NAVIGATION, key="synthex_workspace")
+if DEVELOPER_MODE:
+    st.sidebar.caption("Developer mode enabled")
+
 
 if page == "Home":
     st.title("SYNTHEX")
     st.subheader("Materials Intelligence from Scientific Literature")
     st.write(
-        "Turn scientific papers into evidence-linked materials data that can be reviewed, "
+        "Turn scientific papers into source-tracked materials data that can be reviewed, "
         "compared across papers, visualized, and exported."
     )
     with st.container(horizontal=True):
-        st.button("Analyze papers", type="primary", icon=":material/upload_file:", on_click=_navigate, args=("Analyze Paper",))
+        st.button("Analyze papers", type="primary", icon=":material/upload_file:", on_click=_navigate, args=("Analyze Papers",))
         st.button("Discover papers", icon=":material/search:", on_click=_navigate, args=("Discover Papers",))
+
     st.subheader("What Synthex can do")
     capabilities = st.columns(3)
     with capabilities[0]:
         with st.container(border=True):
             st.write("Extract structured science")
-            st.caption(f"Upload one paper or a research batch of up to {MAX_BATCH_PAPERS} PDFs. Each paper is routed and validated independently.")
+            st.caption(
+                f"Upload one paper or a literature batch of up to {MAX_BATCH_PAPERS} PDFs. "
+                "Each paper is routed and validated independently."
+            )
     with capabilities[1]:
         with st.container(border=True):
-            st.write("Keep evidence visible")
-            st.caption("Track source, page, origin, ownership, admission, uncertainty, and quarantine for every paper.")
+            st.write("Keep source tracking visible")
+            st.caption("Preserve paper, page, ownership, admission status, uncertainty, and evidence context.")
     with capabilities[2]:
         with st.container(border=True):
             st.write("Compare and export")
-            st.caption("Pool admitted parameters across papers without mixing their source tracking.")
-    st.subheader("Workspace status")
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Domain plugins", len(registry.list_domains()))
+            st.caption("Pool admitted parameters across papers without mixing the identity of their sources.")
+
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Scientific domains", len(registry.list_domains()))
     c2.metric("Saved archives", store.count())
-    c3.metric("Benchmark tasks", sum(len(v) for v in benchmark_matrix(registry).values()))
-    c4.metric("Batch capacity", f"{MAX_BATCH_PAPERS} PDFs")
-    st.info(
-        "Batteries V1.3 and Visual Intelligence V1 are frozen. Catalysis/Electrocatalysis V1 "
-        "Stages 1–3 are closed; Stage 4 hardening/freeze is ready but has not begun."
-    )
+    c3.metric("Batch capacity", f"{MAX_BATCH_PAPERS} PDFs")
+
 
 elif page == "Discover Papers":
     st.subheader("Discover materials-science papers")
-    st.caption("Discovery results are navigation metadata only. Search snippets never become scientific evidence or canonical archive data.")
+    st.caption(
+        "Search results are navigation metadata only. Search snippets never become scientific evidence or canonical archive data."
+    )
     with st.form("paper_discovery_form", border=False):
         research_query = st.text_input(
             "Research query",
-            placeholder="e.g. NiFe LDH OER catalyst, ZnO NiO gas sensing, LiFePO4 cathode synthesis",
+            placeholder="e.g. NiFe LDH OER catalyst, ZnO NO2 sensing, LiFePO4 cathode synthesis",
             key="synthex_discovery_query_input",
         )
         focus_label = st.selectbox(
@@ -227,8 +231,11 @@ elif page == "Discover Papers":
             ["No added focus", "Materials science", "Battery materials", "Catalysis and electrocatalysis", "Gas sensing"],
             key="synthex_discovery_focus",
         )
-        number_of_results = st.number_input("Results", min_value=1, max_value=10, value=5, step=1)
+        number_of_results = st.number_input(
+            "Results", min_value=1, max_value=10, value=5, step=1, key="synthex_discovery_result_count"
+        )
         submitted = st.form_submit_button("Search papers", type="primary", icon=":material/search:")
+
     if submitted:
         focus = None if focus_label == "No added focus" else focus_label
         try:
@@ -237,14 +244,17 @@ elif page == "Discover Papers":
             store_discovery_results(st.session_state, result)
         except DiscoveryError as exc:
             st.error(str(exc))
+
     if st.button("Clear search results", icon=":material/clear_all:"):
         clear_discovery_results(st.session_state)
+
     result = current_discovery_results(st.session_state)
     if result:
         usage = result.usage
         st.caption(
             f"Query: {result.query} · {'cache hit' if result.cache_hit else 'network query'} · "
-            f"local network queries: {usage.get('network_queries', 0)} · remaining local budget: {usage.get('remaining_local_budget', 0)}"
+            f"local network queries: {usage.get('network_queries', 0)} · "
+            f"remaining local budget: {usage.get('remaining_local_budget', 0)}"
         )
         if not result.candidates:
             st.info("No usable paper links were returned. Try a more specific materials-science query.")
@@ -258,16 +268,21 @@ elif page == "Discover Papers":
                     st.caption(f"DOI from direct DOI URL: {candidate.doi}")
                 with st.container(horizontal=True):
                     st.link_button("Open paper link", candidate.url, icon=":material/open_in_new:")
-                    already_saved = any(item.candidate_id == candidate.candidate_id for item in saved_discovery_candidates(st.session_state))
+                    already_saved = any(
+                        item.candidate_id == candidate.candidate_id
+                        for item in saved_discovery_candidates(st.session_state)
+                    )
                     if st.button(
                         "Saved" if already_saved else "Save for extraction",
                         key=f"synthex_save_discovery_{candidate.candidate_id}",
                         disabled=already_saved,
                     ):
                         save_discovery_candidate(st.session_state, candidate)
+
     saved_candidates = saved_discovery_candidates(st.session_state)
     if saved_candidates:
         st.subheader("Saved for PDF upload")
+        st.caption("Saved discovery candidates remain bibliography leads until the actual PDF is uploaded and analyzed.")
         for candidate in saved_candidates:
             left, right = st.columns([4, 1])
             with left:
@@ -279,7 +294,8 @@ elif page == "Discover Papers":
         if st.button("Clear saved candidates"):
             clear_saved_discovery_candidates(st.session_state)
 
-elif page == "Analyze Paper":
+
+elif page == "Analyze Papers":
     top_left, top_right = st.columns([5, 1])
     with top_left:
         st.subheader("Analyze scientific papers")
@@ -288,24 +304,27 @@ elif page == "Analyze Paper":
             "Start new analysis",
             icon=":material/restart_alt:",
             on_click=_start_new_analysis,
-            help="Clear the current uploaded PDFs, batch status, result filters, and in-session extraction results. Saved archives and discovery leads are kept.",
+            help=(
+                "Clear current uploads, batch status, filters, and in-session extraction results. "
+                "Saved archives and discovery leads are kept."
+            ),
             width="stretch",
         )
+
     st.caption("Upload → route each paper → extract independently → compare parameters → export")
     st.info(
-        f"Batch extraction supports up to {MAX_BATCH_PAPERS} PDFs in one run, so literature sets of at least "
-        f"{MIN_RESEARCH_BATCH} papers can be processed together. PDFs are never merged into one prompt; source tracking remains paper-specific."
+        f"Upload up to {MAX_BATCH_PAPERS} PDFs in one batch. Papers are never merged into one extraction prompt; "
+        "source tracking remains paper-specific."
     )
-    st.caption("Auto Detect routes every uploaded paper independently. A manually selected domain is applied to the whole batch.")
 
     saved_candidates = saved_discovery_candidates(st.session_state)
     if saved_candidates:
         with st.expander("Saved discovery candidates"):
-            st.caption("These are bibliography leads only; upload the real PDFs below.")
+            st.caption("These are bibliography leads only; upload the actual PDFs below.")
             for candidate in saved_candidates:
                 st.write(candidate.title)
 
-    options = {d["name"]: d["slug"] for d in registry.list_domains()}
+    options = {item["name"]: item["slug"] for item in registry.list_domains()}
     chosen_label = st.selectbox("Domain", ["Auto Detect"] + list(options), index=0)
     search_assisted = st.checkbox(
         "Search-assisted enrichment with Serper",
@@ -325,6 +344,7 @@ elif page == "Analyze Paper":
         accept_multiple_files=True,
         key="synthex_pdf_batch",
     )
+
     if uploaded_files:
         st.caption(f"Selected {len(uploaded_files)} paper(s): " + ", ".join(file.name for file in uploaded_files))
         try:
@@ -336,8 +356,8 @@ elif page == "Analyze Paper":
                 st.success(f"Research batch ready: {len(uploaded_files)} papers selected.")
             if len(uploaded_files) > 1:
                 st.warning(
-                    "Each PDF can require one or more Gemini calls. Free-tier provider quotas may stop a large batch part-way through. "
-                    "Synthex preserves completed papers and reports unresolved papers instead of discarding the batch."
+                    "Each PDF can require one or more Gemini calls. Provider quotas may stop a large batch part-way through. "
+                    "Completed papers are preserved and unresolved papers are reported."
                 )
             button_label = "Extract research record" if len(uploaded_files) == 1 else f"Extract {len(uploaded_files)} papers"
             if st.button(button_label, type="primary"):
@@ -346,8 +366,12 @@ elif page == "Analyze Paper":
                 statuses: list[dict] = []
                 progress = st.progress(0, text="Preparing batch...")
                 stop_batch = False
+
                 for index, uploaded in enumerate(uploaded_files):
-                    progress.progress(index / len(uploaded_files), text=f"Processing {index + 1}/{len(uploaded_files)} · {uploaded.name}")
+                    progress.progress(
+                        index / len(uploaded_files),
+                        text=f"Processing {index + 1}/{len(uploaded_files)} · {uploaded.name}",
+                    )
                     pipeline = SynthexExtractionPipeline(
                         router=router,
                         search_assisted=search_assisted,
@@ -394,6 +418,7 @@ elif page == "Analyze Paper":
                         })
                     finally:
                         tmp_path.unlink(missing_ok=True)
+
                     if stop_batch:
                         for remaining in uploaded_files[index + 1:]:
                             statuses.append({
@@ -403,6 +428,7 @@ elif page == "Analyze Paper":
                                 "message": "Batch stopped after provider/quota blockage to avoid wasting calls.",
                             })
                         break
+
                 progress.progress(1.0, text="Batch processing finished")
                 st.session_state["synthex_batch_archives"] = completed
                 st.session_state["synthex_batch_status"] = statuses
@@ -412,9 +438,11 @@ elif page == "Analyze Paper":
 
     batch_status = st.session_state.get("synthex_batch_status") or []
     archives = _session_archives()
+
     if batch_status:
         st.subheader("Batch status")
         st.dataframe(batch_status, hide_index=True, width="stretch")
+
     if archives:
         if len(archives) > 1:
             st.success(f"{len(archives)} paper archives are ready for cross-paper comparison.")
@@ -450,40 +478,59 @@ elif page == "Analyze Paper":
 
         selected_index = 0
         if len(archives) > 1:
-            selected_label = st.selectbox(
-                "Inspect one paper",
-                [_archive_label(archive, index) for index, archive in enumerate(archives)],
-                key="synthex_batch_inspect",
-            )
-            selected_index = [_archive_label(archive, index) for index, archive in enumerate(archives)].index(selected_label)
+            labels = [_archive_label(archive, index) for index, archive in enumerate(archives)]
+            selected_label = st.selectbox("Inspect one paper", labels, key="synthex_batch_inspect")
+            selected_index = labels.index(selected_label)
+
         archive = archives[selected_index]
         if len(archives) == 1:
             st.success(f"Latest extraction complete · {archive.metadata.domain or 'unknown'}")
         _render_archive_summary(archive)
+
         explorer = _cached_archive_explorer(archive.model_dump_json(exclude_none=True), False)
         highlights = result_highlights(explorer.results)
         if highlights:
             st.write("Result highlights")
             for highlight in highlights[:8]:
                 label = highlight.get("metric") or highlight.get("experiment_type") or "Scientific observation"
-                value = " ".join(str(item) for item in (highlight.get("value"), highlight.get("unit")) if item not in (None, ""))
+                value = " ".join(
+                    str(item)
+                    for item in (highlight.get("value"), highlight.get("unit"))
+                    if item not in (None, "")
+                )
                 with st.container(border=True):
                     st.write(f"{label}: {value or 'Recorded'}")
-                    st.caption(f"page {highlight.get('source_page') or 'not resolved'} · evidence {highlight.get('evidence_origin') or 'not recorded'}")
+                    st.caption(
+                        f"page {highlight.get('source_page') or 'not resolved'} · "
+                        f"evidence {highlight.get('evidence_origin') or 'not recorded'}"
+                    )
         else:
             _render_empty_results_state(archive, result_count=0)
+
         archive_id = archive.metadata.archive_id or "synthex_record"
         with st.expander("Complete validated archive"):
             st.json(archive.model_dump(exclude_none=True))
         with st.container(horizontal=True):
-            st.download_button("Download JSON", archive.model_dump_json(indent=2, exclude_none=True), f"{archive_id}.json", "application/json")
+            st.download_button(
+                "Download JSON",
+                archive.model_dump_json(indent=2, exclude_none=True),
+                f"{archive_id}.json",
+                "application/json",
+            )
             st.download_button("Download CSV", export_results_csv(archive), "results.csv", "text/csv")
-            st.download_button("Download CSV Bundle", export_csv_bundle_zip(archive), f"{archive_id}_csv_bundle.zip", "application/zip")
+            st.download_button(
+                "Download CSV Bundle",
+                export_csv_bundle_zip(archive),
+                f"{archive_id}_csv_bundle.zip",
+                "application/zip",
+            )
+
         if len(archives) == 1:
             st.button("Explore all results", type="primary", on_click=_navigate, args=("Explore Results",))
             if st.button("Save latest extraction to local Synthex Archive"):
                 store.append(archive)
                 st.success("Saved to data/archive/archives.jsonl")
+
 
 elif page == "Explore Results":
     top_left, top_right = st.columns([5, 1])
@@ -497,6 +544,7 @@ elif page == "Explore Results":
             help="Clear the current in-session paper/batch and return to a fresh uploader. Saved archives are not deleted.",
             width="stretch",
         )
+
     st.caption("Compare structured parameters across the current extraction batch while preserving paper-level source tracking.")
     archives = _session_archives()
     if not archives:
@@ -505,14 +553,16 @@ elif page == "Explore Results":
         if len(archives) > 1:
             st.success(f"Cross-paper workspace · {len(archives)} successfully extracted papers")
             st.dataframe(batch_source_summary(archives), hide_index=True, width="stretch")
+
         selection_options = ["All successful papers"] if len(archives) > 1 else []
-        selection_options += [_archive_label(archive, i) for i, archive in enumerate(archives)]
+        selection_options += [_archive_label(archive, index) for index, archive in enumerate(archives)]
         selected_scope = st.selectbox("Result scope", selection_options, index=0, key="synthex_explorer_scope")
+
         if selected_scope == "All successful papers":
             scoped_archives = archives
         else:
-            chosen_idx = [_archive_label(archive, i) for i, archive in enumerate(archives)].index(selected_scope)
-            scoped_archives = [archives[chosen_idx]]
+            labels = [_archive_label(archive, index) for index, archive in enumerate(archives)]
+            scoped_archives = [archives[labels.index(selected_scope)]]
             _render_archive_summary(scoped_archives[0])
 
         include_quarantined = st.toggle(
@@ -533,6 +583,7 @@ elif page == "Explore Results":
             key="synthex_explorer_search",
             icon=":material/search:",
         )
+
         selected: dict[str, tuple[str, ...]] = {}
         filter_labels = (
             ("domain", "Domain"),
@@ -548,15 +599,24 @@ elif page == "Explore Results":
         )
         with st.expander("Filters", icon=":material/filter_alt:"):
             for start in range(0, len(filter_labels), 3):
-                cols = st.columns(min(3, len(filter_labels[start:start + 3])))
-                for col, (field, label) in zip(cols, filter_labels[start:start + 3]):
+                group = filter_labels[start:start + 3]
+                cols = st.columns(len(group))
+                for col, (field, label) in zip(cols, group):
                     values = options.get(field, [])
                     if values:
                         with col:
                             selected[field] = tuple(st.multiselect(label, values, key=f"filter_{field}"))
-            estimated_choice = st.segmented_control(
-                "Estimated status", ["All", "Estimated", "Not estimated"], default="All", key="synthex_explorer_estimated"
-            ) if all_results else "All"
+            estimated_choice = (
+                st.segmented_control(
+                    "Estimated status",
+                    ["All", "Estimated", "Not estimated"],
+                    default="All",
+                    key="synthex_explorer_estimated",
+                )
+                if all_results
+                else "All"
+            )
+
         estimated = True if estimated_choice == "Estimated" else False if estimated_choice == "Not estimated" else None
         filters = ExplorerFilters(
             **{field: selected.get(field, ()) for field, _ in filter_labels},
@@ -568,14 +628,30 @@ elif page == "Explore Results":
         result_tab, materials_tab, processes_tab, experiments_tab, calculations_tab, evidence_tab, relationships_tab = st.tabs(
             ["Results", "Materials", "Processes", "Experiments", "Calculations", "Evidence", "Relationships"]
         )
+
         with result_tab:
             st.caption(f"{len(shown_results)} observation(s) shown across {len(scoped_archives)} paper(s)")
             if any(row.get("admission_status") == "quarantined" for row in shown_results):
                 st.warning("This view includes quarantined records. Check admission status and rejection reason before use.")
+
             if shown_results:
                 display_columns = (
-                    "source_title", "researcher_status", "admission_status", "material_names", "reaction", "experiment_type", "metric", "product",
-                    "value", "unit", "temperature", "potential", "reference_electrode", "ownership", "source_page", "evidence_origin",
+                    "source_title",
+                    "researcher_status",
+                    "admission_status",
+                    "material_names",
+                    "reaction",
+                    "experiment_type",
+                    "metric",
+                    "product",
+                    "value",
+                    "unit",
+                    "temperature",
+                    "potential",
+                    "reference_electrode",
+                    "ownership",
+                    "source_page",
+                    "evidence_origin",
                 )
                 highlighted_rows = result_highlights(shown_results, limit=len(shown_results))
                 display_rows = [{key: row.get(key, "") for key in display_columns} for row in highlighted_rows]
@@ -595,6 +671,7 @@ elif page == "Explore Results":
                     "text/csv",
                     icon=":material/download:",
                 )
+
                 if selection.selection.rows:
                     detail = highlighted_rows[selection.selection.rows[0]]
                     with st.container(border=True):
@@ -634,6 +711,7 @@ elif page == "Explore Results":
                 else:
                     st.info(empty_text)
 
+
 elif page == "Visualize Data":
     st.subheader("Visual Explorer")
     saved_archives = list(store.iter_archives() or [])
@@ -644,78 +722,52 @@ elif page == "Visualize Data":
     archives = list(by_id.values())
     all_rows = project_archives(archives)
     properties = sorted({row.property_name for row in all_rows})
+
     if not properties:
         st.info("No canonical numeric archive measurements are available to visualize.")
     else:
         property_name = st.selectbox("Property", properties)
         rows = project_archives(archives, AnalyticQuery(property_name=property_name))
         frame = comparison_frame(rows)
-        st.caption("Current batch and saved archives can be compared. Source/archive identifiers remain attached to the projected rows.")
+        st.caption("Current batch and saved archives can be compared while source/archive identifiers remain attached.")
         st.dataframe(frame, hide_index=True, width="stretch")
         chart_type = st.selectbox("Chart type", ["bar", "line", "scatter", "heatmap", "contour"])
         x_field = st.selectbox("X field", ["material_label", "conditions.temperature", "conditions.cycle"])
-        spec = build_visualization_spec(rows, chart_type, f"{property_name} comparison", x_field=x_field, y_field="value", query=AnalyticQuery(property_name=property_name))
+        spec = build_visualization_spec(
+            rows,
+            chart_type,
+            f"{property_name} comparison",
+            x_field=x_field,
+            y_field="value",
+            query=AnalyticQuery(property_name=property_name),
+        )
         if spec.eligible:
             png = VisualizationRenderer().render_png(spec, rows)
             st.image(png)
             st.download_button("Download chart PNG", png, f"{spec.visualization_id}.png", "image/png")
         else:
             st.warning(f"Chart is not eligible: {spec.reason}")
-        st.download_button("Download comparison CSV", frame.to_csv(index=False).encode("utf-8"), f"{spec.visualization_id}.csv", "text/csv")
+        st.download_button(
+            "Download comparison CSV",
+            frame.to_csv(index=False).encode("utf-8"),
+            f"{spec.visualization_id}.csv",
+            "text/csv",
+        )
 
-elif page == "Advanced · Battery validation":
-    st.subheader("Batteries V1.3 validation corpus")
-    st.info("Benchmark runs are paper-only by design: Serper enrichment is OFF during scoring so retrieval cannot leak answers into extraction benchmarks.")
-    manifest_path = Path("benchmark/batteries_v1/corpus_manifest.json")
-    if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        a, b, c, d = st.columns(4)
-        a.metric("Files", manifest.get("total_files", 0))
-        b.metric("Unique", manifest.get("unique_files", 0))
-        c.metric("Battery-relevant", manifest.get("battery_relevant_unique", 0))
-        d.metric("Negative controls", manifest.get("negative_controls", 0))
-        rows = [x for x in manifest.get("entries", []) if x.get("benchmark_priority") != "EXCLUDE"]
-        st.dataframe(rows, width="stretch")
-    st.markdown("**Primary gold benchmark:** `batteries-11-00142.pdf` (Li2FeTiO4 sol–gel cathode).")
-    st.code('python benchmark_battery_material.py "path/to/batteries-11-00142.pdf"', language="powershell")
 
-elif page == "Advanced · Domain registry":
-    st.subheader("Scientific domain registry")
-    options = {d["name"]: d["slug"] for d in registry.list_domains()}
-    chosen = st.selectbox("Domain", list(options))
-    spec = registry.get(options[chosen])
-    st.write(spec["description"])
-    maturity = {
-        "gas_sensing": "Mature V2 vertical: live extraction + validation + visualizations",
-        "batteries": "Frozen V1.3 vertical: routing + synthesis + electrode/cell protocols + performance + benchmark corpus",
-        "catalysis": "Stage 3 closed: heterogeneous catalysis, electrocatalysis, computational DFT, stability and review-ownership safeguards; Stage 4 freeze pending",
-    }.get(options[chosen], "Platform scaffold: ontology + manifest + generic extractor; not yet benchmark-validated")
-    st.info(maturity)
-    left, right = st.columns([1, 2])
-    with left:
-        st.markdown("**Process vocabulary**")
-        st.write(spec.get("process_vocabulary", []))
-        st.markdown("**Recommended paper sections**")
-        st.write(spec.get("recommended_sections", []))
-    with right:
-        st.markdown("**Canonical properties**")
-        st.dataframe(spec.get("properties", []), width="stretch")
-    with st.expander("Raw domain manifest"):
-        st.json(spec)
+elif page == "Gas Sensing Analytics":
+    render_gas_sensing_analytics()
 
-elif page == "Advanced · Benchmark catalog":
-    st.subheader("Benchmark dataset roadmap")
-    for domain, tasks in benchmark_matrix(registry).items():
-        with st.expander(f"{registry.get(domain)['name']} · {len(tasks)} tasks"):
-            for task in tasks:
-                st.write("•", task)
 
-elif page == "Advanced · Figure Data":
-    st.subheader("Digitized figures")
-    st.caption("Sidecar-only estimates. Confirm calibration before a dataset can be completed; no values are added to the canonical archive.")
+elif page == "Figure Data":
+    st.subheader("Figure Data")
+    st.caption(
+        "Digitize values from a selected plot while keeping them explicitly estimated and separate from canonical paper data."
+    )
     image_file = st.file_uploader("Rendered figure or selected panel PNG", type=["png"], key="digitization_png")
     if image_file:
         from PIL import Image
+
         image_bytes = image_file.getvalue()
         image = Image.open(io.BytesIO(image_bytes))
         width, height = image.size
@@ -724,6 +776,7 @@ elif page == "Advanced · Figure Data":
             source_id = st.text_input("Source ID", value="source-figure")
             figure_id = st.text_input("Figure ID", value="fig-selected")
             panel = st.text_input("Panel label (optional)") or None
+            st.caption("Enter the interior plot bounds and two visible calibration values for each axis.")
             plot_x0 = st.number_input("Plot left pixel", min_value=0.0, value=0.0)
             plot_y0 = st.number_input("Plot top pixel", min_value=0.0, value=0.0)
             plot_x1 = st.number_input("Plot right pixel", min_value=1.0, value=float(width))
@@ -736,6 +789,7 @@ elif page == "Advanced · Figure Data":
             y_log = st.checkbox("Y axis is log10")
             red = st.text_input("Selected series RGB", value="228,26,28")
             submitted = st.form_submit_button("Confirm calibration and digitize", type="primary")
+
         if submitted:
             try:
                 rgb = tuple(int(value.strip()) for value in red.split(","))
@@ -744,23 +798,74 @@ elif page == "Advanced · Figure Data":
                     page=1,
                     figure_id=figure_id,
                     panel=panel,
-                    plot_area=PlotArea(bbox=PixelBoundingBox(x0=plot_x0, y0=plot_y0, x1=plot_x1, y1=plot_y1), resolution_width=width, resolution_height=height),
-                    x_axis=AxisCalibration(axis="x", pixel_start=plot_x0, pixel_end=plot_x1, data_start=x0, data_end=x1, scale_type="log10" if x_log else "linear"),
-                    y_axis=AxisCalibration(axis="y", pixel_start=plot_y1, pixel_end=plot_y0, data_start=y0, data_end=y1, scale_type="log10" if y_log else "linear"),
+                    plot_area=PlotArea(
+                        bbox=PixelBoundingBox(x0=plot_x0, y0=plot_y0, x1=plot_x1, y1=plot_y1),
+                        resolution_width=width,
+                        resolution_height=height,
+                    ),
+                    x_axis=AxisCalibration(
+                        axis="x",
+                        pixel_start=plot_x0,
+                        pixel_end=plot_x1,
+                        data_start=x0,
+                        data_end=x1,
+                        scale_type="log10" if x_log else "linear",
+                    ),
+                    y_axis=AxisCalibration(
+                        axis="y",
+                        pixel_start=plot_y1,
+                        pixel_end=plot_y0,
+                        data_start=y0,
+                        data_end=y1,
+                        scale_type="log10" if y_log else "linear",
+                    ),
                     series=[SeriesSelection(series_id="series-user", color_rgb=rgb, association_status="ambiguous")],
                 )
                 result = digitize_plot(image_bytes, request)
                 if result.status == "completed":
                     st.success(f"Digitized {sum(len(series.points) for series in result.series)} estimated points.")
-                    st.download_button("Download digitized JSON", result.model_dump_json(indent=2), f"{result.digitization_id}.json", "application/json")
+                    st.download_button(
+                        "Download digitized JSON",
+                        result.model_dump_json(indent=2),
+                        f"{result.digitization_id}.json",
+                        "application/json",
+                    )
                 else:
                     st.warning("Digitization was rejected: " + "; ".join(result.rejection_reasons))
             except (ValueError, TypeError) as error:
                 st.error(f"Calibration was not accepted: {error}")
 
-elif page == "Advanced · Diagnostics":
+
+elif page == "Developer · Battery validation":
+    st.subheader("Batteries V1.3 validation corpus")
+    st.info("Developer-only benchmark view. Serper enrichment remains off during scoring.")
+    manifest_path = Path("benchmark/batteries_v1/corpus_manifest.json")
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        a, b, c, d = st.columns(4)
+        a.metric("Files", manifest.get("total_files", 0))
+        b.metric("Unique", manifest.get("unique_files", 0))
+        c.metric("Battery-relevant", manifest.get("battery_relevant_unique", 0))
+        d.metric("Negative controls", manifest.get("negative_controls", 0))
+        rows = [item for item in manifest.get("entries", []) if item.get("benchmark_priority") != "EXCLUDE"]
+        st.dataframe(rows, width="stretch")
+    st.markdown("**Primary gold benchmark:** `batteries-11-00142.pdf` (Li2FeTiO4 sol–gel cathode).")
+
+
+elif page == "Developer · Benchmark catalog":
+    st.subheader("Benchmark catalog")
+    for domain, tasks in benchmark_matrix(registry).items():
+        with st.expander(f"{registry.get(domain)['name']} · {len(tasks)} tasks"):
+            for task in tasks:
+                st.write("•", task)
+
+
+elif page == "Developer · Diagnostics":
     st.subheader("Provider diagnostics")
-    st.caption("This optional check sends one tiny request to each configured Gemini model. Availability here does not guarantee that a full extraction will succeed.")
+    st.caption(
+        "This developer check sends one tiny request to each configured Gemini model. "
+        "Availability here does not guarantee that a full extraction will succeed."
+    )
     st.write("Configured production order")
     st.code(" → ".join(configured_gemini_models()), language=None)
     if st.button("Run tiny provider check", type="primary"):
@@ -774,14 +879,36 @@ elif page == "Advanced · Diagnostics":
         st.dataframe(provider_health, hide_index=True, width="stretch")
         st.caption("No extraction, schema repair, Serper query, or archive mutation was performed.")
 
-elif page == "Advanced · Knowledge graph":
+
+elif page == "Developer · Domain registry":
+    st.subheader("Scientific domain registry")
+    options = {item["name"]: item["slug"] for item in registry.list_domains()}
+    chosen = st.selectbox("Domain", list(options))
+    spec = registry.get(options[chosen])
+    st.write(spec["description"])
+    maturity = {
+        "gas_sensing": "Mature gas-sensing extraction and analytics domain",
+        "batteries": "Frozen Batteries V1.3 scientific domain",
+        "catalysis": "Catalysis/Electrocatalysis Stage 3 closed; Stage 4 freeze pending",
+    }.get(options[chosen], "Platform scaffold; not yet benchmark-validated")
+    st.info(maturity)
+    left, right = st.columns([1, 2])
+    with left:
+        st.markdown("**Process vocabulary**")
+        st.write(spec.get("process_vocabulary", []))
+        st.markdown("**Recommended paper sections**")
+        st.write(spec.get("recommended_sections", []))
+    with right:
+        st.markdown("**Canonical properties**")
+        st.dataframe(spec.get("properties", []), width="stretch")
+    with st.expander("Raw domain manifest"):
+        st.json(spec)
+
+
+elif page == "Developer · Knowledge graph":
     st.subheader("Knowledge graph export")
     archives = list(store.iter_archives() or [])
     if st.button("Build nodes.jsonl + edges.jsonl"):
         nodes, edges = export_graph(archives, "data/graph")
         st.success(f"Built {nodes} and {edges}")
     st.markdown("Graph relations include `processed_by`, `tested_in`, `calculated_for`, `has_property`, and `reported_by`.")
-
-else:
-    st.subheader("Gas Sensing V2")
-    st.info("The existing Synthex V2 gas-sensing application remains available through `streamlit run streamlit_app.py`. V3 treats it as the first mature domain plugin rather than deleting it.")
