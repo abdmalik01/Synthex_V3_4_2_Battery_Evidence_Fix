@@ -15,6 +15,7 @@ from synthex_platform.providers import GeminiGateway
 from .battery_models import BatteryDocument
 from .battery_evidence import verify_battery_evidence
 from .battery_postprocess import deduplicate_shared_protocols, apply_scientific_guardrails
+from .battery_json_normalization import parse_battery_document_json
 from .source_context import SourceBundle, build_source_bundle, compact_source_context, has_prompt_source_context
 
 load_dotenv(override=True)
@@ -83,7 +84,9 @@ Core rules:
 30. If retaining capacity retention calculated from a reported loss, mark it with derivation
     {reported_property:"capacity_loss",reported_raw_value,reported_value,transformation:"100 - loss"}.
     Never represent the derived retention as author-reported evidence or canonically admit it.
-31. Return JSON only.
+31. Return JSON only. Do not wrap the JSON in Markdown fences.
+32. Fields long_term_cycles and performance_points[].cycle are integers, not quantity objects.
+    Fields long_term_c_rate and performance_points[].c_rate are strings such as "1 C", not quantity objects.
 """
 
 OUTPUT_SHAPE = """
@@ -115,7 +118,7 @@ battery_groups [{group_id,ownership,battery_ids[],material_ref,variant_label,che
   qualitative_findings[],evidence:[]}]
 extraction_notes []
 
-All quantity fields should preferably be objects: {raw_value,value,unit,qualifier}.
+All quantity fields should preferably be objects: {raw_value,value,unit,qualifier}, except long_term_cycles and performance_points[].cycle which are integers, and long_term_c_rate and performance_points[].c_rate which are strings.
 Evidence may be {page,section,text_snippet,source_type,original_source_type,table_id,figure_id,locator,confidence}; source_type is text, table, figure_caption, figure, supplementary, or unknown.
 Material role must be one of cathode, anode, active_material, electrolyte, separator, additive, other, unknown.
 """
@@ -186,8 +189,8 @@ class BatteryGeminiExtractor:
         if not output_text:
             raise RuntimeError("Gemini returned no battery JSON output.")
         try:
-            doc = BatteryDocument.model_validate_json(output_text)
-        except ValidationError as exc:
+            doc = parse_battery_document_json(output_text)
+        except (ValidationError, ValueError, TypeError) as exc:
             raise RuntimeError(f"Battery JSON failed local Pydantic validation: {exc}\n\nRAW OUTPUT:\n{output_text}") from exc
         result = deduplicate_shared_protocols(apply_scientific_guardrails(doc))
         return verify_battery_evidence(result, text)
