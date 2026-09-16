@@ -9,7 +9,7 @@ PUBLIC_NAVIGATION = (
     "Explore Results",
     "Visualize Data",
     "Gas Sensing Analytics",
-    "Figure Data",
+    "Extract Data from Graphs",
 )
 
 DEVELOPER_NAVIGATION = (
