@@ -32,6 +32,7 @@ def _document() -> CorrosionDocument:
             "treatment_type": "inhibitor",
             "reported_name": "organic inhibitor",
             "material_ref": "steel",
+            "concentration": {"raw_value": "1×10^-3 M", "value": 0.001, "unit": "M", "qualifier": "exact"},
             "ownership": "focal_work",
             "evidence": ev,
         }],
@@ -100,6 +101,21 @@ def test_corrosion_archive_admits_focal_verified_metric_and_quarantines_cited_me
     assert audit["admitted_quantitative_values"] == 1
     assert any(item["reason"] == "ownership_cited_prior_work" for item in audit["quarantine"])
     assert archive.quality.validation_status == "schema_validated"
+
+
+def test_corrosion_archive_preserves_linked_inhibitor_name_and_concentration_as_conditions():
+    archive = assemble_corrosion_archive(_document())
+    conditions = {item.property: item for item in archive.experiments[0].conditions}
+    assert conditions["treatment"].value == "organic inhibitor"
+    assert conditions["inhibitor"].value == "organic inhibitor"
+    assert conditions["treatment_concentration"].raw_value == "1×10^-3 M"
+    assert conditions["inhibitor_concentration"].raw_value == "1×10^-3 M"
+    assert all(item.evidence and item.evidence[0].verbatim_match is True for item in (
+        conditions["treatment"],
+        conditions["inhibitor"],
+        conditions["treatment_concentration"],
+        conditions["inhibitor_concentration"],
+    ))
 
 
 def test_corrosion_archive_keeps_dft_separate_from_experiments():
