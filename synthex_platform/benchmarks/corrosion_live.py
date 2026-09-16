@@ -341,6 +341,14 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
     bundle = pipeline.build_source_bundle(case.pdf_path, source_filename=case.filename)
     route, archive = pipeline.extract_source_bundle(bundle, domain="auto")
 
+    verified_document_path: Path | None = None
+    if route.domain == "corrosion" and pipeline.last_corrosion_document is not None:
+        verified_document_path = output_dir / "verified_document.json"
+        verified_document_path.write_text(
+            pipeline.last_corrosion_document.model_dump_json(indent=2, exclude_none=True),
+            encoding="utf-8",
+        )
+
     archive_path = output_dir / "archive.json"
     archive_path.write_text(archive.model_dump_json(indent=2, exclude_none=True), encoding="utf-8")
 
@@ -379,6 +387,11 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
         "score": _score_payload(score),
         "extraction_diagnostics": pipeline.last_extraction_diagnostics,
         "provider_audit": pipeline.last_provider_audit,
+        "verified_document_path": (
+            str(verified_document_path.relative_to(repo_root))
+            if verified_document_path is not None
+            else None
+        ),
         "archive_path": str(archive_path.relative_to(repo_root)),
     }
     report_path = output_dir / "report.json"
