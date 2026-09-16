@@ -8,6 +8,7 @@ paper before use. This module performs no provider or network calls.
 from __future__ import annotations
 
 from dataclasses import dataclass, asdict
+import json
 import math
 import re
 from typing import Iterable
@@ -30,6 +31,13 @@ def _token(value: object | None) -> str:
     return text
 
 
+def _unit_token(value: object | None) -> str:
+    """Normalize notation-only unit variants without dimensional conversion."""
+    text = _token(value).replace("µ", "μ").replace("²", "2")
+    text = text.replace("/cm2", " cm-2").replace("/cm-2", " cm-2")
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def _material_token(value: object | None) -> str:
     """Normalize harmless typography in material grade names only.
 
@@ -48,6 +56,7 @@ class CorrosionExpectedObservation:
     unit: str
     experiment_type: str | None = None
     material_contains: str | None = None
+    treatment_contains: str | None = None
     reference_electrode: str | None = None
     tolerance_abs: float = 1e-9
     required: bool = True
@@ -117,17 +126,65 @@ def _material_match(row: dict, needle: str | None) -> bool:
     return _material_token(needle) in _material_token(haystack)
 
 
+def _row_conditions(row: dict) -> dict:
+    direct = row.get("conditions")
+    if isinstance(direct, dict):
+        return direct
+    encoded = row.get("conditions_json")
+    if not isinstance(encoded, str) or not encoded.strip():
+        return {}
+    try:
+        payload = json.loads(encoded)
+    except json.JSONDecodeError:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _treatment_match(row: dict, needle: str | None) -> bool:
+    if not needle:
+        return True
+    conditions = _row_conditions(row)
+    values: list[str] = []
+    for key in ("treatment", "inhibitor", "treatment_name", "inhibitor_name"):
+        value = conditions.get(key)
+        if isinstance(value, (list, tuple, set)):
+            values.extend(str(item) for item in value if item not in (None, ""))
+        elif value not in (None, ""):
+            values.append(str(value))
+    if not values:
+        return False
+    haystack = " | ".join(values)
+    return _token(needle) in _token(haystack)
+
+
+def _reference_electrode_match(actual: object | None, expected: str | None) -> bool:
+    if not expected:
+        return True
+    actual_token = _token(actual)
+    expected_token = _token(expected)
+    if not actual_token:
+        return False
+    if actual_token == expected_token:
+        return True
+    # Accept a source-reported abbreviation only when it is literally preserved in
+    # parentheses in the longer label; this is textual alias handling, not scale
+    # conversion (e.g. SCE <-> saturated calomel electrode (SCE)).
+    return f"({expected_token})" in actual_token or f"({actual_token})" in expected_token
+
+
 def _association_match(row: dict, expected: CorrosionExpectedObservation) -> bool:
     if expected.experiment_type and _token(row.get("experiment_type")) != _token(expected.experiment_type):
         return False
     if not _material_match(row, expected.material_contains):
         return False
+    if not _treatment_match(row, expected.treatment_contains):
+        return False
     if expected.reference_electrode:
         actual = row.get("reference_electrode")
         if not actual:
-            conditions = row.get("conditions") or {}
-            actual = conditions.get("reference_electrode") if isinstance(conditions, dict) else None
-        if _token(actual) != _token(expected.reference_electrode):
+            conditions = _row_conditions(row)
+            actual = conditions.get("reference_electrode")
+        if not _reference_electrode_match(actual, expected.reference_electrode):
             return False
     return True
 
@@ -161,7 +218,7 @@ def score_corrosion_archive(
 
     for assertion in required:
         property_rows = [row for row in rows if _token(row.get("metric")) == _token(assertion.metric)]
-        unit_rows = [row for row in property_rows if _token(row.get("unit")) == _token(assertion.unit)]
+        unit_rows = [row for row in property_rows if _unit_token(row.get("unit")) == _unit_token(assertion.unit)]
         value_rows = [
             row for row in unit_rows
             if _numeric_equal(row.get("value"), assertion.value, assertion.tolerance_abs)
