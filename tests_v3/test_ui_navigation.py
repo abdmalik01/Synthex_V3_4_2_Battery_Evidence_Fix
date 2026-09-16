@@ -14,7 +14,7 @@ def test_public_navigation_contains_only_researcher_facing_tools():
         "Explore Results",
         "Visualize Data",
         "Gas Sensing Analytics",
-        "Figure Data",
+        "Extract Data from Graphs",
     )
     assert not any("Advanced" in item for item in PUBLIC_NAVIGATION)
     assert not any("validation" in item.casefold() for item in PUBLIC_NAVIGATION)
