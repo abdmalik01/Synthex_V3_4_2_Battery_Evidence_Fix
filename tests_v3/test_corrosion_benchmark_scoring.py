@@ -3,7 +3,7 @@ from synthex_platform.core.archive import ArchiveMetadata, SynthexArchive
 from synthex_platform.core.models import Evidence, ExperimentRecord, MaterialEntity, Measurement, SourceRecord, SourceType
 
 
-def _archive() -> SynthexArchive:
+def _archive(*, material_name: str = "mild steel") -> SynthexArchive:
     evidence = Evidence(
         source_id="src-corrosion",
         page=4,
@@ -14,7 +14,7 @@ def _archive() -> SynthexArchive:
     )
     material = MaterialEntity(
         material_id="mat-steel",
-        name="mild steel",
+        name=material_name,
         evidence=[evidence],
     )
     experiment = ExperimentRecord(
@@ -47,21 +47,45 @@ def _archive() -> SynthexArchive:
     )
 
 
-def test_corrosion_scorer_matches_value_association_and_source_tracking():
-    score = score_corrosion_archive(_archive(), [CorrosionExpectedObservation(
+def _expected(*, material_contains: str = "mild steel") -> CorrosionExpectedObservation:
+    return CorrosionExpectedObservation(
         metric="corrosion_current_density",
         value=1.2e-5,
         unit="A/cm2",
         experiment_type="potentiodynamic_polarization",
-        material_contains="mild steel",
+        material_contains=material_contains,
         reference_electrode="Ag/AgCl",
-    )])
+    )
+
+
+def test_corrosion_scorer_matches_value_association_and_source_tracking():
+    score = score_corrosion_archive(_archive(), [_expected()])
     assert score.total_required == 1
     assert score.matched_required == 1
     assert score.value_accuracy == 1.0
     assert score.association_accuracy == 1.0
     assert score.source_tracking_coverage == 1.0
     assert score.overall == 1.0
+
+
+def test_corrosion_scorer_normalizes_spacing_around_material_grade_hash():
+    score = score_corrosion_archive(
+        _archive(material_name="20 # steel"),
+        [_expected(material_contains="20# steel")],
+    )
+    assert score.matched_required == 1
+    assert score.association_accuracy == 1.0
+    assert score.overall == 1.0
+
+
+def test_corrosion_scorer_does_not_turn_material_normalization_into_aliasing():
+    score = score_corrosion_archive(
+        _archive(material_name="20 # steel"),
+        [_expected(material_contains="Q235 steel")],
+    )
+    assert score.value_accuracy == 1.0
+    assert score.association_accuracy == 0.0
+    assert score.matched_required == 0
 
 
 def test_corrosion_scorer_never_converts_units_to_make_gold_pass():
