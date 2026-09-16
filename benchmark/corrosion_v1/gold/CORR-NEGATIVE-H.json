@@ -1,0 +1,35 @@
+{
+  "id": "CORR-NEGATIVE-H",
+  "doi": "10.20964/2018.09.30",
+  "filename": "Corrosion 9.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "paper_type": "battery_electrode_study",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; this is a deliberate non-corrosion routing control.",
+    "numeric_corrosion_gold_created": false
+  },
+  "routing_contract": {
+    "expected_route": "batteries",
+    "must_not_route_to": "corrosion",
+    "reason": "The focal system is olivine LiFePO4/C cathode material for lithium-ion batteries. EIS/Nyquist vocabulary alone is insufficient evidence for corrosion ownership."
+  },
+  "positive_battery_evidence": [
+    "Title: Electrochemical Properties of Olivine-Type LiFePO4/C Cathode Material for Lithium Ion Batteries",
+    "Keywords include lithium ion batteries, LiFePO4, electrochemical impedance spectroscopy, conductive additive",
+    "Electrodes are LiFePO4 composite cathodes with graphite conductive additive and PVDF binder",
+    "Electrochemical setup uses Li foil and reports charge/discharge cycling, cyclic voltammetry and EIS",
+    "The paper reports specific discharge capacity and capacity retention for LiFePO4/G electrodes"
+  ],
+  "source_context": {
+    "electrolyte": "1 mol L^-1 LiPF6 in ethylene carbonate/dimethyl carbonate/diethyl carbonate (1:1:1 volume ratio)",
+    "eis_frequency_range": "10^5 to 10^-2 Hz",
+    "eis_amplitude": "5 mV",
+    "charge_discharge_range": "2.5 V to 4.2 V at 0.2 C",
+    "page": 4
+  },
+  "required_safety_assertion": {
+    "corrosion_canonical_observations_expected": 0,
+    "nyquist_or_eis_terms_do_not_override_domain_context": true
+  }
+}
