@@ -19,6 +19,24 @@ from synthex_platform.visual.digitization.models import PixelBoundingBox
 
 logger = logging.getLogger("synthex.graph_extraction_ui")
 MAX_INTERACTIVE_WIDTH = 1000
+GRAPH_WORKSPACE_STATE_KEYS = (
+    "digitization_graph_image",
+    "synthex_graph_image_token",
+    "synthex_graph_plot_selection",
+    "synthex_graph_curve_selection",
+    "synthex_graph_plot_bounds",
+    "synthex_graph_curve_sample",
+)
+
+
+def _clear_graph_workspace_state(state) -> None:
+    """Clear graph-upload and interactive-selection state without touching other Synthex workspaces."""
+    for key in GRAPH_WORKSPACE_STATE_KEYS:
+        state.pop(key, None)
+
+
+def _reset_graph_workspace() -> None:
+    _clear_graph_workspace_state(st.session_state)
 
 
 def _figure_id(label: str) -> str:
@@ -188,11 +206,21 @@ def _preview_image(image_bytes: bytes, result, color: tuple[int, int, int]) -> b
 
 def render_graph_extraction_ui() -> None:
     """Render click/drag graph calibration while keeping manual calibration as a fallback."""
-    st.subheader("Extract Data from Graphs")
-    st.write(
-        "Recover approximate numerical data from a plotted curve when a paper shows the result in a graph "
-        "but does not provide the underlying table."
-    )
+    top_left, top_right = st.columns([3, 1], vertical_alignment="center")
+    with top_left:
+        st.subheader("Extract Data from Graphs")
+        st.write(
+            "Recover approximate numerical data from a plotted curve when a paper shows the result in a graph "
+            "but does not provide the underlying table."
+        )
+    with top_right:
+        st.button(
+            "Reset graph",
+            icon=":material/refresh:",
+            width="stretch",
+            on_click=_reset_graph_workspace,
+        )
+
     st.info(
         "Digitized values are estimates from the figure. Synthex keeps them separate from exact, source-reported "
         "numerical data and labels them as estimated."
