@@ -747,46 +747,14 @@ elif page == "Explore Results":
 
 
 elif page == "Visualize Data":
-    st.subheader("Visual Explorer")
+    from synthex_platform.visual.analytics.streamlit_panel import render_visual_explorer
+
     saved_archives = list(store.iter_archives() or [])
     current_archives = _session_archives()
     by_id = {archive.metadata.archive_id: archive for archive in saved_archives if archive.metadata.archive_id}
     for archive in current_archives:
         by_id[archive.metadata.archive_id or f"session-{id(archive)}"] = archive
-    archives = list(by_id.values())
-    all_rows = project_archives(archives)
-    properties = sorted({row.property_name for row in all_rows})
-
-    if not properties:
-        st.info("No canonical numeric archive measurements are available to visualize.")
-    else:
-        property_name = st.selectbox("Property", properties)
-        rows = project_archives(archives, AnalyticQuery(property_name=property_name))
-        frame = comparison_frame(rows)
-        st.caption("Current batch and saved archives can be compared while source/archive identifiers remain attached.")
-        st.dataframe(frame, hide_index=True, width="stretch")
-        chart_type = st.selectbox("Chart type", ["bar", "line", "scatter", "heatmap", "contour"])
-        x_field = st.selectbox("X field", ["material_label", "conditions.temperature", "conditions.cycle"])
-        spec = build_visualization_spec(
-            rows,
-            chart_type,
-            f"{property_name} comparison",
-            x_field=x_field,
-            y_field="value",
-            query=AnalyticQuery(property_name=property_name),
-        )
-        if spec.eligible:
-            png = VisualizationRenderer().render_png(spec, rows)
-            st.image(png)
-            st.download_button("Download chart PNG", png, f"{spec.visualization_id}.png", "image/png")
-        else:
-            st.warning(f"Chart is not eligible: {spec.reason}")
-        st.download_button(
-            "Download comparison CSV",
-            frame.to_csv(index=False).encode("utf-8"),
-            f"{spec.visualization_id}.csv",
-            "text/csv",
-        )
+    render_visual_explorer(list(by_id.values()))
 
 
 elif page == "Gas Sensing Analytics":
