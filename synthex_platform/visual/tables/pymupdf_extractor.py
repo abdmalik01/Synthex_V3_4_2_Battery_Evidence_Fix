@@ -86,14 +86,56 @@ def _header_rows(table, grid: list[list[str | None]]):
     return [header_row], body, {"status": "single_level", "external": external}
 
 
+def _grid(table) -> list[list[str | None]]:
+    return [[cell if cell is not None else None for cell in row] for row in table.extract()]
+
+
+def _captioned_text_fallback_tables(page):
+    """Recover dense, captioned borderless tables when line-based detection finds none.
+
+    This fallback is deliberately conservative: text alignment alone is not enough.
+    A candidate must have a nearby explicit Table caption and a multi-row/multi-column
+    grid. Ordinary prose therefore remains outside the table evidence path.
+    """
+    try:
+        candidates = list(page.find_tables(strategy="text").tables)
+    except TypeError:
+        # Compatibility with older supported PyMuPDF releases.
+        candidates = list(page.find_tables(vertical_strategy="text", horizontal_strategy="text").tables)
+    accepted = []
+    for table in candidates:
+        grid = _grid(table)
+        bbox = _bbox(getattr(table, "bbox", None))
+        caption, _ = _caption_for(page, bbox)
+        width = max((len(row) for row in grid), default=0)
+        nonempty = sum(
+            cell is not None and str(cell).strip() != ""
+            for row in grid for cell in row
+        )
+        populated_rows = sum(
+            sum(cell is not None and str(cell).strip() != "" for cell in row) >= 2
+            for row in grid
+        )
+        if caption and len(grid) >= 3 and width >= 3 and populated_rows >= 3 and nonempty >= 8:
+            accepted.append(table)
+    return accepted
+
+
 def extract_tables(pdf_path: str | Path, source_id: str | None = None) -> list[TableRecord]:
-    """Extract native tables. An undetected page intentionally yields no records."""
+    """Extract native tables, with a conservative captioned-text fallback."""
     token = _source_token(pdf_path, source_id)
     records: list[TableRecord] = []
     with pymupdf.open(str(pdf_path)) as document:
         for page_index, page in enumerate(document):
-            for table_index, table in enumerate(page.find_tables().tables):
-                grid = [[cell if cell is not None else None for cell in row] for row in table.extract()]
+            native_tables = list(page.find_tables().tables)
+            table_candidates = [(table, "pymupdf") for table in native_tables]
+            if not table_candidates:
+                table_candidates = [
+                    (table, "pymupdf_text_fallback")
+                    for table in _captioned_text_fallback_tables(page)
+                ]
+            for table_index, (table, parser_name) in enumerate(table_candidates):
+                grid = _grid(table)
                 bbox = _bbox(getattr(table, "bbox", None))
                 table_id = stable_id("tbl", token, page_index + 1, table_index, bbox.model_dump() if bbox else None)
                 caption, table_number = _caption_for(page, bbox)
@@ -107,8 +149,8 @@ def extract_tables(pdf_path: str | Path, source_id: str | None = None) -> list[T
                             source_id=source_id, page=page_index + 1, object_id=table_id,
                             table_number=table_number, row=row_index, column=column_index,
                             cell_id=f"{table_id}:r{row_index}:c{column_index}",
-                            bbox=cell_boxes.get((row_index, column_index)), parser="pymupdf",
-                            parser_or_method="pymupdf", raw_text=raw_text,
+                            bbox=cell_boxes.get((row_index, column_index)), parser=parser_name,
+                            parser_or_method=parser_name, raw_text=raw_text,
                         )
                         cells.append(TableCell(
                             row=row_index, column=column_index, cell_id=f"{table_id}:r{row_index}:c{column_index}", raw_text=raw_text, text=raw_text,
@@ -120,14 +162,19 @@ def extract_tables(pdf_path: str | Path, source_id: str | None = None) -> list[T
                 provenance = VisualProvenance(
                     source_id=source_id, page=page_index + 1, object_id=table_id,
                     table_number=table_number, table_or_figure_number=table_number,
-                    bbox=bbox, parser="pymupdf", parser_or_method="pymupdf",
+                    bbox=bbox, parser=parser_name, parser_or_method=parser_name,
                 )
-                confidence = 1.0 if grid and all(len(row) == len(grid[0]) for row in grid) else 0.5
+                rectangular = bool(grid and all(len(row) == len(grid[0]) for row in grid))
+                confidence = (
+                    1.0 if parser_name == "pymupdf" and rectangular
+                    else 0.75 if parser_name == "pymupdf_text_fallback" and rectangular
+                    else 0.5
+                )
                 records.append(TableRecord(
                     table_id=table_id, source_id=source_id, page=page_index + 1,
                     table_number=table_number, caption=caption, headers=headers,
-                    header_metadata=header_metadata, rows=body, cells=cells,
-                    column_units=column_units(headers), bbox=bbox, parser="pymupdf",
+                    header_metadata={**header_metadata, "detection_mode": parser_name}, rows=body, cells=cells,
+                    column_units=column_units(headers), bbox=bbox, parser=parser_name,
                     extraction_confidence=confidence,
                     raw_representation={"grid": grid, "header_external": header_metadata.get("external")},
                     normalized_representation=normalize_table(body, headers), provenance=provenance,
