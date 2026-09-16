@@ -191,7 +191,6 @@ def _structured_table_match(evidence: CorrosionEvidence, table) -> tuple[int, in
     """Resolve a synthesized table sentence only through one unique row/column relation.
 
     This is intentionally stricter than fuzzy text matching. A fallback match requires:
-    - the evidence already names the real table and page;
     - a literal table-header label is present in the model snippet;
     - the reported value is present in that same column, allowing only numeric typography
       equivalence such as ``7.480 × 10−7`` versus ``7.480e-7``;
@@ -255,6 +254,38 @@ def _structured_table_match(evidence: CorrosionEvidence, table) -> tuple[int, in
     return unique[0] if len(unique) == 1 else None
 
 
+def _recover_unique_table_match(
+    evidence: CorrosionEvidence,
+    source_bundle: SourceBundle,
+) -> tuple[object, int, int, str] | None:
+    """Recover a missing model table ID only from one unique source-backed relation.
+
+    Missing IDs are not guessed from table order or captions. The evidence must already
+    identify itself as table-derived, retain a page locator, and structurally match one
+    and only one table on that page by header + value + same-row anchor. Ambiguous matches
+    remain unverified.
+    """
+    if evidence.table_id:
+        return None
+    if evidence.page is None:
+        return None
+    if evidence.source_type != "table":
+        return None
+    if evidence.original_source_type not in {"table_reported", "unknown"}:
+        return None
+
+    matches: list[tuple[object, int, int, str]] = []
+    for table in source_bundle.tables:
+        if table.page != evidence.page:
+            continue
+        structured = _structured_table_match(evidence, table)
+        if structured is None:
+            continue
+        row, column, exact_row = structured
+        matches.append((table, row, column, exact_row))
+    return matches[0] if len(matches) == 1 else None
+
+
 def verify_corrosion_evidence_item(
     evidence: CorrosionEvidence,
     source_bundle: SourceBundle,
@@ -264,7 +295,10 @@ def verify_corrosion_evidence_item(
     Table evidence first uses exact normalized substring matching. If a model has
     synthesized a compact table sentence despite the prompt contract, a conservative
     row/column fallback may recover it only when one unique table relation is proven.
-    The stored snippet is then replaced by the exact extracted source row.
+    A missing model ``table_id`` may also be recovered, but only when the evidence is
+    explicitly table-derived, names the correct page, and exactly one table on that page
+    satisfies the same strict structural constraints. The stored snippet is replaced by
+    the exact extracted source row before verification is asserted.
     """
     snippet = (evidence.text_snippet or "").strip()
     if not snippet:
@@ -294,6 +328,20 @@ def verify_corrosion_evidence_item(
             "page": table.page,
             "source_type": "table",
             "original_source_type": "table_reported",
+            "text_snippet": exact_row,
+            "locator": evidence.locator or f"{table.table_id}:r{row}:c{column}",
+            "verbatim_match": True,
+        })
+
+    recovered = _recover_unique_table_match(evidence, source_bundle)
+    if recovered is not None:
+        table, row, column, exact_row = recovered
+        return evidence.model_copy(update={
+            "source_id": source_bundle.source.source_id,
+            "page": table.page,
+            "source_type": "table",
+            "original_source_type": "table_reported",
+            "table_id": table.table_id,
             "text_snippet": exact_row,
             "locator": evidence.locator or f"{table.table_id}:r{row}:c{column}",
             "verbatim_match": True,
