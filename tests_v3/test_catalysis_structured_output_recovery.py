@@ -243,9 +243,12 @@ def test_persistent_invalid_output_fails_cleanly_after_one_repair():
 
 def test_streamlit_handles_typed_catalysis_failure_without_raw_response_dump():
     app_source = (Path(__file__).resolve().parents[1] / "platform_app.py").read_text(encoding="utf-8")
-    assert "CatalysisStructuredExtractionValidationError" in app_source
-    assert '"status": "validation_failed"' in app_source
-    assert '"message": str(exc)' in app_source
+    public_source = app_source.split('elif page == "Developer · Battery validation":', 1)[0]
+    assert "CatalysisStructuredExtractionValidationError" in public_source
+    assert 'context="extraction_validation"' in public_source
+    assert '"status": notice.status' in public_source
+    assert '"message": notice.message' in public_source
+    assert '"message": str(exc)' not in public_source
     assert "debug_payload" not in app_source
     assert "raw_response_excerpt" not in app_source
 
