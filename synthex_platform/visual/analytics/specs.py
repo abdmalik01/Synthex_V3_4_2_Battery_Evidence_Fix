@@ -76,6 +76,66 @@ def categorical_fields(rows: list[AnalyticMeasurementRow]) -> list[str]:
     return fields
 
 
+def numeric_dimension_summary(rows: list[AnalyticMeasurementRow]) -> list[dict[str, Any]]:
+    """Summarize numeric coverage without creating or interpolating observations."""
+    summary: list[dict[str, Any]] = []
+    for field in numeric_fields(rows):
+        values = [field_value(row, field) for row in rows]
+        numeric_values = [value for value in values if _numeric(value)]
+        units = sorted(_units(rows, field), key=str.casefold)
+        summary.append({
+            "field": field,
+            "observations": len(numeric_values),
+            "unique_values": len(set(numeric_values)),
+            "missing": len(rows) - len(numeric_values),
+            "units": " | ".join(units),
+        })
+    return summary
+
+
+def surface_coverage(
+    rows: list[AnalyticMeasurementRow],
+    x_field: str | None,
+    y_field: str | None,
+    z_field: str | None,
+) -> dict[str, Any]:
+    """Describe joint XYZ coverage used by heatmap/contour eligibility."""
+    if not x_field or not y_field or not z_field:
+        return {
+            "records": len(rows),
+            "joint_xy": 0,
+            "joint_xyz": 0,
+            "unique_x": 0,
+            "unique_y": 0,
+            "unique_coordinates": 0,
+        }
+    xy_rows = [
+        row for row in rows
+        if _numeric(field_value(row, x_field)) and _numeric(field_value(row, y_field))
+    ]
+    xyz_rows = [
+        row for row in xy_rows
+        if _numeric(field_value(row, z_field))
+    ]
+    xs = {field_value(row, x_field) for row in xyz_rows}
+    ys = {field_value(row, y_field) for row in xyz_rows}
+    coordinates = {
+        (field_value(row, x_field), field_value(row, y_field))
+        for row in xyz_rows
+    }
+    return {
+        "records": len(rows),
+        "joint_xy": len(xy_rows),
+        "joint_xyz": len(xyz_rows),
+        "unique_x": len(xs),
+        "unique_y": len(ys),
+        "unique_coordinates": len(coordinates),
+        "x_units": " | ".join(sorted(_units(xyz_rows, x_field), key=str.casefold)),
+        "y_units": " | ".join(sorted(_units(xyz_rows, y_field), key=str.casefold)),
+        "z_units": " | ".join(sorted(_units(xyz_rows, z_field), key=str.casefold)),
+    }
+
+
 def chart_field_options(rows: list[AnalyticMeasurementRow], chart_type: str) -> dict[str, list[str]]:
     """Expose only field roles that are scientifically/rendering-compatible with a chart."""
     numeric = numeric_fields(rows)
