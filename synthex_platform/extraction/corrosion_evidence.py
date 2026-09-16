@@ -7,10 +7,20 @@ LLM calls and never fabricates evidence when an exact source match is absent.
 from __future__ import annotations
 
 from collections import defaultdict
+from decimal import Decimal, InvalidOperation
+import re
 
 from .battery_evidence import normalize_evidence_text
 from .corrosion_models import CorrosionDocument, CorrosionEvidence
 from .source_context import SourceBundle
+
+
+_TABLE_PREFIX = re.compile(r"^\s*table\s+[0-9]+[a-z]?\s*[:.\-]?\s*", re.IGNORECASE)
+_NUMBER = re.compile(
+    r"(?<![\w.])([+-]?\d+(?:\.\d+)?)"
+    r"(?:\s*(?:[×x*]\s*10\s*\^?\s*([+-]?\d+)|e\s*([+-]?\d+)))?",
+    re.IGNORECASE,
+)
 
 
 def _normalize(text: str) -> str:
@@ -37,6 +47,22 @@ def _matching_text_pages(snippet: str, source_bundle: SourceBundle, page_number:
     return [page for page in pages if needle in _normalize(_page_text(page))]
 
 
+def _table_grid(table) -> list[list[str | None]]:
+    grid = table.raw_representation.get("grid", []) if isinstance(table.raw_representation, dict) else []
+    if isinstance(grid, list) and all(isinstance(row, list) for row in grid):
+        return grid
+
+    by_row: dict[int, dict[int, str | None]] = defaultdict(dict)
+    width = 0
+    for cell in table.cells:
+        by_row[cell.row][cell.column] = cell.raw_text
+        width = max(width, cell.column + 1)
+    return [
+        [by_row[row].get(column) for column in range(width)]
+        for row in sorted(by_row)
+    ]
+
+
 def _table_candidates(table) -> list[str]:
     """Return exact table-derived candidate strings without scientific rewriting."""
     candidates: list[str] = []
@@ -57,12 +83,10 @@ def _table_candidates(table) -> list[str]:
         if joined:
             candidates.append(joined)
 
-    grid = table.raw_representation.get("grid", []) if isinstance(table.raw_representation, dict) else []
-    for row in grid:
-        if isinstance(row, list):
-            joined = " ".join(str(value or "") for value in row if value not in (None, "")).strip()
-            if joined:
-                candidates.append(joined)
+    for row in _table_grid(table):
+        joined = " ".join(str(value or "") for value in row if value not in (None, "")).strip()
+        if joined:
+            candidates.append(joined)
 
     # De-duplicate equivalent parser renderings so one source row is not counted twice.
     unique: dict[str, str] = {}
@@ -86,15 +110,161 @@ def _matching_table_candidates(evidence: CorrosionEvidence, source_bundle: Sourc
     return table, matches
 
 
+def _decimal_tokens(text: str) -> list[Decimal]:
+    """Parse only explicit decimal/scientific-number tokens for typography-safe comparison."""
+    values: list[Decimal] = []
+    normalized = _normalize(text)
+    for match in _NUMBER.finditer(normalized):
+        mantissa, power_a, power_b = match.groups()
+        try:
+            value = Decimal(mantissa)
+            power = power_a if power_a is not None else power_b
+            if power is not None:
+                value *= Decimal(10) ** int(power)
+        except (InvalidOperation, ValueError, OverflowError):
+            continue
+        values.append(value)
+    return values
+
+
+def _header_variants(value: str | None) -> list[str]:
+    normalized = _normalize(value or "")
+    if not normalized:
+        return []
+    variants = [normalized]
+    base = re.split(r"[\[(]", normalized, maxsplit=1)[0].strip(" :;,-")
+    if len(base) >= 2:
+        variants.append(base)
+    first = normalized.split()[0].strip(" :;,-") if normalized.split() else ""
+    if len(first) >= 2 and any(character.isalpha() for character in first):
+        variants.append(first)
+    return list(dict.fromkeys(item for item in variants if item))
+
+
+def _headers_by_column(table, grid: list[list[str | None]]) -> dict[int, list[str]]:
+    headers: dict[int, list[str]] = defaultdict(list)
+    for header_row in table.headers or []:
+        for column, value in enumerate(header_row):
+            if value not in (None, ""):
+                headers[column].append(str(value))
+
+    # Some PyMuPDF tables expose the first row in the raw grid even when the
+    # higher-level header list is empty. Use it only as a structural header view;
+    # it never becomes scientific evidence by itself.
+    if not headers and grid:
+        for column, value in enumerate(grid[0]):
+            if value not in (None, "") and any(character.isalpha() for character in str(value)):
+                headers[column].append(str(value))
+    return headers
+
+
+def _cell_value_is_supported(cell_text: str, snippet: str) -> bool:
+    cell_normalized = _normalize(cell_text)
+    snippet_normalized = _normalize(snippet)
+    if cell_normalized and cell_normalized in snippet_normalized:
+        return True
+
+    cell_numbers = _decimal_tokens(cell_text)
+    if not cell_numbers:
+        return False
+    snippet_numbers = _decimal_tokens(snippet)
+    return bool(snippet_numbers) and all(value in snippet_numbers for value in cell_numbers)
+
+
+def _row_anchor_is_supported(row: list[str | None], value_column: int, snippet: str) -> bool:
+    """Require a non-value cell from the same row to anchor specimen/condition identity."""
+    snippet_normalized = _normalize(snippet)
+    for column, raw in enumerate(row):
+        if column == value_column or raw in (None, ""):
+            continue
+        candidate = _normalize(str(raw)).strip(" :;,.=-")
+        if len(candidate) < 3:
+            continue
+        if not any(character.isalpha() for character in candidate):
+            continue
+        if candidate in snippet_normalized:
+            return True
+    return False
+
+
+def _structured_table_match(evidence: CorrosionEvidence, table) -> tuple[int, int, str] | None:
+    """Resolve a synthesized table sentence only through one unique row/column relation.
+
+    This is intentionally stricter than fuzzy text matching. A fallback match requires:
+    - the evidence already names the real table and page;
+    - a literal table-header label is present in the model snippet;
+    - the reported value is present in that same column, allowing only numeric typography
+      equivalence such as ``7.480 × 10−7`` versus ``7.480e-7``;
+    - a separate cell from that same row is present in the snippet to anchor specimen or
+      condition identity; and
+    - exactly one row/column pair satisfies all constraints.
+
+    The caller replaces the model's synthesized sentence with the exact extracted row text
+    before setting ``verbatim_match=True``. Thus a verified evidence snippet remains truly
+    source-backed rather than merely semantically similar.
+    """
+    if evidence.source_type not in {"table", "unknown"}:
+        return None
+    if evidence.original_source_type not in {"table_reported", "unknown"}:
+        return None
+
+    raw_snippet = (evidence.text_snippet or "").strip()
+    if not raw_snippet:
+        return None
+    snippet = _TABLE_PREFIX.sub("", raw_snippet, count=1)
+    snippet_normalized = _normalize(snippet)
+    if not snippet_normalized:
+        return None
+
+    grid = _table_grid(table)
+    if not grid:
+        return None
+    headers = _headers_by_column(table, grid)
+    if not headers:
+        return None
+
+    explicit_header_rows = {
+        tuple(_normalize(str(value or "")) for value in row)
+        for row in (table.headers or [])
+    }
+
+    matches: list[tuple[int, int, str]] = []
+    for row_index, row in enumerate(grid):
+        normalized_row = tuple(_normalize(str(value or "")) for value in row)
+        if normalized_row in explicit_header_rows:
+            continue
+        for column, raw_value in enumerate(row):
+            if raw_value in (None, "") or column not in headers:
+                continue
+            header_mentioned = any(
+                variant in snippet_normalized
+                for header in headers[column]
+                for variant in _header_variants(header)
+            )
+            if not header_mentioned:
+                continue
+            if not _cell_value_is_supported(str(raw_value), snippet):
+                continue
+            if not _row_anchor_is_supported(row, column, snippet):
+                continue
+            exact_row = " ".join(str(value) for value in row if value not in (None, "")).strip()
+            if exact_row:
+                matches.append((row_index, column, exact_row))
+
+    unique = list(dict.fromkeys(matches))
+    return unique[0] if len(unique) == 1 else None
+
+
 def verify_corrosion_evidence_item(
     evidence: CorrosionEvidence,
     source_bundle: SourceBundle,
 ) -> CorrosionEvidence:
     """Verify one evidence item against exact source-backed text or table content.
 
-    Table evidence is verified only when it names a real ``table_id`` and its snippet
-    is an exact normalized substring of one unique extracted table cell/row/caption.
-    Otherwise verification falls back to exact normalized page-text matching.
+    Table evidence first uses exact normalized substring matching. If a model has
+    synthesized a compact table sentence despite the prompt contract, a conservative
+    row/column fallback may recover it only when one unique table relation is proven.
+    The stored snippet is then replaced by the exact extracted source row.
     """
     snippet = (evidence.text_snippet or "").strip()
     if not snippet:
@@ -102,13 +272,30 @@ def verify_corrosion_evidence_item(
 
     if evidence.table_id:
         table, matches = _matching_table_candidates(evidence, source_bundle)
-        if table is None or len(matches) != 1:
+        if table is None:
             return evidence.model_copy(update={"verbatim_match": False})
+        if len(matches) == 1:
+            return evidence.model_copy(update={
+                "source_id": source_bundle.source.source_id,
+                "page": table.page,
+                "source_type": "table",
+                "original_source_type": "table_reported",
+                "verbatim_match": True,
+            })
+        if len(matches) > 1:
+            return evidence.model_copy(update={"verbatim_match": False})
+
+        structured = _structured_table_match(evidence, table)
+        if structured is None:
+            return evidence.model_copy(update={"verbatim_match": False})
+        row, column, exact_row = structured
         return evidence.model_copy(update={
             "source_id": source_bundle.source.source_id,
             "page": table.page,
             "source_type": "table",
             "original_source_type": "table_reported",
+            "text_snippet": exact_row,
+            "locator": evidence.locator or f"{table.table_id}:r{row}:c{column}",
             "verbatim_match": True,
         })
 
