@@ -21,6 +21,9 @@ from synthex_platform.benchmarks.corrosion import (
     score_corrosion_archive,
 )
 from synthex_platform.extraction import SynthexExtractionPipeline
+from synthex_platform.extraction.corrosion_evidence import verify_corrosion_evidence_item
+from synthex_platform.extraction.corrosion_models import CorrosionEvidence
+from synthex_platform.extraction.source_context import build_source_bundle
 from synthex_platform.visual.sidecar_store import VisualSidecarStore
 
 
@@ -170,6 +173,78 @@ def _metric_summary(metric: dict[str, Any], *, reason: str | None = None, path: 
         ),
         "reason": reason,
         "path": path,
+    }
+
+
+def _evidence_dicts(value: Any):
+    if isinstance(value, dict):
+        if "text_snippet" in value and set(value).issubset(set(CorrosionEvidence.model_fields)):
+            yield value
+            return
+        for child in value.values():
+            yield from _evidence_dicts(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from _evidence_dicts(child)
+
+
+def reverify_live_quarantine_evidence(case_id: str, repo_root: str | Path) -> dict[str, Any]:
+    """Re-check stored quarantined evidence against the locked PDF with current offline rules.
+
+    This performs PDF/table parsing only. It does not call Gemini, Serper, OCR, or mutate
+    the stored archive/report.
+    """
+    repo_root = Path(repo_root).resolve()
+    case = load_live_case(case_id, repo_root)
+    output_dir = repo_root / "output" / "corrosion_v1" / "live" / case.case_id
+    archive_path = output_dir / "archive.json"
+    if not archive_path.exists():
+        raise FileNotFoundError(f"Live archive not found: {archive_path}")
+
+    archive = _read_json(archive_path)
+    bundle = build_source_bundle(
+        case.pdf_path,
+        source_filename=case.filename,
+        enable_ocr=False,
+        include_figures=False,
+        sidecar_store=VisualSidecarStore(output_dir),
+    )
+
+    entries: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for payload in archive.get("domain_payloads", []):
+        for quarantine in _find_quarantine_lists(payload):
+            for entry in quarantine:
+                obj = entry.get("object")
+                if not isinstance(obj, dict):
+                    continue
+                for raw in _evidence_dicts(obj):
+                    token = json.dumps(raw, sort_keys=True, ensure_ascii=False, default=str)
+                    if token in seen:
+                        continue
+                    seen.add(token)
+                    evidence = CorrosionEvidence.model_validate(raw)
+                    verified = verify_corrosion_evidence_item(evidence, bundle)
+                    entries.append({
+                        "snippet": evidence.text_snippet,
+                        "page": evidence.page,
+                        "table_id": evidence.table_id,
+                        "source_type": evidence.source_type,
+                        "original_source_type": evidence.original_source_type,
+                        "was_verified": evidence.verbatim_match is True,
+                        "verifies_now": verified.verbatim_match is True,
+                        "verified_page": verified.page,
+                        "verified_origin": verified.original_source_type,
+                    })
+
+    return {
+        "case_id": case.case_id,
+        "evidence_count": len(entries),
+        "verified_before": sum(item["was_verified"] for item in entries),
+        "verifies_now": sum(item["verifies_now"] for item in entries),
+        "items": entries,
+        "tables_detected": len(bundle.tables),
+        "pages": len(bundle.pages),
     }
 
 
