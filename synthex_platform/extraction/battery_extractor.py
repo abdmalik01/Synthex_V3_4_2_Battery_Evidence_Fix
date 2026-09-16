@@ -87,6 +87,15 @@ Core rules:
 31. Return JSON only. Do not wrap the JSON in Markdown fences.
 32. Fields long_term_cycles and performance_points[].cycle are integers, not quantity objects.
     Fields long_term_c_rate and performance_points[].c_rate are strings such as "1 C", not quantity objects.
+33. For each performance point, preserve any OTHER explicitly associated experimental dimension in
+    additional_conditions as objects {property,raw_value,value,unit,qualifier,evidence:[]}. This is especially
+    important for multidimensional tables such as state of charge (SOC) × temperature, current density × cycle,
+    concentration × temperature, pressure × composition, or other reported grids. Use property="state_of_charge"
+    for SOC. Every additional condition needs its own directly supporting evidence. Never infer an additional
+    condition from a nearby method description or from another row/column when the association is not explicit.
+34. For structured tables, preserve the complete row/column association of each performance point. If a table
+    reports one metric over two or more numeric axes, emit one performance point per reported cell/record with all
+    explicitly associated axes attached. Do not collapse a two-dimensional table to a single representative row.
 """
 
 OUTPUT_SHAPE = """
@@ -113,7 +122,8 @@ shared_protocols [{protocol_id,name,ownership,
 battery_groups [{group_id,ownership,battery_ids[],material_ref,variant_label,chemistry,cathode,anode,electrolyte,cell_format,
   temperature,calcination_temperature,protocol_refs[],condition_conflicts:[{field,status,reported_values:[{value,evidence:[]}],resolved_value}],charge_protocol,discharge_protocol,impedance_protocol,
   electrochemical_testing,electrode_fabrication,cell_assembly,measured_variables[],
-  performance_points:[{property,raw_value,value,unit,qualifier,cycle,c_rate,voltage_window,temperature,method,
+  performance_points:[{property,raw_value,value,unit,qualifier,cycle,c_rate,voltage_window,temperature,
+    additional_conditions:[{property,raw_value,value,unit,qualifier,evidence:[]}],method,
     derivation:{reported_property,reported_raw_value,reported_value,transformation} or null,ownership,evidence:[]}],
   qualitative_findings[],evidence:[]}]
 extraction_notes []
