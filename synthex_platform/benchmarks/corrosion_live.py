@@ -110,16 +110,22 @@ def expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObser
 
     Experiment labels are mapped only into the Corrosion V1 canonical taxonomy. No
     scientific value, unit, normalization-basis, or reference-electrode conversion is
-    performed.
+    performed. Explicit inhibitor associations in the gold conditions are retained so
+    swapped inhibitor/value assignments cannot receive association credit.
     """
     expected: list[CorrosionExpectedObservation] = []
     for item in gold.get("scored_numeric_observations", []):
+        conditions = item.get("conditions") if isinstance(item.get("conditions"), dict) else {}
+        inhibitor = conditions.get("inhibitor")
+        if isinstance(inhibitor, str) and inhibitor.strip().casefold() in {"none", "no inhibitor", "blank", "control"}:
+            inhibitor = None
         expected.append(CorrosionExpectedObservation(
             metric=str(item["metric"]),
             value=float(item["value"]),
             unit=str(item["unit"]),
             experiment_type=_canonical_experiment_type(item.get("experiment_type")),
             material_contains=item.get("material_contains"),
+            treatment_contains=item.get("treatment_contains") or inhibitor,
             reference_electrode=item.get("reference_electrode"),
             tolerance_abs=float(item.get("tolerance_abs", 1e-9)),
             required=bool(item.get("required", True)),
