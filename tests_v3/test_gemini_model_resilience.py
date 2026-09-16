@@ -32,7 +32,12 @@ class _Response:
     text = "OK"
 
 
-def test_default_chain_spans_flash_lite_and_25_family():
+def test_default_chain_spans_flash_lite_and_25_family(monkeypatch):
+    # The default-chain regression must not inherit a developer's local .env override.
+    # Environment overrides are tested separately by configured_gemini_models callers.
+    monkeypatch.delenv("GEMINI_MODEL", raising=False)
+    monkeypatch.delenv("GEMINI_FALLBACK_MODELS", raising=False)
+
     assert DEFAULT_GEMINI_MODELS == (
         "gemini-3.8-flash",
         "gemini-3.7-flash",
