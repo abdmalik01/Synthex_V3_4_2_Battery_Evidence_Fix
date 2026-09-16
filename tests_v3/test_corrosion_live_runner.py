@@ -45,6 +45,24 @@ def test_gold_a_expectations_preserve_printed_values_and_units_without_conversio
     assert all(item.material_contains == "14Cr12Ni3Mo2VN" for item in expected)
 
 
+def test_inhibitor_gold_expectations_keep_table_row_treatment_associations():
+    case = load_live_case("CORR-INHIB-C", REPO_ROOT)
+    gold = json.loads(case.gold_path.read_text(encoding="utf-8"))
+    expected = expectations_from_gold(gold)
+    assert len(expected) == 5
+    by_value = {item.value: item for item in expected}
+    assert by_value[556.5].treatment_contains is None
+    assert by_value[49.9].treatment_contains == "CSQN"
+    assert by_value[91.1].treatment_contains == "CSQN"
+    assert by_value[30.4].treatment_contains == "NSQN"
+    assert by_value[94.5].treatment_contains == "NSQN"
+    assert by_value[556.5].reference_electrode == "SCE"
+    assert by_value[49.9].reference_electrode == "SCE"
+    assert by_value[30.4].reference_electrode == "SCE"
+    assert by_value[91.1].reference_electrode is None
+    assert by_value[94.5].reference_electrode is None
+
+
 def test_live_pipeline_is_pinned_and_has_no_search_or_ocr():
     # The pipeline constructor does not create or write this directory. Using a stable
     # non-temporary path keeps this configuration-only test independent of Windows
