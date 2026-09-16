@@ -58,10 +58,12 @@ class VisualizationSpec(BaseModel):
     subtitle: str | None = None
     x_field: str | None = None
     y_field: str | None = None
+    z_field: str | None = None
     value_field: str = "value"
     series_field: str | None = None
     x_label: str | None = None
     y_label: str | None = None
+    z_label: str | None = None
     units: dict[str, str] = Field(default_factory=dict)
     filters_applied: dict[str, Any] = Field(default_factory=dict)
     source_count: int = 0
