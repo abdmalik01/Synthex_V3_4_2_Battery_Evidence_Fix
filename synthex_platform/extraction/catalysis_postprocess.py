@@ -23,17 +23,46 @@ PRODUCT_SPECIFIC = {
     "faradaic_efficiency", "product_selectivity", "partial_current_density",
     "product_formation_rate", "selectivity", "yield",
 }
+PERCENT_PROPERTIES = {
+    "faradaic_efficiency", "product_selectivity", "selectivity", "yield", "conversion",
+    "carbon_balance", "retention", "degradation_efficiency", "removal_efficiency",
+    "cod_removal", "color_removal", "turbidity_removal",
+}
 NORMALIZATION_REQUIRED = {
     "current_density", "partial_current_density", "mass_activity", "specific_activity",
     "turnover_frequency", "reaction_rate", "activity", "productivity", "product_formation_rate",
 }
 POTENTIAL_REFERENCE_REQUIRED = {"onset_potential", "half_wave_potential"}
+_PHOTOCATALYSIS = re.compile(r"\bphotocatal(?:ysis|ytic|yst)\w*\b", flags=re.I)
 
 
 @dataclass(frozen=True)
 class AdmissionDecision:
     admitted: bool
     reason: str | None = None
+
+
+def _explicit_photocatalysis(document: CatalysisDocument) -> bool:
+    """Recognize only explicitly labelled heterogeneous photocatalysis.
+
+    This is a narrow V1.1 scope promotion, not a general deferred-subtype bypass.
+    A source title or the experiment's reported reaction must literally identify
+    photocatalysis/photocatalytic chemistry.
+    """
+    if "heterogeneous_catalysis" not in document.paper_types or not document.heterogeneous_experiments:
+        return False
+    texts = [document.source.title or ""]
+    texts.extend(item.reaction.reported_reaction or "" for item in document.heterogeneous_experiments)
+    return any(_PHOTOCATALYSIS.search(text) for text in texts)
+
+
+def _promote_explicit_photocatalysis_scope(document: CatalysisDocument) -> None:
+    if document.scope_status == "deferred_subtype" and _explicit_photocatalysis(document):
+        document.scope_status = "supported"
+        document.semantic_warnings = list(dict.fromkeys([
+            *document.semantic_warnings,
+            "photocatalysis_supported_v1_1",
+        ]))
 
 
 def _link_explicit_referenced_catalyst_evidence(document: CatalysisDocument) -> None:
@@ -103,7 +132,7 @@ def decide_quantitative_admission(
         return AdmissionDecision(False, "condition_conflict")
     if semantic_invalid:
         return AdmissionDecision(False, "schema_invalid")
-    if property_name in {"faradaic_efficiency", "product_selectivity", "selectivity", "yield", "conversion", "carbon_balance", "retention"} and unit == "%" and value is not None and value > 100 + PERCENT_TOLERANCE:
+    if property_name in PERCENT_PROPERTIES and unit == "%" and value is not None and value > 100 + PERCENT_TOLERANCE:
         return AdmissionDecision(False, "schema_invalid")
     if property_name in PRODUCT_SPECIFIC and not product:
         return AdmissionDecision(False, "missing_product")
@@ -130,13 +159,13 @@ def collect_stage2_warnings(document: CatalysisDocument) -> list[str]:
     warnings = list(collect_stage1_warnings(document))
     for experiment in document.heterogeneous_experiments:
         for metric in experiment.metrics:
-            if metric.property in {"selectivity", "yield", "conversion", "carbon_balance"} and metric.unit == "%" and metric.value is not None and metric.value > 100 + PERCENT_TOLERANCE:
+            if metric.property in PERCENT_PROPERTIES and metric.unit == "%" and metric.value is not None and metric.value > 100 + PERCENT_TOLERANCE:
                 warnings.append(f"{experiment.experiment_id}.{metric.property}: percentage_greater_than_100")
             if metric.property == "turnover_frequency" and (metric.normalization_basis is None or metric.normalization_basis.kind != "site_count"):
                 warnings.append(f"{experiment.experiment_id}.turnover_frequency: site_count_basis_required")
     for experiment in document.electrocatalysis_experiments:
         for metric in experiment.metrics:
-            if metric.property in {"faradaic_efficiency", "product_selectivity", "retention"} and metric.unit == "%" and metric.value is not None and metric.value > 100 + PERCENT_TOLERANCE:
+            if metric.property in PERCENT_PROPERTIES and metric.unit == "%" and metric.value is not None and metric.value > 100 + PERCENT_TOLERANCE:
                 warnings.append(f"{experiment.experiment_id}.{metric.property}: percentage_greater_than_100")
     return list(dict.fromkeys(warnings))
 
@@ -146,6 +175,7 @@ def postprocess_catalysis_document(
     source_text: str = "",
     source_bundle: SourceBundle | None = None,
 ) -> tuple[CatalysisDocument, list[str]]:
+    _promote_explicit_photocatalysis_scope(document)
     _link_explicit_referenced_catalyst_evidence(document)
     verify_catalysis_document_evidence(document, source_text, source_bundle)
     warnings = list(dict.fromkeys([*document.semantic_warnings, *collect_stage2_warnings(document)]))
