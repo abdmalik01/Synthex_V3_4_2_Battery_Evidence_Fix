@@ -1,0 +1,96 @@
+{
+  "id": "CORR-EIS-D",
+  "doi": "10.3390/ma16020546",
+  "filename": "materials-16-00546-v2.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; numeric gold taken from explicitly printed EIS conditions and Table 2 values.",
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false
+  },
+  "material_and_coating": {
+    "substrate": "9Cr-1Mo P91 steel",
+    "coating": "ZrO2-3%molY2O3 sol-gel coating",
+    "coating_process": "dip-coating followed by heat treatment",
+    "page": 3
+  },
+  "environment": {
+    "molten_salt": "60 wt.% NaNO3/40 wt.% KNO3",
+    "temperature": "500 °C",
+    "exposure_times": ["0 h", "24 h", "72 h", "500 h", "1000 h", "1500 h", "2000 h"],
+    "page": 4
+  },
+  "eis_protocol": {
+    "perturbation_amplitude": "10 mV",
+    "frequency_range_as_printed": "50 kHz to 10 MHz",
+    "equipment": "VoltaLab 80",
+    "fitting_software": "Zview (version 2018)",
+    "page": 4,
+    "element_semantics": {
+      "Re": "molten-salt (electrolyte) resistance",
+      "Rt": "charge/electrochemical transfer resistance",
+      "Rcp": "protective-layer resistance",
+      "Cdl": "constant-phase-element-type double-layer term reported with exponent ndl",
+      "Ccp": "constant-phase-element-type protective-layer term reported with exponent ncp"
+    }
+  },
+  "scored_numeric_observations": [
+    {
+      "metric": "solution_resistance",
+      "value": 7.557,
+      "unit": "Ω",
+      "conditions": {"exposure_time": "24 h", "temperature": "500 °C", "molten_salt": "60 wt.% NaNO3/40 wt.% KNO3"},
+      "experiment_type": "electrochemical_impedance_spectroscopy",
+      "material_contains": "P91",
+      "page": 7,
+      "evidence_snippet": "Table 2: 24 h; Re = 7.557 Ω."
+    },
+    {
+      "metric": "charge_transfer_resistance",
+      "value": 13.87,
+      "unit": "Ω",
+      "conditions": {"exposure_time": "24 h", "temperature": "500 °C", "molten_salt": "60 wt.% NaNO3/40 wt.% KNO3"},
+      "experiment_type": "electrochemical_impedance_spectroscopy",
+      "material_contains": "P91",
+      "page": 7,
+      "evidence_snippet": "Table 2: 24 h; Rt = 13.87 Ω."
+    },
+    {
+      "metric": "solution_resistance",
+      "value": 5.072,
+      "unit": "Ω",
+      "conditions": {"exposure_time": "2000 h", "temperature": "500 °C", "molten_salt": "60 wt.% NaNO3/40 wt.% KNO3"},
+      "experiment_type": "electrochemical_impedance_spectroscopy",
+      "material_contains": "P91",
+      "page": 7,
+      "evidence_snippet": "Table 2: 2000 h; Re = 5.072 Ω."
+    },
+    {
+      "metric": "charge_transfer_resistance",
+      "value": 6.65,
+      "unit": "Ω",
+      "conditions": {"exposure_time": "2000 h", "temperature": "500 °C", "molten_salt": "60 wt.% NaNO3/40 wt.% KNO3"},
+      "experiment_type": "electrochemical_impedance_spectroscopy",
+      "material_contains": "P91",
+      "page": 7,
+      "evidence_snippet": "Table 2: 2000 h; Rt = 6.65 Ω."
+    }
+  ],
+  "verified_not_scored_in_primary_numeric_set": {
+    "cpe_pairs": [
+      {"exposure_time": "24 h", "Cdl": "1.506×10^-3 Ω^-1·s^ndl", "ndl": 0.777, "Ccp": "1.483×10^-3 Ω^-1·s^ncp", "ncp": 0.731},
+      {"exposure_time": "2000 h", "Cdl": "4.440×10^-3 Ω^-1·s^ndl", "ndl": 0.809, "Ccp": "1.195×10^-2 Ω^-1·s^ncp", "ncp": 0.610}
+    ],
+    "author_estimated_corrosion_rate": {
+      "value": 22.62,
+      "unit": "µm·year^-1",
+      "reason_not_primary_gold": "Explicitly reported by the paper but author-estimated/derived rather than a direct raw EIS circuit element; kept source-tracked without using Synthex-side derivation."
+    },
+    "protective_layer_resistance": {
+      "24 h": "14488 Ω",
+      "2000 h": "188 Ω",
+      "reason_not_mapped_to_charge_transfer_resistance": "Rcp is explicitly a protective-layer resistance and must remain distinct from Rt."
+    }
+  }
+}
