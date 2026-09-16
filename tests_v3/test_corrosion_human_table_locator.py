@@ -85,6 +85,17 @@ def test_human_table_label_rejects_wrong_page():
     assert verify_corrosion_evidence_item(evidence, _bundle()).verbatim_match is False
 
 
+def test_human_table_label_must_itself_exist_on_source_page():
+    evidence = CorrosionEvidence(
+        page=5,
+        table_id="Table 99",
+        text_snippet="TE-GAE (2:1) −0.439 7.480 × 10−7 6.157 5.321",
+        source_type="table",
+        original_source_type="native_text",
+    )
+    assert verify_corrosion_evidence_item(evidence, _bundle()).verbatim_match is False
+
+
 def test_opaque_missing_parser_table_id_cannot_use_page_fallback():
     evidence = CorrosionEvidence(
         page=5,
