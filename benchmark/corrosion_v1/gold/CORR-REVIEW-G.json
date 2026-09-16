@@ -1,0 +1,30 @@
+{
+  "id": "CORR-REVIEW-G",
+  "doi": "10.3390/polym14122306",
+  "filename": "Corrosion 7.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "review_summary",
+  "paper_type": "review",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF. The article is explicitly labelled Review and synthesizes prior literature rather than reporting a focal corrosion experiment for benchmark scoring.",
+    "numeric_focal_gold_created": false
+  },
+  "assertions": {
+    "canonical_focal_experiments_expected": 0,
+    "cited_numeric_results_must_not_be_focal": true,
+    "review_examples_must_preserve_cited_prior_work_ownership": true
+  },
+  "evidence": [
+    {
+      "page": 1,
+      "snippet": "Review — Electrochemical Characterization of Polymeric Coatings for Corrosion Protection: A Review of Advances and Perspectives."
+    },
+    {
+      "page": 1,
+      "snippet": "This review summarizes the state of the art for the main electrochemical techniques..."
+    }
+  ],
+  "contamination_examples": [
+    "Historical resistance thresholds, salt-spray durations, EIS/OCP examples and coating performance numbers in the article summarize cited studies and must not become focal observations for this source."
+  ]
+}
