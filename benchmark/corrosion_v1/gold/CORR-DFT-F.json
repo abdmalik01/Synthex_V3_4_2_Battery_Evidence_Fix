@@ -1,0 +1,84 @@
+{
+  "id": "CORR-DFT-F",
+  "doi": "10.1155/2013/175910",
+  "filename": "Corrosion 6.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "paper_type": "computational_corrosion",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; computational outputs are kept as calculations and never admitted as experimental corrosion performance.",
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false
+  },
+  "computational_setup": {
+    "surface": "Fe(110)",
+    "dft_program": "DMol3 in Materials Studio Modeling 4.0",
+    "basis_set": "DNP",
+    "exchange_correlation_functional": "PWC",
+    "core_treatment": "all-electron relativistic (AER)",
+    "molecular_dynamics": "Forcite quench molecular dynamics",
+    "force_field": "COMPASS",
+    "ensemble": "NVE",
+    "temperature": "303 K",
+    "page": 2
+  },
+  "calculation_gold": [
+    {
+      "adsorbate": "Indigo blue (IB)",
+      "surface": "Fe(110)",
+      "outputs": {
+        "EHOMO_eV": -4.98,
+        "ELUMO_eV": -3.73,
+        "chemical_potential_eV": -4.36,
+        "electron_transfer_number_e": 2.11,
+        "global_hardness_eV": 0.63,
+        "binding_energy_eV": 121.37,
+        "interaction_energy_eV": -121.37,
+        "minimum_total_energy_kcal_per_mol": -49.14
+      },
+      "pages": [5]
+    },
+    {
+      "adsorbate": "Methylene blue (MB)",
+      "surface": "Fe(110)",
+      "outputs": {
+        "EHOMO_eV": -4.52,
+        "ELUMO_eV": -3.63,
+        "chemical_potential_eV": -4.08,
+        "electron_transfer_number_e": 3.28,
+        "global_hardness_eV": 0.45,
+        "binding_energy_eV": 59.62,
+        "interaction_energy_eV": -59.62,
+        "minimum_total_energy_kcal_per_mol": -168.3
+      },
+      "pages": [5]
+    },
+    {
+      "adsorbate": "Crystal violet (CV)",
+      "surface": "Fe(110)",
+      "outputs": {
+        "EHOMO_eV": -3.87,
+        "ELUMO_eV": -2.87,
+        "chemical_potential_eV": -3.37,
+        "electron_transfer_number_e": 3.63,
+        "global_hardness_eV": 0.50,
+        "binding_energy_eV": 39.97,
+        "interaction_energy_eV": -39.97,
+        "minimum_total_energy_kcal_per_mol": -86.44
+      },
+      "pages": [5]
+    }
+  ],
+  "cited_prior_work_not_focal_gold": {
+    "inhibition_efficiency_values_in_table_2": {
+      "IB_percent": 75.54,
+      "MB_percent": 61.54,
+      "CV_percent": 56.70,
+      "reason": "The table marks these values with literature-reference superscripts; they are experimental context from cited prior work, not focal experimental measurements in this computational paper."
+    }
+  },
+  "required_safety_assertion": {
+    "must_not_admit_as_experimental_performance": true,
+    "expected_focal_experimental_corrosion_observations": 0
+  }
+}
