@@ -117,6 +117,38 @@ def test_corrosion_scorer_accepts_inverse_area_unit_notation_without_converting_
     assert score.matched_required == 1
 
 
+def test_corrosion_scorer_accepts_ascii_u_for_source_microamp_glyph():
+    archive = _archive()
+    metric = archive.experiments[0].outputs[0]
+    metric.raw_value = "556.5 uA/cm2"
+    metric.value = 556.5
+    metric.unit = "uA/cm2"
+    score = score_corrosion_archive(archive, [CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=556.5,
+        unit="μA cm^-2",
+        experiment_type="potentiodynamic_polarization",
+    )])
+    assert score.value_accuracy == 1.0
+    assert score.matched_required == 1
+
+
+def test_corrosion_scorer_keeps_milliampere_distinct_from_microampere():
+    archive = _archive()
+    metric = archive.experiments[0].outputs[0]
+    metric.raw_value = "556.5 uA/cm2"
+    metric.value = 556.5
+    metric.unit = "uA/cm2"
+    score = score_corrosion_archive(archive, [CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=556.5,
+        unit="mA cm^-2",
+        experiment_type="potentiodynamic_polarization",
+    )])
+    assert score.value_accuracy == 0.0
+    assert score.matched_required == 0
+
+
 def test_corrosion_scorer_requires_correct_linked_inhibitor_when_gold_names_one():
     archive = _archive()
     archive.experiments[0].outputs[0].conditions["treatment"] = "CSQN"
