@@ -32,8 +32,14 @@ def _token(value: object | None) -> str:
 
 
 def _unit_token(value: object | None) -> str:
-    """Normalize notation-only unit variants without dimensional conversion."""
-    text = _token(value).replace("µ", "μ").replace("²", "2")
+    """Normalize notation-only unit variants without dimensional conversion.
+
+    ``u`` is a common ASCII surrogate for the micro sign in extracted PDF text, so
+    ``uA``, ``µA`` and ``μA`` are treated as the same printed microampere unit.  This
+    helper also normalizes inverse-area typography only; it never changes metric
+    prefixes or performs scale conversion (for example, mA remains distinct from uA).
+    """
+    text = _token(value).replace("µ", "u").replace("μ", "u").replace("²", "2")
     text = text.replace("/cm2", " cm-2").replace("/cm-2", " cm-2")
     return re.sub(r"\s+", " ", text).strip()
 
