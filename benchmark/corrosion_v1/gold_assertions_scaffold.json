@@ -1,6 +1,6 @@
 {
   "benchmark": "corrosion_v1_stage3",
-  "status": "scaffold_only_source_review_required",
+  "status": "manual_source_review_complete_live_benchmark_pending",
   "policy": {
     "gold_values_must_be_manually_verified_from_pdf": true,
     "no_llm_generated_gold": true,
@@ -14,7 +14,8 @@
       "id": "CORR-GOLD-A",
       "doi": "10.20964/2020.01.26",
       "filename": "Corrosion 1.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-GOLD-A.json",
       "assertions": {
         "materials": [],
         "environments": [],
@@ -30,7 +31,8 @@
       "id": "CORR-COAT-B",
       "doi": "10.1021/acsomega.2c00172",
       "filename": "Corrosion 2.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-COAT-B.json",
       "assertions": {
         "substrates": [],
         "treatments": [],
@@ -47,7 +49,8 @@
       "id": "CORR-INHIB-C",
       "doi": "10.1016/j.heliyon.2020.e03939",
       "filename": "Corrosion 3.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-INHIB-C.json",
       "assertions": {
         "materials": [],
         "inhibitors": [],
@@ -64,7 +67,8 @@
       "id": "CORR-EIS-D",
       "doi": "10.3390/ma16020546",
       "filename": "materials-16-00546-v2.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-EIS-D.json",
       "assertions": {
         "materials": [],
         "environments": [],
@@ -80,7 +84,8 @@
       "id": "CORR-WEIGHT-E",
       "doi": "10.1016/j.sajce.2022.06.011",
       "filename": "Corrosion 5.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-WEIGHT-E.json",
       "assertions": {
         "materials": [],
         "inhibitors": [],
@@ -97,7 +102,8 @@
       "id": "CORR-DFT-F",
       "doi": "10.1155/2013/175910",
       "filename": "Corrosion 6.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-DFT-F.json",
       "assertions": {
         "paper_type": "computational_corrosion",
         "materials": [],
@@ -111,7 +117,8 @@
       "id": "CORR-REVIEW-G",
       "doi": "10.3390/polym14122306",
       "filename": "Corrosion 7.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-REVIEW-G.json",
       "assertions": {
         "paper_type": "review",
         "canonical_focal_experiments_expected": 0,
@@ -122,7 +129,8 @@
       "id": "CORR-NEGATIVE-H",
       "doi": "10.20964/2018.09.30",
       "filename": "Corrosion 9.pdf",
-      "gold_status": "pending_manual_source_review",
+      "gold_status": "manual_source_review_complete",
+      "gold_record": "benchmark/corrosion_v1/gold/CORR-NEGATIVE-H.json",
       "assertions": {
         "expected_route": "batteries",
         "must_not_route_to": "corrosion",
