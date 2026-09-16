@@ -30,6 +30,17 @@ def _token(value: object | None) -> str:
     return text
 
 
+def _material_token(value: object | None) -> str:
+    """Normalize harmless typography in material grade names only.
+
+    Scientific PDFs may render a grade such as ``20# steel`` as ``20 # steel``.
+    Treat spacing around the grade marker as display typography, while leaving the
+    scorer's global token normalization unchanged for units, experiment types, and
+    reference electrodes.
+    """
+    return re.sub(r"\s*#\s*", "#", _token(value))
+
+
 @dataclass(frozen=True)
 class CorrosionExpectedObservation:
     metric: str
@@ -95,7 +106,7 @@ def _numeric_equal(actual: object, expected: float, tolerance_abs: float) -> boo
 def _material_match(row: dict, needle: str | None) -> bool:
     if not needle:
         return True
-    # Explorer rows store material names as a pipe-delimited display string.  Older
+    # Explorer rows store material names as a pipe-delimited display string. Older
     # benchmark code treated that string as an iterable and accidentally compared
     # character-by-character, causing valid material associations to fail.
     value = row.get("material_names")
@@ -103,7 +114,7 @@ def _material_match(row: dict, needle: str | None) -> bool:
         haystack = " | ".join(str(item) for item in value if item is not None)
     else:
         haystack = str(value or "")
-    return _token(needle) in _token(haystack)
+    return _material_token(needle) in _material_token(haystack)
 
 
 def _association_match(row: dict, expected: CorrosionExpectedObservation) -> bool:
