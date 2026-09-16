@@ -81,6 +81,8 @@ def main() -> int:
             f"schema repair={diagnostics.get('schema_repair_calls', diagnostics.get('repair_calls', 0))}"
         )
 
+    if report.get("verified_document_path"):
+        print(f"Verified replay document: {report['verified_document_path']}")
     print(f"Archive: {report['archive_path']}")
     print(f"Report: {report['report_path']}")
     print("LIVE RUN COMPLETE")
