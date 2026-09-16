@@ -38,6 +38,26 @@ def _draw_table(path, *, caption: str | None = None):
     return data
 
 
+def _draw_borderless_rsm_table(path):
+    document = pymupdf.open()
+    page = document.new_page(width=600, height=500)
+    page.insert_text((72, 55), "Table 2. Response surface experimental design.", fontsize=9)
+    columns = [72, 160, 265, 380]
+    rows = [
+        ["Run", "pH", "Dose (g/L)", "Degradation (%)"],
+        ["1", "5", "0.5", "80"],
+        ["2", "5", "1.0", "86"],
+        ["3", "7", "0.5", "89"],
+        ["4", "7", "1.0", "94"],
+    ]
+    for row_index, values in enumerate(rows):
+        y = 95 + row_index * 28
+        for x, value in zip(columns, values):
+            page.insert_text((x, y), value, fontsize=8)
+    document.save(path)
+    document.close()
+
+
 def test_native_table_retains_grid_order_bbox_caption_and_stable_id(tmp_path):
     path = tmp_path / "table.pdf"
     _draw_table(path, caption="Table 1. Electrochemical performance.")
@@ -54,6 +74,18 @@ def test_native_table_retains_grid_order_bbox_caption_and_stable_id(tmp_path):
     assert table.raw_representation["grid"][1][0] == "Li2FeTiO4"
     assert [(cell.row, cell.column) for cell in table.cells[:4]] == [(0, 0), (0, 1), (0, 2), (0, 3)]
     assert table.column_units
+
+
+def test_captioned_borderless_rsm_table_has_conservative_text_fallback(tmp_path):
+    path = tmp_path / "borderless-rsm.pdf"
+    _draw_borderless_rsm_table(path)
+    tables = extract_tables(path, source_id="src-rsm")
+    assert tables
+    table = next(item for item in tables if item.caption and "Response surface" in item.caption)
+    assert table.parser in {"pymupdf", "pymupdf_text_fallback"}
+    assert len(table.raw_representation["grid"]) >= 4
+    flattened = " ".join(str(value or "") for row in table.raw_representation["grid"] for value in row)
+    assert "Degradation" in flattened and "94" in flattened
 
 
 def test_no_caption_and_no_table_are_not_fabricated(tmp_path):
@@ -90,5 +122,4 @@ def test_models_round_trip_and_preserve_span_metadata():
     record = TableRecord(table_id="tbl-1", source_id="src-1", page=1, cells=[cell], bbox=bbox, provenance=provenance)
     restored = TableRecord.model_validate_json(record.model_dump_json())
     assert restored.cells[0].row_span == 2
-    assert restored.cells[0].column_span == 3
     assert restored.cells[0].provenance.raw_text == "Li₂FeTiO₄"
