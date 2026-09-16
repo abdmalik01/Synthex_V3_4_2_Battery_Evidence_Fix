@@ -6,6 +6,7 @@ import re
 from typing import Any, Iterable, Mapping
 
 from synthex_platform.core.archive import SynthexArchive
+from synthex_platform.export.analytics_projection import material_lineage_context
 from .models import AnalyticMeasurementRow, AnalyticQuery
 
 
@@ -77,6 +78,8 @@ def _condition_mapping(values: Mapping[str, Any] | None) -> dict[str, Any]:
             raw_value = source.get("raw_value")
             unit = source.get("normalized_unit") or source.get("unit")
         parsed, parsed_raw, parsed_unit = _scalar_condition(candidate)
+        if parsed is None:
+            continue
         result[key] = parsed
         raw = raw_value if raw_value not in (None, "") else parsed_raw
         if raw not in (None, "") and raw != parsed:
@@ -104,6 +107,12 @@ def _conditions(measurements) -> dict[str, Any]:
         if unit:
             result[f"{measurement.property}_unit"] = unit
     return result
+
+
+def _lineage_conditions(archive: SynthexArchive, material_id: str | None) -> dict[str, Any]:
+    if not material_id:
+        return {}
+    return _condition_mapping(material_lineage_context(archive, [material_id]))
 
 
 def _matches(row: AnalyticMeasurementRow, query: AnalyticQuery) -> bool:
@@ -141,9 +150,10 @@ def _matches(row: AnalyticMeasurementRow, query: AnalyticQuery) -> bool:
 def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | None = None) -> list[AnalyticMeasurementRow]:
     """Project only canonical archive measurements; raw domain payloads are never read.
 
-    Parent experiment/calculation conditions and value-specific measurement conditions are
-    merged for analytics. The latter take precedence because they are the narrowest
-    source-linked context for a reported value (for example cycle, C-rate, or temperature).
+    Parent experiment/calculation conditions, unambiguous source-backed material process
+    lineage, and value-specific measurement conditions are merged for analytics. Direct
+    value-specific conditions take precedence because they are the narrowest context for
+    a reported value. Process lineage is namespaced as ``synthesis_*``.
     """
     query = query or AnalyticQuery()
     rows: list[AnalyticMeasurementRow] = []
@@ -154,9 +164,14 @@ def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | 
             parent_conditions = _conditions(experiment.conditions)
             for measurement in experiment.outputs:
                 evidence, visual, origins = _evidence_refs(measurement.evidence or experiment.evidence)
-                row_conditions = {**parent_conditions, **_condition_mapping(measurement.conditions)}
+                point_conditions = _condition_mapping(measurement.conditions)
                 for material_id in experiment.material_ids or [None]:
                     material = materials.get(material_id) if material_id else None
+                    row_conditions = {
+                        **parent_conditions,
+                        **_lineage_conditions(archive, material_id),
+                        **point_conditions,
+                    }
                     value = measurement.normalized_value if _numeric(measurement.normalized_value) is not None else measurement.value
                     rows.append(AnalyticMeasurementRow(
                         archive_id=archive.metadata.archive_id,
@@ -184,9 +199,14 @@ def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | 
             parent_conditions = _conditions(calculation.parameters)
             for measurement in calculation.outputs:
                 evidence, visual, origins = _evidence_refs(measurement.evidence or calculation.evidence)
-                row_conditions = {**parent_conditions, **_condition_mapping(measurement.conditions)}
+                point_conditions = _condition_mapping(measurement.conditions)
                 for material_id in calculation.material_ids or [None]:
                     material = materials.get(material_id) if material_id else None
+                    row_conditions = {
+                        **parent_conditions,
+                        **_lineage_conditions(archive, material_id),
+                        **point_conditions,
+                    }
                     value = measurement.normalized_value if _numeric(measurement.normalized_value) is not None else measurement.value
                     rows.append(AnalyticMeasurementRow(
                         archive_id=archive.metadata.archive_id,
