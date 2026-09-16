@@ -42,7 +42,7 @@ _EXACT_PAPER_TYPE_ALIASES = {
 
 
 CATALYSIS_RULES = """
-You are Synthex Catalysis / Electrocatalysis V1 Stage 3.
+You are Synthex Catalysis / Electrocatalysis V1.1 Stage 3.
 Extract only facts explicitly supported by the supplied source. Never invent values, IDs, catalyst identities,
 active sites, compositions, products, reaction conditions, reference electrodes, or calculation settings.
 Return exactly ONE top-level CatalysisDocument JSON object and never an array.
@@ -56,6 +56,32 @@ required fields, and literal values. In particular:
   prose and expand every explicit comparison or ordered list into one separate metric for each reported
   catalyst-condition pair. Preserve comparison qualifiers such as approximately, about, >, <, and ~ in both
   raw_value and qualifier. This completeness rule never authorizes plot reading, inference, or weaker evidence.
+- photocatalysis and photocatalytic pollutant/dye/drug degradation are SUPPORTED heterogeneous catalysis in V1.1.
+  Use scope_status=supported when the source explicitly describes photocatalysis/photocatalytic chemistry; do not
+  label such work deferred_subtype merely because the reaction is light-driven. reaction_class may be
+  photocatalysis when explicitly appropriate.
+- for response-surface methodology (RSM), central-composite design (CCD), Box-Behnken, factorial/design-of-
+  experiments, or similar tables: when the supplied SOURCE TEXT or STRUCTURED SOURCE CONTEXT exposes individual
+  focal experimental runs, extract EVERY explicit run, not only the optimum, mean, best run, or narrative
+  summary. Represent each run as a distinct heterogeneous_experiments item so its factors remain associated with
+  its response. Never reconstruct rows that are absent from the supplied source context and never read values
+  from an un-digitized plot.
+- put run-specific numeric RSM/DoE factors in heterogeneous_experiments[*].experimental_conditions using concise
+  scientific keys such as catalyst_dose, pH, initial_concentration, initial_pollutant_concentration,
+  H2O2_concentration, temperature, irradiation_time, reaction_time, light_intensity, or wavelength. Every value
+  is a CatalysisQuantity {raw_value,value,unit,qualifier}; a dimensionless factor such as pH still uses this
+  quantity object with unit omitted. Preserve the table's raw value exactly.
+- photocatalytic response metrics use the dedicated HeterogeneousMetric properties when they match the paper:
+  degradation_efficiency, removal_efficiency, cod_removal, color_removal, or turbidity_removal. Use conversion
+  only when the authors actually report conversion. Keep the pollutant/reactant identity when explicitly stated.
+- distinguish reported experimental responses from fitted/model-predicted responses. Experimental/table-measured
+  values use response_origin=observed. RSM-predicted/fitted values use response_origin=model_predicted and set
+  model_name (for example "response surface methodology"). When a table reports both observed and predicted
+  responses, preserve BOTH as separate metrics in the same run; never replace, average, or merge them.
+- each RSM experiment.evidence array should carry the exact source evidence needed for its run conditions and
+  responses. For structured tables, use one table_reported CatalysisEvidence per cited cell with the exact
+  table_id and row/column/cell_id locator. This lets each numeric condition and response be independently
+  verified downstream. Do not use a response cell as evidence for a condition value that is not in that cell.
 - source contains only title, doi, url, year, authors, and pdf_text_parser. Never put source_id, filename, or
   source_checksum there; SourceBundle owns those transport/provenance fields.
 - scope_status is exactly supported, deferred_subtype, or out_of_scope.
@@ -405,7 +431,10 @@ class CatalysisGeminiExtractor:
             "explicit native-prose metric even when the same value is illustrated in a figure. For "
             "electrocatalysis, keep shared feed_composition on the parent experiment and separate experiments "
             "when metrics belong to different feeds. Never infer normalization_basis from area-normalized units "
-            "or electrode dimensions alone.\n"
+            "or electrode dimensions alone. For explicit photocatalysis/RSM tables, preserve each supplied run "
+            "as its own heterogeneous experiment, keep run factors in experimental_conditions, and keep "
+            "response_origin=observed separate from response_origin=model_predicted; never collapse observed "
+            "and predicted responses during schema repair.\n"
             f"ACTUAL CATALYSIS PYDANTIC CONTRACT:\n{contract}\n"
             f"EXACT PYDANTIC ERRORS:\n{json.dumps(errors, ensure_ascii=False, default=str)}\n"
             f"ORIGINAL INVALID JSON:\n{output_text}{source_context}"
