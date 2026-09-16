@@ -1,6 +1,6 @@
 """Provenance-safe analytics enrichment for researcher-facing result rows.
 
-The canonical archive remains unchanged.  This module only adds process parameters
+The canonical archive remains unchanged. This module only adds process parameters
 that can be joined unambiguously through material -> processed_by -> process lineage.
 Conflicting process values are retained as diagnostics rather than flattened.
 """
@@ -75,7 +75,14 @@ def _material_process_index(archive: SynthexArchive) -> dict[str, list[ProcessSt
     }
 
 
-def _lineage_context(archive: SynthexArchive, material_ids: list[str]) -> dict[str, Any]:
+def material_lineage_context(archive: SynthexArchive, material_ids: list[str]) -> dict[str, Any]:
+    """Return unambiguous source-backed material-processing context for analytics.
+
+    The returned values are namespaced as ``synthesis_*`` so they cannot overwrite
+    direct experimental conditions. If more than one distinct process value exists
+    for the same property, no scalar is chosen; the alternatives are retained under
+    ``process_lineage_conflicts`` instead.
+    """
     process_index = _material_process_index(archive)
     candidates: dict[str, list[dict[str, Any]]] = defaultdict(list)
 
@@ -98,9 +105,6 @@ def _lineage_context(archive: SynthexArchive, material_ids: list[str]) -> dict[s
         for payload in values:
             unique.setdefault(_rendered_value(payload), payload)
         if len(unique) == 1:
-            # Material-linked processed_by records are synthesis/material-processing
-            # lineage in the current archive architecture. Namespace them so they
-            # cannot overwrite experimental temperature, duration, etc.
             context[f"synthesis_{property_name}"] = next(iter(unique.values()))
         elif len(unique) > 1:
             conflicts[property_name] = list(unique.values())
@@ -138,10 +142,10 @@ def project_results_rows(
             and row.get("admission_status") != "quarantined"
         ):
             material_ids = [item for item in str(row.get("material_ids") or "").split("|") if item]
-            lineage = _lineage_context(archive, material_ids)
+            lineage = material_lineage_context(archive, material_ids)
             if lineage:
                 conditions = _parse_conditions(row)
-                # Direct experimental/result conditions always win.  Lineage is
+                # Direct experimental/result conditions always win. Lineage is
                 # namespaced, so this should normally be collision-free anyway.
                 for key, value in lineage.items():
                     conditions.setdefault(key, value)
