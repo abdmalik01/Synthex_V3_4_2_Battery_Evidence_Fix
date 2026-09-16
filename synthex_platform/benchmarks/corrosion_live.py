@@ -1,4 +1,4 @@
-"""Controlled live Corrosion V1 benchmark preparation and scoring helpers.
+"""Controlled live Corrosion V1 benchmark preparation, scoring, and diagnostics.
 
 This module does not make provider calls at import time. A live run is deliberately one
 paper at a time, uses benchmark provider mode, disables Serper/search enrichment, and
@@ -7,6 +7,7 @@ writes only to the git-ignored ``output/`` workspace.
 
 from __future__ import annotations
 
+from collections import Counter
 from dataclasses import dataclass
 import json
 from pathlib import Path
@@ -24,6 +25,18 @@ from synthex_platform.visual.sidecar_store import VisualSidecarStore
 
 
 HOLDOUT_CASE_ID = "CORR-HOLDOUT-I"
+
+_EXPERIMENT_TYPE_ALIASES = {
+    "electrochemical impedance spectroscopy": "eis",
+    "impedance spectroscopy": "eis",
+    "eis": "eis",
+    "potentiodynamic polarization": "potentiodynamic_polarization",
+    "potentiodynamic_polarization": "potentiodynamic_polarization",
+    "linear polarization": "linear_polarization",
+    "linear_polarization": "linear_polarization",
+    "weight loss": "weight_loss",
+    "weight_loss": "weight_loss",
+}
 
 
 @dataclass(frozen=True)
@@ -44,6 +57,13 @@ def _benchmark_root(repo_root: str | Path) -> Path:
 
 def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _canonical_experiment_type(value: Any) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    return _EXPERIMENT_TYPE_ALIASES.get(text.casefold(), text)
 
 
 def load_live_case(case_id: str, repo_root: str | Path) -> CorrosionLiveCase:
@@ -83,9 +103,11 @@ def load_live_case(case_id: str, repo_root: str | Path) -> CorrosionLiveCase:
 
 
 def expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObservation, ...]:
-    """Translate only explicitly scored numeric gold observations into scorer assertions.
+    """Translate explicitly scored numeric gold observations into scorer assertions.
 
-    No unit conversion, reference-electrode conversion, or value inference is performed.
+    Experiment labels are mapped only into the Corrosion V1 canonical taxonomy. No
+    scientific value, unit, normalization-basis, or reference-electrode conversion is
+    performed.
     """
     expected: list[CorrosionExpectedObservation] = []
     for item in gold.get("scored_numeric_observations", []):
@@ -93,7 +115,7 @@ def expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObser
             metric=str(item["metric"]),
             value=float(item["value"]),
             unit=str(item["unit"]),
-            experiment_type=item.get("experiment_type"),
+            experiment_type=_canonical_experiment_type(item.get("experiment_type")),
             material_contains=item.get("material_contains"),
             reference_electrode=item.get("reference_electrode"),
             tolerance_abs=float(item.get("tolerance_abs", 1e-9)),
@@ -115,6 +137,120 @@ def build_live_pipeline(output_directory: str | Path) -> SynthexExtractionPipeli
 
 def _score_payload(score: CorrosionBenchmarkScore | None) -> dict[str, Any] | None:
     return score.as_dict() if score is not None else None
+
+
+def _find_quarantine_lists(value: Any) -> list[list[dict[str, Any]]]:
+    found: list[list[dict[str, Any]]] = []
+    if isinstance(value, dict):
+        quarantine = value.get("quarantine")
+        if isinstance(quarantine, list) and all(isinstance(item, dict) for item in quarantine):
+            found.append(quarantine)
+        for child in value.values():
+            found.extend(_find_quarantine_lists(child))
+    elif isinstance(value, list):
+        for child in value:
+            found.extend(_find_quarantine_lists(child))
+    return found
+
+
+def _metric_summary(metric: dict[str, Any], *, reason: str | None = None, path: str | None = None) -> dict[str, Any]:
+    quantity = metric.get("quantity") if isinstance(metric.get("quantity"), dict) else {}
+    evidence = metric.get("evidence") if isinstance(metric.get("evidence"), list) else []
+    return {
+        "property": metric.get("property"),
+        "reported_term": metric.get("reported_term"),
+        "raw_value": quantity.get("raw_value", metric.get("raw_value")),
+        "value": quantity.get("value", metric.get("value")),
+        "unit": quantity.get("unit", metric.get("unit")),
+        "ownership": metric.get("ownership"),
+        "evidence_count": len(evidence),
+        "verified_evidence_count": sum(
+            1 for item in evidence
+            if isinstance(item, dict) and item.get("verbatim_match") is True
+        ),
+        "reason": reason,
+        "path": path,
+    }
+
+
+def diagnose_live_output(case_id: str, repo_root: str | Path) -> dict[str, Any]:
+    """Inspect an existing live-run archive/report without making any provider calls."""
+    repo_root = Path(repo_root).resolve()
+    case_id = case_id.strip().upper()
+    output_dir = repo_root / "output" / "corrosion_v1" / "live" / case_id
+    archive_path = output_dir / "archive.json"
+    report_path = output_dir / "report.json"
+    if not archive_path.exists():
+        raise FileNotFoundError(f"Live archive not found: {archive_path}")
+    if not report_path.exists():
+        raise FileNotFoundError(f"Live report not found: {report_path}")
+
+    archive = _read_json(archive_path)
+    report = _read_json(report_path)
+
+    canonical_metrics: list[dict[str, Any]] = []
+    experiment_summaries: list[dict[str, Any]] = []
+    for experiment in archive.get("experiments", []):
+        outputs = experiment.get("outputs") or []
+        experiment_summaries.append({
+            "experiment_id": experiment.get("experiment_id"),
+            "experiment_type": experiment.get("experiment_type"),
+            "material_ids": experiment.get("material_ids") or [],
+            "output_count": len(outputs),
+        })
+        for metric in outputs:
+            summary = _metric_summary(metric)
+            summary["experiment_type"] = experiment.get("experiment_type")
+            summary["experiment_id"] = experiment.get("experiment_id")
+            canonical_metrics.append(summary)
+
+    quarantine_entries: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for payload in archive.get("domain_payloads", []):
+        for quarantine in _find_quarantine_lists(payload):
+            for entry in quarantine:
+                token = json.dumps(entry, sort_keys=True, ensure_ascii=False, default=str)
+                if token not in seen:
+                    seen.add(token)
+                    quarantine_entries.append(entry)
+
+    quarantined_metrics: list[dict[str, Any]] = []
+    for entry in quarantine_entries:
+        obj = entry.get("object")
+        reason = entry.get("reason")
+        path = entry.get("path")
+        if not isinstance(obj, dict):
+            continue
+        if "property" in obj and "quantity" in obj:
+            quarantined_metrics.append(_metric_summary(obj, reason=reason, path=path))
+        metrics = obj.get("metrics")
+        if isinstance(metrics, list):
+            for metric in metrics:
+                if isinstance(metric, dict):
+                    quarantined_metrics.append(_metric_summary(metric, reason=reason, path=path))
+
+    reason_counts = Counter(
+        str(entry.get("reason") or "unknown") for entry in quarantine_entries
+    )
+
+    return {
+        "case_id": case_id,
+        "archive_path": str(archive_path.relative_to(repo_root)),
+        "report_path": str(report_path.relative_to(repo_root)),
+        "archive_domain": (archive.get("metadata") or {}).get("domain"),
+        "source_count": len(archive.get("sources", [])),
+        "material_count": len(archive.get("materials", [])),
+        "experiment_count": len(archive.get("experiments", [])),
+        "canonical_metric_count": len(canonical_metrics),
+        "canonical_metrics": canonical_metrics,
+        "experiments": experiment_summaries,
+        "quarantine_entry_count": len(quarantine_entries),
+        "quarantine_reason_counts": dict(sorted(reason_counts.items())),
+        "quarantined_metrics": quarantined_metrics,
+        "score": report.get("score"),
+        "extraction_diagnostics": report.get("extraction_diagnostics") or {},
+        "provider_audit": report.get("provider_audit") or {},
+    }
 
 
 def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, Any]:
