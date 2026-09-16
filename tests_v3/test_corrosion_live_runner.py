@@ -63,9 +63,13 @@ def test_negative_control_is_not_expected_to_route_to_corrosion():
     assert case.expected_domain == "not_corrosion"
 
 
-def test_offline_diagnostics_exposes_canonical_and_quarantined_metrics(tmp_path):
-    case_dir = tmp_path / "output" / "corrosion_v1" / "live" / "CORR-GOLD-A"
-    case_dir.mkdir(parents=True)
+def test_offline_diagnostics_exposes_canonical_and_quarantined_metrics():
+    # Keep this fixture under the repository's git-ignored output/ tree instead of
+    # pytest's Windows temporary directory. Some Windows/AV combinations retain a
+    # handle to pytest temp folders long enough for pytest cleanup to raise WinError 5.
+    workspace = REPO_ROOT / "output" / "pytest-corrosion-live-diagnostics-workspace"
+    case_dir = workspace / "output" / "corrosion_v1" / "live" / "CORR-GOLD-A"
+    case_dir.mkdir(parents=True, exist_ok=True)
     archive = {
         "metadata": {"archive_id": "arc-test", "domain": "corrosion"},
         "sources": [{"source_id": "src-test", "title": "Paper"}],
@@ -111,7 +115,7 @@ def test_offline_diagnostics_exposes_canonical_and_quarantined_metrics(tmp_path)
     (case_dir / "archive.json").write_text(json.dumps(archive), encoding="utf-8")
     (case_dir / "report.json").write_text(json.dumps(report), encoding="utf-8")
 
-    diagnostic = diagnose_live_output("CORR-GOLD-A", tmp_path)
+    diagnostic = diagnose_live_output("CORR-GOLD-A", workspace)
     assert diagnostic["canonical_metric_count"] == 1
     assert diagnostic["canonical_metrics"][0]["property"] == "solution_resistance"
     assert diagnostic["quarantine_reason_counts"] == {"no_verified_value_specific_evidence": 1}
