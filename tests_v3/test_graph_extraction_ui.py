@@ -3,6 +3,7 @@ from pathlib import Path
 from PIL import Image
 
 from synthex_platform.graph_extraction_ui import (
+    _axis_calibration_error,
     _drag_bounds,
     _figure_id,
     _hex_to_rgb,
@@ -10,6 +11,7 @@ from synthex_platform.graph_extraction_ui import (
     _native_point,
     _rows_csv,
     _sample_rgb,
+    _selection_overlay,
 )
 
 
@@ -35,6 +37,10 @@ def test_graph_ui_uses_interactive_selection_and_keeps_manual_fallback():
     assert 'cursor="crosshair"' in source
     assert 'with st.expander("Manual calibration")' in source
     assert "Use manual plot bounds and curve colour" in source
+    assert "Plot area selected and highlighted" in source
+    assert "Curve selected and marked" in source
+    assert "Clear plot selection" in source
+    assert "Clear curve selection" in source
     assert "Selected series RGB" not in source
     assert "Estimated from figure" in source
     assert "Download estimated CSV" in source
@@ -51,11 +57,41 @@ def test_interactive_coordinate_helpers_map_display_pixels_to_native_image():
     assert bounds == (200.0, 100.0, 800.0, 600.0)
 
 
+def test_drag_bounds_clamp_release_outside_image():
+    bounds = _drag_bounds(
+        {"x1": 10, "y1": 20, "x2": 1200, "y2": 700},
+        2.0,
+        2.0,
+        display_width=1000,
+        display_height=500,
+    )
+    assert bounds == (20.0, 40.0, 1998.0, 998.0)
+
+
 def test_curve_click_samples_native_rgb_after_display_scaling():
     image = Image.new("RGB", (20, 10), (255, 255, 255))
     image.putpixel((10, 4), (12, 34, 56))
     assert _sample_rgb(image, {"x": 5, "y": 2}, 2.0, 2.0) == (12, 34, 56)
     assert _sample_rgb(image, None, 1.0, 1.0) is None
+
+
+def test_selection_overlay_visibly_marks_rectangle_and_curve_point():
+    image = Image.new("RGB", (100, 80), (255, 255, 255))
+    marked = _selection_overlay(
+        image,
+        drag_value={"x1": 10, "y1": 10, "x2": 80, "y2": 60},
+        point_value={"x": 40, "y": 30},
+    )
+    assert marked.size == image.size
+    assert marked.tobytes() != image.tobytes()
+
+
+def test_log_axis_validation_explains_zero_values_before_digitization():
+    assert _axis_calibration_error("X", 0.0, 10.0, True) is not None
+    assert "greater than 0" in _axis_calibration_error("Y", 0.0, 10.0, True)
+    assert _axis_calibration_error("X", 0.0, 10.0, False) is None
+    assert _axis_calibration_error("X", 0.1, 10.0, True) is None
+    assert "two different values" in _axis_calibration_error("X", 1.0, 1.0, False)
 
 
 def test_graph_ui_helpers_preserve_estimated_export_semantics():
