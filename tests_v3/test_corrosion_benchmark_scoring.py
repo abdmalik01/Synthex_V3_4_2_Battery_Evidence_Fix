@@ -101,6 +101,59 @@ def test_corrosion_scorer_never_converts_units_to_make_gold_pass():
     assert score.missed[0]["unit_candidates"] == 0
 
 
+def test_corrosion_scorer_accepts_inverse_area_unit_notation_without_converting_scale():
+    archive = _archive()
+    metric = archive.experiments[0].outputs[0]
+    metric.raw_value = "556.5 μA/cm2"
+    metric.value = 556.5
+    metric.unit = "μA/cm2"
+    score = score_corrosion_archive(archive, [CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=556.5,
+        unit="μA cm^-2",
+        experiment_type="potentiodynamic_polarization",
+    )])
+    assert score.value_accuracy == 1.0
+    assert score.matched_required == 1
+
+
+def test_corrosion_scorer_requires_correct_linked_inhibitor_when_gold_names_one():
+    archive = _archive()
+    archive.experiments[0].outputs[0].conditions["treatment"] = "CSQN"
+    correct = CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=1.2e-5,
+        unit="A/cm2",
+        experiment_type="potentiodynamic_polarization",
+        treatment_contains="CSQN",
+    )
+    wrong = CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=1.2e-5,
+        unit="A/cm2",
+        experiment_type="potentiodynamic_polarization",
+        treatment_contains="NSQN",
+    )
+    assert score_corrosion_archive(archive, [correct]).association_accuracy == 1.0
+    assert score_corrosion_archive(archive, [wrong]).association_accuracy == 0.0
+
+
+def test_corrosion_scorer_accepts_source_reported_reference_abbreviation_only_as_textual_alias():
+    archive = _archive()
+    archive.experiments[0].conditions[0].raw_value = "saturated calomel electrode (SCE)"
+    archive.experiments[0].conditions[0].value = "saturated calomel electrode (SCE)"
+    archive.experiments[0].outputs[0].conditions["reference_electrode"] = "saturated calomel electrode (SCE)"
+    score = score_corrosion_archive(archive, [CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=1.2e-5,
+        unit="A/cm2",
+        experiment_type="potentiodynamic_polarization",
+        reference_electrode="SCE",
+    )])
+    assert score.association_accuracy == 1.0
+    assert score.matched_required == 1
+
+
 def test_corrosion_scorer_requires_domain_and_does_not_score_other_archives():
     archive = _archive()
     archive.metadata.domain = "catalysis"
