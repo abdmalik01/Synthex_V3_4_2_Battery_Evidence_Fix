@@ -43,13 +43,17 @@ def test_gold_a_expectations_preserve_printed_values_and_units_without_conversio
     assert all(item.material_contains == "14Cr12Ni3Mo2VN" for item in expected)
 
 
-def test_live_pipeline_is_pinned_and_has_no_search_or_ocr(tmp_path):
-    pipeline = build_live_pipeline(tmp_path)
+def test_live_pipeline_is_pinned_and_has_no_search_or_ocr():
+    # The pipeline constructor does not create or write this directory. Using a stable
+    # non-temporary path keeps this configuration-only test independent of Windows
+    # pytest temp-directory cleanup/locking behaviour.
+    output_dir = Path("output") / "pytest-corrosion-live-config"
+    pipeline = build_live_pipeline(output_dir)
     assert pipeline.provider_mode == "benchmark"
     assert pipeline.search_assisted is False
     assert pipeline.find_supplementary is False
     assert pipeline.enable_ocr is False
-    assert pipeline.visual_sidecar_store.output_directory == tmp_path
+    assert pipeline.visual_sidecar_store.output_directory == output_dir
 
 
 def test_negative_control_is_not_expected_to_route_to_corrosion():
