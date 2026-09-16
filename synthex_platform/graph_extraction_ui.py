@@ -109,7 +109,7 @@ def render_graph_extraction_ui() -> None:
     image_bytes = image_file.getvalue()
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     width, height = image.size
-    st.image(image_bytes, caption="Uploaded graph", width="stretch")
+    st.image(image_bytes, caption="Uploaded graph")
 
     with st.form("graph_digitization_calibration"):
         st.markdown("### 2 · Tell Synthex what the axes mean")
@@ -218,7 +218,7 @@ def render_graph_extraction_ui() -> None:
         st.dataframe(rows, hide_index=True, width="stretch")
         try:
             preview = _preview_image(image_bytes, result, rgb)
-            st.image(preview, caption="Preview — detected points overlaid on the uploaded graph", width="stretch")
+            st.image(preview, caption="Preview — detected points overlaid on the uploaded graph")
         except Exception as exc:
             logger.exception("Graph digitization preview failed: %s", exc)
 
