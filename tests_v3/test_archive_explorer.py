@@ -258,5 +258,12 @@ def test_research_ui_home_has_primary_workflows_and_public_navigation():
     assert any(item.value == "SYNTHEX" for item in at.title)
     assert {button.label for button in at.button} >= {"Analyze papers", "Discover papers"}
     options = set(at.sidebar.radio[0].options)
-    assert {"Analyze Papers", "Explore Results", "Visualize Data", "Gas Sensing Analytics", "Figure Data"} <= options
+    assert {
+        "Analyze Papers",
+        "Explore Results",
+        "Visualize Data",
+        "Gas Sensing Analytics",
+        "Extract Data from Graphs",
+    } <= options
+    assert "Figure Data" not in options
     assert not any(option.startswith("Developer ·") for option in options)
