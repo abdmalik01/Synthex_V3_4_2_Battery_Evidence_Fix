@@ -54,6 +54,12 @@ Scientific rules:
 - Every evidence item must contain the narrowest exact contiguous source quotation supporting the
   object or value. When a SourceBundle is supplied, use its page markers/source_id. If exact support
   cannot be copied, omit evidence rather than invent it; downstream admission will quarantine it.
+- For STRUCTURED SOURCE CONTEXT tables, never rewrite a row into prose. Set source_type="table",
+  original_source_type="table_reported", copy table_id exactly, copy the table page exactly, and use
+  text_snippet only from exact extracted cell text or exact adjacent row text as presented in the
+  structured table. Do not add labels, punctuation, units, or words that are not present in that cell/row.
+- Experiment-level evidence must itself be exact source support for that experiment or protocol; do
+  not manufacture a summary sentence from several table cells merely to populate experiment evidence.
 - OCR-derived support remains labelled ocr_extracted. Do not silently correct OCR text.
 - Keep missing fields absent/defaulted instead of guessing.
 """
