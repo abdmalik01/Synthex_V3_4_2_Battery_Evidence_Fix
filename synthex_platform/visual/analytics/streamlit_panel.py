@@ -11,7 +11,12 @@ from .exports import comparison_frame
 from .models import AnalyticQuery
 from .projection import project_archives
 from .render import VisualizationRenderer
-from .specs import build_visualization_spec, chart_field_options
+from .specs import (
+    build_visualization_spec,
+    chart_field_options,
+    numeric_dimension_summary,
+    surface_coverage,
+)
 
 
 def _field_label(field: str, property_name: str) -> str:
@@ -52,6 +57,48 @@ def _eligibility_message(reason: str | None) -> str:
     }.get(reason, f"Chart is not eligible: {reason or 'unknown reason'}")
 
 
+def _render_dimension_coverage(rows, property_name: str) -> None:
+    summary = numeric_dimension_summary(rows)
+    with st.expander("Numeric dimension coverage", expanded=False):
+        if not summary:
+            st.caption("No numeric result or condition dimensions are present in the admitted rows.")
+            return
+        display = [
+            {
+                "Dimension": _field_label(item["field"], property_name),
+                "Numeric observations": item["observations"],
+                "Unique values": item["unique_values"],
+                "Missing rows": item["missing"],
+                "Units": item["units"],
+            }
+            for item in summary
+        ]
+        st.dataframe(display, hide_index=True, width="stretch")
+        st.caption(
+            "Coverage counts only admitted numeric values. A dimension appearing somewhere in the archive does not imply "
+            "that it is jointly linked to another dimension on the same observations."
+        )
+
+
+def _render_surface_coverage(rows, property_name: str, x_field, y_field, z_field) -> None:
+    if not (x_field and y_field and z_field):
+        return
+    coverage = surface_coverage(rows, x_field, y_field, z_field)
+    st.caption(
+        "2D coverage — "
+        f"joint X+Y: {coverage['joint_xy']} · "
+        f"joint X+Y+Z: {coverage['joint_xyz']} · "
+        f"distinct X: {coverage['unique_x']} · "
+        f"distinct Y: {coverage['unique_y']} · "
+        f"distinct coordinates: {coverage['unique_coordinates']}"
+    )
+    if coverage["joint_xyz"]:
+        st.caption(
+            f"Selected dimensions: {_field_label(x_field, property_name)} × "
+            f"{_field_label(y_field, property_name)} → {_field_label(z_field, property_name)}."
+        )
+
+
 def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
     """Render data-aware bar, line, scatter, heatmap, and contour controls."""
     archives = list(archives)
@@ -70,6 +117,7 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
         "Original source/archive identifiers remain attached."
     )
     st.dataframe(frame, hide_index=True, width="stretch")
+    _render_dimension_coverage(rows, property_name)
 
     chart_type = st.selectbox(
         "Chart type",
@@ -146,6 +194,9 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
         query=query,
     )
 
+    if chart_type in {"heatmap", "contour"}:
+        _render_surface_coverage(rows, property_name, x_field, y_field, z_field)
+
     if spec.eligible:
         png = VisualizationRenderer().render_png(spec, rows)
         st.image(png)
@@ -162,13 +213,31 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
         if chart_type in {"line", "scatter"} and not options["x"]:
             st.caption(
                 "This property has no numeric independent variable in its admitted records. "
-                "A bar chart may still be valid, or another property may expose C-rate, cycle, temperature, or other numeric conditions."
+                "A bar chart may still be valid, or another property may expose C-rate, cycle, temperature, "
+                "state of charge, synthesis temperature, or another numeric condition."
             )
         elif chart_type in {"heatmap", "contour"} and len(options["x"]) < 2:
+            available = [
+                _field_label(item["field"], property_name)
+                for item in numeric_dimension_summary(rows)
+                if item["field"] != "value"
+            ]
+            available_text = ", ".join(available) if available else "none"
             st.caption(
-                "A 2D map needs at least two numeric conditions attached to the same reported values "
-                "(for example C-rate × temperature → capacity)."
+                "A 2D map needs at least two numeric conditions attached to the same reported values. "
+                f"Numeric independent dimensions currently found: {available_text}."
             )
+        elif chart_type in {"heatmap", "contour"} and x_field and y_field and z_field:
+            coverage = surface_coverage(rows, x_field, y_field, z_field)
+            if coverage["unique_x"] < 2 or coverage["unique_y"] < 2:
+                st.caption(
+                    "The selected dimensions exist, but the jointly linked observations do not vary in both directions. "
+                    "Synthex will not combine unrelated rows to manufacture a 2D surface."
+                )
+            elif coverage["joint_xyz"] < (4 if chart_type == "contour" else 3):
+                st.caption(
+                    "Too few source-linked XYZ observations remain after requiring all three selected dimensions on the same rows."
+                )
 
     st.download_button(
         "Download comparison CSV",
