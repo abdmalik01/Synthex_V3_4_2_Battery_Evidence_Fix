@@ -16,6 +16,7 @@ from .source_context import SourceBundle
 
 
 _TABLE_PREFIX = re.compile(r"^\s*table\s+[0-9]+[a-z]?\s*[:.\-]?\s*", re.IGNORECASE)
+_HUMAN_TABLE_ID = re.compile(r"^\s*table\s+[0-9]+[a-z]?\s*$", re.IGNORECASE)
 _NUMBER = re.compile(
     r"(?<![\w.])([+-]?\d+(?:\.\d+)?)"
     r"(?:\s*(?:[×x*]\s*10\s*\^?\s*([+-]?\d+)|e\s*([+-]?\d+)))?",
@@ -286,6 +287,41 @@ def _recover_unique_table_match(
     return matches[0] if len(matches) == 1 else None
 
 
+def _verify_human_table_locator_against_page(
+    evidence: CorrosionEvidence,
+    source_bundle: SourceBundle,
+) -> CorrosionEvidence | None:
+    """Verify an exact table row/caption when the visual table parser missed the table.
+
+    Models sometimes emit the paper's human label (for example ``Table 1``) in
+    ``table_id`` while PyMuPDF fails to create a structured ``TableRecord`` for that
+    actual table. In that case we do not guess a parser table ID or reconstruct cells.
+    We accept the evidence only when it is explicitly table-derived, names a concrete
+    page, uses a human table label, and its full snippet is a unique normalized verbatim
+    substring of that page's source text. The human label is retained as a locator and
+    the original source is truthfully recorded as native text or OCR.
+    """
+    if evidence.source_type != "table":
+        return None
+    if evidence.page is None or not _HUMAN_TABLE_ID.fullmatch(evidence.table_id or ""):
+        return None
+    if evidence.original_source_type not in {"native_text", "table_reported", "ocr_extracted", "unknown"}:
+        return None
+
+    matches = _matching_text_pages(evidence.text_snippet or "", source_bundle, evidence.page)
+    if len(matches) != 1:
+        return None
+    page = matches[0]
+    return evidence.model_copy(update={
+        "source_id": source_bundle.source.source_id,
+        "page": page.page,
+        "source_type": "table",
+        "original_source_type": page.origin,
+        "locator": evidence.locator or evidence.table_id,
+        "verbatim_match": True,
+    })
+
+
 def verify_corrosion_evidence_item(
     evidence: CorrosionEvidence,
     source_bundle: SourceBundle,
@@ -295,10 +331,10 @@ def verify_corrosion_evidence_item(
     Table evidence first uses exact normalized substring matching. If a model has
     synthesized a compact table sentence despite the prompt contract, a conservative
     row/column fallback may recover it only when one unique table relation is proven.
-    A missing model ``table_id`` may also be recovered, but only when the evidence is
-    explicitly table-derived, names the correct page, and exactly one table on that page
-    satisfies the same strict structural constraints. The stored snippet is replaced by
-    the exact extracted source row before verification is asserted.
+    A missing model ``table_id`` may also be recovered only from one unique structured
+    table relation. When the model instead supplies a human table label and the visual
+    parser missed that actual table, an exact full-snippet match against the stated page
+    may verify the evidence without inventing any table structure.
     """
     snippet = (evidence.text_snippet or "").strip()
     if not snippet:
@@ -307,7 +343,8 @@ def verify_corrosion_evidence_item(
     if evidence.table_id:
         table, matches = _matching_table_candidates(evidence, source_bundle)
         if table is None:
-            return evidence.model_copy(update={"verbatim_match": False})
+            page_verified = _verify_human_table_locator_against_page(evidence, source_bundle)
+            return page_verified or evidence.model_copy(update={"verbatim_match": False})
         if len(matches) == 1:
             return evidence.model_copy(update={
                 "source_id": source_bundle.source.source_id,
