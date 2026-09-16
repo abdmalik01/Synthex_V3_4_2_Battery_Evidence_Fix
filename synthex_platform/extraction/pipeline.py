@@ -63,6 +63,10 @@ class SynthexExtractionPipeline:
         self.last_catalysis_model_outputs: dict[str, str] = {}
         self.last_catalysis_candidate_inventory: list[dict] = []
         self.last_catalysis_candidate_coverage: list[dict] = []
+        # Corrosion keeps the source-verified typed draft so benchmark callers can
+        # persist a replay artifact before archive assembly. This is intentionally
+        # in-memory only during normal production extraction.
+        self.last_corrosion_document = None
 
     def route_text(self, text: str) -> DomainRoute:
         return self.router.route_text(text)
@@ -88,6 +92,7 @@ class SynthexExtractionPipeline:
         self.last_catalysis_model_outputs = {}
         self.last_catalysis_candidate_inventory = []
         self.last_catalysis_candidate_coverage = []
+        self.last_corrosion_document = None
         route = self.router.route_text(text) if domain == "auto" else DomainRoute(
             domain=domain,
             confidence=1.0,
@@ -231,6 +236,10 @@ class SynthexExtractionPipeline:
                 )
             if source_bundle is not None:
                 draft.source.pdf_text_parser = source_bundle.primary_native_parser()
+            # ``extract_text`` has already run deterministic source-bundle evidence
+            # verification, so this is the exact pre-assembly document suitable for
+            # zero-provider benchmark replay.
+            self.last_corrosion_document = draft
             archive = assemble_corrosion_archive(
                 draft,
                 model=extractor.model,
