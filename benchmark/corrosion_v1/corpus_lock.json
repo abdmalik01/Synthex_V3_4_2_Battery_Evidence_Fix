@@ -1,0 +1,185 @@
+{
+  "benchmark": "corrosion_v1_stage3",
+  "source_manifest": "Synthex_V3_4_2_Battery_Evidence_Fix\\benchmark\\corrosion_v1\\corpus_manifest.json",
+  "external_calls": 0,
+  "files": [
+    {
+      "id": "CORR-GOLD-A",
+      "role": "bare_alloy_polarization",
+      "filename": "Corrosion 1.pdf",
+      "expected_doi": "10.20964/2020.01.26",
+      "expected_title": "Research on the Corrosion Behavior of 14Cr12Ni3Mo2VN Stainless Steel in Different Concentrations of NaCl Solution",
+      "file_size_bytes": 723078,
+      "git_blob_sha1": "57ffd2f0e640d0b1aa55e5d93fdc8e228feb67cb",
+      "sha256": "2d39afe59cc953bfbccf32d185a9d025fc53471adce741528f4b9997e5a1f065",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-COAT-B",
+      "role": "coating_surface_treatment",
+      "filename": "Corrosion 2.pdf",
+      "expected_doi": "10.1021/acsomega.2c00172",
+      "expected_title": "Effect on the Surface Anticorrosion and Corrosion Protection Mechanism of Integrated Rust Conversion Coating for Enhanced Corrosion Protection",
+      "file_size_bytes": 7162024,
+      "git_blob_sha1": "91679dafcffb7ea7b74a853c9c40f61372c08b09",
+      "sha256": "140afc8611181d10c9de3b3719ae43d24e803049f79b05b152a243f637d6d452",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-INHIB-C",
+      "role": "corrosion_inhibitor",
+      "filename": "Corrosion 3.pdf",
+      "expected_doi": "10.1016/j.heliyon.2020.e03939",
+      "expected_title": "Coupling of chemical, electrochemical and theoretical approach to study the corrosion inhibition of mild steel by new quinoxaline compounds in 1 M HCl",
+      "file_size_bytes": 3931006,
+      "git_blob_sha1": "2eb87afe666bd756bdd3828c8e6d8def706918cf",
+      "sha256": "15dcb0661681f1b284820a0bc3210cc94e8d73a449937f3a75c1fd19c242ffd2",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-EIS-D",
+      "role": "eis_heavy",
+      "filename": "materials-16-00546-v2.pdf",
+      "expected_doi": "10.3390/ma16020546",
+      "expected_title": "Electrochemical Impedance Analysis for Corrosion Rate Monitoring of Sol–Gel Protective Coatings in Contact with Nitrate Molten Salts for CSP Applications",
+      "file_size_bytes": 4501849,
+      "git_blob_sha1": "713429278086819b9b277400509f8cd4724e130d",
+      "sha256": "11a905e87aaf5efc7e388d59e1af75b33561738102cddff7ffb90da31c9adb1f",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-WEIGHT-E",
+      "role": "immersion_weight_loss",
+      "filename": "Corrosion 5.pdf",
+      "expected_doi": "10.1016/j.sajce.2022.06.011",
+      "expected_title": "Corrosion inhibition of mild steel in hydrochloric acid environment using thiadiazole derivative: Weight loss, thermodynamics, adsorption and computational investigations",
+      "file_size_bytes": 4196987,
+      "git_blob_sha1": "246364e1db922fb85eddd2e75ff126dba1740641",
+      "sha256": "3af6ea0b782f97b304053e8cfd83d123d527b46569c53474fa3953d726b3130b",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-DFT-F",
+      "role": "computational_corrosion",
+      "filename": "Corrosion 6.pdf",
+      "expected_doi": "10.1155/2013/175910",
+      "expected_title": "Density Functional Theory of Mild Steel Corrosion in Acidic Media Using Dyes as Inhibitor: Adsorption onto Fe(110) from Gas Phase",
+      "file_size_bytes": 3440822,
+      "git_blob_sha1": "f6dad883a10a840ba550ab99bb0e29a87f5be054",
+      "sha256": "378fcfd4ee2a28487282a0a9602d7264d5fb25c201ba33425de3d564c57e851d",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-REVIEW-G",
+      "role": "review_contamination_control",
+      "filename": "Corrosion 7.pdf",
+      "expected_doi": "10.3390/polym14122306",
+      "expected_title": "Electrochemical Characterization of Polymeric Coatings for Corrosion Protection: A Review of Advances and Perspectives",
+      "file_size_bytes": 5670744,
+      "git_blob_sha1": "51c56a2447c40e5569b5a370da951c67c54debcc",
+      "sha256": "eb73abe790a6aab16a34738266ee0bc472c2c519ef840aeb2f0ab90eb8f100bf",
+      "doi_verified": true,
+      "title_token_coverage": 1.0,
+      "title_verified": true,
+      "content_verified": true
+    },
+    {
+      "id": "CORR-NEGATIVE-H",
+      "role": "non_corrosion_negative_control",
+      "filename": "Corrosion 8.pdf",
+      "expected_doi": "10.20964/2018.09.30",
+      "expected_title": "Electrochemical Properties of Olivine-Type LiFePO4/C Cathode Material for Lithium Ion Batteries",
+      "file_size_bytes": 4461042,
+      "git_blob_sha1": "e6bbf344b52500dda5fcb04b835c0c31158e13e2",
+      "sha256": "78c06b72debccc55509ceb836fe1d204b3520223f33bca815af20ea5ea02b58d",
+      "doi_verified": false,
+      "title_token_coverage": 0.4444,
+      "title_verified": false,
+      "content_verified": false
+    },
+    {
+      "id": "CORR-HOLDOUT-I",
+      "role": "localized_corrosion_holdout",
+      "filename": "Corrosion 9.pdf",
+      "expected_doi": "10.1016/j.jma.2020.12.005",
+      "expected_title": "Understanding pitting corrosion behavior of AZ91 alloy and its MAO coating in 3.5% NaCl solution by cyclic potentiodynamic polarization",
+      "file_size_bytes": 2286695,
+      "git_blob_sha1": "f45b2125a2e58251de887eea409e35b0cad5f787",
+      "sha256": "2f3535cbaaa03b21e469d9832888730d97bf80bcf1b5c55bb8d34203956f6d15",
+      "doi_verified": false,
+      "title_token_coverage": 0.4167,
+      "title_verified": false,
+      "content_verified": false
+    }
+  ],
+  "unassigned_pdfs": [
+    "Corrosion 4.pdf"
+  ],
+  "candidate_matches_for_unverified_entries": {
+    "CORR-NEGATIVE-H": [
+      {
+        "filename": "Corrosion 9.pdf",
+        "doi_verified": true,
+        "title_token_coverage": 1.0,
+        "title_verified": true,
+        "content_verified": true
+      },
+      {
+        "filename": "Corrosion 7.pdf",
+        "doi_verified": false,
+        "title_token_coverage": 0.6667,
+        "title_verified": false,
+        "content_verified": false
+      },
+      {
+        "filename": "Corrosion 1.pdf",
+        "doi_verified": false,
+        "title_token_coverage": 0.5556,
+        "title_verified": false,
+        "content_verified": false
+      }
+    ],
+    "CORR-HOLDOUT-I": [
+      {
+        "filename": "Corrosion 8.pdf",
+        "doi_verified": true,
+        "title_token_coverage": 1.0,
+        "title_verified": true,
+        "content_verified": true
+      },
+      {
+        "filename": "Corrosion 7.pdf",
+        "doi_verified": false,
+        "title_token_coverage": 0.9167,
+        "title_verified": true,
+        "content_verified": false
+      },
+      {
+        "filename": "Corrosion 2.pdf",
+        "doi_verified": false,
+        "title_token_coverage": 0.75,
+        "title_verified": true,
+        "content_verified": false
+      }
+    ]
+  },
+  "all_content_verified": false
+}

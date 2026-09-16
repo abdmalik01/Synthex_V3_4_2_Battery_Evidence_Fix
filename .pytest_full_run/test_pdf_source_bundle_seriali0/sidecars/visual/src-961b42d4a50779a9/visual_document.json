@@ -1,0 +1,435 @@
+{
+  "source_id": "src-961b42d4a50779a9",
+  "source_checksum": "3c23414839655ff44b928d05d5e045d71ed4893e6ef05bfc15182631e1f2fbed",
+  "extraction_metadata": {
+    "source_bundle": "v1",
+    "source_id": "src-961b42d4a50779a9",
+    "filename": "native-table.pdf",
+    "source_checksum": "3c23414839655ff44b928d05d5e045d71ed4893e6ef05bfc15182631e1f2fbed",
+    "primary_native_parser": "pypdf",
+    "page_parsers": [
+      {
+        "page": 1,
+        "native_parser": "pypdf",
+        "parser": "pypdf",
+        "origin": "native_text",
+        "attempt_history": [
+          "pypdf"
+        ]
+      }
+    ],
+    "tables_detected": 1,
+    "figures_detected": 0,
+    "ocr_pages_used": [],
+    "digitizations_available": 0,
+    "visual_sidecar_reference": "C:\\Users\\Olakitan Gbolahan\\Downloads\\Synthex_V3_4_2_Battery_Evidence_Fix\\Synthex_V3_4_2_Battery_Evidence_Fix\\.pytest_full_run\\test_pdf_source_bundle_seriali0\\sidecars\\visual\\src-961b42d4a50779a9\\visual_document.json"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_parser": "pypdf",
+      "text_sufficient": true,
+      "ocr_needed": false,
+      "warnings": []
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "tbl-c73b0436945e7fd3",
+      "source_id": "src-961b42d4a50779a9",
+      "page": 1,
+      "table_number": "1",
+      "caption": "Table 1. Electrochemical performance and source context.",
+      "headers": [
+        [
+          "Sample",
+          "Temp (C)",
+          "Capacity (mAh/g)",
+          "Rct (ohm)"
+        ]
+      ],
+      "header_metadata": {
+        "status": "single_level",
+        "external": false
+      },
+      "rows": [
+        [
+          "Li2FeTiO4",
+          "700 C",
+          "121.3 mAh/g",
+          "1258.6 ohm"
+        ]
+      ],
+      "cells": [
+        {
+          "row": 0,
+          "column": 0,
+          "cell_id": "tbl-c73b0436945e7fd3:r0:c0",
+          "raw_text": "Sample",
+          "text": "Sample",
+          "bbox": {
+            "x0": 72.0,
+            "y0": 85.0,
+            "x1": 187.0,
+            "y1": 130.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 0,
+            "column": 0,
+            "cell_id": "tbl-c73b0436945e7fd3:r0:c0",
+            "bbox": {
+              "x0": 72.0,
+              "y0": 85.0,
+              "x1": 187.0,
+              "y1": 130.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Sample",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "cell_id": "tbl-c73b0436945e7fd3:r0:c1",
+          "raw_text": "Temp (C)",
+          "text": "Temp (C)",
+          "bbox": {
+            "x0": 187.0,
+            "y0": 85.0,
+            "x1": 302.0,
+            "y1": 130.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 0,
+            "column": 1,
+            "cell_id": "tbl-c73b0436945e7fd3:r0:c1",
+            "bbox": {
+              "x0": 187.0,
+              "y0": 85.0,
+              "x1": 302.0,
+              "y1": 130.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Temp (C)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "cell_id": "tbl-c73b0436945e7fd3:r0:c2",
+          "raw_text": "Capacity (mAh/g)",
+          "text": "Capacity (mAh/g)",
+          "bbox": {
+            "x0": 302.0,
+            "y0": 85.0,
+            "x1": 417.0,
+            "y1": 130.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 0,
+            "column": 2,
+            "cell_id": "tbl-c73b0436945e7fd3:r0:c2",
+            "bbox": {
+              "x0": 302.0,
+              "y0": 85.0,
+              "x1": 417.0,
+              "y1": 130.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Capacity (mAh/g)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "cell_id": "tbl-c73b0436945e7fd3:r0:c3",
+          "raw_text": "Rct (ohm)",
+          "text": "Rct (ohm)",
+          "bbox": {
+            "x0": 417.0,
+            "y0": 85.0,
+            "x1": 532.0,
+            "y1": 130.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 0,
+            "column": 3,
+            "cell_id": "tbl-c73b0436945e7fd3:r0:c3",
+            "bbox": {
+              "x0": 417.0,
+              "y0": 85.0,
+              "x1": 532.0,
+              "y1": 130.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Rct (ohm)",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "cell_id": "tbl-c73b0436945e7fd3:r1:c0",
+          "raw_text": "Li2FeTiO4",
+          "text": "Li2FeTiO4",
+          "bbox": {
+            "x0": 72.0,
+            "y0": 130.0,
+            "x1": 187.0,
+            "y1": 175.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 1,
+            "column": 0,
+            "cell_id": "tbl-c73b0436945e7fd3:r1:c0",
+            "bbox": {
+              "x0": 72.0,
+              "y0": 130.0,
+              "x1": 187.0,
+              "y1": 175.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "Li2FeTiO4",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "cell_id": "tbl-c73b0436945e7fd3:r1:c1",
+          "raw_text": "700 C",
+          "text": "700 C",
+          "bbox": {
+            "x0": 187.0,
+            "y0": 130.0,
+            "x1": 302.0,
+            "y1": 175.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 1,
+            "column": 1,
+            "cell_id": "tbl-c73b0436945e7fd3:r1:c1",
+            "bbox": {
+              "x0": 187.0,
+              "y0": 130.0,
+              "x1": 302.0,
+              "y1": 175.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "700 C",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "cell_id": "tbl-c73b0436945e7fd3:r1:c2",
+          "raw_text": "121.3 mAh/g",
+          "text": "121.3 mAh/g",
+          "bbox": {
+            "x0": 302.0,
+            "y0": 130.0,
+            "x1": 417.0,
+            "y1": 175.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 1,
+            "column": 2,
+            "cell_id": "tbl-c73b0436945e7fd3:r1:c2",
+            "bbox": {
+              "x0": 302.0,
+              "y0": 130.0,
+              "x1": 417.0,
+              "y1": 175.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "121.3 mAh/g",
+            "verification_status": "extracted"
+          }
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "cell_id": "tbl-c73b0436945e7fd3:r1:c3",
+          "raw_text": "1258.6 ohm",
+          "text": "1258.6 ohm",
+          "bbox": {
+            "x0": 417.0,
+            "y0": 130.0,
+            "x1": 532.0,
+            "y1": 175.0
+          },
+          "row_span": 1,
+          "column_span": 1,
+          "provenance": {
+            "origin": "table_reported",
+            "source_id": "src-961b42d4a50779a9",
+            "page": 1,
+            "object_id": "tbl-c73b0436945e7fd3",
+            "object_type": "table",
+            "table_number": "1",
+            "row": 1,
+            "column": 3,
+            "cell_id": "tbl-c73b0436945e7fd3:r1:c3",
+            "bbox": {
+              "x0": 417.0,
+              "y0": 130.0,
+              "x1": 532.0,
+              "y1": 175.0
+            },
+            "parser_or_method": "pymupdf",
+            "parser": "pymupdf",
+            "raw_text": "1258.6 ohm",
+            "verification_status": "extracted"
+          }
+        }
+      ],
+      "column_units": {
+        "Temp (C)": "C",
+        "Capacity (mAh/g)": "mAh/g",
+        "Rct (ohm)": "ohm"
+      },
+      "footnotes": [],
+      "bbox": {
+        "x0": 72.0,
+        "y0": 85.0,
+        "x1": 532.0,
+        "y1": 175.0
+      },
+      "parser": "pymupdf",
+      "extraction_confidence": 1.0,
+      "raw_representation": {
+        "grid": [
+          [
+            "Sample",
+            "Temp (C)",
+            "Capacity (mAh/g)",
+            "Rct (ohm)"
+          ],
+          [
+            "Li2FeTiO4",
+            "700 C",
+            "121.3 mAh/g",
+            "1258.6 ohm"
+          ]
+        ],
+        "header_external": false
+      },
+      "normalized_representation": {
+        "status": "normalized",
+        "headers": [
+          [
+            "Sample",
+            "Temp (C)",
+            "Capacity (mAh/g)",
+            "Rct (ohm)"
+          ]
+        ],
+        "rows": [
+          [
+            "Li2FeTiO4",
+            "700 C",
+            "121.3 mAh/g",
+            "1258.6 ohm"
+          ]
+        ],
+        "row_mappings": [
+          {
+            "Sample": "Li2FeTiO4",
+            "Temp (C)": "700 C",
+            "Capacity (mAh/g)": "121.3 mAh/g",
+            "Rct (ohm)": "1258.6 ohm"
+          }
+        ]
+      },
+      "provenance": {
+        "origin": "table_reported",
+        "source_id": "src-961b42d4a50779a9",
+        "page": 1,
+        "object_id": "tbl-c73b0436945e7fd3",
+        "object_type": "table",
+        "table_number": "1",
+        "table_or_figure_number": "1",
+        "bbox": {
+          "x0": 72.0,
+          "y0": 85.0,
+          "x1": 532.0,
+          "y1": 175.0
+        },
+        "parser_or_method": "pymupdf",
+        "parser": "pymupdf",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "figures": [],
+  "ocr_blocks": [],
+  "digitizations": [],
+  "warnings": []
+}

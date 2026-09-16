@@ -1,0 +1,30 @@
+{
+  "synthex_version": "3.4.2",
+  "source_id": "src-plot",
+  "page": 1,
+  "figure_id": "fig-plot",
+  "panel": null,
+  "source_image_checksum": "e4b9c6fb6515a9b64f7ffadc53accb4dac7a181d434633119eb1b3bb245fd123",
+  "provenance": {
+    "origin": "figure_digitized",
+    "source_id": "src-plot",
+    "page": 1,
+    "object_id": "fig-plot",
+    "object_type": "figure",
+    "parser_or_method": "numpy_pillow_colored_curve_v1",
+    "verification_status": "candidate"
+  },
+  "uncertainty": {
+    "x": 0.016129032258064516,
+    "y": 0.02029220779220779,
+    "pixel_x": 1.0,
+    "pixel_y": 1.0,
+    "contributors": [
+      "minimum_one_pixel",
+      "calibration_residual",
+      "line_thickness"
+    ]
+  },
+  "warnings": [],
+  "rejection_reasons": []
+}

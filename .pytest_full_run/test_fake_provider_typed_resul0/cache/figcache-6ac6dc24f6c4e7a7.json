@@ -1,0 +1,45 @@
+{
+  "figure_type": "cycling_performance",
+  "panels": [],
+  "axes": [
+    {
+      "role": "x",
+      "raw_label": "Cycle Number",
+      "scale_type": "unknown"
+    },
+    {
+      "role": "y",
+      "raw_label": "Specific Capacity (mAh/g)",
+      "unit": "mAh/g",
+      "scale_type": "unknown"
+    }
+  ],
+  "legend_entries": [
+    {
+      "raw_label": "LFTO-700"
+    }
+  ],
+  "sample_material_labels": [
+    "LFTO-700"
+  ],
+  "scientific_meaning": "Capacity is compared across cycling.",
+  "annotations": [
+    {
+      "raw_text": "121.3 mAh/g",
+      "panel": "a",
+      "provenance": {
+        "origin": "figure_annotation",
+        "source_id": "src-fig",
+        "page": 1,
+        "object_id": "fig-c9a79e853df38132",
+        "object_type": "figure",
+        "panel": "a",
+        "parser_or_method": "fake-v1",
+        "raw_text": "121.3 mAh/g",
+        "verification_status": "extracted"
+      }
+    }
+  ],
+  "confidence": 0.8,
+  "warnings": []
+}
