@@ -1,6 +1,8 @@
 # Corrosion V1 — Stage 3 Benchmark Protocol
 
-Status: **corpus files present and repository-locked; local PDF content verification and manual gold annotation pending**.
+Status: **corpus files present and repository-locked; offline candidate bundle prepared; manual PDF gold annotation pending**.
+
+Current verified repository regression baseline before manual gold completion: **303 passed, 2 warnings**.
 
 ## Objective
 
@@ -26,6 +28,8 @@ The fixed scored corpus contains eight roles defined in `corpus_manifest.json`:
 The nine PDFs are now present in `benchmark/corrosion_v1/corpus pdfs/`. Exact filenames, expected DOI/title metadata, repository Git-blob hashes, and byte sizes are locked in `corpus_manifest.json`.
 
 The repository lock does **not** by itself prove that each numbered PDF is the intended paper. Run `benchmark/corrosion_v1/lock_corpus.py` locally before gold annotation. The verifier makes zero external calls, computes SHA-256, checks the repository blob hash and byte size, and checks that the expected DOI/title are present in the PDF text. It writes `corpus_lock.json`.
+
+`gold_candidates.json` is an offline, zero-provider-call navigation bundle generated from local PDF text. Its snippets are **not gold**. Use `GOLD_REVIEW_WORKSHEET.md` to review the actual PDFs and populate the gold scaffold conservatively.
 
 ## Gold annotation rules
 
@@ -73,7 +77,7 @@ Stage 3 also requires qualitative pass/fail checks:
 Benchmark preparation and scorer tests are fully offline. Live Gemini extraction begins only after:
 
 1. `lock_corpus.py` verifies all nine local PDFs and writes `corpus_lock.json`;
-2. the eight scored papers have manually verified gold assertions;
+2. the eight scored papers have manually verified gold assertions or an explicit expected-rejection/routing contract;
 3. offline scorer/corpus tests pass;
 4. the full repository regression is green.
 
