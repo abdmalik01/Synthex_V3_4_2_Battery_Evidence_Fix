@@ -1,14 +1,37 @@
 # Corrosion V1 — Stage 3 Benchmark Protocol
 
-Status: **corpus locked; offline candidate bundle prepared; fixed A–H manual source review complete; offline gold-record regression verification pending before controlled live scoring**.
+Status: **corpus locked; fixed A–H manual source review complete; controlled live scoring in progress; CORR-GOLD-A passed after the record-level evidence-gate remediation**.
 
-Current verified full repository regression baseline before the new gold-record regression test: **303 passed, 2 warnings**.
+Current verified full repository regression baseline remains **303 passed, 2 warnings**. The latest corrosion evidence-gate regression additions still require a local full-suite rerun before a newer repository-wide baseline is claimed.
 
 ## Objective
 
 Stage 3 measures whether the dedicated Corrosion V1 extraction path recovers paper-grounded corrosion data while preserving associations, source tracking, ownership, and scientific boundaries.
 
 Stage 3 must not be used to weaken admission rules merely to improve a score.
+
+## Live scoring progress
+
+### CORR-GOLD-A — PASS
+
+Controlled live run completed on 2026-09-16 after the record-level evidence-gate remediation.
+
+- resolved route: `corrosion`; expected route: `corrosion`; route check passed;
+- gold numeric assertions: 4/4 matched;
+- recall: 100%;
+- value accuracy: 100%;
+- association accuracy: 100%;
+- source-tracking coverage: 100%;
+- overall score: 100%;
+- canonical experiments: 4 EIS records;
+- canonical metrics: 12;
+- quarantine entries: 0;
+- provider calls: 1 primary, 0 schema-repair;
+- first response passed schema validation.
+
+The successful rerun confirms that verified child metric/condition evidence can ground an experiment shell without weakening value-specific metric admission. The previous `no_verified_record_evidence` failure for the four EIS experiment records is closed for CORR-GOLD-A.
+
+Next controlled live case: **CORR-COAT-B**, after the local corpus-lock check and local regression gates below are rerun.
 
 ## Fixed corpus
 
@@ -76,12 +99,12 @@ Stage 3 also requires qualitative pass/fail checks:
 
 ## Run policy
 
-Benchmark preparation and scorer tests are fully offline. Live Gemini extraction begins only after:
+Benchmark preparation and scorer tests are fully offline. Before each next controlled live case:
 
 1. `lock_corpus.py` verifies the local corpus and writes `corpus_lock.json`;
-2. the fixed A–H papers have manually verified gold assertions or explicit expected-rejection/routing contracts — **complete**;
-3. offline scorer/corpus/gold-record tests pass — **pending local rerun after the latest gold-record commits**;
-4. the full repository regression is green — last verified baseline **303 passed, 2 warnings**, rerun required after the latest test addition before claiming a new baseline.
+2. the fixed A–H papers retain manually verified gold assertions or explicit expected-rejection/routing contracts — **complete**;
+3. focused offline corrosion scorer/corpus/gold/evidence/assembler tests must pass;
+4. the full repository regression must be green before a new repository-wide baseline is claimed — last verified baseline **303 passed, 2 warnings**.
 
 Benchmark mode remains pinned: no credential failover and no silent model substitution during a scored run unless the benchmark contract is explicitly revised.
 
