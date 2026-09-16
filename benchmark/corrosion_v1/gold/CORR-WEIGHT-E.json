@@ -1,0 +1,63 @@
+{
+  "id": "CORR-WEIGHT-E",
+  "doi": "10.1016/j.sajce.2022.06.011",
+  "filename": "Corrosion 5.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; primary gold uses only explicitly stated focal values with explicit concentration, time and temperature associations.",
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false,
+    "derived_values_recomputed_by_synthex": false
+  },
+  "material": {
+    "name": "mild steel",
+    "role": "corroding_material",
+    "page": 2,
+    "composition_wt_percent": {"Fe": 99.21, "C": 0.21, "Si": 0.38, "P": 0.09, "S": 0.05, "Mn": 0.05, "Al": 0.01}
+  },
+  "environment_and_method": {
+    "electrolyte": "1.0 M HCl",
+    "method": "weight-loss",
+    "inhibitor": "1-(2-ethylamino-1,3,4-thiadiazol-5-yl)-3-phenyl-3-oxopropan (ETO)",
+    "tested_concentrations": ["100 ppm", "200 ppm", "300 ppm", "400 ppm", "500 ppm", "600 ppm"],
+    "tested_immersion_times": ["1 h", "5 h", "10 h", "24 h"],
+    "temperature_series": ["303 K", "313 K", "323 K", "333 K"],
+    "page": 2
+  },
+  "scored_numeric_observations": [
+    {
+      "metric": "corrosion_rate",
+      "value": 1.15,
+      "unit": "mm/y",
+      "conditions": {"medium": "1.0 M HCl", "inhibitor": "ETO", "inhibitor_concentration": "500 ppm", "immersion_time": "5 h", "temperature": "303 K"},
+      "experiment_type": "weight_loss",
+      "material_contains": "mild steel",
+      "page": 3,
+      "evidence_snippet": "At 500 ppm ETO and 5 h immersion, the text reports a corrosion rate of 1.15 mm/y at 303 K."
+    },
+    {
+      "metric": "inhibition_efficiency",
+      "value": 98.4,
+      "unit": "%",
+      "conditions": {"medium": "1.0 M HCl", "inhibitor": "ETO", "inhibitor_concentration": "500 ppm", "immersion_time": "5 h", "temperature": "303 K"},
+      "experiment_type": "weight_loss",
+      "material_contains": "mild steel",
+      "page": 3,
+      "evidence_snippet": "At the same concentration and immersion time, inhibition efficiency was 98.4% at 303 K."
+    }
+  ],
+  "verified_but_not_scored_as_exact_primary_gold": {
+    "concentration_sweep": {
+      "reported_inhibition_efficiencies_percent": {"100 ppm": 52.6, "200 ppm": 77.3, "300 ppm": 81.5, "400 ppm": 95.2, "500 ppm": 98.4, "600 ppm": 98.6},
+      "reported_corrosion_rates_mm_per_year": {"100 ppm": 2.71, "200 ppm": 1.74, "300 ppm": 1.28, "400 ppm": 1.17, "500 ppm": 0.97, "600 ppm": 0.94},
+      "reason_not_primary_gold": "The prose lists these concentration-dependent values while discussing Figure 2 across multiple immersion times, without a uniquely explicit time association for each listed pair."
+    },
+    "mass_loss": {
+      "reason": "The paper defines and uses weight loss to calculate corrosion rate, but no direct focal numeric mass-loss value with the required full association was selected for gold."
+    }
+  },
+  "source_conflicts_or_cautions": [
+    "The paper separately reports 0.97 mm/year at 500 ppm in a concentration-sweep paragraph and 1.15 mm/y at 500 ppm, 5 h, 303 K in the temperature-series paragraph. These are not silently reconciled. The scored value is the one with explicit concentration, time and temperature association."
+  ]
+}
