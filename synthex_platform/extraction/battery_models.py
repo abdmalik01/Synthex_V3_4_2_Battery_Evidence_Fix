@@ -94,7 +94,6 @@ def _canonical_property_name(name: str) -> str:
     }
     if key in aliases:
         return aliases[key]
-    # Prefix/substring fallbacks for symbols stripped by normalization.
     if "charge transfer resistance" in key:
         return "charge_transfer_resistance"
     if "diffusion coefficient" in key:
@@ -108,6 +107,23 @@ def _canonical_property_name(name: str) -> str:
     if "specific surface area" in key:
         return "specific_surface_area"
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+
+
+def _canonical_condition_name(name: str) -> str:
+    key = re.sub(r"[^a-z0-9]+", " ", name.lower()).strip()
+    aliases = {
+        "soc": "state_of_charge",
+        "state of charge": "state_of_charge",
+        "state of charge soc": "state_of_charge",
+        "depth of discharge": "depth_of_discharge",
+        "dod": "depth_of_discharge",
+        "current density": "current_density",
+        "areal current density": "current_density",
+        "specific current": "specific_current",
+        "ambient temperature": "ambient_temperature",
+        "internal temperature": "internal_temperature",
+    }
+    return aliases.get(key) or re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
 class BatteryEvidence(StrictBatteryModel):
@@ -173,6 +189,40 @@ class BatteryQuantity(StrictBatteryModel):
         return data
 
 
+class BatteryCondition(StrictBatteryModel):
+    """A source-backed condition attached to one reported performance point."""
+
+    property: str
+    raw_value: str | None = None
+    value: float | None = None
+    unit: str | None = None
+    qualifier: Literal["exact", "approx", "lower_bound", "upper_bound", "range", "unknown"] = "unknown"
+    evidence: list[BatteryEvidence] = Field(default_factory=list)
+
+    @model_validator(mode="before")
+    @classmethod
+    def canonicalize_condition(cls, data: Any) -> Any:
+        if not isinstance(data, dict):
+            return data
+        cleaned = dict(data)
+        if cleaned.get("property"):
+            cleaned["property"] = _canonical_condition_name(str(cleaned["property"]))
+        qualifier = cleaned.get("qualifier")
+        if qualifier not in QUALIFIERS:
+            raw_value = cleaned.get("raw_value")
+            cleaned["qualifier"] = (
+                _parse_quantity_string(raw_value)["qualifier"]
+                if isinstance(raw_value, str)
+                else "unknown"
+            )
+        evidence = cleaned.get("evidence")
+        if evidence is None:
+            cleaned["evidence"] = []
+        elif not isinstance(evidence, list):
+            cleaned["evidence"] = [evidence]
+        return cleaned
+
+
 class BatterySource(StrictBatteryModel):
     title: str | None = None
     doi: str | None = None
@@ -189,8 +239,6 @@ class BatteryProcessStep(StrictBatteryModel):
     duration: BatteryQuantity | None = None
     atmosphere: str | None = None
     details: str | None = None
-    # A process step can be supported by more than one passage/table/caption.
-    # Keep this as a list, while accepting the older singleton/string form.
     evidence: list[BatteryEvidence] = Field(default_factory=list)
 
     @model_validator(mode="before")
@@ -500,6 +548,7 @@ class BatteryPerformancePoint(StrictBatteryModel):
     c_rate: str | None = None
     voltage_window: str | None = None
     temperature: BatteryQuantity | None = None
+    additional_conditions: list[BatteryCondition] = Field(default_factory=list)
     method: str | None = None
     derivation: BatteryDerivation | None = None
     ownership: ResultOwnership = "unknown"
@@ -525,6 +574,11 @@ class BatteryPerformancePoint(StrictBatteryModel):
                 cleaned["evidence"] = []
             elif not isinstance(evidence, list):
                 cleaned["evidence"] = [evidence]
+            additional = cleaned.get("additional_conditions")
+            if additional is None:
+                cleaned["additional_conditions"] = []
+            elif not isinstance(additional, list):
+                cleaned["additional_conditions"] = [additional]
             return cleaned
         return data
 
