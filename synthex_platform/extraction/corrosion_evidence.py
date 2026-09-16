@@ -126,6 +126,61 @@ def verify_corrosion_evidence_item(
     })
 
 
+def _verified_evidence_dict(item: object) -> bool:
+    return (
+        isinstance(item, dict)
+        and item.get("verbatim_match") is True
+        and bool(item.get("text_snippet"))
+        and item.get("original_source_type") not in {"figure_reported", "unknown", None}
+    )
+
+
+def _verified_child_evidence(experiment: dict) -> list[dict]:
+    """Return already-verified child evidence that can ground an experiment shell.
+
+    This does not create evidence. It only reuses exact source-backed evidence already
+    attached to the experiment's own conditions or metrics. Individual quantitative
+    metrics still pass the stricter value-specific admission gate separately.
+    """
+    candidates: list[dict] = []
+    for key in ("polarization_conditions", "eis_conditions"):
+        condition = experiment.get(key)
+        if isinstance(condition, dict):
+            candidates.extend(
+                item for item in (condition.get("evidence") or [])
+                if _verified_evidence_dict(item)
+            )
+    for metric in experiment.get("metrics") or []:
+        if isinstance(metric, dict):
+            candidates.extend(
+                item for item in (metric.get("evidence") or [])
+                if _verified_evidence_dict(item)
+            )
+    return candidates
+
+
+def _propagate_structural_experiment_support(payload: dict) -> dict:
+    """Ground experiment records with verified child evidence when record evidence is absent.
+
+    Corrosion metrics are often reported only in tables. Requiring a second, separate
+    experiment-level quotation can discard a scientifically well-grounded table record.
+    We therefore copy one already-verified child evidence item to the experiment shell
+    only when the shell itself lacks verified evidence. This changes no value, unit,
+    ownership, condition, or admission rule for the metric itself.
+    """
+    for experiment in payload.get("experiments", []):
+        if not isinstance(experiment, dict):
+            continue
+        record_evidence = experiment.get("evidence") or []
+        if any(_verified_evidence_dict(item) for item in record_evidence):
+            continue
+        child = _verified_child_evidence(experiment)
+        if not child:
+            continue
+        experiment["evidence"] = [*record_evidence, child[0]]
+    return payload
+
+
 def verify_corrosion_document_evidence(
     document: CorrosionDocument,
     source_bundle: SourceBundle,
@@ -143,4 +198,6 @@ def verify_corrosion_document_evidence(
             return verify_corrosion_evidence_item(item, source_bundle).model_dump(mode="python")
         return {key: walk(item) for key, item in value.items()}
 
-    return CorrosionDocument.model_validate(walk(payload))
+    verified_payload = walk(payload)
+    verified_payload = _propagate_structural_experiment_support(verified_payload)
+    return CorrosionDocument.model_validate(verified_payload)
