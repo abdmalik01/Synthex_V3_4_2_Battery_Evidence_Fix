@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import io
 import logging
 
@@ -50,11 +51,25 @@ def _native_point(x: float, y: float, scale_x: float, scale_y: float) -> tuple[f
     return float(x) * scale_x, float(y) * scale_y
 
 
-def _drag_bounds(value: dict | None, scale_x: float, scale_y: float) -> tuple[float, float, float, float] | None:
+def _drag_bounds(
+    value: dict | None,
+    scale_x: float,
+    scale_y: float,
+    *,
+    display_width: int | None = None,
+    display_height: int | None = None,
+) -> tuple[float, float, float, float] | None:
     if not value or not all(key in value for key in ("x1", "y1", "x2", "y2")):
         return None
-    x1, y1 = _native_point(value["x1"], value["y1"], scale_x, scale_y)
-    x2, y2 = _native_point(value["x2"], value["y2"], scale_x, scale_y)
+    x1, y1, x2, y2 = (float(value[key]) for key in ("x1", "y1", "x2", "y2"))
+    if display_width is not None:
+        x1 = min(max(x1, 0.0), float(display_width - 1))
+        x2 = min(max(x2, 0.0), float(display_width - 1))
+    if display_height is not None:
+        y1 = min(max(y1, 0.0), float(display_height - 1))
+        y2 = min(max(y2, 0.0), float(display_height - 1))
+    x1, y1 = _native_point(x1, y1, scale_x, scale_y)
+    x2, y2 = _native_point(x2, y2, scale_x, scale_y)
     left, right = sorted((x1, x2))
     top, bottom = sorted((y1, y2))
     if right <= left or bottom <= top:
@@ -70,6 +85,66 @@ def _sample_rgb(image: Image.Image, value: dict | None, scale_x: float, scale_y:
     py = min(max(int(round(y)), 0), image.height - 1)
     pixel = image.convert("RGB").getpixel((px, py))
     return int(pixel[0]), int(pixel[1]), int(pixel[2])
+
+
+def _selection_overlay(
+    image: Image.Image,
+    *,
+    drag_value: dict | None = None,
+    point_value: dict | None = None,
+) -> Image.Image:
+    """Draw persistent selection feedback on the interactive display image."""
+    canvas = image.convert("RGBA")
+    overlay = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    line_width = max(2, round(min(canvas.size) / 220))
+
+    if drag_value and all(key in drag_value for key in ("x1", "y1", "x2", "y2")):
+        x1 = min(max(float(drag_value["x1"]), 0.0), float(canvas.width - 1))
+        x2 = min(max(float(drag_value["x2"]), 0.0), float(canvas.width - 1))
+        y1 = min(max(float(drag_value["y1"]), 0.0), float(canvas.height - 1))
+        y2 = min(max(float(drag_value["y2"]), 0.0), float(canvas.height - 1))
+        left, right = sorted((x1, x2))
+        top, bottom = sorted((y1, y2))
+        if right > left and bottom > top:
+            draw.rectangle(
+                (left, top, right, bottom),
+                fill=(255, 76, 76, 28),
+                outline=(255, 76, 76, 255),
+                width=line_width,
+            )
+
+    if point_value and "x" in point_value and "y" in point_value:
+        x = min(max(float(point_value["x"]), 0.0), float(canvas.width - 1))
+        y = min(max(float(point_value["y"]), 0.0), float(canvas.height - 1))
+        radius = max(5, round(min(canvas.size) / 75))
+        draw.ellipse(
+            (x - radius, y - radius, x + radius, y + radius),
+            fill=(255, 255, 255, 220),
+            outline=(255, 76, 76, 255),
+            width=line_width,
+        )
+        draw.line((x - radius, y, x + radius, y), fill=(255, 76, 76, 255), width=line_width)
+        draw.line((x, y - radius, x, y + radius), fill=(255, 76, 76, 255), width=line_width)
+
+    return Image.alpha_composite(canvas, overlay).convert("RGB")
+
+
+def _axis_calibration_error(axis: str, start: float, end: float, is_log: bool) -> str | None:
+    if start == end:
+        return f"{axis}-axis calibration needs two different values."
+    if is_log and (start <= 0 or end <= 0):
+        return (
+            f"{axis}-axis is marked logarithmic, so both calibration values must be greater than 0. "
+            f"Untick the logarithmic option if the published axis is linear."
+        )
+    return None
+
+
+def _selection_signature(value: dict | None, keys: tuple[str, ...]) -> tuple[float, ...] | None:
+    if not value or not all(key in value for key in keys):
+        return None
+    return tuple(float(value[key]) for key in keys)
 
 
 def _result_rows(result) -> list[dict]:
@@ -127,8 +202,8 @@ def render_graph_extraction_ui() -> None:
         st.write(
             "1. Upload a clear graph or single figure panel.\n"
             "2. Drag across the interior plotting rectangle.\n"
-            "3. Enter the visible X and Y axis limits.\n"
-            "4. Click directly on the curve you want Synthex to trace.\n"
+            "3. Click directly on the curve you want Synthex to trace.\n"
+            "4. Enter the visible X and Y axis limits.\n"
             "5. Review the detected points and export them as CSV or JSON."
         )
 
@@ -147,6 +222,12 @@ def render_graph_extraction_ui() -> None:
     width, height = image.size
     display_image, scale_x, scale_y = _interactive_image(image)
 
+    image_token = hashlib.sha256(image_bytes).hexdigest()
+    if st.session_state.get("synthex_graph_image_token") != image_token:
+        st.session_state["synthex_graph_image_token"] = image_token
+        st.session_state["synthex_graph_plot_selection"] = None
+        st.session_state["synthex_graph_curve_selection"] = None
+
     try:
         from streamlit_image_coordinates import streamlit_image_coordinates
     except ImportError:
@@ -154,36 +235,72 @@ def render_graph_extraction_ui() -> None:
         st.info("Interactive graph calibration is temporarily unavailable. You can still use Manual calibration below.")
         streamlit_image_coordinates = None
 
-    interactive_bounds = None
-    sampled_rgb = None
+    stored_drag = st.session_state.get("synthex_graph_plot_selection")
+    stored_curve = st.session_state.get("synthex_graph_curve_selection")
+    interactive_bounds = _drag_bounds(
+        stored_drag,
+        scale_x,
+        scale_y,
+        display_width=display_image.width,
+        display_height=display_image.height,
+    )
+    sampled_rgb = _sample_rgb(image, stored_curve, scale_x, scale_y)
+
     if streamlit_image_coordinates is not None:
         st.markdown("### 2 · Select the plotting area")
-        st.caption("Drag from one corner of the inner graph rectangle to the opposite corner. Exclude titles, legends and axis labels.")
+        st.caption(
+            "Drag from one corner of the inner graph rectangle to the opposite corner. "
+            "The selected region will remain highlighted."
+        )
+        bounds_image = _selection_overlay(display_image, drag_value=stored_drag)
         drag_value = streamlit_image_coordinates(
-            display_image,
+            bounds_image,
             key="synthex_graph_plot_bounds",
             click_and_drag=True,
             cursor="crosshair",
         )
-        interactive_bounds = _drag_bounds(drag_value, scale_x, scale_y)
+        new_drag_signature = _selection_signature(drag_value, ("x1", "y1", "x2", "y2"))
+        old_drag_signature = _selection_signature(stored_drag, ("x1", "y1", "x2", "y2"))
+        if new_drag_signature is not None and new_drag_signature != old_drag_signature:
+            st.session_state["synthex_graph_plot_selection"] = {
+                key: drag_value[key] for key in ("x1", "y1", "x2", "y2")
+            }
+            st.rerun()
         if interactive_bounds:
-            st.success("Plot area selected.")
+            st.success("Plot area selected and highlighted.")
         else:
             st.caption("Drag across the graph to select its plotting area.")
 
         st.markdown("### 3 · Select the curve")
-        st.caption("Click directly on the coloured line or marker series you want Synthex to recover.")
+        st.caption("Click directly on a clear section of the coloured line or marker series.")
+        curve_image = _selection_overlay(display_image, drag_value=stored_drag, point_value=stored_curve)
         curve_value = streamlit_image_coordinates(
-            display_image,
+            curve_image,
             key="synthex_graph_curve_sample",
             cursor="crosshair",
         )
-        sampled_rgb = _sample_rgb(image, curve_value, scale_x, scale_y)
+        new_curve_signature = _selection_signature(curve_value, ("x", "y"))
+        old_curve_signature = _selection_signature(stored_curve, ("x", "y"))
+        if new_curve_signature is not None and new_curve_signature != old_curve_signature:
+            st.session_state["synthex_graph_curve_selection"] = {
+                key: curve_value[key] for key in ("x", "y")
+            }
+            st.rerun()
         if sampled_rgb:
             swatch = "#{:02X}{:02X}{:02X}".format(*sampled_rgb)
-            st.success(f"Curve colour sampled: {swatch}")
+            st.success(f"Curve selected and marked · sampled colour {swatch}")
         else:
             st.caption("Click a curve to sample its colour.")
+
+        controls = st.columns(2)
+        with controls[0]:
+            if st.button("Clear plot selection", key="synthex_clear_plot_selection"):
+                st.session_state["synthex_graph_plot_selection"] = None
+                st.rerun()
+        with controls[1]:
+            if st.button("Clear curve selection", key="synthex_clear_curve_selection"):
+                st.session_state["synthex_graph_curve_selection"] = None
+                st.rerun()
 
     with st.form("graph_digitization_calibration"):
         st.markdown("### 4 · Calibrate the axes")
@@ -207,9 +324,17 @@ def render_graph_extraction_ui() -> None:
             y1 = st.number_input("Y-axis value at the top", value=1.0)
         scale_left, scale_right = st.columns(2)
         with scale_left:
-            x_log = st.checkbox("X axis uses a logarithmic scale")
+            x_log = st.checkbox(
+                "X axis uses a logarithmic scale",
+                help="Enable only if the published X axis is logarithmic. Logarithmic calibration values must be greater than 0.",
+            )
         with scale_right:
-            y_log = st.checkbox("Y axis uses a logarithmic scale")
+            y_log = st.checkbox(
+                "Y axis uses a logarithmic scale",
+                help="Enable only if the published Y axis is logarithmic. Logarithmic calibration values must be greater than 0.",
+            )
+
+        st.caption("Only enable logarithmic scale when the published graph actually uses it. A log axis cannot include 0 or negative calibration values.")
 
         with st.expander("Manual calibration"):
             st.caption("Fallback controls. Use these only if interactive selection is unavailable or needs correction.")
@@ -223,6 +348,14 @@ def render_graph_extraction_ui() -> None:
         submitted = st.form_submit_button("Extract estimated data", type="primary")
 
     if not submitted:
+        return
+
+    x_error = _axis_calibration_error("X", float(x0), float(x1), bool(x_log))
+    y_error = _axis_calibration_error("Y", float(y0), float(y1), bool(y_log))
+    if x_error or y_error:
+        for message in (x_error, y_error):
+            if message:
+                st.warning(message)
         return
 
     try:
