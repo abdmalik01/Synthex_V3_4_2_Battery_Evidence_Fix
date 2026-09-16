@@ -165,6 +165,23 @@ def _reported_potential_conditions(potential) -> tuple[dict, list[str]]:
     return conditions, [warning] if warning else []
 
 
+def _measurement_condition_payload(measurement: Measurement) -> dict:
+    """Preserve an admitted condition as a plotting-safe source-linked quantity."""
+    return {
+        key: value
+        for key, value in {
+            "raw_value": measurement.raw_value,
+            "value": measurement.value,
+            "unit": measurement.unit,
+            "normalized_value": measurement.normalized_value,
+            "normalized_unit": measurement.normalized_unit,
+            "qualifier": measurement.qualifier,
+            "evidence": [item.model_dump(mode="json", exclude_none=True) for item in measurement.evidence],
+        }.items()
+        if value not in (None, "", [])
+    }
+
+
 def assemble_catalysis_archive(
     document: CatalysisDocument,
     model: str | None = None,
@@ -303,6 +320,7 @@ def assemble_catalysis_archive(
             ))
 
     experiments: list[ExperimentRecord] = []
+    calculations: list[CalculationRecord] = []
     experiment_material: dict[str, str] = {}
 
     def assemble_experiment(experiment, *, electrochemical: bool) -> None:
@@ -315,50 +333,15 @@ def assemble_catalysis_archive(
             )
             audit.reject(f"experiments.{experiment.experiment_id}", reason, experiment, ownership=experiment.ownership)
             return
-        outputs: list[Measurement] = []
+
         conflict = _unresolved_conflict(document, experiment.experiment_id)
-        for index, metric in enumerate(experiment.metrics):
-            evidence = metric.evidence or experiment.evidence
-            basis = metric.normalization_basis
-            potential = getattr(metric, "potential", None)
-            potential_conditions, potential_warnings = _reported_potential_conditions(potential)
-            warnings.extend(potential_warnings)
-            feed_composition = [
-                component.model_dump(mode="json", exclude_none=True)
-                for component in getattr(experiment, "feed_composition", [])
-            ]
-            conditions = {
-                "reaction": experiment.reaction.reported_reaction,
-                "reaction_class": experiment.reaction.reaction_class,
-                "reactant": getattr(metric, "reactant", None),
-                "product": getattr(metric, "product", None),
-                "feed_composition": feed_composition,
-                "normalization_basis": basis.model_dump(mode="json", exclude_none=True) if basis else None,
-                "normalization_key": normalization_key(basis),
-                "comparability_status": comparability_status(basis),
-                "_semantic_invalid": bool(
-                    electrochemical and experiment.pH is not None and not 0 <= experiment.pH <= 14
-                ),
-                **potential_conditions,
-            }
-            measurement = audit.measurement(
-                path=f"experiments.{experiment.experiment_id}.metrics.{index}",
-                property_name=metric.property, metric=metric, evidence=evidence,
-                ownership=_ownership(experiment.ownership, metric.ownership),
-                scope_status=document.scope_status, sid=sid, conditions=conditions,
-                unresolved_conflict=conflict,
-            )
-            if measurement:
-                outputs.append(measurement)
-        if not outputs:
-            audit.reject(f"experiments.{experiment.experiment_id}", "no_value_specific_evidence", experiment, ownership=experiment.ownership)
-            return
-        experiment_id = stable_id("exp", sid, experiment.experiment_id)
         conditions: list[Measurement] = []
         condition_names = (
             ("catalyst_loading", "electrolyte_concentration", "temperature")
-            if electrochemical else ("catalyst_mass", "temperature", "pressure", "whsv", "ghsv")
+            if electrochemical
+            else ("catalyst_mass", "temperature", "pressure", "whsv", "ghsv", "reaction_time", "time_on_stream")
         )
+        admitted_condition_names: set[str] = set()
         for name in condition_names:
             quantity = getattr(experiment, name, None)
             if quantity is not None:
@@ -370,18 +353,127 @@ def assemble_catalysis_archive(
                 )
                 if admitted_condition:
                     conditions.append(admitted_condition)
-        experiments.append(ExperimentRecord(
-            experiment_id=experiment_id,
-            experiment_type="electrocatalysis" if electrochemical else "heterogeneous_catalysis",
-            material_ids=[material_id], target=experiment.reaction.reported_reaction,
-            conditions=conditions, outputs=outputs, evidence=_canonical_evidence(experiment.evidence, sid),
-        ))
+                    admitted_condition_names.add(name)
+
+        # V1.1: RSM/DoE factors are explicit, typed quantities on the parent run.
+        # They are admitted one by one and must match one of the run's verified
+        # evidence cells/snippets; a response value cannot silently validate them.
+        if not electrochemical:
+            for name, quantity in sorted(experiment.experimental_conditions.items()):
+                if name in admitted_condition_names or getattr(experiment, name, None) is not None:
+                    continue
+                admitted_condition = audit.measurement(
+                    path=f"experiments.{experiment.experiment_id}.experimental_conditions.{name}",
+                    property_name=name, metric=quantity, evidence=experiment.evidence,
+                    ownership=experiment.ownership, scope_status=document.scope_status,
+                    sid=sid, conditions={}, unresolved_conflict=conflict,
+                )
+                if admitted_condition:
+                    conditions.append(admitted_condition)
+                    admitted_condition_names.add(name)
+
+        condition_context = {
+            item.property: _measurement_condition_payload(item)
+            for item in conditions
+        }
+        outputs: list[Measurement] = []
+        predicted_outputs: list[Measurement] = []
+        prediction_models: set[str] = set()
+        for index, metric in enumerate(experiment.metrics):
+            evidence = metric.evidence or experiment.evidence
+            basis = metric.normalization_basis
+            potential = getattr(metric, "potential", None)
+            potential_conditions, potential_warnings = _reported_potential_conditions(potential)
+            warnings.extend(potential_warnings)
+            feed_composition = [
+                component.model_dump(mode="json", exclude_none=True)
+                for component in getattr(experiment, "feed_composition", [])
+            ]
+            response_origin = getattr(metric, "response_origin", "observed")
+            model_name = getattr(metric, "model_name", None)
+            metric_context = dict(getattr(metric, "conditions", {}) or {})
+            metric_context.update({
+                "reaction": experiment.reaction.reported_reaction,
+                "reaction_class": experiment.reaction.reaction_class,
+                "reactant": getattr(metric, "reactant", None),
+                "product": getattr(metric, "product", None),
+                "feed_composition": feed_composition,
+                "response_origin": response_origin if not electrochemical else None,
+                "model_name": model_name if not electrochemical else None,
+                "rsm_run_id": experiment.experiment_id if not electrochemical else None,
+                "normalization_basis": basis.model_dump(mode="json", exclude_none=True) if basis else None,
+                "normalization_key": normalization_key(basis),
+                "comparability_status": comparability_status(basis),
+                "_semantic_invalid": bool(
+                    electrochemical and experiment.pH is not None and not 0 <= experiment.pH <= 14
+                ),
+                **potential_conditions,
+            })
+            measurement = audit.measurement(
+                path=f"experiments.{experiment.experiment_id}.metrics.{index}",
+                property_name=metric.property, metric=metric, evidence=evidence,
+                ownership=_ownership(experiment.ownership, metric.ownership),
+                scope_status=document.scope_status, sid=sid, conditions=metric_context,
+                unresolved_conflict=conflict,
+            )
+            if measurement:
+                if not electrochemical and response_origin == "model_predicted":
+                    predicted_outputs.append(measurement)
+                    if model_name:
+                        prediction_models.add(model_name)
+                else:
+                    outputs.append(measurement)
+
+        if not outputs and not predicted_outputs:
+            audit.reject(f"experiments.{experiment.experiment_id}", "no_value_specific_evidence", experiment, ownership=experiment.ownership)
+            return
+
+        experiment_id = stable_id("exp", sid, experiment.experiment_id)
+        if outputs:
+            experiments.append(ExperimentRecord(
+                experiment_id=experiment_id,
+                experiment_type="electrocatalysis" if electrochemical else "heterogeneous_catalysis",
+                material_ids=[material_id], target=experiment.reaction.reported_reaction,
+                conditions=conditions, outputs=outputs, evidence=_canonical_evidence(experiment.evidence, sid),
+            ))
+            relationships.append(Relationship(
+                relation_id=stable_id("rel", material_id, "tested_in", experiment_id),
+                subject_id=material_id, predicate="tested_in", object_id=experiment_id,
+                evidence=_canonical_evidence(experiment.evidence, sid),
+            ))
+
+        # Predicted RSM responses are source-reported model outputs, not measured
+        # experimental responses. Keep them in computational modality while
+        # carrying the same independently admitted run factors as parameters.
+        if predicted_outputs:
+            calculation_id = stable_id("calc", sid, experiment.experiment_id, "rsm_prediction")
+            calculation_evidence = _canonical_evidence(experiment.evidence, sid)
+            if not calculation_evidence:
+                calculation_evidence = [
+                    item
+                    for output in predicted_outputs
+                    for item in output.evidence
+                ]
+            calculations.append(CalculationRecord(
+                calculation_id=calculation_id,
+                calculation_type="response_surface_model_prediction",
+                material_ids=[material_id],
+                method="; ".join(sorted(prediction_models)) or "response surface methodology",
+                model={
+                    "source_experiment_id": experiment.experiment_id,
+                    "response_origin": "model_predicted",
+                },
+                parameters=[item.model_copy(deep=True) for item in conditions],
+                outputs=predicted_outputs,
+                evidence=calculation_evidence,
+            ))
+            relationships.append(Relationship(
+                relation_id=stable_id("rel", material_id, "calculated_for", calculation_id),
+                subject_id=material_id, predicate="calculated_for", object_id=calculation_id,
+                evidence=calculation_evidence,
+            ))
+
         experiment_material[experiment.experiment_id] = material_id
-        relationships.append(Relationship(
-            relation_id=stable_id("rel", material_id, "tested_in", experiment_id),
-            subject_id=material_id, predicate="tested_in", object_id=experiment_id,
-            evidence=_canonical_evidence(experiment.evidence, sid),
-        ))
         product_evidence = {
             output.conditions.get("product"): output.evidence
             for output in outputs if output.conditions.get("product")
@@ -425,7 +517,8 @@ def assemble_catalysis_archive(
         evidence = metric.evidence or stability.evidence
         potential_conditions, potential_warnings = _reported_potential_conditions(stability.operating_potential)
         warnings.extend(potential_warnings)
-        conditions = {
+        metric_context = dict(getattr(metric, "conditions", {}) or {})
+        metric_context.update({
             "mode": stability.mode,
             "duration": stability.duration.model_dump(exclude_none=True) if stability.duration else None,
             "cycle_count": stability.cycle_count,
@@ -435,12 +528,12 @@ def assemble_catalysis_archive(
             "catalyst_state_ref": stability.catalyst_state_ref,
             "catalyst_state": next((x.state for x in document.catalysts if x.local_id == (stability.catalyst_state_ref or next((e.catalyst_ref for e in [*document.heterogeneous_experiments, *document.electrocatalysis_experiments] if e.experiment_id == stability.experiment_ref), None))), "unknown"),
             **potential_conditions,
-        }
+        })
         output = audit.measurement(
             path=f"stability_tests.{stability.stability_id}.retained_metric",
             property_name=metric.property, metric=metric, evidence=evidence,
             ownership=_ownership(stability.ownership, metric.ownership),
-            scope_status=document.scope_status, sid=sid, conditions=conditions,
+            scope_status=document.scope_status, sid=sid, conditions=metric_context,
             unresolved_conflict=_unresolved_conflict(document, stability.stability_id),
         )
         if output:
@@ -452,7 +545,6 @@ def assemble_catalysis_archive(
                 evidence=_canonical_evidence(stability.evidence, sid),
             ))
 
-    calculations: list[CalculationRecord] = []
     for calculation in document.calculations:
         material_refs = [material_ids[item] for item in calculation.material_refs if item in material_ids]
         if calculation.ownership != "focal_work" or not material_refs or document.scope_status != "supported":
@@ -524,7 +616,7 @@ def assemble_catalysis_archive(
         metadata=ArchiveMetadata(archive_id=archive_id, extractor_model=model, domain="catalysis"),
         sources=[source], materials=materials, processes=processes,
         experiments=experiments, calculations=calculations, relationships=relationships,
-        domain_payloads=[DomainPayload(domain="catalysis", schema_version="1.0-stage2", values=payload)],
+        domain_payloads=[DomainPayload(domain="catalysis", schema_version="1.1-photocatalysis-rsm", values=payload)],
         quality=QualityRecord(semantic_warnings=semantic_warnings),
     )
     score_archive(archive)
