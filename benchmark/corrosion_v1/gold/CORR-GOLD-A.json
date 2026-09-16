@@ -1,0 +1,127 @@
+{
+  "id": "CORR-GOLD-A",
+  "doi": "10.20964/2020.01.26",
+  "filename": "Corrosion 1.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; no LLM-generated or inferred numeric gold.",
+    "reference_electrode_conversion_performed": false,
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false
+  },
+  "material": {
+    "name": "14Cr12Ni3Mo2VN martensitic stainless steel",
+    "role": "working_electrode",
+    "page": 2,
+    "composition_wt_percent": {
+      "C": 0.15,
+      "Si": 0.12,
+      "Mn": 0.75,
+      "S": 0.073,
+      "P": 0.013,
+      "Cr": 11.50,
+      "Ni": 2.97,
+      "Mo": 1.61,
+      "V": 0.28,
+      "N": 0.034,
+      "Fe": "balance"
+    },
+    "evidence_snippet": "14Cr12Ni3Mo2VN martensitic stainless steel specimens were used in this study, and their chemical composition is shown in Table 1."
+  },
+  "environment_and_setup": {
+    "electrolytes": [
+      "100 mmol·L-1 NaCl",
+      "200 mmol·L-1 NaCl",
+      "300 mmol·L-1 NaCl",
+      "400 mmol·L-1 NaCl"
+    ],
+    "working_electrode_exposed_area": "1 cm2",
+    "counter_electrode": "platinum plate",
+    "reference_electrode": "SCE (saturated calomel electrode)",
+    "deaeration_or_pre_exposure": "NaCl solution injected with 99.999% argon for 72 h before electrochemical testing",
+    "ocp_stabilization": "30 min",
+    "page": 2,
+    "evidence_snippet": "A platinum plate was used as a counter electrode, and an SCE (saturated calomel electrode) was used as a reference electrode. The experimental electrochemical media were NaCl solutions with different concentrations of 100, 200, 300 and 400 mmol·L-1."
+  },
+  "potentiodynamic_protocol": {
+    "scan_rate": "1 mV·s-1",
+    "start_potential": "-500 mV (vs. SCE)",
+    "reverse_scan_trigger": "anodic polarization current density reached 1 mA·cm-2",
+    "pitting_potential_definition": "potential corresponding to the current density rapidly increasing to 100 μA·cm-2",
+    "page": 3,
+    "definition_page": 4,
+    "evidence_snippet": "The potentiodynamic measurement rate was set to 1 mV·s-1, and the scanning range started from -500 mV (vs. SCE) and progressed to an anodic potential value."
+  },
+  "eis_protocol": {
+    "frequency_range": "10^5-10^-2 Hz",
+    "amplitude": "10 mV",
+    "page": 3,
+    "equivalent_circuit_page": 5,
+    "table_page": 6,
+    "element_semantics": {
+      "Rs": "solution resistance",
+      "Rt": "charge transfer resistance of the surface double layer",
+      "Rf": "passivation film resistance",
+      "Qdl": "CPE of the surface double layer",
+      "Qf": "CPE of the passivation film"
+    }
+  },
+  "scored_numeric_observations": [
+    {
+      "metric": "solution_resistance",
+      "value": 75.21,
+      "unit": "Ω·cm2",
+      "conditions": {"NaCl_concentration": "100 mmol·L-1"},
+      "experiment_type": "electrochemical impedance spectroscopy",
+      "material_contains": "14Cr12Ni3Mo2VN",
+      "page": 6,
+      "evidence_snippet": "Table 2: 100 mmol·L-1 NaCl; Rs = 75.21 Ω·cm2."
+    },
+    {
+      "metric": "charge_transfer_resistance",
+      "value": 14600.0,
+      "unit": "Ω·cm2",
+      "conditions": {"NaCl_concentration": "100 mmol·L-1"},
+      "experiment_type": "electrochemical impedance spectroscopy",
+      "material_contains": "14Cr12Ni3Mo2VN",
+      "page": 6,
+      "evidence_snippet": "Table 2: 100 mmol·L-1 NaCl; Rt = 1.46×10^4 Ω·cm2."
+    },
+    {
+      "metric": "solution_resistance",
+      "value": 22.19,
+      "unit": "Ω·cm2",
+      "conditions": {"NaCl_concentration": "400 mmol·L-1"},
+      "experiment_type": "electrochemical impedance spectroscopy",
+      "material_contains": "14Cr12Ni3Mo2VN",
+      "page": 6,
+      "evidence_snippet": "Table 2: 400 mmol·L-1 NaCl; Rs = 22.19 Ω·cm2."
+    },
+    {
+      "metric": "charge_transfer_resistance",
+      "value": 35600.0,
+      "unit": "Ω·cm2",
+      "conditions": {"NaCl_concentration": "400 mmol·L-1"},
+      "experiment_type": "electrochemical impedance spectroscopy",
+      "material_contains": "14Cr12Ni3Mo2VN",
+      "page": 6,
+      "evidence_snippet": "Table 2: 400 mmol·L-1 NaCl; Rt = 3.56×10^4 Ω·cm2."
+    }
+  ],
+  "verified_but_not_scored_as_exact_numeric_gold": {
+    "corrosion_potential": {
+      "reason": "Discussed and plotted in Figure 2a, but no exact scalar values are tabulated or printed in the text. No plot digitization is permitted for gold.",
+      "page": 4
+    },
+    "pitting_potential": {
+      "reason": "Defined and plotted in Figure 2b, but no exact scalar values are tabulated or printed in the text. No plot digitization is permitted for gold.",
+      "page": 4
+    },
+    "corrosion_current_density": {
+      "reason": "Current density is shown on the potentiodynamic curves, but exact corrosion-current-density values are not tabulated or printed as focal scalar results. No plot digitization is permitted for gold.",
+      "page": 4
+    },
+    "qualitative_polarization_result": "With increasing NaCl concentration, pitting potential and protection potential decrease; corrosion potential in Figure 2a is more negative than the OCP because of cathodic polarization."
+  }
+}
