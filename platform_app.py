@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+import logging
 import os
 from pathlib import Path
 import tempfile
@@ -47,6 +48,7 @@ from synthex_platform.retrieval.discovery import (
 )
 from synthex_platform.storage import JsonlArchiveStore
 from synthex_platform.ui_empty_state import archive_empty_state
+from synthex_platform.ui_errors import PublicErrorNotice, is_server_busy_error, public_error_notice
 from synthex_platform.ui_navigation import developer_mode_enabled, navigation_items
 from synthex_platform.ui_session import clear_research_workspace
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
@@ -56,6 +58,7 @@ from synthex_platform.visual.digitization.models import PixelBoundingBox
 
 st.set_page_config(page_title="Synthex · Materials Intelligence", page_icon="🧬", layout="wide")
 
+logger = logging.getLogger("synthex.ui")
 registry = DomainRegistry()
 store = JsonlArchiveStore("data/archive/archives.jsonl")
 router = DomainRouter(registry)
@@ -150,9 +153,21 @@ def _batch_json_zip(archives: list[SynthexArchive]) -> bytes:
     return buffer.getvalue()
 
 
+def _record_ui_error(context: str, exc: Exception) -> None:
+    """Keep technical failures in backend logs instead of the public Streamlit UI."""
+    logger.exception("Synthex UI operation failed [%s]: %s", context, exc)
+
+
+def _render_public_notice(notice: PublicErrorNotice) -> None:
+    body = f"**{notice.title}**\n\n{notice.message}"
+    if notice.status == "server_busy":
+        st.warning(body)
+    else:
+        st.info(body)
+
+
 def _stop_worthy_provider_error(exc: Exception) -> bool:
-    text = str(exc).casefold()
-    return any(token in text for token in ("resource_exhausted", "quota", "429", "all configured gemini models"))
+    return is_server_busy_error(exc)
 
 
 def _combined_records(archives: list[SynthexArchive], attribute: str, include_quarantined: bool) -> list[dict]:
@@ -243,7 +258,8 @@ elif page == "Discover Papers":
                 result = discover_papers(research_query, focus=focus, num_results=int(number_of_results))
             store_discovery_results(st.session_state, result)
         except DiscoveryError as exc:
-            st.error(str(exc))
+            _record_ui_error("paper_discovery", exc)
+            _render_public_notice(public_error_notice(exc, context="discovery"))
 
     if st.button("Clear search results", icon=":material/clear_all:"):
         clear_discovery_results(st.session_state)
@@ -336,7 +352,7 @@ elif page == "Analyze Papers":
         if os.getenv("SERPER_API_KEY"):
             find_supplementary = st.checkbox("Also search for supplementary/supporting information", value=False)
         else:
-            st.warning("SERPER_API_KEY is not configured in .env. Search-assisted mode will fail until you add it.")
+            st.info("Search-assisted enrichment is temporarily unavailable on this installation.")
 
     uploaded_files = st.file_uploader(
         f"Upload PDFs — up to {MAX_BATCH_PAPERS} at once",
@@ -350,14 +366,15 @@ elif page == "Analyze Papers":
         try:
             validate_batch_size(len(uploaded_files))
         except ValueError as exc:
-            st.error(str(exc))
+            _record_ui_error("batch_selection", exc)
+            _render_public_notice(public_error_notice(exc, context="batch_selection"))
         else:
             if len(uploaded_files) >= MIN_RESEARCH_BATCH:
                 st.success(f"Research batch ready: {len(uploaded_files)} papers selected.")
             if len(uploaded_files) > 1:
                 st.warning(
-                    "Each PDF can require one or more Gemini calls. Provider quotas may stop a large batch part-way through. "
-                    "Completed papers are preserved and unresolved papers are reported."
+                    "Large batches may pause if the processing service becomes busy. "
+                    "Completed papers are preserved so you can safely retry the remainder."
                 )
             button_label = "Extract research record" if len(uploaded_files) == 1 else f"Extract {len(uploaded_files)} papers"
             if st.button(button_label, type="primary"):
@@ -384,28 +401,34 @@ elif page == "Analyze Papers":
                         bundle = pipeline.build_source_bundle(tmp_path, source_filename=uploaded.name)
                         resolved_route, archive = pipeline.extract_source_bundle(bundle, domain=domain)
                     except (StructuredExtractionValidationError, CatalysisStructuredExtractionValidationError) as exc:
+                        _record_ui_error("paper_extraction_validation", exc)
+                        notice = public_error_notice(exc, context="extraction_validation")
                         statuses.append({
                             "file": uploaded.name,
-                            "status": "validation_failed",
+                            "status": notice.status,
                             "domain": getattr(exc, "route", None),
-                            "message": str(exc),
+                            "message": notice.message,
                         })
                     except GeminiModelsUnavailableError as exc:
+                        _record_ui_error("gemini_models_unavailable", exc)
+                        notice = public_error_notice(exc, force_server_busy=True)
                         statuses.append({
                             "file": uploaded.name,
-                            "status": "provider_blocked",
+                            "status": notice.status,
                             "domain": None,
-                            "message": str(exc),
+                            "message": f"{notice.title} — {notice.message}",
                         })
                         stop_batch = True
                     except Exception as exc:
+                        _record_ui_error("paper_extraction_unexpected", exc)
+                        stop_batch = _stop_worthy_provider_error(exc)
+                        notice = public_error_notice(exc, force_server_busy=stop_batch)
                         statuses.append({
                             "file": uploaded.name,
-                            "status": "provider_blocked" if _stop_worthy_provider_error(exc) else "failed",
+                            "status": notice.status,
                             "domain": None,
-                            "message": str(exc),
+                            "message": f"{notice.title} — {notice.message}" if notice.status == "server_busy" else notice.message,
                         })
-                        stop_batch = _stop_worthy_provider_error(exc)
                     else:
                         archive_data = archive.model_dump(exclude_none=True)
                         completed.append(archive_data)
@@ -425,7 +448,7 @@ elif page == "Analyze Papers":
                                 "file": remaining.name,
                                 "status": "not_attempted",
                                 "domain": None,
-                                "message": "Batch stopped after provider/quota blockage to avoid wasting calls.",
+                                "message": "Not processed because the service became busy. Please try again shortly.",
                             })
                         break
 
@@ -440,8 +463,21 @@ elif page == "Analyze Papers":
     archives = _session_archives()
 
     if batch_status:
+        if any(item.get("status") == "server_busy" for item in batch_status):
+            _render_public_notice(public_error_notice(force_server_busy=True))
         st.subheader("Batch status")
-        st.dataframe(batch_status, hide_index=True, width="stretch")
+        display_statuses = []
+        status_labels = {
+            "complete": "Complete",
+            "server_busy": "Server Busy",
+            "could_not_complete": "Please retry",
+            "not_attempted": "Not processed",
+        }
+        for item in batch_status:
+            display_item = dict(item)
+            display_item["status"] = status_labels.get(str(item.get("status", "")), "Please retry")
+            display_statuses.append(display_item)
+        st.dataframe(display_statuses, hide_index=True, width="stretch")
 
     if archives:
         if len(archives) > 1:
@@ -833,7 +869,8 @@ elif page == "Figure Data":
                 else:
                     st.warning("Digitization was rejected: " + "; ".join(result.rejection_reasons))
             except (ValueError, TypeError) as error:
-                st.error(f"Calibration was not accepted: {error}")
+                _record_ui_error("figure_calibration", error)
+                _render_public_notice(public_error_notice(error, context="calibration"))
 
 
 elif page == "Developer · Battery validation":
