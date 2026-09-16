@@ -1,8 +1,8 @@
 # Corrosion V1 — Stage 3 Benchmark Protocol
 
-Status: **corpus locked; fixed A–H manual source review complete; controlled live scoring in progress; CORR-GOLD-A passed after the record-level evidence-gate remediation**.
+Status: **corpus locked; fixed A–H manual source review complete; controlled live scoring in progress; CORR-GOLD-A and CORR-COAT-B passed**.
 
-Current verified full repository regression baseline remains **303 passed, 2 warnings**. The latest corrosion evidence-gate regression additions still require a local full-suite rerun before a newer repository-wide baseline is claimed.
+Current verified full repository regression baseline remains **303 passed, 2 warnings**. Newer focused corrosion regressions have passed locally during Stage 3, but a newer repository-wide baseline must not be claimed until the full suite is rerun cleanly.
 
 ## Objective
 
@@ -31,7 +31,27 @@ Controlled live run completed on 2026-09-16 after the record-level evidence-gate
 
 The successful rerun confirms that verified child metric/condition evidence can ground an experiment shell without weakening value-specific metric admission. The previous `no_verified_record_evidence` failure for the four EIS experiment records is closed for CORR-GOLD-A.
 
-Next controlled live case: **CORR-COAT-B**, after the local corpus-lock check and local regression gates below are rerun.
+### CORR-COAT-B — PASS
+
+Controlled live run completed on 2026-09-16 after strict recovery of exact native-page Table 1 evidence when the visual table detector missed the scientific table.
+
+- resolved route: `corrosion`; expected route: `corrosion`; route check passed;
+- gold numeric assertions: 5/5 matched after offline rescoring of the saved canonical archive;
+- recall: 100%;
+- value accuracy: 100%;
+- association accuracy: 100%;
+- source-tracking coverage: 100%;
+- overall score: 100%;
+- canonical experiments: 5 potentiodynamic-polarization records;
+- canonical scored values: all 5 corrosion-current-density observations admitted with verified evidence;
+- all 5 corrosion-potential values remained quarantined because the focal paper did not explicitly report the reference electrode;
+- no coating resistance was relabelled as charge-transfer resistance;
+- provider calls for the successful fresh extraction: 1 primary, 0 schema-repair;
+- first response passed schema validation.
+
+The initial 0/5 live score after evidence remediation was a benchmark association-normalization defect, not an extraction defect: the evidence-backed material name `20 # steel` did not match gold `20# steel`. The scorer now normalizes spacing around the material-grade hash marker without changing the global unit/experiment/reference normalization contract. The saved archive rescored offline at 5/5 without another provider call.
+
+Next controlled live case: **CORR-INHIB-C**. Its preflight contract must preserve CSQN/NSQN treatment associations, method-specific inhibition efficiencies, the SCE reference electrode for the scored current-density rows, and the Table 2 association when nearby prose conflicts with the explicitly labelled table.
 
 ## Fixed corpus
 
@@ -65,7 +85,8 @@ For positive papers, scored observations are limited to values explicitly suppor
 - material association;
 - experiment type;
 - environment/test-condition association where necessary;
-- reported reference electrode for potential quantities;
+- treatment/inhibitor association where necessary;
+- reported reference electrode for potential quantities and other gold rows whose identity depends on the stated electrochemical reference;
 - source page and exact supporting evidence;
 - ownership as focal work.
 
@@ -77,13 +98,13 @@ The gold records also preserve paper-specific safety decisions: the inhibitor-pa
 
 `score_corrosion_archive` reports:
 
-- **value accuracy** — correct property/value/unit without dimensional conversion;
-- **association accuracy** — value attached to the correct experiment/material/reference-electrode context;
+- **value accuracy** — correct property/value/unit without dimensional conversion; notation-only unit variants such as `μA/cm2` and `μA cm^-2` may be normalized without changing scale;
+- **association accuracy** — value attached to the correct experiment/material/treatment/reference-electrode context required by gold;
 - **source-tracking coverage** — matched result retains paper, page, evidence snippet, and source origin;
 - **recall** — required gold observations successfully associated;
 - **overall** — mean of value accuracy, association accuracy, and source-tracking coverage.
 
-The scorer deliberately does not award a match by converting units or electrode scales.
+The scorer deliberately does not award a match by converting units or electrode scales. A long source-reported reference label may match its explicitly preserved parenthetical abbreviation, such as `saturated calomel electrode (SCE)` and `SCE`; this is textual identity handling, not electrode-scale conversion.
 
 ## Safety controls
 
@@ -93,6 +114,8 @@ Stage 3 also requires qualitative pass/fail checks:
 - DFT outputs remain calculations;
 - Rct/Rt, Rp, coating resistance and protective-layer resistance are not silently interchanged;
 - corrosion/pitting/repassivation/breakdown potentials without a reported reference electrode are quarantined;
+- inhibitor/coating efficiency values require a linked, admitted treatment;
+- inhibitor-specific benchmark rows must remain associated with the correct inhibitor rather than receiving credit from a value alone;
 - unresolved condition conflicts remain unresolved;
 - the negative control is not routed to corrosion merely because it contains generic electrochemistry or EIS terminology;
 - the holdout paper is not used to tune prompts, validators, scoring rules, or thresholds.
