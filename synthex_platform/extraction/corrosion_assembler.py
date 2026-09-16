@@ -211,6 +211,7 @@ def assemble_corrosion_archive(
             evidence=_canonical_evidence(prep.evidence, sid),
         ))
 
+    treatments_by_id = {item.treatment_id: item for item in document.treatments}
     treatment_process_ids: dict[str, str] = {}
     for treatment in document.treatments:
         path = f"treatments.{treatment.treatment_id}"
@@ -327,6 +328,49 @@ def assemble_corrosion_archive(
             if ec.equivalent_circuit:
                 conditions.append(Measurement(property="equivalent_circuit", raw_value=ec.equivalent_circuit,
                     value=ec.equivalent_circuit, qualifier="categorical", evidence=_canonical_evidence(ec.evidence, sid)))
+
+        linked_treatments = [
+            treatments_by_id[ref]
+            for ref in experiment.treatment_refs
+            if ref in treatment_process_ids and ref in treatments_by_id
+        ]
+        for treatment in linked_treatments:
+            label = treatment.reported_name or treatment.treatment_type
+            if label:
+                conditions.append(Measurement(
+                    property="treatment",
+                    raw_value=label,
+                    value=label,
+                    qualifier="categorical",
+                    evidence=_canonical_evidence(treatment.evidence, sid),
+                ))
+            if treatment.concentration:
+                converted = _quantity_condition(
+                    "treatment_concentration",
+                    treatment.concentration,
+                    sid=sid,
+                    evidence=treatment.evidence,
+                )
+                if converted:
+                    conditions.append(converted)
+            if treatment.treatment_type == "inhibitor":
+                if label:
+                    conditions.append(Measurement(
+                        property="inhibitor",
+                        raw_value=label,
+                        value=label,
+                        qualifier="categorical",
+                        evidence=_canonical_evidence(treatment.evidence, sid),
+                    ))
+                if treatment.concentration:
+                    converted = _quantity_condition(
+                        "inhibitor_concentration",
+                        treatment.concentration,
+                        sid=sid,
+                        evidence=treatment.evidence,
+                    )
+                    if converted:
+                        conditions.append(converted)
 
         outputs: list[Measurement] = []
         unresolved_conflict = _conflict_for_experiment(document, experiment.experiment_id)
