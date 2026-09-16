@@ -34,6 +34,7 @@ from synthex_platform.extraction.catalysis_extractor import CatalysisStructuredE
 from synthex_platform.extraction.domain_extractor import StructuredExtractionValidationError
 from synthex_platform.gas_sensing_ui import render_gas_sensing_analytics
 from synthex_platform.graph import export_graph
+from synthex_platform.graph_extraction_ui import render_graph_extraction_ui
 from synthex_platform.providers import GeminiModelsUnavailableError, configured_gemini_models, probe_configured_gemini
 from synthex_platform.retrieval import DiscoveryError, discover_papers
 from synthex_platform.retrieval.discovery import (
@@ -53,8 +54,6 @@ from synthex_platform.ui_navigation import developer_mode_enabled, navigation_it
 from synthex_platform.ui_session import clear_research_workspace
 from synthex_platform.visual.analytics import AnalyticQuery, build_visualization_spec, comparison_frame, project_archives
 from synthex_platform.visual.analytics.render import VisualizationRenderer
-from synthex_platform.visual.digitization import AxisCalibration, DigitizationRequest, PlotArea, SeriesSelection, digitize_plot
-from synthex_platform.visual.digitization.models import PixelBoundingBox
 
 st.set_page_config(page_title="Synthex · Materials Intelligence", page_icon="🧬", layout="wide")
 
@@ -224,10 +223,9 @@ if page == "Home":
             st.write("Compare and export")
             st.caption("Pool admitted parameters across papers without mixing the identity of their sources.")
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
     c1.metric("Scientific domains", len(registry.list_domains()))
-    c2.metric("Saved archives", store.count())
-    c3.metric("Batch capacity", f"{MAX_BATCH_PAPERS} PDFs")
+    c2.metric("Batch capacity", f"{MAX_BATCH_PAPERS} PDFs")
 
 
 elif page == "Discover Papers":
@@ -795,82 +793,8 @@ elif page == "Gas Sensing Analytics":
     render_gas_sensing_analytics()
 
 
-elif page == "Figure Data":
-    st.subheader("Figure Data")
-    st.caption(
-        "Digitize values from a selected plot while keeping them explicitly estimated and separate from canonical paper data."
-    )
-    image_file = st.file_uploader("Rendered figure or selected panel PNG", type=["png"], key="digitization_png")
-    if image_file:
-        from PIL import Image
-
-        image_bytes = image_file.getvalue()
-        image = Image.open(io.BytesIO(image_bytes))
-        width, height = image.size
-        st.image(image_bytes, caption=f"{width} × {height} px")
-        with st.form("digitization_calibration"):
-            source_id = st.text_input("Source ID", value="source-figure")
-            figure_id = st.text_input("Figure ID", value="fig-selected")
-            panel = st.text_input("Panel label (optional)") or None
-            st.caption("Enter the interior plot bounds and two visible calibration values for each axis.")
-            plot_x0 = st.number_input("Plot left pixel", min_value=0.0, value=0.0)
-            plot_y0 = st.number_input("Plot top pixel", min_value=0.0, value=0.0)
-            plot_x1 = st.number_input("Plot right pixel", min_value=1.0, value=float(width))
-            plot_y1 = st.number_input("Plot bottom pixel", min_value=1.0, value=float(height))
-            x0 = st.number_input("X value at left", value=0.0)
-            x1 = st.number_input("X value at right", value=1.0)
-            y0 = st.number_input("Y value at bottom", value=0.0)
-            y1 = st.number_input("Y value at top", value=1.0)
-            x_log = st.checkbox("X axis is log10")
-            y_log = st.checkbox("Y axis is log10")
-            red = st.text_input("Selected series RGB", value="228,26,28")
-            submitted = st.form_submit_button("Confirm calibration and digitize", type="primary")
-
-        if submitted:
-            try:
-                rgb = tuple(int(value.strip()) for value in red.split(","))
-                request = DigitizationRequest(
-                    source_id=source_id,
-                    page=1,
-                    figure_id=figure_id,
-                    panel=panel,
-                    plot_area=PlotArea(
-                        bbox=PixelBoundingBox(x0=plot_x0, y0=plot_y0, x1=plot_x1, y1=plot_y1),
-                        resolution_width=width,
-                        resolution_height=height,
-                    ),
-                    x_axis=AxisCalibration(
-                        axis="x",
-                        pixel_start=plot_x0,
-                        pixel_end=plot_x1,
-                        data_start=x0,
-                        data_end=x1,
-                        scale_type="log10" if x_log else "linear",
-                    ),
-                    y_axis=AxisCalibration(
-                        axis="y",
-                        pixel_start=plot_y1,
-                        pixel_end=plot_y0,
-                        data_start=y0,
-                        data_end=y1,
-                        scale_type="log10" if y_log else "linear",
-                    ),
-                    series=[SeriesSelection(series_id="series-user", color_rgb=rgb, association_status="ambiguous")],
-                )
-                result = digitize_plot(image_bytes, request)
-                if result.status == "completed":
-                    st.success(f"Digitized {sum(len(series.points) for series in result.series)} estimated points.")
-                    st.download_button(
-                        "Download digitized JSON",
-                        result.model_dump_json(indent=2),
-                        f"{result.digitization_id}.json",
-                        "application/json",
-                    )
-                else:
-                    st.warning("Digitization was rejected: " + "; ".join(result.rejection_reasons))
-            except (ValueError, TypeError) as error:
-                _record_ui_error("figure_calibration", error)
-                _render_public_notice(public_error_notice(error, context="calibration"))
+elif page == "Extract Data from Graphs":
+    render_graph_extraction_ui()
 
 
 elif page == "Developer · Battery validation":
