@@ -9,7 +9,10 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from synthex_platform.benchmarks.corrosion_live import diagnose_live_output  # noqa: E402
+from synthex_platform.benchmarks.corrosion_live import (  # noqa: E402
+    diagnose_live_output,
+    reverify_live_quarantine_evidence,
+)
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -27,6 +30,7 @@ def main() -> int:
     print("No provider calls will be made.")
     try:
         diagnostic = diagnose_live_output(case_id, REPO_ROOT)
+        reverify = reverify_live_quarantine_evidence(case_id, REPO_ROOT)
     except Exception as exc:
         print(f"DIAGNOSIS FAILED · {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
@@ -71,6 +75,25 @@ def main() -> int:
                 f"reason={item['reason']} · ownership={item['ownership']} · "
                 f"evidence={item['verified_evidence_count']}/{item['evidence_count']} verified · path={item['path']}"
             )
+
+    print(
+        "Offline evidence re-verification with current rules: "
+        f"{reverify['verifies_now']}/{reverify['evidence_count']} evidence item(s) verify now · "
+        f"tables detected={reverify['tables_detected']}"
+    )
+    changed = [item for item in reverify["items"] if item["verifies_now"] and not item["was_verified"]]
+    if changed:
+        print("Evidence newly verifiable without another provider call:")
+        for item in changed[:20]:
+            snippet = (item.get("snippet") or "").replace("\n", " ")
+            if len(snippet) > 140:
+                snippet = snippet[:137] + "..."
+            print(
+                f"  - page={item.get('verified_page')} · origin={item.get('verified_origin')} · "
+                f"table={item.get('table_id') or '-'} · {snippet}"
+            )
+    elif reverify["evidence_count"]:
+        print("No previously rejected evidence becomes verifiable under the new exact-match rules.")
 
     extraction = diagnostic["extraction_diagnostics"]
     if extraction:
