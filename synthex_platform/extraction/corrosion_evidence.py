@@ -297,9 +297,10 @@ def _verify_human_table_locator_against_page(
     ``table_id`` while PyMuPDF fails to create a structured ``TableRecord`` for that
     actual table. In that case we do not guess a parser table ID or reconstruct cells.
     We accept the evidence only when it is explicitly table-derived, names a concrete
-    page, uses a human table label, and its full snippet is a unique normalized verbatim
-    substring of that page's source text. The human label is retained as a locator and
-    the original source is truthfully recorded as native text or OCR.
+    page, uses a human table label that is itself present on that page, and its full
+    snippet is a unique normalized verbatim substring of the same page's source text.
+    The human label is retained as a locator and the original source is truthfully
+    recorded as native text or OCR.
     """
     if evidence.source_type != "table":
         return None
@@ -312,6 +313,8 @@ def _verify_human_table_locator_against_page(
     if len(matches) != 1:
         return None
     page = matches[0]
+    if _normalize(evidence.table_id or "") not in _normalize(_page_text(page)):
+        return None
     return evidence.model_copy(update={
         "source_id": source_bundle.source.source_id,
         "page": page.page,
