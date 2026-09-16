@@ -78,7 +78,8 @@ def main() -> int:
 
     print(
         "Offline evidence re-verification with current rules: "
-        f"{reverify['verifies_now']}/{reverify['evidence_count']} evidence item(s) verify now · "
+        f"stored verified={reverify['verified_before']}/{reverify['evidence_count']} · "
+        f"verify now={reverify['verifies_now']}/{reverify['evidence_count']} · "
         f"tables detected={reverify['tables_detected']}"
     )
     changed = [item for item in reverify["items"] if item["verifies_now"] and not item["was_verified"]]
@@ -92,8 +93,14 @@ def main() -> int:
                 f"  - page={item.get('verified_page')} · origin={item.get('verified_origin')} · "
                 f"table={item.get('table_id') or '-'} · {snippet}"
             )
+    elif reverify["evidence_count"] and reverify["verifies_now"]:
+        print(
+            "The currently verifiable evidence was already stored as verified; "
+            "the old rejection therefore came from the separate record-level evidence gate, "
+            "not from newly improved matching."
+        )
     elif reverify["evidence_count"]:
-        print("No previously rejected evidence becomes verifiable under the new exact-match rules.")
+        print("No previously rejected evidence becomes verifiable under the current exact-match rules.")
 
     extraction = diagnostic["extraction_diagnostics"]
     if extraction:
