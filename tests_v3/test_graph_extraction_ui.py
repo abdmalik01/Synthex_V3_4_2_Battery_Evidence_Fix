@@ -3,7 +3,9 @@ from pathlib import Path
 from PIL import Image
 
 from synthex_platform.graph_extraction_ui import (
+    GRAPH_WORKSPACE_STATE_KEYS,
     _axis_calibration_error,
+    _clear_graph_workspace_state,
     _drag_bounds,
     _figure_id,
     _hex_to_rgb,
@@ -45,6 +47,19 @@ def test_graph_ui_uses_interactive_selection_and_keeps_manual_fallback():
     assert "Estimated from figure" in source
     assert "Download estimated CSV" in source
     assert "detected points overlaid" in source
+
+
+def test_graph_workspace_has_reset_button_and_scoped_state_clearer():
+    source = Path("synthex_platform/graph_extraction_ui.py").read_text(encoding="utf-8")
+    assert '"Reset graph"' in source
+    assert 'icon=":material/refresh:"' in source
+    assert "on_click=_reset_graph_workspace" in source
+
+    state = {key: f"value-{index}" for index, key in enumerate(GRAPH_WORKSPACE_STATE_KEYS)}
+    state["synthex_last_archive"] = "keep-me"
+    _clear_graph_workspace_state(state)
+    assert all(key not in state for key in GRAPH_WORKSPACE_STATE_KEYS)
+    assert state["synthex_last_archive"] == "keep-me"
 
 
 def test_interactive_coordinate_helpers_map_display_pixels_to_native_image():
