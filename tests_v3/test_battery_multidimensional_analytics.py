@@ -124,5 +124,7 @@ def test_unverified_additional_condition_is_not_promoted_to_canonical_context():
         row for row in project_results_rows(archive)
         if row["measurement_role"] == "result" and row["metric"] == "specific_capacity"
     )
-    conditions = json.loads(result["conditions_json"])
+    # The exporter intentionally encodes an empty condition mapping as an empty
+    # string. Treat that representation as {} for the semantic assertion below.
+    conditions = json.loads(result["conditions_json"] or "{}")
     assert "state_of_charge" not in conditions
