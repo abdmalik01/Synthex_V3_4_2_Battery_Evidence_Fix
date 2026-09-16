@@ -5,6 +5,8 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
+.pytest_full_run/
+.pytest_tmp/
 output/
 .streamlit/secrets.toml
 .DS_Store
