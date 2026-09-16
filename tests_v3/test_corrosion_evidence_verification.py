@@ -78,6 +78,45 @@ def _table() -> TableRecord:
     )
 
 
+def _pdp_table() -> TableRecord:
+    provenance = VisualProvenance(page=6, object_id="tbl-1", object_type="table", origin="table_reported")
+    grid = [
+        ["Specimen", "Ecorr (V)", "Icorr (A/cm2)"],
+        ["TE-GAE (1:1)", "-0.561", "3.413 × 10−6"],
+        ["TE-GAE (2:1)", "-0.439", "7.480 × 10−7"],
+    ]
+    cells = [
+        TableCell(
+            row=row,
+            column=column,
+            cell_id=f"tbl-1-r{row}-c{column}",
+            raw_text=value,
+            provenance=VisualProvenance(
+                page=6,
+                object_id="tbl-1",
+                object_type="table",
+                origin="table_reported",
+                row=row,
+                column=column,
+            ),
+        )
+        for row, values in enumerate(grid)
+        for column, value in enumerate(values)
+    ]
+    return TableRecord(
+        table_id="tbl-1",
+        source_id="src-corrosion-test",
+        page=6,
+        table_number="1",
+        caption="Polarization parameters",
+        headers=[grid[0]],
+        rows=grid[1:],
+        cells=cells,
+        raw_representation={"grid": grid},
+        provenance=provenance,
+    )
+
+
 def test_corrosion_native_evidence_handles_pdf_nul_and_unicode_typography():
     bundle = _bundle(native_text="The EIS\x00measurement was performed from 10−2 to 105 Hz.")
     evidence = CorrosionEvidence(
@@ -106,9 +145,10 @@ def test_corrosion_table_evidence_verifies_exact_extracted_row():
     assert verified.source_type == "table"
     assert verified.original_source_type == "table_reported"
     assert verified.page == 6
+    assert verified.text_snippet == "100 mmol·L-1 75.21"
 
 
-def test_corrosion_table_evidence_does_not_accept_synthesized_sentence():
+def test_corrosion_table_evidence_recovers_unique_row_column_synthesis_as_exact_row():
     bundle = _bundle(tables=[_table()])
     evidence = CorrosionEvidence(
         page=6,
@@ -118,6 +158,46 @@ def test_corrosion_table_evidence_does_not_accept_synthesized_sentence():
         original_source_type="table_reported",
     )
     verified = verify_corrosion_evidence_item(evidence, bundle)
+    assert verified.verbatim_match is True
+    assert verified.text_snippet == "100 mmol·L-1 75.21"
+    assert verified.locator == "tbl-2:r1:c1"
+
+
+def test_corrosion_table_evidence_accepts_scientific_notation_typography_only_when_row_and_column_agree():
+    evidence = CorrosionEvidence(
+        page=6,
+        table_id="tbl-1",
+        text_snippet="Table 1: TE-GAE (2:1); Icorr = 7.480e-7 A/cm2.",
+        source_type="table",
+        original_source_type="table_reported",
+    )
+    verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[_pdp_table()]))
+    assert verified.verbatim_match is True
+    assert verified.text_snippet == "TE-GAE (2:1) -0.439 7.480 × 10−7"
+    assert verified.locator == "tbl-1:r2:c2"
+
+
+def test_corrosion_table_evidence_rejects_value_from_different_treatment_row():
+    evidence = CorrosionEvidence(
+        page=6,
+        table_id="tbl-1",
+        text_snippet="Table 1: TE-GAE (1:1); Icorr = 7.480e-7 A/cm2.",
+        source_type="table",
+        original_source_type="table_reported",
+    )
+    verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[_pdp_table()]))
+    assert verified.verbatim_match is False
+
+
+def test_corrosion_table_evidence_rejects_value_from_wrong_metric_column():
+    evidence = CorrosionEvidence(
+        page=6,
+        table_id="tbl-1",
+        text_snippet="Table 1: TE-GAE (2:1); Ecorr = 7.480e-7 V.",
+        source_type="table",
+        original_source_type="table_reported",
+    )
+    verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[_pdp_table()]))
     assert verified.verbatim_match is False
 
 
