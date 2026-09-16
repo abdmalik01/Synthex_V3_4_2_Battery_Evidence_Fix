@@ -177,6 +177,34 @@ def test_corrosion_table_evidence_accepts_scientific_notation_typography_only_wh
     assert verified.locator == "tbl-1:r2:c2"
 
 
+def test_corrosion_table_evidence_recovers_missing_table_id_only_when_unique_on_page():
+    evidence = CorrosionEvidence(
+        page=6,
+        text_snippet="Table 1: TE-GAE (2:1); Icorr = 7.480e-7 A/cm2.",
+        source_type="table",
+        original_source_type="table_reported",
+    )
+    verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[_table(), _pdp_table()]))
+    assert verified.verbatim_match is True
+    assert verified.table_id == "tbl-1"
+    assert verified.text_snippet == "TE-GAE (2:1) -0.439 7.480 × 10−7"
+    assert verified.locator == "tbl-1:r2:c2"
+
+
+def test_corrosion_table_evidence_without_table_id_rejects_ambiguous_duplicate_tables():
+    first = _pdp_table()
+    second = first.model_copy(update={"table_id": "tbl-duplicate"})
+    evidence = CorrosionEvidence(
+        page=6,
+        text_snippet="Table 1: TE-GAE (2:1); Icorr = 7.480e-7 A/cm2.",
+        source_type="table",
+        original_source_type="table_reported",
+    )
+    verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[first, second]))
+    assert verified.verbatim_match is False
+    assert verified.table_id is None
+
+
 def test_corrosion_table_evidence_rejects_value_from_different_treatment_row():
     evidence = CorrosionEvidence(
         page=6,
