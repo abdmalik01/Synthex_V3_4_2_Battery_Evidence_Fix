@@ -1,0 +1,139 @@
+{
+  "id": "CORR-COAT-B",
+  "doi": "10.1021/acsomega.2c00172",
+  "filename": "Corrosion 2.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; no LLM-generated or inferred numeric gold.",
+    "reference_electrode_conversion_performed": false,
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false
+  },
+  "substrate_and_preparation": {
+    "substrate": "20# steel",
+    "role": "rusted substrate",
+    "page": 2,
+    "preparation": [
+      "polished with 80, 250, and 1000 mesh sandpaper",
+      "washed with pure ethanol and dried",
+      "exposed to air for 60 days to rust evenly",
+      "surface floating rust and dust roughly removed with a metal brush",
+      "cleaned with pure ethanol and kept dry before coating"
+    ],
+    "evidence_snippet": "In this study, 20# steel was chosen as the rusted substrate. Before using, it was polished with 80, 250, and 1000 mesh sandpaper, then washed with pure ethanol, and finally dried. After this, it was exposed to the air for 60 days to make it rust evenly for use."
+  },
+  "treatment": {
+    "name": "TE-GAE integrated rust conversion agent/coating",
+    "components": {
+      "TE": "triethanolamine",
+      "GA": "3,4,5-trihydroxybenzoic acid"
+    },
+    "tested_mass_ratios_TE_to_GA": ["1:1", "2:1", "3:1", "4:1"],
+    "optimized_ratio": "2:1",
+    "cure_or_dry_condition": "dried in a drying oven at room temperature for 72 h",
+    "page": 2,
+    "evidence_snippet": "Here, four mass ratios of TE and GA were selected in this study, and the mass ratios of TE and GA were 1:1, 2:1, 3:1, and 4:1."
+  },
+  "electrochemical_environment": {
+    "electrolyte": "3.5 wt % NaCl solution",
+    "workstation": "CHI-660E electrochemical workstation",
+    "pdp_method_details": "Specific test methods are referred by the focal paper to ref 40 rather than restated.",
+    "reference_electrode": null,
+    "reference_electrode_status": "not explicitly reported in this focal paper",
+    "page": 2,
+    "evidence_snippet": "The electrochemical properties of the prepared samples were analyzed using the PDP test and EIS in 3.5 wt % NaCl solution on a CHI-660E electrochemical workstation (Chenhua, China) during many days of immersion, and for specific test methods, please refer to ref 40."
+  },
+  "eis_context": {
+    "page": 5,
+    "one_day_comparison": "Typical EIS Nyquist and Bode plots compare untreated and treated rusted steels during immersion in 3.5 wt % NaCl solution for 1 day.",
+    "equivalent_circuit": {
+      "elements": ["Rs", "Rc", "Cc"],
+      "semantics": {
+        "Rs": "electrolyte resistance",
+        "Rc": "resistance of the rust conversion coating",
+        "Cc": "capacitance of the rust conversion coating"
+      }
+    },
+    "longer_exposure_for_TE_GAE_2_to_1": ["1 day", "14 days", "30 days"],
+    "safety_note": "Rc is coating resistance and must not be silently renamed charge-transfer resistance. No exact fitted Rs/Rc/Cc table is printed in this paper."
+  },
+  "scored_numeric_observations": [
+    {
+      "metric": "corrosion_current_density",
+      "value": 3.557e-5,
+      "unit": "A/cm2",
+      "conditions": {"specimen": "rusty steel plate", "treatment": "untreated"},
+      "experiment_type": "potentiodynamic polarization",
+      "material_contains": "20# steel",
+      "page": 5,
+      "evidence_snippet": "Table 1: rusty steel plate; Icorr = 3.557 × 10−5 A/cm2."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 3.413e-6,
+      "unit": "A/cm2",
+      "conditions": {"specimen": "rusty 20# steel", "treatment": "TE-GAE (1:1)"},
+      "experiment_type": "potentiodynamic polarization",
+      "material_contains": "20# steel",
+      "page": 5,
+      "evidence_snippet": "Table 1: TE-GAE (1:1); Icorr = 3.413 × 10−6 A/cm2."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 7.480e-7,
+      "unit": "A/cm2",
+      "conditions": {"specimen": "rusty 20# steel", "treatment": "TE-GAE (2:1)"},
+      "experiment_type": "potentiodynamic polarization",
+      "material_contains": "20# steel",
+      "page": 5,
+      "evidence_snippet": "Table 1: TE-GAE (2:1); Icorr = 7.480 × 10−7 A/cm2."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 1.449e-6,
+      "unit": "A/cm2",
+      "conditions": {"specimen": "rusty 20# steel", "treatment": "TE-GAE (3:1)"},
+      "experiment_type": "potentiodynamic polarization",
+      "material_contains": "20# steel",
+      "page": 5,
+      "evidence_snippet": "Table 1: TE-GAE (3:1); Icorr = 1.449 × 10−6 A/cm2."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 2.371e-6,
+      "unit": "A/cm2",
+      "conditions": {"specimen": "rusty 20# steel", "treatment": "TE-GAE (4:1)"},
+      "experiment_type": "potentiodynamic polarization",
+      "material_contains": "20# steel",
+      "page": 5,
+      "evidence_snippet": "Table 1: TE-GAE (4:1); Icorr = 2.371 × 10−6 A/cm2."
+    }
+  ],
+  "verified_but_not_scored_as_exact_numeric_gold": {
+    "corrosion_potential": {
+      "values_are_printed": true,
+      "printed_values_V": {
+        "rusty steel plate": -0.974,
+        "TE-GAE (1:1)": -0.561,
+        "TE-GAE (2:1)": -0.439,
+        "TE-GAE (3:1)": -0.602,
+        "TE-GAE (4:1)": -0.595
+      },
+      "reason": "The focal paper prints Ecorr values but does not explicitly identify the reference electrode; Corrosion V1 potential gold therefore remains unscored rather than inferring the electrode from ref 40.",
+      "page": 5
+    },
+    "charge_transfer_resistance": {
+      "reason": "The paper's equivalent circuit defines Rc as rust-conversion-coating resistance, not charge-transfer resistance, and does not print an exact fitted Rc table. No Rct gold is created.",
+      "page": 5
+    },
+    "protection_efficiency": {
+      "reason": "No explicit numeric protection-efficiency value is reported in the focal paper. No value is derived from Icorr.",
+      "page": 5
+    },
+    "low_frequency_impedance": {
+      "reason": "TE-GAE (2:1) is described as reaching the order of 10^4 to 10^5 Ω·cm2 at 0.01 Hz, which is an order-of-magnitude statement rather than an exact scalar gold value.",
+      "page": 6
+    }
+  }
+}
