@@ -1,7 +1,10 @@
 from __future__ import annotations
 
-from synthex_platform.extraction.corrosion_evidence import verify_corrosion_evidence_item
-from synthex_platform.extraction.corrosion_models import CorrosionEvidence
+from synthex_platform.extraction.corrosion_evidence import (
+    verify_corrosion_document_evidence,
+    verify_corrosion_evidence_item,
+)
+from synthex_platform.extraction.corrosion_models import CorrosionDocument, CorrosionEvidence
 from synthex_platform.extraction.source_context import SourceBundle, SourceMetadata, SourcePageContext
 from synthex_platform.visual.models import TableCell, TableRecord, VisualProvenance
 
@@ -116,3 +119,85 @@ def test_corrosion_table_evidence_does_not_accept_synthesized_sentence():
     )
     verified = verify_corrosion_evidence_item(evidence, bundle)
     assert verified.verbatim_match is False
+
+
+def test_verified_metric_evidence_can_ground_experiment_shell_without_inventing_evidence():
+    document = CorrosionDocument.model_validate({
+        "source": {"title": "Example corrosion paper"},
+        "materials": [{
+            "local_id": "mat-1",
+            "reported_name": "Alloy",
+            "material_class": "alloy",
+            "role": "working_electrode",
+            "ownership": "focal_work",
+            "evidence": [{
+                "page": 6,
+                "text_snippet": "Alloy",
+                "source_type": "text",
+                "original_source_type": "native_text",
+            }],
+        }],
+        "experiments": [{
+            "experiment_id": "exp-eis-100",
+            "experiment_type": "eis",
+            "material_refs": ["mat-1"],
+            "ownership": "focal_work",
+            "metrics": [{
+                "property": "solution_resistance",
+                "quantity": {"raw_value": "75.21 Ω·cm2", "value": 75.21, "unit": "Ω·cm2", "qualifier": "exact"},
+                "ownership": "focal_work",
+                "evidence": [{
+                    "page": 6,
+                    "table_id": "tbl-2",
+                    "text_snippet": "100 mmol·L-1 75.21",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                }],
+            }],
+        }],
+    })
+    bundle = _bundle(native_text="Alloy", tables=[_table()])
+    verified = verify_corrosion_document_evidence(document, bundle)
+
+    metric_evidence = verified.experiments[0].metrics[0].evidence[0]
+    assert metric_evidence.verbatim_match is True
+    assert metric_evidence.original_source_type == "table_reported"
+    assert len(verified.experiments[0].evidence) == 1
+    record_evidence = verified.experiments[0].evidence[0]
+    assert record_evidence.text_snippet == metric_evidence.text_snippet
+    assert record_evidence.verbatim_match is True
+    assert record_evidence.table_id == "tbl-2"
+
+
+def test_unverified_child_evidence_does_not_ground_experiment_shell():
+    document = CorrosionDocument.model_validate({
+        "source": {"title": "Example corrosion paper"},
+        "materials": [{
+            "local_id": "mat-1",
+            "reported_name": "Alloy",
+            "material_class": "alloy",
+            "role": "working_electrode",
+            "ownership": "focal_work",
+        }],
+        "experiments": [{
+            "experiment_id": "exp-eis-100",
+            "experiment_type": "eis",
+            "material_refs": ["mat-1"],
+            "ownership": "focal_work",
+            "metrics": [{
+                "property": "solution_resistance",
+                "quantity": {"raw_value": "75.21 Ω·cm2", "value": 75.21, "unit": "Ω·cm2", "qualifier": "exact"},
+                "ownership": "focal_work",
+                "evidence": [{
+                    "page": 6,
+                    "table_id": "tbl-2",
+                    "text_snippet": "not an exact table row",
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                }],
+            }],
+        }],
+    })
+    verified = verify_corrosion_document_evidence(document, _bundle(tables=[_table()]))
+    assert verified.experiments[0].metrics[0].evidence[0].verbatim_match is False
+    assert verified.experiments[0].evidence == []
