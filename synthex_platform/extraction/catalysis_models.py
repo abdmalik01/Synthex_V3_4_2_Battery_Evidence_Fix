@@ -25,7 +25,7 @@ CatalystState = Literal[
 ScopeStatus = Literal["supported", "deferred_subtype", "out_of_scope"]
 ReactionClass = Literal[
     "co_oxidation", "hydrogenation", "oxidation", "methane_conversion", "ammonia_synthesis",
-    "ammonia_decomposition", "hydrocarbon_conversion", "her", "oer", "orr", "co2rr", "nrr",
+    "ammonia_decomposition", "hydrocarbon_conversion", "photocatalysis", "her", "oer", "orr", "co2rr", "nrr",
     "small_molecule_oxidation", "other_heterogeneous", "unknown",
 ]
 PotentialReference = Literal["RHE", "SHE", "NHE", "Ag/AgCl", "SCE", "Hg/HgO", "Hg/Hg2SO4", "other", "unknown"]
@@ -214,7 +214,8 @@ class FeedComponent(StrictCatalysisModel):
 class HeterogeneousMetric(StrictCatalysisModel):
     property: Literal[
         "conversion", "selectivity", "yield", "activity", "reaction_rate", "turnover_frequency",
-        "productivity", "activation_energy", "carbon_balance",
+        "productivity", "activation_energy", "carbon_balance", "degradation_efficiency",
+        "removal_efficiency", "cod_removal", "color_removal", "turbidity_removal",
     ]
     raw_value: str | None = None
     value: float | None = None
@@ -224,6 +225,8 @@ class HeterogeneousMetric(StrictCatalysisModel):
     product: str | None = None
     normalization_basis: NormalizationBasis | None = None
     conditions: dict[str, Any] = Field(default_factory=dict)
+    response_origin: Literal["observed", "model_predicted"] = "observed"
+    model_name: str | None = None
     derivation: CatalysisDerivation | None = None
     ownership: GenericOwnership = "unknown"
     evidence: list[CatalysisEvidence] = Field(default_factory=list)
@@ -253,6 +256,7 @@ class HeterogeneousCatalysisExperiment(StrictCatalysisModel):
     pretreatment_ref: str | None = None
     reaction_time: CatalysisQuantity | None = None
     time_on_stream: CatalysisQuantity | None = None
+    experimental_conditions: dict[str, CatalysisQuantity] = Field(default_factory=dict)
     analytical_method: str | None = None
     metrics: list[HeterogeneousMetric] = Field(default_factory=list)
     ownership: GenericOwnership = "unknown"
