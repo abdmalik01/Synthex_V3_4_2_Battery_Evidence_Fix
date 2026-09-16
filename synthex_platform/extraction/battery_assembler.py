@@ -144,6 +144,20 @@ def _measurement(property_name: str, q: BatteryQuantity | None, sid: str,
     )
 
 
+def _point_condition_payload(condition) -> dict | None:
+    """Keep only independently verified point conditions in canonical result context."""
+    if not any(item.verbatim_match is True for item in condition.evidence):
+        return None
+    payload = {
+        "raw_value": condition.raw_value,
+        "value": condition.value,
+        "unit": condition.unit,
+        "qualifier": condition.qualifier,
+        "evidence": [item.model_dump(exclude_none=True) for item in condition.evidence],
+    }
+    return {key: value for key, value in payload.items() if value not in (None, [], "")}
+
+
 def _resolved_protocol(doc: BatteryDocument, group):
     charge = group.charge_protocol
     discharge = group.discharge_protocol
@@ -346,7 +360,6 @@ def assemble_battery_archive(
                     subject_id=did, predicate="contains_material", object_id=material_id,
                 ))
 
-        # Electrode fabrication becomes a process connected to the material/device.
         if electrode and group_is_focal:
             proc_id = stable_id("proc", sid, group.group_id, "electrode_fabrication")
             params = []
@@ -457,15 +470,23 @@ def assemble_battery_archive(
                 qualifier=point.qualifier,
             )
             nv, nu = normalize_battery_quantity(q)
-            measurement = Measurement(
-                property=point.property, raw_value=point.raw_value, value=point.value, unit=point.unit,
-                normalized_value=nv, normalized_unit=nu, qualifier=q.qualifier, method=point.method,
-                conditions={k: v for k, v in {
+            point_conditions = {
+                k: v for k, v in {
                     "cycle": point.cycle, "C_rate": point.c_rate, "voltage_window": point.voltage_window,
                     "temperature": point.temperature.raw_value if point.temperature else None,
                     "variant": group.variant_label,
                     "calcination_temperature": group.calcination_temperature.raw_value if group.calcination_temperature else None,
-                }.items() if v is not None},
+                }.items() if v is not None
+            }
+            for extra_condition in point.additional_conditions:
+                payload = _point_condition_payload(extra_condition)
+                if payload is None or extra_condition.property in point_conditions:
+                    continue
+                point_conditions[extra_condition.property] = payload
+            measurement = Measurement(
+                property=point.property, raw_value=point.raw_value, value=point.value, unit=point.unit,
+                normalized_value=nv, normalized_unit=nu, qualifier=q.qualifier, method=point.method,
+                conditions=point_conditions,
                 evidence=_ev_many(point.evidence, sid),
             )
             if _is_computational_point(point, set(doc.paper_types)):
