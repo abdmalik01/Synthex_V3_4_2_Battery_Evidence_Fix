@@ -1,0 +1,106 @@
+{
+  "id": "CORR-INHIB-C",
+  "doi": "10.1016/j.heliyon.2020.e03939",
+  "filename": "Corrosion 3.pdf",
+  "gold_status": "manual_source_review_complete",
+  "ownership": "focal_work",
+  "source_review": {
+    "basis": "Direct review of the benchmark PDF; numeric gold taken from explicitly labelled focal tables/text only.",
+    "reference_electrode_conversion_performed": false,
+    "unit_conversion_performed": false,
+    "plot_digitization_used_for_gold": false
+  },
+  "material": {
+    "name": "M-steel (mild steel)",
+    "role": "working_electrode",
+    "page": 2,
+    "composition_wt_percent": {
+      "Si": 0.026,
+      "P": 0.012,
+      "C": 0.076,
+      "Mn": 0.192,
+      "Cr": 0.050,
+      "Ni": 0.050,
+      "Cu": 0.135,
+      "Al": 0.023,
+      "Fe": "balance"
+    }
+  },
+  "environment_and_setup": {
+    "electrolyte": "1 M HCl",
+    "temperature": "303 K for the scored polarization results",
+    "working_electrode": "M-steel",
+    "counter_electrode": "platinum",
+    "reference_electrode": "saturated calomel electrode (SCE)",
+    "page": 2
+  },
+  "potentiodynamic_protocol": {
+    "scan_rate": "0.5 mV/s",
+    "reported_measurement_range": "-0.8 V_SCE to -0.2 V_SCE",
+    "pre_measurement_stabilization": "30 min",
+    "page": 3
+  },
+  "inhibitors": [
+    {"name": "CSQN", "scored_concentration": "1×10^-3 M"},
+    {"name": "NSQN", "scored_concentration": "1×10^-3 M"}
+  ],
+  "scored_numeric_observations": [
+    {
+      "metric": "corrosion_current_density",
+      "value": 556.5,
+      "unit": "μA cm^-2",
+      "conditions": {"medium": "1 M HCl", "inhibitor": "none", "temperature": "303 K"},
+      "experiment_type": "potentiodynamic_polarization",
+      "material_contains": "M-steel",
+      "reference_electrode": "SCE",
+      "page": 4,
+      "evidence_snippet": "Table 2: HCl 1.0 M; i = 556.5 ± 0.6 μA cm^-2."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 49.9,
+      "unit": "μA cm^-2",
+      "conditions": {"medium": "1 M HCl", "inhibitor": "CSQN", "inhibitor_concentration": "1×10^-3 M", "temperature": "303 K"},
+      "experiment_type": "potentiodynamic_polarization",
+      "material_contains": "M-steel",
+      "reference_electrode": "SCE",
+      "page": 4,
+      "evidence_snippet": "Table 2: CSQN 10^-3 M; i = 49.9 ± 0.4 μA cm^-2."
+    },
+    {
+      "metric": "inhibition_efficiency",
+      "value": 91.1,
+      "unit": "%",
+      "conditions": {"medium": "1 M HCl", "inhibitor": "CSQN", "inhibitor_concentration": "1×10^-3 M", "temperature": "303 K", "method": "PDP"},
+      "experiment_type": "potentiodynamic_polarization",
+      "material_contains": "M-steel",
+      "page": 4,
+      "evidence_snippet": "Table 2: CSQN 10^-3 M; Epp = 91.1%."
+    },
+    {
+      "metric": "corrosion_current_density",
+      "value": 30.4,
+      "unit": "μA cm^-2",
+      "conditions": {"medium": "1 M HCl", "inhibitor": "NSQN", "inhibitor_concentration": "1×10^-3 M", "temperature": "303 K"},
+      "experiment_type": "potentiodynamic_polarization",
+      "material_contains": "M-steel",
+      "reference_electrode": "SCE",
+      "page": 4,
+      "evidence_snippet": "Table 2: NSQN 10^-3 M; i = 30.4 ± 0.2 μA cm^-2."
+    },
+    {
+      "metric": "inhibition_efficiency",
+      "value": 94.5,
+      "unit": "%",
+      "conditions": {"medium": "1 M HCl", "inhibitor": "NSQN", "inhibitor_concentration": "1×10^-3 M", "temperature": "303 K", "method": "PDP"},
+      "experiment_type": "potentiodynamic_polarization",
+      "material_contains": "M-steel",
+      "page": 4,
+      "evidence_snippet": "Table 2: NSQN 10^-3 M; Epp = 94.5%."
+    }
+  ],
+  "source_conflicts_or_cautions": [
+    "The prose immediately below Table 2 lists 49.9 and 30.4 μA/cm2 with the inhibitor names in an order that conflicts with the explicitly labelled table rows. Gold associations follow Table 2, not the ambiguous prose.",
+    "Gravimetric, PDP and EIS inhibition efficiencies are method-specific and are not merged into one value."
+  ]
+}
