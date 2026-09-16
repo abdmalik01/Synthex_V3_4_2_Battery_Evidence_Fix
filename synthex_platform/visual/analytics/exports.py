@@ -14,15 +14,40 @@ from .render import VisualizationRenderer
 
 
 def comparison_frame(rows: list[AnalyticMeasurementRow]) -> pd.DataFrame:
-    """Friendly analysis columns plus hidden traceability columns for exports."""
-    return pd.DataFrame([{
-        "material": row.material_label, "property": row.property_name, "value": row.value,
-        "raw_value": row.raw_value, "unit": row.normalized_unit or row.unit,
-        "modality": row.modality, "method": row.method, "conditions": json.dumps(row.conditions, ensure_ascii=False, sort_keys=True),
-        "archive_id": row.archive_id, "source_id": row.source_id, "material_id": row.material_id,
-        "experiment_id": row.experiment_id, "calculation_id": row.calculation_id,
-        "evidence_references": json.dumps(row.evidence_references, ensure_ascii=False, sort_keys=True),
-    } for row in rows])
+    """Friendly analysis columns plus traceability and flattened condition dimensions."""
+    condition_keys = sorted({
+        key
+        for row in rows
+        for key in row.conditions
+        if not key.endswith("_raw") and not key.endswith("_unit")
+    }, key=str.casefold)
+    records = []
+    for row in rows:
+        record = {
+            "material": row.material_label,
+            "property": row.property_name,
+            "value": row.value,
+            "raw_value": row.raw_value,
+            "unit": row.normalized_unit or row.unit,
+            "modality": row.modality,
+            "method": row.method,
+        }
+        for key in condition_keys:
+            record[f"condition_{key}"] = row.conditions.get(key)
+            unit = row.conditions.get(f"{key}_unit")
+            if unit not in (None, ""):
+                record[f"condition_{key}_unit"] = unit
+        record.update({
+            "conditions": json.dumps(row.conditions, ensure_ascii=False, sort_keys=True),
+            "archive_id": row.archive_id,
+            "source_id": row.source_id,
+            "material_id": row.material_id,
+            "experiment_id": row.experiment_id,
+            "calculation_id": row.calculation_id,
+            "evidence_references": json.dumps(row.evidence_references, ensure_ascii=False, sort_keys=True),
+        })
+        records.append(record)
+    return pd.DataFrame(records)
 
 
 def export_visualization(
