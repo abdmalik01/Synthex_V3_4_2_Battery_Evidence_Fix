@@ -3,7 +3,7 @@ from synthex_platform.extraction.battery_assembler import assemble_battery_archi
 from synthex_platform.extraction.battery_evidence import verify_battery_evidence
 from synthex_platform.extraction.battery_models import BatteryDocument
 from synthex_platform.extraction.battery_table_conditions import enrich_table_condition_evidence
-from synthex_platform.extraction.source_context import SourceBundle, SourceMetadata
+from synthex_platform.extraction.source_context import SourceBundle, SourceMetadata, SourcePageContext
 from synthex_platform.visual.analytics.projection import project_archives
 from synthex_platform.visual.analytics.specs import build_visualization_spec, surface_coverage
 from synthex_platform.visual.models import TableCell, TableRecord, VisualProvenance
@@ -60,9 +60,6 @@ def _table_fixture() -> TableRecord:
 
 
 def _document_fixture() -> BatteryDocument:
-    # The evidence snippets deliberately mirror how table rows are represented in
-    # the marked source text. Later cells include the row prefix rather than a
-    # synthetic non-contiguous "row-header + cell" string.
     points = []
     for soc, temperature, value, snippet in [
         (100, -30, 14.69, "100% 14.69"),
@@ -159,6 +156,100 @@ SOC / Temperature -30 °C 25 °C
     assert coverage["unique_x"] == 2
     assert coverage["unique_y"] == 2
     assert coverage["unique_coordinates"] == 4
+
+    spec = build_visualization_spec(
+        rows,
+        "contour",
+        "NMC resistance surface",
+        x_field="conditions.temperature",
+        y_field="conditions.state_of_charge",
+        z_field="value",
+    )
+    assert spec.eligible is True
+    assert spec.reason is None
+
+
+def test_dense_soc_temperature_matrix_recovers_all_96_observations():
+    page_text = """Table 4. Battery ohmic resistance value under different battery internal temperature and SOC levels.
+SOC −30 °C −20 °C −10 °C 0 °C 10 °C 25 °C 45 °C 55 °C
+100% 14.69 10.07 6.51 4.01 2.65 1.56 1.06 0.92
+95% 14.36 9.75 6.31 3.83 2.59 1.56 1.07 0.93
+90% 14.10 9.50 6.17 3.74 2.57 1.57 1.09 0.95
+80% 13.77 9.20 6.01 3.67 2.54 1.60 1.15 1.00
+70% 13.58 9.10 5.94 3.67 2.57 1.64 1.18 1.04
+60% 13.58 9.10 5.90 3.72 2.61 1.66 1.16 1.02
+50% 13.67 9.22 5.81 3.66 2.47 1.46 0.97 0.84
+40% 13.94 9.46 5.88 3.64 2.39 1.45 0.98 0.87
+30% 14.51 9.95 6.16 3.82 2.49 1.53 1.00 0.88
+20% 15.66 10.90 6.69 4.16 2.76 1.67 1.06 0.92
+10% 18.32 13.68 8.28 5.16 3.57 2.14 1.16 0.96
+5% 29.98 27.81 10.91 6.77 5.06 3.17 1.43 1.15
+"""
+    bundle = SourceBundle(
+        source=SourceMetadata(
+            source_id="src-nmc",
+            filename="energies-11-02275.pdf",
+            source_checksum="fixture-checksum",
+        ),
+        pages=[SourcePageContext(page=11, text=page_text, native_text=page_text)],
+    )
+    doc = BatteryDocument.model_validate({
+        "source": {"title": "NMC matrix fixture"},
+        "paper_types": ["electrochemical_performance"],
+        "battery_groups": [{
+            "group_id": "group-nmc",
+            "ownership": "focal_work",
+            "battery_ids": ["NMC-cell"],
+            "performance_points": [{
+                "property": "internal_resistance",
+                "raw_value": "14.69 mΩ",
+                "value": 14.69,
+                "unit": "mΩ",
+                "qualifier": "exact",
+                "temperature": {"raw_value": "-30 °C", "value": -30, "unit": "°C", "qualifier": "exact"},
+                "additional_conditions": [{
+                    "property": "state_of_charge",
+                    "raw_value": "100%",
+                    "value": 100,
+                    "unit": "%",
+                    "qualifier": "exact",
+                    "evidence": [],
+                }],
+                "ownership": "focal_work",
+                "evidence": [{
+                    "page": 11,
+                    "section": "Table 4",
+                    "text_snippet": "100% | 14.69",
+                    "source_type": "table",
+                    "table_id": "Table 4",
+                }],
+            }],
+        }],
+    })
+
+    enrich_table_condition_evidence(doc, bundle)
+    matrix_points = [
+        point for point in doc.battery_groups[0].performance_points
+        if point.property == "internal_resistance"
+    ]
+    assert len(matrix_points) == 96
+
+    source_text = f"--- PAGE 11 ---\n{page_text}"
+    verify_battery_evidence(doc, source_text)
+    archive = assemble_battery_archive(doc, source_text=source_text)
+    rows = [row for row in project_archives([archive]) if row.property_name == "internal_resistance"]
+    assert len(rows) == 96
+
+    coverage = surface_coverage(
+        rows,
+        "conditions.temperature",
+        "conditions.state_of_charge",
+        "value",
+    )
+    assert coverage["joint_xyz"] == 96
+    assert coverage["unique_x"] == 8
+    assert coverage["unique_y"] == 12
+    assert coverage["unique_coordinates"] == 96
 
     spec = build_visualization_spec(
         rows,
