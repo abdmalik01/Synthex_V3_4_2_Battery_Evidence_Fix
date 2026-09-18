@@ -166,7 +166,7 @@ SOC / Temperature -30 °C 25 °C
         z_field="value",
     )
     assert spec.eligible is True
-    assert spec.eligibility_reason is None
+    assert spec.reason is None
 
 
 def test_ambiguous_or_unrelated_table_axes_are_not_promoted():
