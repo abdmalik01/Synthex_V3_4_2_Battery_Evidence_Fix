@@ -7,11 +7,20 @@ from collections.abc import Iterable
 from synthex_platform.visual.models import TableCell, TableRecord
 
 from .battery_evidence import normalize_evidence_text
-from .battery_models import BatteryCondition, BatteryDocument, BatteryEvidence
+from .battery_models import (
+    BatteryCondition,
+    BatteryDocument,
+    BatteryEvidence,
+    BatteryPerformancePoint,
+    BatteryQuantity,
+)
 from .source_context import SourceBundle
 
 
 _NUMBER = re.compile(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
+_TABLE_LINE = re.compile(r"^\s*Table\s+(\d+[A-Za-z]?)\b", re.IGNORECASE)
+_SOC_ROW = re.compile(r"^\s*(\d+(?:\.\d+)?)%\s+(.+)$")
+_TEMPERATURE_TOKEN = re.compile(r"([−–—-]?\s*\d+(?:\.\d+)?)\s*(?:°|◦)\s*C", re.IGNORECASE)
 
 
 def _norm(value: str | None) -> str:
@@ -133,15 +142,238 @@ def _append_unique_evidence(target: list[BatteryEvidence], evidence: BatteryEvid
     target.append(evidence)
 
 
-def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
-    """Recover source-backed row/column evidence for multidimensional battery tables.
+def _parse_temperature(raw: str) -> float:
+    cleaned = raw.replace("−", "-").replace("–", "-").replace("—", "-").replace(" ", "")
+    return float(cleaned)
 
-    The LLM may preserve the correct scientific axes while emitting a synthetic row string such
-    as ``100% | 14.69`` that is not a verbatim PDF substring. We therefore resolve the claim back
-    to one native structured table cell. The result cell and any missing additional-condition axes
-    receive independent cell-level evidence only when the complete condition set identifies one
-    unambiguous matrix location.
+
+def _table_number_from_reference(reference: str | None) -> str | None:
+    if not reference:
+        return None
+    match = re.search(r"table\s*(\d+[A-Za-z]?)", reference, flags=re.IGNORECASE)
+    return match.group(1) if match else None
+
+
+def _matrix_existing_key(point: BatteryPerformancePoint) -> tuple[float, float] | None:
+    soc = None
+    temperature = point.temperature.value if point.temperature else None
+    for condition in point.additional_conditions:
+        if condition.property == "state_of_charge" and condition.value is not None:
+            soc = float(condition.value)
+        elif condition.property == "temperature" and condition.value is not None:
+            temperature = float(condition.value)
+    if soc is None or temperature is None:
+        return None
+    return float(soc), float(temperature)
+
+
+def _text_table_evidence(
+    *,
+    page: int,
+    section: str,
+    table_id: str,
+    text: str,
+    row: int,
+    column: int,
+) -> BatteryEvidence:
+    return BatteryEvidence(
+        page=page,
+        section=section,
+        text_snippet=text,
+        source_type="table",
+        original_source_type="table_reported",
+        table_id=table_id,
+        locator=f"row={row};column={column}",
+        confidence=1.0,
+    )
+
+
+def recover_dense_battery_matrices(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
+    """Deterministically recover explicit SOC x temperature resistance matrices.
+
+    This path is intentionally narrow and source-driven. It only activates when the page contains an
+    explicit Table caption describing resistance under both SOC and temperature, an explicit temperature
+    header, and rectangular SOC rows. A pre-existing LLM-extracted internal-resistance point is required
+    to supply the reported unit, so the deterministic layer never invents a unit or scientific property.
     """
+    if bundle is None or not bundle.pages:
+        return doc
+
+    for page_context in bundle.pages:
+        lines = [line.strip() for line in page_context.text.splitlines() if line.strip()]
+        for index, line in enumerate(lines):
+            table_match = _TABLE_LINE.match(line)
+            lower = line.casefold()
+            if not table_match or "resistance" not in lower or "temperature" not in lower or "soc" not in lower:
+                continue
+            table_number = table_match.group(1)
+            header_index = None
+            temperatures: list[float] = []
+            header_line = None
+            for probe in range(index + 1, min(index + 5, len(lines))):
+                candidate = lines[probe]
+                if "soc" not in candidate.casefold():
+                    continue
+                tokens = _TEMPERATURE_TOKEN.findall(candidate)
+                if len(tokens) >= 2:
+                    header_index = probe
+                    header_line = candidate
+                    temperatures = [_parse_temperature(token) for token in tokens]
+                    break
+            if header_index is None or header_line is None:
+                continue
+
+            matrix_rows: list[tuple[float, list[float], str]] = []
+            for probe in range(header_index + 1, min(header_index + 40, len(lines))):
+                row_line = lines[probe]
+                row_match = _SOC_ROW.match(row_line)
+                if not row_match:
+                    if matrix_rows:
+                        break
+                    continue
+                soc = float(row_match.group(1))
+                values = [float(token) for token in _NUMBER.findall(row_match.group(2))]
+                if len(values) != len(temperatures):
+                    if matrix_rows:
+                        break
+                    continue
+                matrix_rows.append((soc, values, row_line))
+            if len(matrix_rows) < 2:
+                continue
+
+            matching_groups = []
+            for group in doc.battery_groups:
+                seeds = []
+                for point in group.performance_points:
+                    if point.property != "internal_resistance" or not point.unit:
+                        continue
+                    evidence_numbers = {
+                        _table_number_from_reference(item.table_id)
+                        for item in point.evidence
+                        if item.page in (None, page_context.page)
+                    }
+                    if table_number in evidence_numbers:
+                        seeds.append(point)
+                if seeds:
+                    matching_groups.append((group, seeds))
+            if len(matching_groups) != 1:
+                continue
+
+            group, seeds = matching_groups[0]
+            units = {point.unit for point in seeds if point.unit}
+            if len(units) != 1:
+                continue
+            unit = next(iter(units))
+            table_record = next(
+                (
+                    table for table in bundle.tables
+                    if table.page == page_context.page and table.table_number == table_number
+                ),
+                None,
+            )
+            table_id = table_record.table_id if table_record else f"Table {table_number}"
+            section = line
+            existing = {
+                key: point
+                for point in group.performance_points
+                if point.property == "internal_resistance"
+                for key in [_matrix_existing_key(point)]
+                if key is not None
+            }
+
+            for row_index, (soc, values, row_line) in enumerate(matrix_rows, start=1):
+                soc_evidence = _text_table_evidence(
+                    page=page_context.page, section=section, table_id=table_id,
+                    text=row_line, row=row_index, column=0,
+                )
+                for column_index, (temperature, value) in enumerate(zip(temperatures, values), start=1):
+                    result_evidence = _text_table_evidence(
+                        page=page_context.page, section=section, table_id=table_id,
+                        text=row_line, row=row_index, column=column_index,
+                    )
+                    temperature_evidence = _text_table_evidence(
+                        page=page_context.page, section=section, table_id=table_id,
+                        text=header_line, row=0, column=column_index,
+                    )
+                    key = (float(soc), float(temperature))
+                    point = existing.get(key)
+                    if point is None:
+                        point = BatteryPerformancePoint(
+                            property="internal_resistance",
+                            raw_value=f"{value:g} {unit}",
+                            value=value,
+                            unit=unit,
+                            qualifier="exact",
+                            temperature=BatteryQuantity(
+                                raw_value=f"{temperature:g} °C",
+                                value=temperature,
+                                unit="°C",
+                                qualifier="exact",
+                            ),
+                            additional_conditions=[
+                                BatteryCondition(
+                                    property="state_of_charge",
+                                    raw_value=f"{soc:g}%",
+                                    value=soc,
+                                    unit="%",
+                                    qualifier="exact",
+                                    evidence=[soc_evidence],
+                                ),
+                                BatteryCondition(
+                                    property="temperature",
+                                    raw_value=f"{temperature:g} °C",
+                                    value=temperature,
+                                    unit="°C",
+                                    qualifier="exact",
+                                    evidence=[temperature_evidence],
+                                ),
+                            ],
+                            ownership="focal_work",
+                            evidence=[result_evidence],
+                        )
+                        group.performance_points.append(point)
+                        existing[key] = point
+                    else:
+                        _append_unique_evidence(point.evidence, result_evidence)
+                        soc_condition = next(
+                            (condition for condition in point.additional_conditions if condition.property == "state_of_charge"),
+                            None,
+                        )
+                        if soc_condition is None:
+                            soc_condition = BatteryCondition(
+                                property="state_of_charge", raw_value=f"{soc:g}%", value=soc,
+                                unit="%", qualifier="exact", evidence=[],
+                            )
+                            point.additional_conditions.append(soc_condition)
+                        _append_unique_evidence(soc_condition.evidence, soc_evidence)
+                        temp_condition = next(
+                            (condition for condition in point.additional_conditions if condition.property == "temperature"),
+                            None,
+                        )
+                        if temp_condition is None:
+                            temp_condition = BatteryCondition(
+                                property="temperature", raw_value=f"{temperature:g} °C", value=temperature,
+                                unit="°C", qualifier="exact", evidence=[],
+                            )
+                            point.additional_conditions.append(temp_condition)
+                        _append_unique_evidence(temp_condition.evidence, temperature_evidence)
+                        if point.temperature is None:
+                            point.temperature = BatteryQuantity(
+                                raw_value=f"{temperature:g} °C", value=temperature,
+                                unit="°C", qualifier="exact",
+                            )
+
+            doc.extraction_notes.append(
+                f"Deterministic structured-table recovery preserved {len(matrix_rows) * len(temperatures)} "
+                f"internal-resistance observations from Table {table_number} across "
+                f"{len(matrix_rows)} SOC levels and {len(temperatures)} temperatures."
+            )
+
+    return doc
+
+
+def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
+    """Recover source-backed row/column evidence for multidimensional battery tables."""
     if bundle is None or not bundle.tables:
         return doc
 
@@ -165,9 +397,6 @@ def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle |
                 continue
 
             table, result_cell = next(iter(unique_results.values()))
-
-            # Preserve the original LLM evidence for audit, but add a native cell-level
-            # evidence object whose text is exactly the source cell and whose locator is stable.
             _append_unique_evidence(point.evidence, _cell_evidence(table, result_cell))
 
             for source_evidence in table_evidence:
