@@ -363,17 +363,20 @@ def recover_dense_battery_matrices(doc: BatteryDocument, bundle: SourceBundle | 
                                 unit="°C", qualifier="exact",
                             )
 
-            doc.extraction_notes.append(
+            note = (
                 f"Deterministic structured-table recovery preserved {len(matrix_rows) * len(temperatures)} "
                 f"internal-resistance observations from Table {table_number} across "
                 f"{len(matrix_rows)} SOC levels and {len(temperatures)} temperatures."
             )
+            if note not in doc.extraction_notes:
+                doc.extraction_notes.append(note)
 
     return doc
 
 
 def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
     """Recover source-backed row/column evidence for multidimensional battery tables."""
+    doc = recover_dense_battery_matrices(doc, bundle)
     if bundle is None or not bundle.tables:
         return doc
 
