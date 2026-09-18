@@ -90,73 +90,174 @@ def _grid(table) -> list[list[str | None]]:
     return [[cell if cell is not None else None for cell in row] for row in table.extract()]
 
 
-def _captioned_text_fallback_tables(page):
-    """Recover dense, captioned borderless tables when line-based detection finds none.
+def _nonempty_count(row: list[str | None]) -> int:
+    return sum(cell is not None and str(cell).strip() != "" for cell in row)
 
-    This fallback is deliberately conservative: text alignment alone is not enough.
-    A candidate must have a nearby explicit Table caption and a multi-row/multi-column
-    grid. Ordinary prose therefore remains outside the table evidence path.
+
+def _trim_caption_grid(grid: list[list[str | None]]) -> tuple[list[list[str | None]], list[int]]:
+    """Keep the compact table immediately below a caption and drop chart/prose spillover.
+
+    PyMuPDF's text strategy can span beyond a borderless table into a nearby plot. Scientific
+    tables often contain one blank spacer after the header, so the first blank row is ignored;
+    a later blank row terminates the retained table once data rows have begun.
     """
-    try:
-        candidates = list(page.find_tables(strategy="text").tables)
-    except TypeError:
-        # Compatibility with older supported PyMuPDF releases.
-        candidates = list(page.find_tables(vertical_strategy="text", horizontal_strategy="text").tables)
+    retained: list[list[str | None]] = []
+    source_rows: list[int] = []
+    nonempty_rows = 0
+    skipped_header_gap = False
+    for row_index, row in enumerate(grid):
+        populated = _nonempty_count(row)
+        if populated == 0:
+            if nonempty_rows <= 1 and not skipped_header_gap:
+                skipped_header_gap = True
+                continue
+            if nonempty_rows >= 2:
+                break
+            continue
+        retained.append(row)
+        source_rows.append(row_index)
+        nonempty_rows += 1
+    return retained, source_rows
+
+
+def _looks_like_prose(text: str) -> bool:
+    compact = " ".join(text.split())
+    if not compact:
+        return False
+    words = compact.split()
+    alpha = sum(char.isalpha() for char in compact)
+    digits = sum(char.isdigit() for char in compact)
+    return len(words) >= 8 and compact.endswith((".", ":", ";")) and alpha > max(12, 2 * digits)
+
+
+def _captioned_region_text_tables(page):
+    """Recover dense borderless tables by searching only below explicit Table captions.
+
+    Full-page text-table detection is intentionally avoided because plots and ordinary prose can
+    otherwise be merged into one enormous false table. Each candidate is bounded by its caption,
+    nearby prose/captions, and a conservative vertical search window.
+    """
+    blocks = sorted(page.get_text("blocks"), key=lambda item: (item[1], item[0]))
     accepted = []
-    for table in candidates:
-        grid = _grid(table)
-        bbox = _bbox(getattr(table, "bbox", None))
-        caption, _ = _caption_for(page, bbox)
-        width = max((len(row) for row in grid), default=0)
-        nonempty = sum(
-            cell is not None and str(cell).strip() != ""
-            for row in grid for cell in row
+    for block_index, block in enumerate(blocks):
+        x0, _, x1, y1, text, *_ = block
+        match = _CAPTION.match(" ".join(text.split()))
+        if not match:
+            continue
+        caption, table_number = match.group(1), match.group(2)
+        start = y1 + 1.0
+        end = min(page.rect.height, start + 240.0)
+        for later in blocks[block_index + 1:]:
+            _, later_y0, _, _, later_text, *_ = later
+            if later_y0 <= start + 5:
+                continue
+            compact = " ".join(later_text.split())
+            if later_y0 > start + 25 and (
+                _looks_like_prose(compact)
+                or re.match(r"^\s*(?:Table|Figure)\s+\d+", compact, re.IGNORECASE)
+            ):
+                end = min(end, later_y0 - 1.0)
+                break
+        if end <= start + 12:
+            continue
+        clip = pymupdf.Rect(
+            max(0.0, x0 - 80.0),
+            start,
+            min(page.rect.width, x1 + 80.0),
+            end,
         )
-        populated_rows = sum(
-            sum(cell is not None and str(cell).strip() != "" for cell in row) >= 2
-            for row in grid
-        )
-        if caption and len(grid) >= 3 and width >= 3 and populated_rows >= 3 and nonempty >= 8:
-            accepted.append(table)
+        try:
+            candidates = list(page.find_tables(strategy="text", clip=clip).tables)
+        except TypeError:
+            candidates = list(page.find_tables(
+                vertical_strategy="text", horizontal_strategy="text", clip=clip
+            ).tables)
+        scored = []
+        for table in candidates:
+            full_grid = _grid(table)
+            grid, source_rows = _trim_caption_grid(full_grid)
+            width = max((len(row) for row in grid), default=0)
+            populated_rows = sum(_nonempty_count(row) >= 2 for row in grid)
+            nonempty = sum(_nonempty_count(row) for row in grid)
+            if len(grid) >= 3 and width >= 3 and populated_rows >= 3 and nonempty >= 8:
+                scored.append((nonempty, width, len(grid), table, grid, source_rows))
+        if scored:
+            _, _, _, table, grid, source_rows = max(scored, key=lambda item: item[:3])
+            accepted.append((table, caption, table_number, grid, source_rows))
     return accepted
 
 
 def extract_tables(pdf_path: str | Path, source_id: str | None = None) -> list[TableRecord]:
-    """Extract native tables, with a conservative captioned-text fallback."""
+    """Extract native tables plus conservative caption-guided borderless tables."""
     token = _source_token(pdf_path, source_id)
     records: list[TableRecord] = []
     with pymupdf.open(str(pdf_path)) as document:
         for page_index, page in enumerate(document):
-            native_tables = list(page.find_tables().tables)
-            table_candidates = [(table, "pymupdf") for table in native_tables]
-            if not table_candidates:
-                table_candidates = [
-                    (table, "pymupdf_text_fallback")
-                    for table in _captioned_text_fallback_tables(page)
-                ]
-            for table_index, (table, parser_name) in enumerate(table_candidates):
-                grid = _grid(table)
+            table_candidates = [
+                (table, "pymupdf", None, None, None, None)
+                for table in page.find_tables().tables
+            ]
+            native_numbers = {
+                number
+                for table, *_ in table_candidates
+                for _, number in [_caption_for(page, _bbox(getattr(table, "bbox", None)))]
+                if number
+            }
+            for table, caption, table_number, grid, source_rows in _captioned_region_text_tables(page):
+                if table_number in native_numbers:
+                    continue
+                table_candidates.append((
+                    table,
+                    "pymupdf_caption_text_fallback",
+                    caption,
+                    table_number,
+                    grid,
+                    source_rows,
+                ))
+
+            for table_index, (table, parser_name, forced_caption, forced_number, grid_override, source_rows) in enumerate(table_candidates):
+                original_grid = _grid(table)
+                grid = grid_override if grid_override is not None else original_grid
                 bbox = _bbox(getattr(table, "bbox", None))
-                table_id = stable_id("tbl", token, page_index + 1, table_index, bbox.model_dump() if bbox else None)
-                caption, table_number = _caption_for(page, bbox)
-                headers, body, header_metadata = _header_rows(table, grid)
-                cell_boxes = _cell_bboxes(table, grid)
-                cell_spans = _cell_spans(cell_boxes)
+                table_id = stable_id(
+                    "tbl", token, page_index + 1, table_index,
+                    forced_number, bbox.model_dump() if bbox else None,
+                )
+                caption, table_number = (
+                    (forced_caption, forced_number)
+                    if forced_caption is not None
+                    else _caption_for(page, bbox)
+                )
+                if grid_override is not None and grid:
+                    headers = [grid[0]]
+                    body = grid[1:]
+                    header_metadata = {
+                        "status": "single_level",
+                        "external": False,
+                        "caption_guided": True,
+                    }
+                else:
+                    headers, body, header_metadata = _header_rows(table, grid)
+
+                original_boxes = _cell_bboxes(table, original_grid)
+                original_spans = _cell_spans(original_boxes)
                 cells: list[TableCell] = []
                 for row_index, row in enumerate(grid):
+                    original_row = source_rows[row_index] if source_rows is not None else row_index
                     for column_index, raw_text in enumerate(row):
+                        cell_box = original_boxes.get((original_row, column_index))
+                        row_span, column_span = original_spans.get((original_row, column_index), (1, 1))
+                        cell_id = f"{table_id}:r{row_index}:c{column_index}"
                         provenance = VisualProvenance(
                             source_id=source_id, page=page_index + 1, object_id=table_id,
                             table_number=table_number, row=row_index, column=column_index,
-                            cell_id=f"{table_id}:r{row_index}:c{column_index}",
-                            bbox=cell_boxes.get((row_index, column_index)), parser=parser_name,
+                            cell_id=cell_id, bbox=cell_box, parser=parser_name,
                             parser_or_method=parser_name, raw_text=raw_text,
                         )
                         cells.append(TableCell(
-                            row=row_index, column=column_index, cell_id=f"{table_id}:r{row_index}:c{column_index}", raw_text=raw_text, text=raw_text,
-                            bbox=cell_boxes.get((row_index, column_index)),
-                            row_span=cell_spans.get((row_index, column_index), (1, 1))[0],
-                            column_span=cell_spans.get((row_index, column_index), (1, 1))[1],
+                            row=row_index, column=column_index, cell_id=cell_id,
+                            raw_text=raw_text, text=raw_text, bbox=cell_box,
+                            row_span=row_span, column_span=column_span,
                             provenance=provenance,
                         ))
                 provenance = VisualProvenance(
@@ -167,7 +268,7 @@ def extract_tables(pdf_path: str | Path, source_id: str | None = None) -> list[T
                 rectangular = bool(grid and all(len(row) == len(grid[0]) for row in grid))
                 confidence = (
                     1.0 if parser_name == "pymupdf" and rectangular
-                    else 0.75 if parser_name == "pymupdf_text_fallback" and rectangular
+                    else 0.8 if parser_name == "pymupdf_caption_text_fallback" and rectangular
                     else 0.5
                 )
                 records.append(TableRecord(
