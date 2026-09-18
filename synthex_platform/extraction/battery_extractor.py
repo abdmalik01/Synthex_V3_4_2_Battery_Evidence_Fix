@@ -16,6 +16,7 @@ from .battery_models import BatteryDocument
 from .battery_evidence import verify_battery_evidence
 from .battery_postprocess import deduplicate_shared_protocols, apply_scientific_guardrails
 from .battery_json_normalization import parse_battery_document_json
+from .battery_table_conditions import enrich_table_condition_evidence
 from .source_context import SourceBundle, build_source_bundle, compact_source_context, has_prompt_source_context
 
 load_dotenv(override=True)
@@ -91,11 +92,14 @@ Core rules:
     additional_conditions as objects {property,raw_value,value,unit,qualifier,evidence:[]}. This is especially
     important for multidimensional tables such as state of charge (SOC) × temperature, current density × cycle,
     concentration × temperature, pressure × composition, or other reported grids. Use property="state_of_charge"
-    for SOC. Every additional condition needs its own directly supporting evidence. Never infer an additional
-    condition from a nearby method description or from another row/column when the association is not explicit.
+    for SOC. Every additional condition needs its own directly supporting evidence. In a structured table, cite
+    the actual row-header or column-header cell that supplies that condition, including its native table_id and
+    row/column/cell locator. Never infer an additional condition from a nearby method description or from another
+    row/column when the association is not explicit.
 34. For structured tables, preserve the complete row/column association of each performance point. If a table
     reports one metric over two or more numeric axes, emit one performance point per reported cell/record with all
-    explicitly associated axes attached. Do not collapse a two-dimensional table to a single representative row.
+    explicitly associated axes attached. The result cell and every attached matrix axis must come from the same
+    structured table. Do not collapse a two-dimensional table to a single representative row.
 """
 
 OUTPUT_SHAPE = """
@@ -203,6 +207,7 @@ class BatteryGeminiExtractor:
         except (ValidationError, ValueError, TypeError) as exc:
             raise RuntimeError(f"Battery JSON failed local Pydantic validation: {exc}\n\nRAW OUTPUT:\n{output_text}") from exc
         result = deduplicate_shared_protocols(apply_scientific_guardrails(doc))
+        result = enrich_table_condition_evidence(result, source_bundle)
         return verify_battery_evidence(result, text)
 
     def extract_pdf(self, pdf_path: str | Path) -> BatteryDocument:
