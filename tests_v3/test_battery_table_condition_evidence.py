@@ -60,12 +60,15 @@ def _table_fixture() -> TableRecord:
 
 
 def _document_fixture() -> BatteryDocument:
+    # The evidence snippets deliberately mirror how table rows are represented in
+    # the marked source text. Later cells include the row prefix rather than a
+    # synthetic non-contiguous "row-header + cell" string.
     points = []
-    for soc, temperature, value in [
-        (100, -30, 14.69),
-        (100, 25, 1.56),
-        (50, -30, 13.67),
-        (50, 25, 1.46),
+    for soc, temperature, value, snippet in [
+        (100, -30, 14.69, "100% 14.69"),
+        (100, 25, 1.56, "100% 14.69 1.56"),
+        (50, -30, 13.67, "50% 13.67"),
+        (50, 25, 1.46, "50% 13.67 1.46"),
     ]:
         points.append({
             "property": "internal_resistance",
@@ -95,7 +98,7 @@ def _document_fixture() -> BatteryDocument:
             "evidence": [{
                 "page": 1,
                 "section": "Table 4",
-                "text_snippet": f"{soc}% {value}",
+                "text_snippet": snippet,
                 "source_type": "table",
                 "table_id": "Table 4",
             }],
