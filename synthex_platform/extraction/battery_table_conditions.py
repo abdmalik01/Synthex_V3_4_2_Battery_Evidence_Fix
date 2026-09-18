@@ -37,9 +37,6 @@ def _cell_matches(cell: TableCell, raw_value: str | None, value: float | None) -
     if normalized_raw and normalized_cell:
         if normalized_raw == normalized_cell:
             return True
-        # Permit a table cell that omits a unit already carried by the structured
-        # quantity, but do not use this loose path when the cell contains multiple
-        # numeric values.
         if normalized_raw in normalized_cell or normalized_cell in normalized_raw:
             if len(_numeric_values(text)) <= 1:
                 return True
@@ -72,8 +69,6 @@ def _candidate_tables(bundle: SourceBundle, evidence: BatteryEvidence) -> list[T
         matched = [table for table in page_tables if _table_ref_matches(evidence.table_id, table)]
         if matched:
             return matched
-    # A single table on the cited page is an unambiguous fallback. Multiple
-    # unrelated tables on one page are deliberately not guessed between.
     return page_tables if len(page_tables) == 1 else []
 
 
@@ -82,9 +77,6 @@ def _axis_cells(table: TableRecord, result_cell: TableCell, condition: BatteryCo
         cell for cell in table.cells
         if _cell_matches(cell, condition.raw_value, condition.value)
     ]
-    # Matrix axes must precede the data cell in either the same row or the same
-    # column. This prevents another numeric result elsewhere in the table from
-    # being mistaken for a row/column condition.
     return [
         cell for cell in matches
         if (
@@ -134,14 +126,21 @@ def _dedupe_cells(cells: Iterable[TableCell]) -> list[TableCell]:
     return out
 
 
-def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
-    """Recover missing row/column evidence for multidimensional battery tables.
+def _append_unique_evidence(target: list[BatteryEvidence], evidence: BatteryEvidence) -> None:
+    key = (evidence.table_id, evidence.locator, evidence.text_snippet)
+    if any((item.table_id, item.locator, item.text_snippet) == key for item in target):
+        return
+    target.append(evidence)
 
-    Gemini may correctly preserve a matrix cell's axes while leaving the
-    additional-condition evidence arrays empty. This function does not trust those
-    axes blindly. It admits evidence only when the structured SourceBundle contains
-    a matching result cell and a matching condition cell that is structurally
-    related as a preceding row or column header in the same table.
+
+def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
+    """Recover source-backed row/column evidence for multidimensional battery tables.
+
+    The LLM may preserve the correct scientific axes while emitting a synthetic row string such
+    as ``100% | 14.69`` that is not a verbatim PDF substring. We therefore resolve the claim back
+    to one native structured table cell. The result cell and any missing additional-condition axes
+    receive independent cell-level evidence only when the complete condition set identifies one
+    unambiguous matrix location.
     """
     if bundle is None or not bundle.tables:
         return doc
@@ -149,8 +148,6 @@ def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle |
     for group in doc.battery_groups:
         for point in group.performance_points:
             missing = [condition for condition in point.additional_conditions if not condition.evidence]
-            if not missing:
-                continue
             table_evidence = [item for item in point.evidence if item.source_type == "table"]
             if not table_evidence:
                 continue
@@ -161,9 +158,6 @@ def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle |
                     for cell in _result_cells(table, point):
                         resolved.append((table, cell))
 
-            # The complete set of axes should identify one matrix cell. If the
-            # result remains ambiguous, retain the extracted conditions only in
-            # the domain payload and do not promote them canonically.
             unique_results: dict[tuple[str, int, int], tuple[TableRecord, TableCell]] = {}
             for table, cell in resolved:
                 unique_results[(table.table_id, cell.row, cell.column)] = (table, cell)
@@ -172,8 +166,10 @@ def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle |
 
             table, result_cell = next(iter(unique_results.values()))
 
-            # Strengthen the performance-point table provenance too when Gemini
-            # omitted the native table locator.
+            # Preserve the original LLM evidence for audit, but add a native cell-level
+            # evidence object whose text is exactly the source cell and whose locator is stable.
+            _append_unique_evidence(point.evidence, _cell_evidence(table, result_cell))
+
             for source_evidence in table_evidence:
                 if source_evidence.page == table.page and (
                     not source_evidence.table_id or _table_ref_matches(source_evidence.table_id, table)
@@ -187,6 +183,6 @@ def enrich_table_condition_evidence(doc: BatteryDocument, bundle: SourceBundle |
             for condition in missing:
                 cells = _dedupe_cells(_axis_cells(table, result_cell, condition))
                 if len(cells) == 1:
-                    condition.evidence.append(_cell_evidence(table, cells[0]))
+                    _append_unique_evidence(condition.evidence, _cell_evidence(table, cells[0]))
 
     return doc
