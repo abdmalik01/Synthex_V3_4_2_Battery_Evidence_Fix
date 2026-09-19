@@ -1,6 +1,6 @@
 # Corrosion V1 — Stage 3 Benchmark Protocol
 
-Status: **corpus locked; fixed A–H manual source review complete; controlled live scoring in progress; CORR-GOLD-A and CORR-COAT-B passed**.
+Status: **corpus locked; fixed A–H manual source review complete; controlled live scoring in progress; CORR-GOLD-A, CORR-COAT-B, and CORR-INHIB-C passed**.
 
 Current verified full repository regression baseline remains **303 passed, 2 warnings**. Newer focused corrosion regressions have passed locally during Stage 3, but a newer repository-wide baseline must not be claimed until the full suite is rerun cleanly.
 
@@ -51,7 +51,28 @@ Controlled live run completed on 2026-09-16 after strict recovery of exact nativ
 
 The initial 0/5 live score after evidence remediation was a benchmark association-normalization defect, not an extraction defect: the evidence-backed material name `20 # steel` did not match gold `20# steel`. The scorer now normalizes spacing around the material-grade hash marker without changing the global unit/experiment/reference normalization contract. The saved archive rescored offline at 5/5 without another provider call.
 
-Next controlled live case: **CORR-INHIB-C**. Its preflight contract must preserve CSQN/NSQN treatment associations, method-specific inhibition efficiencies, the SCE reference electrode for the scored current-density rows, and the Table 2 association when nearby prose conflicts with the explicitly labelled table.
+### CORR-INHIB-C — PASS
+
+The saved controlled extraction was replayed offline on 2026-09-19 after tightening value-specific table evidence. No new provider call was made.
+
+- resolved route: `corrosion`; expected route: `corrosion`; route check passed;
+- gold numeric assertions: 5/5 matched;
+- recall: 100%;
+- value accuracy: 100%;
+- association accuracy: 100%;
+- source-tracking coverage: 100%;
+- overall score: 100%;
+- canonical materials: 1;
+- canonical experiments: 6 (three potentiodynamic-polarization and three EIS records);
+- canonical metrics: 13;
+- quarantined metrics: 3 source-reported `Rp` values, retained with verified evidence under `polarization_resistance_misclassified_as_eis` rather than relabelled as charge-transfer resistance;
+- Table 2 current-density and inhibition-efficiency observations retain their exact treatment row, current table identifier, source page, and result-cell locator;
+- CSQN and NSQN at `10^-3 M` remain distinct and correctly associated despite conflicting nearby prose;
+- the original controlled extraction used 1 primary and 1 schema-repair provider call; the successful evidence replay used 0 new provider calls.
+
+The previous saved 2/5 report was stale with respect to notation-only `uA`/`μA` unit normalization. Offline replay with current scoring and stricter table grounding closed the case at 5/5 without changing the gold standard or weakening admission.
+
+Next controlled live case: **CORR-EIS-D**. Its preflight contract must keep solution resistance, charge-transfer resistance, protective-layer/coating resistance, capacitance/CPE terms, and fitted equivalent-circuit context scientifically distinct.
 
 ## Fixed corpus
 

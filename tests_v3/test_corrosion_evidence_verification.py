@@ -117,6 +117,104 @@ def _pdp_table() -> TableRecord:
     )
 
 
+def _inhibitor_table() -> TableRecord:
+    grid = [
+        ["Medium", "Conc. (M)", "Ecorr (mV vs. SCE)", "i (μA cm−2)", "Epp (%)"],
+        ["HCl", "1.0", "-470.8 ± 0.3", "556.5 ± 0.6", "—"],
+        ["CSQN", "10−3", "-424.8 ± 0.5", "49.9 ± 0.4", "91.1"],
+        ["NSQN", "10−3", "-410.5 ± 0.9", "30.4 ± 0.2", "94.5"],
+    ]
+    cells = [
+        TableCell(
+            row=row,
+            column=column,
+            cell_id=f"tbl-inhib-r{row}-c{column}",
+            raw_text=value,
+            provenance=VisualProvenance(
+                page=6,
+                object_id="tbl-inhib",
+                object_type="table",
+                origin="table_reported",
+                row=row,
+                column=column,
+            ),
+        )
+        for row, values in enumerate(grid)
+        for column, value in enumerate(values)
+    ]
+    return TableRecord(
+        table_id="tbl-inhib",
+        source_id="src-corrosion-test",
+        page=6,
+        table_number="2",
+        caption="Table 2. Inhibitory efficacy and electrochemical parameters at 303 K.",
+        headers=[grid[0]],
+        rows=grid[1:],
+        cells=cells,
+        raw_representation={"grid": grid},
+        provenance=VisualProvenance(
+            page=6,
+            object_id="tbl-inhib",
+            object_type="table",
+            origin="table_reported",
+        ),
+    )
+
+
+def _inhibitor_document(*, metric_value: float = 49.9) -> CorrosionDocument:
+    caption = "Table 2. Inhibitory efficacy and electrochemical parameters at 303 K."
+    return CorrosionDocument.model_validate({
+        "source": {"title": "Inhibitor study"},
+        "paper_types": ["inhibitor_study", "polarization_corrosion"],
+        "materials": [{
+            "local_id": "steel",
+            "reported_name": "M-steel",
+            "ownership": "focal_work",
+        }],
+        "treatments": [
+            {
+                "treatment_id": "csqn",
+                "treatment_type": "inhibitor",
+                "reported_name": "CSQN",
+                "concentration": {"raw_value": "10^-3 M", "value": 0.001, "unit": "M"},
+                "ownership": "focal_work",
+            },
+            {
+                "treatment_id": "nsqn",
+                "treatment_type": "inhibitor",
+                "reported_name": "NSQN",
+                "concentration": {"raw_value": "10^-3 M", "value": 0.001, "unit": "M"},
+                "ownership": "focal_work",
+            },
+        ],
+        "experiments": [{
+            "experiment_id": "pdp-csqn",
+            "experiment_type": "potentiodynamic_polarization",
+            "material_refs": ["steel"],
+            "treatment_refs": ["csqn"],
+            "polarization_conditions": {"reference_electrode": "SCE"},
+            "metrics": [{
+                "property": "corrosion_current_density",
+                "reported_term": "icorr",
+                "quantity": {
+                    "raw_value": f"{metric_value} μA cm^-2",
+                    "value": metric_value,
+                    "unit": "μA cm^-2",
+                },
+                "ownership": "focal_work",
+                "evidence": [{
+                    "page": 6,
+                    "table_id": "stale-table-id",
+                    "text_snippet": caption,
+                    "source_type": "table",
+                    "original_source_type": "table_reported",
+                }],
+            }],
+            "ownership": "focal_work",
+        }],
+    })
+
+
 def test_corrosion_native_evidence_handles_pdf_nul_and_unicode_typography():
     bundle = _bundle(native_text="The EIS\x00measurement was performed from 10−2 to 105 Hz.")
     evidence = CorrosionEvidence(
@@ -227,6 +325,30 @@ def test_corrosion_table_evidence_rejects_value_from_wrong_metric_column():
     )
     verified = verify_corrosion_evidence_item(evidence, _bundle(tables=[_pdp_table()]))
     assert verified.verbatim_match is False
+
+
+def test_inhibitor_metric_caption_is_rebound_to_unique_value_cell_and_treatment_row():
+    verified = verify_corrosion_document_evidence(
+        _inhibitor_document(),
+        _bundle(tables=[_inhibitor_table()]),
+    )
+    evidence = verified.experiments[0].metrics[0].evidence
+    assert evidence[0].verbatim_match is True
+    assert evidence[0].page == 6
+    assert evidence[0].table_id == "tbl-inhib"
+    assert evidence[0].locator == "tbl-inhib-r2-c3"
+    assert evidence[0].text_snippet == "CSQN 10−3 -424.8 ± 0.5 49.9 ± 0.4 91.1"
+    assert evidence[1].verbatim_match is False
+
+
+def test_inhibitor_metric_does_not_rebind_value_from_another_treatment_row():
+    verified = verify_corrosion_document_evidence(
+        _inhibitor_document(metric_value=30.4),
+        _bundle(tables=[_inhibitor_table()]),
+    )
+    evidence = verified.experiments[0].metrics[0].evidence
+    assert len(evidence) == 1
+    assert evidence[0].verbatim_match is False
 
 
 def test_verified_metric_evidence_can_ground_experiment_shell_without_inventing_evidence():

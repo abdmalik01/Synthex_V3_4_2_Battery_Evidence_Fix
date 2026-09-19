@@ -22,6 +22,7 @@ _NUMBER = re.compile(
     r"(?:\s*(?:[×x*]\s*10\s*\^?\s*([+-]?\d+)|e\s*([+-]?\d+)))?",
     re.IGNORECASE,
 )
+_BARE_POWER_OF_TEN = re.compile(r"(?<![\w.])10\s*\^?\s*-\s*(\d+)")
 
 
 def _normalize(text: str) -> str:
@@ -126,6 +127,207 @@ def _decimal_tokens(text: str) -> list[Decimal]:
             continue
         values.append(value)
     return values
+
+
+def _text_supports_value(text: str, value: object) -> bool:
+    """Match a reported value without converting units or tolerating rounding."""
+    try:
+        target = Decimal(str(value))
+    except (InvalidOperation, ValueError):
+        return False
+    if target in _decimal_tokens(text):
+        return True
+    normalized = _normalize(text)
+    for match in _BARE_POWER_OF_TEN.finditer(normalized):
+        try:
+            if Decimal(10) ** -int(match.group(1)) == target:
+                return True
+        except (InvalidOperation, ValueError, OverflowError):
+            continue
+    return False
+
+
+def _effective_row_label(grid: list[list[str | None]], row_index: int) -> str:
+    """Resolve a vertically merged first-column treatment label without inventing it."""
+    for index in range(row_index, -1, -1):
+        row = grid[index]
+        if row and row[0] not in (None, ""):
+            return str(row[0])
+    return ""
+
+
+def _candidate_tables_for_metric_evidence(evidence: dict, source_bundle: SourceBundle) -> list:
+    table_id = evidence.get("table_id")
+    if table_id:
+        table = next((item for item in source_bundle.tables if item.table_id == table_id), None)
+        if table is not None:
+            return [table] if evidence.get("verbatim_match") is True else []
+
+    page = evidence.get("page")
+    snippet = _normalize(str(evidence.get("text_snippet") or ""))
+    if page is None or not snippet:
+        return []
+    caption_matches = [
+        table for table in source_bundle.tables
+        if table.page == page
+        and table.caption
+        and (
+            snippet in _normalize(table.caption)
+            or _normalize(table.caption) in snippet
+        )
+    ]
+    return caption_matches if len(caption_matches) == 1 else []
+
+
+def _treatment_labels(payload: dict, experiment: dict) -> tuple[list[str], list[str]]:
+    treatments = {
+        item.get("treatment_id"): item
+        for item in payload.get("treatments", [])
+        if isinstance(item, dict) and item.get("treatment_id")
+    }
+    all_labels = [
+        str(item.get("reported_name"))
+        for item in treatments.values()
+        if item.get("reported_name")
+    ]
+    expected = [
+        str(treatments[ref].get("reported_name"))
+        for ref in experiment.get("treatment_refs", [])
+        if ref in treatments and treatments[ref].get("reported_name")
+    ]
+    return expected, all_labels
+
+
+def _text_has_unambiguous_treatment(
+    text: str,
+    expected_labels: list[str],
+    all_labels: list[str],
+) -> bool:
+    normalized = _normalize(text)
+    present = {
+        label for label in all_labels
+        if _normalize(label) in normalized
+    }
+    if expected_labels:
+        return present == set(expected_labels)
+    return not present
+
+
+def _row_matches_experiment(
+    payload: dict,
+    experiment: dict,
+    grid: list[list[str | None]],
+    row_index: int,
+) -> bool:
+    expected_labels, all_labels = _treatment_labels(payload, experiment)
+    row = grid[row_index]
+    row_text = " ".join(str(value) for value in row if value not in (None, ""))
+    effective_label = _effective_row_label(grid, row_index)
+    if expected_labels:
+        if not all(_normalize(label) in _normalize(effective_label) for label in expected_labels):
+            return False
+    elif any(_normalize(label) in _normalize(effective_label) for label in all_labels):
+        return False
+
+    treatments = {
+        item.get("treatment_id"): item
+        for item in payload.get("treatments", [])
+        if isinstance(item, dict) and item.get("treatment_id")
+    }
+    for ref in experiment.get("treatment_refs", []):
+        treatment = treatments.get(ref) or {}
+        concentration = treatment.get("concentration")
+        if isinstance(concentration, dict) and concentration.get("value") is not None:
+            if not _text_supports_value(row_text, concentration["value"]):
+                return False
+    return True
+
+
+def _recover_metric_table_evidence(
+    payload: dict,
+    experiment: dict,
+    metric: dict,
+    source_bundle: SourceBundle,
+) -> dict | None:
+    quantity = metric.get("quantity") if isinstance(metric.get("quantity"), dict) else {}
+    value = quantity.get("value")
+    if value is None:
+        return None
+
+    matches: list[tuple[object, object, str]] = []
+    for evidence in metric.get("evidence", []):
+        if not isinstance(evidence, dict) or evidence.get("source_type") not in {"table", "unknown"}:
+            continue
+        for table in _candidate_tables_for_metric_evidence(evidence, source_bundle):
+            grid = _table_grid(table)
+            if not grid:
+                continue
+            for cell in table.cells:
+                if not cell.raw_text or not _text_supports_value(cell.raw_text, value):
+                    continue
+                if cell.row >= len(grid) or not _row_matches_experiment(payload, experiment, grid, cell.row):
+                    continue
+                exact_row = " ".join(
+                    str(item) for item in grid[cell.row] if item not in (None, "")
+                ).strip()
+                if exact_row:
+                    matches.append((table, cell, exact_row))
+
+    unique = {
+        (table.table_id, cell.row, cell.column): (table, cell, exact_row)
+        for table, cell, exact_row in matches
+    }
+    if len(unique) != 1:
+        return None
+    table, cell, exact_row = next(iter(unique.values()))
+    return CorrosionEvidence(
+        source_id=source_bundle.source.source_id,
+        page=table.page,
+        section=next((
+            item.get("section") for item in metric.get("evidence", [])
+            if isinstance(item, dict) and item.get("section")
+        ), None),
+        text_snippet=exact_row,
+        source_type="table",
+        original_source_type="table_reported",
+        table_id=table.table_id,
+        locator=cell.cell_id or f"{table.table_id}:r{cell.row}:c{cell.column}",
+        verbatim_match=True,
+    ).model_dump(mode="python")
+
+
+def _ground_metric_evidence(payload: dict, source_bundle: SourceBundle) -> dict:
+    """Require value-bearing evidence and recover only unique associated table cells."""
+    for experiment in payload.get("experiments", []):
+        if not isinstance(experiment, dict):
+            continue
+        expected_labels, all_labels = _treatment_labels(payload, experiment)
+        for metric in experiment.get("metrics", []):
+            if not isinstance(metric, dict):
+                continue
+            quantity = metric.get("quantity") if isinstance(metric.get("quantity"), dict) else {}
+            value = quantity.get("value")
+            evidence_items = metric.get("evidence") if isinstance(metric.get("evidence"), list) else []
+            grounded: list[dict] = []
+            for evidence in evidence_items:
+                if not isinstance(evidence, dict):
+                    continue
+                snippet = str(evidence.get("text_snippet") or "")
+                value_specific = value is not None and _text_supports_value(snippet, value)
+                association_specific = _text_has_unambiguous_treatment(
+                    snippet, expected_labels, all_labels
+                )
+                grounded.append({
+                    **evidence,
+                    "verbatim_match": bool(
+                        evidence.get("verbatim_match") is True
+                        and value_specific
+                        and association_specific
+                    ),
+                })
+            recovered = _recover_metric_table_evidence(payload, experiment, metric, source_bundle)
+            metric["evidence"] = [recovered, *grounded] if recovered is not None else grounded
+    return payload
 
 
 def _header_variants(value: str | None) -> list[str]:
@@ -474,5 +676,6 @@ def verify_corrosion_document_evidence(
         return {key: walk(item) for key, item in value.items()}
 
     verified_payload = walk(payload)
+    verified_payload = _ground_metric_evidence(verified_payload, source_bundle)
     verified_payload = _propagate_structural_experiment_support(verified_payload)
     return CorrosionDocument.model_validate(verified_payload)
