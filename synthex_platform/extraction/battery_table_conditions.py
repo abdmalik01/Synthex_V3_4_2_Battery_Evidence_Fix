@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 import re
 from collections.abc import Iterable
+from dataclasses import dataclass
 
 from synthex_platform.visual.models import TableCell, TableRecord
 
@@ -18,9 +19,25 @@ from .source_context import SourceBundle
 
 
 _NUMBER = re.compile(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?")
-_TABLE_LINE = re.compile(r"^\s*Table\s+(\d+[A-Za-z]?)\b", re.IGNORECASE)
-_SOC_ROW = re.compile(r"^\s*(\d+(?:\.\d+)?)%\s+(.+)$")
 _TEMPERATURE_TOKEN = re.compile(r"([−–—-]?\s*\d+(?:\.\d+)?)\s*(?:°|◦)\s*C", re.IGNORECASE)
+_C_RATE_TOKEN = re.compile(r"(?:\bC\s*/\s*(\d+(?:\.\d+)?)\b|([-+]?\d+(?:\.\d+)?)\s*C\b)", re.IGNORECASE)
+
+
+@dataclass(frozen=True)
+class _AxisValue:
+    property: str
+    raw_value: str
+    value: float
+    unit: str | None
+    cell: TableCell
+
+
+@dataclass(frozen=True)
+class _MatrixCell:
+    row_axis: _AxisValue
+    column_axis: _AxisValue
+    result_cell: TableCell
+    value: float
 
 
 def _norm(value: str | None) -> str:
@@ -47,7 +64,15 @@ def _cell_matches(cell: TableCell, raw_value: str | None, value: float | None) -
         if normalized_raw == normalized_cell:
             return True
         if normalized_raw in normalized_cell or normalized_cell in normalized_raw:
-            if len(_numeric_values(text)) <= 1:
+            cell_numbers = _numeric_values(text)
+            raw_numbers = _numeric_values(raw_value)
+            if cell_numbers or raw_numbers:
+                if len(cell_numbers) == len(raw_numbers) == 1 and math.isclose(
+                    cell_numbers[0], raw_numbers[0], rel_tol=0.0,
+                    abs_tol=max(1e-9, abs(raw_numbers[0]) * 1e-9),
+                ):
+                    return True
+            else:
                 return True
     if value is None:
         return False
@@ -86,6 +111,33 @@ def _axis_cells(table: TableRecord, result_cell: TableCell, condition: BatteryCo
         cell for cell in table.cells
         if _cell_matches(cell, condition.raw_value, condition.value)
     ]
+    property_key = re.sub(r"[^a-z0-9]+", "", condition.property.casefold())
+    aliases = {
+        "stateofcharge": ("soc", "state of charge"),
+        "depthofdischarge": ("dod", "depth of discharge"),
+        "crate": ("rate",),
+        "cycle": ("cycle",),
+        "currentdensity": ("current density",),
+    }.get(property_key, ())
+    if aliases:
+        header_by_column = {
+            column: " ".join(
+                cell.raw_text or cell.text or ""
+                for cell in table.cells
+                if cell.column == column and cell.row < result_cell.row
+            )
+            for column in range(result_cell.column)
+        }
+        axis_columns = [
+            column for column, text in header_by_column.items()
+            if any(alias in _norm(text) for alias in aliases)
+        ]
+        if axis_columns:
+            nearest_column = max(axis_columns)
+            return [
+                cell for cell in matches
+                if cell.row == result_cell.row and cell.column == nearest_column
+            ]
     return [
         cell for cell in matches
         if (
@@ -101,11 +153,29 @@ def _result_cells(table: TableRecord, point) -> list[TableCell]:
         cell for cell in table.cells
         if _cell_matches(cell, point.raw_value, point.value)
     ]
-    if not point.additional_conditions:
+    conditions = list(point.additional_conditions)
+    if point.temperature is not None:
+        conditions.append(BatteryCondition(
+            property="temperature",
+            raw_value=point.temperature.raw_value,
+            value=point.temperature.value,
+            unit=point.temperature.unit,
+            qualifier=point.temperature.qualifier,
+        ))
+    if point.c_rate:
+        c_rate_value = _parse_c_rate(point.c_rate)
+        conditions.append(BatteryCondition(
+            property="C_rate",
+            raw_value=point.c_rate,
+            value=c_rate_value,
+            unit="C" if c_rate_value is not None else None,
+            qualifier="exact",
+        ))
+    if not conditions:
         return candidates
     viable: list[TableCell] = []
     for cell in candidates:
-        if all(_axis_cells(table, cell, condition) for condition in point.additional_conditions):
+        if all(_axis_cells(table, cell, condition) for condition in conditions):
             viable.append(cell)
     return viable
 
@@ -120,7 +190,7 @@ def _cell_evidence(table: TableRecord, cell: TableCell) -> BatteryEvidence:
         original_source_type="table_reported",
         table_id=table.table_id,
         locator=f"row={cell.row};column={cell.column};cell_id={cell.cell_id}",
-        confidence=table.extraction_confidence,
+        confidence=cell.provenance.confidence or table.extraction_confidence,
     )
 
 
@@ -147,229 +217,474 @@ def _parse_temperature(raw: str) -> float:
     return float(cleaned)
 
 
-def _table_number_from_reference(reference: str | None) -> str | None:
-    if not reference:
+def _parse_c_rate(raw: str | None) -> float | None:
+    if not raw:
         return None
-    match = re.search(r"table\s*(\d+[A-Za-z]?)", reference, flags=re.IGNORECASE)
-    return match.group(1) if match else None
-
-
-def _matrix_existing_key(point: BatteryPerformancePoint) -> tuple[float, float] | None:
-    soc = None
-    temperature = point.temperature.value if point.temperature else None
-    for condition in point.additional_conditions:
-        if condition.property == "state_of_charge" and condition.value is not None:
-            soc = float(condition.value)
-        elif condition.property == "temperature" and condition.value is not None:
-            temperature = float(condition.value)
-    if soc is None or temperature is None:
+    match = _C_RATE_TOKEN.fullmatch(raw.strip())
+    if not match:
         return None
-    return float(soc), float(temperature)
+    if match.group(1):
+        denominator = float(match.group(1))
+        return 1.0 / denominator if denominator else None
+    return float(match.group(2))
 
 
-def _text_table_evidence(
+def _single_number(raw: str | None) -> float | None:
+    values = _numeric_values(raw)
+    return values[0] if len(values) == 1 else None
+
+
+def _axis_semantics(text: str) -> list[tuple[str, str | None]]:
+    normalized = _norm(text)
+    compact = re.sub(r"[^a-z0-9%]+", " ", normalized).strip()
+    semantics: list[tuple[str, str | None]] = []
+
+    def add(value: tuple[str, str | None]) -> None:
+        if value not in semantics:
+            semantics.append(value)
+
+    if re.search(r"\bsoc\b", compact) or "state of charge" in compact:
+        add(("state_of_charge", "%"))
+    if re.search(r"\bdod\b", compact) or "depth of discharge" in compact:
+        add(("depth_of_discharge", "%"))
+    if "temperature" in compact or "°c" in normalized or "◦c" in normalized:
+        add(("temperature", "°C"))
+    if "current density" in compact:
+        add(("current_density", None))
+    if "concentration" in compact:
+        add(("concentration", None))
+    if "pressure" in compact:
+        add(("pressure", None))
+    if "composition" in compact:
+        add(("composition", None))
+    if "cycle" in compact:
+        add(("cycle", None))
+    if "rate" in compact and re.search(r"(?:^|\s)c(?:\s|$)", compact):
+        add(("C_rate", "C"))
+    return semantics
+
+
+def _parse_axis_scalar(raw: str | None, property_name: str) -> float | None:
+    if not raw:
+        return None
+    if property_name in {"state_of_charge", "depth_of_discharge"}:
+        if "%" not in raw:
+            return None
+        return _single_number(raw)
+    if property_name == "temperature":
+        match = _TEMPERATURE_TOKEN.fullmatch(raw.strip())
+        return _parse_temperature(match.group(1)) if match else None
+    if property_name == "C_rate":
+        parsed = _parse_c_rate(raw)
+        return parsed if parsed is not None else _single_number(raw)
+    return _single_number(raw)
+
+
+def _cells_by_coordinate(table: TableRecord) -> dict[tuple[int, int], TableCell]:
+    return {(cell.row, cell.column): cell for cell in table.cells}
+
+
+def _row_axis(table: TableRecord) -> tuple[str, str | None, int, int, list[tuple[int, _AxisValue]]] | None:
+    if not table.cells:
+        return None
+    cells = _cells_by_coordinate(table)
+    rows = sorted({cell.row for cell in table.cells})
+    columns = sorted({cell.column for cell in table.cells})
+    candidates: list[tuple[int, int, str, str | None, list[tuple[int, _AxisValue]]]] = []
+    for column in columns:
+        for header_row in rows[:-1]:
+            header_cell = cells.get((header_row, column))
+            if header_cell is None:
+                continue
+            header_text = header_cell.raw_text or header_cell.text or ""
+            for property_name, unit in _axis_semantics(header_text):
+                values: list[tuple[int, _AxisValue]] = []
+                for row in rows:
+                    if row <= header_row:
+                        continue
+                    cell = cells.get((row, column))
+                    if cell is None:
+                        continue
+                    raw = cell.raw_text or cell.text or ""
+                    value = _parse_axis_scalar(raw, property_name)
+                    if value is not None:
+                        values.append((row, _AxisValue(property_name, raw, value, unit, cell)))
+                if len(values) >= 2:
+                    candidates.append((len(values), -column, property_name, unit, values))
+    if not candidates:
+        return None
+    _, neg_column, property_name, unit, values = max(candidates, key=lambda item: (item[0], item[1]))
+    return property_name, unit, -neg_column, min(row for row, _ in values), values
+
+
+def _page_for_table(bundle: SourceBundle, table: TableRecord):
+    return next((page for page in bundle.pages if page.page == table.page), None)
+
+
+def _temperature_header_from_page(
+    bundle: SourceBundle,
+    table: TableRecord,
+    expected: int,
+) -> list[tuple[str, float]]:
+    page = _page_for_table(bundle, table)
+    if page is None:
+        return []
+    lines = [line.strip() for line in page.text.splitlines() if line.strip()]
+    caption_indexes = [
+        index for index, line in enumerate(lines)
+        if (
+            table.table_number
+            and re.match(rf"^Table\s+{re.escape(table.table_number)}\b", line, re.IGNORECASE)
+        ) or (table.caption and _norm(line) == _norm(table.caption))
+    ]
+    for caption_index in caption_indexes:
+        for line in lines[caption_index + 1:caption_index + 5]:
+            matches = list(_TEMPERATURE_TOKEN.finditer(line))
+            if len(matches) == expected:
+                return [
+                    (match.group(0), _parse_temperature(match.group(1)))
+                    for match in matches
+                ]
+    return []
+
+
+def _column_axis_values(
+    bundle: SourceBundle,
+    table: TableRecord,
     *,
-    page: int,
-    section: str,
-    table_id: str,
-    text: str,
-    row: int,
-    column: int,
-) -> BatteryEvidence:
-    return BatteryEvidence(
-        page=page,
-        section=section,
-        text_snippet=text,
-        source_type="table",
-        original_source_type="table_reported",
-        table_id=table_id,
-        locator=f"row={row};column={column}",
-        confidence=1.0,
+    row_property: str,
+    first_data_row: int,
+    data_columns: list[int],
+) -> list[_AxisValue]:
+    header_cells: list[TableCell] = []
+    for column in data_columns:
+        candidates = [
+            cell for cell in table.cells
+            if cell.column == column and cell.row < first_data_row
+        ]
+        if not candidates:
+            return []
+        header_cells.append(max(candidates, key=lambda cell: cell.row))
+
+    header_context = " ".join(
+        [table.caption or ""]
+        + [cell.raw_text or cell.text or "" for cell in header_cells]
+    )
+    semantics_options = [
+        semantics for semantics in _axis_semantics(header_context)
+        if semantics[0] != row_property
+    ]
+    for property_name, unit in semantics_options:
+        direct: list[_AxisValue] = []
+        for cell in header_cells:
+            raw = cell.raw_text or cell.text or ""
+            value = _parse_axis_scalar(raw, property_name)
+            if value is None:
+                direct = []
+                break
+            direct.append(_AxisValue(property_name, raw, value, unit, cell))
+        if len(direct) == len(data_columns) and len({item.value for item in direct}) == len(direct):
+            return direct
+
+        if property_name == "temperature":
+            repaired = _temperature_header_from_page(bundle, table, len(data_columns))
+            if repaired and len({value for _, value in repaired}) == len(repaired):
+                return [
+                    _AxisValue(property_name, raw, value, unit, cell)
+                    for (raw, value), cell in zip(repaired, header_cells)
+                ]
+    return []
+
+
+def _matrix_cells(bundle: SourceBundle, table: TableRecord) -> list[_MatrixCell]:
+    row_axis = _row_axis(table)
+    if row_axis is None:
+        return []
+    row_property, _, row_column, first_data_row, row_values = row_axis
+    cells = _cells_by_coordinate(table)
+    rows = [row for row, _ in row_values]
+    columns = sorted({cell.column for cell in table.cells if cell.column != row_column})
+    data_columns = [
+        column for column in columns
+        if all(
+            (row, column) in cells
+            and _single_number(cells[(row, column)].raw_text or cells[(row, column)].text) is not None
+            for row in rows
+        )
+    ]
+    if len(data_columns) < 2:
+        return []
+    column_values = _column_axis_values(
+        bundle,
+        table,
+        row_property=row_property,
+        first_data_row=first_data_row,
+        data_columns=data_columns,
+    )
+    if len(column_values) != len(data_columns):
+        return []
+    row_by_number = dict(row_values)
+    column_by_number = dict(zip(data_columns, column_values))
+    matrix: list[_MatrixCell] = []
+    for row in rows:
+        for column in data_columns:
+            result_cell = cells[(row, column)]
+            value = _single_number(result_cell.raw_text or result_cell.text)
+            if value is None:
+                return []
+            matrix.append(_MatrixCell(row_by_number[row], column_by_number[column], result_cell, value))
+    return matrix
+
+
+def _point_references_table(point: BatteryPerformancePoint, table: TableRecord, bundle: SourceBundle) -> bool:
+    page_tables = [candidate for candidate in bundle.tables if candidate.page == table.page]
+    for evidence in point.evidence:
+        if evidence.source_type != "table" or evidence.page not in (None, table.page):
+            continue
+        if evidence.table_id and _table_ref_matches(evidence.table_id, table):
+            return True
+        if evidence.text_snippet and table.caption and _norm(evidence.text_snippet) == _norm(table.caption):
+            return True
+        if not evidence.table_id and len(page_tables) == 1:
+            return True
+    return False
+
+
+def _common_value(values):
+    present = [value for value in values if value not in (None, "")]
+    return present[0] if present and all(value == present[0] for value in present) else None
+
+
+def _point_axis_value(point: BatteryPerformancePoint, property_name: str) -> float | None:
+    if property_name == "temperature" and point.temperature and point.temperature.value is not None:
+        return float(point.temperature.value)
+    for condition in point.additional_conditions:
+        if condition.property == property_name and condition.value is not None:
+            return float(condition.value)
+    return None
+
+
+def _matrix_key(cell: _MatrixCell) -> tuple[str, float, str, float]:
+    return (
+        cell.row_axis.property,
+        float(cell.row_axis.value),
+        cell.column_axis.property,
+        float(cell.column_axis.value),
     )
 
 
-def recover_dense_battery_matrices(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
-    """Deterministically recover explicit SOC x temperature resistance matrices.
+def _matching_matrix_cells(point: BatteryPerformancePoint, matrix: list[_MatrixCell]) -> list[_MatrixCell]:
+    if point.value is None:
+        return []
+    candidates = [
+        cell for cell in matrix
+        if math.isclose(float(point.value), cell.value, rel_tol=0.0, abs_tol=max(1e-9, abs(cell.value) * 1e-9))
+    ]
+    for property_name in {cell.row_axis.property for cell in matrix} | {cell.column_axis.property for cell in matrix}:
+        expected = _point_axis_value(point, property_name)
+        if expected is None:
+            continue
+        candidates = [
+            cell for cell in candidates
+            if math.isclose(
+                expected,
+                cell.row_axis.value if cell.row_axis.property == property_name else cell.column_axis.value,
+                rel_tol=0.0,
+                abs_tol=max(1e-9, abs(expected) * 1e-9),
+            )
+        ]
+    return candidates
 
-    This path is intentionally narrow and source-driven. It only activates when the page contains an
-    explicit Table caption describing resistance under both SOC and temperature, an explicit temperature
-    header, and rectangular SOC rows. A pre-existing LLM-extracted internal-resistance point is required
-    to supply the reported unit, so the deterministic layer never invents a unit or scientific property.
+
+def _upsert_axis_condition(point: BatteryPerformancePoint, axis: _AxisValue, table: TableRecord) -> None:
+    evidence = _cell_evidence(table, axis.cell)
+    condition = next(
+        (item for item in point.additional_conditions if item.property == axis.property),
+        None,
+    )
+    if condition is None:
+        condition = BatteryCondition(
+            property=axis.property,
+            raw_value=axis.raw_value,
+            value=axis.value,
+            unit=axis.unit,
+            qualifier="exact",
+            evidence=[],
+        )
+        point.additional_conditions.append(condition)
+    else:
+        condition.raw_value = axis.raw_value
+        condition.value = axis.value
+        condition.unit = axis.unit
+        condition.qualifier = "exact"
+    _append_unique_evidence(condition.evidence, evidence)
+    if axis.property == "temperature":
+        point.temperature = BatteryQuantity(
+            raw_value=axis.raw_value,
+            value=axis.value,
+            unit=axis.unit,
+            qualifier="exact",
+        )
+
+
+def _protocol_condition_evidence(
+    bundle: SourceBundle,
+    table: TableRecord,
+    raw_value: str | None,
+) -> BatteryEvidence | None:
+    if not raw_value or not table.table_number:
+        return None
+    page = _page_for_table(bundle, table)
+    if page is None:
+        return None
+    text = page.text
+    caption_matches = list(re.finditer(
+        rf"Table\s+{re.escape(table.table_number)}\b",
+        text,
+        flags=re.IGNORECASE,
+    ))
+    raw_normalized = _norm(raw_value)
+    for caption_match in caption_matches:
+        start = max(0, caption_match.start() - 2000)
+        window = text[start:caption_match.start()]
+        if f"table {table.table_number}" not in _norm(window):
+            continue
+        segments = [segment.strip() for segment in re.split(r"(?<=[.!?])\s+|\n", window) if segment.strip()]
+        supported = [segment for segment in segments if raw_normalized in _norm(segment)]
+        if supported:
+            return BatteryEvidence(
+                page=table.page,
+                section=table.caption or f"Table {table.table_number}",
+                text_snippet=supported[-1],
+                source_type="text",
+                original_source_type=page.origin,
+                confidence=table.extraction_confidence,
+            )
+    return None
+
+
+def _add_protocol_condition(
+    point: BatteryPerformancePoint,
+    raw_value: str | None,
+    evidence: BatteryEvidence | None,
+) -> None:
+    value = _parse_c_rate(raw_value)
+    if raw_value is None or value is None or evidence is None:
+        return
+    condition = next(
+        (item for item in point.additional_conditions if item.property in {"C_rate", "c_rate"}),
+        None,
+    )
+    if condition is None:
+        condition = BatteryCondition(
+            property="C_rate",
+            raw_value=raw_value,
+            value=value,
+            unit="C",
+            qualifier="exact",
+            evidence=[],
+        )
+        point.additional_conditions.append(condition)
+    _append_unique_evidence(condition.evidence, evidence.model_copy(deep=True))
+    point.c_rate = raw_value
+
+
+def recover_dense_battery_matrices(doc: BatteryDocument, bundle: SourceBundle | None) -> BatteryDocument:
+    """Expand source-backed two-dimensional battery tables from their parsed cells.
+
+    The language-model output is used only to bind a parsed table to a battery group and to supply
+    result semantics such as property and unit. Every numerical observation and matrix coordinate is
+    enumerated deterministically from the rectangular ``TableRecord``. Ambiguous table/group/property
+    bindings are left untouched so the ordinary admission gate can quarantine unsupported candidates.
     """
-    if bundle is None or not bundle.pages:
+    if bundle is None or not bundle.tables:
         return doc
 
-    for page_context in bundle.pages:
-        lines = [line.strip() for line in page_context.text.splitlines() if line.strip()]
-        for index, line in enumerate(lines):
-            table_match = _TABLE_LINE.match(line)
-            lower = line.casefold()
-            if not table_match or "resistance" not in lower or "temperature" not in lower or "soc" not in lower:
-                continue
-            table_number = table_match.group(1)
-            header_index = None
-            temperatures: list[float] = []
-            header_line = None
-            for probe in range(index + 1, min(index + 5, len(lines))):
-                candidate = lines[probe]
-                if "soc" not in candidate.casefold():
-                    continue
-                tokens = _TEMPERATURE_TOKEN.findall(candidate)
-                if len(tokens) >= 2:
-                    header_index = probe
-                    header_line = candidate
-                    temperatures = [_parse_temperature(token) for token in tokens]
-                    break
-            if header_index is None or header_line is None:
-                continue
+    for table in bundle.tables:
+        matrix = _matrix_cells(bundle, table)
+        if not matrix:
+            continue
 
-            matrix_rows: list[tuple[float, list[float], str]] = []
-            for probe in range(header_index + 1, min(header_index + 40, len(lines))):
-                row_line = lines[probe]
-                row_match = _SOC_ROW.match(row_line)
-                if not row_match:
-                    if matrix_rows:
-                        break
-                    continue
-                soc = float(row_match.group(1))
-                values = [float(token) for token in _NUMBER.findall(row_match.group(2))]
-                if len(values) != len(temperatures):
-                    if matrix_rows:
-                        break
-                    continue
-                matrix_rows.append((soc, values, row_line))
-            if len(matrix_rows) < 2:
-                continue
+        matching_groups = []
+        for group in doc.battery_groups:
+            seeds = [
+                point for point in group.performance_points
+                if _point_references_table(point, table, bundle)
+            ]
+            if seeds:
+                matching_groups.append((group, seeds))
+        if len(matching_groups) != 1:
+            continue
 
-            matching_groups = []
-            for group in doc.battery_groups:
-                seeds = []
-                for point in group.performance_points:
-                    if point.property != "internal_resistance" or not point.unit:
-                        continue
-                    evidence_numbers = {
-                        _table_number_from_reference(item.table_id)
-                        for item in point.evidence
-                        if item.page in (None, page_context.page)
-                    }
-                    if table_number in evidence_numbers:
-                        seeds.append(point)
-                if seeds:
-                    matching_groups.append((group, seeds))
-            if len(matching_groups) != 1:
-                continue
+        group, table_seeds = matching_groups[0]
+        properties = {point.property for point in table_seeds if point.property}
+        units = {point.unit for point in table_seeds if point.unit}
+        if len(properties) != 1 or len(units) != 1:
+            continue
+        property_name = next(iter(properties))
+        unit = next(iter(units))
+        seeds = [point for point in table_seeds if point.property == property_name]
+        if not seeds:
+            continue
 
-            group, seeds = matching_groups[0]
-            units = {point.unit for point in seeds if point.unit}
-            if len(units) != 1:
-                continue
-            unit = next(iter(units))
-            table_record = next(
-                (
-                    table for table in bundle.tables
-                    if table.page == page_context.page and table.table_number == table_number
-                ),
-                None,
-            )
-            table_id = table_record.table_id if table_record else f"Table {table_number}"
-            section = line
-            existing = {
-                key: point
-                for point in group.performance_points
-                if point.property == "internal_resistance"
-                for key in [_matrix_existing_key(point)]
-                if key is not None
-            }
+        method = _common_value(point.method for point in seeds)
+        c_rate = _common_value(point.c_rate for point in seeds)
+        c_rate_evidence = _protocol_condition_evidence(bundle, table, c_rate)
+        voltage_window = _common_value(point.voltage_window for point in seeds)
+        cycle = _common_value(point.cycle for point in seeds)
+        explicit_ownership = _common_value(
+            point.ownership for point in seeds if point.ownership != "unknown"
+        )
+        ownership = explicit_ownership or group.ownership
 
-            for row_index, (soc, values, row_line) in enumerate(matrix_rows, start=1):
-                soc_evidence = _text_table_evidence(
-                    page=page_context.page, section=section, table_id=table_id,
-                    text=row_line, row=row_index, column=0,
+        existing: dict[tuple[str, float, str, float], BatteryPerformancePoint] = {}
+        for point in seeds:
+            candidates = _matching_matrix_cells(point, matrix)
+            if len(candidates) == 1:
+                existing.setdefault(_matrix_key(candidates[0]), point)
+
+        for matrix_cell in matrix:
+            key = _matrix_key(matrix_cell)
+            point = existing.get(key)
+            if point is None:
+                result_raw = matrix_cell.result_cell.raw_text or matrix_cell.result_cell.text or f"{matrix_cell.value:g}"
+                point = BatteryPerformancePoint(
+                    property=property_name,
+                    raw_value=f"{result_raw} {unit}".strip(),
+                    value=matrix_cell.value,
+                    unit=unit,
+                    qualifier="exact",
+                    cycle=cycle,
+                    c_rate=c_rate if c_rate_evidence is not None else None,
+                    voltage_window=voltage_window,
+                    method=method,
+                    ownership=ownership,
+                    evidence=[],
                 )
-                for column_index, (temperature, value) in enumerate(zip(temperatures, values), start=1):
-                    result_evidence = _text_table_evidence(
-                        page=page_context.page, section=section, table_id=table_id,
-                        text=row_line, row=row_index, column=column_index,
-                    )
-                    temperature_evidence = _text_table_evidence(
-                        page=page_context.page, section=section, table_id=table_id,
-                        text=header_line, row=0, column=column_index,
-                    )
-                    key = (float(soc), float(temperature))
-                    point = existing.get(key)
-                    if point is None:
-                        point = BatteryPerformancePoint(
-                            property="internal_resistance",
-                            raw_value=f"{value:g} {unit}",
-                            value=value,
-                            unit=unit,
-                            qualifier="exact",
-                            temperature=BatteryQuantity(
-                                raw_value=f"{temperature:g} °C",
-                                value=temperature,
-                                unit="°C",
-                                qualifier="exact",
-                            ),
-                            additional_conditions=[
-                                BatteryCondition(
-                                    property="state_of_charge",
-                                    raw_value=f"{soc:g}%",
-                                    value=soc,
-                                    unit="%",
-                                    qualifier="exact",
-                                    evidence=[soc_evidence],
-                                ),
-                                BatteryCondition(
-                                    property="temperature",
-                                    raw_value=f"{temperature:g} °C",
-                                    value=temperature,
-                                    unit="°C",
-                                    qualifier="exact",
-                                    evidence=[temperature_evidence],
-                                ),
-                            ],
-                            ownership="focal_work",
-                            evidence=[result_evidence],
-                        )
-                        group.performance_points.append(point)
-                        existing[key] = point
-                    else:
-                        _append_unique_evidence(point.evidence, result_evidence)
-                        soc_condition = next(
-                            (condition for condition in point.additional_conditions if condition.property == "state_of_charge"),
-                            None,
-                        )
-                        if soc_condition is None:
-                            soc_condition = BatteryCondition(
-                                property="state_of_charge", raw_value=f"{soc:g}%", value=soc,
-                                unit="%", qualifier="exact", evidence=[],
-                            )
-                            point.additional_conditions.append(soc_condition)
-                        _append_unique_evidence(soc_condition.evidence, soc_evidence)
-                        temp_condition = next(
-                            (condition for condition in point.additional_conditions if condition.property == "temperature"),
-                            None,
-                        )
-                        if temp_condition is None:
-                            temp_condition = BatteryCondition(
-                                property="temperature", raw_value=f"{temperature:g} °C", value=temperature,
-                                unit="°C", qualifier="exact", evidence=[],
-                            )
-                            point.additional_conditions.append(temp_condition)
-                        _append_unique_evidence(temp_condition.evidence, temperature_evidence)
-                        if point.temperature is None:
-                            point.temperature = BatteryQuantity(
-                                raw_value=f"{temperature:g} °C", value=temperature,
-                                unit="°C", qualifier="exact",
-                            )
+                group.performance_points.append(point)
+                existing[key] = point
+            else:
+                point.method = point.method or method
+                point.voltage_window = point.voltage_window or voltage_window
+                point.cycle = point.cycle if point.cycle is not None else cycle
+                if point.ownership == "unknown":
+                    point.ownership = ownership
 
-            note = (
-                f"Deterministic structured-table recovery preserved {len(matrix_rows) * len(temperatures)} "
-                f"internal-resistance observations from Table {table_number} across "
-                f"{len(matrix_rows)} SOC levels and {len(temperatures)} temperatures."
-            )
-            if note not in doc.extraction_notes:
-                doc.extraction_notes.append(note)
+            _append_unique_evidence(point.evidence, _cell_evidence(table, matrix_cell.result_cell))
+            _upsert_axis_condition(point, matrix_cell.row_axis, table)
+            _upsert_axis_condition(point, matrix_cell.column_axis, table)
+            _add_protocol_condition(point, c_rate, c_rate_evidence)
+
+        row_values = {cell.row_axis.value for cell in matrix}
+        column_values = {cell.column_axis.value for cell in matrix}
+        note = (
+            f"Deterministic structured-table recovery preserved {len(matrix)} {property_name} "
+            f"observations from {table.table_id} across {len(row_values)} "
+            f"{matrix[0].row_axis.property} values and {len(column_values)} "
+            f"{matrix[0].column_axis.property} values."
+        )
+        if note not in doc.extraction_notes:
+            doc.extraction_notes.append(note)
 
     return doc
 

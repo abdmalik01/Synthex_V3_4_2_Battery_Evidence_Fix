@@ -480,8 +480,10 @@ def assemble_battery_archive(
             }
             for extra_condition in point.additional_conditions:
                 payload = _point_condition_payload(extra_condition)
-                if payload is None or extra_condition.property in point_conditions:
+                if payload is None:
                     continue
+                # A verified condition object is more informative than the legacy scalar fields above:
+                # it preserves the numeric value, unit, qualifier, and its own source evidence.
                 point_conditions[extra_condition.property] = payload
             measurement = Measurement(
                 property=point.property, raw_value=point.raw_value, value=point.value, unit=point.unit,

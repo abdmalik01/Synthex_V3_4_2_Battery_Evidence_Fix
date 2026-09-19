@@ -120,6 +120,8 @@ def _canonical_condition_name(name: str) -> str:
         "current density": "current_density",
         "areal current density": "current_density",
         "specific current": "specific_current",
+        "c rate": "C_rate",
+        "crate": "C_rate",
         "ambient temperature": "ambient_temperature",
         "internal temperature": "internal_temperature",
     }
