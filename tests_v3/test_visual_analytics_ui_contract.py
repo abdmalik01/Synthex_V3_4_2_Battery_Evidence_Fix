@@ -18,3 +18,6 @@ def test_visual_panel_exposes_true_xyz_controls_and_dynamic_field_discovery():
     assert "X field (numeric independent variable)" in source
     assert "Y field (second numeric independent variable)" in source
     assert "Z / colour field" in source
+    assert "Show measured points" in source
+    assert "complete source-reported measurement grid directly" in source
+    assert "source identifiers are listed in the table above" in source

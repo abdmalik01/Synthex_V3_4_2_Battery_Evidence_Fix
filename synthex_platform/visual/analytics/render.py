@@ -10,7 +10,40 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from .models import AnalyticMeasurementRow, VisualizationSpec
-from .specs import field_value
+from .specs import display_label_with_unit, field_display_name, field_value
+
+
+def observed_rectangular_grid(
+    rows: list[AnalyticMeasurementRow],
+    x_field: str | None,
+    y_field: str | None,
+    z_field: str | None,
+) -> tuple[list[float], list[float], np.ndarray] | None:
+    """Return an exact observed-value matrix only when every grid cell occurs once."""
+    if not x_field or not y_field or not z_field:
+        return None
+    coordinates: dict[tuple[float, float], float] = {}
+    for row in rows:
+        x = field_value(row, x_field)
+        y = field_value(row, y_field)
+        z = field_value(row, z_field)
+        if not all(isinstance(value, (int, float)) and not isinstance(value, bool) for value in (x, y, z)):
+            continue
+        coordinate = (float(x), float(y))
+        if coordinate in coordinates:
+            return None
+        coordinates[coordinate] = float(z)
+    if not coordinates:
+        return None
+    x_values = sorted({coordinate[0] for coordinate in coordinates})
+    y_values = sorted({coordinate[1] for coordinate in coordinates})
+    if len(coordinates) != len(x_values) * len(y_values):
+        return None
+    matrix = np.array(
+        [[coordinates[(x, y)] for x in x_values] for y in y_values],
+        dtype=float,
+    )
+    return x_values, y_values, matrix
 
 
 class VisualizationRenderer:
@@ -50,10 +83,7 @@ class VisualizationRenderer:
 
     @staticmethod
     def _display_label(field: str | None) -> str:
-        if not field:
-            return ""
-        text = field.removeprefix("conditions.").replace("_", " ")
-        return text[:1].upper() + text[1:]
+        return field_display_name(field)
 
     def _series_groups(self, spec: VisualizationSpec, rows: list[AnalyticMeasurementRow]):
         if not spec.series_field:
@@ -87,21 +117,40 @@ class VisualizationRenderer:
             z = [field_value(row, spec.z_field) for row in usable]
             z_label = self._display_label(spec.z_label or spec.z_field)
             z_unit = spec.units.get("z")
-            colorbar_label = f"{z_label} ({z_unit})" if z_unit else z_label
+            colorbar_label = display_label_with_unit(z_label, z_unit)
+            grid = observed_rectangular_grid(usable, spec.x_field, spec.y_field, spec.z_field)
             if spec.chart_type == "heatmap":
-                # Observed-point heat map: no gridding or scientific-value interpolation.
-                plotted = axis.scatter(x, y, c=z, cmap="viridis", marker="s", s=220)
-                plt.colorbar(plotted, ax=axis, label=colorbar_label)
+                if grid is not None:
+                    grid_x, grid_y, grid_z = grid
+                    plotted = axis.pcolormesh(grid_x, grid_y, grid_z, cmap="viridis", shading="auto")
+                else:
+                    # Incomplete surfaces remain observed points; missing cells are never manufactured.
+                    plotted = axis.scatter(x, y, c=z, cmap="viridis", marker="s", s=220)
+                axis.figure.colorbar(plotted, ax=axis, label=colorbar_label)
             else:
-                contour = axis.tricontourf(x, y, z, levels=8)
-                plt.colorbar(contour, ax=axis, label=colorbar_label)
+                if grid is not None:
+                    grid_x, grid_y, grid_z = grid
+                    contour = axis.contourf(grid_x, grid_y, grid_z, levels=8, cmap="viridis")
+                else:
+                    contour = axis.tricontourf(x, y, z, levels=8, cmap="viridis")
+                axis.figure.colorbar(contour, ax=axis, label=colorbar_label)
+                if spec.show_measured_points:
+                    axis.scatter(
+                        x,
+                        y,
+                        facecolors="none",
+                        edgecolors="black",
+                        linewidths=0.8,
+                        s=28,
+                        zorder=3,
+                    )
 
         x_label = self._display_label(spec.x_label or spec.x_field)
         y_label = self._display_label(spec.y_label or spec.y_field)
         x_unit = spec.units.get("x")
         y_unit = spec.units.get("y")
-        axis.set_xlabel(f"{x_label} ({x_unit})" if x_unit else x_label or "x")
-        axis.set_ylabel(f"{y_label} ({y_unit})" if y_unit else y_label or "y")
+        axis.set_xlabel(display_label_with_unit(x_label or "x", x_unit))
+        axis.set_ylabel(display_label_with_unit(y_label or "y", y_unit))
 
     def _radar(self, fig, spec, rows):
         axis = fig.add_subplot(111, polar=True)

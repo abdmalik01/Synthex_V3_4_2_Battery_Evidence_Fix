@@ -14,24 +14,21 @@ from .render import VisualizationRenderer
 from .specs import (
     build_visualization_spec,
     chart_field_options,
+    field_display_name,
     numeric_dimension_summary,
     surface_coverage,
 )
 
 
 def _field_label(field: str, property_name: str) -> str:
-    if field == "value":
-        return property_name.replace("_", " ").title()
-    if field == "material_label":
-        return "Material"
-    text = field.removeprefix("conditions.").replace("_", " ")
-    return text[:1].upper() + text[1:]
+    return field_display_name(field, property_name)
 
 
-def _select_field(label: str, fields: list[str], property_name: str, *, key: str):
+def _select_field(label: str, fields: list[str], property_name: str, *, key: str, index: int = 0):
     return st.selectbox(
         label,
         fields,
+        index=index,
         key=key,
         format_func=lambda field: _field_label(field, property_name),
     )
@@ -97,6 +94,10 @@ def _render_surface_coverage(rows, property_name: str, x_field, y_field, z_field
             f"Selected dimensions: {_field_label(x_field, property_name)} × "
             f"{_field_label(y_field, property_name)} → {_field_label(z_field, property_name)}."
         )
+    if coverage["duplicate_coordinates"]:
+        st.caption(f"Duplicate X/Y coordinates: {coverage['duplicate_coordinates']}.")
+    elif coverage["complete_rectangular_grid"]:
+        st.caption("The selected observations form a complete rectangular measurement grid.")
 
 
 def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
@@ -163,6 +164,11 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
                 options["x"],
                 property_name,
                 key=f"synthex_viz_{chart_type}_x",
+                index=(
+                    options["x"].index("conditions.temperature")
+                    if "conditions.temperature" in options["x"]
+                    else 0
+                ),
             )
             y_candidates = [field for field in options["y"] if field != x_field]
             if y_candidates:
@@ -183,15 +189,25 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
                     key=f"synthex_viz_{chart_type}_z",
                 )
 
+    show_measured_points = False
+    if chart_type == "contour" and x_field and y_field and z_field:
+        show_measured_points = st.toggle(
+            "Show measured points",
+            value=True,
+            help="Overlay source-reported X/Y coordinates without creating or modifying archive records.",
+            key="synthex_viz_contour_measured_points",
+        )
+
     spec = build_visualization_spec(
         rows,
         chart_type,
-        f"{property_name.replace('_', ' ').title()} comparison",
+        None,
         x_field=x_field,
         y_field=y_field,
         z_field=z_field,
         series_field=series_field,
         query=query,
+        show_measured_points=show_measured_points,
     )
 
     if chart_type in {"heatmap", "contour"}:
@@ -200,6 +216,17 @@ def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
     if spec.eligible:
         png = VisualizationRenderer().render_png(spec, rows)
         st.image(png)
+        if chart_type == "heatmap":
+            coverage = surface_coverage(rows, x_field, y_field, z_field)
+            if coverage["complete_rectangular_grid"]:
+                st.caption(
+                    "Heatmap cells show the complete source-reported measurement grid directly; "
+                    "no interpolation was applied."
+                )
+        elif chart_type == "contour" and spec.show_measured_points:
+            st.caption(
+                "Outlined markers are source-reported measurements. Their values and source identifiers are listed in the table above."
+            )
         for warning in spec.rendering_warnings:
             st.caption(warning)
         st.download_button(

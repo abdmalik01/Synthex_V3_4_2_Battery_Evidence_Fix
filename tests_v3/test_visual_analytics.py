@@ -2,13 +2,15 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import matplotlib.pyplot as plt
+
 from synthex_platform.core.archive import ArchiveMetadata, SynthexArchive
 from synthex_platform.core.models import CalculationRecord, DomainPayload, Evidence, ExperimentRecord, MaterialEntity, Measurement, SourceRecord
 from synthex_platform.visual.analytics.exports import comparison_frame, export_visualization
-from synthex_platform.visual.analytics.models import AnalyticQuery
+from synthex_platform.visual.analytics.models import AnalyticMeasurementRow, AnalyticQuery
 from synthex_platform.visual.analytics.projection import project_archives
-from synthex_platform.visual.analytics.render import VisualizationRenderer
-from synthex_platform.visual.analytics.specs import build_visualization_spec, chart_field_options
+from synthex_platform.visual.analytics.render import VisualizationRenderer, observed_rectangular_grid
+from synthex_platform.visual.analytics.specs import build_visualization_spec, chart_field_options, surface_coverage
 
 
 def _archive(
@@ -129,6 +131,116 @@ def _surface_rows():
         _archive(3, 45, 145, c_rate="0.1C"),
         _archive(4, 45, 118, c_rate="1C"),
     ])
+
+
+def _resistance_grid_rows():
+    return [
+        AnalyticMeasurementRow(
+            archive_id=f"arc-{soc}-{temperature}",
+            source_id="src-nmc",
+            experiment_id=f"exp-{soc}-{temperature}",
+            modality="experimental",
+            property_name="internal_resistance",
+            value=10.0 + soc / 10.0 + temperature / 100.0,
+            unit="mΩ",
+            normalized_unit="mΩ",
+            conditions={
+                "temperature": float(temperature),
+                "temperature_unit": "°C",
+                "state_of_charge": float(soc),
+                "state_of_charge_unit": "%",
+            },
+        )
+        for soc in (20, 80)
+        for temperature in (0, 25, 50)
+    ]
+
+
+def test_surface_spec_generates_human_readable_title_axis_and_colorbar_labels():
+    rows = _resistance_grid_rows()
+    spec = build_visualization_spec(
+        rows,
+        "heatmap",
+        x_field="conditions.temperature",
+        y_field="conditions.state_of_charge",
+        z_field="value",
+    )
+
+    assert spec.title == "Internal Resistance vs Temperature and State of Charge"
+    assert spec.x_label == "Temperature"
+    assert spec.y_label == "State of Charge"
+    assert spec.z_label == "Internal Resistance"
+    assert spec.units == {"x": "°C", "y": "%", "z": "mΩ"}
+
+    figure, axis = plt.subplots()
+    VisualizationRenderer()._cartesian(axis, spec, rows)
+    assert axis.get_xlabel() == "Temperature (°C)"
+    assert axis.get_ylabel() == "State of Charge (%)"
+    assert figure.axes[1].get_ylabel() == "Internal Resistance (mΩ)"
+    plt.close(figure)
+
+
+def test_complete_heatmap_grid_uses_only_observed_cells_without_artificial_values():
+    rows = _resistance_grid_rows()
+    coverage = surface_coverage(
+        rows,
+        "conditions.temperature",
+        "conditions.state_of_charge",
+        "value",
+    )
+    assert coverage["complete_rectangular_grid"] is True
+    assert coverage["duplicate_coordinates"] == 0
+
+    grid = observed_rectangular_grid(
+        rows,
+        "conditions.temperature",
+        "conditions.state_of_charge",
+        "value",
+    )
+    assert grid is not None
+    x_values, y_values, z_values = grid
+    assert x_values == [0.0, 25.0, 50.0]
+    assert y_values == [20.0, 80.0]
+    assert z_values.shape == (2, 3)
+    assert set(z_values.ravel()) == {row.value for row in rows}
+    assert observed_rectangular_grid(
+        rows[:-1],
+        "conditions.temperature",
+        "conditions.state_of_charge",
+        "value",
+    ) is None
+
+    spec = build_visualization_spec(
+        rows,
+        "heatmap",
+        x_field="conditions.temperature",
+        y_field="conditions.state_of_charge",
+        z_field="value",
+    )
+    figure, axis = plt.subplots()
+    VisualizationRenderer()._cartesian(axis, spec, rows)
+    assert any(collection.__class__.__name__ == "QuadMesh" for collection in axis.collections)
+    plt.close(figure)
+
+
+def test_contour_measured_point_overlay_is_presentation_only_and_does_not_mutate_rows():
+    rows = _resistance_grid_rows()
+    before = [row.model_dump(mode="json") for row in rows]
+    spec = build_visualization_spec(
+        rows,
+        "contour",
+        x_field="conditions.temperature",
+        y_field="conditions.state_of_charge",
+        z_field="value",
+        show_measured_points=True,
+    )
+
+    assert spec.show_measured_points is True
+    assert spec.rendering_warnings == [
+        "Filled contours interpolate between source-reported measurements for visualization only."
+    ]
+    assert VisualizationRenderer().render_png(spec, rows)
+    assert [row.model_dump(mode="json") for row in rows] == before
 
 
 def test_line_scatter_heatmap_and_contour_use_correct_axis_contracts():

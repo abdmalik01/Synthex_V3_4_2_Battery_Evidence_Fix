@@ -8,6 +8,55 @@ from synthex_platform.core.identifiers import stable_id
 from .models import AnalyticMeasurementRow, AnalyticQuery, VisualizationSpec
 
 
+_LOWERCASE_TITLE_WORDS = {
+    "and", "as", "at", "by", "for", "from", "in", "of", "on", "or", "to", "vs", "with",
+}
+
+
+def humanize_field_name(name: str) -> str:
+    """Turn canonical snake-case names into concise researcher-facing labels."""
+    words = name.replace("_", " ").split()
+    return " ".join(
+        word.capitalize() if index == 0 or word.casefold() not in _LOWERCASE_TITLE_WORDS else word.casefold()
+        for index, word in enumerate(words)
+    )
+
+
+def field_display_name(field: str | None, property_name: str | None = None) -> str:
+    """Return a human-readable field name without embedding domain-specific labels."""
+    if not field:
+        return ""
+    if field == "value":
+        return humanize_field_name(property_name or "value")
+    if field == "material_label":
+        return "Material"
+    return humanize_field_name(field.removeprefix("conditions."))
+
+
+def display_label_with_unit(label: str, unit: str | None) -> str:
+    return f"{label} ({unit})" if unit else label
+
+
+def visualization_title(
+    chart_type: str,
+    *,
+    x_label: str,
+    y_label: str,
+    z_label: str | None = None,
+) -> str:
+    """Generate a descriptive title from the selected display labels."""
+    if chart_type in {"heatmap", "contour"} and z_label:
+        return f"{z_label} vs {x_label} and {y_label}"
+    if x_label and y_label:
+        return f"{y_label} vs {x_label}"
+    return y_label or z_label or x_label or "Visualization"
+
+
+def _shared_property_name(rows: list[AnalyticMeasurementRow]) -> str | None:
+    properties = {row.property_name for row in rows if row.property_name}
+    return next(iter(properties)) if len(properties) == 1 else None
+
+
 def field_value(row: AnalyticMeasurementRow, field: str | None):
     if not field:
         return None
@@ -108,6 +157,8 @@ def surface_coverage(
             "unique_x": 0,
             "unique_y": 0,
             "unique_coordinates": 0,
+            "duplicate_coordinates": 0,
+            "complete_rectangular_grid": False,
         }
     xy_rows = [
         row for row in rows
@@ -123,6 +174,12 @@ def surface_coverage(
         (field_value(row, x_field), field_value(row, y_field))
         for row in xyz_rows
     }
+    duplicate_coordinates = len(xyz_rows) - len(coordinates)
+    complete_rectangular_grid = (
+        bool(xs and ys)
+        and not duplicate_coordinates
+        and len(coordinates) == len(xs) * len(ys)
+    )
     return {
         "records": len(rows),
         "joint_xy": len(xy_rows),
@@ -130,6 +187,8 @@ def surface_coverage(
         "unique_x": len(xs),
         "unique_y": len(ys),
         "unique_coordinates": len(coordinates),
+        "duplicate_coordinates": duplicate_coordinates,
+        "complete_rectangular_grid": complete_rectangular_grid,
         "x_units": " | ".join(sorted(_units(xyz_rows, x_field), key=str.casefold)),
         "y_units": " | ".join(sorted(_units(xyz_rows, y_field), key=str.casefold)),
         "z_units": " | ".join(sorted(_units(xyz_rows, z_field), key=str.casefold)),
@@ -241,7 +300,7 @@ def _eligibility(
 def build_visualization_spec(
     rows: list[AnalyticMeasurementRow],
     chart_type: str,
-    title: str,
+    title: str | None = None,
     *,
     x_field: str | None = None,
     y_field: str | None = "value",
@@ -251,6 +310,7 @@ def build_visualization_spec(
     query: AnalyticQuery | None = None,
     radar_fields: list[str] | None = None,
     radar_normalization_policy: str | None = None,
+    show_measured_points: bool = False,
 ) -> VisualizationSpec:
     radar_fields = radar_fields or []
     eligible, reason = _eligibility(
@@ -266,16 +326,18 @@ def build_visualization_spec(
         (row.archive_id, row.experiment_id, row.calculation_id, row.property_name)
         for row in rows
     ]
-    visualization_id = stable_id(
-        "viz",
+    visualization_identity: list[Any] = [
         query.model_dump() if query else {},
         chart_type,
         x_field,
         y_field,
         z_field,
         series_field,
-        record_ids,
-    )
+    ]
+    if show_measured_points:
+        visualization_identity.append({"show_measured_points": True})
+    visualization_identity.append(record_ids)
+    visualization_id = stable_id("viz", *visualization_identity)
     references = [
         {
             "archive_id": row.archive_id,
@@ -294,26 +356,37 @@ def build_visualization_spec(
     warnings: list[str] = []
     if chart_type == "contour" and eligible:
         warnings.append(
-            "Contour shading interpolates visually between observed source-linked points; no interpolated values are added to the archive."
+            "Filled contours interpolate between source-reported measurements for visualization only."
         )
+    property_name = _shared_property_name(rows)
+    x_label = field_display_name(x_field, property_name)
+    y_label = field_display_name(y_field, property_name)
+    z_label = field_display_name(z_field, property_name)
+    resolved_title = title or visualization_title(
+        chart_type,
+        x_label=x_label,
+        y_label=y_label,
+        z_label=z_label or None,
+    )
     return VisualizationSpec(
         visualization_id=visualization_id,
         chart_type=chart_type,
-        title=title,
+        title=resolved_title,
         subtitle=subtitle,
         x_field=x_field,
         y_field=y_field,
         z_field=z_field,
         series_field=series_field,
-        x_label=x_field,
-        y_label=y_field,
-        z_label=z_field,
+        x_label=x_label,
+        y_label=y_label,
+        z_label=z_label or None,
         units=units,
         filters_applied=query.model_dump(exclude_none=True) if query else {},
         source_count=len({row.source_id for row in rows if row.source_id}),
         record_count=len(rows),
         provenance_references=references,
         rendering_warnings=warnings,
+        show_measured_points=show_measured_points if chart_type == "contour" else False,
         eligible=eligible,
         reason=reason,
         radar_fields=radar_fields,

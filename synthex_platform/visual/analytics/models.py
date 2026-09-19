@@ -70,6 +70,7 @@ class VisualizationSpec(BaseModel):
     record_count: int = 0
     provenance_references: list[dict[str, Any]] = Field(default_factory=list)
     rendering_warnings: list[str] = Field(default_factory=list)
+    show_measured_points: bool = False
     eligible: bool = False
     reason: str | None = None
     radar_fields: list[str] = Field(default_factory=list)
