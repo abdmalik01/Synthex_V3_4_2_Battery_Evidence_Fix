@@ -24,6 +24,7 @@ def comparison_frame(rows: list[AnalyticMeasurementRow]) -> pd.DataFrame:
     records = []
     for row in rows:
         record = {
+            "domain": row.domain,
             "material": row.material_label,
             "property": row.property_name,
             "value": row.value,
@@ -63,6 +64,7 @@ def export_visualization(
         "visualization_specification": spec.model_dump(mode="json"),
         "archive_ids": sorted({row.archive_id for row in rows}),
         "source_ids": sorted({row.source_id for row in rows if row.source_id}),
+        "domains": sorted({row.domain for row in rows if row.domain}),
     }
     (target / "spec.json").write_text(json.dumps(metadata, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
     frame = comparison_frame(rows)

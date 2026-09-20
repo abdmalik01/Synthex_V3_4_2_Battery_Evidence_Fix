@@ -175,6 +175,7 @@ def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | 
                     value = measurement.normalized_value if _numeric(measurement.normalized_value) is not None else measurement.value
                     rows.append(AnalyticMeasurementRow(
                         archive_id=archive.metadata.archive_id,
+                        domain=archive.metadata.domain,
                         source_id=source_id,
                         material_id=material_id,
                         device_id=experiment.device_id,
@@ -210,6 +211,7 @@ def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | 
                     value = measurement.normalized_value if _numeric(measurement.normalized_value) is not None else measurement.value
                     rows.append(AnalyticMeasurementRow(
                         archive_id=archive.metadata.archive_id,
+                        domain=archive.metadata.domain,
                         source_id=source_id,
                         material_id=material_id,
                         calculation_id=calculation.calculation_id,

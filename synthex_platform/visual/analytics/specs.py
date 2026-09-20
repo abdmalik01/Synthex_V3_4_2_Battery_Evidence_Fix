@@ -251,6 +251,9 @@ def _eligibility(
 ):
     if not rows:
         return False, "no_records"
+    domains = {row.domain for row in rows if row.domain}
+    if len(domains) > 1:
+        return False, "incompatible_cross_domain_records"
     if chart_type == "radar":
         if radar_policy != "minmax_per_metric":
             return False, "radar_requires_explicit_normalization_policy"

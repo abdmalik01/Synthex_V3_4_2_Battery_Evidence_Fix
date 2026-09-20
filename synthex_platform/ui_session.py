@@ -17,11 +17,15 @@ RESEARCH_SESSION_KEYS = {
     "synthex_explorer_search",
     "synthex_explorer_estimated",
     "synthex_explorer_results_table",
+    "synthex_explorer_domain",
+    "synthex_current_extraction",
+    "synthex_viz_data_scope",
 }
 
 RESEARCH_SESSION_PREFIXES = (
     "filter_",
     "synthex_explorer_filter_",
+    "synthex_viz_scope_",
 )
 
 

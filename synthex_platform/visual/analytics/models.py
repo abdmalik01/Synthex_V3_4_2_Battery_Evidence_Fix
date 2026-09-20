@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field
 
 class AnalyticMeasurementRow(BaseModel):
     archive_id: str
+    domain: str | None = None
     source_id: str | None = None
     material_id: str | None = None
     process_id: str | None = None

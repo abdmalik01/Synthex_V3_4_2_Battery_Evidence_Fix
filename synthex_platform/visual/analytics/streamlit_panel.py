@@ -7,6 +7,21 @@ from typing import Iterable
 import streamlit as st
 
 from synthex_platform.core.archive import SynthexArchive
+from synthex_platform.archive_scoping import (
+    ArchiveQueryContext,
+    CurrentExtraction,
+    DataScope,
+    SCOPE_BY_LABEL,
+    SCOPE_LABELS,
+    THESIS_DOMAIN_LABELS,
+    UNKNOWN_LEGACY_DOMAIN,
+    VISUAL_SCOPE_STATE_KEY,
+    archive_domain,
+    archive_source_ids,
+    deduplicate_archives,
+    domain_catalog,
+    select_archives,
+)
 from .exports import comparison_frame
 from .models import AnalyticQuery
 from .projection import project_archives
@@ -51,6 +66,7 @@ def _eligibility_message(reason: str | None) -> str:
         "insufficient_numeric_x_variation": "The selected X field does not vary across enough observations for this chart.",
         "insufficient_data_density": "There are not enough distinct X/Y observations for a 2D surface view.",
         "incompatible_value_units": "The plotted result contains incompatible units. Filter to one compatible unit before charting.",
+        "incompatible_cross_domain_records": "Cross-domain rows cannot be combined into one scientific chart. Select one domain or a domain-compatible subset.",
     }.get(reason, f"Chart is not eligible: {reason or 'unknown reason'}")
 
 
@@ -100,18 +116,159 @@ def _render_surface_coverage(rows, property_name: str, x_field, y_field, z_field
         st.caption("The selected observations form a complete rectangular measurement grid.")
 
 
-def render_visual_explorer(archives: Iterable[SynthexArchive]) -> None:
+def _archive_choice_label(archive: SynthexArchive) -> str:
+    source = archive.sources[0] if archive.sources else None
+    title = (source.title if source else None) or archive.metadata.archive_id
+    year = getattr(source, "publication_year", None) or getattr(source, "year", None) if source else None
+    doi = getattr(source, "doi", None) if source else None
+    details = [THESIS_DOMAIN_LABELS.get(archive_domain(archive), archive_domain(archive))]
+    if year:
+        details.append(str(year))
+    if doi:
+        details.append(str(doi))
+    return f"{title} — {' · '.join(details)}"
+
+
+def _domain_options(archives: list[SynthexArchive]) -> tuple[list[str], dict[str, str]]:
+    extras = sorted(
+        {
+            (archive_domain(archive), archive_domain(archive).replace("_", " ").title())
+            for archive in archives
+            if archive_domain(archive) not in THESIS_DOMAIN_LABELS
+            and archive_domain(archive) != UNKNOWN_LEGACY_DOMAIN
+        }
+    )
+    catalog = domain_catalog(extras)
+    return [slug for slug, _ in catalog], dict(catalog)
+
+
+def _scope_archives(
+    archives: list[SynthexArchive],
+    *,
+    saved_archives: list[SynthexArchive],
+    current_extraction: CurrentExtraction | None,
+    current_domain: str | None,
+) -> tuple[DataScope, list[SynthexArchive]]:
+    labels = [SCOPE_LABELS[scope] for scope in DataScope]
+    default = (
+        SCOPE_LABELS[DataScope.CURRENT_EXTRACTION]
+        if current_extraction
+        else SCOPE_LABELS[DataScope.CURRENT_DOMAIN]
+        if current_domain
+        else SCOPE_LABELS[DataScope.CURRENT_EXTRACTION]
+    )
+    if st.session_state.get(VISUAL_SCOPE_STATE_KEY) not in labels:
+        st.session_state[VISUAL_SCOPE_STATE_KEY] = default
+    selected_label = st.selectbox("Data scope", labels, key=VISUAL_SCOPE_STATE_KEY)
+    scope = SCOPE_BY_LABEL[selected_label]
+    domains, domain_labels = _domain_options(archives)
+
+    if scope == DataScope.CURRENT_EXTRACTION:
+        context = ArchiveQueryContext(
+            scope=scope,
+            run_id=current_extraction.run_id if current_extraction else None,
+        )
+    elif scope == DataScope.SELECTED_SOURCES:
+        saved = deduplicate_archives(saved_archives)
+        available_domains = [domain for domain in domains if any(archive_domain(item) == domain for item in saved)]
+        if not available_domains:
+            return scope, []
+        initial = current_domain if current_domain in available_domains else available_domains[0]
+        selected_domains = st.multiselect(
+            "Archived-paper domains",
+            available_domains,
+            default=[initial],
+            key="synthex_viz_scope_selected_domain",
+            format_func=lambda value: domain_labels[value],
+        )
+        candidates = [item for item in saved if archive_domain(item) in selected_domains]
+        labels_by_id = {item.metadata.archive_id: _archive_choice_label(item) for item in candidates}
+        selected_ids = st.multiselect(
+            "Archived papers",
+            list(labels_by_id),
+            key="synthex_viz_scope_selected_sources",
+            format_func=lambda value: labels_by_id[value],
+        )
+        source_ids = {
+            source_id
+            for item in candidates
+            if item.metadata.archive_id in selected_ids
+            for source_id in archive_source_ids(item)
+        }
+        context = ArchiveQueryContext(scope=scope, source_ids=source_ids)
+    elif scope == DataScope.CURRENT_DOMAIN:
+        initial = current_domain if current_domain in domains else domains[0]
+        selected_domain = st.selectbox(
+            "Domain",
+            domains,
+            index=domains.index(initial),
+            key="synthex_viz_scope_domain",
+            format_func=lambda value: domain_labels[value],
+        )
+        context = ArchiveQueryContext(scope=scope, domain=selected_domain)
+    elif scope == DataScope.CUSTOM_COMBINATION:
+        labels_by_id = {item.metadata.archive_id: _archive_choice_label(item) for item in archives}
+        selected_ids = st.multiselect(
+            "Archives to combine",
+            list(labels_by_id),
+            key="synthex_viz_scope_custom_archives",
+            format_func=lambda value: labels_by_id[value],
+        )
+        context = ArchiveQueryContext(scope=scope, archive_ids=selected_ids)
+    else:
+        context = ArchiveQueryContext(scope=scope)
+
+    return scope, select_archives(archives, context, current_extraction=current_extraction)
+
+
+def render_visual_explorer(
+    archives: Iterable[SynthexArchive],
+    *,
+    current_extraction: CurrentExtraction | None = None,
+    saved_archives: Iterable[SynthexArchive] = (),
+    current_domain: str | None = None,
+) -> None:
     """Render data-aware bar, line, scatter, heatmap, and contour controls."""
-    archives = list(archives)
-    all_rows = project_archives(archives)
+    archives = deduplicate_archives(archives)
+    scope, archives = _scope_archives(
+        archives,
+        saved_archives=list(saved_archives),
+        current_extraction=current_extraction,
+        current_domain=current_domain,
+    )
+    all_rows = [row for row in project_archives(archives) if row.value is not None]
     properties = sorted({row.property_name for row in all_rows})
     if not properties:
-        st.info("No canonical numeric archive measurements are available to visualize.")
+        if scope == DataScope.CURRENT_EXTRACTION:
+            st.info("No visualization-eligible quantitative records were found in the current extraction.")
+            st.caption("Choose another Data scope above to inspect archived papers or a domain explicitly.")
+        else:
+            st.info("No visualization-eligible quantitative records were found in the selected data scope.")
         return
 
+    source_rows = [
+        {
+            "Paper": (archive.sources[0].title if archive.sources else None) or archive.metadata.archive_id,
+            "Domain": THESIS_DOMAIN_LABELS.get(archive_domain(archive), archive_domain(archive)),
+            "Archive ID": archive.metadata.archive_id,
+            "Source IDs": ", ".join(sorted(archive_source_ids(archive))),
+        }
+        for archive in archives
+    ]
+    st.caption(f"Scoped sources: {len(source_rows)} paper(s) · {len(all_rows)} quantitative record(s)")
+    with st.expander("Scoped source details", expanded=False):
+        st.dataframe(source_rows, hide_index=True, width="stretch")
+    if len({row.domain for row in all_rows if row.domain}) > 1:
+        st.warning(
+            "This explicit selection spans multiple domains. Synthex will list the scoped records, "
+            "but it will refuse a chart that mixes cross-domain rows."
+        )
+
+    if st.session_state.get("synthex_viz_property") not in (None, *properties):
+        del st.session_state["synthex_viz_property"]
     property_name = st.selectbox("Property", properties, key="synthex_viz_property")
     query = AnalyticQuery(property_name=property_name)
-    rows = project_archives(archives, query)
+    rows = [row for row in project_archives(archives, query) if row.value is not None]
     frame = comparison_frame(rows)
     st.caption(
         "Axes are discovered from the admitted source-linked conditions present in these records. "

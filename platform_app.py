@@ -17,6 +17,19 @@ from synthex_platform.batch import (
     combined_result_rows,
     validate_batch_size,
 )
+from synthex_platform.archive_scoping import (
+    ArchiveQueryContext,
+    DataScope,
+    THESIS_DOMAIN_LABELS,
+    UNKNOWN_LEGACY_DOMAIN,
+    archive_domain,
+    begin_extraction_action,
+    current_extraction_from_state,
+    deduplicate_archives,
+    domain_archive_summaries,
+    record_current_extraction,
+    select_archives,
+)
 from synthex_platform.benchmarks import benchmark_matrix
 from synthex_platform.core.archive import SynthexArchive
 from synthex_platform.core.registry import DomainRegistry
@@ -376,6 +389,7 @@ elif page == "Analyze Papers":
                 )
             button_label = "Extract research record" if len(uploaded_files) == 1 else f"Extract {len(uploaded_files)} papers"
             if st.button(button_label, type="primary"):
+                begin_extraction_action(st.session_state)
                 domain = "auto" if chosen_label == "Auto Detect" else options[chosen_label]
                 completed: list[dict] = []
                 statuses: list[dict] = []
@@ -456,6 +470,10 @@ elif page == "Analyze Papers":
                 if completed:
                     st.session_state["synthex_last_archive"] = completed[-1]
                     st.session_state["synthex_last_route"] = completed[-1].get("metadata", {}).get("domain")
+                    record_current_extraction(
+                        st.session_state,
+                        [SynthexArchive.model_validate(item) for item in completed],
+                    )
 
     batch_status = st.session_state.get("synthex_batch_status") or []
     archives = _session_archives()
@@ -579,10 +597,53 @@ elif page == "Explore Results":
             width="stretch",
         )
 
-    st.caption("Compare structured parameters across the current extraction batch while preserving paper-level source tracking.")
-    archives = _session_archives()
+    st.caption(
+        "Browse the canonical archive by domain, then paper, while preserving paper-level source tracking. "
+        "Domains are logical views; scientific records are not copied."
+    )
+    saved_archives = list(store.iter_archives() or [])
+    archives = deduplicate_archives([*saved_archives, *_session_archives()])
+    extras = sorted({
+        (archive_domain(archive), archive_domain(archive).replace("_", " ").title())
+        for archive in archives
+        if archive_domain(archive) not in THESIS_DOMAIN_LABELS
+        and archive_domain(archive) != UNKNOWN_LEGACY_DOMAIN
+    })
+    summaries = domain_archive_summaries(archives, extra_domains=extras)
+    st.dataframe(
+        [
+            {
+                "Domain": item["label"],
+                "Archives": item["archive_count"],
+                "Papers": item["paper_count"],
+                "Materials": item["material_count"],
+                "Experiments": item["experiment_count"],
+                "Calculations": item["calculation_count"],
+                "Measurements": item["measurement_count"],
+                "Latest archived run": item["latest_archived_run"],
+            }
+            for item in summaries
+        ],
+        hide_index=True,
+        width="stretch",
+    )
+    domain_slugs = [item["domain"] for item in summaries]
+    domain_labels = {item["domain"]: item["label"] for item in summaries}
+    current = current_extraction_from_state(st.session_state)
+    preferred_domain = current.domains[0] if current and len(current.domains) == 1 else None
+    selected_domain = st.selectbox(
+        "Archive domain",
+        domain_slugs,
+        index=domain_slugs.index(preferred_domain) if preferred_domain in domain_slugs else 0,
+        key="synthex_explorer_domain",
+        format_func=lambda value: domain_labels[value],
+    )
+    archives = select_archives(
+        archives,
+        ArchiveQueryContext(scope=DataScope.CURRENT_DOMAIN, domain=selected_domain),
+    )
     if not archives:
-        st.info("No current extraction to explore. Extract one or more papers first, then return here.")
+        st.info("No archived papers are available in this domain yet.")
     else:
         if len(archives) > 1:
             st.success(f"Cross-paper workspace · {len(archives)} successfully extracted papers")
@@ -751,10 +812,19 @@ elif page == "Visualize Data":
 
     saved_archives = list(store.iter_archives() or [])
     current_archives = _session_archives()
-    by_id = {archive.metadata.archive_id: archive for archive in saved_archives if archive.metadata.archive_id}
-    for archive in current_archives:
-        by_id[archive.metadata.archive_id or f"session-{id(archive)}"] = archive
-    render_visual_explorer(list(by_id.values()))
+    all_archives = deduplicate_archives([*saved_archives, *current_archives])
+    current_extraction = current_extraction_from_state(st.session_state)
+    current_domain = (
+        current_extraction.domains[0]
+        if current_extraction and len(current_extraction.domains) == 1
+        else None
+    )
+    render_visual_explorer(
+        all_archives,
+        current_extraction=current_extraction,
+        saved_archives=saved_archives,
+        current_domain=current_domain,
+    )
 
 
 elif page == "Gas Sensing Analytics":
