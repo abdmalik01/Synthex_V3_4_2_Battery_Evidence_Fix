@@ -12,7 +12,11 @@ if str(REPO_ROOT) not in sys.path:
 
 from synthex_platform.benchmarks.corrosion import score_corrosion_archive  # noqa: E402
 from synthex_platform.benchmarks.console import configure_utf8_stdio  # noqa: E402
-from synthex_platform.benchmarks.corrosion_live import expectations_from_gold, load_live_case  # noqa: E402
+from synthex_platform.benchmarks.corrosion_live import (  # noqa: E402
+    all_expectations_from_gold,
+    load_live_case,
+    quarantine_expectations_from_gold,
+)
 from synthex_platform.core.archive import SynthexArchive  # noqa: E402
 
 
@@ -48,8 +52,9 @@ def main() -> int:
 
         archive = SynthexArchive.model_validate_json(archive_path.read_text(encoding="utf-8"))
         gold = json.loads(case.gold_path.read_text(encoding="utf-8"))
-        expectations = expectations_from_gold(gold)
-        score = score_corrosion_archive(archive, expectations)
+        expectations = all_expectations_from_gold(gold)
+        quarantine_expectations = quarantine_expectations_from_gold(gold)
+        score = score_corrosion_archive(archive, expectations, quarantine_expectations)
     except Exception as exc:
         print(f"OFFLINE RESCORE FAILED · {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
@@ -62,6 +67,7 @@ def main() -> int:
         f"scientific type {_percent(score.scientific_type_accuracy)} · "
         f"association {_percent(score.association_accuracy)} · "
         f"source tracking {_percent(score.source_tracking_coverage)} · "
+        f"quarantine {_percent(score.quarantine_correctness)} · "
         f"overall {_percent(score.overall)}"
     )
     if score.missed:

@@ -77,6 +77,11 @@
       "reason": "The table marks these values with literature-reference superscripts; they are experimental context from cited prior work, not focal experimental measurements in this computational paper."
     }
   },
+  "quarantine_assertions": [
+    {"metric": "inhibition_efficiency", "value": 75.54, "unit": "%", "reason": "ownership_cited_prior_work"},
+    {"metric": "inhibition_efficiency", "value": 61.54, "unit": "%", "reason": "ownership_cited_prior_work"},
+    {"metric": "inhibition_efficiency", "value": 56.70, "unit": "%", "reason": "ownership_cited_prior_work"}
+  ],
   "required_safety_assertion": {
     "must_not_admit_as_experimental_performance": true,
     "expected_focal_experimental_corrosion_observations": 0

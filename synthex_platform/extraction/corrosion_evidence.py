@@ -311,8 +311,65 @@ def _row_matches_experiment(
         treatment = treatments.get(ref) or {}
         concentration = treatment.get("concentration")
         if isinstance(concentration, dict) and concentration.get("value") is not None:
-            if not _text_supports_value(row_text, concentration["value"]):
+            raw = str(concentration.get("raw_value") or "").strip()
+            if experiment.get("experiment_type") == "weight_loss" and raw and _normalize(raw) not in _normalize(row_text):
                 return False
+            if (experiment.get("experiment_type") != "weight_loss" or not raw) and not _text_supports_value(
+                row_text, concentration["value"]
+            ):
+                return False
+
+    if experiment.get("experiment_type") == "weight_loss":
+        environments = {
+            item.get("environment_id"): item
+            for item in payload.get("environments", [])
+            if isinstance(item, dict) and item.get("environment_id")
+        }
+        environment = environments.get(experiment.get("environment_ref")) or {}
+        for name in ("temperature", "exposure_time"):
+            quantity = environment.get(name)
+            if not isinstance(quantity, dict):
+                continue
+            raw = str(quantity.get("raw_value") or "").strip()
+            if raw and _normalize(raw) not in _normalize(row_text):
+                return False
+            if not raw and quantity.get("value") is not None and not _text_supports_value(row_text, quantity["value"]):
+                return False
+    return True
+
+
+def _weight_loss_conditions_supported(payload: dict, experiment: dict, text: str) -> bool:
+    """Require the metric quotation to carry each explicit numeric row condition."""
+    if experiment.get("experiment_type") != "weight_loss":
+        return True
+    normalized = _normalize(text)
+    environments = {
+        item.get("environment_id"): item
+        for item in payload.get("environments", [])
+        if isinstance(item, dict) and item.get("environment_id")
+    }
+    environment = environments.get(experiment.get("environment_ref")) or {}
+    quantities: list[dict] = []
+    for name in ("temperature", "exposure_time"):
+        if isinstance(environment.get(name), dict):
+            quantities.append(environment[name])
+    treatments = {
+        item.get("treatment_id"): item
+        for item in payload.get("treatments", [])
+        if isinstance(item, dict) and item.get("treatment_id")
+    }
+    for ref in experiment.get("treatment_refs", []):
+        concentration = (treatments.get(ref) or {}).get("concentration")
+        if isinstance(concentration, dict):
+            quantities.append(concentration)
+
+    for quantity in quantities:
+        raw = str(quantity.get("raw_value") or "").strip()
+        if raw:
+            if _normalize(raw) not in normalized:
+                return False
+        elif quantity.get("value") is not None and not _text_supports_value(text, quantity["value"]):
+            return False
     return True
 
 
@@ -395,7 +452,7 @@ def _ground_metric_evidence(payload: dict, source_bundle: SourceBundle) -> dict:
                     or _table_has_single_verified_treatment_context(
                         payload, experiment, evidence
                     )
-                )
+                ) and _weight_loss_conditions_supported(payload, experiment, snippet)
                 grounded.append({
                     **evidence,
                     "verbatim_match": bool(
@@ -699,7 +756,7 @@ def _verified_child_evidence(experiment: dict) -> list[dict]:
     metrics still pass the stricter value-specific admission gate separately.
     """
     candidates: list[dict] = []
-    for key in ("polarization_conditions", "eis_conditions"):
+    for key in ("polarization_conditions", "eis_conditions", "gravimetric_conditions"):
         condition = experiment.get(key)
         if isinstance(condition, dict):
             candidates.extend(

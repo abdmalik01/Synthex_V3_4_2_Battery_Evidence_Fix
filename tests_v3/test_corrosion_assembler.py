@@ -98,7 +98,7 @@ def test_corrosion_archive_admits_focal_verified_metric_and_quarantines_cited_me
     outputs = archive.experiments[0].outputs
     assert [item.property for item in outputs] == ["corrosion_current_density"]
     audit = archive.domain_payloads[0].values["admissibility_audit"]
-    assert audit["admitted_quantitative_values"] == 1
+    assert audit["admitted_quantitative_values"] == 2  # one experiment output plus one calculation output
     assert any(item["reason"] == "ownership_cited_prior_work" for item in audit["quarantine"])
     assert archive.quality.validation_status == "schema_validated"
 

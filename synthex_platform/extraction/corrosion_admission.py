@@ -10,6 +10,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from .corrosion_models import CorrosionMetric
+from .corrosion_units import corrosion_metric_unit_is_compatible
 
 
 _POTENTIAL_PROPERTIES = {
@@ -21,8 +22,16 @@ _POTENTIAL_PROPERTIES = {
 _EIS_PROPERTIES = {
     "charge_transfer_resistance",
     "solution_resistance",
+    "coating_resistance",
+    "pore_resistance",
+    "protective_layer_resistance",
+    "film_resistance",
+    "oxide_resistance",
     "cpe_parameter",
+    "cpe_exponent",
     "double_layer_capacitance",
+    "coating_capacitance",
+    "warburg_parameter",
 }
 
 
@@ -40,6 +49,8 @@ def decide_corrosion_metric_admission(
     reference_electrode: str | None,
     treatment_present: bool,
     unresolved_conflict: bool,
+    equivalent_circuit: str | None = None,
+    condition_properties: set[str] | None = None,
 ) -> CorrosionAdmissionDecision:
     """Apply the bounded Corrosion V1 canonical-admission contract.
 
@@ -73,7 +84,30 @@ def decide_corrosion_metric_admission(
     if metric.property == "polarization_resistance" and experiment_type == "eis":
         return CorrosionAdmissionDecision(False, "polarization_resistance_misclassified_as_eis")
 
+    if metric.data_kind == "fitted_parameter" and not equivalent_circuit:
+        return CorrosionAdmissionDecision(False, "missing_equivalent_circuit_context")
+
+    if not corrosion_metric_unit_is_compatible(metric.property, metric.quantity.unit):
+        return CorrosionAdmissionDecision(False, "incompatible_gravimetric_unit_category")
+
     if metric.property in {"inhibition_efficiency", "protection_efficiency"} and not treatment_present:
         return CorrosionAdmissionDecision(False, "missing_linked_treatment")
+
+    if experiment_type == "weight_loss":
+        if metric.property in {"initial_mass", "final_mass", "mass_loss"}:
+            if metric.data_kind != "reported_measurement":
+                return CorrosionAdmissionDecision(False, "invalid_gravimetric_data_kind")
+        if metric.property in {
+            "corrosion_rate", "penetration_rate", "inhibition_efficiency", "protection_efficiency"
+        } and metric.data_kind != "derived_metric":
+            return CorrosionAdmissionDecision(False, "invalid_gravimetric_data_kind")
+        if metric.property in {
+            "corrosion_rate", "penetration_rate", "inhibition_efficiency", "protection_efficiency"
+        }:
+            available = condition_properties or set()
+            if "exposure_time" not in available:
+                return CorrosionAdmissionDecision(False, "missing_exposure_time")
+            if not ({"medium", "electrolyte"} & available):
+                return CorrosionAdmissionDecision(False, "missing_environment_context")
 
     return CorrosionAdmissionDecision(True, None)

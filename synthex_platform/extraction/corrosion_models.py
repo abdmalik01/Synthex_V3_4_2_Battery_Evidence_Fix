@@ -19,7 +19,8 @@ EvidenceSourceType = Literal[
     "text", "table", "figure_caption", "figure", "supplementary", "unknown"
 ]
 OriginalSourceType = Literal[
-    "native_text", "table_reported", "ocr_extracted", "figure_reported", "unknown"
+    "native_text", "table_reported", "ocr_extracted", "figure_reported",
+    "figure_digitized", "unknown"
 ]
 
 
@@ -140,12 +141,30 @@ class EISConditions(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     reference_electrode: str | None = None
+    counter_electrode: str | None = None
     exposed_area: CorrosionQuantity | None = None
+    open_circuit_stabilization: CorrosionQuantity | None = None
     frequency_min: CorrosionQuantity | None = None
     frequency_max: CorrosionQuantity | None = None
     perturbation_amplitude: CorrosionQuantity | None = None
     dc_bias: CorrosionQuantity | None = None
     equivalent_circuit: str | None = None
+    fitting_software: str | None = None
+    evidence: list[CorrosionEvidence] = Field(default_factory=list)
+
+
+class GravimetricConditions(BaseModel):
+    """Explicit source-reported context for immersion/weight-loss experiments."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    exposed_area: CorrosionQuantity | None = None
+    specimen_density: CorrosionQuantity | None = None
+    specimen_dimensions: str | None = None
+    replicate_count: int | None = Field(default=None, ge=1)
+    weighing_repetitions: int | None = Field(default=None, ge=1)
+    post_exposure_treatment: str | None = None
+    standard: str | None = None
     evidence: list[CorrosionEvidence] = Field(default_factory=list)
 
 
@@ -155,17 +174,55 @@ class CorrosionMetric(BaseModel):
     property: Literal[
         "corrosion_rate", "corrosion_current_density", "corrosion_potential",
         "polarization_resistance", "charge_transfer_resistance", "solution_resistance",
-        "cpe_parameter", "double_layer_capacitance", "tafel_anodic_slope",
+        "coating_resistance", "pore_resistance", "protective_layer_resistance",
+        "film_resistance", "oxide_resistance", "cpe_parameter", "cpe_exponent",
+        "double_layer_capacitance", "coating_capacitance", "warburg_parameter",
+        "tafel_anodic_slope",
         "tafel_cathodic_slope", "pitting_potential", "repassivation_potential",
         "breakdown_potential", "inhibition_efficiency", "protection_efficiency",
-        "mass_loss", "penetration_depth", "other"
+        "initial_mass", "final_mass", "mass_loss", "penetration_rate",
+        "penetration_depth", "other"
     ]
     reported_term: str | None = None
     quantity: CorrosionQuantity
     normalization_basis: str | None = None
     method: str | None = None
+    data_kind: Literal[
+        "reported_measurement", "fitted_parameter", "raw_spectrum", "derived_metric", "unknown"
+    ] = "unknown"
+    element_role: Literal[
+        "electrolyte", "charge_transfer", "double_layer", "coating", "pore",
+        "protective_layer", "film", "oxide", "diffusion", "other", "unknown"
+    ] = "unknown"
+    equivalent_circuit_element: str | None = None
     ownership: Ownership = "unknown"
     evidence: list[CorrosionEvidence] = Field(default_factory=list)
+
+
+class EISSpectrumPoint(BaseModel):
+    """One explicitly reported or explicitly digitized frequency-domain coordinate."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    point_id: str
+    frequency: CorrosionQuantity
+    impedance_real: CorrosionQuantity | None = None
+    negative_impedance_imaginary: CorrosionQuantity | None = None
+    impedance_magnitude: CorrosionQuantity | None = None
+    phase_angle: CorrosionQuantity | None = None
+    source_origin: Literal["table_reported", "figure_digitized"]
+    evidence: list[CorrosionEvidence] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def has_impedance_coordinate(self):
+        if not any((
+            self.impedance_real,
+            self.negative_impedance_imaginary,
+            self.impedance_magnitude,
+            self.phase_angle,
+        )):
+            raise ValueError("An EIS spectrum point requires at least one impedance or phase ordinate.")
+        return self
 
 
 class CorrosionExperiment(BaseModel):
@@ -181,7 +238,9 @@ class CorrosionExperiment(BaseModel):
     treatment_refs: list[str] = Field(default_factory=list)
     polarization_conditions: PolarizationConditions | None = None
     eis_conditions: EISConditions | None = None
+    gravimetric_conditions: GravimetricConditions | None = None
     metrics: list[CorrosionMetric] = Field(default_factory=list)
+    eis_spectrum_points: list[EISSpectrumPoint] = Field(default_factory=list)
     ownership: Ownership = "unknown"
     evidence: list[CorrosionEvidence] = Field(default_factory=list)
 
@@ -189,9 +248,18 @@ class CorrosionExperiment(BaseModel):
 class CorrosionCalculationOutput(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    property: Literal["adsorption_energy", "work_function", "charge_transfer", "binding_energy", "other"]
+    property: Literal[
+        "homo_energy", "lumo_energy", "energy_gap", "ionization_potential",
+        "electron_affinity", "electronegativity", "chemical_potential",
+        "global_hardness", "global_softness", "electrophilicity",
+        "dipole_moment", "electron_transfer_number", "adsorption_energy",
+        "binding_energy", "interaction_energy", "total_energy", "work_function",
+        "charge_transfer", "fukui_index", "mulliken_charge", "other"
+    ]
     reported_term: str | None = None
     quantity: CorrosionQuantity
+    data_kind: Literal["reported_calculation", "derived_by_synthex", "unknown"] = "unknown"
+    ownership: Ownership = "unknown"
     evidence: list[CorrosionEvidence] = Field(default_factory=list)
 
 
@@ -201,9 +269,26 @@ class CorrosionCalculation(BaseModel):
     calculation_id: str
     calculation_type: Literal["dft", "molecular_dynamics", "quantum_chemistry", "other"]
     material_refs: list[str] = Field(default_factory=list)
+    treatment_refs: list[str] = Field(default_factory=list)
     surface: str | None = None
     adsorbate_or_inhibitor: str | None = None
     method: str | None = None
+    software: str | None = None
+    functional: str | None = None
+    basis_set: str | None = None
+    core_treatment: str | None = None
+    solvation_model: str | None = None
+    phase: str | None = None
+    geometry_optimization: str | None = None
+    charge: int | None = None
+    spin_state: str | None = None
+    adsorption_site: str | None = None
+    k_point_grid: str | None = None
+    force_field: str | None = None
+    ensemble: str | None = None
+    temperature: CorrosionQuantity | None = None
+    time_step: CorrosionQuantity | None = None
+    simulation_time: CorrosionQuantity | None = None
     parameters: dict[str, str | float | int | bool | None] = Field(default_factory=dict)
     outputs: list[CorrosionCalculationOutput] = Field(default_factory=list)
     ownership: Ownership = "unknown"
@@ -273,4 +358,7 @@ class CorrosionDocument(BaseModel):
             missing = sorted(set(calculation.material_refs) - material_ids)
             if missing:
                 raise ValueError(f"Unknown calculation material_refs: {missing}")
+            missing_treatments = sorted(set(calculation.treatment_refs) - treatment_ids)
+            if missing_treatments:
+                raise ValueError(f"Unknown calculation treatment_refs: {missing_treatments}")
         return self

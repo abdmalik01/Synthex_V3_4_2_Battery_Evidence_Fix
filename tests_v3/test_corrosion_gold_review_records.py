@@ -43,7 +43,9 @@ def test_numeric_gold_observations_are_source_grounded():
         for observation in payload.get("scored_numeric_observations", []):
             assert observation.get("metric")
             assert isinstance(observation.get("value"), (int, float))
-            assert observation.get("unit")
+            assert "unit" in observation
+            if observation.get("unit") is None:
+                assert observation["metric"] == "cpe_exponent"
             assert isinstance(observation.get("page"), int)
             assert observation.get("evidence_snippet")
 

@@ -20,7 +20,10 @@ from synthex_platform.core.registry import DomainRegistry
 from synthex_platform.providers import GeminiGateway
 
 from .corrosion_evidence import verify_corrosion_document_evidence
+from .corrosion_computational_recovery import recover_corrosion_computational_tables
+from .corrosion_gravimetric_recovery import recover_corrosion_gravimetric_candidates
 from .corrosion_models import CorrosionDocument
+from .corrosion_table_recovery import recover_corrosion_parameter_tables
 from .source_context import SourceBundle, compact_source_context, has_prompt_source_context
 
 load_dotenv(override=True)
@@ -41,15 +44,33 @@ Scientific rules:
   background, example, or unknown. Review/cited values are never focal results.
 - Keep corrosion experiments and calculations separate. DFT, molecular dynamics, and quantum
   chemistry outputs belong only in calculations.
+- In mixed-method papers, preserve every explicit experimental condition row and every explicit
+  computational result as separate records. Do not select only representative extrema, and never
+  place HOMO/LUMO, adsorption, binding, interaction, or other computational descriptors in an
+  experimental metric list.
 - Preserve raw_value exactly as reported before parsing value/unit.
 - Do not convert electrode potentials between Ag/AgCl, SCE, SHE, RHE, Hg/HgO, or any other scale.
   Record the reported reference electrode exactly when present. If absent, leave it absent.
 - Do not derive corrosion rate, inhibition efficiency, protection efficiency, or any other metric
   unless the paper explicitly reports the value.
+- For weight-loss/gravimetric experiments, classify directly observed initial mass, final mass,
+  and mass loss as reported_measurement. Classify an author-reported corrosion rate, penetration
+  rate, inhibition efficiency, or protection efficiency as derived_metric. Never calculate a
+  missing value or infer efficiency from control/treatment values.
+- Keep mass-loss rates (for example mg cm^-2 h^-1) distinct from penetration-depth rates (for
+  example mm/year or mpy). Do not convert between them without an explicit, provenance-complete
+  derivation framework including density, area, duration, formula, and every operand.
 - Do not infer normalization basis from units alone.
 - EIS fitted parameters belong to EIS experiments. Do not relabel charge-transfer resistance as
   polarization resistance or vice versa.
+- Preserve each reported EIS element identity (for example Rs/Re, Rct/Rt, Rcoat/Rcp, CPE Q/Y0,
+  and n) with its fitted-parameter role and reported equivalent-circuit context. Do not convert a
+  constant-phase-element modulus into capacitance.
+- Do not create raw EIS spectrum points from fitted circuit parameters or from Nyquist/Bode figure
+  captions. Populate eis_spectrum_points only for explicit numeric source rows or an explicitly
+  labelled figure_digitized workflow.
 - Record electrolyte, chloride concentration, pH, temperature, exposure time, exposed area,
+  specimen density/dimensions, replicate count, weighing repetitions, post-exposure treatment,
   scan rate, frequency range, perturbation amplitude, and treatment/inhibitor links only when explicit.
 - Every evidence item must contain the narrowest exact contiguous source quotation supporting the
   object or value. When a SourceBundle is supplied, use its page markers/source_id. If exact support
@@ -260,5 +281,8 @@ class CorrosionGeminiExtractor:
         except (ValidationError, ValueError) as exc:
             document = self._repair_invalid_output(response.text, exc, source_bundle)
         if source_bundle is not None:
+            document = recover_corrosion_parameter_tables(document, source_bundle)
+            document = recover_corrosion_gravimetric_candidates(document, source_bundle)
+            document = recover_corrosion_computational_tables(document, source_bundle)
             document = verify_corrosion_document_evidence(document, source_bundle)
         return document

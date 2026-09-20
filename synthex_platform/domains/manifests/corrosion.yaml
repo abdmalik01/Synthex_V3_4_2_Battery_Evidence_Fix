@@ -55,6 +55,12 @@ properties:
   units: [mm/year, mm/y, mpy, um/year, mg/cm2/day]
   conditions: [environment, electrolyte, temperature, exposure_time, exposed_area]
   aliases: [penetration rate]
+- key: penetration_rate
+  name: Penetration rate
+  kind: performance
+  units: [mm/year, mm/y, um/year, mpy]
+  conditions: [environment, electrolyte, temperature, exposure_time, exposed_area, specimen_density]
+  aliases: [corrosion penetration rate]
 - key: corrosion_current_density
   name: Corrosion current density
   kind: electrochemical
@@ -85,18 +91,90 @@ properties:
   units: [ohm, ohm*cm2]
   conditions: [electrolyte, temperature]
   aliases: [Rs, R_s]
+- key: coating_resistance
+  name: Coating resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Rc, Rcoat, R_coat]
+- key: pore_resistance
+  name: Pore resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Rpore, R_pore]
+- key: protective_layer_resistance
+  name: Protective-layer resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Rcp, R_cp]
+- key: film_resistance
+  name: Film resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Rf, R_f]
+- key: oxide_resistance
+  name: Oxide resistance
+  kind: electrochemical
+  units: [ohm, ohm*cm2, kohm*cm2, Mohm*cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Rox, R_ox]
 - key: cpe_parameter
   name: Constant phase element parameter
   kind: electrochemical
   units: [S*s^n, F*s^(n-1)]
   conditions: [equivalent_circuit, exposure_time]
-  aliases: [CPE, Q]
+  aliases: [CPE, Q, Y0]
+- key: cpe_exponent
+  name: Constant phase element exponent
+  kind: electrochemical
+  units: ['1']
+  conditions: [equivalent_circuit, exposure_time, cpe_element_role]
+  aliases: [n, ndl, ncp]
 - key: double_layer_capacitance
   name: Double-layer capacitance
   kind: electrochemical
   units: [F/cm2, uF/cm2]
   conditions: [electrolyte, exposure_time]
   aliases: [Cdl, C_dl]
+- key: coating_capacitance
+  name: Coating capacitance
+  kind: electrochemical
+  units: [F, F/cm2, uF, uF/cm2]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [Cc, Ccoat, C_coat]
+- key: warburg_parameter
+  name: Warburg or diffusion element parameter
+  kind: electrochemical
+  units: [ohm*s^-0.5, ohm*cm2*s^-0.5]
+  conditions: [equivalent_circuit, exposure_time]
+  aliases: [W, Zw, Warburg]
+- key: impedance_real
+  name: Real impedance
+  kind: eis_spectrum
+  units: [ohm, ohm*cm2]
+  conditions: [frequency, exposure_time]
+  aliases: [Z_real, Zprime]
+- key: negative_impedance_imaginary
+  name: Negative imaginary impedance
+  kind: eis_spectrum
+  units: [ohm, ohm*cm2]
+  conditions: [frequency, exposure_time]
+  aliases: [-Z_imag, -Zdoubleprime]
+- key: impedance_magnitude
+  name: Impedance magnitude
+  kind: eis_spectrum
+  units: [ohm, ohm*cm2]
+  conditions: [frequency, exposure_time]
+  aliases: ['|Z|']
+- key: phase_angle
+  name: Impedance phase angle
+  kind: eis_spectrum
+  units: [degree, rad]
+  conditions: [frequency, exposure_time]
+  aliases: [phase]
 - key: tafel_anodic_slope
   name: Anodic Tafel slope
   kind: electrochemical
@@ -145,6 +223,18 @@ properties:
   units: [mg, g, mg/cm2]
   conditions: [exposure_time, exposed_area, environment]
   aliases: [weight loss]
+- key: initial_mass
+  name: Initial mass
+  kind: measured
+  units: [mg, g]
+  conditions: [sample, replicate]
+  aliases: [mass before exposure]
+- key: final_mass
+  name: Final mass
+  kind: measured
+  units: [mg, g]
+  conditions: [sample, exposure_time, replicate]
+  aliases: [mass after exposure]
 - key: penetration_depth
   name: Corrosion penetration depth
   kind: performance
@@ -157,6 +247,66 @@ properties:
   units: [eV, kJ/mol]
   conditions: [surface, adsorbate, computational_method]
   aliases: [Eads, adsorption energy]
+- key: homo_energy
+  name: HOMO energy
+  kind: computational
+  units: [eV]
+  conditions: [adsorbate, computational_method]
+  aliases: [EHOMO, E_HOMO]
+- key: lumo_energy
+  name: LUMO energy
+  kind: computational
+  units: [eV]
+  conditions: [adsorbate, computational_method]
+  aliases: [ELUMO, E_LUMO]
+- key: energy_gap
+  name: Energy gap
+  kind: computational
+  units: [eV]
+  conditions: [adsorbate, computational_method]
+  aliases: [Delta E, HOMO-LUMO gap]
+- key: chemical_potential
+  name: Chemical potential
+  kind: computational
+  units: [eV]
+  conditions: [adsorbate, computational_method]
+  aliases: [mu]
+- key: global_hardness
+  name: Global hardness
+  kind: computational
+  units: [eV]
+  conditions: [adsorbate, computational_method]
+  aliases: [eta, chemical hardness]
+- key: global_softness
+  name: Global softness
+  kind: computational
+  units: [eV^-1]
+  conditions: [adsorbate, computational_method]
+  aliases: [softness]
+- key: electron_transfer_number
+  name: Fraction of electrons transferred
+  kind: computational
+  units: [e, dimensionless]
+  conditions: [surface, adsorbate, computational_method]
+  aliases: [Delta N]
+- key: binding_energy
+  name: Binding energy
+  kind: computational
+  units: [eV, kJ/mol]
+  conditions: [surface, adsorbate, computational_method]
+  aliases: [binding energy]
+- key: interaction_energy
+  name: Interaction energy
+  kind: computational
+  units: [eV, kJ/mol]
+  conditions: [surface, adsorbate, computational_method]
+  aliases: [interaction energy]
+- key: total_energy
+  name: Total energy
+  kind: computational
+  units: [eV, kcal/mol]
+  conditions: [surface, adsorbate, computational_method]
+  aliases: [minimum total energy]
 - key: work_function
   name: Work function
   kind: computational
@@ -170,7 +320,12 @@ scientific_guardrails:
 - Keep EIS fitted parameters tied to the reported equivalent circuit and exposure condition; do not relabel them as polarization values.
 - Keep review, comparison-table, cited-prior-work and background values out of focal canonical results.
 - Keep DFT and molecular-simulation descriptors in calculations, not experimental corrosion measurements.
+- Never derive an unreported computational descriptor from other outputs unless an explicit derived-value policy records every operand and labels the result as derived by Synthex.
+- Preserve distinct computational energy identities even when they share the same printed unit.
 - Preserve ambiguous or conflicting test conditions instead of silently choosing one.
+- Treat source-reported initial mass, final mass and mass loss as measurements; treat author-reported corrosion rate, penetration rate and inhibition efficiency as derived metrics.
+- Preserve mass-loss-rate and penetration-rate unit categories. Do not convert between them without a complete, explicit density/area/time derivation and operand provenance.
+- Do not calculate missing gravimetric values or inhibition efficiency from related reported values.
 benchmarks:
 - id: corrosion.corrosion_rate_prediction
   name: Corrosion rate prediction

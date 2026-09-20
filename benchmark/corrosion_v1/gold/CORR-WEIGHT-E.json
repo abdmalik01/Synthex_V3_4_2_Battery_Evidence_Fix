@@ -4,6 +4,7 @@
   "filename": "Corrosion 5.pdf",
   "gold_status": "manual_source_review_complete",
   "ownership": "focal_work",
+  "routing_contract": {"expected_domain": "corrosion", "expected_paper_type": "immersion_weight_loss"},
   "source_review": {
     "basis": "Direct review of the benchmark PDF; primary gold uses only explicitly stated focal values with explicit concentration, time and temperature associations.",
     "unit_conversion_performed": false,
@@ -33,6 +34,9 @@
       "conditions": {"medium": "1.0 M HCl", "inhibitor": "ETO", "inhibitor_concentration": "500 ppm", "immersion_time": "5 h", "temperature": "303 K"},
       "experiment_type": "weight_loss",
       "material_contains": "mild steel",
+      "reported_term": "corrosion rate",
+      "data_kind": "derived_metric",
+      "unit_category": "penetration_rate",
       "page": 3,
       "evidence_snippet": "At 500 ppm ETO and 5 h immersion, the text reports a corrosion rate of 1.15 mm/y at 303 K."
     },
@@ -43,8 +47,27 @@
       "conditions": {"medium": "1.0 M HCl", "inhibitor": "ETO", "inhibitor_concentration": "500 ppm", "immersion_time": "5 h", "temperature": "303 K"},
       "experiment_type": "weight_loss",
       "material_contains": "mild steel",
+      "reported_term": "inhibition efficiency",
+      "data_kind": "derived_metric",
+      "unit_category": "percent",
       "page": 3,
       "evidence_snippet": "At the same concentration and immersion time, inhibition efficiency was 98.4% at 303 K."
+    }
+  ],
+  "quarantine_assertions": [
+    {
+      "metric": "corrosion_rate",
+      "value": 0.97,
+      "unit": "mm/year",
+      "reason": "no_verified_value_specific_evidence",
+      "scientific_rationale": "The concentration-sweep prose reports the value but does not uniquely pair it with the 500 ppm row or one of the four immersion durations."
+    },
+    {
+      "metric": "inhibition_efficiency",
+      "value": 91.9,
+      "unit": "%",
+      "reason": "ownership_cited_prior_work",
+      "scientific_rationale": "Table 2 attributes this comparison value to cited reference 28, not the focal ETO experiment."
     }
   ],
   "verified_but_not_scored_as_exact_primary_gold": {

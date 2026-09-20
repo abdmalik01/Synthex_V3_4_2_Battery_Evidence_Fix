@@ -61,6 +61,7 @@ def main() -> int:
             f"scientific type {_percent(score['scientific_type_accuracy'])} · "
             f"association {_percent(score['association_accuracy'])} · "
             f"source tracking {_percent(score['source_tracking_coverage'])} · "
+            f"quarantine {_percent(score['quarantine_correctness'])} · "
             f"overall {_percent(score['overall'])}"
         )
         if score.get("missed"):

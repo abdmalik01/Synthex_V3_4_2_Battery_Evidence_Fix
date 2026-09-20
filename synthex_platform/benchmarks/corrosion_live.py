@@ -18,11 +18,17 @@ from dotenv import load_dotenv
 from synthex_platform.benchmarks.corrosion import (
     CorrosionBenchmarkScore,
     CorrosionExpectedObservation,
+    CorrosionExpectedQuarantine,
     score_corrosion_archive,
 )
 from synthex_platform.extraction import SynthexExtractionPipeline
+from synthex_platform.extraction.corrosion_assembler import assemble_corrosion_archive
+from synthex_platform.extraction.corrosion_computational_recovery import recover_corrosion_computational_tables
 from synthex_platform.extraction.corrosion_evidence import verify_corrosion_evidence_item
-from synthex_platform.extraction.corrosion_models import CorrosionEvidence
+from synthex_platform.extraction.corrosion_evidence import verify_corrosion_document_evidence
+from synthex_platform.extraction.corrosion_gravimetric_recovery import recover_corrosion_gravimetric_candidates
+from synthex_platform.extraction.corrosion_models import CorrosionDocument, CorrosionEvidence
+from synthex_platform.extraction.corrosion_table_recovery import recover_corrosion_parameter_tables
 from synthex_platform.extraction.source_context import build_source_bundle
 from synthex_platform.visual.sidecar_store import VisualSidecarStore
 
@@ -31,6 +37,7 @@ HOLDOUT_CASE_ID = "CORR-HOLDOUT-I"
 
 _EXPERIMENT_TYPE_ALIASES = {
     "electrochemical impedance spectroscopy": "eis",
+    "electrochemical_impedance_spectroscopy": "eis",
     "impedance spectroscopy": "eis",
     "eis": "eis",
     "potentiodynamic polarization": "potentiodynamic_polarization",
@@ -114,6 +121,7 @@ def expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObser
     swapped inhibitor/value assignments cannot receive association credit.
     """
     expected: list[CorrosionExpectedObservation] = []
+    benchmark_context = gold.get("benchmark_context") if isinstance(gold.get("benchmark_context"), dict) else {}
     for item in gold.get("scored_numeric_observations", []):
         conditions = item.get("conditions") if isinstance(item.get("conditions"), dict) else {}
         inhibitor = conditions.get("inhibitor")
@@ -122,15 +130,113 @@ def expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObser
         expected.append(CorrosionExpectedObservation(
             metric=str(item["metric"]),
             value=float(item["value"]),
-            unit=str(item["unit"]),
+            unit=(str(item["unit"]) if item.get("unit") is not None else None),
             experiment_type=_canonical_experiment_type(item.get("experiment_type")),
+            record_type=item.get("record_type"),
+            calculation_type=item.get("calculation_type"),
             material_contains=item.get("material_contains"),
-            treatment_contains=item.get("treatment_contains") or inhibitor,
+            treatment_contains=(
+                item.get("treatment_contains")
+                or inhibitor
+                or conditions.get("coating")
+                or benchmark_context.get("treatment_contains")
+            ),
             reference_electrode=item.get("reference_electrode"),
+            exposure_time=(conditions.get("exposure_time") or conditions.get("immersion_time")),
+            temperature=conditions.get("temperature"),
+            treatment_concentration=(
+                conditions.get("inhibitor_concentration")
+                or conditions.get("treatment_concentration")
+                or conditions.get("concentration")
+            ),
+            electrolyte_contains=(
+                conditions.get("electrolyte")
+                or conditions.get("molten_salt")
+                or conditions.get("environment")
+                or conditions.get("medium")
+            ),
+            equivalent_circuit_contains=(
+                item.get("equivalent_circuit_contains")
+                or conditions.get("equivalent_circuit_contains")
+                or conditions.get("equivalent_circuit")
+            ),
+            reported_term=item.get("reported_term"),
+            data_kind=item.get("data_kind"),
+            element_role=item.get("element_role"),
+            unit_category=item.get("unit_category"),
+            adsorbate_contains=item.get("adsorbate_contains"),
+            surface_contains=item.get("surface_contains"),
+            method_contains=item.get("method_contains"),
+            software_contains=item.get("software_contains"),
+            functional_contains=item.get("functional_contains"),
+            basis_set_contains=item.get("basis_set_contains"),
             tolerance_abs=float(item.get("tolerance_abs", 1e-9)),
             required=bool(item.get("required", True)),
         ))
     return tuple(expected)
+
+
+_CALCULATION_GOLD_PROPERTIES = {
+    "EHOMO_eV": ("homo_energy", "eV", "EHOMO"),
+    "ELUMO_eV": ("lumo_energy", "eV", "ELUMO"),
+    "chemical_potential_eV": ("chemical_potential", "eV", "chemical potential"),
+    "electron_transfer_number_e": ("electron_transfer_number", "e", "ΔN"),
+    "global_hardness_eV": ("global_hardness", "eV", "global hardness"),
+    "binding_energy_eV": ("binding_energy", "eV", "binding energy"),
+    "interaction_energy_eV": ("interaction_energy", "eV", "interaction energy"),
+    "minimum_total_energy_kcal_per_mol": ("total_energy", "kcal/mol", "total energy"),
+}
+
+
+def calculation_expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObservation, ...]:
+    """Translate reviewed calculation tables without computing any missing descriptor."""
+    setup = gold.get("computational_setup") if isinstance(gold.get("computational_setup"), dict) else {}
+    expected: list[CorrosionExpectedObservation] = []
+    for calculation in gold.get("calculation_gold", []):
+        outputs = calculation.get("outputs") if isinstance(calculation.get("outputs"), dict) else {}
+        for key, value in outputs.items():
+            mapping = _CALCULATION_GOLD_PROPERTIES.get(key)
+            if mapping is None:
+                continue
+            metric, unit, reported_term = mapping
+            calculation_type = "molecular_dynamics" if metric in {
+                "binding_energy", "interaction_energy", "total_energy"
+            } else "dft"
+            expected.append(CorrosionExpectedObservation(
+                metric=metric,
+                value=float(value),
+                unit=unit,
+                record_type="calculation",
+                calculation_type=calculation_type,
+                material_contains=calculation.get("surface") or setup.get("surface"),
+                adsorbate_contains=calculation.get("adsorbate"),
+                surface_contains=calculation.get("surface"),
+                reported_term=reported_term,
+                data_kind="reported_calculation",
+                software_contains="DMol3" if calculation_type == "dft" else "Materials Studio",
+                functional_contains=setup.get("exchange_correlation_functional") if calculation_type == "dft" else None,
+                basis_set_contains=setup.get("basis_set") if calculation_type == "dft" else None,
+            ))
+    return tuple(expected)
+
+
+def all_expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedObservation, ...]:
+    """Return experimental and computational assertions without cross-casting either."""
+    return (*expectations_from_gold(gold), *calculation_expectations_from_gold(gold))
+
+
+def quarantine_expectations_from_gold(gold: dict[str, Any]) -> tuple[CorrosionExpectedQuarantine, ...]:
+    """Translate explicit must-quarantine gold assertions without inferring omissions."""
+    return tuple(
+        CorrosionExpectedQuarantine(
+            metric=str(item["metric"]),
+            value=float(item["value"]),
+            unit=(str(item["unit"]) if item.get("unit") is not None else None),
+            reason=str(item["reason"]),
+            tolerance_abs=float(item.get("tolerance_abs", 1e-9)),
+        )
+        for item in gold.get("quarantine_assertions", [])
+    )
 
 
 def build_live_pipeline(output_directory: str | Path) -> SynthexExtractionPipeline:
@@ -334,6 +440,56 @@ def diagnose_live_output(case_id: str, repo_root: str | Path) -> dict[str, Any]:
     }
 
 
+def replay_saved_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, Any]:
+    """Replay a stored provider document through current deterministic recovery offline.
+
+    The historical archive, report, and verified-document files are read-only inputs.
+    No provider, search, or OCR service is invoked and no replay artifact is written.
+    The historical score is reported separately from the post-recovery score so the
+    deterministic layer is never presented as provider accuracy.
+    """
+    repo_root = Path(repo_root).resolve()
+    case = load_live_case(case_id, repo_root)
+    if case.gold_path is None:
+        raise FileNotFoundError(f"Gold file not found for {case.case_id}")
+    output_dir = repo_root / "output" / "corrosion_v1" / "live" / case.case_id
+    document_path = output_dir / "verified_document.json"
+    report_path = output_dir / "report.json"
+    if not document_path.exists():
+        raise FileNotFoundError(f"Saved provider document not found: {document_path}")
+    if not report_path.exists():
+        raise FileNotFoundError(f"Historical live report not found: {report_path}")
+
+    historical_report = _read_json(report_path)
+    document = CorrosionDocument.model_validate_json(document_path.read_text(encoding="utf-8"))
+    bundle = build_source_bundle(
+        case.pdf_path,
+        source_filename=case.filename,
+        enable_ocr=False,
+        include_figures=False,
+    )
+    recovered = recover_corrosion_parameter_tables(document, bundle)
+    recovered = recover_corrosion_gravimetric_candidates(recovered, bundle)
+    recovered = recover_corrosion_computational_tables(recovered, bundle)
+    verified = verify_corrosion_document_evidence(recovered, bundle)
+    archive = assemble_corrosion_archive(verified, source_bundle=bundle)
+
+    gold = _read_json(case.gold_path)
+    expectations = all_expectations_from_gold(gold)
+    quarantine_expectations = quarantine_expectations_from_gold(gold)
+    score = score_corrosion_archive(archive, expectations, quarantine_expectations)
+    return {
+        "case_id": case.case_id,
+        "provider_calls": 0,
+        "historical_artifacts_mutated": False,
+        "raw_provider_score": historical_report.get("score"),
+        "post_recovery_score": score.as_dict(),
+        "verified_document": verified,
+        "archive": archive,
+        "source_bundle": bundle,
+    }
+
+
 def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, Any]:
     """Run exactly one live benchmark paper and persist its archive/report under ``output/``."""
     repo_root = Path(repo_root).resolve()
@@ -360,12 +516,14 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
 
     route_ok = route.domain != "corrosion" if case.expected_domain == "not_corrosion" else route.domain == case.expected_domain
     expectations: tuple[CorrosionExpectedObservation, ...] = ()
+    quarantine_expectations: tuple[CorrosionExpectedQuarantine, ...] = ()
     score: CorrosionBenchmarkScore | None = None
     if case.gold_path is not None:
         gold = _read_json(case.gold_path)
-        expectations = expectations_from_gold(gold)
+        expectations = all_expectations_from_gold(gold)
+        quarantine_expectations = quarantine_expectations_from_gold(gold)
         if route.domain == "corrosion" and expectations:
-            score = score_corrosion_archive(archive, expectations)
+            score = score_corrosion_archive(archive, expectations, quarantine_expectations)
 
     report: dict[str, Any] = {
         "case_id": case.case_id,
@@ -389,7 +547,7 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
             "method": route.method,
             "route_ok": route_ok,
         },
-        "gold_assertions": len(expectations),
+        "gold_assertions": len(expectations) + len(quarantine_expectations),
         "score": _score_payload(score),
         "extraction_diagnostics": pipeline.last_extraction_diagnostics,
         "provider_audit": pipeline.last_provider_audit,

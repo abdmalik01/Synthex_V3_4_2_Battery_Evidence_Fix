@@ -318,6 +318,7 @@ def assemble_corrosion_archive(
                 ("exposed_area", ec.exposed_area), ("frequency_min", ec.frequency_min),
                 ("frequency_max", ec.frequency_max), ("perturbation_amplitude", ec.perturbation_amplitude),
                 ("dc_bias", ec.dc_bias),
+                ("open_circuit_stabilization", ec.open_circuit_stabilization),
             ):
                 converted = _quantity_condition(name, quantity, sid=sid, evidence=ec.evidence)
                 if converted:
@@ -325,9 +326,38 @@ def assemble_corrosion_archive(
             if ec.reference_electrode:
                 conditions.append(Measurement(property="reference_electrode", raw_value=ec.reference_electrode,
                     value=ec.reference_electrode, qualifier="categorical", evidence=_canonical_evidence(ec.evidence, sid)))
+            if ec.counter_electrode:
+                conditions.append(Measurement(property="counter_electrode", raw_value=ec.counter_electrode,
+                    value=ec.counter_electrode, qualifier="categorical", evidence=_canonical_evidence(ec.evidence, sid)))
             if ec.equivalent_circuit:
                 conditions.append(Measurement(property="equivalent_circuit", raw_value=ec.equivalent_circuit,
                     value=ec.equivalent_circuit, qualifier="categorical", evidence=_canonical_evidence(ec.evidence, sid)))
+            if ec.fitting_software:
+                conditions.append(Measurement(property="fitting_software", raw_value=ec.fitting_software,
+                    value=ec.fitting_software, qualifier="categorical", evidence=_canonical_evidence(ec.evidence, sid)))
+
+        if experiment.gravimetric_conditions:
+            gc = experiment.gravimetric_conditions
+            for name, quantity in (
+                ("exposed_area", gc.exposed_area),
+                ("specimen_density", gc.specimen_density),
+            ):
+                converted = _quantity_condition(name, quantity, sid=sid, evidence=gc.evidence)
+                if converted:
+                    conditions.append(converted)
+            for name, value in (
+                ("specimen_dimensions", gc.specimen_dimensions),
+                ("replicate_count", gc.replicate_count),
+                ("weighing_repetitions", gc.weighing_repetitions),
+                ("post_exposure_treatment", gc.post_exposure_treatment),
+                ("standard", gc.standard),
+            ):
+                if value is not None:
+                    qualifier = "exact" if isinstance(value, int) else "categorical"
+                    conditions.append(Measurement(
+                        property=name, raw_value=str(value), value=value, qualifier=qualifier,
+                        evidence=_canonical_evidence(gc.evidence, sid),
+                    ))
 
         linked_treatments = [
             treatments_by_id[ref]
@@ -385,6 +415,8 @@ def assemble_corrosion_archive(
                 reference_electrode=reference_electrode,
                 treatment_present=treatment_present,
                 unresolved_conflict=unresolved_conflict,
+                equivalent_circuit=(experiment.eis_conditions.equivalent_circuit if experiment.eis_conditions else None),
+                condition_properties={item.property for item in conditions},
             )
             metric_path = f"{path}.metrics.{index}"
             if not decision.admitted:
@@ -395,6 +427,14 @@ def assemble_corrosion_archive(
                 "reference_electrode": reference_electrode if metric.property.endswith("potential") else None,
                 "environment_ref": experiment.environment_ref,
                 "treatment_refs": experiment.treatment_refs or None,
+                "reported_term": metric.reported_term,
+                "data_kind": metric.data_kind,
+                "element_role": metric.element_role,
+                "equivalent_circuit_element": metric.equivalent_circuit_element,
+                "equivalent_circuit": (
+                    experiment.eis_conditions.equivalent_circuit
+                    if experiment.eis_conditions else None
+                ),
             }
             outputs.append(_measurement(
                 metric.property,
@@ -405,6 +445,53 @@ def assemble_corrosion_archive(
                 sid=sid,
             ))
             audit.admitted_metrics += 1
+
+        for point_index, point in enumerate(experiment.eis_spectrum_points):
+            point_path = f"{path}.eis_spectrum_points.{point_index}"
+            if experiment.experiment_type != "eis":
+                audit.reject(point_path, "raw_spectrum_outside_eis_experiment", point, ownership=experiment.ownership)
+                continue
+            if not _verified(point.evidence):
+                audit.reject(point_path, "no_verified_spectrum_point_evidence", point, ownership=experiment.ownership)
+                continue
+            if point.source_origin == "figure_digitized" and not any(
+                item.original_source_type == "figure_digitized" and item.figure_id
+                for item in point.evidence
+            ):
+                audit.reject(point_path, "unlabelled_figure_digitization", point, ownership=experiment.ownership)
+                continue
+            if point.source_origin == "table_reported" and not any(
+                item.original_source_type in {"table_reported", "native_text", "ocr_extracted"}
+                for item in point.evidence
+            ):
+                audit.reject(point_path, "raw_spectrum_source_origin_mismatch", point, ownership=experiment.ownership)
+                continue
+
+            point_conditions = {
+                "data_kind": "raw_spectrum",
+                "spectrum_point_id": point.point_id,
+                "frequency": point.frequency.value,
+                "frequency_raw": point.frequency.raw_value,
+                "frequency_unit": point.frequency.unit,
+                "source_origin": point.source_origin,
+            }
+            for property_name, quantity in (
+                ("impedance_real", point.impedance_real),
+                ("negative_impedance_imaginary", point.negative_impedance_imaginary),
+                ("impedance_magnitude", point.impedance_magnitude),
+                ("phase_angle", point.phase_angle),
+            ):
+                if quantity is None or quantity.value is None:
+                    continue
+                outputs.append(_measurement(
+                    property_name,
+                    quantity,
+                    method="EIS raw spectrum",
+                    conditions=point_conditions,
+                    evidence=point.evidence,
+                    sid=sid,
+                ))
+                audit.admitted_metrics += 1
 
         eid = stable_id("exp", sid, experiment.experiment_id)
         experiment_ids[experiment.experiment_id] = eid
@@ -434,25 +521,117 @@ def assemble_corrosion_archive(
             audit.reject(path, f"ownership_{calculation.ownership}", calculation, ownership=calculation.ownership)
             continue
         resolved_materials = [material_ids[ref] for ref in calculation.material_refs if ref in material_ids]
+        resolved_treatments = [
+            treatment_process_ids[ref]
+            for ref in calculation.treatment_refs
+            if ref in treatment_process_ids
+        ]
         if len(resolved_materials) != len(calculation.material_refs) or not _verified(calculation.evidence):
             audit.reject(path, "unresolved_material_or_evidence", calculation, ownership=calculation.ownership)
             continue
+        if len(resolved_treatments) != len(calculation.treatment_refs):
+            audit.reject(path, "unresolved_calculation_treatment", calculation, ownership=calculation.ownership)
+            continue
         outputs: list[Measurement] = []
         for index, output in enumerate(calculation.outputs):
+            output_path = f"{path}.outputs.{index}"
+            output_ownership = calculation.ownership if output.ownership == "unknown" else output.ownership
+            if output_ownership != "focal_work":
+                audit.reject(output_path, f"ownership_{output_ownership}", output, ownership=output_ownership)
+                continue
             if not _verified(output.evidence) or output.quantity.value is None:
                 audit.reject(f"{path}.outputs.{index}", "no_verified_value_specific_evidence", output,
-                             ownership=calculation.ownership)
+                             ownership=output_ownership)
                 continue
-            outputs.append(_measurement(output.property, output.quantity, evidence=output.evidence, sid=sid))
+            if not output.quantity.raw_value.strip():
+                audit.reject(output_path, "missing_raw_value", output, ownership=output_ownership)
+                continue
+            outputs.append(_measurement(
+                output.property,
+                output.quantity,
+                method=calculation.method,
+                conditions={
+                    "reported_term": output.reported_term,
+                    "data_kind": output.data_kind,
+                    "surface": calculation.surface,
+                    "adsorbate_or_inhibitor": calculation.adsorbate_or_inhibitor,
+                    "software": calculation.software,
+                    "functional": calculation.functional,
+                    "basis_set": calculation.basis_set,
+                    "core_treatment": calculation.core_treatment,
+                    "solvation_model": calculation.solvation_model,
+                    "phase": calculation.phase,
+                    "geometry_optimization": calculation.geometry_optimization,
+                    "charge": calculation.charge,
+                    "spin_state": calculation.spin_state,
+                    "adsorption_site": calculation.adsorption_site,
+                    "k_point_grid": calculation.k_point_grid,
+                    "force_field": calculation.force_field,
+                    "ensemble": calculation.ensemble,
+                    "treatment_refs": calculation.treatment_refs or None,
+                },
+                evidence=output.evidence,
+                sid=sid,
+            ))
+            audit.admitted_metrics += 1
+        if not outputs:
+            audit.reject(path, "no_admitted_calculation_outputs", calculation, ownership=calculation.ownership)
+            continue
         cid = stable_id("calc", sid, calculation.calculation_id)
+        parameters: list[Measurement] = []
+        for name, value in (
+            ("surface", calculation.surface),
+            ("adsorbate_or_inhibitor", calculation.adsorbate_or_inhibitor),
+            ("software", calculation.software),
+            ("functional", calculation.functional),
+            ("basis_set", calculation.basis_set),
+            ("core_treatment", calculation.core_treatment),
+            ("solvation_model", calculation.solvation_model),
+            ("phase", calculation.phase),
+            ("geometry_optimization", calculation.geometry_optimization),
+            ("charge", calculation.charge),
+            ("spin_state", calculation.spin_state),
+            ("adsorption_site", calculation.adsorption_site),
+            ("k_point_grid", calculation.k_point_grid),
+            ("force_field", calculation.force_field),
+            ("ensemble", calculation.ensemble),
+        ):
+            if value is not None:
+                parameters.append(Measurement(
+                    property=name,
+                    raw_value=str(value),
+                    value=value,
+                    qualifier="exact" if isinstance(value, (int, float)) else "categorical",
+                    evidence=_canonical_evidence(calculation.evidence, sid),
+                ))
+        for name, quantity in (
+            ("temperature", calculation.temperature),
+            ("time_step", calculation.time_step),
+            ("simulation_time", calculation.simulation_time),
+        ):
+            converted = _quantity_condition(name, quantity, sid=sid, evidence=calculation.evidence)
+            if converted:
+                parameters.append(converted)
+        for name, value in calculation.parameters.items():
+            parameters.append(Measurement(
+                property=name,
+                raw_value=str(value),
+                value=value,
+                qualifier="exact" if isinstance(value, (int, float)) and not isinstance(value, bool) else "categorical",
+                evidence=_canonical_evidence(calculation.evidence, sid),
+            ))
         calculations.append(CalculationRecord(
             calculation_id=cid,
             calculation_type=calculation.calculation_type,
             material_ids=resolved_materials,
+            code=calculation.software,
             method=calculation.method,
+            functional=calculation.functional,
+            parameters=parameters,
             model={
                 "surface": calculation.surface,
                 "adsorbate_or_inhibitor": calculation.adsorbate_or_inhibitor,
+                "treatment_process_ids": resolved_treatments,
                 "reported_parameters": calculation.parameters,
             },
             outputs=outputs,
@@ -464,6 +643,14 @@ def assemble_corrosion_archive(
                 subject_id=mid,
                 predicate="calculated_for",
                 object_id=cid,
+                evidence=_canonical_evidence(calculation.evidence, sid),
+            ))
+        for pid in resolved_treatments:
+            relationships.append(Relationship(
+                relation_id=stable_id("rel", cid, "calculated_with", pid),
+                subject_id=cid,
+                predicate="calculated_with",
+                object_id=pid,
                 evidence=_canonical_evidence(calculation.evidence, sid),
             ))
 
