@@ -10,9 +10,18 @@
     "numeric_focal_gold_created": false
   },
   "assertions": {
+    "expected_route": "corrosion",
+    "review_recognition_required": true,
     "canonical_focal_experiments_expected": 0,
+    "canonical_focal_calculations_expected": 0,
+    "admitted_canonical_metrics_expected": 0,
     "cited_numeric_results_must_not_be_focal": true,
-    "review_examples_must_preserve_cited_prior_work_ownership": true
+    "review_examples_must_preserve_cited_prior_work_ownership": true,
+    "cited_values_remain_visible_noncanonically": true,
+    "source_tracking_required": true,
+    "graph_contamination_expected": 0,
+    "analytics_contamination_expected": 0,
+    "deterministic_review_guard_required": true
   },
   "evidence": [
     {

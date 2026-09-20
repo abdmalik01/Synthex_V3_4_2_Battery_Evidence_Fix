@@ -23,6 +23,7 @@ from .corrosion_evidence import verify_corrosion_document_evidence
 from .corrosion_computational_recovery import recover_corrosion_computational_tables
 from .corrosion_gravimetric_recovery import recover_corrosion_gravimetric_candidates
 from .corrosion_models import CorrosionDocument
+from .corrosion_review_guard import apply_corrosion_review_ownership_guard
 from .corrosion_table_recovery import recover_corrosion_parameter_tables
 from .source_context import SourceBundle, compact_source_context, has_prompt_source_context
 
@@ -42,6 +43,9 @@ The supplied PYDANTIC CONTRACT is authoritative. Follow its exact field names an
 Scientific rules:
 - Assign ownership explicitly: focal_work, cited_prior_work, review_summary, comparison_table,
   background, example, or unknown. Review/cited values are never focal results.
+- For an explicitly labelled pure review article, every summarized study, comparison,
+  table value, experimental result, and calculation belongs to non-focal review/cited
+  context. Do not create focal experiments or focal calculations for that source.
 - Keep corrosion experiments and calculations separate. DFT, molecular dynamics, and quantum
   chemistry outputs belong only in calculations.
 - In mixed-method papers, preserve every explicit experimental condition row and every explicit
@@ -284,5 +288,6 @@ class CorrosionGeminiExtractor:
             document = recover_corrosion_parameter_tables(document, source_bundle)
             document = recover_corrosion_gravimetric_candidates(document, source_bundle)
             document = recover_corrosion_computational_tables(document, source_bundle)
+            document = apply_corrosion_review_ownership_guard(document, source_bundle)
             document = verify_corrosion_document_evidence(document, source_bundle)
         return document

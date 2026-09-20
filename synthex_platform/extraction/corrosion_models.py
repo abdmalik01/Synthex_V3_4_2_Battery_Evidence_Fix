@@ -310,6 +310,26 @@ class CorrosionConditionConflict(BaseModel):
         return self
 
 
+class CorrosionReviewCandidate(BaseModel):
+    """Source-visible review content that is intentionally noncanonical."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    candidate_id: str
+    candidate_type: Literal["cited_numeric_statement", "review_table"]
+    raw_text: str
+    ownership: Literal["cited_prior_work", "review_summary"]
+    evidence: list[CorrosionEvidence] = Field(default_factory=list)
+
+
+class CorrosionReviewContext(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    classification: Literal["explicit_review", "mixed_review_original", "not_review"]
+    evidence: list[CorrosionEvidence] = Field(default_factory=list)
+    noncanonical_candidates: list[CorrosionReviewCandidate] = Field(default_factory=list)
+
+
 class CorrosionDocument(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
@@ -326,6 +346,7 @@ class CorrosionDocument(BaseModel):
     environments: list[CorrosionEnvironment] = Field(default_factory=list)
     experiments: list[CorrosionExperiment] = Field(default_factory=list)
     calculations: list[CorrosionCalculation] = Field(default_factory=list)
+    review_context: CorrosionReviewContext | None = None
     condition_conflicts: list[CorrosionConditionConflict] = Field(default_factory=list)
     extraction_notes: list[str] = Field(default_factory=list)
 

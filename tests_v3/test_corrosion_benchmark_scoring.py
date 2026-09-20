@@ -170,6 +170,25 @@ def test_corrosion_scorer_requires_correct_linked_inhibitor_when_gold_names_one(
     assert score_corrosion_archive(archive, [wrong]).association_accuracy == 0.0
 
 
+def test_corrosion_scorer_compares_optional_unit_coefficient_without_mutating_raw_condition():
+    archive = _archive()
+    archive.experiments[0].outputs[0].conditions["treatment"] = "CSQN"
+    archive.experiments[0].outputs[0].conditions["treatment_concentration"] = "10^-3 M"
+    expected = CorrosionExpectedObservation(
+        metric="corrosion_current_density",
+        value=1.2e-5,
+        unit="A/cm2",
+        experiment_type="potentiodynamic_polarization",
+        treatment_contains="CSQN",
+        treatment_concentration="1×10^-3 M",
+    )
+
+    score = score_corrosion_archive(archive, [expected])
+
+    assert score.association_accuracy == 1.0
+    assert archive.experiments[0].outputs[0].conditions["treatment_concentration"] == "10^-3 M"
+
+
 def test_corrosion_scorer_accepts_source_reported_reference_abbreviation_only_as_textual_alias():
     archive = _archive()
     archive.experiments[0].conditions[0].raw_value = "saturated calomel electrode (SCE)"

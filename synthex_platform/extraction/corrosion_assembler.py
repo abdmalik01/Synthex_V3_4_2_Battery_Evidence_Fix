@@ -675,6 +675,10 @@ def assemble_corrosion_archive(
                 "paper_types": document.paper_types,
                 "condition_conflicts": [item.model_dump(mode="json", exclude_none=True) for item in document.condition_conflicts],
                 "extraction_notes": list(document.extraction_notes),
+                "review_context": (
+                    document.review_context.model_dump(mode="json", exclude_none=True)
+                    if document.review_context is not None else None
+                ),
                 "admissibility_audit": audit.payload(),
             },
         )],

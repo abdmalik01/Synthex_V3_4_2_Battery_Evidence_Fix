@@ -1,0 +1,123 @@
+{
+  "domain": "corrosion",
+  "benchmark": "Synthex Corrosion V1",
+  "benchmark_stage": "corrosion_v1_stage3_frozen",
+  "archive_schema_version": "3.4.0",
+  "domain_payload_schema_version": "1.0-stage2",
+  "case_count": 8,
+  "source_lock": "benchmark/corrosion_v1/corpus_lock.json",
+  "generated_output": "output/corrosion_v1/closure/summary.json",
+  "reproduce": {
+    "closure_audit": ".\\.venv\\Scripts\\python.exe benchmark\\corrosion_v1\\audit_closure.py",
+    "corrosion_tests": ".\\.venv\\Scripts\\python.exe -m pytest -q tests_v3\\test_corrosion_*.py",
+    "freeze_contract_tests": ".\\.venv\\Scripts\\python.exe -m pytest -q tests_v3\\test_corrosion_freeze.py"
+  },
+  "test_baseline": {
+    "corrosion_passed": 103,
+    "full_suite_passed": 424,
+    "known_unrelated_failures": [
+      "obsolete catalysis 1.0-stage2 schema expectation",
+      "borderless synthetic RSM table fallback"
+    ]
+  },
+  "scientific_invariants": [
+    "corrosion_current_density_is_not_corrosion_potential",
+    "polarization_resistance_is_not_charge_transfer_resistance",
+    "solution_resistance_is_not_charge_transfer_resistance",
+    "protective_layer_resistance_remains_separate",
+    "cpe_q_is_not_capacitance",
+    "cpe_n_remains_dimensionless",
+    "mass_loss_rate_is_not_penetration_rate_without_context",
+    "reported_measurement_is_not_reported_derived_metric",
+    "calculation_record_is_not_experiment_record",
+    "cited_prior_work_is_not_focal_work",
+    "review_tables_do_not_become_focal_datasets",
+    "negative_controls_do_not_create_corrosion_records",
+    "reference_electrode_quantities_remain_guarded",
+    "captions_alone_cannot_admit_numeric_values",
+    "deterministic_recovery_cannot_bypass_ownership",
+    "raw_source_typography_is_preserved",
+    "normalization_changes_comparison_not_evidence",
+    "mixed_method_papers_preserve_record_type_separation",
+    "production_logic_contains_no_benchmark_specific_values",
+    "archive_ids_and_references_are_deterministic"
+  ],
+  "expected_contamination": {
+    "ownership": 0,
+    "evidence": 0,
+    "cross_record_leakage": 0,
+    "archive_analytics": 0
+  },
+  "cases": [
+    {
+      "id": "CORR-GOLD-A",
+      "role": "bare_alloy_polarization",
+      "source_sha256": "2d39afe59cc953bfbccf32d185a9d025fc53471adce741528f4b9997e5a1f065",
+      "expected_route": "corrosion",
+      "closure_status": "PASS_LIVE",
+      "offline_assertions": "4/4"
+    },
+    {
+      "id": "CORR-COAT-B",
+      "role": "coating_surface_treatment",
+      "source_sha256": "140afc8611181d10c9de3b3719ae43d24e803049f79b05b152a243f637d6d452",
+      "expected_route": "corrosion",
+      "closure_status": "RAW_PROVIDER_PARTIAL_BUT_RECOVERY_PASSED",
+      "historical_live_overall": 0.6666666666666666,
+      "offline_assertions": "5/5"
+    },
+    {
+      "id": "CORR-INHIB-C",
+      "role": "corrosion_inhibitor",
+      "source_sha256": "15dcb0661681f1b284820a0bc3210cc94e8d73a449937f3a75c1fd19c242ffd2",
+      "expected_route": "corrosion",
+      "closure_status": "PASS_LIVE",
+      "offline_assertions": "5/5"
+    },
+    {
+      "id": "CORR-EIS-D",
+      "role": "eis_heavy",
+      "source_sha256": "11a905e87aaf5efc7e388d59e1af75b33561738102cddff7ffb90da31c9adb1f",
+      "expected_route": "corrosion",
+      "closure_status": "RAW_PROVIDER_PARTIAL_BUT_RECOVERY_PASSED",
+      "historical_live_overall": 0.75,
+      "offline_assertions": "14/14"
+    },
+    {
+      "id": "CORR-WEIGHT-E",
+      "role": "immersion_weight_loss",
+      "source_sha256": "3af6ea0b782f97b304053e8cfd83d123d527b46569c53474fa3953d726b3130b",
+      "expected_route": "corrosion",
+      "closure_status": "RAW_PROVIDER_FAILED_BUT_RECOVERY_PASSED",
+      "historical_raw_provider_overall": 0.0,
+      "offline_assertions": "4/4"
+    },
+    {
+      "id": "CORR-DFT-F",
+      "role": "computational_corrosion",
+      "source_sha256": "378fcfd4ee2a28487282a0a9602d7264d5fb25c201ba33425de3d564c57e851d",
+      "expected_route": "corrosion",
+      "closure_status": "LIVE_UNAVAILABLE",
+      "live_provider_model": "gemini-3.5-flash",
+      "live_provider_failure": "503 UNAVAILABLE / high demand",
+      "live_provider_score": null,
+      "offline_assertions": "27/27"
+    },
+    {
+      "id": "CORR-REVIEW-G",
+      "role": "review_contamination_control",
+      "source_sha256": "eb73abe790a6aab16a34738266ee0bc472c2c519ef840aeb2f0ab90eb8f100bf",
+      "expected_route": "corrosion",
+      "closure_status": "PASS_OFFLINE",
+      "offline_assertions": "11/11"
+    },
+    {
+      "id": "CORR-NEGATIVE-H",
+      "role": "non_corrosion_negative_control",
+      "source_sha256": "2f3535cbaaa03b21e469d9832888730d97bf80bcf1b5c55bb8d34203956f6d15",
+      "expected_route": "batteries",
+      "closure_status": "PASS_OFFLINE",
+      "offline_assertions": "9/9"
+    }
+  ]
+}

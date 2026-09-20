@@ -30,6 +30,13 @@
   },
   "required_safety_assertion": {
     "corrosion_canonical_observations_expected": 0,
-    "nyquist_or_eis_terms_do_not_override_domain_context": true
+    "corrosion_canonical_experiments_expected": 0,
+    "corrosion_canonical_calculations_expected": 0,
+    "corrosion_admitted_metrics_expected": 0,
+    "corrosion_graph_contamination_expected": 0,
+    "corrosion_analytics_contamination_expected": 0,
+    "nyquist_or_eis_terms_do_not_override_domain_context": true,
+    "deterministic_routing_required": true,
+    "source_tracking_required": true
   }
 }
