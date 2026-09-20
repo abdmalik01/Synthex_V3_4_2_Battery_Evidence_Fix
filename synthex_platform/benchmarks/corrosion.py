@@ -15,14 +15,11 @@ from typing import Iterable
 
 from synthex_platform.core.archive import SynthexArchive
 from synthex_platform.explorer import build_archive_explorer
+from synthex_platform.scientific_text import normalize_scientific_text
 
 
 def _token(value: object | None) -> str:
-    if value is None:
-        return ""
-    text = str(value).strip().casefold()
-    text = text.replace("−", "-").replace("–", "-")
-    text = re.sub(r"\s+", " ", text)
+    text = normalize_scientific_text(value)
     # Display-only normalization: accept common typography for the same printed unit,
     # but never perform dimensional conversion.
     text = text.replace("·", " ").replace("*", " ")
@@ -39,7 +36,11 @@ def _unit_token(value: object | None) -> str:
     helper also normalizes inverse-area typography only; it never changes metric
     prefixes or performs scale conversion (for example, mA remains distinct from uA).
     """
-    text = _token(value).replace("µ", "u").replace("μ", "u").replace("²", "2")
+    text = (
+        _token(value)
+        .replace("µ", "u").replace("μ", "u").replace("²", "2")
+        .replace("Ω", "ohm").replace("ω", "ohm")
+    )
     text = text.replace("/cm2", " cm-2").replace("/cm-2", " cm-2")
     return re.sub(r"\s+", " ", text).strip()
 
@@ -59,11 +60,18 @@ def _material_token(value: object | None) -> str:
 class CorrosionExpectedObservation:
     metric: str
     value: float
-    unit: str
+    unit: str | None
     experiment_type: str | None = None
     material_contains: str | None = None
     treatment_contains: str | None = None
     reference_electrode: str | None = None
+    exposure_time: str | None = None
+    temperature: str | None = None
+    electrolyte_contains: str | None = None
+    equivalent_circuit_contains: str | None = None
+    reported_term: str | None = None
+    data_kind: str | None = None
+    element_role: str | None = None
     tolerance_abs: float = 1e-9
     required: bool = True
 
@@ -73,6 +81,7 @@ class CorrosionBenchmarkScore:
     total_required: int
     matched_required: int
     value_matches: int
+    scientific_type_matches: int
     association_matches: int
     source_tracking_matches: int
     missed: tuple[dict, ...]
@@ -91,18 +100,28 @@ class CorrosionBenchmarkScore:
         return self.association_matches / self.total_required if self.total_required else 1.0
 
     @property
+    def scientific_type_accuracy(self) -> float:
+        return self.scientific_type_matches / self.total_required if self.total_required else 1.0
+
+    @property
     def source_tracking_coverage(self) -> float:
         return self.source_tracking_matches / self.total_required if self.total_required else 1.0
 
     @property
     def overall(self) -> float:
-        return (self.value_accuracy + self.association_accuracy + self.source_tracking_coverage) / 3.0
+        return (
+            self.value_accuracy
+            + self.scientific_type_accuracy
+            + self.association_accuracy
+            + self.source_tracking_coverage
+        ) / 4.0
 
     def as_dict(self) -> dict:
         payload = asdict(self)
         payload.update({
             "recall": self.recall,
             "value_accuracy": self.value_accuracy,
+            "scientific_type_accuracy": self.scientific_type_accuracy,
             "association_accuracy": self.association_accuracy,
             "source_tracking_coverage": self.source_tracking_coverage,
             "overall": self.overall,
@@ -178,6 +197,30 @@ def _reference_electrode_match(actual: object | None, expected: str | None) -> b
     return f"({expected_token})" in actual_token or f"({actual_token})" in expected_token
 
 
+def _condition_text(conditions: dict, key: str) -> str:
+    value = conditions.get(key)
+    if isinstance(value, dict):
+        value = value.get("raw_value", value.get("value"))
+    return str(value or "")
+
+
+def _condition_match(conditions: dict, key: str, expected: str | None, *, contains: bool = False) -> bool:
+    if not expected:
+        return True
+    actual = _token(_condition_text(conditions, key))
+    wanted = _token(expected)
+    return wanted in actual if contains else actual == wanted
+
+
+def _scientific_type_match(row: dict, expected: CorrosionExpectedObservation) -> bool:
+    conditions = _row_conditions(row)
+    return all((
+        _condition_match(conditions, "reported_term", expected.reported_term),
+        _condition_match(conditions, "data_kind", expected.data_kind),
+        _condition_match(conditions, "element_role", expected.element_role),
+    ))
+
+
 def _association_match(row: dict, expected: CorrosionExpectedObservation) -> bool:
     if expected.experiment_type and _token(row.get("experiment_type")) != _token(expected.experiment_type):
         return False
@@ -192,6 +235,19 @@ def _association_match(row: dict, expected: CorrosionExpectedObservation) -> boo
             actual = conditions.get("reference_electrode")
         if not _reference_electrode_match(actual, expected.reference_electrode):
             return False
+    conditions = _row_conditions(row)
+    if not _condition_match(conditions, "exposure_time", expected.exposure_time):
+        return False
+    if not _condition_match(conditions, "temperature", expected.temperature):
+        return False
+    if not _condition_match(
+        conditions, "electrolyte", expected.electrolyte_contains, contains=True
+    ):
+        return False
+    if not _condition_match(
+        conditions, "equivalent_circuit", expected.equivalent_circuit_contains, contains=True
+    ):
+        return False
     return True
 
 
@@ -220,16 +276,25 @@ def score_corrosion_archive(
     required = [item for item in expected if item.required]
     matched_records: list[dict] = []
     missed_records: list[dict] = []
-    matched_required = value_matches = association_matches = source_tracking_matches = 0
+    matched_required = value_matches = scientific_type_matches = 0
+    association_matches = source_tracking_matches = 0
 
     for assertion in required:
         property_rows = [row for row in rows if _token(row.get("metric")) == _token(assertion.metric)]
-        unit_rows = [row for row in property_rows if _unit_token(row.get("unit")) == _unit_token(assertion.unit)]
+        unit_rows = [
+            row for row in property_rows
+            if assertion.unit is None or _unit_token(row.get("unit")) == _unit_token(assertion.unit)
+        ]
         value_rows = [
             row for row in unit_rows
             if _numeric_equal(row.get("value"), assertion.value, assertion.tolerance_abs)
         ]
-        association_rows = [row for row in value_rows if _association_match(row, assertion)]
+        scientific_type_rows = [
+            row for row in value_rows if _scientific_type_match(row, assertion)
+        ]
+        association_rows = [
+            row for row in scientific_type_rows if _association_match(row, assertion)
+        ]
         chosen = next((row for row in association_rows if _source_tracked(row)), None)
         if chosen is None and association_rows:
             chosen = association_rows[0]
@@ -238,6 +303,8 @@ def score_corrosion_archive(
 
         if value_rows:
             value_matches += 1
+        if scientific_type_rows:
+            scientific_type_matches += 1
         if association_rows:
             association_matches += 1
         if chosen is not None and _source_tracked(chosen):
@@ -255,12 +322,14 @@ def score_corrosion_archive(
                 "property_candidates": len(property_rows),
                 "unit_candidates": len(unit_rows),
                 "value_candidates": len(value_rows),
+                "scientific_type_candidates": len(scientific_type_rows),
             })
 
     return CorrosionBenchmarkScore(
         total_required=len(required),
         matched_required=matched_required,
         value_matches=value_matches,
+        scientific_type_matches=scientific_type_matches,
         association_matches=association_matches,
         source_tracking_matches=source_tracking_matches,
         missed=tuple(missed_records),

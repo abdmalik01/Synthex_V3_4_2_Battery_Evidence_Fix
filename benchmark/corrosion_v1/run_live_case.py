@@ -11,6 +11,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from synthex_platform.benchmarks.corrosion_live import run_live_corrosion_case  # noqa: E402
+from synthex_platform.benchmarks.console import configure_utf8_stdio  # noqa: E402
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -34,6 +35,7 @@ def _percent(value: float | None) -> str:
 
 
 def main() -> int:
+    configure_utf8_stdio()
     args = _parser().parse_args()
     print(f"Synthex Corrosion V1 live benchmark · {args.case_id.upper()}")
     print("Policy: one paper · benchmark provider mode · Serper off · OCR off · no production archive mutation")
@@ -56,6 +58,7 @@ def main() -> int:
             f"matched {score['matched_required']}/{score['total_required']} · "
             f"recall {_percent(score['recall'])} · "
             f"value {_percent(score['value_accuracy'])} · "
+            f"scientific type {_percent(score['scientific_type_accuracy'])} · "
             f"association {_percent(score['association_accuracy'])} · "
             f"source tracking {_percent(score['source_tracking_coverage'])} · "
             f"overall {_percent(score['overall'])}"

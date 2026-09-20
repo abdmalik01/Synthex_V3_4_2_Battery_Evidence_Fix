@@ -10,9 +10,25 @@ from synthex_platform.benchmarks.corrosion_live import (
     expectations_from_gold,
     load_live_case,
 )
+from synthex_platform.benchmarks.console import configure_utf8_stdio
 
 
 REPO_ROOT = Path(__file__).parents[1]
+
+
+def test_benchmark_console_configures_utf8_without_stripping_scientific_symbols():
+    class Stream:
+        configured: dict | None = None
+
+        def reconfigure(self, **kwargs):
+            self.configured = kwargs
+
+    stdout = Stream()
+    stderr = Stream()
+    configure_utf8_stdio(stdout, stderr)
+    assert stdout.configured == {"encoding": "utf-8", "errors": "backslashreplace"}
+    assert stderr.configured == stdout.configured
+    assert "Ω µ °C" == "Ω µ °C"
 
 
 def test_live_corrosion_gold_a_resolves_locked_pdf_and_manual_gold():

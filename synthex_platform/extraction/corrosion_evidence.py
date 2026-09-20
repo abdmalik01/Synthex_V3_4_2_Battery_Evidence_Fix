@@ -10,7 +10,8 @@ from collections import defaultdict
 from decimal import Decimal, InvalidOperation
 import re
 
-from .battery_evidence import normalize_evidence_text
+from synthex_platform.scientific_text import normalize_scientific_text
+
 from .corrosion_models import CorrosionDocument, CorrosionEvidence
 from .source_context import SourceBundle
 
@@ -19,7 +20,7 @@ _TABLE_PREFIX = re.compile(r"^\s*table\s+[0-9]+[a-z]?\s*[:.\-]?\s*", re.IGNORECA
 _HUMAN_TABLE_ID = re.compile(r"^\s*table\s+[0-9]+[a-z]?\s*$", re.IGNORECASE)
 _NUMBER = re.compile(
     r"(?<![\w.])([+-]?\d+(?:\.\d+)?)"
-    r"(?:\s*(?:[×x*]\s*10\s*\^?\s*([+-]?\d+)|e\s*([+-]?\d+)))?",
+    r"(?:\s*(?:[·×x*]\s*10\s*\^?\s*([+-]?\d+)|e\s*([+-]?\d+)))?",
     re.IGNORECASE,
 )
 _BARE_POWER_OF_TEN = re.compile(r"(?<![\w.])10\s*\^?\s*-\s*(\d+)")
@@ -32,7 +33,7 @@ def _normalize(text: str) -> str:
     non-breaking spaces, Unicode minus signs, and line-break hyphenation. Reuse the
     conservative Batteries normalizer and treat NUL only as parser whitespace.
     """
-    return normalize_evidence_text((text or "").replace("\x00", " "))
+    return normalize_scientific_text((text or "").replace("\x00", " "))
 
 
 def _page_text(page) -> str:
@@ -213,6 +214,78 @@ def _text_has_unambiguous_treatment(
     return not present
 
 
+def _table_has_single_verified_treatment_context(
+    payload: dict,
+    experiment: dict,
+    evidence: dict,
+) -> bool:
+    """Allow a table-wide treatment only when every linked row shares that treatment.
+
+    Dense fitted-parameter tables often put exposure time in each row while naming the
+    coated sample once in the surrounding protocol. This fallback remains conservative:
+    the treatment records must themselves have verified evidence and every experiment
+    carrying a metric from the same table must have the identical treatment references.
+    Mixed control/treatment tables therefore cannot use this path.
+    """
+    table_id = evidence.get("table_id")
+    expected_refs = tuple(experiment.get("treatment_refs") or [])
+    if not table_id or not expected_refs:
+        return False
+    treatments = {
+        item.get("treatment_id"): item
+        for item in payload.get("treatments", [])
+        if isinstance(item, dict) and item.get("treatment_id")
+    }
+    if any(
+        ref not in treatments
+        or not any(_verified_evidence_dict(item) for item in treatments[ref].get("evidence", []))
+        for ref in expected_refs
+    ):
+        return False
+
+    linked_refs: set[tuple[str, ...]] = set()
+    for candidate in payload.get("experiments", []):
+        if not isinstance(candidate, dict):
+            continue
+        uses_table = any(
+            isinstance(item, dict) and item.get("table_id") == table_id
+            for metric in candidate.get("metrics", [])
+            if isinstance(metric, dict)
+            for item in metric.get("evidence", [])
+        )
+        if uses_table:
+            linked_refs.add(tuple(candidate.get("treatment_refs") or []))
+    return linked_refs == {expected_refs}
+
+
+def _text_has_single_verified_coating_context(
+    payload: dict,
+    experiment: dict,
+    text: str,
+) -> bool:
+    """Resolve ``coated`` prose only for one uniquely linked, verified coating.
+
+    Some papers name the full coating once in the methods and later report a focal
+    result for "the coated steel."  This is safe only when the document contains one
+    treatment, that treatment is a verified coating, and the experiment explicitly
+    links it.  Mixed control/treatment or multi-coating studies cannot use this path.
+    """
+    expected_refs = tuple(experiment.get("treatment_refs") or [])
+    treatments = {
+        item.get("treatment_id"): item
+        for item in payload.get("treatments", [])
+        if isinstance(item, dict) and item.get("treatment_id")
+    }
+    if len(expected_refs) != 1 or set(treatments) != set(expected_refs):
+        return False
+    treatment = treatments[expected_refs[0]]
+    if _normalize(str(treatment.get("treatment_type") or "")) != "coating":
+        return False
+    if not any(_verified_evidence_dict(item) for item in treatment.get("evidence", [])):
+        return False
+    return re.search(r"\bcoat(?:ed|ing|ings)?\b", _normalize(text)) is not None
+
+
 def _row_matches_experiment(
     payload: dict,
     experiment: dict,
@@ -314,8 +387,14 @@ def _ground_metric_evidence(payload: dict, source_bundle: SourceBundle) -> dict:
                     continue
                 snippet = str(evidence.get("text_snippet") or "")
                 value_specific = value is not None and _text_supports_value(snippet, value)
-                association_specific = _text_has_unambiguous_treatment(
-                    snippet, expected_labels, all_labels
+                association_specific = (
+                    _text_has_unambiguous_treatment(snippet, expected_labels, all_labels)
+                    or _text_has_single_verified_coating_context(
+                        payload, experiment, snippet
+                    )
+                    or _table_has_single_verified_treatment_context(
+                        payload, experiment, evidence
+                    )
                 )
                 grounded.append({
                     **evidence,
