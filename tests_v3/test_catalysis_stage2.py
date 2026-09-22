@@ -308,4 +308,4 @@ def test_text_only_and_source_bundle_provenance_and_pipeline_dedicated_path(monk
     route, archive = SynthexExtractionPipeline().extract_text(TEXT, domain="catalysis")
     assert route.domain == "catalysis"
     assert archive.metadata.domain == "catalysis"
-    assert archive.domain_payloads[0].schema_version == "1.0-stage2"
+    assert archive.domain_payloads[0].schema_version == "1.1-photocatalysis-rsm"

@@ -51,8 +51,15 @@ DOMAIN_TERMS: dict[str, tuple[str, ...]] = {
         "chloride solution", "nacl solution", "passivation", "passive film",
     ),
     "mechanical": (
-        "yield strength", "ultimate tensile", "fatigue", "creep", "rupture life",
-        "stress-strain", "stress strain", "elongation",
+        "tensile test", "tensile testing", "yield strength", "ultimate tensile strength", "uts",
+        "fracture strength", "elongation at break", "reduction of area", "young's modulus",
+        "youngs modulus", "elastic modulus", "vickers hardness", "rockwell hardness",
+        "brinell hardness", "nanoindentation", "creep test", "creep testing",
+        "minimum creep rate", "stress rupture", "rupture time", "rupture life",
+        "fatigue test", "fatigue testing", "fatigue life", "fatigue strength", "fatigue limit",
+        "s-n curve", "sn curve", "cycles to failure", "stress amplitude", "strain amplitude",
+        "crack growth rate", "paris law", "fracture toughness", "stress intensity factor",
+        "j-integral", "ctod", "charpy impact", "stress-strain", "stress strain",
     ),
     "additive_manufacturing": (
         "additive manufacturing", "selective laser melting", "laser powder bed fusion",
@@ -113,6 +120,33 @@ CORROSION_PAPER_TYPE_TERMS: dict[str, tuple[str, ...]] = {
     "review": ("review", "perspective", "overview"),
 }
 
+MECHANICAL_PAPER_TYPE_TERMS: dict[str, tuple[str, ...]] = {
+    "tensile_testing": (
+        "tensile test", "tensile testing", "yield strength", "ultimate tensile strength",
+        "elongation at break", "reduction of area", "stress-strain", "stress strain",
+    ),
+    "hardness_testing": (
+        "vickers hardness", "rockwell hardness", "brinell hardness", "nanoindentation",
+    ),
+    "creep_stress_rupture": (
+        "creep test", "creep testing", "minimum creep rate", "stress rupture",
+        "rupture time", "rupture life",
+    ),
+    "fatigue_testing": (
+        "fatigue test", "fatigue testing", "fatigue life", "s-n curve", "sn curve",
+        "cycles to failure", "stress amplitude", "strain amplitude",
+    ),
+    "fracture_toughness": (
+        "fracture toughness", "stress intensity factor", "j-integral", "ctod",
+        "charpy impact", "crack growth rate", "paris law",
+    ),
+    "computational_mechanics": (
+        "finite element", "constitutive model", "crystal plasticity", "model prediction",
+        "machine learning prediction",
+    ),
+    "review": ("review", "perspective", "overview"),
+}
+
 _CATALYSIS_DEFERRED_TERMS = ("photocatalysis", "photocatalyst", "homogeneous catalysis", "molecular catalyst", "enzymatic catalysis", "biocatalysis")
 _HETERO_REACTION_TERMS = ("co oxidation", "hydrogenation", "methane conversion", "ammonia synthesis", "ammonia decomposition", "hydrocarbon conversion", "oxidation")
 _HETERO_OPERATION_TERMS = ("reactor", "conversion", "selectivity", "yield", "whsv", "ghsv", "feed composition", "time on stream")
@@ -132,6 +166,28 @@ _CORROSION_PERFORMANCE_TERMS = (
     "corrosion rate", "inhibition efficiency", "polarization resistance", "charge transfer resistance",
     "weight loss", "mass loss", "pitting", "passive film",
 )
+_MECHANICAL_TENSILE_METHOD_TERMS = ("tensile test", "tensile testing", "uniaxial tension")
+_MECHANICAL_TENSILE_OUTPUT_TERMS = (
+    "yield strength", "ultimate tensile strength", "uts", "elongation at break",
+    "reduction of area", "young's modulus", "youngs modulus", "stress-strain", "stress strain",
+)
+_MECHANICAL_HARDNESS_METHOD_TERMS = ("vickers", "rockwell", "brinell", "nanoindentation")
+_MECHANICAL_HARDNESS_OUTPUT_TERMS = ("hardness", "hv", "hra", "hrb", "hrc", "hb", "hbw")
+_MECHANICAL_CREEP_METHOD_TERMS = ("creep test", "creep testing", "stress rupture")
+_MECHANICAL_CREEP_OUTPUT_TERMS = (
+    "creep strain", "creep rate", "minimum creep rate", "rupture time", "rupture life",
+)
+_MECHANICAL_FATIGUE_METHOD_TERMS = ("fatigue test", "fatigue testing", "s-n curve", "sn curve")
+_MECHANICAL_FATIGUE_OUTPUT_TERMS = (
+    "fatigue life", "fatigue strength", "fatigue limit", "cycles to failure",
+    "stress amplitude", "strain amplitude", "crack growth rate",
+)
+_MECHANICAL_FRACTURE_METHOD_TERMS = (
+    "fracture test", "compact tension", "three-point bend", "charpy impact",
+)
+_MECHANICAL_FRACTURE_OUTPUT_TERMS = (
+    "fracture toughness", "stress intensity factor", "j-integral", "ctod", "impact energy",
+)
 
 MATERIALS_INFORMATICS_TERMS: tuple[str, ...] = (
     "knowledge graph", "named entity recognition", "ner", "bert", "dataset", "data set",
@@ -147,6 +203,7 @@ _FOCAL_CUES = (
     "we synthesized", "we prepared", "we measured", "our experiment", "experimental section",
     "methods", "reaction conditions", "electrochemical measurement", "we exposed",
     "specimens were", "samples were", "polarization tests", "eis measurements",
+    "we tested", "tests were conducted", "was measured", "were measured",
 )
 _MIN_SCIENTIFIC_DOMAIN_SCORE = 4.0
 
@@ -214,6 +271,16 @@ def classify_corrosion_paper_types(text: str) -> list[str]:
     return [name for score, name in ranked if score >= 1.0][:6]
 
 
+def classify_mechanical_paper_types(text: str) -> list[str]:
+    ranked: list[tuple[float, str]] = []
+    for paper_type, terms in MECHANICAL_PAPER_TYPE_TERMS.items():
+        score, _ = _matched(text, terms)
+        if score > 0:
+            ranked.append((score, paper_type))
+    ranked.sort(reverse=True)
+    return [name for score, name in ranked if score >= 1.0][:6]
+
+
 def catalysis_scope_status(text: str) -> str:
     title_and_abstract = text[:6000]
     deferred_score, _ = _matched(title_and_abstract, _CATALYSIS_DEFERRED_TERMS)
@@ -268,6 +335,25 @@ def _corrosion_context_bonus(text: str) -> tuple[float, list[str]]:
     return bonus, signals
 
 
+def _mechanical_context_bonus(text: str) -> tuple[float, list[str]]:
+    groups = (
+        ("tensile_context", _MECHANICAL_TENSILE_METHOD_TERMS, _MECHANICAL_TENSILE_OUTPUT_TERMS),
+        ("hardness_context", _MECHANICAL_HARDNESS_METHOD_TERMS, _MECHANICAL_HARDNESS_OUTPUT_TERMS),
+        ("creep_context", _MECHANICAL_CREEP_METHOD_TERMS, _MECHANICAL_CREEP_OUTPUT_TERMS),
+        ("fatigue_context", _MECHANICAL_FATIGUE_METHOD_TERMS, _MECHANICAL_FATIGUE_OUTPUT_TERMS),
+        ("fracture_context", _MECHANICAL_FRACTURE_METHOD_TERMS, _MECHANICAL_FRACTURE_OUTPUT_TERMS),
+    )
+    signals: list[str] = []
+    bonus = 0.0
+    for signal, method_terms, output_terms in groups:
+        method_score, _ = _matched(text, method_terms)
+        output_score, _ = _matched(text, output_terms)
+        if method_score and output_score:
+            bonus += 3.5
+            signals.append(signal)
+    return min(bonus, 7.0), signals
+
+
 class DomainRouter:
     """Fast, deterministic first-pass domain router with no LLM dependency."""
 
@@ -293,6 +379,8 @@ class DomainRouter:
                 contextual_bonus, combination_signals = _catalysis_context_bonus(text)
             elif domain == "corrosion":
                 contextual_bonus, combination_signals = _corrosion_context_bonus(text)
+            elif domain == "mechanical":
+                contextual_bonus, combination_signals = _mechanical_context_bonus(text)
             if combination_signals:
                 focal = sorted(set([*focal, *combination_signals]))
             scores[domain] = max(0.0, score + contextual_bonus + 0.5 * len(focal) - 0.75 * len(incidental))
@@ -334,6 +422,7 @@ class DomainRouter:
             classify_battery_paper_types(text) if selected_domain == "batteries"
             else classify_catalysis_paper_types(text) if selected_domain == "catalysis"
             else classify_corrosion_paper_types(text) if selected_domain == "corrosion"
+            else classify_mechanical_paper_types(text) if selected_domain == "mechanical"
             else []
         )
         return DomainRoute(

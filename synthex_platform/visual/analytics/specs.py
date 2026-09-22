@@ -33,8 +33,16 @@ def field_display_name(field: str | None, property_name: str | None = None) -> s
     return humanize_field_name(field.removeprefix("conditions."))
 
 
+def display_unit(unit: str | None) -> str | None:
+    """Normalize unit typography for presentation without changing canonical metadata."""
+    if unit in {"mOhm", "milliohm", "milliohms", "mΩ"}:
+        return "mΩ"
+    return unit
+
+
 def display_label_with_unit(label: str, unit: str | None) -> str:
-    return f"{label} ({unit})" if unit else label
+    rendered_unit = display_unit(unit)
+    return f"{label} ({rendered_unit})" if rendered_unit else label
 
 
 def visualization_title(

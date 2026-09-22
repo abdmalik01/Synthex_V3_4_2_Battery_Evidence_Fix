@@ -142,8 +142,8 @@ def _resistance_grid_rows():
             modality="experimental",
             property_name="internal_resistance",
             value=10.0 + soc / 10.0 + temperature / 100.0,
-            unit="mΩ",
-            normalized_unit="mΩ",
+            unit="mOhm",
+            normalized_unit="mOhm",
             conditions={
                 "temperature": float(temperature),
                 "temperature_unit": "°C",
@@ -170,7 +170,8 @@ def test_surface_spec_generates_human_readable_title_axis_and_colorbar_labels():
     assert spec.x_label == "Temperature"
     assert spec.y_label == "State of Charge"
     assert spec.z_label == "Internal Resistance"
-    assert spec.units == {"x": "°C", "y": "%", "z": "mΩ"}
+    assert spec.units == {"x": "°C", "y": "%", "z": "mOhm"}
+    assert all(row.unit == "mOhm" and row.normalized_unit == "mOhm" for row in rows)
 
     figure, axis = plt.subplots()
     VisualizationRenderer()._cartesian(axis, spec, rows)

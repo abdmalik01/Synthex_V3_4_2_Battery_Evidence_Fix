@@ -202,7 +202,14 @@ class DomainGeminiExtractor:
 
     def build_prompt(self, text: str, domain: str, source_bundle: SourceBundle | None = None) -> str:
         spec = self._domain_spec(domain)
-        compact_spec = {"domain": spec["name"], "description": spec.get("description"), "recommended_sections": spec.get("recommended_sections", []), "process_vocabulary": spec.get("process_vocabulary", []), "canonical_properties": spec.get("properties", [])}
+        compact_spec = {
+            "domain": spec["name"],
+            "description": spec.get("description"),
+            "recommended_sections": spec.get("recommended_sections", []),
+            "process_vocabulary": spec.get("process_vocabulary", []),
+            "canonical_properties": spec.get("properties", []),
+            "scientific_contract": spec.get("scientific_contract", []),
+        }
         structured = ""
         if source_bundle is not None and has_prompt_source_context(source_bundle):
             structured = "\n\nSTRUCTURED SOURCE CONTEXT (bounded, loss-aware JSON):\n" + compact_source_context(source_bundle, spec)

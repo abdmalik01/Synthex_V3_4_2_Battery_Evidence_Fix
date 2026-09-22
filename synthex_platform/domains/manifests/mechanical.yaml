@@ -1,139 +1,310 @@
 slug: mechanical
-name: Mechanical, Creep & Fatigue
-version: 1.0.0
-description: Mechanical properties across composition, processing, microstructure,
-  temperature and loading history.
+name: Mechanical / Creep / Fatigue
+version: 1.1.0
+description: Condition-resolved tensile, hardness, creep, fatigue, and fracture results with explicit measured, author-derived, and model-predicted semantics.
 recommended_sections:
 - materials
-- processing
+- processing and heat treatment
 - microstructure
+- specimen geometry and orientation
 - mechanical testing
+- tensile
+- hardness
 - fatigue
-- creep
+- creep and stress rupture
+- fracture
 - results
 process_vocabulary:
 - casting
 - forging
 - rolling
+- extrusion
+- additive manufacturing
+- laser powder bed fusion
 - heat treatment
+- solution treatment
+- aging
+- annealing
 - quenching
 - tempering
+- hot isostatic pressing
+- machining
+- surface treatment
 - tensile testing
 - creep testing
 - fatigue testing
+- fracture testing
+scientific_contract:
+- Use only canonical property keys; never use generic hardness.
+- Keep Vickers, Rockwell, Brinell, and indentation hardness distinct and never convert between scales.
+- Every output condition set must include scientific_type as reported_measurement, reported_derived_metric, model_prediction, simulation_result, or figure_digitized; preserve reported_term when terminology differs.
+- Model predictions belong in CalculationRecord outputs; do not silently derive unreported quantities.
+- Preserve reported processing state, heat treatment, microstructure, orientation, temperature, strain rate, loading mode, stress amplitude, stress ratio, frequency, environment, specimen geometry, cycles, and hold time.
+- Scalar results remain scalar observations and never imply curve points.
+- Curve points require curve_role=curve_point plus series_id and series_origin from source_table, supplementary_data, or figure_digitized.
+- Ordinary figure metadata is not numeric evidence; explicitly digitized points must retain figure_digitized provenance.
+condition_vocabulary:
+- processing_route
+- heat_treatment
+- microstructure_state
+- grain_size
+- specimen_orientation
+- temperature
+- strain_rate
+- loading_mode
+- applied_stress
+- stress_amplitude
+- strain_amplitude
+- stress_ratio
+- frequency
+- environment
+- specimen_geometry
+- gauge_length
+- cycle_count
+- exposure_time
+- hold_time
+- scientific_type
+- reported_term
+- data_kind
+- curve_role
+- series_id
+- series_origin
 properties:
 - key: yield_strength
   name: Yield strength
-  kind: mechanical
-  units:
-  - MPa
-  conditions:
-  - temperature
-  - strain_rate
-  - orientation
-  aliases: []
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, strain_rate, specimen_orientation, heat_treatment]
+  aliases: [yield stress, 0.2% proof stress]
 - key: ultimate_tensile_strength
   name: Ultimate tensile strength
-  kind: mechanical
-  units:
-  - MPa
-  conditions:
-  - temperature
-  - strain_rate
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, strain_rate, specimen_orientation, heat_treatment]
+  aliases: [UTS, tensile strength]
+- key: tensile_strength
+  name: Tensile strength as reported without an ultimate qualifier
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, strain_rate, specimen_orientation, heat_treatment]
   aliases: []
-- key: youngs_modulus
-  name: Young modulus
-  kind: mechanical
-  units:
-  - GPa
-  conditions:
-  - temperature
-  aliases: []
+- key: fracture_strength
+  name: Fracture strength
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, strain_rate, specimen_orientation]
+  aliases: [breaking strength]
 - key: elongation
   name: Elongation at break
-  kind: mechanical
-  units:
-  - '%'
-  conditions:
-  - temperature
+  kind: tensile
+  units: ['%', '1', dimensionless]
+  conditions: [temperature, strain_rate, specimen_orientation, gauge_length]
+  aliases: [elongation to failure]
+- key: reduction_of_area
+  name: Reduction of area
+  kind: tensile
+  units: ['%', '1', dimensionless]
+  conditions: [temperature, specimen_orientation]
   aliases: []
-- key: hardness
-  name: Hardness
-  kind: mechanical
-  units:
-  - HV
-  - HRC
-  - GPa
-  conditions:
-  - method
-  - load
+- key: youngs_modulus
+  name: Young's modulus
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, specimen_orientation, fit_method]
+  aliases: [elastic modulus, Young modulus]
+- key: poisson_ratio
+  name: Poisson ratio
+  kind: tensile
+  units: ['1', dimensionless]
+  conditions: [temperature, specimen_orientation]
+  aliases: [Poisson's ratio]
+- key: applied_load
+  name: Applied load
+  kind: direct_measurement
+  units: [N, kN, MN]
+  conditions: [loading_mode, specimen_geometry]
+  aliases: [load, force]
+- key: stress
+  name: Stress
+  kind: direct_measurement
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [strain, temperature, strain_rate, series_id, series_origin]
   aliases: []
-- key: fatigue_life
-  name: Fatigue life
+- key: strain
+  name: Strain
+  kind: direct_measurement
+  units: ['%', '1', dimensionless, microstrain]
+  conditions: [stress, temperature, strain_rate, series_id, series_origin]
+  aliases: []
+- key: vickers_hardness
+  name: Vickers hardness
+  kind: hardness
+  units: [HV]
+  conditions: [load, dwell_time, temperature, heat_treatment]
+  aliases: [Vickers hardness number]
+- key: rockwell_hardness
+  name: Rockwell hardness
+  kind: hardness
+  units: [HRA, HRB, HRC]
+  conditions: [scale, load, temperature, heat_treatment]
+  aliases: []
+- key: brinell_hardness
+  name: Brinell hardness
+  kind: hardness
+  units: [HB, HBW]
+  conditions: [load, indenter, temperature, heat_treatment]
+  aliases: [Brinell hardness number]
+- key: indentation_hardness
+  name: Indentation hardness
+  kind: hardness
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [method, load, indentation_depth, temperature]
+  aliases: [nanoindentation hardness]
+- key: creep_strain
+  name: Creep strain
+  kind: creep
+  units: ['%', '1', dimensionless]
+  conditions: [time, applied_stress, temperature, specimen_orientation, series_id, series_origin]
+  aliases: []
+- key: creep_rate
+  name: Creep rate
+  kind: creep
+  units: [s^-1, 1/s, h^-1, 1/h]
+  conditions: [applied_stress, temperature, exposure_time]
+  aliases: [steady-state creep rate]
+- key: minimum_creep_rate
+  name: Minimum creep rate
+  kind: creep
+  units: [s^-1, 1/s, h^-1, 1/h]
+  conditions: [applied_stress, temperature]
+  aliases: [minimum creep strain rate]
+- key: rupture_time
+  name: Rupture time
+  kind: creep
+  units: [s, min, h, day]
+  conditions: [applied_stress, temperature, specimen_orientation]
+  aliases: [creep rupture time, stress rupture life]
+- key: rupture_strain
+  name: Rupture strain
+  kind: creep
+  units: ['%', '1', dimensionless]
+  conditions: [applied_stress, temperature]
+  aliases: [creep ductility]
+- key: applied_stress
+  name: Applied stress
+  kind: creep
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [temperature, exposure_time]
+  aliases: []
+- key: time_to_specific_strain
+  name: Time to specified creep strain
+  kind: creep
+  units: [s, min, h, day]
+  conditions: [strain, applied_stress, temperature]
+  aliases: []
+- key: cycles_to_failure
+  name: Cycles to failure
   kind: fatigue
-  units:
-  - cycles
-  conditions:
-  - stress_amplitude
-  - R_ratio
-  - frequency
-  - temperature
-  aliases: []
+  units: [cycles, count, dimensionless]
+  conditions: [stress_amplitude, strain_amplitude, stress_ratio, frequency, temperature, environment]
+  aliases: [fatigue life, Nf]
 - key: fatigue_strength
   name: Fatigue strength
   kind: fatigue
-  units:
-  - MPa
-  conditions:
-  - cycles
-  - R_ratio
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [cycle_count, stress_ratio, frequency, temperature, environment]
   aliases: []
-- key: creep_rate
-  name: Steady-state creep rate
-  kind: creep
-  units:
-  - 1/s
-  conditions:
-  - stress
-  - temperature
+- key: fatigue_limit
+  name: Fatigue limit
+  kind: fatigue
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [cycle_count, stress_ratio, frequency, temperature, environment]
+  aliases: [endurance limit]
+- key: stress_amplitude
+  name: Stress amplitude
+  kind: fatigue
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [cycle_count, stress_ratio, frequency, temperature]
   aliases: []
-- key: creep_rupture_time
-  name: Creep rupture time
-  kind: creep
-  units:
-  - h
-  conditions:
-  - stress
-  - temperature
+- key: mean_stress
+  name: Mean stress
+  kind: fatigue
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [cycle_count, stress_ratio, frequency, temperature]
   aliases: []
+- key: frequency
+  name: Loading frequency
+  kind: fatigue
+  units: [Hz, 1/s, s^-1]
+  conditions: [stress_ratio, temperature]
+  aliases: []
+- key: strain_amplitude
+  name: Strain amplitude
+  kind: fatigue
+  units: ['%', '1', dimensionless]
+  conditions: [cycle_count, stress_ratio, frequency, temperature]
+  aliases: []
+- key: stress_ratio
+  name: Stress ratio
+  kind: fatigue
+  units: ['1', dimensionless]
+  conditions: [loading_mode]
+  aliases: [R ratio, R-ratio]
+- key: crack_growth_rate
+  name: Crack growth rate
+  kind: fatigue
+  units: [m/cycle, mm/cycle, um/cycle]
+  conditions: [stress_intensity_range, stress_ratio, frequency, environment, series_id, series_origin]
+  aliases: [da/dN]
 - key: fracture_toughness
   name: Fracture toughness
-  kind: mechanical
-  units:
-  - MPa*sqrt(m)
-  conditions:
-  - temperature
-  aliases: []
+  kind: fracture
+  units: [MPa*sqrt(m), MPa√m]
+  conditions: [temperature, specimen_orientation, specimen_geometry, environment]
+  aliases: [KIC, KIc]
+- key: stress_intensity
+  name: Stress intensity
+  kind: fracture
+  units: [MPa*sqrt(m), MPa√m]
+  conditions: [mode, specimen_geometry]
+  aliases: [stress intensity factor]
+- key: stress_intensity_range
+  name: Stress intensity range
+  kind: fracture
+  units: [MPa*sqrt(m), MPa√m]
+  conditions: [stress_ratio, frequency, series_id, series_origin]
+  aliases: [delta K, ΔK]
+- key: j_integral
+  name: J-integral
+  kind: fracture
+  units: [J/m2, J/m^2, kJ/m2]
+  conditions: [temperature, specimen_orientation, specimen_geometry]
+  aliases: [J integral]
+- key: ctod
+  name: Crack-tip opening displacement
+  kind: fracture
+  units: [m, mm, um]
+  conditions: [temperature, specimen_orientation, specimen_geometry]
+  aliases: [CTOD]
+- key: impact_energy
+  name: Impact energy
+  kind: fracture
+  units: [J, mJ, kJ]
+  conditions: [temperature, notch_geometry, specimen_orientation]
+  aliases: [Charpy impact energy]
 benchmarks:
 - id: mechanical.yield_strength_prediction
   name: Yield strength prediction
   target: yield_strength
-  group_by:
-  - alloy
-  - process
+  group_by: [alloy, process, heat_treatment, temperature, orientation]
 - id: mechanical.fatigue_life_prediction
   name: Fatigue life prediction
-  target: fatigue_life
-  group_by:
-  - alloy
-  - loading
+  target: cycles_to_failure
+  group_by: [alloy, loading, stress_ratio, environment]
 - id: mechanical.creep_rupture_prediction
   name: Creep rupture prediction
-  target: creep_rupture_time
-  group_by:
-  - alloy
-  - temperature
-  - stress
+  target: rupture_time
+  group_by: [alloy, temperature, applied_stress]
 graph_relations:
 - derived_from
 - processed_by

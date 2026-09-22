@@ -82,7 +82,7 @@ def test_captioned_borderless_rsm_table_has_conservative_text_fallback(tmp_path)
     tables = extract_tables(path, source_id="src-rsm")
     assert tables
     table = next(item for item in tables if item.caption and "Response surface" in item.caption)
-    assert table.parser in {"pymupdf", "pymupdf_text_fallback"}
+    assert table.parser in {"pymupdf", "pymupdf_caption_text_fallback"}
     assert len(table.raw_representation["grid"]) >= 4
     flattened = " ".join(str(value or "") for row in table.raw_representation["grid"] for value in row)
     assert "Degradation" in flattened and "94" in flattened

@@ -1,0 +1,17 @@
+{
+  "case_id": "MECH-GOLD-A",
+  "status": "awaiting_source_lock_and_independent_gold_review",
+  "source": {
+    "filename": null,
+    "sha256": null,
+    "title": null,
+    "doi": null
+  },
+  "paper_type": "tensile_testing",
+  "assertions": [],
+  "quarantine_assertions": [],
+  "required_checks": [
+    "routing", "recall", "value_accuracy", "association_accuracy",
+    "source_tracking", "scientific_type", "ownership", "quarantine"
+  ]
+}

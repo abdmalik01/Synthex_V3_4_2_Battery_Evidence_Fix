@@ -14,6 +14,7 @@ _SCALAR_TEXT = re.compile(
     r"^\s*([+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)\s*([^\d].*?)?\s*$"
 )
 _C_RATE_FRACTION = re.compile(r"^\s*[cC]\s*/\s*(\d+(?:\.\d+)?)\s*$")
+_TEXT_CONDITION_KEYS = frozenset({"reported_term", "scientific_type", "data_kind", "curve_role", "series_id", "series_origin"})
 
 
 def _evidence_refs(evidence) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[str]]:
@@ -66,6 +67,9 @@ def _scalar_condition(value: Any) -> tuple[Any, str | None, str | None]:
 def _condition_mapping(values: Mapping[str, Any] | None) -> dict[str, Any]:
     result: dict[str, Any] = {}
     for key, source in (values or {}).items():
+        if key in _TEXT_CONDITION_KEYS and isinstance(source, str):
+            result[key] = source
+            continue
         raw_value = None
         unit = None
         candidate = source

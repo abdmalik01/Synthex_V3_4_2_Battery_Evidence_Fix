@@ -104,16 +104,15 @@ def _trim_caption_grid(grid: list[list[str | None]]) -> tuple[list[list[str | No
     retained: list[list[str | None]] = []
     source_rows: list[int] = []
     nonempty_rows = 0
-    skipped_header_gap = False
+    blank_run = 0
     for row_index, row in enumerate(grid):
         populated = _nonempty_count(row)
         if populated == 0:
-            if nonempty_rows <= 1 and not skipped_header_gap:
-                skipped_header_gap = True
-                continue
-            if nonempty_rows >= 2:
+            blank_run += 1
+            if nonempty_rows >= 2 and blank_run >= 2:
                 break
             continue
+        blank_run = 0
         retained.append(row)
         source_rows.append(row_index)
         nonempty_rows += 1
@@ -163,7 +162,7 @@ def _captioned_region_text_tables(page):
         clip = pymupdf.Rect(
             max(0.0, x0 - 80.0),
             start,
-            min(page.rect.width, x1 + 80.0),
+            page.rect.width,
             end,
         )
         try:

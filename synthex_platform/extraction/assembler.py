@@ -8,6 +8,7 @@ from synthex_platform.core.models import (
 )
 from synthex_platform.core.quality import score_archive
 from .draft_models import ExtractedDocument
+from .mechanical_contract import mechanical_admission_decision
 
 
 class _GenericAdmissibilityGate:
@@ -55,6 +56,25 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
     calculations = []
     relationships = []
 
+    def admitted_mechanical_outputs(kind: str, local_id: str, outputs, modality: str):
+        if domain != "mechanical":
+            return list(outputs)
+        admitted = []
+        for output in outputs:
+            decision = mechanical_admission_decision(output, modality=modality)
+            if decision.admitted:
+                admitted.append(output)
+                continue
+            gate.quarantine.append({
+                "kind": "measurement",
+                "record_kind": kind,
+                "local_id": local_id,
+                "property": output.property,
+                "reason": decision.reason,
+                "raw_object": output.model_dump(mode="json", exclude_none=True),
+            })
+        return admitted
+
     for i, item in enumerate(draft.processes):
         if not gate.admit("process", item):
             continue
@@ -78,6 +98,21 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
     for item in draft.experiments:
         if not gate.admit("experiment", item):
             continue
+        if domain == "mechanical" and (len(item.material_refs) != 1 or item.material_refs[0] not in local_map):
+            gate.quarantine.append({
+                "kind": "experiment", "local_id": item.local_id, "ownership": item.ownership,
+                "reason": "ambiguous_or_missing_material_association",
+                "raw_object": item.model_dump(mode="json", exclude_none=True),
+            })
+            continue
+        outputs = admitted_mechanical_outputs("experiment", item.local_id, item.outputs, "experimental")
+        if domain == "mechanical" and not outputs:
+            gate.quarantine.append({
+                "kind": "experiment", "local_id": item.local_id, "ownership": item.ownership,
+                "reason": "no_admitted_mechanical_outputs",
+                "raw_object": item.model_dump(mode="json", exclude_none=True),
+            })
+            continue
         eid = stable_id("exp", sid, item.local_id, item.experiment_type)
         local_map[item.local_id] = eid
         refs = [local_map[r] for r in item.material_refs if r in local_map]
@@ -86,7 +121,7 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
             continue
         experiments.append(ExperimentRecord(
             experiment_id=eid, experiment_type=item.experiment_type, material_ids=refs,
-            target=item.target, conditions=item.conditions, outputs=item.outputs,
+            target=item.target, conditions=item.conditions, outputs=outputs,
             protocol=item.protocol, evidence=item.evidence,
         ))
         for mid in refs:
@@ -98,6 +133,21 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
     for item in draft.calculations:
         if not gate.admit("calculation", item):
             continue
+        if domain == "mechanical" and (len(item.material_refs) != 1 or item.material_refs[0] not in local_map):
+            gate.quarantine.append({
+                "kind": "calculation", "local_id": item.local_id, "ownership": item.ownership,
+                "reason": "ambiguous_or_missing_material_association",
+                "raw_object": item.model_dump(mode="json", exclude_none=True),
+            })
+            continue
+        outputs = admitted_mechanical_outputs("calculation", item.local_id, item.outputs, "computational")
+        if domain == "mechanical" and not outputs:
+            gate.quarantine.append({
+                "kind": "calculation", "local_id": item.local_id, "ownership": item.ownership,
+                "reason": "no_admitted_mechanical_outputs",
+                "raw_object": item.model_dump(mode="json", exclude_none=True),
+            })
+            continue
         cid = stable_id("calc", sid, item.local_id, item.calculation_type)
         local_map[item.local_id] = cid
         refs = [local_map[r] for r in item.material_refs if r in local_map]
@@ -107,7 +157,7 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
         calculations.append(CalculationRecord(
             calculation_id=cid, calculation_type=item.calculation_type, material_ids=refs,
             code=item.code, method=item.method, functional=item.functional, model=item.model,
-            parameters=item.parameters, outputs=item.outputs, evidence=item.evidence,
+            parameters=item.parameters, outputs=outputs, evidence=item.evidence,
         ))
         for mid in refs:
             relationships.append(Relationship(
@@ -130,7 +180,11 @@ def assemble_archive(draft: ExtractedDocument, domain: str, model: str | None = 
         domain_payloads=[DomainPayload(domain=domain, schema_version="1.0.0", values={
             **draft.domain_values,
             "admissibility": {
-                "policy": "generic_focal_work_with_source_evidence_v1",
+                "policy": (
+                    "mechanical_focal_evidence_property_unit_series_v1"
+                    if domain == "mechanical"
+                    else "generic_focal_work_with_source_evidence_v1"
+                ),
                 "quarantined_objects": gate.quarantine,
             },
         })],
