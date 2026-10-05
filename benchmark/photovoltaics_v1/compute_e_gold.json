@@ -1,0 +1,50 @@
+{
+  "case_id": "PV-COMPUTE-E",
+  "source": {
+    "title": "Study of a Lead-Free Perovskite Solar Cell Using CZTS as HTL to Achieve a 20% PCE by SCAPS-1D Simulation",
+    "authors": [
+      "Ana C. Piñón Reyes",
+      "Roberto C. Ambrosio Lázaro",
+      "Karim Monfil Leyva",
+      "José A. Luna López",
+      "Javier Flores Méndez",
+      "Aurelio H. Heredia Jiménez",
+      "Ana L. Muñoz Zurita",
+      "Francisco Severiano Carrillo",
+      "Esteban Ojeda Durán"
+    ],
+    "journal": "Micromachines",
+    "year": 2021,
+    "doi": "10.3390/mi12121508",
+    "url": "https://www.mdpi.com/2072-666X/12/12/1508",
+    "page_count": 19
+  },
+  "method": {
+    "calculation_type": "one_dimensional_device_simulation",
+    "software": "SCAPS-1D",
+    "model": "one-dimensional n-i-p planar heterojunction",
+    "architecture": "FTO/TiO2/MASnI3/CZTS/Au",
+    "illumination_spectrum": "AM1.5G",
+    "incident_power_density_w_m2": 1000,
+    "temperature_k": 300,
+    "front_contact_work_function_ev": 4.4,
+    "back_contact_work_function_ev": 5.1
+  },
+  "rows": [
+    {"variant": "simulation_1", "simulated_open_circuit_voltage": 0.77, "predicted_short_circuit_current_density": 20.45, "simulated_fill_factor": 51.0, "simulated_power_conversion_efficiency": 8.0, "absorber_acceptor_density_cm3": 1e16, "absorber_defect_density_cm3": 2e15, "czts_thickness_nm": 100.0, "tio2_bandgap_ev": 3.0, "tio2_donor_density_cm3": 9e16},
+    {"variant": "simulation_2", "simulated_open_circuit_voltage": 0.77, "predicted_short_circuit_current_density": 20.78, "simulated_fill_factor": 51.0, "simulated_power_conversion_efficiency": 8.2, "absorber_acceptor_density_cm3": 1e16, "absorber_defect_density_cm3": 2e15, "czts_thickness_nm": 100.0, "tio2_bandgap_ev": 3.0, "tio2_donor_density_cm3": 1e18},
+    {"variant": "simulation_3", "simulated_open_circuit_voltage": 0.94, "predicted_short_circuit_current_density": 31.0, "simulated_fill_factor": 64.0, "simulated_power_conversion_efficiency": 18.58, "absorber_acceptor_density_cm3": 1e16, "absorber_defect_density_cm3": 2e14, "czts_thickness_nm": 100.0, "tio2_bandgap_ev": 3.0, "tio2_donor_density_cm3": 1e19},
+    {"variant": "simulation_4", "simulated_open_circuit_voltage": 0.94, "predicted_short_circuit_current_density": 31.31, "simulated_fill_factor": 64.0, "simulated_power_conversion_efficiency": 18.86, "absorber_acceptor_density_cm3": 1e19, "absorber_defect_density_cm3": 1e14, "czts_thickness_nm": 150.0, "tio2_bandgap_ev": 3.2, "tio2_donor_density_cm3": 1e19},
+    {"variant": "simulation_5", "simulated_open_circuit_voltage": 0.96, "predicted_short_circuit_current_density": 31.66, "simulated_fill_factor": 67.0, "simulated_power_conversion_efficiency": 20.28, "absorber_acceptor_density_cm3": 1e19, "absorber_defect_density_cm3": 1e14, "czts_thickness_nm": 300.0, "tio2_bandgap_ev": 3.2, "tio2_donor_density_cm3": 1e19}
+  ],
+  "assertions": [
+    "all_five_simulation_rows_match",
+    "calculation_records_only",
+    "zero_experimental_records",
+    "simulated_properties_use_distinct_identities",
+    "method_context_retained",
+    "material_and_architecture_retained",
+    "value_specific_evidence_retained",
+    "analytics_rows_marked_computational"
+  ]
+}

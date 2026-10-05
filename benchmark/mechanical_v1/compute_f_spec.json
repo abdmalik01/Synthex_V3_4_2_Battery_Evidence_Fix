@@ -1,0 +1,20 @@
+{
+  "case_id": "MECH-COMPUTE-F",
+  "status": "locked_offline_validated_live_quota_exhausted",
+  "source_lock": "compute_f_source_lock.json",
+  "gold": "compute_f_gold.json",
+  "gold_assertions": 28,
+  "provider_calls": 1,
+  "paper_type": "computational_mechanics",
+  "scientific_boundaries": [
+    "calculated elastic constants and moduli remain CalculationRecords",
+    "C11, C12, C44, bulk modulus, shear modulus, Young's modulus and Poisson ratio remain distinct",
+    "simulation_result is not reported_measurement",
+    "a purely computational paper creates zero focal ExperimentRecords",
+    "method settings are preserved only when source-reported",
+    "table-cell provenance and raw typography are retained"
+  ],
+  "offline_result": "28/28 across Tables 2 and 3; four CalculationRecords, 28 outputs, zero ExperimentRecords",
+  "live_result": "primary gemini-3.5-flash request was rejected by the daily request quota before a payload; raw provider score is unavailable, not zero",
+  "activation_gate": "closed without retry or fallback because daily quota is non-transient for this benchmark run"
+}

@@ -1,0 +1,35 @@
+{
+  "case_id": "SEM-GOLD-A",
+  "source": {
+    "title": "Highly conductive and transparent gallium doped zinc oxide thin films via chemical vapor deposition",
+    "authors": ["Sapna D. Ponja", "Sanjayan Sathasivam", "Ivan P. Parkin", "Claire J. Carmalt"],
+    "journal": "Scientific Reports",
+    "year": 2020,
+    "doi": "10.1038/s41598-020-57532-7",
+    "url": "https://www.nature.com/articles/s41598-020-57532-7"
+  },
+  "source_table": "Table 2",
+  "source_page": 4,
+  "substrate": "SiO2-barrier-coated float glass",
+  "growth_method": "aerosol-assisted chemical vapor deposition",
+  "growth_temperature_c": 450,
+  "optical_gap_method": "UV-vis Tauc fit",
+  "measurement_temperature": null,
+  "measurement_temperature_note": "Hall temperature is not explicitly stated for Table 2; do not infer room temperature from the introduction.",
+  "table_units": {
+    "film_thickness": "nm",
+    "carrier_concentration": "×10^20 cm^-3",
+    "hall_mobility": "cm^2/V/s",
+    "resistivity": "×10^-3 Ω·cm",
+    "sheet_resistance": "Ω/sq",
+    "optical_band_gap": "eV"
+  },
+  "rows": [
+    {"film": "ZnO", "ga_atomic_percent": 0, "thickness_nm": 400, "carrier_concentration_scaled": 1.36, "hall_mobility": 21.4, "resistivity_scaled": 2.14, "sheet_resistance": 53.6, "optical_band_gap": 3.25},
+    {"film": "Zn0.99Ga0.01O", "ga_atomic_percent": 1, "thickness_nm": 400, "carrier_concentration_scaled": 2.96, "hall_mobility": 15.1, "resistivity_scaled": 1.40, "sheet_resistance": 35.0, "optical_band_gap": 3.31},
+    {"film": "Zn0.95Ga0.05O", "ga_atomic_percent": 5, "thickness_nm": 450, "carrier_concentration_scaled": 4.23, "hall_mobility": 18.7, "resistivity_scaled": 0.79, "sheet_resistance": 17.6, "optical_band_gap": 3.52},
+    {"film": "Zn0.92Ga0.08O", "ga_atomic_percent": 8, "thickness_nm": 600, "carrier_concentration_scaled": 6.55, "hall_mobility": 7.7, "resistivity_scaled": 1.24, "sheet_resistance": 20.7, "optical_band_gap": 3.55}
+  ],
+  "canonical_result_count": 20,
+  "quarantine": ["Visible transmittance and Haacke figure-of-merit are source values but outside this first-case gold scope."]
+}

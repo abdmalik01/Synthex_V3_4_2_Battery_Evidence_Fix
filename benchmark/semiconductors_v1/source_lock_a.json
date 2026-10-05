@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-GOLD-A",
+  "status": "gold_locked_before_recovery_and_provider_call",
+  "doi": "10.1038/s41598-020-57532-7",
+  "publisher_url": "https://www.nature.com/articles/s41598-020-57532-7",
+  "article_file": "corpus_pdfs/SEM-GOLD-A.pdf",
+  "article_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee",
+  "article_page_count": 7,
+  "gold_file": "gold_a.json",
+  "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba",
+  "decisive_tables": ["Table 2"],
+  "decisive_pages": [4]
+}

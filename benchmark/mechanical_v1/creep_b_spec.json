@@ -1,0 +1,34 @@
+{
+  "case_id": "MECH-CREEP-B",
+  "status": "locked_offline_validated_live_payload_schema_invalid",
+  "source_lock": "creep_b_source_lock.json",
+  "gold": "creep_b_gold.json",
+  "gold_assertions": 24,
+  "provider_calls": 2,
+  "paper_type": "creep_stress_rupture",
+  "source_selection": [
+    "primary focal creep or stress-rupture study with lawful stable PDF",
+    "explicit specimen identity, processing state, applied stress and test temperature",
+    "reported time units and numerical table or supplementary data for series points",
+    "independently reviewed ownership, evidence locator and checksum before activation"
+  ],
+  "required_associations": [
+    "specimen", "material", "processing_state", "applied_stress",
+    "test_temperature", "test_environment", "test_method"
+  ],
+  "candidate_outputs": [
+    "creep_strain", "minimum_creep_rate", "rupture_time", "rupture_strain"
+  ],
+  "scientific_boundaries": [
+    "one stress-temperature-specimen pair per test record; do not merge curves",
+    "a printed minimum creep rate is a reported derived metric, not a new direct measurement",
+    "a calculated rate from a curve is not admitted as reported source data",
+    "a creep strain-time point requires source_table or supplementary_data series provenance",
+    "figure-only traces are not canonical numerical points without a separate digitization workflow",
+    "no rupture time is inferred from a censored or stopped test",
+    "cited or review comparison data are quarantined from focal experiments"
+  ],
+  "offline_result": "24/24; three source rows marked N/A excluded",
+  "live_result": "payload returned on one attempt; raw and repaired JSON failed strict schema admission; raw semantic values and conditions 24/24 but value-specific evidence 0/24",
+  "activation_gate": "complete; do not modify frozen gold after provider output"
+}

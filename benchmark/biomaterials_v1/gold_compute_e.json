@@ -1,0 +1,33 @@
+{
+  "case_id": "BIO-COMPUTE-E",
+  "doi": "10.1038/s41598-017-15219-6",
+  "source_pdf": "corpus_pdfs/BIO-COMPUTE-E.pdf",
+  "source_page": 5,
+  "table": "Table 2",
+  "method": "NAMD molecular dynamics; CHARMM27 with hydroxyapatite parameters",
+  "surface": "hydroxyapatite (110)",
+  "molecules": ["BMP-7", "BMP-7-derived peptide KQLNALSVLYFDD"],
+  "columns": ["electrostatic_interaction_energy_kcal_mol", "interaction_energy_kcal_mol"],
+  "rows": [
+    ["Flat-HA-BMP-7", -1883.96, -1873.59],
+    ["Groove1a-HA-BMP-7", -2053.36, -2029.57],
+    ["Groove2a-HA-BMP-7", -2210.45, -2166.63],
+    ["Groove3a-HA-BMP-7", -1580.31, -1560.77],
+    ["Concave1a1b-HA-BMP-7", -3171.04, -3177.8],
+    ["Concave2a1b-HA-BMP-7", -4720.71, -4660.49],
+    ["Concave2a2b-HA-BMP-7", -3770.16, -3738.27],
+    ["Pillar1a1b-HA-BMP-7", -2965.53, -2924.22],
+    ["Pillar2a1b-HA-BMP-7", -4157.33, -4098.97],
+    ["Pillar2a2b-HA-BMP-7", -3511.39, -3442.33],
+    ["Flat-HA-BMP-7-derived-peptide", -236.46, -241.04],
+    ["Groove2a-HA-BMP-7-derived-peptide", -411.07, -408.40],
+    ["Concave2a1b-HA-BMP-7-derived-peptide", -1213.18, -1200.36],
+    ["Pillar2a1b-HA-BMP-7-derived-peptide", -918.35, -904.65],
+    ["Flat-HA-BMP-7-no water", -7407.30, -7349.66],
+    ["Flat-HA-BMP-7-derived-peptide-no-water", -2861.26, -2825.55]
+  ],
+  "gold_output_count": 32,
+  "expected_calculations": 16,
+  "expected_experiments": 0,
+  "excluded": ["cell behavior cited from prior studies", "DFT results without a comparably exact Table 2 row", "measured adsorption claim"]
+}

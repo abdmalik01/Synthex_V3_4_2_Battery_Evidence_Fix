@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-PROCESS-D",
+  "status": "gold_locked_before_recovery_and_provider_call",
+  "doi": "10.1038/srep15001",
+  "publisher_url": "https://www.nature.com/articles/srep15001",
+  "article_file": "corpus_pdfs/SEM-PROCESS-D.pdf",
+  "article_sha256": "30ca6625ad6f37992dad2534dbf35ca8173c701e6847720b4b8616cb8e0839aa",
+  "article_page_count": 6,
+  "gold_file": "gold_process_d.json",
+  "gold_sha256": "a405fba78b474c0641632e7d3567867b77fe5dca2a828bcfc51f8653175dcd2a",
+  "decisive_tables": ["Table 1"],
+  "decisive_pages": [2]
+}

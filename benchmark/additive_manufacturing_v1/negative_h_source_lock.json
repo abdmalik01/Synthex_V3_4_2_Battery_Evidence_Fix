@@ -1,0 +1,10 @@
+{
+  "case_id": "AM-NEGATIVE-H",
+  "source_file": "corpus_pdfs/batteries-11-00142-negative.pdf",
+  "source_sha256": "91a6457b87f4ebc1e2acfb74b5c104df61be3fdcb91f1fa0f4f691a50905aa56",
+  "gold_file": "negative_h_gold.json",
+  "gold_sha256": "e58e74c0a180d6f6bb33d1063c4392d61068e51b573492050c5f9146be1fa7cb",
+  "official_url": "https://www.mdpi.com/2313-0105/11/4/142",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0
+}

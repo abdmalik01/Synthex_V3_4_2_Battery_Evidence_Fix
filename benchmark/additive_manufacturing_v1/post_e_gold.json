@@ -1,0 +1,142 @@
+{
+  "case_id": "AM-POST-E",
+  "source": {
+    "title": "Optimization of Aging Temperature and Heat-Treatment Pathways in Additively Manufactured 17-4PH Stainless Steel",
+    "authors": [
+      "Hobyung Chae",
+      "Sangyeob Lim",
+      "Taeho Lee",
+      "Eunjoo Shin",
+      "Joowon Suh",
+      "Suk Hoon Kang",
+      "Soo Yeol Lee"
+    ],
+    "journal": "Materials",
+    "year": 2023,
+    "doi": "10.3390/ma16247557",
+    "url": "https://www.mdpi.com/1996-1944/16/24/7557",
+    "page_count": 12
+  },
+  "build": {
+    "family": "directed_energy_deposition",
+    "beam_power_w": 425,
+    "beam_width_um": 800,
+    "powder_feed_rate_g_min": 3,
+    "atmosphere": "Ar",
+    "scan_strategy": "zigzag"
+  },
+  "treatments": {
+    "AB": {
+      "identity": "as_built",
+      "steps": []
+    },
+    "A": {
+      "identity": "direct_aging",
+      "steps": [
+        {
+          "temperature_c": 482,
+          "time_h": 1,
+          "cooling": "air"
+        }
+      ]
+    },
+    "SS": {
+      "identity": "solid_solution",
+      "steps": [
+        {
+          "temperature_c": 1038,
+          "time_h": 1,
+          "cooling": "water_quench"
+        }
+      ]
+    },
+    "SSA": {
+      "identity": "solid_solution_then_aging",
+      "steps": [
+        {
+          "temperature_c": 1038,
+          "time_h": 1,
+          "cooling": "water_quench"
+        },
+        {
+          "temperature_c": 482,
+          "time_h": 1,
+          "cooling": "air"
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "sample": "AMV_AB",
+      "orientation": "vertical",
+      "treatment": "AB",
+      "yield_strength_mpa": 457,
+      "uts_mpa": 1106,
+      "elongation": 0.308
+    },
+    {
+      "sample": "AMV_A",
+      "orientation": "vertical",
+      "treatment": "A",
+      "yield_strength_mpa": 604,
+      "uts_mpa": 1162,
+      "elongation": 0.324
+    },
+    {
+      "sample": "AMV_SS",
+      "orientation": "vertical",
+      "treatment": "SS",
+      "yield_strength_mpa": 919,
+      "uts_mpa": 1256,
+      "elongation": 0.196
+    },
+    {
+      "sample": "AMV_SSA",
+      "orientation": "vertical",
+      "treatment": "SSA",
+      "yield_strength_mpa": 1234,
+      "uts_mpa": 1399,
+      "elongation": 0.253
+    },
+    {
+      "sample": "AMH_AB",
+      "orientation": "horizontal",
+      "treatment": "AB",
+      "yield_strength_mpa": 436,
+      "uts_mpa": 1127,
+      "elongation": 0.316
+    },
+    {
+      "sample": "AMH_A",
+      "orientation": "horizontal",
+      "treatment": "A",
+      "yield_strength_mpa": 588,
+      "uts_mpa": 1117,
+      "elongation": 0.312
+    },
+    {
+      "sample": "AMH_SS",
+      "orientation": "horizontal",
+      "treatment": "SS",
+      "yield_strength_mpa": 841,
+      "uts_mpa": 1254,
+      "elongation": 0.201
+    },
+    {
+      "sample": "AMH_SSA",
+      "orientation": "horizontal",
+      "treatment": "SSA",
+      "yield_strength_mpa": 1215,
+      "uts_mpa": 1371,
+      "elongation": 0.238
+    }
+  ],
+  "scientific_boundaries": [
+    "AM build is distinct from every post-processing step",
+    "as-built specimens receive no post-process",
+    "direct aging, solid solution, and solid solution plus aging remain distinct",
+    "post-process temperature is not tensile-test temperature",
+    "mechanical properties reuse Mechanical V1 vocabulary"
+  ]
+}

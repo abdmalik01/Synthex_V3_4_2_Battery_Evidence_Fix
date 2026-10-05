@@ -1,0 +1,12 @@
+{
+  "case_id": "TE-NEG-G",
+  "doi": "10.1038/s41467-024-48552-2",
+  "source_file": "../photovoltaics_v1/corpus_pdfs/nature-communications-15-4136.pdf",
+  "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e",
+  "page_count": 9,
+  "gold_file": "gold_neg_g.json",
+  "gold_sha256": "26b718d8703c395e0a1c8318b0feef065604c5a63911cb03a283a3105db43faf",
+  "official_url": "https://www.nature.com/articles/s41467-024-48552-2",
+  "license": "CC BY 4.0",
+  "locked_before_provider_run": true
+}

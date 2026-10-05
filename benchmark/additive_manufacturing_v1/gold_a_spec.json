@@ -1,0 +1,14 @@
+{
+  "case_id": "AM-GOLD-A",
+  "status": "locked_offline_no_provider_call",
+  "paper_type": ["feedstock_characterization", "laser_powder_bed_fusion", "quality_characterization"],
+  "gold_assertions": 27,
+  "scientific_boundaries": [
+    "each specimen retains its own laser power, scan speed, hatch spacing, and density cell",
+    "relative density is not converted to porosity",
+    "linear, surface, and volumetric energy densities are not inferred",
+    "feedstock, AM build, and post-processing remain explicit lineage stages",
+    "post-processing conditions are not merged into AM build coordinates",
+    "all canonical parameters and results require value-specific source evidence"
+  ]
+}

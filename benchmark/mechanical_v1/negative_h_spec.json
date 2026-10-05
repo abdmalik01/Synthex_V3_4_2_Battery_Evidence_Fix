@@ -1,0 +1,11 @@
+{
+  "case_id": "MECH-NEGATIVE-H",
+  "purpose": "Negative-domain control for generic stress, strain, failure, fracture, resistance, and load language",
+  "provider_policy": "offline_only",
+  "routing_contract": [
+    "generic mechanical words alone are insufficient for Mechanical routing",
+    "battery, cycling, capacity, EIS, and cell context retain Batteries ownership",
+    "battery tomography strain and fracture discussion does not become a canonical Mechanical material-test record"
+  ],
+  "status": "locked_offline_validated"
+}

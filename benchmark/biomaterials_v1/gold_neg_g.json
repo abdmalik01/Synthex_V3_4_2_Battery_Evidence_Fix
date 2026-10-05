@@ -1,0 +1,11 @@
+{
+  "case_id": "BIO-NEG-G",
+  "doi": "10.3390/membranes11010041",
+  "source_pdf": "../membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf",
+  "true_domain": "batteries",
+  "expected_route": "batteries",
+  "misleading_vocabulary": ["cell", "membrane", "porosity", "surface", "degradation"],
+  "gold_output_count": 0,
+  "expected_biomaterials_experiments": 0,
+  "expected_biomaterials_calculations": 0
+}

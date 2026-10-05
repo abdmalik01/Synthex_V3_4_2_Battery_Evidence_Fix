@@ -1,0 +1,46 @@
+{
+  "schema": "synthex.clean_checkout_failures.v1",
+  "baseline_head": "8f510433bcac06a5414762b849335f3e67511834",
+  "baseline_result": {"passed": 685, "failed": 12, "errors": 9, "warnings": 2},
+  "classification_key": {
+    "A": "missing local historical provider report or body",
+    "B": "missing generated/offline or provider-derived report",
+    "G": "test assumed ignored local artifact was mandatory"
+  },
+  "artifacts": {
+    "AM_LIVE_REPORT": {"path": "output/additive_manufacturing_v1/live/<case>/report.json", "class": "LOCAL_OPERATIONAL_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Read provider outcome from committed freeze metadata; verify optional raw bodies against committed hashes."},
+    "MECH_LIVE_REPORT": {"path": "output/mechanical_v1/live/<case>/<run>/report.json", "class": "LOCAL_OPERATIONAL_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Read historical status and score from committed freeze metadata; keep raw availability separate."},
+    "MECH_OFFLINE_REPORT": {"path": "output/mechanical_v1/offline/<case>/report.json", "class": "REPRODUCIBLE_DERIVED_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": true, "strategy": "Replay from source/gold and committed freeze summary; do not require saved output."},
+    "MECH_CLOSURE_SUMMARY": {"path": "output/mechanical_v1/closure_summary.json", "class": "REPRODUCIBLE_DERIVED_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": true, "strategy": "Call deterministic closure builder in the test."},
+    "PV_LIVE_REPORT": {"path": "output/photovoltaics_v1/live/<case>/report.json", "class": "LOCAL_OPERATIONAL_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Read the committed no-payload history; report local body unavailable."},
+    "MEM_NORMALIZATION": {"path": "output/membranes_v1/provider_runs/<case>/<run>/normalization_audit_v1.json", "class": "REPRODUCIBLE_DERIVED_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Use committed normalization summary when local files are absent; hash-check any present raw body."},
+    "SEM_NORMALIZATION": {"path": "output/semiconductors_v1/provider_runs/<case>/<run>/normalized_*.json", "class": "REPRODUCIBLE_DERIVED_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Use committed per-run normalization metadata; verify any present derivatives and raw bodies by hash."},
+    "SEM_REPAIR_REPLAY": {"path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/<run>/repair_replay.json", "class": "REPRODUCIBLE_DERIVED_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Use committed repair outcome and error locations if the historical artifact is absent."},
+    "TE_PROVIDER_REPORT": {"path": "output/thermoelectrics_v1/provider_runs/<case>/<run>/report.json", "class": "LOCAL_OPERATIONAL_ARTIFACT", "scientifically_authoritative": false, "reproducible_from_committed_files": false, "strategy": "Rebuild deterministic case/closure fields, retain committed historical run metadata, and verify any present raw body."}
+  },
+  "failures": [
+    {"test": "test_additive_manufacturing_closure.py::test_eight_case_additive_manufacturing_v1_closure_is_freeze_ready", "domain": "additive_manufacturing", "category": "A", "artifact_id": "AM_LIVE_REPORT"},
+    {"test": "test_additive_manufacturing_closure.py::test_review_and_negative_controls_remain_noncanonical_at_closure", "domain": "additive_manufacturing", "category": "A", "artifact_id": "AM_LIVE_REPORT"},
+    {"test": "test_additive_manufacturing_freeze.py::test_am_freeze_manifest_matches_locks_gold_and_live_closure", "domain": "additive_manufacturing", "category": "A", "artifact_id": "AM_LIVE_REPORT"},
+    {"test": "test_mechanical_closure.py::test_mechanical_v1_eight_case_closure_passes_exactly_30_invariants", "domain": "mechanical", "category": "A", "artifact_id": "MECH_LIVE_REPORT"},
+    {"test": "test_mechanical_closure.py::test_closure_does_not_report_one_heterogeneous_aggregate_percentage", "domain": "mechanical", "category": "A", "artifact_id": "MECH_LIVE_REPORT"},
+    {"test": "test_mechanical_closure.py::test_provider_unavailability_is_not_scored_as_zero", "domain": "mechanical", "category": "A", "artifact_id": "MECH_LIVE_REPORT"},
+    {"test": "test_mechanical_freeze.py::test_mechanical_freeze_manifest_matches_locked_sources_gold_and_closure", "domain": "mechanical", "category": "B", "artifact_id": "MECH_CLOSURE_SUMMARY"},
+    {"test": "test_mechanical_cross_case_invariants.py::test_all_twenty_cross_case_invariants_pass", "domain": "mechanical", "category": "B", "artifact_id": "MECH_OFFLINE_REPORT"},
+    {"test": "test_mechanical_cross_case_invariants.py::test_interim_summary_avoids_heterogeneous_aggregate_score", "domain": "mechanical", "category": "B", "artifact_id": "MECH_OFFLINE_REPORT"},
+    {"test": "test_mechanical_cross_case_invariants.py::test_interim_summary_reports_no_canonical_contamination", "domain": "mechanical", "category": "B", "artifact_id": "MECH_OFFLINE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_all_eight_offline_cases_pass_frozen_gold", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_compute_case_is_calculation_only_and_analytics_are_computational", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_review_and_negative_controls_have_zero_canonical_analytics_contamination", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_mixed_case_preserves_modalities_and_device_association", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_closure_passes_all_35_scientific_invariants", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_photovoltaics_closure_cases.py::test_locked_live_statuses_are_preserved_as_unavailable_not_zero", "domain": "photovoltaics", "category": "A", "artifact_id": "PV_LIVE_REPORT"},
+    {"test": "test_membranes_closure.py::test_membranes_closure_passes_all_forty_invariants", "domain": "membranes", "category": "B", "artifact_id": "MEM_NORMALIZATION"},
+    {"test": "test_semiconductors_closure.py::test_closure_has_40_real_checks_and_zero_contamination", "domain": "semiconductors", "category": "G", "artifact_id": "SEM_NORMALIZATION"},
+    {"test": "test_semiconductors_closure.py::test_four_normalized_runs_are_append_only_and_independently_scored", "domain": "semiconductors", "category": "G", "artifact_id": "SEM_NORMALIZATION"},
+    {"test": "test_semiconductors_closure.py::test_transport_b_repair_replay_records_seven_specific_schema_errors", "domain": "semiconductors", "category": "G", "artifact_id": "SEM_REPAIR_REPLAY"},
+    {"test": "test_thermoelectrics_closure.py::test_freeze_manifest_requires_and_records_real_scored_gemini_payload", "domain": "thermoelectrics", "category": "A", "artifact_id": "TE_PROVIDER_REPORT"}
+  ],
+  "authoritative_scientific_artifacts_missing": [],
+  "note": "Categories describe the first observed clean-checkout failure, not all transitive artifacts that a given test may touch. Paths are repository-relative patterns. No provider call was made."
+}

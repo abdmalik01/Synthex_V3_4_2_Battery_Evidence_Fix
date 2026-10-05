@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-MIXED-H",
+  "source_title": "Lead iodide perovskite light-emitting field-effect transistor",
+  "doi": "10.1038/ncomms8383",
+  "article_url": "https://www.nature.com/articles/ncomms8383",
+  "article_file": "corpus_pdfs/SEM-MIXED-H.pdf",
+  "article_sha256": "b55f428cc72bb09436644be1181ea913ead5098ea9894acc5d1218e78e784e47",
+  "article_page_count": 9,
+  "gold_file": "gold_mixed_h.json",
+  "gold_sha256": "ab9f82e84b65ecd9fa1b9aadf35757a53e6da786f0b8312049379fa0b2507fc4",
+  "source_origin": "official_publisher_open_access_pdf",
+  "decisive_pages": [2, 4, 5, 7]
+}

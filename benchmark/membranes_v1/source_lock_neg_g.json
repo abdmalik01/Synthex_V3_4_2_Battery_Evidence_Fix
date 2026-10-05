@@ -1,0 +1,9 @@
+{
+  "case_id": "MEM-NEG-G",
+  "status": "locked_before_recovery",
+  "article_file": "corpus_pdfs/mem_neg_g_battery_separator.pdf",
+  "article_sha256": "57b07b46ae0b4009a8447150970e58efaf1692bb7d041728b57e086ba18b222e",
+  "article_page_count": 16,
+  "gold_file": "gold_neg_g.json",
+  "gold_sha256": "87e016b23e965e0671b429609586ac87d149a1024cee08103a615329e2e80814"
+}

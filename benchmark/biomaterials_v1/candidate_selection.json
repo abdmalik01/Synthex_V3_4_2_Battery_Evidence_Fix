@@ -1,0 +1,28 @@
+{
+  "status": "historical_selection_completed_no_payload",
+  "status_at_selection_time": "pending_fresh_authorization",
+  "provider": "gemini",
+  "discovery_artifact": "output/biomaterials_v1/provider_runs/model_discovery/20261001T180555074625Z.json",
+  "discovery_sha256": "bc682afe886fd49e76a4610adf30fa1973f400fe5ad1db4518d2a119923d9848",
+  "discovered_at_utc": "2026-10-01T18:05:55.074772+00:00",
+  "eligible_general_text_count": 18,
+  "previous_eligible_general_text_count": 18,
+  "newly_listed_ids": [],
+  "previously_listed_ids_now_missing": [],
+  "previous_provider_history": {
+    "models/gemini-3.8-flash": "3 x 503; no payload; exhausted",
+    "models/gemini-3.5-flash": "3 x 503; no payload; exhausted",
+    "models/gemini-2.5-flash": "1 x 404; no payload; unavailable to this request"
+  },
+  "selected_exact_models": [
+    {"model_id": "models/gemini-3.7-flash", "reason": "Freshly listed with generateContent, 1048576 input-token limit and no prior Biomaterials attempt."},
+    {"model_id": "models/gemini-3.6-flash", "reason": "Freshly listed with generateContent, 1048576 input-token limit and no prior Biomaterials attempt."},
+    {"model_id": "models/gemini-3.1-pro-preview", "reason": "Untried Pro-family comparator; freshly listed with generateContent and 1048576 input-token limit."}
+  ],
+  "source_candidates_in_order": ["BIO-GOLD-A", "BIO-BIOACT-B"],
+  "maximum_transient_attempts_per_model": 3,
+  "source_transmitted_by_discovery_or_selection": false,
+  "gold_will_be_transmitted": false,
+  "live_runner_activation": "subsequently authorized and attempted for BIO-GOLD-A only; all selected models returned no payload",
+  "BIO_LIVE_GATE_SATISFIED": false
+}

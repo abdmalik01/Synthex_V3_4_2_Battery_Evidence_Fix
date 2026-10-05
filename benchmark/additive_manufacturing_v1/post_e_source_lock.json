@@ -1,0 +1,10 @@
+{
+  "case_id": "AM-POST-E",
+  "source_file": "corpus_pdfs/materials-16-07557.pdf",
+  "source_sha256": "287be6b5443f3f344b01f1a23ae17e9d17ffa0b897ac7a3babd64b54d836324c",
+  "gold_file": "post_e_gold.json",
+  "gold_sha256": "72912ae6f8fe2d483f116f1a08f397e6dfe48f9c0a4d13c55b38c5f1b11eae60",
+  "official_url": "https://www.mdpi.com/1996-1944/16/24/7557",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0
+}

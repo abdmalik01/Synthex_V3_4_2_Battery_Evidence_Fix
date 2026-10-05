@@ -1,0 +1,17 @@
+# JSONL/archive concurrency and recovery audit
+
+The only active append-mode application JSONL writer was `JsonlArchiveStore`: it used text-mode `open("a")`, had no interprocess lock or fsync, and the API's `get`-then-`append` duplicate check raced. `data/graph/*.jsonl` is a derived whole-file export, not an append log. Provider reports are separate immutable artifacts; `provider_history.json` and `latest_run.json` are derived indexes/pointers, not authorities. See `jsonl_inventory.json` for classification.
+
+## Contract and implementation
+
+`JsonlLog` uses a process-local reentrant mutex and an OS byte-range lock on a stable sidecar `.lock` file. Every reader and writer uses that lock. A writer validates the complete existing log, checks stable identity when supplied, appends one UTF-8 JSON object plus `\n` via `O_APPEND`, and fsyncs before reporting success. Archive identity is `metadata.archive_id`; identical replay is a no-op, conflicting replay raises. Scientifically distinct archives with different IDs are never value-deduplicated. `JsonlArchiveStore.rebuild_index()` derives archive ID → ordinal solely from authoritative rows and rejects historical duplicate IDs. Job identity and state are in the separate job journal.
+
+The supported mode is multiple threads and multiple local worker processes on a filesystem honoring Windows byte-range locks or POSIX `flock`. The sidecar file is intentionally retained: an abandoned process releases its OS lock automatically, so deleting a perceived “stale lock file” is neither necessary nor safe. Distributed hosts/shared-storage locking semantics are unsupported. A lock around each append does not make a larger multi-file transaction atomic.
+
+Readers take a locked snapshot, so they never observe an in-progress append. Any malformed or unterminated line raises `CorruptJsonlError`; writers refuse to extend a damaged log. A valid unterminated final JSON object can be newline-completed. An invalid trailing fragment can be removed only by explicit `recover_trailing_partial()`: it first fsyncs a byte-for-byte `.bak` and JSON audit with SHA-256 hashes, then repairs under the same lock. Interior or newline-terminated malformed entries require manual investigation; no scientifically valid historical line is silently rewritten. A crash after write but before fsync may leave a complete row or a partial tail; callers must inspect/reconcile after restart instead of assuming success.
+
+## Evidence and limitations
+
+Focused tests cover 32 thread and 24 process writers, ID replay/conflict, malformed and partial tails, valid unterminated line, reader/writer overlap, long Windows paths, non-ASCII data, and injected fsync failure. The former race is reproduced by the old API's separate duplicate check; the new `append_unique` combines check and append under one lock. Provider history remains rebuildable from immutable `output/**/report.json` files; the dashboard reads metadata snapshots and never treats a missing derived index as proof of no provider results.
+
+Remaining gaps: the graph exporter writes two derived JSONL files directly and has no atomic pair publication; consumers should regenerate it from archives after interruption. Legacy `latest_run.json` pointers can race/corrupt during concurrent writers, but immutable run directories and reports remain the authority. Directory fsync is not portable on Windows, so guarantees depend on filesystem/OS durability. This design is local-process coordination, not a distributed transaction protocol.

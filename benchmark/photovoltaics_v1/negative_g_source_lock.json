@@ -1,0 +1,11 @@
+{
+  "case_id": "PV-NEG-G",
+  "source_file": "../catalysis_v1/corpus_pdfs/materials-18-03513-v3.pdf",
+  "source_sha256": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851",
+  "gold_file": "negative_g_gold.json",
+  "gold_sha256": "ac9a9d71c17d4a16df8a6928fed6be3e5ad258d003b8f605ebd571c78d0e82a5",
+  "page_count": 18,
+  "doi": "10.3390/ma18153513",
+  "official_url": "https://www.mdpi.com/1996-1944/18/15/3513",
+  "license": "CC BY 4.0"
+}

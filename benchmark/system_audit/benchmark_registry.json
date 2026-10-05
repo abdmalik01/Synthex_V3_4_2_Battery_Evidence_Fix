@@ -1,0 +1,2180 @@
+{
+  "cases": [
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-COAT-B",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "140afc8611181d10c9de3b3719ae43d24e803049f79b05b152a243f637d6d452"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 2.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "coating_surface_treatment",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-DFT-F",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "378fcfd4ee2a28487282a0a9602d7264d5fb25c201ba33425de3d564c57e851d"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 6.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "computational_corrosion",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-EIS-D",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "11a905e87aaf5efc7e388d59e1af75b33561738102cddff7ffb90da31c9adb1f"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/materials-16-00546-v2.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "eis_heavy",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-GOLD-A",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "2d39afe59cc953bfbccf32d185a9d025fc53471adce741528f4b9997e5a1f065"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 1.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "bare_alloy_polarization",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-INHIB-C",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "15dcb0661681f1b284820a0bc3210cc94e8d73a449937f3a75c1fd19c242ffd2"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 3.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "corrosion_inhibitor",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-NEGATIVE-H",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "2f3535cbaaa03b21e469d9832888730d97bf80bcf1b5c55bb8d34203956f6d15"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 9.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "non_corrosion_negative_control",
+      "expected_route": "batteries",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-REVIEW-G",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "eb73abe790a6aab16a34738266ee0bc472c2c519ef840aeb2f0ab90eb8f100bf"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 7.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "review_contamination_control",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "corrosion",
+      "case_id": "CORR-WEIGHT-E",
+      "manifest": "benchmark/corrosion_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "3af6ea0b782f97b304053e8cfd83d123d527b46569c53474fa3953d726b3130b"
+      },
+      "gold_sha256": null,
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/corrosion_v1/corpus pdfs/Corrosion 5.pdf"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "immersion_weight_loss",
+      "expected_route": "corrosion",
+      "deterministic_output_count": null,
+      "recovered_output_count": null,
+      "experiments": null,
+      "calculations": null,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-COMPUTE-F",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "3aa748516b93d7cdbf416ea5db8330742b5c17af5fe3511e0c0dd5bc7089fdf3"
+      },
+      "gold_sha256": "e43e9c5aa43a91520e001854a88098a494c01bf7d033ee6ba22b3f6a38ed434f",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/metals-12-02121.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/compute_f_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "computational_mechanics",
+      "expected_route": null,
+      "deterministic_output_count": 28,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 4,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-CREEP-B",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "0e0b8d792564ac6050824486fe0ae099b4fec559459d40aa173ad990839bfb7c"
+      },
+      "gold_sha256": "292dbed896a676148b92927551d4117adeb08bc59f452561bd17821ce471f711",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/metals-11-00830.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/creep_b_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "creep_stress_rupture",
+      "expected_route": null,
+      "deterministic_output_count": 38,
+      "recovered_output_count": null,
+      "experiments": 13,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-FATIGUE-C",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "3d992e8c7341000b98f5fdc3ea2b32d1f8ac443455a3059afe8900e799e0ddd0"
+      },
+      "gold_sha256": "b91fdf7af7df91796a868ff44e9c81032b43d622bab5fbc8e57bd2b975c09aca",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/metals-13-00621.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/fatigue_c_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "fatigue_testing",
+      "expected_route": null,
+      "deterministic_output_count": 101,
+      "recovered_output_count": null,
+      "experiments": 60,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-FRACTURE-E",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "1166ad7b5831aae12f58e551882cabbfc6b4fc7d08a9ed8a6a9a92a0788b1614"
+      },
+      "gold_sha256": "2ad4e11d58966a63a33e9288831ad752b7359d1af683217661134749e4345a2d",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/materials-14-05875.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/fracture_e_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "fracture_toughness",
+      "expected_route": null,
+      "deterministic_output_count": 27,
+      "recovered_output_count": null,
+      "experiments": 27,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-GOLD-A",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24"
+      },
+      "gold_sha256": "60f1ca1f1c2dc74c94cb33296011ea5651b738ac70c803dda66cddf817d5c9e0",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/metals-08-00393.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/gold_a_contract.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "tensile_testing",
+      "expected_route": null,
+      "deterministic_output_count": 18,
+      "recovered_output_count": null,
+      "experiments": 6,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-HARD-D",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a"
+      },
+      "gold_sha256": "72c622c1447546b332488fbee8ed7cb38ea4b4440b5479152e57adcd32db694f",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/metals-11-01014.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/hard_d_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "hardness_testing",
+      "expected_route": null,
+      "deterministic_output_count": 18,
+      "recovered_output_count": null,
+      "experiments": 18,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-NEGATIVE-H",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "41fcb4389ee30a16169276009605f7878885bc0daa31ef7a1ee2074de228b5b7"
+      },
+      "gold_sha256": "dea7ebe484f1a031212d501f006fddedad2824969f0183e93dcafa0a839f6f58",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/batteries_v1/corpus_pdfs/1-s2.0-S2666386426002407-main.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/negative_h_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "non_mechanical_negative_control",
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "mechanical",
+      "case_id": "MECH-REVIEW-G",
+      "manifest": "benchmark/mechanical_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "791df92c3afd42061d9518a9a9c23e73819827d195dda8dececb5c3669bac9a3"
+      },
+      "gold_sha256": "6ece22e51c0251503240a8527ada9f39a7c2d6ac1f3e65b91da35da26cfa5d36",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/mechanical_v1/corpus_pdfs/materials-13-04301.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/mechanical_v1/review_g_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "review_contamination_control",
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 2,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-COMPUTE-F",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "3a5df44beec34fcd180d3df13ed23d56862621a3ef603c0145ec1613f657d22a"
+      },
+      "gold_sha256": "18247ca6ee439ce9c2218f7243b2fc385ceda878b056c115b6439abc77a4397c",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-12-01853.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/compute_f_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "computational_am",
+      "expected_route": null,
+      "deterministic_output_count": 2,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 2,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-DENS-B",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "8f5b8663449be7870fc4cec1ca61d6aff04cc23bb5bf61eafb9ad20f7427af2e"
+      },
+      "gold_sha256": "aa3ea434596dc3f56017e7d0ea9d86efdf7fef4d083bfbcb6674b3217ca2e4ea",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/coatings-11-01562.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/dens_b_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "lpbf_density_defects",
+      "expected_route": null,
+      "deterministic_output_count": 9,
+      "recovered_output_count": null,
+      "experiments": 9,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-GOLD-A",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "7d7ee37f59c77f2fd922dd10c4c330690de40f1ab4e6a54c49b74aea242878e9"
+      },
+      "gold_sha256": "9d4d66f0b54cf2a1757ba19adc31dda1df113519a7bbf258647a3de56a2adb51",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-14-00165.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/gold_a_contract.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "lpbf_process_density",
+      "expected_route": null,
+      "deterministic_output_count": 27,
+      "recovered_output_count": null,
+      "experiments": 27,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-MECH-D",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "ded2c3bfd4f028004d799bb6eea7d0e89a53bdfa90ba9de3d6af54e4e30e4be3"
+      },
+      "gold_sha256": "ef317234132769eebe87a6e34f64e5767a7d7c40b6da4b3f422a3e166ccf6dde",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-11-00619.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/mech_d_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "am_mechanical_interoperability",
+      "expected_route": null,
+      "deterministic_output_count": 36,
+      "recovered_output_count": null,
+      "experiments": 12,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-MICRO-C",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "c58e6b54e7051e2742b9f584969b6744c8055c1c27f3283d6a5eb36bd216aa1b"
+      },
+      "gold_sha256": "60b40b09f842e71229fdfd8203b9837e93400d9781a597cd716eee98e12366d9",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-18-00032.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/micro_c_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "lpbf_microstructure_texture",
+      "expected_route": null,
+      "deterministic_output_count": 80,
+      "recovered_output_count": null,
+      "experiments": 16,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-NEGATIVE-H",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "91a6457b87f4ebc1e2acfb74b5c104df61be3fdcb91f1fa0f4f691a50905aa56"
+      },
+      "gold_sha256": "e58e74c0a180d6f6bb33d1063c4392d61068e51b573492050c5f9146be1fa7cb",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/batteries_v1/corpus_pdfs/batteries-11-00142.pdf",
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/batteries-11-00142-negative.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/negative_h_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "non_am_negative_control",
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-POST-E",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "287be6b5443f3f344b01f1a23ae17e9d17ffa0b897ac7a3babd64b54d836324c"
+      },
+      "gold_sha256": "72912ae6f8fe2d483f116f1a08f397e6dfe48f9c0a4d13c55b38c5f1b11eae60",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-16-07557.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/post_e_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "ded_post_processing",
+      "expected_route": null,
+      "deterministic_output_count": 24,
+      "recovered_output_count": null,
+      "experiments": 8,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case_id": "AM-REVIEW-G",
+      "manifest": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "c9fabb9b063758a92f6711bf2dbc5a762e8f4c44137f39d5dcac3a07b21ab003"
+      },
+      "gold_sha256": "4b472ede91058638d229a076928cc9033f51b3de01b9aab1485e8649a12e71a3",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-11-01831-v2.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/additive_manufacturing_v1/review_g_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": "review_contamination_control",
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 3,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-COMPUTE-E",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "e72d7d7c45add862b93a96535cbb367accf6dc2c3541c0f139716e1d6e7f0e04"
+      },
+      "gold_sha256": "cbc4bd290e7a15af0d25b3792c1ebdc5c0586741ba15f7b2ae55bf8f54736a5e",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/micromachines-12-01508.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/compute_e_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 20,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 5,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-GOLD-A",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d"
+      },
+      "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+          "benchmark/photovoltaics_v1/corpus_pdfs/energies-13-00585-v2.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/gold_a.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 20,
+      "recovered_output_count": null,
+      "experiments": 4,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-MIXED-H",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e"
+      },
+      "gold_sha256": "f3fca86ef0f58cbb2d9e4c62ac5590dd61845ce7dda461ae7d0303c9100c73d3",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/nature-communications-15-4136.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/mixed_h_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 9,
+      "recovered_output_count": null,
+      "experiments": 6,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-NEG-G",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851"
+      },
+      "gold_sha256": "ac9a9d71c17d4a16df8a6928fed6be3e5ad258d003b8f605ebd571c78d0e82a5",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/catalysis_v1/corpus_pdfs/materials-18-03513-v3.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/negative_g_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": "catalysis",
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-REVIEW-F",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "9d4f2f6edfa5f3dc3e2b9982588c4a9dccd7ad62acaad4e1d91386c1c4e1adcf"
+      },
+      "gold_sha256": "c209111e1148b5371936da6a29d4f4187b50964c2ba3ffd9b6f8b1fc63ad883b",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/coatings-12-01089-v2.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/review_f_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": 8,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-SPEC-B",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e",
+        "source_data_sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88"
+      },
+      "gold_sha256": "0cdfaf1cf70f8eadafb32a11ff2f772d44c138239c0234cbdccea7e38cdf9ed8",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/nature-communications-15-1830.pdf"
+        ],
+        "source_data_sha256": [
+          "benchmark/photovoltaics_v1/corpus_data/nature-communications-15-1830-source-data.xlsx"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/spec_b_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 223,
+      "recovered_output_count": null,
+      "experiments": 3,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-STAB-C",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "c2054ded63a1552afcbaebde71496ade8ec9069b4a0a35b9ffe9e96674635a06",
+        "supplement_sha256": "6af751b270d69a422634b4b3667d517f5325c12309d59051c0c97e1761750cc7"
+      },
+      "gold_sha256": "e9ac8ed1e69756960cd88c0dc27c9f0184ed7ddbecc63b0690f37c2b2cbe3813",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/materials-17-03002.pdf"
+        ],
+        "supplement_sha256": [
+          "benchmark/photovoltaics_v1/corpus_data/materials-17-03002-s001/materials-3043460-supplementary.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/stab_c_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 7,
+      "recovered_output_count": null,
+      "experiments": 6,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case_id": "PV-STACK-D",
+      "manifest": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "7187d879c200613213ff72fd50c847ee9e153b9d3d394f81f5ed452ff6efdd9f"
+      },
+      "gold_sha256": "8b16e84894f272756f9e8e1d193366516aec0de4efb9fb11980803832c63a0a8",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/acsaelm-3c00900.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/photovoltaics_v1/stack_d_gold.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 24,
+      "recovered_output_count": null,
+      "experiments": 6,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-ANISO-D",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+        "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31"
+      },
+      "gold_sha256": "a96513a4ff37bb83623cc70b070e8c09fe7819bf83ecdc8c02ebd8bc75dac10b",
+      "hash_matches": {
+        "article_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_article.pdf"
+        ],
+        "supplementary_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_supplementary.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_aniso_d.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 2,
+      "recovered_output_count": null,
+      "experiments": 1,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-COMPUTE-E",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "fcf159660f8cb0134a4ce513d287035fceb457fd19e77110572e8cbcf897c452"
+      },
+      "gold_sha256": "d5df7e64b571580e7db84ff15c5aad8ee623c5ec0ffbae75e08b9461b6a66628",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-COMPUTE-E_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_compute_e.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 30,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 5,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-DERIVED-C",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "6973a49fe61a0df5256b35e767bc7e888eda09e39f3f2a5594fc50eb6cc5c09f",
+      "hash_matches": {
+        "fig4_source_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig4_source_data.xlsx"
+        ],
+        "fig5_source_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig5_source_data.xlsx"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_derived_c.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 90,
+      "recovered_output_count": null,
+      "experiments": 5,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-GOLD-A",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "link_only_source": {
+        "source_hash_key": "supplementary_file_sha256",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41563-021-01064-6/MediaObjects/41563_2021_1064_MOESM1_ESM.pdf",
+        "local_status": "not_available_locally"
+      },
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87",
+      "hash_matches": {
+        "article_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-GOLD-A_article.pdf"
+        ],
+        "supplementary_file_sha256": [],
+        "fig4_source_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig4_source_data.xlsx"
+        ],
+        "fig5_source_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig5_source_data.xlsx"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_a.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 102,
+      "recovered_output_count": null,
+      "experiments": 6,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-MIXED-H",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+        "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31"
+      },
+      "gold_sha256": "da938c47ede1f3dc7497ae6e7490f91136dd4a186597e4ca0bee06dfe3d637b5",
+      "hash_matches": {
+        "article_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_article.pdf"
+        ],
+        "supplementary_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_supplementary.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_mixed_h.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 6,
+      "recovered_output_count": null,
+      "experiments": 2,
+      "calculations": 1,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-NEG-G",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e"
+      },
+      "gold_sha256": "26b718d8703c395e0a1c8318b0feef065604c5a63911cb03a283a3105db43faf",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/photovoltaics_v1/corpus_pdfs/nature-communications-15-4136.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_neg_g.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": "photovoltaics",
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-REVIEW-F",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "source_sha256": "aded4fe9c479ebdcf3a14e28c4c4f71f77b18482653363a19e7b26d353713153"
+      },
+      "gold_sha256": "2f51ae2d8c57a16fff155b08bbe7512da511c502e4b1c259ad3fe1396a13aece",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_pdfs/TE-REVIEW-F_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_review_f.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "thermoelectrics",
+      "case_id": "TE-SERIES-B",
+      "manifest": "benchmark/thermoelectrics_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "485a970d1e60a0e3b949fc7b0eef96c3b89c00968fb087cd9c78399bbbf8454b",
+      "hash_matches": {
+        "fig5_source_file_sha256": [
+          "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig5_source_data.xlsx"
+        ],
+        "gold_sha256": [
+          "benchmark/thermoelectrics_v1/gold_series_b.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 198,
+      "recovered_output_count": null,
+      "experiments": 9,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-COMPUTE-E",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "7882e1036fd9c2ef6cfd42c870c5ff73a7c1334bf16c7c6cd31daa690ce732d7"
+      },
+      "gold_sha256": "b94734c7679e3a9820c4dd70c99a21b0e73a37d3f872d601ce87302ca0e00996",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/mem_compute_e_lipid_md.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_compute_e.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 32,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 16,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-GOLD-A",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015"
+      },
+      "gold_sha256": "433b0c034746e74cf35d86c37ba3435c2fd66f0bbbfa792cf0d1ffe0fd78e7d3",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/MEM-GOLD-A_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_a.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 12,
+      "recovered_output_count": null,
+      "experiments": 4,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-MIXED-H",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "539220a731517215b84db3991fc80647d15a61fd03f04ffbf6b3810349734bc2"
+      },
+      "gold_sha256": "83348bfac12c9f9429092b95a35499204ee41af0d2b9fa371cd87658022f0501",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/mem_mixed_h_sps_tio2.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_mixed_h.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 18,
+      "recovered_output_count": null,
+      "experiments": 9,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-NEG-G",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "57b07b46ae0b4009a8447150970e58efaf1692bb7d041728b57e086ba18b222e"
+      },
+      "gold_sha256": "87e016b23e965e0671b429609586ac87d149a1024cee08103a615329e2e80814",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_neg_g.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": "batteries",
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-PROCESS-D",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "bb2b633c5c66b7cbfe33c08b64b4073383223074c7d9ba3dedb1d7c0d39ce5c1"
+      },
+      "gold_sha256": "5fd71268eb37128031ccfd2ea0416964f585ecf244f57f709576131cdb9874bf",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/MEM-PROCESS-D_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_process_d.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 30,
+      "recovered_output_count": null,
+      "experiments": 2,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-REVIEW-F",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "82433ab21253a63b1ad77a02ff38fd0c2f722d75dd461f202ce0f6712f14adb1"
+      },
+      "gold_sha256": "b02965c6957b2bfa48e5fdda135827d53f5a184c49ab95015821ab07d5e07be5",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/mem_review_f_polymeric_aging_review.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_review_f.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": null,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-SEP-B",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "2293180864dcb187609a133766f8d47340098233cfa68b5a10ab25000dee757c"
+      },
+      "gold_sha256": "034350edab1cd931a12d58bd3e765a5a3e4dfeb873c6fd0e6faa240da33a6a9c",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/MEM-SEP-B_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_sep_b.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 98,
+      "recovered_output_count": null,
+      "experiments": 14,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "membranes",
+      "case_id": "MEM-STAB-C",
+      "manifest": "benchmark/membranes_v1/freeze_manifest.json",
+      "source": null,
+      "doi": null,
+      "source_hashes": {
+        "article_sha256": "48c3f11b77dbe7cf8e6618f35b489c3558d73719fa635c2e4fde68bc3275592f"
+      },
+      "gold_sha256": "5aa1124cbf19d2fa2e4c9ed79683784025a830f084452396d9a1169b8588c779",
+      "hash_matches": {
+        "article_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/MEM-STAB-C_article.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/membranes_v1/gold_stab_c.json"
+        ]
+      },
+      "direct_reference_checks": {},
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 25,
+      "recovered_output_count": null,
+      "experiments": 5,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-COMPUTE-E",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-COMPUTE-E.pdf",
+      "doi": "10.1038/s41598-023-37081-5",
+      "source_hashes": {
+        "source_sha256": "41c2c0dda2b43ba11a1a7125d60ec4ef12777d185689383064f6d382af7d91c2"
+      },
+      "gold_sha256": "e047661c8749bea2dfff10ac1ee98b5737e5164131ee152df8741ccbaf2d64f0",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_compute_e.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-COMPUTE-E.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-COMPUTE-E.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_compute_e.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_compute_e.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 12,
+      "recovered_output_count": 12,
+      "experiments": 0,
+      "calculations": 12,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-GOLD-A",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-GOLD-A.pdf",
+      "doi": "10.1038/s41598-020-57532-7",
+      "source_hashes": {
+        "source_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee"
+      },
+      "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_a.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-GOLD-A.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-GOLD-A.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_a.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_a.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 20,
+      "recovered_output_count": 20,
+      "experiments": 4,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-MIXED-H",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-MIXED-H.pdf",
+      "doi": "10.1038/ncomms8383",
+      "source_hashes": {
+        "source_sha256": "b55f428cc72bb09436644be1181ea913ead5098ea9894acc5d1218e78e784e47"
+      },
+      "gold_sha256": "ab9f82e84b65ecd9fa1b9aadf35757a53e6da786f0b8312049379fa0b2507fc4",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_mixed_h.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-MIXED-H.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-MIXED-H.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_mixed_h.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_mixed_h.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 9,
+      "recovered_output_count": 9,
+      "experiments": 2,
+      "calculations": 1,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-NEG-G",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+      "doi": "10.3390/en13030585",
+      "source_hashes": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d"
+      },
+      "gold_sha256": "3aad0a8257ed0c440dba450fb89f26fff18a17c55ab2914fc91185510030da02",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_neg_g.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+          "benchmark/photovoltaics_v1/corpus_pdfs/energies-13-00585-v2.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_neg_g.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_neg_g.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-OPTICAL-C",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-OPTICAL-C.pdf",
+      "doi": "10.3390/ma15207373",
+      "source_hashes": {
+        "source_sha256": "ca41cc57dbc96d104139d71f10882b093f73489903966335793afaac921d6f02"
+      },
+      "gold_sha256": "f544ebf3f3d74d8463885ceef48d5709212902b1c88a676f7408d93b3fb87579",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_optical_c.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-OPTICAL-C.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-OPTICAL-C.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_optical_c.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_optical_c.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 13,
+      "recovered_output_count": 13,
+      "experiments": 13,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-PROCESS-D",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-PROCESS-D.pdf",
+      "doi": "10.1038/srep15001",
+      "source_hashes": {
+        "source_sha256": "30ca6625ad6f37992dad2534dbf35ca8173c701e6847720b4b8616cb8e0839aa"
+      },
+      "gold_sha256": "a405fba78b474c0641632e7d3567867b77fe5dca2a828bcfc51f8653175dcd2a",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_process_d.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-PROCESS-D.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-PROCESS-D.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_process_d.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_process_d.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 20,
+      "recovered_output_count": 20,
+      "experiments": 10,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-REVIEW-F",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-REVIEW-F.pdf",
+      "doi": "10.1038/s41699-022-00352-2",
+      "source_hashes": {
+        "source_sha256": "f0b051b3e28cf1047b437e782ed881d1c2978162bace5ffab43e9b30362b7cd9"
+      },
+      "gold_sha256": "1594ff6492adca66284a3f7cdf9022eb9794996063808998f37616be63dc287b",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_review_f.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-REVIEW-F.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-REVIEW-F.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_review_f.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_review_f.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": 2,
+      "review_noncanonical_count": 2,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "semiconductors",
+      "case_id": "SEM-TRANSPORT-B",
+      "manifest": "benchmark/semiconductors_v1/freeze_manifest.json",
+      "source": "benchmark/semiconductors_v1/corpus_pdfs/SEM-TRANSPORT-B.pdf",
+      "doi": "10.1186/s11671-015-0801-y",
+      "source_hashes": {
+        "source_sha256": "7adeb607918e4cdce6a4a869436f68077a7b2b2590ab1f75a4fe3ffbe9e3a347"
+      },
+      "gold_sha256": "3ca0014d2223801a70d04aa72e3594fcf7062671d59a4da69fac4efa62b67f66",
+      "hash_matches": {
+        "gold_sha256": [
+          "benchmark/semiconductors_v1/gold_transport_b.json"
+        ],
+        "source_sha256": [
+          "benchmark/semiconductors_v1/corpus_pdfs/SEM-TRANSPORT-B.pdf"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-TRANSPORT-B.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/semiconductors_v1/gold_transport_b.json",
+          "verified": true
+        },
+        "source_lock": {
+          "path": "benchmark/semiconductors_v1/source_lock_transport_b.json",
+          "exists": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 46,
+      "recovered_output_count": 46,
+      "experiments": 20,
+      "calculations": 0,
+      "quarantine_count": 0,
+      "review_noncanonical_count": 0,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-BIOACT-B",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-BIOACT-B.pdf",
+      "doi": "10.1038/s41598-025-18040-8",
+      "source_hashes": {
+        "source_sha256": "8db235a12556d2ca44f91d38f9a997c2d4212ef275c5103ca0215a3e141826a3"
+      },
+      "gold_sha256": "b6bee9fdce27fbe9f31634a102ff391aae82f28942758d66b2bcb199802d00b2",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-BIOACT-B.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_bioact_b.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-BIOACT-B.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_bioact_b.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 26,
+      "recovered_output_count": 26,
+      "experiments": 26,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-COMPUTE-E",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-COMPUTE-E.pdf",
+      "doi": "10.1038/s41598-017-15219-6",
+      "source_hashes": {
+        "source_sha256": "9e4a98f8020f941a60b3dd9104a73398592ff5601c0260745f1938f4294457d3"
+      },
+      "gold_sha256": "ee61e372936b89b9c6ed9b63860a8ebf0215d4e2ea398088819baa0d13d679b3",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-COMPUTE-E.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_compute_e.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-COMPUTE-E.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_compute_e.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 32,
+      "recovered_output_count": 32,
+      "experiments": 0,
+      "calculations": 16,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-DEGR-C",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-DEGR-C.pdf",
+      "doi": "10.1038/s41598-026-53640-y",
+      "source_hashes": {
+        "source_sha256": "a9488aa8e5c525bbf6a19f35aafd9f294c3e2037e78460f07fd60c6b89d4927d"
+      },
+      "gold_sha256": "b1e939e92077e3a7a1f7b7887a4ec6b919412f7c507b749c51ab3d7199a507fb",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-DEGR-C.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_degr_c.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-DEGR-C.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_degr_c.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 18,
+      "recovered_output_count": 18,
+      "experiments": 9,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-GOLD-A",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-GOLD-A.pdf",
+      "doi": "10.1038/s41598-018-21274-4",
+      "source_hashes": {
+        "source_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d"
+      },
+      "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-GOLD-A.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_a.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-GOLD-A.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_a.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 36,
+      "recovered_output_count": 36,
+      "experiments": 32,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-MIXED-H",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-MIXED-H.pdf",
+      "doi": "10.1038/s41598-019-55034-9",
+      "source_hashes": {
+        "source_sha256": "e5d008e132deffab1a132a214b666f3451bfdee0670436c35fac4a19359ee71a"
+      },
+      "gold_sha256": "9fff696abc8fe89e49f8472d9a2ac2f3ab987ad7033ce591ff02f7f9f266af59",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-MIXED-H.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_mixed_h.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-MIXED-H.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_mixed_h.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 25,
+      "recovered_output_count": 25,
+      "experiments": 20,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-NEG-G",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf",
+      "doi": "10.3390/membranes11010041",
+      "source_hashes": {
+        "source_sha256": "57b07b46ae0b4009a8447150970e58efaf1692bb7d041728b57e086ba18b222e"
+      },
+      "gold_sha256": "ee6010ef48d4538eb72d1d5917a48c8a4f78678223023cbc53c555519a7625c2",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_neg_g.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_neg_g.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-PROCESS-D",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-PROCESS-D.pdf",
+      "doi": "10.1038/s41598-024-67478-9",
+      "source_hashes": {
+        "source_sha256": "a7868fccf239734709a12e9e30b4dbcaa1907b44151a613c7ee286b41224c714"
+      },
+      "gold_sha256": "859e37d40f22fea8e742ff0d430bfc4a680d7148c1bb10952bee1d327a417a70",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-PROCESS-D.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_process_d.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-PROCESS-D.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_process_d.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 21,
+      "recovered_output_count": 21,
+      "experiments": 7,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    },
+    {
+      "domain": "biomaterials",
+      "case_id": "BIO-REVIEW-F",
+      "manifest": "benchmark/biomaterials_v1/closure_audit.json",
+      "source": "benchmark/biomaterials_v1/corpus_pdfs/BIO-REVIEW-F.pdf",
+      "doi": "10.3390/jfb3020432",
+      "source_hashes": {
+        "source_sha256": "95bd62f1e633923e3e66514ead8f11b84bdb3008252219a7dc6072a00d92a13c"
+      },
+      "gold_sha256": "d1e3b9f4ffbd4df00a13aecc980ba45843cab1d254f63518113718e2ec250d11",
+      "hash_matches": {
+        "source_sha256": [
+          "benchmark/biomaterials_v1/corpus_pdfs/BIO-REVIEW-F.pdf"
+        ],
+        "gold_sha256": [
+          "benchmark/biomaterials_v1/gold_review_f.json"
+        ]
+      },
+      "direct_reference_checks": {
+        "source": {
+          "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-REVIEW-F.pdf",
+          "verified": true
+        },
+        "gold": {
+          "path": "benchmark/biomaterials_v1/gold_review_f.json",
+          "verified": true
+        }
+      },
+      "benchmark_type": null,
+      "expected_route": null,
+      "deterministic_output_count": 0,
+      "recovered_output_count": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "quarantine_count": null,
+      "review_noncanonical_count": null,
+      "invariant_status": null,
+      "evidence_status": null,
+      "ownership_status": null
+    }
+  ],
+  "case_count": 64,
+  "scope": "manifest_case_records_only; legacy cases not standardized"
+}

@@ -1,0 +1,203 @@
+{
+  "additive_manufacturing": {
+    "runs": 5,
+    "cases": [
+      "AM-DENS-B",
+      "AM-GOLD-A",
+      "AM-MECH-D",
+      "AM-MICRO-C",
+      "AM-POST-E"
+    ],
+    "exact_models": [
+      "gemini-3.5-flash"
+    ],
+    "payload_yes": 5,
+    "payload_no": 0,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 5,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 0,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 0,
+    "error_classes": {
+      "provider_unavailable": 2
+    }
+  },
+  "biomaterials": {
+    "runs": 6,
+    "cases": [
+      "BIO-GOLD-A"
+    ],
+    "exact_models": [
+      "models/gemini-2.5-flash",
+      "models/gemini-3.1-pro-preview",
+      "models/gemini-3.5-flash",
+      "models/gemini-3.6-flash",
+      "models/gemini-3.7-flash",
+      "models/gemini-3.8-flash"
+    ],
+    "payload_yes": 0,
+    "payload_no": 6,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 0,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 0,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 0,
+    "error_classes": {
+      "INVALID_REQUEST": 1,
+      "RATE_LIMITED": 1,
+      "TRANSIENT_UNAVAILABLE": 4
+    }
+  },
+  "corrosion": {
+    "runs": 6,
+    "cases": [
+      "CORR-COAT-B",
+      "CORR-DFT-F",
+      "CORR-EIS-D",
+      "CORR-GOLD-A",
+      "CORR-INHIB-C",
+      "CORR-WEIGHT-E"
+    ],
+    "exact_models": [
+      "gemini-3.5-flash"
+    ],
+    "payload_yes": 6,
+    "payload_no": 0,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 1,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 0,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 0,
+    "error_classes": {}
+  },
+  "mechanical": {
+    "runs": 9,
+    "cases": [
+      "MECH-COMPUTE-F",
+      "MECH-CREEP-B",
+      "MECH-FATIGUE-C",
+      "MECH-FRACTURE-E",
+      "MECH-GOLD-A",
+      "MECH-HARD-D"
+    ],
+    "exact_models": [
+      "gemini-3.5-flash"
+    ],
+    "payload_yes": 5,
+    "payload_no": 4,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 5,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 0,
+    "canonical_admitted": 1,
+    "live_gate_qualifying": 0,
+    "error_classes": {
+      "provider_unavailable": 3
+    }
+  },
+  "membranes": {
+    "runs": 4,
+    "cases": [
+      "MEM-GOLD-A",
+      "MEM-SEP-B"
+    ],
+    "exact_models": [
+      "models/gemini-3.1-pro-preview",
+      "models/gemini-3.5-flash-lite",
+      "models/gemini-3.8-flash"
+    ],
+    "payload_yes": 2,
+    "payload_no": 2,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 2,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 2,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 2,
+    "error_classes": {
+      "RATE_LIMITED": 1,
+      "TRANSIENT_UNAVAILABLE": 1
+    }
+  },
+  "photovoltaics": {
+    "runs": 6,
+    "cases": [
+      "PV-GOLD-A",
+      "PV-SPEC-B"
+    ],
+    "exact_models": [
+      "gemini-3.5-flash",
+      "models/gemini-2.5-flash",
+      "models/gemini-3.6-flash",
+      "models/gemini-3.8-flash"
+    ],
+    "payload_yes": 1,
+    "payload_no": 5,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 1,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 1,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 1,
+    "error_classes": {
+      "provider_unavailable": 2,
+      "INVALID_REQUEST": 1,
+      "TRANSIENT_UNAVAILABLE": 3
+    }
+  },
+  "semiconductors": {
+    "runs": 4,
+    "cases": [
+      "SEM-GOLD-A",
+      "SEM-TRANSPORT-B"
+    ],
+    "exact_models": [
+      "models/gemini-3.5-flash",
+      "models/gemini-3.5-flash-lite",
+      "models/gemini-3.8-flash"
+    ],
+    "payload_yes": 4,
+    "payload_no": 0,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 4,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 4,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 0,
+    "error_classes": {
+      "TRANSIENT_UNAVAILABLE": 2,
+      "UNKNOWN_PROVIDER_ERROR": 1
+    }
+  },
+  "thermoelectrics": {
+    "runs": 10,
+    "cases": [
+      "TE-GOLD-A"
+    ],
+    "exact_models": [
+      "models/gemini-2.5-flash",
+      "models/gemini-3.1-flash-lite",
+      "models/gemini-3.1-pro-preview",
+      "models/gemini-3.5-flash",
+      "models/gemini-3.6-flash",
+      "models/gemini-3.7-flash",
+      "models/gemini-3.8-flash"
+    ],
+    "payload_yes": 1,
+    "payload_no": 9,
+    "payload_unknown": 0,
+    "raw_sha_covered_runs": 1,
+    "schema_valid_yes": 0,
+    "schema_valid_no": 1,
+    "canonical_admitted": 0,
+    "live_gate_qualifying": 0,
+    "error_classes": {
+      "INVALID_REQUEST": 1,
+      "RATE_LIMITED": 3,
+      "TRANSIENT_UNAVAILABLE": 6
+    }
+  }
+}

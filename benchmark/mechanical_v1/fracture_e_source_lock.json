@@ -1,0 +1,13 @@
+{
+  "case_id": "MECH-FRACTURE-E",
+  "status": "locked_offline_no_provider_call",
+  "source_file": "corpus_pdfs/materials-14-05875.pdf",
+  "source_sha256": "1166ad7b5831aae12f58e551882cabbfc6b4fc7d08a9ed8a6a9a92a0788b1614",
+  "source_url": "https://res.mdpi.com/d_attachment/materials/materials-14-05875/article_deploy/materials-14-05875-v2.pdf",
+  "gold_file": "fracture_e_gold.json",
+  "gold_sha256": "2ad4e11d58966a63a33e9288831ad752b7359d1af683217661134749e4345a2d",
+  "selected_tables": ["Table 6"],
+  "selected_pages": [13],
+  "method_pages": [3, 13],
+  "assertions": 27
+}

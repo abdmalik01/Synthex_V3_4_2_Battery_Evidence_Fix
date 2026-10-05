@@ -1,0 +1,12 @@
+{
+  "case_id": "TE-COMPUTE-E",
+  "doi": "10.3390/ma17102200",
+  "source_file": "corpus_pdfs/TE-COMPUTE-E_article.pdf",
+  "source_sha256": "fcf159660f8cb0134a4ce513d287035fceb457fd19e77110572e8cbcf897c452",
+  "page_count": 13,
+  "gold_file": "gold_compute_e.json",
+  "gold_sha256": "d5df7e64b571580e7db84ff15c5aad8ee623c5ec0ffbae75e08b9461b6a66628",
+  "official_url": "https://www.mdpi.com/1996-1944/17/10/2200",
+  "license": "CC BY 4.0",
+  "locked_before_provider_run": true
+}

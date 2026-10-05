@@ -1,0 +1,14 @@
+{
+  "case_id": "MEM-NEG-G",
+  "source": {
+    "title": "Multilayered PVDF-HFP Porous Separator via Phase Separation and Selective Solvent Etching for High Voltage Lithium-Ion Batteries",
+    "doi": "10.3390/membranes11010041",
+    "url": "https://www.mdpi.com/2077-0375/11/1/41",
+    "year": 2021,
+    "authors": ["Van-Tien Bui", "Van-Toan Nguyen", "Ngoc-Anh Nguyen", "Reddicherla Umapathi", "Liudmila L. Larina", "Jong Heon Kim", "Hyun-Suk Kim", "Ho-Suk Choi"]
+  },
+  "misleading_vocabulary": ["multilayer membrane", "porous", "phase separation", "layered structure", "membrane"],
+  "battery_vocabulary": ["lithium-ion batteries", "separator", "electrolyte uptake", "electrochemical performance"],
+  "expected_route": "batteries",
+  "expected_outputs": 0
+}

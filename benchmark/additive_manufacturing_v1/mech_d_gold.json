@@ -1,0 +1,33 @@
+{
+  "case_id": "AM-MECH-D",
+  "source": {
+    "title": "Analysis of As-Built Microstructures and Recrystallization Phenomena on Inconel 625 Alloy Obtained via Laser Powder Bed Fusion (L-PBF)",
+    "authors": ["Thibaut De Terris", "Olivier Castelnau", "Zehoua Hadjem-Hamouche", "Halim Haddadi", "Vincent Michel", "Patrice Peyre"],
+    "journal": "Metals",
+    "year": 2021,
+    "doi": "10.3390/met11040619",
+    "url": "https://www.mdpi.com/2075-4701/11/4/619",
+    "page_count": 22
+  },
+  "builds": {
+    "L-PBF-1": {"laser_power_w": 275, "scan_speed_mm_s": 224, "hatch_spacing_um": 75, "spot_diameter_um": 95, "layer_thickness_um": 50, "volumetric_energy_density_j_mm3": 176},
+    "L-PBF-2": {"laser_power_w": 275, "scan_speed_mm_s": 449, "hatch_spacing_um": 75, "spot_diameter_um": 95, "layer_thickness_um": 50, "volumetric_energy_density_j_mm3": 88},
+    "L-PBF-3": {"laser_power_w": 275, "scan_speed_mm_s": 897, "hatch_spacing_um": 75, "spot_diameter_um": 95, "layer_thickness_um": 50, "volumetric_energy_density_j_mm3": 44}
+  },
+  "rows": [
+    {"condition": "L-PBF-1", "orientation": "H", "heat_treated": false, "yield_strength_mpa": 601, "yield_uncertainty_mpa": 15, "uts_mpa": 908, "uts_uncertainty_mpa": 5, "elongation_pct": 14, "elongation_uncertainty_pct": 1},
+    {"condition": "L-PBF-1", "orientation": "V", "heat_treated": false, "yield_strength_mpa": 444, "yield_uncertainty_mpa": 15, "uts_mpa": 718, "uts_uncertainty_mpa": 9, "elongation_pct": 18, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-2", "orientation": "H", "heat_treated": false, "yield_strength_mpa": 610, "yield_uncertainty_mpa": 6, "uts_mpa": 907, "uts_uncertainty_mpa": 16, "elongation_pct": 12, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-2", "orientation": "V", "heat_treated": false, "yield_strength_mpa": 500, "yield_uncertainty_mpa": 24, "uts_mpa": 762, "uts_uncertainty_mpa": 24, "elongation_pct": 16, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-3", "orientation": "H", "heat_treated": false, "yield_strength_mpa": 633, "yield_uncertainty_mpa": 2, "uts_mpa": 933, "uts_uncertainty_mpa": 2, "elongation_pct": 12, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-3", "orientation": "V", "heat_treated": false, "yield_strength_mpa": 592, "yield_uncertainty_mpa": 4, "uts_mpa": 837, "uts_uncertainty_mpa": 4, "elongation_pct": 21, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-1", "orientation": "H", "heat_treated": true, "yield_strength_mpa": 368, "yield_uncertainty_mpa": 2, "uts_mpa": 828, "uts_uncertainty_mpa": 3, "elongation_pct": 25, "elongation_uncertainty_pct": 3},
+    {"condition": "L-PBF-1", "orientation": "V", "heat_treated": true, "yield_strength_mpa": 341, "yield_uncertainty_mpa": 7, "uts_mpa": 746, "uts_uncertainty_mpa": 26, "elongation_pct": 24, "elongation_uncertainty_pct": 2},
+    {"condition": "L-PBF-2", "orientation": "H", "heat_treated": true, "yield_strength_mpa": 357, "yield_uncertainty_mpa": 4, "uts_mpa": 814, "uts_uncertainty_mpa": 4, "elongation_pct": 22, "elongation_uncertainty_pct": 1},
+    {"condition": "L-PBF-2", "orientation": "V", "heat_treated": true, "yield_strength_mpa": 346, "yield_uncertainty_mpa": 9, "uts_mpa": 769, "uts_uncertainty_mpa": 1, "elongation_pct": 24, "elongation_uncertainty_pct": 1},
+    {"condition": "L-PBF-3", "orientation": "H", "heat_treated": true, "yield_strength_mpa": 379, "yield_uncertainty_mpa": 2, "uts_mpa": 835, "uts_uncertainty_mpa": 14, "elongation_pct": 23, "elongation_uncertainty_pct": 0},
+    {"condition": "L-PBF-3", "orientation": "V", "heat_treated": true, "yield_strength_mpa": 407, "yield_uncertainty_mpa": 7, "uts_mpa": 849, "uts_uncertainty_mpa": 2, "elongation_pct": 28, "elongation_uncertainty_pct": 0}
+  ],
+  "test_context": {"temperature": "room temperature", "strain_rate_s-1": 0.00333},
+  "post_process": {"temperature_c": 1100, "time_h": 3, "atmosphere": "air", "cooling": "water-quenched"}
+}

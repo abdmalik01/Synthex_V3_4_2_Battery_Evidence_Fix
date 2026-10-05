@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-NEG-G",
+  "source_title": "Effect of Surface Treatment by Chemical-Mechanical Polishing for Transparent Electrode of Perovskite Solar Cells",
+  "doi": "10.3390/en13030585",
+  "article_url": "https://www.mdpi.com/1996-1073/13/3/585",
+  "article_file": "corpus_pdfs/SEM-NEG-G.pdf",
+  "article_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+  "article_page_count": 10,
+  "gold_file": "gold_neg_g.json",
+  "gold_sha256": "3aad0a8257ed0c440dba450fb89f26fff18a17c55ab2914fc91185510030da02",
+  "source_origin": "reused_locked_official_publisher_pdf_from_PV-GOLD-A",
+  "decisive_pages": [1, 8]
+}

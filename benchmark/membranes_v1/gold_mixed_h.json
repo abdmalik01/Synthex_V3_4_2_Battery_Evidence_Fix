@@ -1,0 +1,30 @@
+{
+  "case_id": "MEM-MIXED-H",
+  "source": {
+    "title": "A Comparative Study of the Self-Cleaning and Filtration Performance of Suspension Plasma-Sprayed TiO2 Ultrafiltration and Microfiltration Membranes",
+    "doi": "10.3390/membranes13090750",
+    "url": "https://www.mdpi.com/2077-0375/13/9/750",
+    "year": 2023,
+    "authors": ["Elnaz Alebrahim", "Christian Moreau"]
+  },
+  "variants": [
+    {"id": "uf_2p", "name": "UF-2P", "type": "ultrafiltration", "spray_passes": "2", "pore_size_nm": 36.0, "thickness_um": 17.2, "thickness_uncertainty_um": 0.8, "frr_200": 96.8, "frr_400": 98.1},
+    {"id": "uf_4p", "name": "UF-4P", "type": "ultrafiltration", "spray_passes": "4", "pore_size_nm": 36.0, "thickness_um": 37.0, "thickness_uncertainty_um": 1.0, "frr_200": 96.5, "frr_400": 95.1},
+    {"id": "uf_2x4p", "name": "UF-2×4P", "type": "ultrafiltration", "spray_passes": "stacking two UF-4P", "pore_size_nm": 36.0, "thickness_um": null, "thickness_uncertainty_um": null, "frr_200": 76.9, "frr_400": 79.7},
+    {"id": "mf_12p", "name": "MF-12P", "type": "microfiltration", "spray_passes": "12", "pore_size_nm": 180.0, "thickness_um": 20.5, "thickness_uncertainty_um": 0.9, "frr_200": 94.5, "frr_400": 98.1},
+    {"id": "mf_2x12p", "name": "MF-2×12P", "type": "microfiltration", "spray_passes": "stacking two MF-12P", "pore_size_nm": 180.0, "thickness_um": null, "thickness_uncertainty_um": null, "frr_200": 80.9, "frr_400": 82.7}
+  ],
+  "self_cleaning_cycles": [
+    {"variant": "UF-2P", "values": [75.0, 68.0, 67.0]},
+    {"variant": "MF-12P", "values": [69.0, 61.0, 62.0]}
+  ],
+  "final_recovery": [
+    {"variant": "UF-2P", "value": 94.0},
+    {"variant": "MF-12P", "value": 92.0}
+  ],
+  "expected_materials": 3,
+  "expected_devices": 5,
+  "expected_processes": 5,
+  "expected_experiments": 9,
+  "expected_outputs": 18
+}

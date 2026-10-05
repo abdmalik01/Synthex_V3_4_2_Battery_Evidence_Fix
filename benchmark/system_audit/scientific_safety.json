@@ -1,0 +1,437 @@
+{
+  "by_domain": {
+    "batteries": {
+      "reported": null,
+      "basis": null,
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "catalysis": {
+      "reported": null,
+      "basis": null,
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "corrosion": {
+      "reported": {
+        "ownership": 0,
+        "evidence": 0,
+        "cross_record_leakage": 0,
+        "archive_analytics": 0
+      },
+      "basis": "benchmark/corrosion_v1/freeze_manifest.json",
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "mechanical": {
+      "reported": {
+        "ownership": 0,
+        "evidence": 0,
+        "cross_record_leakage": 0,
+        "archive_analytics": 0
+      },
+      "basis": "benchmark/mechanical_v1/freeze_manifest.json",
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "additive_manufacturing": {
+      "reported": {
+        "ownership": 0,
+        "evidence": 0,
+        "cross_record_leakage": 0,
+        "archive_analytics": 0
+      },
+      "basis": "benchmark/additive_manufacturing_v1/freeze_manifest.json",
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "photovoltaics": {
+      "reported": {
+        "ownership_contamination": 0,
+        "evidence_violations": 0,
+        "cross_record_leakage": 0,
+        "analytics_contamination": 0
+      },
+      "basis": "benchmark/photovoltaics_v1/freeze_manifest.json",
+      "basis_kind": "freeze_manifest_claim_or_expected"
+    },
+    "thermoelectrics": {
+      "reported": {
+        "analytics": 0,
+        "cross_record_leakage": 0,
+        "evidence_violations": 0,
+        "ownership": 0
+      },
+      "basis": "benchmark/thermoelectrics_v1/closure_audit.json",
+      "basis_kind": "closure_observed"
+    },
+    "membranes": {
+      "reported": {
+        "analytics": 0,
+        "cross_record_leakage": 0,
+        "evidence": 0,
+        "graph": 0,
+        "ownership": 0
+      },
+      "basis": "benchmark/membranes_v1/closure_audit.json",
+      "basis_kind": "closure_observed"
+    },
+    "semiconductors": {
+      "reported": {
+        "analytics": 0,
+        "cross_record_leakage": 0,
+        "evidence": 0,
+        "graph": 0,
+        "ownership": 0
+      },
+      "basis": "benchmark/semiconductors_v1/closure_audit.json",
+      "basis_kind": "closure_observed"
+    },
+    "biomaterials": {
+      "reported": {
+        "ownership_contamination": [],
+        "evidence_violations": [],
+        "cross_record_leakage": [],
+        "analytics_contamination": [],
+        "graph_contamination": []
+      },
+      "basis": "benchmark/biomaterials_v1/closure_audit.json",
+      "basis_kind": "closure_observed"
+    }
+  },
+  "dimensions": {
+    "evidence_violations": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "mechanical": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "additive_manufacturing": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "photovoltaics": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "thermoelectrics": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "membranes": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "semiconductors": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "biomaterials": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      }
+    },
+    "ownership_contamination": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "mechanical": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "additive_manufacturing": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "photovoltaics": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "thermoelectrics": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "membranes": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "semiconductors": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "biomaterials": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      }
+    },
+    "cross_record_leakage": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "mechanical": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "additive_manufacturing": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "photovoltaics": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "thermoelectrics": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "membranes": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "semiconductors": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "biomaterials": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      }
+    },
+    "analytics_contamination": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "mechanical": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "additive_manufacturing": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "photovoltaics": {
+        "value": 0,
+        "basis_kind": "freeze_manifest_claim_or_expected"
+      },
+      "thermoelectrics": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "membranes": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "semiconductors": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "biomaterials": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      }
+    },
+    "graph_contamination": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": null,
+        "basis_kind": null
+      },
+      "mechanical": {
+        "value": null,
+        "basis_kind": null
+      },
+      "additive_manufacturing": {
+        "value": null,
+        "basis_kind": null
+      },
+      "photovoltaics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "thermoelectrics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "membranes": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "semiconductors": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      },
+      "biomaterials": {
+        "value": 0,
+        "basis_kind": "closure_observed"
+      }
+    },
+    "unsupported_derived_value_admission": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": null,
+        "basis_kind": null
+      },
+      "mechanical": {
+        "value": null,
+        "basis_kind": null
+      },
+      "additive_manufacturing": {
+        "value": null,
+        "basis_kind": null
+      },
+      "photovoltaics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "thermoelectrics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "membranes": {
+        "value": null,
+        "basis_kind": null
+      },
+      "semiconductors": {
+        "value": null,
+        "basis_kind": null
+      },
+      "biomaterials": {
+        "value": null,
+        "basis_kind": null
+      }
+    },
+    "review_leakage": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": null,
+        "basis_kind": null
+      },
+      "mechanical": {
+        "value": null,
+        "basis_kind": null
+      },
+      "additive_manufacturing": {
+        "value": null,
+        "basis_kind": null
+      },
+      "photovoltaics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "thermoelectrics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "membranes": {
+        "value": null,
+        "basis_kind": null
+      },
+      "semiconductors": {
+        "value": null,
+        "basis_kind": null
+      },
+      "biomaterials": {
+        "value": null,
+        "basis_kind": null
+      }
+    },
+    "negative_routing_contamination": {
+      "batteries": {
+        "value": null,
+        "basis_kind": null
+      },
+      "catalysis": {
+        "value": null,
+        "basis_kind": null
+      },
+      "corrosion": {
+        "value": null,
+        "basis_kind": null
+      },
+      "mechanical": {
+        "value": null,
+        "basis_kind": null
+      },
+      "additive_manufacturing": {
+        "value": null,
+        "basis_kind": null
+      },
+      "photovoltaics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "thermoelectrics": {
+        "value": null,
+        "basis_kind": null
+      },
+      "membranes": {
+        "value": null,
+        "basis_kind": null
+      },
+      "semiconductors": {
+        "value": null,
+        "basis_kind": null
+      },
+      "biomaterials": {
+        "value": null,
+        "basis_kind": null
+      }
+    }
+  },
+  "global_aggregate": null,
+  "reason": "legacy_and_modern_audit_schemas_not_comparable; missing_dimensions_are_not_zero"
+}

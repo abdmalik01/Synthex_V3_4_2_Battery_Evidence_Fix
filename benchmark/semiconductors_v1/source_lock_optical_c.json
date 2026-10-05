@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-OPTICAL-C",
+  "status": "gold_locked_before_recovery_and_provider_call",
+  "doi": "10.3390/ma15207373",
+  "publisher_url": "https://www.mdpi.com/1996-1944/15/20/7373",
+  "article_file": "corpus_pdfs/SEM-OPTICAL-C.pdf",
+  "article_sha256": "ca41cc57dbc96d104139d71f10882b093f73489903966335793afaac921d6f02",
+  "article_page_count": 10,
+  "gold_file": "gold_optical_c.json",
+  "gold_sha256": "f544ebf3f3d74d8463885ceef48d5709212902b1c88a676f7408d93b3fb87579",
+  "decisive_tables": ["Table 1", "Table 2", "Table 3"],
+  "decisive_pages": [3, 6, 8]
+}

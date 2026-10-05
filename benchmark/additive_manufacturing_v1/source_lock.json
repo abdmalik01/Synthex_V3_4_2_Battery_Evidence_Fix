@@ -1,0 +1,18 @@
+{
+  "case_id": "AM-GOLD-A",
+  "status": "locked_offline_no_provider_call",
+  "source_file": "corpus_pdfs/materials-14-00165.pdf",
+  "local_filename": "materials-14-00165.pdf",
+  "source_sha256": "7d7ee37f59c77f2fd922dd10c4c330690de40f1ab4e6a54c49b74aea242878e9",
+  "source_url": "https://mdpi-res.com/d_attachment/materials/materials-14-00165/article_deploy/materials-14-00165-v2.pdf",
+  "doi": "10.3390/ma14010165",
+  "journal": "Materials",
+  "license": "CC BY 4.0",
+  "gold_file": "gold_a_contract.json",
+  "gold_sha256": "9d4d66f0b54cf2a1757ba19adc31dda1df113519a7bbf258647a3de56a2adb51",
+  "selected_pages": [2, 3, 4],
+  "selected_table": "Table 1",
+  "assertions": 27,
+  "locked_before_provider_call": true,
+  "provider_calls": 0
+}

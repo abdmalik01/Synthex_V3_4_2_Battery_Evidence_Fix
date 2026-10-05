@@ -1,0 +1,16 @@
+{
+  "case_id": "TE-ANISO-D",
+  "source": {
+    "title": "Demonstration of valley anisotropy utilized to enhance the thermoelectric power factor",
+    "doi": "10.1038/s41467-021-25722-0",
+    "url": "https://www.nature.com/articles/s41467-021-25722-0",
+    "year": 2021,
+    "authors": ["Jae-Hong Kim", "Minji Kim", "Hyoung-Seok Kim", "Sung Wng Kim"]
+  },
+  "material": {"name": "Ag-doped p-type Mg3Sb2 single crystal", "formula": "Mg3Sb2", "composition": {"Mg": 3.0, "Sb": 2.0}, "carrier_type": "p-type"},
+  "measurements": [
+    {"property": "lattice_thermal_conductivity", "temperature": 300.0, "orientation": "c-axis", "value": 1.6, "unit": "W/m/K", "scientific_type": "reported_derived_metric"},
+    {"property": "lattice_thermal_conductivity", "temperature": 300.0, "orientation": "ab-plane", "value": 2.3, "unit": "W/m/K", "scientific_type": "reported_derived_metric"}
+  ],
+  "expected_outputs": 2
+}

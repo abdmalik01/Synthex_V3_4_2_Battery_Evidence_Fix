@@ -1,0 +1,12 @@
+{
+  "case_id": "MECH-FATIGUE-C",
+  "status": "locked_offline_no_provider_call",
+  "source_file": "corpus_pdfs/metals-13-00621.pdf",
+  "source_sha256": "3d992e8c7341000b98f5fdc3ea2b32d1f8ac443455a3059afe8900e799e0ddd0",
+  "source_url": "https://res.mdpi.com/d_attachment/metals/metals-13-00621/article_deploy/metals-13-00621.pdf",
+  "gold_file": "fatigue_c_gold.json",
+  "gold_sha256": "b91fdf7af7df91796a868ff44e9c81032b43d622bab5fbc8e57bd2b975c09aca",
+  "selected_tables": ["Table A1", "Table A2"],
+  "selected_pages": [13, 14],
+  "assertions": 20
+}

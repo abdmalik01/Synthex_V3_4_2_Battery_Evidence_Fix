@@ -1,0 +1,472 @@
+{
+  "calculation_count": 13,
+  "canonical_output_total": 120,
+  "case_count": 8,
+  "cases": {
+    "SEM-COMPUTE-E": {
+      "analytics_rows": 12,
+      "calculations": 12,
+      "canonical_outputs": 12,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 1,
+      "noncanonical_or_review": 0,
+      "processes": 0,
+      "quarantine": 0
+    },
+    "SEM-GOLD-A": {
+      "analytics_rows": 20,
+      "calculations": 0,
+      "canonical_outputs": 20,
+      "devices": 4,
+      "experiments": 4,
+      "materials": 5,
+      "noncanonical_or_review": 0,
+      "processes": 4,
+      "quarantine": 0
+    },
+    "SEM-MIXED-H": {
+      "analytics_rows": 9,
+      "calculations": 1,
+      "canonical_outputs": 9,
+      "devices": 1,
+      "experiments": 2,
+      "materials": 2,
+      "noncanonical_or_review": 0,
+      "processes": 1,
+      "quarantine": 0
+    },
+    "SEM-NEG-G": {
+      "analytics_rows": 0,
+      "calculations": 0,
+      "canonical_outputs": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "noncanonical_or_review": 0,
+      "processes": 0,
+      "quarantine": 0,
+      "routed_domain": "photovoltaics"
+    },
+    "SEM-OPTICAL-C": {
+      "analytics_rows": 13,
+      "calculations": 0,
+      "canonical_outputs": 13,
+      "devices": 9,
+      "experiments": 13,
+      "materials": 12,
+      "noncanonical_or_review": 0,
+      "processes": 9,
+      "quarantine": 0
+    },
+    "SEM-PROCESS-D": {
+      "analytics_rows": 20,
+      "calculations": 0,
+      "canonical_outputs": 20,
+      "devices": 10,
+      "experiments": 10,
+      "materials": 11,
+      "noncanonical_or_review": 0,
+      "processes": 10,
+      "quarantine": 0
+    },
+    "SEM-REVIEW-F": {
+      "analytics_rows": 0,
+      "calculations": 0,
+      "canonical_outputs": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "noncanonical_or_review": 2,
+      "processes": 0,
+      "quarantine": 2
+    },
+    "SEM-TRANSPORT-B": {
+      "analytics_rows": 46,
+      "calculations": 0,
+      "canonical_outputs": 46,
+      "devices": 20,
+      "experiments": 20,
+      "materials": 21,
+      "noncanonical_or_review": 0,
+      "processes": 20,
+      "quarantine": 0
+    }
+  },
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence": 0,
+    "graph": 0,
+    "ownership": 0
+  },
+  "experiment_count": 49,
+  "freeze_ready": true,
+  "interim_audit_passed": true,
+  "invariants": [
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "electronic band gap != optical band gap",
+      "number": 1,
+      "passed": true
+    },
+    {
+      "evidence": "C source tables remain distinct.",
+      "name": "band gap != PL peak",
+      "number": 2,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "work function != electron affinity",
+      "number": 3,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "work function != ionization energy",
+      "number": 4,
+      "passed": true
+    },
+    {
+      "evidence": "Measured carriers not converted to dopant density.",
+      "name": "carrier concentration != dopant concentration",
+      "number": 5,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "electron concentration != hole concentration",
+      "number": 6,
+      "passed": true
+    },
+    {
+      "evidence": "Separate units and property families.",
+      "name": "mobility != conductivity",
+      "number": 7,
+      "passed": true
+    },
+    {
+      "evidence": "A Hall results retain method.",
+      "name": "Hall mobility retains Hall identity",
+      "number": 8,
+      "passed": true
+    },
+    {
+      "evidence": "Normalizer does not relabel generic mobility.",
+      "name": "generic mobility != Hall mobility without support",
+      "number": 9,
+      "passed": true
+    },
+    {
+      "evidence": "Separate families.",
+      "name": "conductivity != resistivity",
+      "number": 10,
+      "passed": true
+    },
+    {
+      "evidence": "A retains Ω/sq and Ω·cm.",
+      "name": "sheet resistance != bulk resistivity",
+      "number": 11,
+      "passed": true
+    },
+    {
+      "evidence": "Separate families.",
+      "name": "contact resistance != sheet resistance",
+      "number": 12,
+      "passed": true
+    },
+    {
+      "evidence": "Operating bias is not a threshold result.",
+      "name": "threshold voltage != operating voltage",
+      "number": 13,
+      "passed": true
+    },
+    {
+      "evidence": "Voltage and field separate.",
+      "name": "breakdown voltage != breakdown field",
+      "number": 14,
+      "passed": true
+    },
+    {
+      "evidence": "Current cannot be density without area.",
+      "name": "current != current density",
+      "number": 15,
+      "passed": true
+    },
+    {
+      "evidence": "Film thickness is a process/device parameter.",
+      "name": "film thickness != depletion width",
+      "number": 16,
+      "passed": true
+    },
+    {
+      "evidence": "Separate layer entities.",
+      "name": "substrate != semiconductor film",
+      "number": 17,
+      "passed": true
+    },
+    {
+      "evidence": "A source does not report Hall temperature.",
+      "name": "growth temperature != measurement temperature",
+      "number": 18,
+      "passed": true
+    },
+    {
+      "evidence": "B process and measurement conditions separate.",
+      "name": "annealing temperature != measurement temperature",
+      "number": 19,
+      "passed": true
+    },
+    {
+      "evidence": "A-D experimental, E computational, H five experimental/four computational results.",
+      "name": "measured != computational",
+      "number": 20,
+      "passed": true
+    },
+    {
+      "evidence": "E Table 1 band gaps are calculation-only.",
+      "name": "calculated band gap != measured band gap",
+      "number": 21,
+      "passed": true
+    },
+    {
+      "evidence": "H DFT masses and FET mobility separate.",
+      "name": "calculated effective mass != measured mobility",
+      "number": 22,
+      "passed": true
+    },
+    {
+      "evidence": "Synthetic contract probe: calculated evidence cannot be admitted as measured work function.",
+      "name": "calculated work function != measured work function",
+      "number": 23,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct energy keys; a computational defect quantity cannot be admitted as an experimental result.",
+      "name": "defect formation energy != activation energy",
+      "number": 24,
+      "passed": true
+    },
+    {
+      "evidence": "Ga/Al/F remain source-specific.",
+      "name": "dopant identity retained",
+      "number": 25,
+      "passed": true
+    },
+    {
+      "evidence": "Nominal atomic percentages kept as supplied.",
+      "name": "dopant concentration retained",
+      "number": 26,
+      "passed": true
+    },
+    {
+      "evidence": "A n-type and H electron/hole labels retained.",
+      "name": "carrier type retained",
+      "number": 27,
+      "passed": true
+    },
+    {
+      "evidence": "Every output has specimen label and calculation material.",
+      "name": "specimen identity retained",
+      "number": 28,
+      "passed": true
+    },
+    {
+      "evidence": "Both H experiments refer to the LE-FET.",
+      "name": "device identity retained",
+      "number": 29,
+      "passed": true
+    },
+    {
+      "evidence": "A remains unreported; H is source-reported 78 K.",
+      "name": "missing conditions not inferred",
+      "number": 30,
+      "passed": true
+    },
+    {
+      "evidence": "B/E only source-present cells admitted.",
+      "name": "missing values not interpolated",
+      "number": 31,
+      "passed": true
+    },
+    {
+      "evidence": "B dash cells and E missing GW cells excluded.",
+      "name": "unavailable table cells remain unavailable",
+      "number": 32,
+      "passed": true
+    },
+    {
+      "evidence": "Caption-only A value rejected.",
+      "name": "caption-only evidence cannot admit",
+      "number": 33,
+      "passed": true
+    },
+    {
+      "evidence": "N/A raw token rejected.",
+      "name": "N/A cannot become numeric",
+      "number": 34,
+      "passed": true
+    },
+    {
+      "evidence": "E/H publisher units retained; normalized mobility separate.",
+      "name": "raw units retained",
+      "number": 35,
+      "passed": true
+    },
+    {
+      "evidence": "Review citations quarantined.",
+      "name": "review values remain non-focal",
+      "number": 36,
+      "passed": true
+    },
+    {
+      "evidence": "PV source routes to PV with page-8 metrics.",
+      "name": "negative control produces zero Semiconductor contamination",
+      "number": 37,
+      "passed": true
+    },
+    {
+      "evidence": "Four raw hashes and separate normalized artifacts verified.",
+      "name": "normalized provider artifacts remain separate from raw",
+      "number": 38,
+      "passed": true
+    },
+    {
+      "evidence": "All rows retain specimen/property/modality; H experimental analytics retain process lineage.",
+      "name": "analytics retain material/specimen/process/property/modality identity",
+      "number": 39,
+      "passed": true
+    },
+    {
+      "evidence": "Seven SEM archives; negative source remains PV.",
+      "name": "archive/domain scoping correct",
+      "number": 40,
+      "passed": true
+    }
+  ],
+  "live_gate_satisfied": true,
+  "negative_route": "photovoltaics",
+  "passed_invariants": 40,
+  "provider_runs": [
+    {
+      "canonical_admission": false,
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.5-flash",
+      "normalization_complete": true,
+      "normalized_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_sha256": "202c66482e20749edca94dd67d6e73f1520341c44ca44f375132e7f83812fac5",
+      "run_id": "20261001T051126601937Z-41945fe1ca01",
+      "schema_valid": true
+    },
+    {
+      "canonical_admission": false,
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.8-flash",
+      "normalization_complete": true,
+      "normalized_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20
+      },
+      "raw_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20
+      },
+      "raw_sha256": "707bc6e71021b58a8d297358828fd3a5010443f2dab81fe6e9d8c4890c506551",
+      "run_id": "20261001T051511898073Z-1449fc1a881f",
+      "schema_valid": true
+    },
+    {
+      "canonical_admission": false,
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.5-flash-lite",
+      "normalization_complete": true,
+      "normalized_score": {
+        "direct_focal_ownership_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_score": {
+        "direct_focal_ownership_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_sha256": "6b493774be93a8a488f8e925593c50ee08de34f13f44199170f1a02fdf762307",
+      "run_id": "20261001T050626828093Z-b0b13e7cb2fb",
+      "schema_valid": true
+    },
+    {
+      "canonical_admission": false,
+      "case_id": "SEM-TRANSPORT-B",
+      "model_id": "models/gemini-3.5-flash-lite",
+      "normalization_complete": true,
+      "normalized_score": {
+        "direct_focal_ownership_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "exact_value_and_unit_points": 9,
+        "expected_points": 46,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9
+      },
+      "raw_score": {
+        "direct_focal_ownership_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "exact_value_and_unit_points": 9,
+        "expected_points": 46,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9
+      },
+      "raw_sha256": "80c63d5810e39c7e5ffda9a2c57d381796054ffc56398eb44b258d081d403e91",
+      "run_id": "20261001T050918805540Z-0af338d58f7e",
+      "schema_valid": true
+    }
+  ],
+  "schema": "synthex.semiconductors.closure_audit.v1",
+  "source_gold_parity": {
+    "SEM-COMPUTE-E": true,
+    "SEM-GOLD-A": true,
+    "SEM-MIXED-H": true,
+    "SEM-NEG-G": true,
+    "SEM-OPTICAL-C": true,
+    "SEM-PROCESS-D": true,
+    "SEM-REVIEW-F": true,
+    "SEM-TRANSPORT-B": true
+  }
+}

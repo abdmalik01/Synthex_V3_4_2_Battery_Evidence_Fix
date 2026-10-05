@@ -1,0 +1,11 @@
+{
+  "case_id": "MEM-MIXED-H",
+  "status": "locked_before_recovery",
+  "article_file": "corpus_pdfs/mem_mixed_h_sps_tio2.pdf",
+  "article_sha256": "539220a731517215b84db3991fc80647d15a61fd03f04ffbf6b3810349734bc2",
+  "article_page_count": 19,
+  "gold_file": "gold_mixed_h.json",
+  "gold_sha256": "83348bfac12c9f9429092b95a35499204ee41af0d2b9fa371cd87658022f0501",
+  "decisive_tables": ["Table 1", "Table 2", "Table 4"],
+  "decisive_pages": [3, 7, 10, 11, 12]
+}

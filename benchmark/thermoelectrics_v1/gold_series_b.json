@@ -1,0 +1,27 @@
+{
+  "case_id": "TE-SERIES-B",
+  "source": {
+    "title": "Polycrystalline SnSe with a thermoelectric figure of merit greater than the single crystal",
+    "doi": "10.1038/s41563-021-01064-6",
+    "url": "https://www.nature.com/articles/s41563-021-01064-6",
+    "year": 2021,
+    "authors": ["Chongjian Zhou", "Yong Kyu Lee", "Yuan Yu", "Sejin Byun", "Zhong-Zhen Luo", "In Chung"]
+  },
+  "samples": {
+    "x001": {"name": "purified polycrystalline Na0.01Sn0.985Se", "formula": "Na0.01Sn0.985Se", "composition": {"Na": 0.01, "Sn": 0.985, "Se": 1.0}, "nominal_x": 0.01},
+    "x002": {"name": "purified polycrystalline Na0.02Sn0.975Se", "formula": "Na0.02Sn0.975Se", "composition": {"Na": 0.02, "Sn": 0.975, "Se": 1.0}, "nominal_x": 0.02},
+    "x003": {"name": "purified polycrystalline Na0.03Sn0.965Se", "formula": "Na0.03Sn0.965Se", "composition": {"Na": 0.03, "Sn": 0.965, "Se": 1.0}, "nominal_x": 0.03}
+  },
+  "series": {
+    "x001/electrical_conductivity": {"count": 22, "unit": "S/cm", "sha256": "f63824a6f6a1bc3effa74c10f288f9c2994608450d33bb94288f90b7af127247", "sentinels": [[311.90134, 61.01518], [573.32601, 89.21504], [783.07556, 95.6962]]},
+    "x002/electrical_conductivity": {"count": 22, "unit": "S/cm", "sha256": "9bec64abf9743fc0ee81238354868426f56caa3d251c3324ccdee5e770545639", "sentinels": [[308.45796, 71.78866], [574.15932, 89.74264], [783.47383, 110.76136]]},
+    "x003/electrical_conductivity": {"count": 22, "unit": "S/cm", "sha256": "7e4aec0b2d4255e41edeff4063fa4b887627969a7708d552e3d3c162c1aa238a", "sentinels": [[311.74823, 85.05619], [573.39479, 91.86617], [783.21932, 117.95636]]},
+    "x001/seebeck_coefficient": {"count": 22, "unit": "uV/K", "sha256": "b2dc26c6e3cdeb06663cbc439c1a5a6a1a743137da4d155b4258050f6f068aca", "sentinels": [[311.90134, 179.60604], [573.32601, 293.01507], [783.07556, 290.68106]]},
+    "x002/seebeck_coefficient": {"count": 22, "unit": "uV/K", "sha256": "2d37a0ad597e12c17be693108a2dd7e89c7336e02e96a739964432317ebaaa97", "sentinels": [[308.45796, 186.46165], [574.15932, 305.11024], [783.47383, 275.01197]]},
+    "x003/seebeck_coefficient": {"count": 22, "unit": "uV/K", "sha256": "d5e98c2596a3d606e893f6a705cee8ebcbefe3bc1e4dea32473c165a286e9d8e", "sentinels": [[311.74823, 190.82817], [573.39479, 314.07832], [783.21932, 268.60032]]},
+    "x001/power_factor": {"count": 22, "unit": "uW/cm/K2", "sha256": "b790161a92bc0c4bd774d81619e018c6ee63d737e35cfad6944f39d63d398437", "sentinels": [[311.90134, 1.96825], [573.32601, 7.65981], [783.07556, 8.0859]]},
+    "x002/power_factor": {"count": 22, "unit": "uW/cm/K2", "sha256": "78307e579143a5918d6844a9cb4de52c6c8b7d3ad31ed6945c60a786548a158b", "sentinels": [[308.45796, 2.56548], [574.15932, 8.35435], [783.47383, 8.37706]]},
+    "x003/power_factor": {"count": 22, "unit": "uW/cm/K2", "sha256": "f8b6ec39812678883b9d802ce568529e8726a88331532fd14764ab3b38833918", "sentinels": [[311.74823, 3.09735], [573.39479, 9.06216], [783.21932, 8.5101]]}
+  },
+  "expected_outputs": 198
+}

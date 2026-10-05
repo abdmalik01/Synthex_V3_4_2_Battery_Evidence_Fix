@@ -1,0 +1,2481 @@
+{
+  "schema": "synthex.semiconductors.live_gate.v1",
+  "status": "INTERIM_LIVE_NOT_FROZEN",
+  "generated_at": "2026-10-01T05:25:55.805653+00:00",
+  "SEM_LIVE_GATE_SATISFIED": true,
+  "qualification_rule": "at least one exact discovered Gemini model returns a persisted, hash-verified, scientifically scoreable raw payload for a locked Semiconductor case; canonical admission is not required",
+  "provider_name": "gemini",
+  "models_run": [
+    "models/gemini-3.5-flash",
+    "models/gemini-3.5-flash-lite",
+    "models/gemini-3.8-flash"
+  ],
+  "run_count": 4,
+  "qualifying_run_ids": [
+    "20261001T051126601937Z-41945fe1ca01",
+    "20261001T051511898073Z-1449fc1a881f",
+    "20261001T050626828093Z-b0b13e7cb2fb",
+    "20261001T050918805540Z-0af338d58f7e"
+  ],
+  "runs": [
+    {
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.5-flash",
+      "run_id": "20261001T051126601937Z-41945fe1ca01",
+      "status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "attempts": [
+        {
+          "attempt_number": 1,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.5-flash",
+          "provider_error_class": "TRANSIENT_UNAVAILABLE",
+          "provider_error_detail": {
+            "provider_failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          },
+          "payload_returned": true,
+          "repair_count": 1,
+          "fallback_used": false
+        }
+      ],
+      "payload_returned": true,
+      "raw_response_sha256": "202c66482e20749edca94dd67d6e73f1520341c44ca44f375132e7f83812fac5",
+      "scoreable": true,
+      "raw_scientific_score": {
+        "case_id": "SEM-GOLD-A",
+        "source": "original_raw_provider_payload_only",
+        "raw_record_count": 31,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "expected_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0,
+        "direct_focal_ownership_points": 0,
+        "point_details": [
+          {
+            "sample": "ZnO",
+            "property": "carrier_concentration",
+            "expected_value": 1.3600000000000002e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 1.3600000000000002e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "n-type"
+            }
+          },
+          {
+            "sample": "ZnO",
+            "property": "hall_mobility",
+            "expected_value": 21.4,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "hall_mobility",
+            "observed_value": 21.4,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "resistivity",
+            "expected_value": 0.00214,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00214,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "sheet_resistance",
+            "expected_value": 53.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 53.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "optical_band_gap",
+            "expected_value": 3.25,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.25,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "carrier_concentration",
+            "expected_value": 2.96e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 2.96e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "n-type"
+            }
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "hall_mobility",
+            "expected_value": 15.1,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "hall_mobility",
+            "observed_value": 15.1,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "resistivity",
+            "expected_value": 0.0014,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.0014,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "sheet_resistance",
+            "expected_value": 35.0,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 35.0,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "optical_band_gap",
+            "expected_value": 3.31,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.31,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "carrier_concentration",
+            "expected_value": 4.2300000000000007e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 4.2300000000000007e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "n-type"
+            }
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "hall_mobility",
+            "expected_value": 18.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "hall_mobility",
+            "observed_value": 18.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "resistivity",
+            "expected_value": 0.00079,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00079,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "sheet_resistance",
+            "expected_value": 17.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 17.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "optical_band_gap",
+            "expected_value": 3.52,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.52,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "carrier_concentration",
+            "expected_value": 6.55e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 6.55e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "n-type"
+            }
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "hall_mobility",
+            "expected_value": 7.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "hall_mobility",
+            "observed_value": 7.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "resistivity",
+            "expected_value": 0.00124,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00124,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "sheet_resistance",
+            "expected_value": 20.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 20.7,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "optical_band_gap",
+            "expected_value": 3.55,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.55,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          }
+        ],
+        "canonical_admission_not_implied": true,
+        "hall_specificity_points": 4,
+        "dopant_identity_samples": 3,
+        "missing_measurement_temperature_preserved": true
+      },
+      "schema_valid": false,
+      "canonical_admission": {
+        "admitted": false,
+        "validation_errors": null
+      },
+      "repair_attempted": true,
+      "repair_replay": null,
+      "latency_ms": 94024.164,
+      "usage": {
+        "input_tokens": 24609,
+        "output_tokens": 6037,
+        "total_tokens": 44455,
+        "cached_tokens": null
+      },
+      "artifact_run_root": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01"
+    },
+    {
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.8-flash",
+      "run_id": "20261001T051511898073Z-1449fc1a881f",
+      "status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "attempts": [
+        {
+          "attempt_number": 1,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.8-flash",
+          "provider_error_class": "TRANSIENT_UNAVAILABLE",
+          "provider_error_detail": {
+            "provider_failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          },
+          "payload_returned": false,
+          "repair_count": 0,
+          "fallback_used": false
+        },
+        {
+          "attempt_number": 2,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.8-flash",
+          "provider_error_class": "TRANSIENT_UNAVAILABLE",
+          "provider_error_detail": {
+            "provider_failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          },
+          "payload_returned": false,
+          "repair_count": 0,
+          "fallback_used": false
+        },
+        {
+          "attempt_number": 3,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.8-flash",
+          "provider_error_class": "TRANSIENT_UNAVAILABLE",
+          "provider_error_detail": {
+            "provider_failure_class": "provider_unavailable",
+            "provider_message": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+          },
+          "payload_returned": true,
+          "repair_count": 1,
+          "fallback_used": false
+        }
+      ],
+      "payload_returned": true,
+      "raw_response_sha256": "707bc6e71021b58a8d297358828fd3a5010443f2dab81fe6e9d8c4890c506551",
+      "scoreable": true,
+      "raw_scientific_score": {
+        "case_id": "SEM-GOLD-A",
+        "source": "original_raw_provider_payload_only",
+        "raw_record_count": 28,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "expected_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20,
+        "direct_focal_ownership_points": 0,
+        "point_details": [
+          {
+            "sample": "ZnO",
+            "property": "carrier_concentration",
+            "expected_value": 1.3600000000000002e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 1.3600000000000002e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron"
+            }
+          },
+          {
+            "sample": "ZnO",
+            "property": "hall_mobility",
+            "expected_value": 21.4,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 21.4,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron",
+              "method": "Hall effect"
+            }
+          },
+          {
+            "sample": "ZnO",
+            "property": "resistivity",
+            "expected_value": 0.00214,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00214,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "sheet_resistance",
+            "expected_value": 53.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 53.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "optical_band_gap",
+            "expected_value": 3.25,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.25,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "derivation_basis": "Tauc plot"
+            }
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "carrier_concentration",
+            "expected_value": 2.96e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 2.96e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron"
+            }
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "hall_mobility",
+            "expected_value": 15.1,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 15.1,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron",
+              "method": "Hall effect"
+            }
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "resistivity",
+            "expected_value": 0.0014,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.0014,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "sheet_resistance",
+            "expected_value": 35.0,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 35.0,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "optical_band_gap",
+            "expected_value": 3.31,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.31,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "derivation_basis": "Tauc plot"
+            }
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "carrier_concentration",
+            "expected_value": 4.2300000000000007e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 4.2300000000000007e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron"
+            }
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "hall_mobility",
+            "expected_value": 18.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 18.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron",
+              "method": "Hall effect"
+            }
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "resistivity",
+            "expected_value": 0.00079,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00079,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "sheet_resistance",
+            "expected_value": 17.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 17.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "optical_band_gap",
+            "expected_value": 3.52,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.52,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "derivation_basis": "Tauc plot"
+            }
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "carrier_concentration",
+            "expected_value": 6.55e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 6.55e+20,
+            "observed_unit": "×10^20 cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron"
+            }
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "hall_mobility",
+            "expected_value": 7.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 7.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "carrier_type": "electron",
+              "method": "Hall effect"
+            }
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "resistivity",
+            "expected_value": 0.00124,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00124,
+            "observed_unit": "×10^-3 Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "sheet_resistance",
+            "expected_value": 20.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 20.7,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "optical_band_gap",
+            "expected_value": 3.55,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.55,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": false,
+            "conditions": {
+              "derivation_basis": "Tauc plot"
+            }
+          }
+        ],
+        "canonical_admission_not_implied": true,
+        "hall_specificity_points": 0,
+        "dopant_identity_samples": 3,
+        "missing_measurement_temperature_preserved": true
+      },
+      "schema_valid": false,
+      "canonical_admission": {
+        "admitted": false,
+        "validation_errors": null
+      },
+      "repair_attempted": true,
+      "repair_replay": null,
+      "latency_ms": 17304.8,
+      "usage": {
+        "input_tokens": 24609,
+        "output_tokens": 5930,
+        "total_tokens": 31175,
+        "cached_tokens": 20398
+      },
+      "artifact_run_root": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f"
+    },
+    {
+      "case_id": "SEM-GOLD-A",
+      "model_id": "models/gemini-3.5-flash-lite",
+      "run_id": "20261001T050626828093Z-b0b13e7cb2fb",
+      "status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED",
+      "attempts": [
+        {
+          "attempt_number": 1,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.5-flash-lite",
+          "configured_model_id": "models/gemini-3.5-flash-lite",
+          "provider_reported_model_id": "gemini-3.5-flash-lite",
+          "payload_returned": true,
+          "repair_count": 1,
+          "latency_ms": 5562.733,
+          "usage": {
+            "input_tokens": 32200,
+            "output_tokens": 2037,
+            "total_tokens": 34237,
+            "cached_tokens": null
+          },
+          "fallback_used": false
+        }
+      ],
+      "payload_returned": true,
+      "raw_response_sha256": "6b493774be93a8a488f8e925593c50ee08de34f13f44199170f1a02fdf762307",
+      "scoreable": true,
+      "raw_scientific_score": {
+        "case_id": "SEM-GOLD-A",
+        "source": "original_raw_provider_payload_only",
+        "raw_record_count": 24,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "expected_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0,
+        "direct_focal_ownership_points": 20,
+        "point_details": [
+          {
+            "sample": "ZnO",
+            "property": "carrier_concentration",
+            "expected_value": 1.3600000000000002e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "electron_concentration",
+            "observed_value": 1.3600000000000002e+20,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "hall_mobility",
+            "expected_value": 21.4,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 21.4,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "resistivity",
+            "expected_value": 0.00214,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00214,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "sheet_resistance",
+            "expected_value": 53.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 53.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "ZnO",
+            "property": "optical_band_gap",
+            "expected_value": 3.25,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.25,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "carrier_concentration",
+            "expected_value": 2.96e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "electron_concentration",
+            "observed_value": 2.96e+20,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "hall_mobility",
+            "expected_value": 15.1,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 15.1,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "resistivity",
+            "expected_value": 0.0014,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.0014,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "sheet_resistance",
+            "expected_value": 35.0,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 35.0,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.99Ga0.01O",
+            "property": "optical_band_gap",
+            "expected_value": 3.31,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.31,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "carrier_concentration",
+            "expected_value": 4.2300000000000007e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "electron_concentration",
+            "observed_value": 4.2300000000000007e+20,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "hall_mobility",
+            "expected_value": 18.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 18.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "resistivity",
+            "expected_value": 0.00079,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00079,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "sheet_resistance",
+            "expected_value": 17.6,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 17.6,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.95Ga0.05O",
+            "property": "optical_band_gap",
+            "expected_value": 3.52,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.52,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "carrier_concentration",
+            "expected_value": 6.55e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "electron_concentration",
+            "observed_value": 6.55e+20,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "hall_mobility",
+            "expected_value": 7.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": false,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 7.7,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "resistivity",
+            "expected_value": 0.00124,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.00124,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "sheet_resistance",
+            "expected_value": 20.7,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "sheet_resistance",
+            "observed_value": 20.7,
+            "observed_unit": "Ω/sq",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          },
+          {
+            "sample": "Zn0.92Ga0.08O",
+            "property": "optical_band_gap",
+            "expected_value": 3.55,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "optical_band_gap",
+            "observed_value": 3.55,
+            "observed_unit": "eV",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": false
+            },
+            "direct_focal_ownership": true,
+            "conditions": null
+          }
+        ],
+        "canonical_admission_not_implied": true,
+        "hall_specificity_points": 0,
+        "dopant_identity_samples": 3,
+        "missing_measurement_temperature_preserved": true
+      },
+      "schema_valid": false,
+      "canonical_admission": {
+        "admitted": false,
+        "validation_errors": [
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "journal"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "Scientific Reports"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "volume"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "10"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "pages"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "638"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "publisher"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "Springer Nature"
+          }
+        ]
+      },
+      "repair_attempted": true,
+      "repair_replay": null,
+      "latency_ms": 14663.318,
+      "usage": {
+        "input_tokens": 24609,
+        "output_tokens": 6349,
+        "total_tokens": 30958,
+        "cached_tokens": null
+      },
+      "artifact_run_root": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb"
+    },
+    {
+      "case_id": "SEM-TRANSPORT-B",
+      "model_id": "models/gemini-3.5-flash-lite",
+      "run_id": "20261001T050918805540Z-0af338d58f7e",
+      "status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "attempts": [
+        {
+          "attempt_number": 1,
+          "provider_name": "gemini",
+          "model_id": "models/gemini-3.5-flash-lite",
+          "provider_error_class": "UNKNOWN_PROVIDER_ERROR",
+          "provider_error_detail": {
+            "provider_failure_class": "unexpected_error",
+            "provider_message": "RuntimeError"
+          },
+          "payload_returned": true,
+          "repair_count": 1,
+          "fallback_used": false
+        }
+      ],
+      "payload_returned": true,
+      "raw_response_sha256": "80c63d5810e39c7e5ffda9a2c57d381796054ffc56398eb44b258d081d403e91",
+      "scoreable": true,
+      "raw_scientific_score": {
+        "case_id": "SEM-TRANSPORT-B",
+        "source": "original_raw_provider_payload_only",
+        "raw_record_count": 9,
+        "expected_points": 46,
+        "exact_value_and_unit_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "expected_sample_count": 20,
+        "table_locator_points": 9,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9,
+        "direct_focal_ownership_points": 9,
+        "point_details": [
+          {
+            "sample": [
+              0,
+              "as_grown"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.027,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.027000000000000003,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "measurement_temperature": "room temperature",
+              "sample": "undoped as-grown"
+            }
+          },
+          {
+            "sample": [
+              0,
+              "as_grown"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 1.4e+19,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 1.4e+19,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "undoped as-grown"
+            }
+          },
+          {
+            "sample": [
+              0,
+              "as_grown"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 16.4,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 16.4,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "undoped as-grown"
+            }
+          },
+          {
+            "sample": [
+              1,
+              "as_grown"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.0061,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.0060999999999999995,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "measurement_temperature": "room temperature",
+              "sample": "1 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              1,
+              "as_grown"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 9.7e+19,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 9.7e+19,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "1 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              1,
+              "as_grown"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 10.56,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 10.56,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "1 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              2,
+              "as_grown"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.0064,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "resistivity",
+            "observed_value": 0.0064,
+            "observed_unit": "Ω·cm",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "measurement_temperature": "room temperature",
+              "sample": "2 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              2,
+              "as_grown"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 1.5e+20,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_concentration",
+            "observed_value": 1.5e+20,
+            "observed_unit": "cm^-3",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "2 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              2,
+              "as_grown"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 6.33,
+            "candidate_count": 1,
+            "exact_candidate_count": 1,
+            "exact_value_and_unit": true,
+            "exact_property_key": true,
+            "observed_property_key": "carrier_mobility",
+            "observed_value": 6.33,
+            "observed_unit": "cm^2/V/s",
+            "evidence": {
+              "table_locator": true,
+              "page_locator": false,
+              "verbatim_snippet": true
+            },
+            "direct_focal_ownership": true,
+            "conditions": {
+              "carrier_type": "electron",
+              "measurement_temperature": "room temperature",
+              "sample": "2 at.% Al as-grown"
+            }
+          },
+          {
+            "sample": [
+              3,
+              "as_grown"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.0053,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "as_grown"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 2.1e+20,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "as_grown"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 5.63,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "as_grown"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.0077,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "as_grown"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 1.8e+20,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "as_grown"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 4.38,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              0,
+              "annealed_air"
+            ],
+            "property": "resistivity",
+            "expected_value": 260.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_air"
+            ],
+            "property": "resistivity",
+            "expected_value": 32.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_air"
+            ],
+            "property": "resistivity",
+            "expected_value": 20.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_air"
+            ],
+            "property": "resistivity",
+            "expected_value": 21.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_air"
+            ],
+            "property": "resistivity",
+            "expected_value": 40.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              0,
+              "annealed_ar"
+            ],
+            "property": "resistivity",
+            "expected_value": 60.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_ar"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.31,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_ar"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 2.2e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_ar"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.91,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_ar"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.11,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_ar"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 5.7e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_ar"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.98,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_ar"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.068,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_ar"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 7.8e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_ar"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 1.12,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_ar"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.11,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_ar"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 5.6e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_ar"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.97,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              0,
+              "annealed_n2"
+            ],
+            "property": "resistivity",
+            "expected_value": 440.0,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_n2"
+            ],
+            "property": "resistivity",
+            "expected_value": 2.1,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_n2"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 5.9e+18,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              1,
+              "annealed_n2"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.5,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_n2"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.3,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_n2"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 3.4e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              2,
+              "annealed_n2"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.6,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_n2"
+            ],
+            "property": "resistivity",
+            "expected_value": 0.5,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_n2"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 3.2e+19,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              3,
+              "annealed_n2"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.39,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_n2"
+            ],
+            "property": "resistivity",
+            "expected_value": 1.8,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_n2"
+            ],
+            "property": "carrier_concentration",
+            "expected_value": 4.8e+18,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          },
+          {
+            "sample": [
+              4,
+              "annealed_n2"
+            ],
+            "property": "carrier_mobility",
+            "expected_value": 0.7,
+            "candidate_count": 0,
+            "exact_candidate_count": 0,
+            "exact_value_and_unit": false,
+            "exact_property_key": false,
+            "observed_property_key": null,
+            "observed_value": null,
+            "observed_unit": null,
+            "evidence": null,
+            "direct_focal_ownership": false,
+            "conditions": null
+          }
+        ],
+        "canonical_admission_not_implied": true,
+        "missing_dash_cells_not_zero_filled": true,
+        "room_temperature_condition_points": 9
+      },
+      "schema_valid": false,
+      "canonical_admission": {
+        "admitted": false,
+        "validation_errors": null
+      },
+      "repair_attempted": true,
+      "repair_replay": {
+        "case_id": "SEM-TRANSPORT-B",
+        "model_id": "models/gemini-3.5-flash-lite",
+        "run_id": "20261001T050918805540Z-0af338d58f7e",
+        "source": "persisted_repair_response_offline_replay",
+        "repair_response_sha256": "22fec3382414e83b0cf257d15784139590f92f41609282ac6fc772ff95676016",
+        "repair_json_schema_valid": false,
+        "validation_errors": [
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "journal"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "Nanoscale Research Letters"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "volume"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "10"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "issue"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "1"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "pages"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "75"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "publisher"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": "Springer Open"
+          },
+          {
+            "type": "extra_forbidden",
+            "loc": [
+              "source",
+              "evidence"
+            ],
+            "msg": "Extra inputs are not permitted",
+            "input": [
+              {
+                "source_type": "text",
+                "text_snippet": "Effects of doping and annealing on properties of ZnO films grown by atomic layer deposition"
+              }
+            ]
+          },
+          {
+            "type": "dict_type",
+            "loc": [
+              "domain_values"
+            ],
+            "msg": "Input should be a valid dictionary",
+            "input": []
+          }
+        ],
+        "draft_counts": null,
+        "canonical_admission": false,
+        "note": "This append-only replay corrects the missing repair validation artifact from the pre-fix Windows long-path prerequisite check; it does not change provider payloads or original run reports."
+      },
+      "latency_ms": 13388.586,
+      "usage": {
+        "input_tokens": 31101,
+        "output_tokens": 5311,
+        "total_tokens": 36412,
+        "cached_tokens": null
+      },
+      "artifact_run_root": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e"
+    }
+  ],
+  "limitations": [
+    "First four offline cases remain interim, not a V1 freeze.",
+    "Raw scientific recovery is separate from provider schema validity and canonical admission.",
+    "SEM-TRANSPORT-B's original run status includes an audit-recorder long-path failure after the repair response; its append-only offline replay records the actual repaired schema result."
+  ]
+}

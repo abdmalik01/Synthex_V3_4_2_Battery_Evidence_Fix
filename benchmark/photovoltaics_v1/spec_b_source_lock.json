@@ -1,0 +1,13 @@
+{
+  "case_id": "PV-SPEC-B",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0,
+  "source_origin": "official_publisher_open_access_article_and_source_data_workbook",
+  "article_file": "corpus_pdfs/nature-communications-15-1830.pdf",
+  "article_sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e",
+  "article_page_count": 10,
+  "source_data_file": "corpus_data/nature-communications-15-1830-source-data.xlsx",
+  "source_data_sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88",
+  "gold_file": "spec_b_gold.json",
+  "gold_sha256": "0cdfaf1cf70f8eadafb32a11ff2f772d44c138239c0234cbdccea7e38cdf9ed8"
+}

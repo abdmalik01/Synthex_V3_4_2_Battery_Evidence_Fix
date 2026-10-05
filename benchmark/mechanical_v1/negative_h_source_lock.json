@@ -1,0 +1,9 @@
+{
+  "case_id": "MECH-NEGATIVE-H",
+  "source_file": "../batteries_v1/corpus_pdfs/1-s2.0-S2666386426002407-main.pdf",
+  "source_sha256": "41fcb4389ee30a16169276009605f7878885bc0daa31ef7a1ee2074de228b5b7",
+  "gold_file": "negative_h_gold.json",
+  "gold_sha256": "dea7ebe484f1a031212d501f006fddedad2824969f0183e93dcafa0a839f6f58",
+  "assertions": 10,
+  "locked": true
+}

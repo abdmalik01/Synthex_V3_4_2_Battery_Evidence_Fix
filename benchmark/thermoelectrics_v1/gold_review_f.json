@@ -1,0 +1,41 @@
+{
+  "case_id": "TE-REVIEW-F",
+  "source": {
+    "title": "Research Progress of Thermoelectric Materials—A Review",
+    "doi": "10.3390/en18082122",
+    "url": "https://www.mdpi.com/1996-1073/18/8/2122",
+    "year": 2025,
+    "authors": ["Jun Wang", "Yonggao Yin", "Chunwen Che", "Mengying Cui"],
+    "article_type": "Review"
+  },
+  "publisher_review_signal": "Review",
+  "author_self_description": "In this review, we examine several fundamental strategies",
+  "table": "Table 2",
+  "cited_rows": [
+    ["SnSeS", 700.0, 3.07],
+    ["(Ca0.85Ba0.15)0.995Na0.005Mg1.85Cd0.15Bi2", 873.0, 1.30],
+    ["Ge0.93Bi0.03Pb0.04Te", 670.0, 2.14],
+    ["Ge0.93Ti0.01Bi0.06Te0.01Cu", 623.0, 2.30],
+    ["CoGe2/Ge0.85Sb0.10Te", 775.0, 2.20],
+    ["(Ge0.89Pb0.08Bi0.03Te)0.97(HgTe)0.03", 650.0, 2.30],
+    ["Bi2(Te,Se)3", 375.0, 1.20],
+    ["AgSbTe2", 643.0, 1.70],
+    ["Cu3SbS4", 773.0, 1.30],
+    ["Na0.99Cd0.995Ag0.005Sb", 673.0, 1.41],
+    ["CuIn7Se11", 873.0, 1.23],
+    ["PbSnS2", 473.0, 1.20],
+    ["Sn0.71Ge0.2Mn0.07In0.02Te", 873.0, 1.64],
+    ["EMIM:DCA", 330.0, 3.10],
+    ["Sn0.78Sb0.16Te(MgB2)0.09", 850.0, 1.22],
+    ["Mg3.2Bi1.998-xSbxTe0.002Cu0.005", 348.0, 1.10],
+    ["GeSb2Te4", 673.0, 1.00],
+    ["Mg3(Sb,Bi)2", 773.0, 1.82],
+    ["AgMnGePbSbTe5", 750.0, 2.64],
+    ["Nb0.75Ti0.25FeSb", 973.0, 1.21],
+    ["(Nb,Hf)FeSb", 973.0, 1.47]
+  ],
+  "expected_cited_values": 21,
+  "expected_focal_experiments": 0,
+  "expected_focal_calculations": 0,
+  "expected_canonical_outputs": 0
+}

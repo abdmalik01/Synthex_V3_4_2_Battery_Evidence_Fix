@@ -1,0 +1,8 @@
+{
+  "case_id": "SEM-NEG-G",
+  "source_domain": "photovoltaics",
+  "expected_route": "photovoltaics",
+  "canonical_semiconductor_outputs": 0,
+  "semiconductor_archive_count": 0,
+  "misleading_terms": ["perovskite", "FTO", "TiO2", "electron transport layer", "transparent electrode"]
+}

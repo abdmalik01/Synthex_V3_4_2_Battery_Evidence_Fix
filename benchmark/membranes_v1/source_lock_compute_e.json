@@ -1,0 +1,11 @@
+{
+  "case_id": "MEM-COMPUTE-E",
+  "status": "locked_before_recovery",
+  "article_file": "corpus_pdfs/mem_compute_e_lipid_md.pdf",
+  "article_sha256": "7882e1036fd9c2ef6cfd42c870c5ff73a7c1334bf16c7c6cd31daa690ce732d7",
+  "article_page_count": 17,
+  "gold_file": "gold_compute_e.json",
+  "gold_sha256": "b94734c7679e3a9820c4dd70c99a21b0e73a37d3f872d601ce87302ca0e00996",
+  "decisive_table": "Table 2",
+  "decisive_page": 9
+}

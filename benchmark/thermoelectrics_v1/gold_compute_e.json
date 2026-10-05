@@ -1,0 +1,29 @@
+{
+  "case_id": "TE-COMPUTE-E",
+  "source": {
+    "title": "Wenzhou TE: A First-Principle-Calculated Thermoelectric Materials Database",
+    "doi": "10.3390/ma17102200",
+    "url": "https://www.mdpi.com/1996-1944/17/10/2200",
+    "year": 2024,
+    "authors": ["Ying Fang", "Hezhu Shao"]
+  },
+  "method": {
+    "code": "VASP 5.4.1 and BoltzTraP2",
+    "functional": "PBE generalized-gradient approximation",
+    "k_mesh_density": "0.04 x 2pi A^-1",
+    "relaxation_time": "deformation-potential model",
+    "lattice_thermal_conductivity": "Slack formula from calculated elastic properties",
+    "temperature": 300.0
+  },
+  "rows": [
+    {"material_id": "mp-23231", "formula": "AgBr", "carrier_type": "p-type", "carrier_concentration": 1.11e19, "lattice_thermal_conductivity": 0.76, "seebeck_coefficient": 433.58, "electrical_conductivity": 187.71, "electronic_thermal_conductivity": 1.14, "zt": 5.56},
+    {"material_id": "mp-22919", "formula": "AgI", "carrier_type": "p-type", "carrier_concentration": 5.81e18, "lattice_thermal_conductivity": 1.31, "seebeck_coefficient": 421.47, "electrical_conductivity": 279.56, "electronic_thermal_conductivity": 1.76, "zt": 4.85},
+    {"material_id": "mp-27484", "formula": "Tl4O2", "carrier_type": "p-type", "carrier_concentration": 2.69e19, "lattice_thermal_conductivity": 0.67, "seebeck_coefficient": 361.13, "electrical_conductivity": 196.98, "electronic_thermal_conductivity": 0.92, "zt": 4.83},
+    {"material_id": "mp-22922", "formula": "AgCl", "carrier_type": "p-type", "carrier_concentration": 7.05e19, "lattice_thermal_conductivity": 0.51, "seebeck_coefficient": 383.05, "electrical_conductivity": 100.90, "electronic_thermal_conductivity": 0.51, "zt": 4.34},
+    {"material_id": "mp-32791", "formula": "Ag4S2", "carrier_type": "n-type", "carrier_concentration": 1.78e19, "lattice_thermal_conductivity": 0.39, "seebeck_coefficient": 310.31, "electrical_conductivity": 144.72, "electronic_thermal_conductivity": 0.80, "zt": 3.52}
+  ],
+  "units": {"carrier_concentration": "1/cm3", "lattice_thermal_conductivity": "W/m/K", "seebeck_coefficient": "uV/K", "electrical_conductivity": "kS/m", "electronic_thermal_conductivity": "W/m/K", "zt": "dimensionless"},
+  "expected_calculations": 5,
+  "expected_experiments": 0,
+  "expected_outputs": 30
+}

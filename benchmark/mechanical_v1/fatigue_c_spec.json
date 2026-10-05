@@ -1,0 +1,34 @@
+{
+  "case_id": "MECH-FATIGUE-C",
+  "status": "locked_offline_validated_live_payload_schema_invalid",
+  "source_lock": "fatigue_c_source_lock.json",
+  "gold": "fatigue_c_gold.json",
+  "gold_assertions": 20,
+  "provider_calls": 4,
+  "paper_type": "fatigue_testing",
+  "source_selection": [
+    "primary focal S-N or strain-life study with lawful stable PDF",
+    "explicit material/specimen, loading mode, stress or strain definition, R ratio and frequency",
+    "table or supplementary data distinguishing failures from run-outs",
+    "independently reviewed ownership, evidence locator and checksum before activation"
+  ],
+  "required_associations": [
+    "specimen", "material", "processing_state", "loading_mode", "stress_ratio",
+    "frequency", "test_temperature", "test_environment", "failure_or_runout"
+  ],
+  "candidate_outputs": [
+    "stress_amplitude", "strain_amplitude", "cycles_to_failure", "fatigue_strength", "fatigue_limit"
+  ],
+  "scientific_boundaries": [
+    "preserve stress amplitude versus stress range and maximum stress; never relabel one as another",
+    "pair each failure cycle count with its own specimen and applied amplitude",
+    "a run-out is censored, not a cycles_to_failure observation",
+    "a fatigue limit is admitted only if explicitly reported by authors with its definition",
+    "S-N points require source_table or supplementary_data series provenance",
+    "do not fabricate numerical points from an undigitized figure or fit line",
+    "model predictions and cited comparison curves are separate from focal experiments"
+  ],
+  "offline_result": "20/20 selected assertions; all 60 table rows recovered; 19 run-outs remain censored",
+  "live_result": "after the historical three provider_unavailable attempts, the authorized closure retry returned a frozen schema-invalid payload; raw full-gold score 0/20, deterministic recovery 20/20",
+  "activation_gate": "controlled live benchmark completed; no quality retry authorized"
+}

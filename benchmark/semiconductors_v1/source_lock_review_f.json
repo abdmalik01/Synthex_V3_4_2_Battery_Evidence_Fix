@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-REVIEW-F",
+  "source_title": "2D materials-based nanoscale tunneling field effect transistors: current developments and future prospects",
+  "doi": "10.1038/s41699-022-00352-2",
+  "article_url": "https://www.nature.com/articles/s41699-022-00352-2",
+  "article_file": "corpus_pdfs/SEM-REVIEW-F.pdf",
+  "article_sha256": "f0b051b3e28cf1047b437e782ed881d1c2978162bace5ffab43e9b30362b7cd9",
+  "article_page_count": 29,
+  "gold_file": "gold_review_f.json",
+  "gold_sha256": "1594ff6492adca66284a3f7cdf9022eb9794996063808998f37616be63dc287b",
+  "source_origin": "official_publisher_open_access_pdf",
+  "decisive_pages": [1]
+}

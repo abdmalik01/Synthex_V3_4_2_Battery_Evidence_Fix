@@ -1,0 +1,16 @@
+{
+  "case_id": "TE-NEG-G",
+  "source": {
+    "title": "Sustainable thermal regulation improves stability and efficiency in all-perovskite tandem solar cells",
+    "doi": "10.1038/s41467-024-48552-2",
+    "url": "https://www.nature.com/articles/s41467-024-48552-2",
+    "year": 2024,
+    "authors": ["Shuchen Tan", "Chongwen Li", "Cheng Peng", "Wenjian Yan"],
+    "true_domain": "photovoltaics"
+  },
+  "expected_route": "photovoltaics",
+  "misleading_vocabulary": ["thermal conductivity", "temperature", "voltage", "power", "efficiency"],
+  "expected_experiments": 0,
+  "expected_calculations": 0,
+  "expected_outputs": 0
+}

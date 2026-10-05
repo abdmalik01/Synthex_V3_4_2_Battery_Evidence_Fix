@@ -1,0 +1,20 @@
+{
+  "case_id": "TE-DERIVED-C",
+  "source": {
+    "title": "Polycrystalline SnSe with a thermoelectric figure of merit greater than the single crystal",
+    "doi": "10.1038/s41563-021-01064-6",
+    "url": "https://www.nature.com/articles/s41563-021-01064-6",
+    "year": 2021,
+    "authors": ["Chongjian Zhou", "Yong Kyu Lee", "Yuan Yu", "Sejin Byun", "Zhong-Zhen Luo", "In Chung"]
+  },
+  "material": {"name": "purified polycrystalline Na0.03Sn0.965Se", "formula": "Na0.03Sn0.965Se", "composition": {"Na": 0.03, "Sn": 0.965, "Se": 1.0}},
+  "series": {
+    "electrical_conductivity": {"count": 22, "unit": "S/cm", "sha256": "7e4aec0b2d4255e41edeff4063fa4b887627969a7708d552e3d3c162c1aa238a", "scientific_type": "reported_measurement"},
+    "seebeck_coefficient": {"count": 22, "unit": "uV/K", "sha256": "d5e98c2596a3d606e893f6a705cee8ebcbefe3bc1e4dea32473c165a286e9d8e", "scientific_type": "reported_measurement"},
+    "power_factor": {"count": 22, "unit": "uW/cm/K2", "sha256": "f8b6ec39812678883b9d802ce568529e8726a88331532fd14764ab3b38833918", "scientific_type": "reported_derived_metric", "derivation_basis": "author-reported S^2 sigma"},
+    "zt": {"count": 12, "unit": "dimensionless", "sha256": "6c0b9a65288f30210459b4bba59a5b4a51597336e50a9f9c9e8371d15d2296ef", "scientific_type": "reported_derived_metric", "derivation_basis": "author-reported S^2 sigma T / kappa_total"},
+    "total_thermal_conductivity": {"count": 12, "unit": "W/m/K", "sha256": "06ea6aad19900f7f32fce9123316ead47a7b595c5a0a3c76a9feb452ddd2fe13", "scientific_type": "reported_derived_metric", "derivation_basis": "author-reported thermal diffusivity times DSC heat capacity times density"}
+  },
+  "formula_validation": {"formula": "PF = S^2 sigma", "max_relative_error": 0.000002, "points": 22, "creates_canonical_measurements": false},
+  "expected_outputs": 90
+}

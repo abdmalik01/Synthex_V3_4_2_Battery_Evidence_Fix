@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "description": "Locally verified identities of newly introduced third-party benchmark binaries omitted from research-metadata-only. This manifest conveys no redistribution rights.",
+  "files": [
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/batteries-11-00142-negative.pdf",
+      "bytes": 4400681,
+      "sha256": "91a6457b87f4ebc1e2acfb74b5c104df61be3fdcb91f1fa0f4f691a50905aa56"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/coatings-11-01562.pdf",
+      "bytes": 4487755,
+      "sha256": "8f5b8663449be7870fc4cec1ca61d6aff04cc23bb5bf61eafb9ad20f7427af2e"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-14-00165.pdf",
+      "bytes": 4810228,
+      "sha256": "7d7ee37f59c77f2fd922dd10c4c330690de40f1ab4e6a54c49b74aea242878e9"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-16-07557.pdf",
+      "bytes": 6126898,
+      "sha256": "287be6b5443f3f344b01f1a23ae17e9d17ffa0b897ac7a3babd64b54d836324c"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-18-00032.pdf",
+      "bytes": 24994155,
+      "sha256": "c58e6b54e7051e2742b9f584969b6744c8055c1c27f3283d6a5eb36bd216aa1b"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-11-00619.pdf",
+      "bytes": 12691837,
+      "sha256": "ded2c3bfd4f028004d799bb6eea7d0e89a53bdfa90ba9de3d6af54e4e30e4be3"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-11-01831-v2.pdf",
+      "bytes": 1682029,
+      "sha256": "c9fabb9b063758a92f6711bf2dbc5a762e8f4c44137f39d5dcac3a07b21ab003"
+    },
+    {
+      "path": "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-12-01853.pdf",
+      "bytes": 3238056,
+      "sha256": "3a5df44beec34fcd180d3df13ed23d56862621a3ef603c0145ec1613f657d22a"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-BIOACT-B.pdf",
+      "bytes": 4352410,
+      "sha256": "8db235a12556d2ca44f91d38f9a997c2d4212ef275c5103ca0215a3e141826a3"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-COMPUTE-E.pdf",
+      "bytes": 5762744,
+      "sha256": "9e4a98f8020f941a60b3dd9104a73398592ff5601c0260745f1938f4294457d3"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-DEGR-C.pdf",
+      "bytes": 4644830,
+      "sha256": "a9488aa8e5c525bbf6a19f35aafd9f294c3e2037e78460f07fd60c6b89d4927d"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-GOLD-A.pdf",
+      "bytes": 5066951,
+      "sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-MIXED-H.pdf",
+      "bytes": 2829532,
+      "sha256": "e5d008e132deffab1a132a214b666f3451bfdee0670436c35fac4a19359ee71a"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-PROCESS-D.pdf",
+      "bytes": 9248204,
+      "sha256": "a7868fccf239734709a12e9e30b4dbcaa1907b44151a613c7ee286b41224c714"
+    },
+    {
+      "path": "benchmark/biomaterials_v1/corpus_pdfs/BIO-REVIEW-F.pdf",
+      "bytes": 679264,
+      "sha256": "95bd62f1e633923e3e66514ead8f11b84bdb3008252219a7dc6072a00d92a13c"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/materials-13-04301.pdf",
+      "bytes": 874511,
+      "sha256": "791df92c3afd42061d9518a9a9c23e73819827d195dda8dececb5c3669bac9a3"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/materials-14-05875.pdf",
+      "bytes": 11745877,
+      "sha256": "1166ad7b5831aae12f58e551882cabbfc6b4fc7d08a9ed8a6a9a92a0788b1614"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/metals-08-00393.pdf",
+      "bytes": 7546896,
+      "sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/metals-11-00830.pdf",
+      "bytes": 5029084,
+      "sha256": "0e0b8d792564ac6050824486fe0ae099b4fec559459d40aa173ad990839bfb7c"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/metals-11-01014.pdf",
+      "bytes": 15649335,
+      "sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/metals-12-02121.pdf",
+      "bytes": 1171972,
+      "sha256": "3aa748516b93d7cdbf416ea5db8330742b5c17af5fe3511e0c0dd5bc7089fdf3"
+    },
+    {
+      "path": "benchmark/mechanical_v1/corpus_pdfs/metals-13-00621.pdf",
+      "bytes": 4214314,
+      "sha256": "3d992e8c7341000b98f5fdc3ea2b32d1f8ac443455a3059afe8900e799e0ddd0"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/MEM-GOLD-A_article.pdf",
+      "bytes": 1837606,
+      "sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/MEM-PROCESS-D_article.pdf",
+      "bytes": 1227496,
+      "sha256": "bb2b633c5c66b7cbfe33c08b64b4073383223074c7d9ba3dedb1d7c0d39ce5c1"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/MEM-SEP-B_article.pdf",
+      "bytes": 1484259,
+      "sha256": "2293180864dcb187609a133766f8d47340098233cfa68b5a10ab25000dee757c"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/MEM-STAB-C_article.pdf",
+      "bytes": 1369188,
+      "sha256": "48c3f11b77dbe7cf8e6618f35b489c3558d73719fa635c2e4fde68bc3275592f"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/mem_compute_e_lipid_md.pdf",
+      "bytes": 7402410,
+      "sha256": "7882e1036fd9c2ef6cfd42c870c5ff73a7c1334bf16c7c6cd31daa690ce732d7"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/mem_mixed_h_sps_tio2.pdf",
+      "bytes": 3426487,
+      "sha256": "539220a731517215b84db3991fc80647d15a61fd03f04ffbf6b3810349734bc2"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/mem_neg_g_battery_separator.pdf",
+      "bytes": 2821174,
+      "sha256": "57b07b46ae0b4009a8447150970e58efaf1692bb7d041728b57e086ba18b222e"
+    },
+    {
+      "path": "benchmark/membranes_v1/corpus_pdfs/mem_review_f_polymeric_aging_review.pdf",
+      "bytes": 10987218,
+      "sha256": "82433ab21253a63b1ad77a02ff38fd0c2f722d75dd461f202ce0f6712f14adb1"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_data/materials-17-03002-s001.zip",
+      "bytes": 2114831,
+      "sha256": "91de777697671addafc26f3adb6d89052a5575b8204637f3d490b3b950b95bf0"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_data/materials-17-03002-s001/materials-3043460-supplementary.pdf",
+      "bytes": 2182962,
+      "sha256": "6af751b270d69a422634b4b3667d517f5325c12309d59051c0c97e1761750cc7"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_data/nature-communications-15-1830-source-data.xlsx",
+      "bytes": 2062514,
+      "sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/acsaelm-3c00900.pdf",
+      "bytes": 4973804,
+      "sha256": "7187d879c200613213ff72fd50c847ee9e153b9d3d394f81f5ed452ff6efdd9f"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/coatings-12-01089-v2.pdf",
+      "bytes": 2521710,
+      "sha256": "9d4f2f6edfa5f3dc3e2b9982588c4a9dccd7ad62acaad4e1d91386c1c4e1adcf"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/energies-13-00585-v2.pdf",
+      "bytes": 3809410,
+      "sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/materials-17-03002.pdf",
+      "bytes": 2922376,
+      "sha256": "c2054ded63a1552afcbaebde71496ade8ec9069b4a0a35b9ffe9e96674635a06"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/micromachines-12-01508.pdf",
+      "bytes": 6687860,
+      "sha256": "e72d7d7c45add862b93a96535cbb367accf6dc2c3541c0f139716e1d6e7f0e04"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/nature-communications-15-1830.pdf",
+      "bytes": 2495210,
+      "sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e"
+    },
+    {
+      "path": "benchmark/photovoltaics_v1/corpus_pdfs/nature-communications-15-4136.pdf",
+      "bytes": 2390042,
+      "sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-COMPUTE-E.pdf",
+      "bytes": 1943091,
+      "sha256": "41c2c0dda2b43ba11a1a7125d60ec4ef12777d185689383064f6d382af7d91c2"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-GOLD-A.pdf",
+      "bytes": 2077566,
+      "sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-MIXED-H.pdf",
+      "bytes": 1431053,
+      "sha256": "b55f428cc72bb09436644be1181ea913ead5098ea9894acc5d1218e78e784e47"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+      "bytes": 3809410,
+      "sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-OPTICAL-C.pdf",
+      "bytes": 3353318,
+      "sha256": "ca41cc57dbc96d104139d71f10882b093f73489903966335793afaac921d6f02"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-PROCESS-D.pdf",
+      "bytes": 1052372,
+      "sha256": "30ca6625ad6f37992dad2534dbf35ca8173c701e6847720b4b8616cb8e0839aa"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-REVIEW-F.pdf",
+      "bytes": 5444706,
+      "sha256": "f0b051b3e28cf1047b437e782ed881d1c2978162bace5ffab43e9b30362b7cd9"
+    },
+    {
+      "path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-TRANSPORT-B.pdf",
+      "bytes": 2517833,
+      "sha256": "7adeb607918e4cdce6a4a869436f68077a7b2b2590ab1f75a4fe3ffbe9e3a347"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig4_source_data.xlsx",
+      "bytes": 46854,
+      "sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+      "bytes": 20945,
+      "sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_article.pdf",
+      "bytes": 3098123,
+      "sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-ANISO-D_supplementary.pdf",
+      "bytes": 8844257,
+      "sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-COMPUTE-E_article.pdf",
+      "bytes": 3264138,
+      "sha256": "fcf159660f8cb0134a4ce513d287035fceb457fd19e77110572e8cbcf897c452"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-GOLD-A_article.pdf",
+      "bytes": 4238655,
+      "sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2"
+    },
+    {
+      "path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-REVIEW-F_article.pdf",
+      "bytes": 6204852,
+      "sha256": "aded4fe9c479ebdcf3a14e28c4c4f71f77b18482653363a19e7b26d353713153"
+    }
+  ]
+}

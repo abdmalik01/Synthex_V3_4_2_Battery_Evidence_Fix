@@ -1,0 +1,36 @@
+{
+  "case_id": "PV-REVIEW-F",
+  "source": {
+    "title": "Perovskite Solar Cells: A Review of the Recent Advances",
+    "authors": ["Priyanka Roy", "Aritra Ghosh", "Fraser Barclay", "Ayush Khare", "Erdem Cuce"],
+    "journal": "Coatings",
+    "year": 2022,
+    "doi": "10.3390/coatings12081089",
+    "url": "https://www.mdpi.com/2079-6412/12/8/1089",
+    "page_count": 24,
+    "article_type": "Review"
+  },
+  "reviewed_noncanonical_example": {
+    "table": "Table 2",
+    "page": 9,
+    "reference": "[75]",
+    "architecture": "FTO/Compact TiO2/Mesoporous TiO2/Perovskite/m-MTDATA/Au",
+    "power_conversion_efficiency": 2.02,
+    "open_circuit_voltage": 0.24,
+    "short_circuit_current_density": 22.7,
+    "fill_factor_raw": "0.37",
+    "year": 2014
+  },
+  "assertions": [
+    "photovoltaics_route",
+    "review_paper_type",
+    "explicit_two_signal_review_detection",
+    "zero_focal_experiments",
+    "zero_focal_calculations",
+    "zero_canonical_performance_outputs",
+    "cited_values_preserved_noncanonical",
+    "evidence_retained",
+    "zero_graph_contamination",
+    "zero_analytics_contamination"
+  ]
+}

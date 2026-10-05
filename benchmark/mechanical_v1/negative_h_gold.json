@@ -1,0 +1,29 @@
+{
+  "case_id": "MECH-NEGATIVE-H",
+  "status": "locked_reviewed",
+  "assertion_count": 10,
+  "source": {
+    "title": "Predicting battery performance with small datasets by enhancing machine learning with distribution of relaxation times analysis",
+    "authors": ["Binbin Zhu", "Martinus Putra Widjaja", "Tobias Bergmann", "Mustapha Eddah", "Yue Yao", "Erlendur Jonsson", "Daniel Schroder"],
+    "journal": "Cell Reports Physical Science",
+    "year": 2026,
+    "doi": "10.1016/j.xcrp.2026.103334",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2666386426002407",
+    "sha256": "41fcb4389ee30a16169276009605f7878885bc0daa31ef7a1ee2074de228b5b7",
+    "page_count": 15,
+    "true_domain": "batteries"
+  },
+  "misleading_vocabulary": ["stress", "strain", "failure", "fracture", "resistance"],
+  "assertions": [
+    "source_is_primary_battery_study",
+    "routes_to_batteries",
+    "repeat_route_is_identical",
+    "misleading_mechanical_vocabulary_present",
+    "no_focal_mechanical_signals",
+    "zero_mechanical_experiments",
+    "zero_mechanical_calculations",
+    "zero_mechanical_canonical_metrics",
+    "zero_graph_or_analytics_contamination",
+    "provider_not_called"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "BIO-REVIEW-F",
+  "doi": "10.3390/jfb3020432",
+  "source_pdf": "corpus_pdfs/BIO-REVIEW-F.pdf",
+  "publisher_review_signal": "Review",
+  "author_self_description": "In this paper, we review the current state",
+  "cited_table": "Table 2",
+  "cited_rows": [
+    {"label": "PLLA/HA", "property": "compressive_modulus", "value": 8.3, "unit": "MPa", "reference": "[122,128]"},
+    {"label": "PLLA/HA", "property": "tensile_strength", "value": 3, "unit": "MPa", "reference": "[122,128]"},
+    {"label": "PLLA/collagen/HA", "property": "tensile_strength", "value": 2, "unit": "MPa", "reference": "[128]"},
+    {"label": "PU/PCL/HA", "property": "tensile_modulus", "value": 1.26, "unit": "MPa", "reference": "[123,127]"}
+  ],
+  "expected_cited_values": 4,
+  "gold_output_count": 0,
+  "expected_focal_experiments": 0,
+  "expected_focal_calculations": 0
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "MECH-FRACTURE-E",
+  "status": "locked_offline_validated_live_payload_schema_invalid_repair_quota",
+  "source_lock": "fracture_e_source_lock.json",
+  "gold": "fracture_e_gold.json",
+  "gold_assertions": 27,
+  "provider_calls": 2,
+  "paper_type": "fracture_toughness_testing",
+  "scientific_boundaries": [
+    "fracture toughness is not ordinary tensile stress or hardness",
+    "MPa*sqrt(m) remains a fracture-toughness unit and is never normalized to MPa",
+    "K_IC, K_JC and K_JU retain their reported distinctions",
+    "a conditional or invalid rough value is never promoted to valid K_IC",
+    "J-integral-derived values remain reported derived metrics",
+    "test temperature and tempering temperature remain distinct",
+    "specimen identity and treatment state remain associated with each table cell"
+  ],
+  "offline_result": "27/27 Table 6 values; K_IC, K_JC and K_JU validity distinctions preserved",
+  "live_result": "primary gemini-3.5-flash payload frozen; structural repair then hit daily quota; raw full-gold 0/27 with 4/27 value-unit matches, deterministic recovery 27/27",
+  "activation_gate": "closed without quality retry; primary payload exists and repair quota is recorded separately"
+}

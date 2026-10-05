@@ -1,0 +1,70 @@
+{
+  "case_id": "AM-COMPUTE-F",
+  "source": {
+    "title": "A Computationally Efficient Multi-Scale Thermal Modelling Approach for PBF-LB/M Based on the Enthalpy Method",
+    "authors": [
+      "Panagiotis Stavropoulos",
+      "Georgios Pastras",
+      "Thanassis Souflas",
+      "Konstantinos Tzimanis",
+      "Harry Bikas"
+    ],
+    "journal": "Metals",
+    "year": 2022,
+    "doi": "10.3390/met12111853",
+    "url": "https://www.mdpi.com/2075-4701/12/11/1853",
+    "page_count": 29
+  },
+  "method": {
+    "model_family": "multi-scale thermal model based on the enthalpy method",
+    "scales": [
+      "micro-scale",
+      "meso-scale",
+      "macro-scale"
+    ],
+    "heat_source": "Gaussian intensity profile",
+    "meso_domain_mm": [
+      2,
+      3,
+      3
+    ],
+    "meso_cell_um": [
+      5,
+      60,
+      4.29
+    ],
+    "simulation_time_ms": 0.25,
+    "time_step_us": 0.025
+  },
+  "rows": [
+    {
+      "material": "Ti6Al4V",
+      "laser_power_w": 170,
+      "scan_speed_mm_s": 1000,
+      "spot_size_um": 37.5,
+      "layer_thickness_um": 30,
+      "measured_melt_pool_width_um": 179,
+      "measured_uncertainty_um": 13,
+      "predicted_melt_pool_width_um": 185,
+      "predicted_uncertainty_um": 5
+    },
+    {
+      "material": "SS316L",
+      "laser_power_w": 500,
+      "scan_speed_mm_s": 600,
+      "spot_size_um": 19.5,
+      "layer_thickness_um": 30,
+      "measured_melt_pool_width_um": 127,
+      "measured_uncertainty_um": 44,
+      "predicted_melt_pool_width_um": 170,
+      "predicted_uncertainty_um": 3
+    }
+  ],
+  "scientific_boundaries": [
+    "model outputs are CalculationRecord outputs",
+    "in-line monitoring values remain validation context and are not focal experiment records",
+    "predicted melt-pool width is distinct from measured melt-pool width",
+    "melt-pool depth is not gold because the paper states it is not measured in-line",
+    "simulation inputs are not experimental build records"
+  ]
+}

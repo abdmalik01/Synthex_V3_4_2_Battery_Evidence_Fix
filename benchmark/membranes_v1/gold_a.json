@@ -1,0 +1,29 @@
+{
+  "case_id": "MEM-GOLD-A",
+  "source": {
+    "title": "Biphenyl-Based Covalent Triazine Framework/Matrimid® Mixed-Matrix Membranes for CO2/CH4 Separation",
+    "doi": "10.3390/membranes11100795",
+    "url": "https://www.mdpi.com/2077-0375/11/10/795",
+    "year": 2021,
+    "authors": ["Stefanie Bügel", "Quang-Dien Hoang", "Alex Spieß", "Yangyang Sun", "Shanghua Xing", "Christoph Janiak"]
+  },
+  "conditions": {
+    "temperature": 25.0,
+    "temperature_unit": "C",
+    "transmembrane_pressure": 3.0,
+    "pressure_unit": "bar",
+    "pressure_kind": "transmembrane_pressure",
+    "feed_composition": "CO2/CH4 1:1 by volume",
+    "test_mode": "mixed_gas",
+    "membrane_area": 11.3,
+    "membrane_area_unit": "cm2",
+    "equilibration_time": "5-8 h"
+  },
+  "variants": [
+    {"id": "matrimid_0", "name": "neat Matrimid 5218", "matrix": "Matrimid 5218", "filler": null, "filler_loading": 0.0, "co2": [6.8, 0.3], "ch4": [0.16, 0.01], "selectivity": [42.0, 1.0]},
+    {"id": "ctf_8", "name": "CTF-biphenyl/Matrimid 8 wt%", "matrix": "Matrimid 5218", "filler": "CTF-biphenyl", "filler_loading": 8.0, "co2": [12.0, 0.2], "ch4": [0.27, 0.01], "selectivity": [43.0, 1.0]},
+    {"id": "ctf_16", "name": "CTF-biphenyl/Matrimid 16 wt%", "matrix": "Matrimid 5218", "filler": "CTF-biphenyl", "filler_loading": 16.0, "co2": [15.1, 0.2], "ch4": [0.34, 0.01], "selectivity": [44.0, 1.0]},
+    {"id": "ctf_24", "name": "CTF-biphenyl/Matrimid 24 wt%", "matrix": "Matrimid 5218", "filler": "CTF-biphenyl", "filler_loading": 24.0, "co2": [15.4, 0.5], "ch4": [0.35, 0.01], "selectivity": [44.0, 1.0]}
+  ],
+  "expected_outputs": 12
+}

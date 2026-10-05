@@ -1,0 +1,11 @@
+{
+  "case_id": "PV-COMPUTE-E",
+  "source_file": "corpus_pdfs/micromachines-12-01508.pdf",
+  "source_sha256": "e72d7d7c45add862b93a96535cbb367accf6dc2c3541c0f139716e1d6e7f0e04",
+  "gold_file": "compute_e_gold.json",
+  "gold_sha256": "cbc4bd290e7a15af0d25b3792c1ebdc5c0586741ba15f7b2ae55bf8f54736a5e",
+  "page_count": 19,
+  "doi": "10.3390/mi12121508",
+  "official_url": "https://www.mdpi.com/2072-666X/12/12/1508",
+  "license": "CC BY 4.0"
+}

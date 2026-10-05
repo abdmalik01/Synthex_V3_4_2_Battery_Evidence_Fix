@@ -1,0 +1,15 @@
+{
+  "case_id": "TE-ANISO-D",
+  "doi": "10.1038/s41467-021-25722-0",
+  "article_file": "corpus_pdfs/TE-ANISO-D_article.pdf",
+  "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+  "article_page_count": 9,
+  "supplementary_file": "corpus_pdfs/TE-ANISO-D_supplementary.pdf",
+  "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31",
+  "supplementary_page_count": 28,
+  "gold_file": "gold_aniso_d.json",
+  "gold_sha256": "a96513a4ff37bb83623cc70b070e8c09fe7819bf83ecdc8c02ebd8bc75dac10b",
+  "license": "CC BY 4.0",
+  "source_origin": "Nature Communications publisher article and supplementary PDFs",
+  "locked_before_provider_run": true
+}

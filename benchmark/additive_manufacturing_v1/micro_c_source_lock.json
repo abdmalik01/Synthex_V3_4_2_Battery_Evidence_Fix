@@ -1,0 +1,11 @@
+{
+  "case_id": "AM-MICRO-C",
+  "source_file": "corpus_pdfs/materials-18-00032.pdf",
+  "source_sha256": "c58e6b54e7051e2742b9f584969b6744c8055c1c27f3283d6a5eb36bd216aa1b",
+  "gold_file": "micro_c_gold.json",
+  "gold_sha256": "60b40b09f842e71229fdfd8203b9837e93400d9781a597cd716eee98e12366d9",
+  "locked_filename": "materials-18-00032.pdf",
+  "official_url": "https://mdpi-res.com/d_attachment/materials/materials-18-00032/article_deploy/materials-18-00032.pdf",
+  "locked_before_provider_call": true,
+  "provider_calls": 0
+}

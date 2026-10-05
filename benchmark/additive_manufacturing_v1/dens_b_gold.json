@@ -1,0 +1,34 @@
+{
+  "case_id": "AM-DENS-B",
+  "source": {
+    "title": "Defect Analysis of 316 L Stainless Steel Prepared by LPBF Additive Manufacturing Processes",
+    "authors": ["Zhijun Zheng", "Le Peng", "Di Wang"],
+    "journal": "Coatings",
+    "year": 2021,
+    "doi": "10.3390/coatings11121562",
+    "url": "https://www.mdpi.com/2079-6412/11/12/1562",
+    "page_count": 19
+  },
+  "rows": [
+    {"sample": "1", "laser_power_w": 190, "scan_speed_mm_s": 1000, "hatch_spacing_mm": 0.05, "rotation_angle_deg": 0, "volumetric_energy_density_j_mm3": 95.00, "relative_density_pct": 97.36},
+    {"sample": "2", "laser_power_w": 190, "scan_speed_mm_s": 1350, "hatch_spacing_mm": 0.10, "rotation_angle_deg": 67, "volumetric_energy_density_j_mm3": 35.19, "relative_density_pct": 96.12},
+    {"sample": "3", "laser_power_w": 190, "scan_speed_mm_s": 1700, "hatch_spacing_mm": 0.15, "rotation_angle_deg": 90, "volumetric_energy_density_j_mm3": 18.63, "relative_density_pct": 75.79},
+    {"sample": "4", "laser_power_w": 260, "scan_speed_mm_s": 1000, "hatch_spacing_mm": 0.10, "rotation_angle_deg": 90, "volumetric_energy_density_j_mm3": 65.00, "relative_density_pct": 98.40},
+    {"sample": "5", "laser_power_w": 260, "scan_speed_mm_s": 1350, "hatch_spacing_mm": 0.15, "rotation_angle_deg": 0, "volumetric_energy_density_j_mm3": 32.10, "relative_density_pct": 95.91},
+    {"sample": "6", "laser_power_w": 260, "scan_speed_mm_s": 1700, "hatch_spacing_mm": 0.05, "rotation_angle_deg": 67, "volumetric_energy_density_j_mm3": 76.47, "relative_density_pct": 98.50},
+    {"sample": "7", "laser_power_w": 330, "scan_speed_mm_s": 1000, "hatch_spacing_mm": 0.15, "rotation_angle_deg": 67, "volumetric_energy_density_j_mm3": 55.00, "relative_density_pct": 97.60},
+    {"sample": "8", "laser_power_w": 330, "scan_speed_mm_s": 1350, "hatch_spacing_mm": 0.05, "rotation_angle_deg": 90, "volumetric_energy_density_j_mm3": 122.22, "relative_density_pct": 97.76},
+    {"sample": "9", "laser_power_w": 330, "scan_speed_mm_s": 1700, "hatch_spacing_mm": 0.10, "rotation_angle_deg": 0, "volumetric_energy_density_j_mm3": 48.53, "relative_density_pct": 97.00}
+  ],
+  "defect_identity": {
+    "sample_3": "lapping defects with unfused powder / lack-of-fusion morphology",
+    "sample_2": "unfused holes from insufficiently filled molten metal",
+    "sample_4": "spherical defects not exceeding 10 um"
+  },
+  "scientific_boundaries": [
+    "relative_density is not absolute_density or porosity",
+    "porosity is not calculated as 100 minus relative_density",
+    "lack_of_fusion_fraction and keyhole_porosity are not generic porosity",
+    "volumetric_energy_density is retained only because the source reports it"
+  ]
+}

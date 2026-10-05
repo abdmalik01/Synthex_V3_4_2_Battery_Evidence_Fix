@@ -1,0 +1,56 @@
+{
+  "analytics_result_rows": 165,
+  "case_outputs": {
+    "MEM-GOLD-A": 12,
+    "MEM-PROCESS-D": 30,
+    "MEM-SEP-B": 98,
+    "MEM-STAB-C": 25
+  },
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence": 0,
+    "ownership": 0
+  },
+  "invariants": {
+    "01_permeability_not_permeance": true,
+    "02_permeance_not_flux": true,
+    "03_selectivity_not_rejection": true,
+    "04_ideal_not_mixed_selectivity": true,
+    "05_separation_factor_distinct": true,
+    "06_barrer_not_gpu": true,
+    "07_no_permeability_permeance_conversion_without_thickness": true,
+    "08_gas_not_water_permeability": true,
+    "09_feed_pressure_not_tmp": true,
+    "10_feed_not_permeate_concentration": true,
+    "11_membrane_not_selective_layer_thickness": true,
+    "12_pore_size_not_mwco": true,
+    "13_porosity_not_pore_size": true,
+    "14_initial_not_fouled_flux": true,
+    "15_fouled_not_recovered_flux": true,
+    "16_frr_not_rejection": true,
+    "17_stability_not_antifouling": true,
+    "18_species_identity_retained": true,
+    "19_gas_pair_identity_retained": true,
+    "20_solute_identity_retained": true,
+    "21_membrane_variant_retained": true,
+    "22_filler_loading_retained": true,
+    "23_fabrication_process_retained": true,
+    "24_support_selective_roles_retained": true,
+    "25_missing_conditions_not_inferred": true,
+    "26_missing_values_not_interpolated": true,
+    "27_caption_only_cannot_admit": true,
+    "28_na_cannot_be_numeric": true,
+    "29_review_cited_values_do_not_leak": true,
+    "30_archive_domain_scoping": true
+  },
+  "passed": true,
+  "passed_invariants": 30,
+  "routing_controls": {
+    "battery_separator": "batteries",
+    "biological": "generic",
+    "weak_terms": "generic"
+  },
+  "routing_safe": true,
+  "total_outputs": 165
+}

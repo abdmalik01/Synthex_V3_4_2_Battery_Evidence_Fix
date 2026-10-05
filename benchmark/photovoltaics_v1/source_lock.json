@@ -1,0 +1,18 @@
+{
+  "case_id": "PV-GOLD-A",
+  "locked_at_utc": "2026-09-27T22:16:34Z",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0,
+  "source_origin": "official_publisher_open_access_pdf",
+  "source_file": "corpus_pdfs/energies-13-00585-v2.pdf",
+  "source_url": "https://res.mdpi.com/d_attachment/energies/energies-13-00585/article_deploy/energies-13-00585-v2.pdf",
+  "article_url": "https://www.mdpi.com/1996-1073/13/3/585",
+  "doi": "10.3390/en13030585",
+  "page_count": 10,
+  "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+  "gold_file": "gold_a.json",
+  "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c",
+  "table": "Table 2",
+  "table_page": 8,
+  "recovery": "locked_pdf_word_geometry_v1"
+}

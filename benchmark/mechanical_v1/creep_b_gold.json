@@ -1,0 +1,49 @@
+{
+  "case_id": "MECH-CREEP-B",
+  "status": "locked_reviewed",
+  "gold_version": "1.0.0",
+  "source": {
+    "filename": "metals-11-00830.pdf",
+    "sha256": "0e0b8d792564ac6050824486fe0ae099b4fec559459d40aa173ad990839bfb7c",
+    "title": "Creep Behavior of Diffusion-Welded Alloy 617",
+    "authors": ["Injin Sah", "Jong-Bae Hwang", "Eung-Seon Kim"],
+    "journal": "Metals",
+    "year": 2021,
+    "volume": 11,
+    "issue": 5,
+    "article": 830,
+    "doi": "10.3390/met11050830",
+    "url": "https://res.mdpi.com/d_attachment/metals/metals-11-00830/article_deploy/metals-11-00830.pdf",
+    "page_count": 15
+  },
+  "gold_basis": {
+    "table": "Table 2",
+    "page": 7,
+    "reviewed_from": "locked publisher PDF before any Creep provider call",
+    "sample": "diffusion-welded Alloy 617",
+    "processing_state": "diffusion_welded",
+    "environment": "ambient air",
+    "reported_terms": {
+      "rupture_time": "t_rup",
+      "rupture_strain": "epsilon_rup",
+      "time_to_specific_strain": "t_1%"
+    },
+    "unit_policy": "Keep h, %, MPa and degrees Celsius as printed; do not derive creep rate."
+  },
+  "assertion_count": 24,
+  "rows": [
+    {"table_row": 1, "test_temperature_c": 800, "applied_stress_mpa": 60, "rupture_time_h": "4661", "rupture_strain_percent": "1.71", "time_to_1_percent_h": "3647.1"},
+    {"table_row": 4, "test_temperature_c": 800, "applied_stress_mpa": 120, "rupture_time_h": "107", "rupture_strain_percent": "2.07", "time_to_1_percent_h": "60.9"},
+    {"table_row": 5, "test_temperature_c": 850, "applied_stress_mpa": 40, "rupture_time_h": "3985", "rupture_strain_percent": "5.10", "time_to_1_percent_h": "898.9"},
+    {"table_row": 7, "test_temperature_c": 900, "applied_stress_mpa": 25, "rupture_time_h": "4454", "rupture_strain_percent": "4.22", "time_to_1_percent_h": "1017.9"},
+    {"table_row": 10, "test_temperature_c": 900, "applied_stress_mpa": 40, "rupture_time_h": "688", "rupture_strain_percent": "5.13", "time_to_1_percent_h": "119.6"},
+    {"table_row": 12, "test_temperature_c": 900, "applied_stress_mpa": 50, "rupture_time_h": "159", "rupture_strain_percent": "8.32", "time_to_1_percent_h": "20.2"},
+    {"table_row": 14, "test_temperature_c": 950, "applied_stress_mpa": 25, "rupture_time_h": "711", "rupture_strain_percent": "4.52", "time_to_1_percent_h": "227.1"},
+    {"table_row": 16, "test_temperature_c": 950, "applied_stress_mpa": 35, "rupture_time_h": "143.6", "rupture_strain_percent": "4.24", "time_to_1_percent_h": "31.2"}
+  ],
+  "excluded_source_rows": [
+    {"table_row": 3, "test_temperature_c": 800, "applied_stress_mpa": 100, "reason": "paper_discards_abnormal_creep_curve; remark_N/A"},
+    {"table_row": 6, "test_temperature_c": 850, "applied_stress_mpa": 50, "reason": "remark_N/A"},
+    {"table_row": 13, "test_temperature_c": 950, "applied_stress_mpa": 20, "reason": "remark_N/A"}
+  ]
+}

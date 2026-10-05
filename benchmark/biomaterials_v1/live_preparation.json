@@ -1,0 +1,35 @@
+{
+  "provider": "gemini",
+  "authorization_status": "NOT_EVALUATED_BY_LOCAL_PREPARATION",
+  "source_transmitted_by_preparation": false,
+  "discovery_artifact": "output/biomaterials_v1/provider_runs/model_discovery/20261001T074805676693Z.json",
+  "discovery_sha256": "f30b378331464e6ed6e62abdc340a0d6dd8c208406abfbc7b4d3214c3b512663",
+  "candidate_exact_models": [
+    "models/gemini-3.8-flash",
+    "models/gemini-3.5-flash",
+    "models/gemini-2.5-flash"
+  ],
+  "maximum_transient_attempts_per_model": 3,
+  "raw_before_validation_recorder": "synthex_platform.benchmarks.provider_artifacts.ProviderArtifactRecorder",
+  "audit_directory": "output/biomaterials_v1/provider_runs",
+  "inputs": [
+    {
+      "case_id": "BIO-GOLD-A",
+      "pdf_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+      "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284",
+      "source_text_sha256": "e1940a139d63de9c30a6a42d74c7fed3c8e201c3fadb5e18d1f9046748e98635",
+      "prompt_sha256": "db937b874a20d1eb8ed7fabe9eb316a11b863d669e8097751edf152893bdb921",
+      "gold_in_prompt": false,
+      "gold_used": "hash_verification_only"
+    },
+    {
+      "case_id": "BIO-BIOACT-B",
+      "pdf_sha256": "8db235a12556d2ca44f91d38f9a997c2d4212ef275c5103ca0215a3e141826a3",
+      "gold_sha256": "b6bee9fdce27fbe9f31634a102ff391aae82f28942758d66b2bcb199802d00b2",
+      "source_text_sha256": "dea2ef20d5936cfd39cfef153e8f0f81388f57082439125b93c0c67a84e0abed",
+      "prompt_sha256": "ed653649b236dd7ea0c78ac5eacb1439a62410abd8e9baf7627b14b386b2cb74",
+      "gold_in_prompt": false,
+      "gold_used": "hash_verification_only"
+    }
+  ]
+}

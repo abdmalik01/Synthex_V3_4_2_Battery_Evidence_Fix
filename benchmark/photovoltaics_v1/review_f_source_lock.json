@@ -1,0 +1,11 @@
+{
+  "case_id": "PV-REVIEW-F",
+  "source_file": "corpus_pdfs/coatings-12-01089-v2.pdf",
+  "source_sha256": "9d4f2f6edfa5f3dc3e2b9982588c4a9dccd7ad62acaad4e1d91386c1c4e1adcf",
+  "gold_file": "review_f_gold.json",
+  "gold_sha256": "c209111e1148b5371936da6a29d4f4187b50964c2ba3ffd9b6f8b1fc63ad883b",
+  "page_count": 24,
+  "doi": "10.3390/coatings12081089",
+  "official_url": "https://www.mdpi.com/2079-6412/12/8/1089",
+  "license": "CC BY 4.0"
+}

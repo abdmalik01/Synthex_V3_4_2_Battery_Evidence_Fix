@@ -1,0 +1,29 @@
+{
+  "schema": "synthex.repository_size_audit.v1",
+  "comparison": "origin/main..f9c66c3",
+  "snapshot_note": "Historical development-main audit only. It includes the TE-GOLD-A supplement in unpublished commits and must not be used as the link-only public-branch object inventory. Recheck the public candidate's introduced objects before push.",
+  "method": "git rev-list --objects origin/main..HEAD | git cat-file --batch-check; SHA-256 from checked-out source bytes",
+  "introduced_object_count": 686,
+  "introduced_blob_count": 475,
+  "threshold_bytes": {"over_10_mib": 10485760, "over_25_mib": 26214400, "over_50_mib": 52428800, "at_least_100_mib": 104857600},
+  "counts": {"over_10_mib": 6, "over_25_mib": 0, "over_50_mib": 0, "at_least_100_mib": 0},
+  "largest_object_bytes": 24994155,
+  "normal_git_hard_limit_blocker": false,
+  "distribution_note": "This historical audit covers development-main only. The separate public candidate excludes the TE-GOLD-A supplement blob and retains its publisher link and locked SHA-256. No network or publisher-license verification was performed. Do not push development-main, whose history contains the supplement.",
+  "review_applies_to_each_pdf": {
+    "scientific_necessity": "Locked source or supplementary evidence for the named benchmark case; removing bytes would break existing source-hash checks and offline recovery.",
+    "public_source_reproducibility": "Publisher URL/DOI metadata exists in the associated source lock; public retrieval and exact-byte availability were not verified because external calls were prohibited.",
+    "already_in_unpushed_git_history": true,
+    "normal_git_acceptability": "Below the user-specified 100 MiB hard-limit threshold, subject to hosting policy and human review.",
+    "git_lfs_material_benefit": "Limited for a maximum 23.8 MiB PDF; changing historical objects would require an explicitly approved migration and does not resolve rights.",
+    "redistribution": "HUMAN_LICENSE_REVIEW_REQUIRED before push."
+  },
+  "large_pdfs": [
+    {"path": "benchmark/additive_manufacturing_v1/corpus_pdfs/materials-18-00032.pdf", "case_id": "AM-MICRO-C", "bytes": 24994155, "git_blob": "81810fc3bbb63a637c6bd9841c693967ee6b37a1", "sha256": "c58e6b54e7051e2742b9f584969b6744c8055c1c27f3283d6a5eb36bd216aa1b", "source_lock": "benchmark/additive_manufacturing_v1/micro_c_source_lock.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"},
+    {"path": "benchmark/additive_manufacturing_v1/corpus_pdfs/metals-11-00619.pdf", "case_id": "AM-MECH-D", "bytes": 12691837, "git_blob": "648ea889dd8b10f109a9b0e52fced47d98fae86f", "sha256": "ded2c3bfd4f028004d799bb6eea7d0e89a53bdfa90ba9de3d6af54e4e30e4be3", "source_lock": "benchmark/additive_manufacturing_v1/mech_d_source_lock.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"},
+    {"path": "benchmark/mechanical_v1/corpus_pdfs/materials-14-05875.pdf", "case_id": "MECH-FRACTURE-E", "bytes": 11745877, "git_blob": "068e4890ee2908df67098d6fa2509db73944721d", "sha256": "1166ad7b5831aae12f58e551882cabbfc6b4fc7d08a9ed8a6a9a92a0788b1614", "source_lock": "benchmark/mechanical_v1/fracture_e_source_lock.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"},
+    {"path": "benchmark/mechanical_v1/corpus_pdfs/metals-11-01014.pdf", "case_id": "MECH-HARD-D", "bytes": 15649335, "git_blob": "39f080d3bf3d41768c8a01db4d47d0c9e62fe1c6", "sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a", "source_lock": "benchmark/mechanical_v1/hard_d_source_lock.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"},
+    {"path": "benchmark/membranes_v1/corpus_pdfs/mem_review_f_polymeric_aging_review.pdf", "case_id": "MEM-REVIEW-F", "bytes": 10987218, "git_blob": "714ad0b8266703b43bde9bfc938695ab434bd773", "sha256": "82433ab21253a63b1ad77a02ff38fd0c2f722d75dd461f202ce0f6712f14adb1", "source_lock": "benchmark/membranes_v1/source_lock_review_f.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"},
+    {"path": "benchmark/thermoelectrics_v1/corpus_pdfs/TE-GOLD-A_supplementary.pdf", "case_id": "TE-GOLD-A", "bytes": 10565160, "git_blob": "e7d97bc82f6480598916bf31cd6956b2ffdfda49", "sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de", "source_lock": "benchmark/thermoelectrics_v1/source_lock.json", "classification": "HUMAN_LICENSE_REVIEW_REQUIRED"}
+  ]
+}

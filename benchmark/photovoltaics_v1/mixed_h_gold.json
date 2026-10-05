@@ -1,0 +1,41 @@
+{
+  "case_id": "PV-MIXED-H",
+  "source": {
+    "title": "Sustainable thermal regulation improves stability and efficiency in all-perovskite tandem solar cells",
+    "authors": ["Shuchen Tan", "Chongwen Li", "Cheng Peng", "Wenjian Yan", "Hongkai Bu", "Haokun Jiang", "Fang Yue", "Linbao Zhang", "Hongtao Gao", "Zhongmin Zhou"],
+    "journal": "Nature Communications",
+    "year": 2024,
+    "doi": "10.1038/s41467-024-48552-2",
+    "url": "https://www.nature.com/articles/s41467-024-48552-2",
+    "page_count": 9
+  },
+  "architecture": "ITO/PEDOT:PSS/mixed Sn-Pb perovskite/C60/SnO2/Ag",
+  "layer_roles": ["transparent_electrode", "htl", "absorber", "etl", "buffer", "electrode"],
+  "variants": [
+    {"variant": "pristine", "o_cb_concentration_mg_ml": 0.0},
+    {"variant": "o_cb", "o_cb_concentration_mg_ml": 1.0}
+  ],
+  "measurements": [
+    {"variant": "o_cb", "modality": "performance", "property": "short_circuit_current_density", "value": 32.19, "unit": "mA/cm2"},
+    {"variant": "o_cb", "modality": "performance", "property": "open_circuit_voltage", "value": 0.877, "unit": "V"},
+    {"variant": "o_cb", "modality": "performance", "property": "fill_factor", "value": 82.9, "unit": "%"},
+    {"variant": "o_cb", "modality": "performance", "property": "power_conversion_efficiency", "value": 23.4, "unit": "%"},
+    {"variant": "o_cb", "modality": "spectral_summary", "property": "eqe_integrated_current_density", "value": 31.0, "unit": "mA/cm2"},
+    {"variant": "pristine", "modality": "spectral_summary", "property": "eqe_integrated_current_density", "value": 30.2, "unit": "mA/cm2"},
+    {"variant": "o_cb", "modality": "stabilized_output", "property": "stabilized_power_conversion_efficiency", "value": 22.94, "unit": "%"},
+    {"variant": "o_cb", "modality": "thermal_stability", "property": "retained_efficiency", "value": 80.0, "unit": "%", "aging_time_h": 1080.0},
+    {"variant": "pristine", "modality": "thermal_stability", "property": "retained_efficiency", "value": 40.0, "unit": "%", "aging_time_h": 200.0, "qualifier": "approx"}
+  ],
+  "assertions": [
+    "two_device_variants_distinct",
+    "ordered_stack_retained",
+    "process_variant_retained",
+    "performance_values_match",
+    "spectral_summaries_match",
+    "stability_values_match",
+    "all_modalities_device_linked",
+    "modalities_remain_separate",
+    "evidence_and_ownership_retained",
+    "analytics_context_retained"
+  ]
+}

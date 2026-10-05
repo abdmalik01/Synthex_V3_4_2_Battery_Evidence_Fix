@@ -1,0 +1,11 @@
+{
+  "case_id": "MEM-STAB-C",
+  "status": "locked_before_provider_call",
+  "article_file": "corpus_pdfs/MEM-STAB-C_article.pdf",
+  "article_sha256": "48c3f11b77dbe7cf8e6618f35b489c3558d73719fa635c2e4fde68bc3275592f",
+  "article_page_count": 13,
+  "table_id": "Table 4",
+  "table_page": 9,
+  "gold_file": "gold_stab_c.json",
+  "gold_sha256": "5aa1124cbf19d2fa2e4c9ed79683784025a830f084452396d9a1169b8588c779"
+}

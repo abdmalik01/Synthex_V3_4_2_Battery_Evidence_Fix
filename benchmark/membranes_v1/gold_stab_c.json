@@ -1,0 +1,30 @@
+{
+  "case_id": "MEM-STAB-C",
+  "source": {
+    "title": "Antifouling Properties of PES Membranes by Blending with ZnO Nanoparticles and NMP–Acetone Mixture as Solvent",
+    "doi": "10.3390/membranes8040131",
+    "url": "https://www.mdpi.com/2077-0375/8/4/131",
+    "year": 2018,
+    "authors": ["Abdul Latif Ahmad", "Jayasree Sugumaran", "Noor Fazliani Shoparwe"]
+  },
+  "conditions": {
+    "test_mode": "dead_end_filtration",
+    "transmembrane_pressure": 9.0,
+    "pressure_unit": "bar",
+    "feed": "deionized water / humic acid sequence",
+    "foulant": "humic acid",
+    "feed_concentration": "0.05 g/L humic acid",
+    "initial_water_duration": "1 h",
+    "foulant_duration": "1 h",
+    "cleaning_method": "deionized-water wash for 15 min",
+    "recovered_water_duration": "1 h"
+  },
+  "variants": [
+    {"id": "pz1", "name": "PZ1 PES/NMP-acetone", "zno_loading": 0.0, "initial_flux": 3.51, "fouled_flux": 3.37, "recovered_flux": 3.44, "frr": 97.93, "rfr": 3.94},
+    {"id": "pz2", "name": "PZ2 PES/ZnO 0.5 wt%", "zno_loading": 0.5, "initial_flux": 19.72, "fouled_flux": 8.08, "recovered_flux": 8.59, "frr": 43.55, "rfr": 59.03},
+    {"id": "pz3", "name": "PZ3 PES/ZnO 1.0 wt%", "zno_loading": 1.0, "initial_flux": 22.44, "fouled_flux": 8.19, "recovered_flux": 8.72, "frr": 38.89, "rfr": 63.52},
+    {"id": "pz4", "name": "PZ4 PES/ZnO 1.5 wt%", "zno_loading": 1.5, "initial_flux": 13.09, "fouled_flux": 5.62, "recovered_flux": 5.92, "frr": 45.24, "rfr": 57.06},
+    {"id": "pz5", "name": "PZ5 PES/ZnO 2.0 wt%", "zno_loading": 2.0, "initial_flux": 5.30, "fouled_flux": 3.56, "recovered_flux": 3.68, "frr": 69.38, "rfr": 32.83}
+  ],
+  "expected_outputs": 25
+}

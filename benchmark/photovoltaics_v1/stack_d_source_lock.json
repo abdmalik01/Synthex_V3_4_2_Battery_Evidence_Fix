@@ -1,0 +1,11 @@
+{
+  "case_id": "PV-STACK-D",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0,
+  "source_origin": "cc_by_author_deposited_publisher_layout_pdf",
+  "source_file": "corpus_pdfs/acsaelm-3c00900.pdf",
+  "source_sha256": "7187d879c200613213ff72fd50c847ee9e153b9d3d394f81f5ed452ff6efdd9f",
+  "page_count": 8,
+  "gold_file": "stack_d_gold.json",
+  "gold_sha256": "8b16e84894f272756f9e8e1d193366516aec0de4efb9fb11980803832c63a0a8"
+}

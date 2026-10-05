@@ -1,0 +1,9 @@
+{
+  "case_id": "MECH-REVIEW-G",
+  "source_file": "corpus_pdfs/materials-13-04301.pdf",
+  "source_sha256": "791df92c3afd42061d9518a9a9c23e73819827d195dda8dececb5c3669bac9a3",
+  "gold_file": "review_g_gold.json",
+  "gold_sha256": "6ece22e51c0251503240a8527ada9f39a7c2d6ac1f3e65b91da35da26cfa5d36",
+  "assertions": 11,
+  "locked": true
+}

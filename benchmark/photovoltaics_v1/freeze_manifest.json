@@ -1,0 +1,45 @@
+{
+  "domain": "photovoltaics",
+  "version": "1.0.0",
+  "freeze_status": "FROZEN_DETERMINISTIC_PROVIDER_EVALUATION_MODEL_SPECIFIC",
+  "freeze_statement": "Photovoltaics V1 is scientifically closed for deterministic extraction, device association, ordered layer architecture, fabrication linkage, performance metrics, spectral response, stability semantics, computational separation, review containment, negative routing, evidence ownership, analytics safety, and archive/domain scoping. Provider evaluation remains model-specific and is not equivalent to deterministic Synthex recovery.",
+  "live_gate": {
+    "satisfied": true,
+    "qualifying_case": "PV-GOLD-A",
+    "provider_name": "gemini",
+    "model_id": "models/gemini-3.6-flash",
+    "provider_reported_model_id": "gemini-3.6-flash",
+    "run_id": "20260928T204341319257Z",
+    "status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED",
+    "payload_persisted_before_validation": true,
+    "scientifically_scored": true,
+    "canonical_admitted": false
+  },
+  "closure": {
+    "case_assertions": {"passed": 57, "total": 57},
+    "scientific_invariants": {"passed": 35, "total": 35},
+    "ownership_contamination": 0,
+    "evidence_violations": 0,
+    "cross_record_leakage": 0,
+    "analytics_contamination": 0
+  },
+  "cases": [
+    {"case_id": "PV-GOLD-A", "assertions": "4/4", "devices": 4, "processes": 4, "experiments": 4, "calculations": 0, "outputs": 20, "analytics_rows": 20, "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d", "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c"},
+    {"case_id": "PV-SPEC-B", "assertions": "3/3", "devices": 3, "processes": 0, "experiments": 3, "calculations": 0, "outputs": 223, "analytics_rows": 223, "article_sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e", "source_data_sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88", "gold_sha256": "0cdfaf1cf70f8eadafb32a11ff2f772d44c138239c0234cbdccea7e38cdf9ed8"},
+    {"case_id": "PV-STAB-C", "assertions": "6/6", "devices": 6, "processes": 0, "experiments": 6, "calculations": 0, "outputs": 7, "analytics_rows": 7, "article_sha256": "c2054ded63a1552afcbaebde71496ade8ec9069b4a0a35b9ffe9e96674635a06", "supplement_sha256": "6af751b270d69a422634b4b3667d517f5325c12309d59051c0c97e1761750cc7", "gold_sha256": "e9ac8ed1e69756960cd88c0dc27c9f0184ed7ddbecc63b0690f37c2b2cbe3813"},
+    {"case_id": "PV-STACK-D", "assertions": "6/6", "devices": 6, "processes": 6, "experiments": 6, "calculations": 0, "outputs": 24, "analytics_rows": 24, "source_sha256": "7187d879c200613213ff72fd50c847ee9e153b9d3d394f81f5ed452ff6efdd9f", "gold_sha256": "8b16e84894f272756f9e8e1d193366516aec0de4efb9fb11980803832c63a0a8"},
+    {"case_id": "PV-COMPUTE-E", "assertions": "8/8", "devices": 0, "processes": 0, "experiments": 0, "calculations": 5, "outputs": 20, "analytics_rows": 20, "source_sha256": "e72d7d7c45add862b93a96535cbb367accf6dc2c3541c0f139716e1d6e7f0e04", "gold_sha256": "cbc4bd290e7a15af0d25b3792c1ebdc5c0586741ba15f7b2ae55bf8f54736a5e"},
+    {"case_id": "PV-REVIEW-F", "assertions": "10/10", "canonical_devices": 0, "canonical_experiments": 0, "canonical_calculations": 0, "canonical_outputs": 0, "noncanonical_candidates": 8, "source_sha256": "9d4f2f6edfa5f3dc3e2b9982588c4a9dccd7ad62acaad4e1d91386c1c4e1adcf", "gold_sha256": "c209111e1148b5371936da6a29d4f4187b50964c2ba3ffd9b6f8b1fc63ad883b"},
+    {"case_id": "PV-NEG-G", "assertions": "10/10", "expected_route": "catalysis", "pv_devices": 0, "pv_experiments": 0, "pv_calculations": 0, "pv_outputs": 0, "source_sha256": "12e7d9ed861f4debbe6bee6760730dcf0c18f1d911925611d8789a1ba97f5851", "gold_sha256": "ac9a9d71c17d4a16df8a6928fed6be3e5ad258d003b8f605ebd571c78d0e82a5"},
+    {"case_id": "PV-MIXED-H", "assertions": "10/10", "devices": 2, "processes": 2, "experiments": 6, "calculations": 0, "outputs": 9, "analytics_rows": 9, "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e", "gold_sha256": "f3fca86ef0f58cbb2d9e4c62ac5590dd61845ce7dda461ae7d0303c9100c73d3"}
+  ],
+  "provider_history": [
+    {"history": "historical", "provider_name": "gemini", "model_id": "gemini-3.5-flash", "case_id": "PV-GOLD-A", "status": "LIVE_UNAVAILABLE_AFTER_RETRIES", "attempts": 3, "payload_returned": false, "raw_score": null, "preserved": true},
+    {"history": "historical", "provider_name": "gemini", "model_id": "gemini-3.5-flash", "case_id": "PV-SPEC-B", "status": "LIVE_UNAVAILABLE_AFTER_RETRIES", "attempts": 3, "payload_returned": false, "raw_score": null, "preserved": true},
+    {"history": "alternate", "provider_name": "gemini", "model_id": "models/gemini-2.5-flash", "case_id": "PV-GOLD-A", "run_id": "20260928T175915372971Z", "status": "PROVIDER_ERROR_WITH_NO_PAYLOAD", "attempts": 1, "payload_returned": false, "raw_score": null},
+    {"history": "alternate", "provider_name": "gemini", "model_id": "models/gemini-3.8-flash", "case_id": "PV-GOLD-A", "run_id": "20260928T175950850812Z", "status": "LIVE_UNAVAILABLE_AFTER_RETRIES", "attempts": 3, "payload_returned": false, "raw_score": null},
+    {"history": "alternate", "provider_name": "gemini", "model_id": "models/gemini-3.6-flash", "provider_reported_model_id": "gemini-3.6-flash", "case_id": "PV-GOLD-A", "run_id": "20260928T204341319257Z", "status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED", "attempts": 3, "payload_returned": true, "schema_valid": false, "repair_attempted": true, "canonical_admitted": false, "raw_scores": {"device_identity": "3/4", "ordered_stack_role_material": "0/24", "metric_values": "0/20", "reported_uncertainties": "0/20", "device_association": "0/20", "measurement_context": "0/20", "value_specific_evidence": "0/20", "focal_ownership": "0/4"}},
+    {"history": "alternate", "provider_name": "gemini", "model_id": "models/gemini-3.6-flash", "case_id": "PV-SPEC-B", "run_id": "20260928T204606146770Z", "status": "LIVE_UNAVAILABLE_AFTER_RETRIES", "attempts": 3, "payload_returned": false, "raw_score": null}
+  ],
+  "provider_evaluation_caveat": "At least one alternate model returned an auditable payload, satisfying the freeze gate. This does not establish raw Gemini extraction as production-ready or generalize across Gemini models."
+}

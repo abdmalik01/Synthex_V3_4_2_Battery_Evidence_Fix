@@ -1,0 +1,43 @@
+{
+  "case_id": "AM-NEGATIVE-H",
+  "status": "locked_reviewed",
+  "source": {
+    "title": "Synthesis of Cathode Material Li2FeTiO4 for Lithium-Ion Batteries by Sol-Gel Method",
+    "authors": [
+      "Pengqing Hou",
+      "Qi Sun",
+      "Shengxue Yan",
+      "Guanglong Li",
+      "Yingdong Qu",
+      "Shaohua Luo"
+    ],
+    "journal": "Batteries",
+    "year": 2025,
+    "doi": "10.3390/batteries11040142",
+    "url": "https://www.mdpi.com/2313-0105/11/4/142",
+    "page_count": 15,
+    "true_domain": "batteries",
+    "article_type": "Article"
+  },
+  "misleading_vocabulary": [
+    "powder",
+    "layer",
+    "porosity",
+    "density",
+    "thermal",
+    "surface",
+    "scan"
+  ],
+  "assertions": [
+    "source_is_primary_battery_study",
+    "routes_to_batteries",
+    "repeat_route_is_identical",
+    "misleading_am_vocabulary_present",
+    "no_focal_am_signals",
+    "zero_am_builds",
+    "zero_am_experiments",
+    "zero_am_calculations",
+    "zero_am_metrics",
+    "zero_graph_or_analytics_contamination"
+  ]
+}

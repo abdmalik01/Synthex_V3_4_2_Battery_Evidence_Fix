@@ -1,0 +1,39 @@
+{
+  "case_id": "SEM-OPTICAL-C",
+  "source": {
+    "title": "Comparison of the Material Quality of AlxIn1−xN (x—0–0.50) Films Deposited on Si(100) and Si(111) at Low Temperature by Reactive RF Sputtering",
+    "authors": ["Michael Sun", "Rodrigo Blasco", "Julian Nwodo", "María de la Mata", "Sergio I. Molina", "Akhil Ajay", "Eva Monroy", "Sirona Valdueza-Felip", "Fernando B. Naranjo"],
+    "journal": "Materials",
+    "year": 2022,
+    "doi": "10.3390/ma15207373",
+    "url": "https://www.mdpi.com/1996-1944/15/20/7373"
+  },
+  "absorption_source_table": "Table 2",
+  "absorption_source_page": 6,
+  "film_context_table": "Table 1",
+  "film_context_page": 3,
+  "pl_source_table": "Table 3",
+  "pl_source_page": 8,
+  "growth_method": "reactive RF sputtering",
+  "growth_temperature_c": 300,
+  "absorption_specimens": [
+    {"sample": "M1", "al_mole_fraction": 0, "substrate": "sapphire", "measurement_temperature": "room_temperature", "apparent_optical_band_gap_ev": 1.70},
+    {"sample": "M2", "al_mole_fraction": 0.12, "substrate": "sapphire", "measurement_temperature": "room_temperature", "apparent_optical_band_gap_ev": 1.80},
+    {"sample": "M3", "al_mole_fraction": 0.35, "substrate": "sapphire", "measurement_temperature": "room_temperature", "apparent_optical_band_gap_ev": 2.10},
+    {"sample": "M4", "al_mole_fraction": 0.40, "substrate": "sapphire", "measurement_temperature": "room_temperature", "apparent_optical_band_gap_ev": 2.30},
+    {"sample": "M5", "al_mole_fraction": 0.48, "substrate": "sapphire", "measurement_temperature": "room_temperature", "apparent_optical_band_gap_ev": 2.60}
+  ],
+  "pl_specimens": [
+    {"sample": "M1", "substrate": "Si(100)", "al_mole_fraction": 0, "thickness_nm": 390, "measurement_temperature_k": 11, "pl_peak_ev": 1.60},
+    {"sample": "M1", "substrate": "Si(111)", "al_mole_fraction": 0, "thickness_nm": 380, "measurement_temperature_k": 11, "pl_peak_ev": 1.60},
+    {"sample": "M1", "substrate": "Si(100)", "al_mole_fraction": 0, "thickness_nm": 390, "measurement_temperature_k": 300, "pl_peak_ev": 1.60},
+    {"sample": "M1", "substrate": "Si(111)", "al_mole_fraction": 0, "thickness_nm": 380, "measurement_temperature_k": 300, "pl_peak_ev": 1.60},
+    {"sample": "M2", "substrate": "Si(100)", "al_mole_fraction": 0.12, "thickness_nm": 790, "measurement_temperature_k": 11, "pl_peak_ev": 1.80},
+    {"sample": "M2", "substrate": "Si(111)", "al_mole_fraction": 0.16, "thickness_nm": 780, "measurement_temperature_k": 11, "pl_peak_ev": 1.80},
+    {"sample": "M2", "substrate": "Si(100)", "al_mole_fraction": 0.12, "thickness_nm": 790, "measurement_temperature_k": 300, "pl_peak_ev": 1.80},
+    {"sample": "M2", "substrate": "Si(111)", "al_mole_fraction": 0.16, "thickness_nm": 780, "measurement_temperature_k": 300, "pl_peak_ev": 1.75}
+  ],
+  "canonical_result_count": 13,
+  "ownership_note": "Absorption-gap rows are sapphire specimens; PL rows are separate Si specimens. No PL value is assigned to sapphire, and no optical gap to Si.",
+  "derivation_note": "Table 2 calls its values apparent optical band gaps estimated by fitting squared absorption; Table 3 values are PL main peak emission energies."
+}

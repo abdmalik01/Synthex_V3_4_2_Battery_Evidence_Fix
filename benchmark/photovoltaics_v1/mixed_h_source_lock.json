@@ -1,0 +1,11 @@
+{
+  "case_id": "PV-MIXED-H",
+  "source_file": "corpus_pdfs/nature-communications-15-4136.pdf",
+  "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e",
+  "gold_file": "mixed_h_gold.json",
+  "gold_sha256": "f3fca86ef0f58cbb2d9e4c62ac5590dd61845ce7dda461ae7d0303c9100c73d3",
+  "page_count": 9,
+  "doi": "10.1038/s41467-024-48552-2",
+  "official_url": "https://www.nature.com/articles/s41467-024-48552-2",
+  "license": "CC BY 4.0"
+}

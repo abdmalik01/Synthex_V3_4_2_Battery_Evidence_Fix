@@ -1,0 +1,11 @@
+{
+  "case_id": "AM-MECH-D",
+  "source_file": "corpus_pdfs/metals-11-00619.pdf",
+  "source_sha256": "ded2c3bfd4f028004d799bb6eea7d0e89a53bdfa90ba9de3d6af54e4e30e4be3",
+  "gold_file": "mech_d_gold.json",
+  "gold_sha256": "ef317234132769eebe87a6e34f64e5767a7d7c40b6da4b3f422a3e166ccf6dde",
+  "locked_filename": "metals-11-00619.pdf",
+  "official_url": "https://mdpi-res.com/d_attachment/metals/metals-11-00619/article_deploy/metals-11-00619.pdf",
+  "locked_before_provider_call": true,
+  "provider_calls": 0
+}

@@ -1,0 +1,1899 @@
+{
+  "method": "metadata_only_from_existing_real_provider_reports",
+  "model_merging": false,
+  "no_payload_scoring": "null_not_zero",
+  "runs": [
+    {
+      "domain": "additive_manufacturing",
+      "case": "AM-DENS-B",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "additive_manufacturing_v1/live/AM-DENS-B/report.json",
+      "report_sha256": "892b169b17347ac364490c554cc78b708cfa4c6ed087fc35d01cb79883366d19",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/additive_manufacturing_v1/live/AM-DENS-B/provider_raw_response.json",
+          "sha256": "0967f2fbfcb0896c89a4151a743006d10aa9e6460b681241c1e8802b4493c27e"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 9,
+        "total": 9,
+        "value_accuracy": 1.0,
+        "coordinate_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "8f5b8663449be7870fc4cec1ca61d6aff04cc23bb5bf61eafb9ad20f7427af2e",
+        "gold_sha256": "aa3ea434596dc3f56017e7d0ea9d86efdf7fef4d083bfbcb6674b3217ca2e4ea"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case": "AM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": "20260926T074932409482Z",
+      "report_path": "additive_manufacturing_v1/live/AM-GOLD-A/runs/20260926T074932409482Z/report.json",
+      "report_sha256": "af0148040332e71157c464860595498796f50d025fea7a73877673e8d3c9efab",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/additive_manufacturing_v1/live/AM-GOLD-A/runs/20260926T074932409482Z/attempt-1/raw_response.txt",
+          "sha256": "e0ff82959e1ec87a67b2c43ef30a555dd5ea03c8d15946ad655dd780276b1eea"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 27,
+        "total": 27,
+        "value_accuracy": 1.0,
+        "coordinate_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "7d7ee37f59c77f2fd922dd10c4c330690de40f1ab4e6a54c49b74aea242878e9",
+        "gold_sha256": "9d4d66f0b54cf2a1757ba19adc31dda1df113519a7bbf258647a3de56a2adb51"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case": "AM-MECH-D",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": "20260927T161146291394Z",
+      "report_path": "additive_manufacturing_v1/live/AM-MECH-D/runs/20260927T161146291394Z/report.json",
+      "report_sha256": "0ed8b0785ea38d40fe1bb3fd1db1d6e29c14c02b51843b1ce988b49c4ff88a02",
+      "attempt_count": 3,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/additive_manufacturing_v1/live/AM-MECH-D/runs/20260927T161146291394Z/attempt-3/raw_response.txt",
+          "sha256": "d68683e7a35acb4a58652d1b224b2de24c1b8b2da8a76aa39b7c90f230c73132"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 12,
+        "total": 12
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "ded2c3bfd4f028004d799bb6eea7d0e89a53bdfa90ba9de3d6af54e4e30e4be3",
+        "gold_sha256": "ef317234132769eebe87a6e34f64e5767a7d7c40b6da4b3f422a3e166ccf6dde"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case": "AM-MICRO-C",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": "20260927T160708691248Z",
+      "report_path": "additive_manufacturing_v1/live/AM-MICRO-C/runs/20260927T160708691248Z/report.json",
+      "report_sha256": "0c0d0d5519891b595bf39baa07b81822a9c846eb44978bb8510f461e81672619",
+      "attempt_count": 3,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/additive_manufacturing_v1/live/AM-MICRO-C/runs/20260927T160708691248Z/attempt-3/raw_response.txt",
+          "sha256": "1ff4d03863662f87a43d9cb9c3dc46abf5c30b38cd8ea0766e6837c1a894e62c"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 16,
+        "total": 16
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "c58e6b54e7051e2742b9f584969b6744c8055c1c27f3283d6a5eb36bd216aa1b",
+        "gold_sha256": "60b40b09f842e71229fdfd8203b9837e93400d9781a597cd716eee98e12366d9"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "additive_manufacturing",
+      "case": "AM-POST-E",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": "20260927T162236721138Z",
+      "report_path": "additive_manufacturing_v1/live/AM-POST-E/runs/20260927T162236721138Z/report.json",
+      "report_sha256": "2befc31e7bb1042484a62db1534752953a85b4cf2bb50d4b35a45da67d1d4c98",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/additive_manufacturing_v1/live/AM-POST-E/runs/20260927T162236721138Z/attempt-1/raw_response.txt",
+          "sha256": "a942e741262feb4b48350d3dc5d19a7d92d2894a442d55ce73809bf97b4b740a"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 8,
+        "total": 8
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "287be6b5443f3f344b01f1a23ae17e9d17ffa0b897ac7a3babd64b54d836324c",
+        "gold_sha256": "72912ae6f8fe2d483f116f1a08f397e6dfe48f9c0a4d13c55b38c5f1b11eae60"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-2.5-flash",
+      "configured_model": "models/gemini-2.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T161237460094Z-6cd400ce4063",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-2.5-flash/20261001T161237460094Z-6cd400ce4063/report.json",
+      "report_sha256": "423b96efab0682cfa03064ee7c2165e59b5cb385ac107266373335ace944e716",
+      "attempt_count": 1,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "INVALID_REQUEST"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-pro-preview",
+      "configured_model": "models/gemini-3.1-pro-preview",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T184525974201Z-02ddc63d21f7",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-c9b7e2ca93/20261001T184525974201Z-02ddc63d21f7/report.json",
+      "report_sha256": "d158da2739d7adb4dbf69524987faaa8d0740580f44f929595840db7aa28fd2d",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "RATE_LIMITED"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash",
+      "configured_model": "models/gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T161147455803Z-4e54e6134ef9",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-3.5-flash/20261001T161147455803Z-4e54e6134ef9/report.json",
+      "report_sha256": "1d93b4201c7663659e939ad720ffd65a87cbbd13e2f827e0ad9b3e5f03ad3ec0",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.6-flash",
+      "configured_model": "models/gemini-3.6-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T184327300969Z-6b20db11a248",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-3.6-flash/20261001T184327300969Z-6b20db11a248/report.json",
+      "report_sha256": "52399d6e91604ae4ddce55249c07853ca4e3ebd283b040eea7451d67bcbfdf00",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.7-flash",
+      "configured_model": "models/gemini-3.7-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T184145228802Z-3d25ba3518a8",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-3.7-flash/20261001T184145228802Z-3d25ba3518a8/report.json",
+      "report_sha256": "91f8a2adeb0eb7642f370f4e0f00bd378c045ed276f1034587b20ec5bdd5ca39",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "biomaterials",
+      "case": "BIO-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": "models/gemini-3.8-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20261001T161041539157Z-62c45785d9ce",
+      "report_path": "biomaterials_v1/provider_runs/BIO-GOLD-A/gemini/models_gemini-3.8-flash/20261001T161041539157Z-62c45785d9ce/report.json",
+      "report_sha256": "ee67b463cf7dda9abbf51e2a2b6dbda8ec834f23cde1bcac4221775233c88210",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "f078c728e5c523b373fe2f9ca0fdf4a98b38373a9381133a877bf6c432e1435d",
+        "gold_sha256": "b4aece20f83b2843e179ce2891c6d4e7f41a7879551a8adc7ee631d345601284"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-COAT-B",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-COAT-B/report.json",
+      "report_sha256": "3b358c7f0d8d3aa30f54e71aa3bc413fb5fc43e0ead50e8f1c71481b708c8f14",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-DFT-F",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-DFT-F/report.json",
+      "report_sha256": "45c2380df180fdfe60eeba64a829d0c5c156e47b8675187c2ae74d2e8a7a6914",
+      "attempt_count": 2,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/corrosion_v1/live/CORR-DFT-F/provider_raw_response.json",
+          "sha256": "cc5a2985aba7cca1343a6671bc6d7fca0cc6d59febd07973eeaf8e7038c119ee"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "value_accuracy": 0.0
+      },
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-EIS-D",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-EIS-D/report.json",
+      "report_sha256": "862666b72b446f0e9590e24d6f33260d0c08f455901430c51c016694d9e6839c",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-GOLD-A/report.json",
+      "report_sha256": "2dad423acc8b4313d7cf294caf55dd201e376baec1a23ed8e4d2ef26d1cf082b",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-INHIB-C",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-INHIB-C/report.json",
+      "report_sha256": "8cfa2f60e8e1467b7b54dd30642fed7355d004b1b4073acc24c2972176eeadd0",
+      "attempt_count": 2,
+      "payload_returned": true,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "corrosion",
+      "case": "CORR-WEIGHT-E",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "corrosion_v1/live/CORR-WEIGHT-E/report.json",
+      "report_sha256": "86f983460c78d68aae00219b84c5cdfa72ab2074d81f1b66f4c13ef9e3d9de60",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "value_accuracy": 0.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": null,
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-COMPUTE-F",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-COMPUTE-F/first_20260922/report.json",
+      "report_sha256": "dc1d80ff8dfc17de4ace9280f1e8a4d2fb903c27686cff787d99d8cf8c5c020d",
+      "attempt_count": 1,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 28,
+        "total": 28,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "3aa748516b93d7cdbf416ea5db8330742b5c17af5fe3511e0c0dd5bc7089fdf3",
+        "gold_sha256": "e43e9c5aa43a91520e001854a88098a494c01bf7d033ee6ba22b3f6a38ed434f"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-CREEP-B",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-CREEP-B/first_20260922/report.json",
+      "report_sha256": "42ca40a7d48f975afcf8299d04ac5e3d655126ea1c508ed3bcacd59410215aae",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/mechanical_v1/live/MECH-CREEP-B/first_20260922/provider_raw_response.json",
+          "sha256": "cc26333d8b4cf4d32e9dfabb7ed8ca48976cb7c5a700595f11af0964e4f05d2f"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "passed": 0,
+        "total": 24,
+        "value_accuracy": 1.0
+      },
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 24,
+        "total": 24,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "0e0b8d792564ac6050824486fe0ae099b4fec559459d40aa173ad990839bfb7c",
+        "gold_sha256": "292dbed896a676148b92927551d4117adeb08bc59f452561bd17821ce471f711"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-FATIGUE-C",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-FATIGUE-C/closure_retry_20260922/report.json",
+      "report_sha256": "8e1d9a5d5a305a3a115f088e0da98296d50706652b47b6127586dd81a574d3fc",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/mechanical_v1/live/MECH-FATIGUE-C/closure_retry_20260922/provider_raw_response.json",
+          "sha256": "ae8f7abcb0363b451e763d85f32ae85fd3d9c18fa3a1f32723b7ca89873ef087"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "passed": 0,
+        "total": 20,
+        "value_accuracy": 0.0
+      },
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "passed": 20,
+        "total": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "3d992e8c7341000b98f5fdc3ea2b32d1f8ac443455a3059afe8900e799e0ddd0",
+        "gold_sha256": "b91fdf7af7df91796a868ff44e9c81032b43d622bab5fbc8e57bd2b975c09aca"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-FATIGUE-C",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-FATIGUE-C/first_20260922/report.json",
+      "report_sha256": "ad6e2bf3ca8bb2ba864535a23a6be0ff4184653f80e1a009939472ea092df973",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 20,
+        "total": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "3d992e8c7341000b98f5fdc3ea2b32d1f8ac443455a3059afe8900e799e0ddd0",
+        "gold_sha256": "b91fdf7af7df91796a868ff44e9c81032b43d622bab5fbc8e57bd2b975c09aca"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-FRACTURE-E",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-FRACTURE-E/first_20260922/report.json",
+      "report_sha256": "25ac747bd17c821c87b343bf5a1fe5392955535c3dfca0d5add72f301e0b6323",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/mechanical_v1/live/MECH-FRACTURE-E/first_20260922/provider_raw_response.json",
+          "sha256": "0baedeb16e6d557fb4c4c67255af670aa67745f0b39bb7d2037ed6727e8af148"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "passed": 0,
+        "total": 27
+      },
+      "schema_valid": null,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "passed": 27,
+        "total": 27,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "1166ad7b5831aae12f58e551882cabbfc6b4fc7d08a9ed8a6a9a92a0788b1614",
+        "gold_sha256": "2ad4e11d58966a63a33e9288831ad752b7359d1af683217661134749e4345a2d"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-GOLD-A/closure_retry_20260922/report.json",
+      "report_sha256": "c511f1d7bfff34ee4affac3262796d3335507bd6dd08a4ab50271a474f6daf05",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/mechanical_v1/live/MECH-GOLD-A/closure_retry_20260922/provider_raw_response.json",
+          "sha256": "f6dcd411c77b2b7a3fc8d0d276b3c677b9d1dfccedded0e43e6f997d591a959a"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "passed": 0,
+        "total": 18,
+        "value_accuracy": 0.0
+      },
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 18,
+        "total": 18,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24",
+        "gold_sha256": "60f1ca1f1c2dc74c94cb33296011ea5651b738ac70c803dda66cddf817d5c9e0"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-GOLD-A/report.json",
+      "report_sha256": "12a7aae0c20b3a1a80bca98fb32a3df815ef8aa68396db93dc372b6d02bd5e7f",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24",
+        "gold_sha256": "60f1ca1f1c2dc74c94cb33296011ea5651b738ac70c803dda66cddf817d5c9e0"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-GOLD-A/retry_20260922/report.json",
+      "report_sha256": "12a7aae0c20b3a1a80bca98fb32a3df815ef8aa68396db93dc372b6d02bd5e7f",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24",
+        "gold_sha256": "60f1ca1f1c2dc74c94cb33296011ea5651b738ac70c803dda66cddf817d5c9e0"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "mechanical",
+      "case": "MECH-HARD-D",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": null,
+      "run_id": null,
+      "report_path": "mechanical_v1/live/MECH-HARD-D/first_20260922/report.json",
+      "report_sha256": "e8836be4f876960e1cf93eca4753dd4686750a7bef2a40e12554e673be199d06",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/mechanical_v1/live/MECH-HARD-D/first_20260922/provider_raw_response.json",
+          "sha256": "6944fdf5609869f4afacc51729861bd085f1e3207ee5b301b84784adaa7e1c74"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "passed": 0,
+        "total": 18,
+        "value_accuracy": 1.0
+      },
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": true,
+      "deterministic_comparison": {
+        "passed": 18,
+        "total": 18,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "source_sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a",
+        "gold_sha256": "72c622c1447546b332488fbee8ed7cb38ea4b4440b5479152e57adcd32db694f"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "membranes",
+      "case": "MEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-pro-preview",
+      "configured_model": "models/gemini-3.1-pro-preview",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T191559785651Z-3e440f98acab",
+      "report_path": "membranes_v1/provider_runs/MEM-GOLD-A/gemini/models_gemini-c9b7e2ca93/20260929T191559785651Z-3e440f98acab/report.json",
+      "report_sha256": "5b6819bbe4cd34b2f8a872b9bd399db23566fb912359e222e548006726b4a540",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "raw_output_count": 12,
+        "exact_point_recall": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "RATE_LIMITED"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015",
+        "gold_sha256": "433b0c034746e74cf35d86c37ba3435c2fd66f0bbbfa792cf0d1ffe0fd78e7d3"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "membranes",
+      "case": "MEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "configured_model": "models/gemini-3.5-flash-lite",
+      "actual_model": "gemini-3.5-flash-lite",
+      "provider_reported_model": "gemini-3.5-flash-lite",
+      "run_id": "20260929T191704632468Z-0081ced80d8a",
+      "report_path": "membranes_v1/provider_runs/MEM-GOLD-A/gemini/models_gemini-e561dfc327/20260929T191704632468Z-0081ced80d8a/report.json",
+      "report_sha256": "7425bb0e242a1c51e55dce8d5dd5f8304265a3f2b00a08b09f249d4acbed7b59",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/membranes_v1/provider_runs/MEM-GOLD-A/gemini/models_gemini-e561dfc327/20260929T191704632468Z-0081ced80d8a/attempt-1/raw_response.txt",
+          "sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_output_count": 0,
+        "exact_point_recall": 0.0
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "raw_output_count": 12,
+        "exact_point_recall": 1.0
+      },
+      "latency_ms_by_attempt": {
+        "1": 7992.57
+      },
+      "usage_by_attempt": {
+        "1": {
+          "input_tokens": 41824,
+          "output_tokens": 2960,
+          "total_tokens": 44784,
+          "cached_tokens": null
+        }
+      },
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "article_sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015",
+        "gold_sha256": "433b0c034746e74cf35d86c37ba3435c2fd66f0bbbfa792cf0d1ffe0fd78e7d3"
+      },
+      "live_gate_qualifying": true
+    },
+    {
+      "domain": "membranes",
+      "case": "MEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": "models/gemini-3.8-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T191434496169Z-da67c49b7079",
+      "report_path": "membranes_v1/provider_runs/MEM-GOLD-A/gemini/models_gemini-3.8-flash/20260929T191434496169Z-da67c49b7079/report.json",
+      "report_sha256": "4b3075b019f20f8bfca06e293aa9216737dd4f3f325bbeb3fa0e2d56d659e8f4",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "raw_output_count": 12,
+        "exact_point_recall": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015",
+        "gold_sha256": "433b0c034746e74cf35d86c37ba3435c2fd66f0bbbfa792cf0d1ffe0fd78e7d3"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "membranes",
+      "case": "MEM-SEP-B",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "configured_model": "models/gemini-3.5-flash-lite",
+      "actual_model": "gemini-3.5-flash-lite",
+      "provider_reported_model": "gemini-3.5-flash-lite",
+      "run_id": "20260929T192342356949Z-2352ac4838da",
+      "report_path": "membranes_v1/provider_runs/MEM-SEP-B/gemini/models_gemini-e561dfc327/20260929T192342356949Z-2352ac4838da/report.json",
+      "report_sha256": "5ecd5d68f514c353e4161fb7f1fb88ec9daca5eeb6304ed8cec88033bccb1dc1",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/membranes_v1/provider_runs/MEM-SEP-B/gemini/models_gemini-e561dfc327/20260929T192342356949Z-2352ac4838da/attempt-1/raw_response.txt",
+          "sha256": "a17f397e8ac413e6cdf2b290757910272f747c662e30bb751ce505dccca7c84d"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_output_count": 0,
+        "exact_point_recall": 0.0
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "raw_output_count": 98,
+        "exact_point_recall": 1.0
+      },
+      "latency_ms_by_attempt": {
+        "1": 50144.277
+      },
+      "usage_by_attempt": {
+        "1": {
+          "input_tokens": 73073,
+          "output_tokens": 21958,
+          "total_tokens": 95031,
+          "cached_tokens": null
+        }
+      },
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "article_sha256": "2293180864dcb187609a133766f8d47340098233cfa68b5a10ab25000dee757c",
+        "gold_sha256": "034350edab1cd931a12d58bd3e765a5a3e4dfeb873c6fd0e6faa240da33a6a9c"
+      },
+      "live_gate_qualifying": true
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T153010978255Z",
+      "report_path": "photovoltaics_v1/live/PV-GOLD-A/runs/20260928T153010978255Z/report.json",
+      "report_sha256": "0129ed4cb0decbc106de87b83eb94aabb319d0b5c46691e2fb68390b2cc1feae",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 4,
+        "total": 4,
+        "outputs": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+        "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-2.5-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T175915372971Z",
+      "report_path": "photovoltaics_v1/provider_runs/PV-GOLD-A/gemini/models_gemini-2.5-flash/20260928T175915372971Z/report.json",
+      "report_sha256": "492761bbefd9eb028f86d406f5f3b6da8375c281876cdeb047ce8279a7f97938",
+      "attempt_count": 1,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 4,
+        "total": 4,
+        "outputs": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "INVALID_REQUEST"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+        "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.6-flash",
+      "configured_model": null,
+      "actual_model": "gemini-3.6-flash",
+      "provider_reported_model": "gemini-3.6-flash",
+      "run_id": "20260928T204341319257Z",
+      "report_path": "photovoltaics_v1/provider_runs/PV-GOLD-A/gemini/models_gemini-3.6-flash/20260928T204341319257Z/report.json",
+      "report_sha256": "d947d6e295b28e18dc1209e15d84b027238b78a25fb4ff07f0a72d17ccaa7738",
+      "attempt_count": 3,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/photovoltaics_v1/provider_runs/PV-GOLD-A/gemini/models_gemini-3.6-flash/20260928T204341319257Z/attempt-3/raw_response.txt",
+          "sha256": "448887be555c273c43ac845ade7d2ca5b3ea6faa1f865c051269d234aee6798c"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "passed": 4,
+        "total": 4,
+        "outputs": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+        "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c"
+      },
+      "live_gate_qualifying": true
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T175950850812Z",
+      "report_path": "photovoltaics_v1/provider_runs/PV-GOLD-A/gemini/models_gemini-3.8-flash/20260928T175950850812Z/report.json",
+      "report_sha256": "b397ee88aedfcf8c38ed216cb7c5f141b662b6da2598101dea11b86785fb4c21",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 4,
+        "total": 4,
+        "outputs": 20,
+        "value_accuracy": 1.0
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+        "gold_sha256": "88d4391252afce4632f3610543eead587c32758ba3cca99b2163646b0486611c"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-SPEC-B",
+      "provider": "gemini",
+      "exact_model": "gemini-3.5-flash",
+      "configured_model": "gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T153234944528Z",
+      "report_path": "photovoltaics_v1/live/PV-SPEC-B/runs/20260928T153234944528Z/report.json",
+      "report_sha256": "e6497323490063a11718c4cc7b978bb4b4272a839ae557f589e9efac10e439a4",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 3,
+        "total": 3,
+        "outputs": 223
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "provider_unavailable"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e",
+        "source_data_sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88",
+        "gold_sha256": "0cdfaf1cf70f8eadafb32a11ff2f772d44c138239c0234cbdccea7e38cdf9ed8"
+      },
+      "live_gate_qualifying": null
+    },
+    {
+      "domain": "photovoltaics",
+      "case": "PV-SPEC-B",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.6-flash",
+      "configured_model": null,
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T204606146770Z",
+      "report_path": "photovoltaics_v1/provider_runs/PV-SPEC-B/gemini/models_gemini-3.6-flash/20260928T204606146770Z/report.json",
+      "report_sha256": "3e2416c61179a7d4665f7a1cbda7cb797a13baa8e78463d36ba047c079288600",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": 3,
+        "total": 3,
+        "outputs": 223
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "40113225e9e9fa788c985947e94c4609aa82fc65f2eb7686b3db9fa5f331469e",
+        "source_data_sha256": "b05e9dbde92952b75942b324e8ed790e87136342b90db53159ecf0a88b8f9b88",
+        "gold_sha256": "0cdfaf1cf70f8eadafb32a11ff2f772d44c138239c0234cbdccea7e38cdf9ed8"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "semiconductors",
+      "case": "SEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash",
+      "configured_model": "models/gemini-3.5-flash",
+      "actual_model": "gemini-3.5-flash",
+      "provider_reported_model": "gemini-3.5-flash",
+      "run_id": "20261001T051126601937Z-41945fe1ca01",
+      "report_path": "semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01/report.json",
+      "report_sha256": "0f0f1b5f03004c2cababab5327daf89874aba57689f97348a0dcd410469ed2b8",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01/attempt-1/raw_response.txt",
+          "sha256": "202c66482e20749edca94dd67d6e73f1520341c44ca44f375132e7f83812fac5"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_record_count": 31,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee",
+        "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "semiconductors",
+      "case": "SEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "configured_model": "models/gemini-3.5-flash-lite",
+      "actual_model": "gemini-3.5-flash-lite",
+      "provider_reported_model": "gemini-3.5-flash-lite",
+      "run_id": "20261001T050626828093Z-b0b13e7cb2fb",
+      "report_path": "semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb/report.json",
+      "report_sha256": "243abc17bf4bdb19eccd74cdd4644e431864ed44f6817ca2284876a971a28cba",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb/attempt-1/raw_response.txt",
+          "sha256": "6b493774be93a8a488f8e925593c50ee08de34f13f44199170f1a02fdf762307"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_record_count": 24,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": {
+        "1": 5562.733
+      },
+      "usage_by_attempt": {
+        "1": {
+          "input_tokens": 32200,
+          "output_tokens": 2037,
+          "total_tokens": 34237,
+          "cached_tokens": null
+        }
+      },
+      "provider_error_classes": [],
+      "source_gold_lock_identity": {
+        "article_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee",
+        "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "semiconductors",
+      "case": "SEM-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": "models/gemini-3.8-flash",
+      "actual_model": "gemini-3.8-flash",
+      "provider_reported_model": "gemini-3.8-flash",
+      "run_id": "20261001T051511898073Z-1449fc1a881f",
+      "report_path": "semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f/report.json",
+      "report_sha256": "746034fb551858235537a4aea6f87e1019f74bf9f52d88040ea3df7e0003672f",
+      "attempt_count": 3,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f/attempt-3/raw_response.txt",
+          "sha256": "707bc6e71021b58a8d297358828fd3a5010443f2dab81fe6e9d8c4890c506551"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_record_count": 28,
+        "expected_points": 20,
+        "exact_value_and_unit_points": 20,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "table_locator_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee",
+        "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "semiconductors",
+      "case": "SEM-TRANSPORT-B",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "configured_model": "models/gemini-3.5-flash-lite",
+      "actual_model": "gemini-3.5-flash-lite",
+      "provider_reported_model": "gemini-3.5-flash-lite",
+      "run_id": "20261001T050918805540Z-0af338d58f7e",
+      "report_path": "semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e/report.json",
+      "report_sha256": "c9a2b2a51764688915dd50931bfc086f6bbf9d6caafe0cf4a53e979bd1fa3370",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e/attempt-1/raw_response.txt",
+          "sha256": "80c63d5810e39c7e5ffda9a2c57d381796054ffc56398eb44b258d081d403e91"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": {
+        "raw_record_count": 9,
+        "expected_points": 46,
+        "exact_value_and_unit_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "table_locator_points": 9,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9
+      },
+      "schema_valid": false,
+      "repair_attempted": true,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": null,
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "UNKNOWN_PROVIDER_ERROR"
+      ],
+      "source_gold_lock_identity": {
+        "article_sha256": "7adeb607918e4cdce6a4a869436f68077a7b2b2590ab1f75a4fe3ffbe9e3a347",
+        "gold_sha256": "3ca0014d2223801a70d04aa72e3594fcf7062671d59a4da69fac4efa62b67f66"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-2.5-flash",
+      "configured_model": "models/gemini-2.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T055556339464Z-40be68ae07ac",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-2.5-flash/20260929T055556339464Z-40be68ae07ac/report.json",
+      "report_sha256": "ef5474a32f23704f1918d46dc63d812078fd31e00c0aabd1961094aa0066eee0",
+      "attempt_count": 1,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "INVALID_REQUEST"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-flash-lite",
+      "configured_model": "models/gemini-3.1-flash-lite",
+      "actual_model": "gemini-3.1-flash-lite",
+      "provider_reported_model": "gemini-3.1-flash-lite",
+      "run_id": "20260929T071343442429Z-75e145dc16ef",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-6b089ac598/20260929T071343442429Z-75e145dc16ef/report.json",
+      "report_sha256": "f4189e9f41a493be531c2f0e58a26b7493a492b450e12d3573cb3238cedb7790",
+      "attempt_count": 1,
+      "payload_returned": true,
+      "raw_artifacts": [
+        {
+          "path": "output/thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-6b089ac598/20260929T071343442429Z-75e145dc16ef/attempt-1/raw_response.txt",
+          "sha256": "3abc65ad620251917b2877c277c91003c17365e4b9b74387aaf12e750f9de77f"
+        }
+      ],
+      "raw_artifact_sha256_coverage": 1,
+      "raw_scientific_score": null,
+      "schema_valid": false,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": false,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "RATE_LIMITED"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-pro-preview",
+      "configured_model": "models/gemini-3.1-pro-preview",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T043416310520Z-70953cbe064f",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.1-pro-preview/20260929T043416310520Z-70953cbe064f/report.json",
+      "report_sha256": "25df45e6179cb14e68f02d2f14b931b04ac0a41b50962e609108bd554e4f0a91",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-pro-preview",
+      "configured_model": "models/gemini-3.1-pro-preview",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T043912095610Z-0b2bbddf7794",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-c9b7e2ca93/20260929T043912095610Z-0b2bbddf7794/report.json",
+      "report_sha256": "888cf9f45e3c1207b2cda855351f945e2797a4b2bd40d7a0c4293310c0b695d1",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "RATE_LIMITED"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.1-pro-preview",
+      "configured_model": "models/gemini-3.1-pro-preview",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T072149256952Z-f97563b4dc7b",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-c9b7e2ca93/20260929T072149256952Z-f97563b4dc7b/report.json",
+      "report_sha256": "471ee19b47080c4b4c9486b4cbf5fc91a3024703c20507d6b92720acb287c1bd",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "RATE_LIMITED"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.5-flash",
+      "configured_model": "models/gemini-3.5-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T055807539455Z-50e4a537b848",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.5-flash/20260929T055807539455Z-50e4a537b848/report.json",
+      "report_sha256": "db1c9343a3a5d6e68466a695a59a650a36a99dccfa81ab112f442041f834c4d3",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.6-flash",
+      "configured_model": "models/gemini-3.6-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T071207103733Z-15d10945d7f3",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.6-flash/20260929T071207103733Z-15d10945d7f3/report.json",
+      "report_sha256": "c534146f582cac6865bf7d05d5179bbfe7ece5a9651c8adf13b2dc7a218718a0",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.7-flash",
+      "configured_model": "models/gemini-3.7-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T223112932447Z-f9c8dc176277",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.7-flash/20260928T223112932447Z-f9c8dc176277/report.json",
+      "report_sha256": "d464d1d329360887ef801aba1c6799f588c40c22508b76e628be5d92e59b3b7e",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": "models/gemini-3.8-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260928T222933756813Z-8f66dac99a8f",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.8-flash/20260928T222933756813Z-8f66dac99a8f/report.json",
+      "report_sha256": "6731a5585a2d8822f5fea0a8af28c03084ee10e7980aaf9144ae60fc4e006a8c",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    },
+    {
+      "domain": "thermoelectrics",
+      "case": "TE-GOLD-A",
+      "provider": "gemini",
+      "exact_model": "models/gemini-3.8-flash",
+      "configured_model": "models/gemini-3.8-flash",
+      "actual_model": null,
+      "provider_reported_model": null,
+      "run_id": "20260929T055657383888Z-a85b26a2cd36",
+      "report_path": "thermoelectrics_v1/provider_runs/TE-GOLD-A/gemini/models_gemini-3.8-flash/20260929T055657383888Z-a85b26a2cd36/report.json",
+      "report_sha256": "a8577a12058b136f8163727d1ecec827d92ae3bd10f43612d3cfb835c9be1b94",
+      "attempt_count": 3,
+      "payload_returned": false,
+      "raw_artifacts": [],
+      "raw_artifact_sha256_coverage": 0,
+      "raw_scientific_score": null,
+      "schema_valid": null,
+      "repair_attempted": false,
+      "normalization_status": null,
+      "canonical_admission": null,
+      "deterministic_comparison": {
+        "passed": true,
+        "outputs": 102
+      },
+      "latency_ms_by_attempt": null,
+      "usage_by_attempt": null,
+      "provider_error_classes": [
+        "TRANSIENT_UNAVAILABLE"
+      ],
+      "source_gold_lock_identity": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+        "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+      },
+      "live_gate_qualifying": false
+    }
+  ]
+}

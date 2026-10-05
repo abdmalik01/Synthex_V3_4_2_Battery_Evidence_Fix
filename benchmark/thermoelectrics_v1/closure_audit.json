@@ -1,0 +1,452 @@
+{
+  "case_count": 8,
+  "cases": {
+    "TE-ANISO-D": {
+      "analytics_rows": 2,
+      "case_id": "TE-ANISO-D",
+      "orientation_not_averaged": true,
+      "orientation_specific_values": {
+        "ab-plane": 2.3,
+        "c-axis": 1.6
+      },
+      "outputs": 2,
+      "passed": true,
+      "plot_only_values_excluded": true,
+      "quarantine": 0
+    },
+    "TE-COMPUTE-E": {
+      "analytics_rows": 30,
+      "case_id": "TE-COMPUTE-E",
+      "computational_modality_preserved": true,
+      "material_association_preserved": true,
+      "method_metadata_preserved": true,
+      "outputs": 30,
+      "passed": true,
+      "quarantine": 0,
+      "row_checks": {
+        "mp-22919": true,
+        "mp-22922": true,
+        "mp-23231": true,
+        "mp-27484": true,
+        "mp-32791": true
+      }
+    },
+    "TE-DERIVED-C": {
+      "analytics_rows": 90,
+      "case_id": "TE-DERIVED-C",
+      "formula_validation": {
+        "canonical_measurements_created": 0,
+        "formula": "PF = S^2 sigma",
+        "max_relative_error": 1.411000343995142e-06,
+        "points": 22,
+        "status": "validation_only_noncanonical"
+      },
+      "no_silent_derivation": true,
+      "outputs": 90,
+      "passed": true,
+      "quarantine": 0,
+      "series": {
+        "electrical_conductivity": {
+          "count": true,
+          "derivation_basis": true,
+          "digest": true,
+          "scientific_type": true,
+          "unit": true
+        },
+        "power_factor": {
+          "count": true,
+          "derivation_basis": true,
+          "digest": true,
+          "scientific_type": true,
+          "unit": true
+        },
+        "seebeck_coefficient": {
+          "count": true,
+          "derivation_basis": true,
+          "digest": true,
+          "scientific_type": true,
+          "unit": true
+        },
+        "total_thermal_conductivity": {
+          "count": true,
+          "derivation_basis": true,
+          "digest": true,
+          "scientific_type": true,
+          "unit": true
+        },
+        "zt": {
+          "count": true,
+          "derivation_basis": true,
+          "digest": true,
+          "scientific_type": true,
+          "unit": true
+        }
+      }
+    },
+    "TE-GOLD-A": {
+      "analytics_rows": 102,
+      "case_id": "TE-GOLD-A",
+      "material_correct": true,
+      "outputs": 102,
+      "passed": true,
+      "process_correct": true,
+      "scientific_safety": {
+        "analytics_preserve_temperature_and_material": true,
+        "measured_vs_derived_preserved": true,
+        "quarantine_count": 0,
+        "signed_seebeck_preserved": true,
+        "single_material_association": true,
+        "thermal_property_identity_preserved": true
+      },
+      "series": {
+        "electrical_conductivity": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        },
+        "lattice_thermal_conductivity": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        },
+        "power_factor": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        },
+        "seebeck_coefficient": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        },
+        "total_thermal_conductivity": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        },
+        "zt": {
+          "context_complete": true,
+          "count_correct": true,
+          "digest_correct": true,
+          "sentinels_present": true,
+          "source_tracked": true,
+          "unit_correct": true
+        }
+      }
+    },
+    "TE-MIXED-H": {
+      "analytics_rows": 6,
+      "calculated_exact": true,
+      "case_id": "TE-MIXED-H",
+      "experimental_exact": true,
+      "modality_split_preserved": true,
+      "outputs": 6,
+      "passed": true,
+      "quarantine": 0
+    },
+    "TE-NEG-G": {
+      "analytics_rows": 0,
+      "case_id": "TE-NEG-G",
+      "misleading_vocabulary_present": true,
+      "outputs": 0,
+      "passed": true,
+      "quarantine": 0,
+      "route": "photovoltaics",
+      "route_stable": true,
+      "scientific_graph_edges_zero": true,
+      "te_records_zero": true
+    },
+    "TE-REVIEW-F": {
+      "analytics_rows": 0,
+      "case_id": "TE-REVIEW-F",
+      "cited_values_preserved_noncanonical": true,
+      "dual_review_detection": {
+        "author_self_description": true,
+        "publisher_label": true
+      },
+      "focal_records_zero": true,
+      "outputs": 0,
+      "passed": true,
+      "quarantine": 42
+    },
+    "TE-SERIES-B": {
+      "analytics_rows": 198,
+      "case_id": "TE-SERIES-B",
+      "outputs": 198,
+      "passed": true,
+      "quarantine": 0,
+      "scientific_safety": {
+        "analytics_identity_complete": true,
+        "per_sample_temperature_grids_preserved": true,
+        "reported_pf_not_zt": true,
+        "sample_association_preserved": true,
+        "signed_seebeck_preserved": true,
+        "three_distinct_samples": true
+      },
+      "series": {
+        "x001/electrical_conductivity": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x001/power_factor": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x001/seebeck_coefficient": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x002/electrical_conductivity": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x002/power_factor": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x002/seebeck_coefficient": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x003/electrical_conductivity": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x003/power_factor": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        },
+        "x003/seebeck_coefficient": {
+          "count": true,
+          "digest": true,
+          "evidence": true,
+          "orientation": true,
+          "sentinels": true,
+          "unit": true
+        }
+      }
+    }
+  },
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence_violations": 0,
+    "ownership": 0
+  },
+  "invariant_summary": {
+    "all_passed": true,
+    "passed": 40,
+    "total": 40
+  },
+  "invariants": {
+    "01_seebeck_not_voltage": true,
+    "02_seebeck_sign_preserved": true,
+    "03_electrical_conductivity_not_thermal_conductivity": true,
+    "04_resistivity_not_conductivity": true,
+    "05_total_kappa_not_lattice_kappa": true,
+    "06_total_kappa_not_electronic_kappa": true,
+    "07_lattice_kappa_not_electronic_kappa": true,
+    "08_power_factor_not_zt": true,
+    "09_power_factor_not_efficiency": true,
+    "10_zt_dimensionless": true,
+    "11_zt_not_dimensional_z": true,
+    "12_carrier_concentration_not_dopant_concentration": true,
+    "13_mobility_not_conductivity": true,
+    "14_temperature_not_temperature_gradient": true,
+    "15_temperature_association_preserved": true,
+    "16_sample_identity_preserved": true,
+    "17_composition_preserved": true,
+    "18_dopant_level_preserved": true,
+    "19_process_preserved": true,
+    "20_orientation_preserved": true,
+    "21_orientations_not_averaged": true,
+    "22_missing_temperatures_not_interpolated": true,
+    "23_reported_measurement_not_reported_derived": true,
+    "24_source_derived_not_synthex_derived": true,
+    "25_measured_not_computational": true,
+    "26_calculated_seebeck_not_measured_seebeck": true,
+    "27_calculated_zt_not_measured_zt": true,
+    "28_calculated_kappa_not_measured_kappa": true,
+    "29_review_values_remain_non_focal": true,
+    "30_negative_control_zero_te_contamination": true,
+    "31_caption_only_evidence_cannot_admit": true,
+    "32_na_cannot_become_numeric": true,
+    "33_unit_prefixes_preserved": true,
+    "34_uv_per_k_not_mv_per_k": true,
+    "35_s_per_m_not_s_per_cm": true,
+    "36_w_per_mk_not_power_factor_units": true,
+    "37_series_identities_preserved": true,
+    "38_same_temperature_across_samples_not_deduplicated": true,
+    "39_analytics_retain_modality": true,
+    "40_archive_domain_scoping_correct": true
+  },
+  "passed": true,
+  "schema": "synthex.thermoelectrics.closure.v1",
+  "source_locks": {
+    "source_lock.json": {
+      "article_file": "corpus_pdfs/TE-GOLD-A_article.pdf",
+      "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+      "article_page_count": 9,
+      "case_id": "TE-GOLD-A",
+      "doi": "10.1038/s41563-021-01064-6",
+      "fig4_source_file": "corpus_data/TE-GOLD-A_Fig4_source_data.xlsx",
+      "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+      "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+      "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+      "gold_file": "gold_a.json",
+      "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "source_data_origin": "Springer Nature publisher source-data files for Figs. 4 and 5",
+      "supplementary_file": "corpus_pdfs/TE-GOLD-A_supplementary.pdf",
+      "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+      "supplementary_page_count": 46
+    },
+    "source_lock_aniso_d.json": {
+      "article_file": "corpus_pdfs/TE-ANISO-D_article.pdf",
+      "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+      "article_page_count": 9,
+      "case_id": "TE-ANISO-D",
+      "doi": "10.1038/s41467-021-25722-0",
+      "gold_file": "gold_aniso_d.json",
+      "gold_sha256": "a96513a4ff37bb83623cc70b070e8c09fe7819bf83ecdc8c02ebd8bc75dac10b",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "source_origin": "Nature Communications publisher article and supplementary PDFs",
+      "supplementary_file": "corpus_pdfs/TE-ANISO-D_supplementary.pdf",
+      "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31",
+      "supplementary_page_count": 28
+    },
+    "source_lock_compute_e.json": {
+      "case_id": "TE-COMPUTE-E",
+      "doi": "10.3390/ma17102200",
+      "gold_file": "gold_compute_e.json",
+      "gold_sha256": "d5df7e64b571580e7db84ff15c5aad8ee623c5ec0ffbae75e08b9461b6a66628",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "official_url": "https://www.mdpi.com/1996-1944/17/10/2200",
+      "page_count": 13,
+      "source_file": "corpus_pdfs/TE-COMPUTE-E_article.pdf",
+      "source_sha256": "fcf159660f8cb0134a4ce513d287035fceb457fd19e77110572e8cbcf897c452"
+    },
+    "source_lock_derived_c.json": {
+      "case_id": "TE-DERIVED-C",
+      "doi": "10.1038/s41563-021-01064-6",
+      "fig4_source_file": "corpus_data/TE-GOLD-A_Fig4_source_data.xlsx",
+      "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+      "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+      "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+      "gold_file": "gold_derived_c.json",
+      "gold_sha256": "6973a49fe61a0df5256b35e767bc7e888eda09e39f3f2a5594fc50eb6cc5c09f",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "source_data_origin": "Springer Nature publisher source-data files for Figs. 4 and 5"
+    },
+    "source_lock_mixed_h.json": {
+      "article_file": "corpus_pdfs/TE-ANISO-D_article.pdf",
+      "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+      "article_page_count": 9,
+      "case_id": "TE-MIXED-H",
+      "doi": "10.1038/s41467-021-25722-0",
+      "gold_file": "gold_mixed_h.json",
+      "gold_sha256": "da938c47ede1f3dc7497ae6e7490f91136dd4a186597e4ca0bee06dfe3d637b5",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "official_url": "https://www.nature.com/articles/s41467-021-25722-0",
+      "supplementary_file": "corpus_pdfs/TE-ANISO-D_supplementary.pdf",
+      "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31",
+      "supplementary_page_count": 28
+    },
+    "source_lock_neg_g.json": {
+      "case_id": "TE-NEG-G",
+      "doi": "10.1038/s41467-024-48552-2",
+      "gold_file": "gold_neg_g.json",
+      "gold_sha256": "26b718d8703c395e0a1c8318b0feef065604c5a63911cb03a283a3105db43faf",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "official_url": "https://www.nature.com/articles/s41467-024-48552-2",
+      "page_count": 9,
+      "source_file": "../photovoltaics_v1/corpus_pdfs/nature-communications-15-4136.pdf",
+      "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e"
+    },
+    "source_lock_review_f.json": {
+      "case_id": "TE-REVIEW-F",
+      "doi": "10.3390/en18082122",
+      "gold_file": "gold_review_f.json",
+      "gold_sha256": "2f51ae2d8c57a16fff155b08bbe7512da511c502e4b1c259ad3fe1396a13aece",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "official_url": "https://www.mdpi.com/1996-1073/18/8/2122",
+      "page_count": 24,
+      "source_file": "corpus_pdfs/TE-REVIEW-F_article.pdf",
+      "source_sha256": "aded4fe9c479ebdcf3a14e28c4c4f71f77b18482653363a19e7b26d353713153"
+    },
+    "source_lock_series_b.json": {
+      "case_id": "TE-SERIES-B",
+      "doi": "10.1038/s41563-021-01064-6",
+      "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+      "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+      "gold_file": "gold_series_b.json",
+      "gold_sha256": "485a970d1e60a0e3b949fc7b0eef96c3b89c00968fb087cd9c78399bbbf8454b",
+      "license": "CC BY 4.0",
+      "locked_before_provider_run": true,
+      "source_data_origin": "Springer Nature publisher source-data file for Fig. 5"
+    }
+  },
+  "totals": {
+    "analytics_rows": 428,
+    "calculations": 6,
+    "canonical_outputs": 428,
+    "computational_outputs": 32,
+    "experimental_outputs": 396,
+    "experiments": 23,
+    "review_noncanonical_values": 21
+  }
+}

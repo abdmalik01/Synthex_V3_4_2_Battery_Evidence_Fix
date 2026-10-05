@@ -1,0 +1,261 @@
+{
+  "canonical_output_total": 99,
+  "cases": {
+    "SEM-GOLD-A": {
+      "analytics_rows": 20,
+      "calculations": 0,
+      "devices": 4,
+      "experiments": 4,
+      "materials": 5,
+      "outputs": 20,
+      "processes": 4,
+      "quarantine": 0
+    },
+    "SEM-OPTICAL-C": {
+      "analytics_rows": 13,
+      "calculations": 0,
+      "devices": 9,
+      "experiments": 13,
+      "materials": 12,
+      "outputs": 13,
+      "processes": 9,
+      "quarantine": 0
+    },
+    "SEM-PROCESS-D": {
+      "analytics_rows": 20,
+      "calculations": 0,
+      "devices": 10,
+      "experiments": 10,
+      "materials": 11,
+      "outputs": 20,
+      "processes": 10,
+      "quarantine": 0
+    },
+    "SEM-TRANSPORT-B": {
+      "analytics_rows": 46,
+      "calculations": 0,
+      "devices": 20,
+      "experiments": 20,
+      "materials": 21,
+      "outputs": 46,
+      "processes": 20,
+      "quarantine": 0
+    }
+  },
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence": 0,
+    "ownership": 0
+  },
+  "freeze_status": "INTERIM_NOT_FROZEN",
+  "invariants": [
+    {
+      "evidence": "Separate canonical keys and derivation requirements.",
+      "name": "electronic band gap != optical band gap",
+      "number": 1,
+      "passed": true
+    },
+    {
+      "evidence": "C Table 2 absorption and Table 3 PL remain separate outputs.",
+      "name": "band gap != PL peak",
+      "number": 2,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct result keys.",
+      "name": "work function != electron affinity",
+      "number": 3,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct result keys.",
+      "name": "work function != ionization energy",
+      "number": 4,
+      "passed": true
+    },
+    {
+      "evidence": "Ga/Al atomic fractions are specimen composition; no cm^-3 dopant density is fabricated.",
+      "name": "carrier concentration != dopant concentration",
+      "number": 5,
+      "passed": true
+    },
+    {
+      "evidence": "Separate property keys.",
+      "name": "electron concentration != hole concentration",
+      "number": 6,
+      "passed": true
+    },
+    {
+      "evidence": "No inversion or relabeling.",
+      "name": "mobility != conductivity",
+      "number": 7,
+      "passed": true
+    },
+    {
+      "evidence": "A Hall mobility explicitly carries Hall method.",
+      "name": "Hall mobility retains method identity",
+      "number": 8,
+      "passed": true
+    },
+    {
+      "evidence": "Separate families and units.",
+      "name": "conductivity != resistivity",
+      "number": 9,
+      "passed": true
+    },
+    {
+      "evidence": "A Table 2 retains Ω/sq and scaled Ω·cm separately.",
+      "name": "sheet resistance != bulk resistivity",
+      "number": 10,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct result keys and unit families.",
+      "name": "contact resistance != sheet resistance",
+      "number": 11,
+      "passed": true
+    },
+    {
+      "evidence": "Operating bias is not admitted as a threshold result.",
+      "name": "threshold voltage != operating voltage",
+      "number": 12,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct V and V/cm families.",
+      "name": "breakdown voltage != breakdown field",
+      "number": 13,
+      "passed": true
+    },
+    {
+      "evidence": "Current is not silently mapped to A/cm².",
+      "name": "current != current density",
+      "number": 14,
+      "passed": true
+    },
+    {
+      "evidence": "Only source-backed film thickness is carried.",
+      "name": "film thickness != depletion width",
+      "number": 15,
+      "passed": true
+    },
+    {
+      "evidence": "Every specimen has separate substrate and film layers.",
+      "name": "substrate != semiconductor film",
+      "number": 16,
+      "passed": true
+    },
+    {
+      "evidence": "A 450°C growth is process-only; Hall temperature remains unreported.",
+      "name": "growth temperature != measurement temperature",
+      "number": 17,
+      "passed": true
+    },
+    {
+      "evidence": "B 350°C anneal and room-temperature measurements are separate.",
+      "name": "annealing temperature != measurement temperature",
+      "number": 18,
+      "passed": true
+    },
+    {
+      "evidence": "First four cases are experimental only; calculation record remains separate.",
+      "name": "measured != computational",
+      "number": 19,
+      "passed": true
+    },
+    {
+      "evidence": "Calculated key is not populated by Tauc gaps.",
+      "name": "calculated band gap != measured band gap",
+      "number": 20,
+      "passed": true
+    },
+    {
+      "evidence": "Separate units and modality.",
+      "name": "calculated effective mass != measured mobility",
+      "number": 21,
+      "passed": true
+    },
+    {
+      "evidence": "Ga, Al and F identities remain source-specific.",
+      "name": "dopant identity retained",
+      "number": 22,
+      "passed": true
+    },
+    {
+      "evidence": "At.% is not converted into cm^-3 dopant concentration.",
+      "name": "dopant concentration not conflated with nominal fraction",
+      "number": 23,
+      "passed": true
+    },
+    {
+      "evidence": "Every result has a unique film specimen association within its case.",
+      "name": "sample/device identity retained",
+      "number": 24,
+      "passed": true
+    },
+    {
+      "evidence": "A temperature remains missing; C substrate is source-specific.",
+      "name": "missing conditions not inferred",
+      "number": 25,
+      "passed": true
+    },
+    {
+      "evidence": "B has 14 dash cells excluded, never zero-filled.",
+      "name": "missing values not interpolated",
+      "number": 26,
+      "passed": true
+    },
+    {
+      "evidence": "Caption-only value rejected.",
+      "name": "caption-only evidence cannot admit",
+      "number": 27,
+      "passed": true
+    },
+    {
+      "evidence": "N/A token rejected even with numeric value field.",
+      "name": "N/A cannot become numeric",
+      "number": 28,
+      "passed": true
+    },
+    {
+      "evidence": "One canonical analytics row per result with sample, material, namespaced process and property lineage.",
+      "name": "analytics retain material/sample/process/property identity",
+      "number": 29,
+      "passed": true
+    },
+    {
+      "evidence": "All four archives and result rows remain Semiconductor-scoped.",
+      "name": "archive/domain scoping correct",
+      "number": 30,
+      "passed": true
+    }
+  ],
+  "live_gate": {
+    "reason": "Offline audit only; current live-provider qualification is recorded separately in live_gate.json.",
+    "satisfied": false
+  },
+  "passed": true,
+  "passed_invariants": 30,
+  "routing": {
+    "negative": {
+      "batteries": "batteries",
+      "catalysis": "catalysis",
+      "photovoltaics": "photovoltaics",
+      "thermoelectrics": "thermoelectrics"
+    },
+    "positive": {
+      "SEM-GOLD-A": "semiconductors",
+      "SEM-OPTICAL-C": "semiconductors",
+      "SEM-PROCESS-D": "semiconductors",
+      "SEM-TRANSPORT-B": "semiconductors"
+    }
+  },
+  "schema": "synthex.semiconductors.interim_audit.v1",
+  "source_gold_parity": {
+    "SEM-GOLD-A": true,
+    "SEM-OPTICAL-C": true,
+    "SEM-PROCESS-D": true,
+    "SEM-TRANSPORT-B": true
+  }
+}

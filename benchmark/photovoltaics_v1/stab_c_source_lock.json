@@ -1,0 +1,16 @@
+{
+  "case_id": "PV-STAB-C",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0,
+  "source_origin": "official_publisher_open_access_article_and_supplement",
+  "article_file": "corpus_pdfs/materials-17-03002.pdf",
+  "article_sha256": "c2054ded63a1552afcbaebde71496ade8ec9069b4a0a35b9ffe9e96674635a06",
+  "article_page_count": 16,
+  "supplement_zip_file": "corpus_data/materials-17-03002-s001.zip",
+  "supplement_zip_sha256": "91de777697671addafc26f3adb6d89052a5575b8204637f3d490b3b950b95bf0",
+  "supplement_file": "corpus_data/materials-17-03002-s001/materials-3043460-supplementary.pdf",
+  "supplement_sha256": "6af751b270d69a422634b4b3667d517f5325c12309d59051c0c97e1761750cc7",
+  "supplement_page_count": 13,
+  "gold_file": "stab_c_gold.json",
+  "gold_sha256": "e9ac8ed1e69756960cd88c0dc27c9f0184ed7ddbecc63b0690f37c2b2cbe3813"
+}

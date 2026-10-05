@@ -1,0 +1,13 @@
+{
+  "case_id": "MECH-HARD-D",
+  "status": "locked_before_provider_call",
+  "source_file": "corpus_pdfs/metals-11-01014.pdf",
+  "source_sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a",
+  "source_url": "https://res.mdpi.com/d_attachment/metals/metals-11-01014/article_deploy/metals-11-01014.pdf",
+  "gold_file": "hard_d_gold.json",
+  "gold_sha256": "72c622c1447546b332488fbee8ed7cb38ea4b4440b5479152e57adcd32db694f",
+  "selected_tables": ["Table 4"],
+  "selected_pages": [12],
+  "method_pages": [3],
+  "assertions": 18
+}

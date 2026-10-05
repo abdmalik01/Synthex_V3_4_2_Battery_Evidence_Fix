@@ -5,20 +5,23 @@ pipeline, optional provider extraction, evidence checks, canonical archive, and
 durable jobs are separate concerns: a provider response is never automatically
 scientific truth. The legacy gas-sensing V2 workflow remains available.
 
-## Scope of this deployment branch
+## Scope of this research-metadata branch
 
-`deployment-code-only` contains the application runtime, deployment configuration,
-and tests. It does **not** publish the newer benchmark corpus PDFs, third-party
-source data, gold locks, or system-audit snapshots from the separate local
-scientific release candidate. It can be built and tested as an app, but this
-branch alone is not a reproducible scientific benchmark release. File-level
-redistribution review is required before publishing that separate material.
+`research-metadata-only` builds on the deployed application code and publishes
+benchmark scripts, scientific gold/locks, audit summaries, and tests. It adds
+**no third-party corpus PDFs, publisher source-data workbooks, or ZIP files**.
+Those source bytes remain local or at their publishers; this branch alone
+cannot reproduce source-byte checks. See `docs/REPRODUCIBILITY.md` and
+`docs/SOURCES_AND_LICENSES.md` before interpreting benchmark results. The
+`benchmark/omitted_binary_manifest.json` records the path, size, and SHA-256
+of 55 omitted local source files without redistributing their bytes.
 
 ## First five minutes
 
 1. Create a Python 3.11+ environment and install `requirements.txt`.
-2. Run `python -m pytest tests_v3 -q --basetemp=.pytest_tmp_local` for the
-   versioned regression suite (on Windows, use the venv interpreter explicitly).
+2. Run focused metadata/provider tests. The full `tests_v3` suite also needs
+   locally obtained source files that match the committed source locks; see
+   `docs/REPRODUCIBILITY.md` (on Windows, use the venv interpreter explicitly).
 3. Start the read-only/research UI with `streamlit run platform_app.py` or the
    API with `uvicorn synthex_platform.api:app --reload`.
 4. For a public single-server deployment, follow `docs/PUBLIC_DEPLOYMENT.md`.
@@ -38,7 +41,7 @@ without case- and model-specific authorization.
 | --- | --- |
 | `synthex_platform/` | Core models, routing, extraction, provider adapters, archive/storage, jobs, API, and read-only audit projection. |
 | `platform_app.py` | Research UI and developer-only system audit/operator controls. |
-| `benchmark/` | Only fixtures inherited from the existing remote baseline; the unpublished scientific corpus is deliberately absent. |
+| `benchmark/` | Scripts, source identities, gold, and audit metadata. Newly acquired publisher PDFs and source-data binaries are deliberately absent. |
 | `tests_v3/` | Current versioned regression suite; `tests/` and `synthex_v2/` retain legacy coverage/workflows. |
 | `docs/` | Architecture, debugging, and feature contracts. |
 | `data/archive/`, `data/jobs/`, `output/`, `.pytest_*/` | Local runtime state or test output; not source code. |
@@ -47,8 +50,8 @@ Do not casually edit source/gold locks, frozen manifests, raw provider audit
 artifacts, or scientific admission rules. Such edits require a separately
 reviewed scientific change with hash and closure validation.
 
-See `CURRENT_STATUS.md` for historical project notes; it is not a claim that
-the unpublished scientific corpus is part of this branch.
+See `CURRENT_STATUS.md` for historical project notes; the new binary corpus is
+not part of this branch.
 Visual Intelligence V1 is complete: native tables, provenance sidecars, figure understanding, generated charts, explicit OCR fallback, and calibrated graph digitization. These visual products remain outside canonical admission by default; see `docs/VISUAL_INTELLIGENCE_V1_STATUS.md`.
 
 ## Run the platform dashboard

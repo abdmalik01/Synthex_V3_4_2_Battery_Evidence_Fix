@@ -1,0 +1,37 @@
+{
+  "case_id": "AM-MICRO-C",
+  "source": {
+    "title": "Impact of Heat Treatment and Building Direction on Selective Laser-Melted 316L Stainless Steel: Microstructure and Mechanical Properties",
+    "authors": ["Zequn Feng", "Haijun Pan", "Wangping Wu", "Zhizhi Wang", "Peng Jiang"],
+    "journal": "Materials",
+    "year": 2025,
+    "doi": "10.3390/ma18010032",
+    "url": "https://www.mdpi.com/1996-1944/18/1/32",
+    "page_count": 16
+  },
+  "crystal_planes": ["111", "200", "220", "331", "222"],
+  "rows": [
+    {"sample": "UHT-0", "values": [1.7925, 0.7845, 0.25, 0.6175, 1.5555]},
+    {"sample": "HT450-0", "values": [1.318, 0.794, 0.5745, 0.8165, 1.4965]},
+    {"sample": "HT750-0", "values": [1.3595, 0.768, 0.4595, 0.8, 1.6135]},
+    {"sample": "HT1050-0", "values": [1.4715, 0.684, 0.481, 0.776, 1.588]},
+    {"sample": "UHT-45", "values": [1.6435, 0.852, 0.192, 0.61, 1.7025]},
+    {"sample": "HT450-45", "values": [1.4315, 0.796, 0.2495, 0.71, 1.813]},
+    {"sample": "HT750-45", "values": [1.6295, 0.7405, 0.273, 0.653, 1.7035]},
+    {"sample": "HT1050-45", "values": [1.5065, 0.798, 0.194, 0.649, 1.8525]},
+    {"sample": "UHT-60", "values": [1.7135, 0.7485, 0.2545, 0.6985, 1.5855]},
+    {"sample": "HT450-60", "values": [1.485, 0.788, 0.2485, 0.7065, 1.772]},
+    {"sample": "HT750-60", "values": [1.5225, 0.6615, 0.213, 0.614, 1.989]},
+    {"sample": "HT1050-60", "values": [1.5125, 0.6185, 0.223, 0.646, 2.0]},
+    {"sample": "UHT-90", "values": [1.91, 0.8295, 0.2005, 0.5645, 1.4955]},
+    {"sample": "HT450-90", "values": [1.8695, 0.815, 0.1865, 0.48, 1.649]},
+    {"sample": "HT750-90", "values": [1.905, 0.76, 0.2055, 0.535, 1.595]},
+    {"sample": "HT1050-90", "values": [1.761, 0.8755, 0.2455, 0.5615, 1.557]}
+  ],
+  "scientific_boundaries": [
+    "relative texture coefficient is dimensionless and is not surface texture",
+    "phase presence is not converted into phase fraction",
+    "powder particle size is not grain size or cell spacing",
+    "heat treatment is a post-process and not an AM build coordinate"
+  ]
+}

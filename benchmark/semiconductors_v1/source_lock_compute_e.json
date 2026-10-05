@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-COMPUTE-E",
+  "source_title": "First-principles study on the electronic and optical properties of AlSb monolayer",
+  "doi": "10.1038/s41598-023-37081-5",
+  "article_url": "https://www.nature.com/articles/s41598-023-37081-5",
+  "article_file": "corpus_pdfs/SEM-COMPUTE-E.pdf",
+  "article_sha256": "41c2c0dda2b43ba11a1a7125d60ec4ef12777d185689383064f6d382af7d91c2",
+  "article_page_count": 11,
+  "gold_file": "gold_compute_e.json",
+  "gold_sha256": "e047661c8749bea2dfff10ac1ee98b5737e5164131ee152df8741ccbaf2d64f0",
+  "source_origin": "official_publisher_open_access_pdf",
+  "decisive_pages": [1, 2, 5]
+}

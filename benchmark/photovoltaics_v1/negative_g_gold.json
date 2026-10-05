@@ -1,0 +1,28 @@
+{
+  "case_id": "PV-NEG-G",
+  "source": {
+    "title": "NiO/TiO2 p-n Heterojunction Induced by Radiolysis for Photocatalytic Hydrogen Evolution",
+    "authors": ["Ana Andrea Méndez-Medrano", "Xiaojiao Yuan", "Diana Dragoe", "Christophe Colbeau-Justin", "José Luis Rodríguez López", "Hynd Remita"],
+    "journal": "Materials",
+    "year": 2025,
+    "doi": "10.3390/ma18153513",
+    "url": "https://www.mdpi.com/1996-1944/18/15/3513",
+    "page_count": 18,
+    "article_type": "Article",
+    "true_domain": "catalysis"
+  },
+  "expected_route": "catalysis",
+  "misleading_vocabulary": ["efficiency", "visible light", "solar", "band gap", "charge carrier", "stability"],
+  "assertions": [
+    "source_is_primary_photocatalysis_study",
+    "routes_to_catalysis",
+    "repeat_route_is_identical",
+    "misleading_pv_vocabulary_present",
+    "zero_pv_devices",
+    "zero_pv_experiments",
+    "zero_pv_calculations",
+    "zero_pv_metrics",
+    "zero_graph_contamination",
+    "zero_analytics_contamination"
+  ]
+}

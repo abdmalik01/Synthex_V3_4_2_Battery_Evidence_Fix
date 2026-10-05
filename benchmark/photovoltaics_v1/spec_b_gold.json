@@ -1,0 +1,29 @@
+{
+  "case_id": "PV-SPEC-B",
+  "source": {
+    "title": "Rational molecular and device design enables organic solar cells approaching 20% efficiency",
+    "doi": "10.1038/s41467-024-46022-3",
+    "url": "https://www.nature.com/articles/s41467-024-46022-3",
+    "year": 2024,
+    "authors": ["Jiehao Fu", "Qianguang Yang", "Peihao Huang", "Sein Chung", "Kilwon Cho", "Zhipeng Kan", "Heng Liu", "Xinhui Lu", "Yongwen Lang", "Hanjian Lai", "Feng He", "Patrick W. K. Fong", "Shirong Lu", "Yang Yang", "Zeyun Xiao", "Gang Li"]
+  },
+  "measurement": {
+    "property": "external_quantum_efficiency",
+    "unit": "%",
+    "wavelength_unit": "nm",
+    "method": "certified incident photon-to-electron conversion (IPCE) equipment (QE-R)",
+    "workbook_sheet": "Fig. 3b"
+  },
+  "device_stack": [
+    ["transparent_electrode", "ITO"],
+    ["htl", "PEDOT:PSS"],
+    ["absorber", "active layer"],
+    ["buffer", "PFN-Br"],
+    ["electrode", "Ag"]
+  ],
+  "series": [
+    {"variant": "pm6_btp_ec9", "label": "PM6:BTP-eC9", "column": "B", "point_count": 71, "wavelength_min_nm": 300, "wavelength_max_nm": 1000, "points_sha256": "63774061f86b6e1acd5c46f13f05e04dc22bcefc07f71bb8b8c574b561b1fbb5"},
+    {"variant": "pm6_o_btp_ec9", "label": "PM6:o-BTP-eC9", "column": "C", "point_count": 81, "wavelength_min_nm": 300, "wavelength_max_nm": 1100, "points_sha256": "ac37e1ccb8f320b5d16928bb91375a2287bbe8c317a35cf50c9eefab9aca0a4a"},
+    {"variant": "ternary", "label": "Ternary", "column": "D", "point_count": 71, "wavelength_min_nm": 300, "wavelength_max_nm": 1000, "points_sha256": "ce96ec45a53b684b2ae42470dc504b25fa7436ff340fe55c0a8f7904363f2485"}
+  ]
+}

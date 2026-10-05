@@ -1,0 +1,21 @@
+{
+  "case_id": "BIO-GOLD-A",
+  "doi": "10.1038/s41598-018-21274-4",
+  "source_pdf": "corpus_pdfs/BIO-GOLD-A.pdf",
+  "source_pages": [5, 6, 7],
+  "formulation": "10% w/v gelatin and 2% w/v sodium alginate mixed 1:1 by volume; C3A cells 1×10^6 cells/mL",
+  "cell_line": "C3A liver cells (ATCC CRL-10741)",
+  "replicates": 5,
+  "viability_assay": "Calcein-AM/PI live-dead cell count",
+  "proliferation_assay": "alamarBlue metabolic-activity-derived proliferation ratio",
+  "viability_times_day": [1, 7, 14],
+  "proliferation_times_day": [1, 7, 10, 14],
+  "variants": [
+    {"label": "po250", "process": "direct_print", "target_pore_size_um": 250, "measured_pore_size_um": 177.1, "volume_porosity_percent": 11.0, "viability_percent": [90.99, 85.50, 83.36], "proliferation_ratio": [1.00, 1.28, 1.73, 1.62]},
+    {"label": "po250+", "process": "OCT-IFBP", "target_pore_size_um": 250, "measured_pore_size_um": 260.4, "volume_porosity_percent": 29.0, "viability_percent": [92.10, 94.99, 96.13], "proliferation_ratio": [1.00, 1.48, 1.86, 2.07]},
+    {"label": "po350", "process": "direct_print", "target_pore_size_um": 350, "measured_pore_size_um": 223.1, "volume_porosity_percent": 25.3, "viability_percent": [90.33, 92.64, 91.62], "proliferation_ratio": [1.00, 1.37, 1.68, 1.90]},
+    {"label": "po350+", "process": "OCT-IFBP", "target_pore_size_um": 350, "measured_pore_size_um": 372.3, "volume_porosity_percent": 42.1, "viability_percent": [90.24, 96.00, 95.64], "proliferation_ratio": [1.00, 1.34, 1.70, 1.95]}
+  ],
+  "gold_output_count": 36,
+  "excluded": ["figure-only viability estimates", "unreported raw live and dead cell counts", "inferred cell proliferation from viability"]
+}

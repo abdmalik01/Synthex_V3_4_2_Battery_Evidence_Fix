@@ -1,0 +1,11 @@
+{
+  "case_id": "MECH-REVIEW-G",
+  "purpose": "Mechanical review ownership and contamination control",
+  "provider_policy": "offline_only",
+  "review_contract": [
+    "whole-document containment requires publisher review labelling and author self-description",
+    "review and cited prior-work values remain noncanonical",
+    "review values do not enter ExperimentRecord, CalculationRecord, analytics, or graph edges"
+  ],
+  "status": "locked_offline_validated"
+}

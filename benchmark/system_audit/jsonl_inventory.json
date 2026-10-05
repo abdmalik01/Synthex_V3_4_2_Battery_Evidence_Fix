@@ -1,0 +1,65 @@
+{
+  "scope": "source-controlled writers and application data; pytest temporary trees excluded",
+  "items": [
+    {
+      "pattern": "data/archive/archives.jsonl",
+      "writer": "synthex_platform/storage/jsonl_store.py",
+      "class": ["append-only event log", "application state"],
+      "authority": "authoritative archive records",
+      "identity": "metadata.archive_id",
+      "hardened": true
+    },
+    {
+      "pattern": "data/jobs/events.jsonl",
+      "writer": "synthex_platform/jobs.py",
+      "class": ["append-only event log", "application state"],
+      "authority": "authoritative job transitions",
+      "identity": "job_id + version",
+      "hardened": true
+    },
+    {
+      "pattern": "data/graph/nodes.jsonl and edges.jsonl",
+      "writer": "synthex_platform/graph/knowledge_graph.py",
+      "class": ["mutable derived export"],
+      "authority": "rebuildable from archive records",
+      "identity": "node ID or edge relation/key",
+      "hardened": false,
+      "reason": "whole-file graph export uses w mode, not append; concurrent export/publication is outside append-log scope"
+    },
+    {
+      "pattern": "benchmark/visualization_debug/battery_archives_snapshot.jsonl",
+      "writer": "none in active platform path",
+      "class": ["benchmark output", "immutable snapshot"],
+      "authority": "debug fixture only",
+      "hardened": false
+    },
+    {
+      "pattern": "output/**/report.json and attempt-*/raw_response.txt",
+      "writer": "benchmark runners and ProviderArtifactRecorder",
+      "class": ["immutable provider artifact"],
+      "authority": "provider run evidence; not JSONL",
+      "hardened": "pre-existing atomic raw artifact publication"
+    },
+    {
+      "pattern": "benchmark/provider_audit/provider_history.json and provider_gate_matrix.json",
+      "writer": "benchmark/provider_audit/build_history.py",
+      "class": ["derived provider history index"],
+      "authority": "rebuildable from immutable report.json files; not JSONL",
+      "hardened": false
+    },
+    {
+      "pattern": "output/**/latest_run.json",
+      "writer": "ProviderArtifactRecorder/create_live_run_root and benchmark runners",
+      "class": ["mutable latest pointer/cache"],
+      "authority": "not authoritative; individual run directories are authoritative",
+      "hardened": false
+    },
+    {
+      "pattern": "benchmark/system_audit/*.json",
+      "writer": "benchmark/system_audit/build.py",
+      "class": ["derived benchmark and system audit output"],
+      "authority": "rebuildable metadata-only snapshot; not JSONL",
+      "hardened": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "MEM-SEP-B",
+  "status": "locked_before_provider_call",
+  "article_file": "corpus_pdfs/MEM-SEP-B_article.pdf",
+  "article_sha256": "2293180864dcb187609a133766f8d47340098233cfa68b5a10ab25000dee757c",
+  "article_page_count": 19,
+  "table_ids": ["Table 3", "Table 4"],
+  "table_pages": [12, 13, 17],
+  "gold_file": "gold_sep_b.json",
+  "gold_sha256": "034350edab1cd931a12d58bd3e765a5a3e4dfeb873c6fd0e6faa240da33a6a9c"
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "TE-DERIVED-C",
+  "doi": "10.1038/s41563-021-01064-6",
+  "fig4_source_file": "corpus_data/TE-GOLD-A_Fig4_source_data.xlsx",
+  "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+  "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+  "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+  "gold_file": "gold_derived_c.json",
+  "gold_sha256": "6973a49fe61a0df5256b35e767bc7e888eda09e39f3f2a5594fc50eb6cc5c09f",
+  "license": "CC BY 4.0",
+  "source_data_origin": "Springer Nature publisher source-data files for Figs. 4 and 5",
+  "locked_before_provider_run": true
+}

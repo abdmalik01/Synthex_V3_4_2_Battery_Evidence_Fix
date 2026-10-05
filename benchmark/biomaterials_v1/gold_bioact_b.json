@@ -1,0 +1,24 @@
+{
+  "case_id": "BIO-BIOACT-B",
+  "doi": "10.1038/s41598-025-18040-8",
+  "source_pdf": "corpus_pdfs/BIO-BIOACT-B.pdf",
+  "source_pages": [13],
+  "table": "Table 3",
+  "assay": "agar well diffusion inhibition-zone diameter",
+  "unit": "mm",
+  "dilution_note": "undiluted and twofold-diluted (50%) are the paper's labels; fungal columns report only undiluted",
+  "incubation_time": null,
+  "organisms": ["E. coli ATCC 25922", "S. aureus ATCC 29213", "C. albicans ATCC 14053", "C. kruzei ATCC 6258"],
+  "columns": ["ecoli_undiluted", "ecoli_diluted", "saureus_undiluted", "saureus_diluted", "calbicans_undiluted", "ckruzei_undiluted"],
+  "variants": [
+    {"label": "SA/AgNPs", "values": [20, 18, null, null, 25, 25]},
+    {"label": "HEC/AgNPs", "values": [22, 15, 16, 15, 40, 40]},
+    {"label": "SA/HEC/AgNPs", "values": [14, null, null, 11, 25, 30]},
+    {"label": "SA/HEC/Ca/AgNPs", "values": [23, 24, 19, 18, 45, 45]},
+    {"label": "SA/HEC/Ca/Mg/AgNPs", "values": [21, 18, 11, 19, 30, 35]}
+  ],
+  "positive_control_mm": [29, 36, 40, 35],
+  "negative_control": "no reported zone; table dash, not zero",
+  "gold_output_count": 26,
+  "excluded": ["missing table cells", "unreported fungal diluted values", "incubation duration not stated numerically", "bactericidal or bacteriostatic interpretation"]
+}

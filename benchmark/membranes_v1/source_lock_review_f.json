@@ -1,0 +1,11 @@
+{
+  "case_id": "MEM-REVIEW-F",
+  "status": "locked_before_recovery",
+  "article_file": "corpus_pdfs/mem_review_f_polymeric_aging_review.pdf",
+  "article_sha256": "82433ab21253a63b1ad77a02ff38fd0c2f722d75dd461f202ce0f6712f14adb1",
+  "article_page_count": 58,
+  "gold_file": "gold_review_f.json",
+  "gold_sha256": "b02965c6957b2bfa48e5fdda135827d53f5a184c49ab95015821ab07d5e07be5",
+  "decisive_table": "Table 6",
+  "decisive_page": 42
+}

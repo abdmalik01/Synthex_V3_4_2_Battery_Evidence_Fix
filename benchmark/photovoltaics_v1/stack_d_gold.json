@@ -1,0 +1,20 @@
+{
+  "case_id": "PV-STACK-D",
+  "source": {
+    "title": "Optimized Doping of Diffusion Blocking Layers and Their Impact on the Performance of Perovskite Photovoltaics",
+    "doi": "10.1021/acsaelm.3c00900",
+    "url": "https://pubs.acs.org/doi/10.1021/acsaelm.3c00900",
+    "year": 2023,
+    "authors": ["Fedros Galatopoulos", "Sapir Bitton", "Maria Tziampou", "Nir Tessler", "Stelios A. Choulis"]
+  },
+  "measurement_context": {"illumination_spectrum": "AM1.5G", "irradiance": 100.0, "irradiance_unit": "mW/cm2", "active_area": 9.0, "active_area_unit": "mm2", "scan_direction": "forward and reverse measured; Table 1 direction not specified"},
+  "layer_roles": ["transparent_electrode", "htl", "absorber", "etl", "buffer", "electrode"],
+  "variants": [
+    {"variant": "pc70bm_70_undoped", "pc70bm_thickness_nm": 70.0, "dopant_wt_percent": null, "open_circuit_voltage": 1.02, "short_circuit_current_density": 18.04, "fill_factor": 78.5, "power_conversion_efficiency": 14.48},
+    {"variant": "pc70bm_200_undoped", "pc70bm_thickness_nm": 200.0, "dopant_wt_percent": null, "open_circuit_voltage": 0.98, "short_circuit_current_density": 15.2, "fill_factor": 52.6, "power_conversion_efficiency": 7.84},
+    {"variant": "pc70bm_200_0_1", "pc70bm_thickness_nm": 200.0, "dopant_wt_percent": 0.1, "open_circuit_voltage": 0.97, "short_circuit_current_density": 17.69, "fill_factor": 65.1, "power_conversion_efficiency": 11.2},
+    {"variant": "pc70bm_200_0_3", "pc70bm_thickness_nm": 200.0, "dopant_wt_percent": 0.3, "open_circuit_voltage": 0.98, "short_circuit_current_density": 19.0, "fill_factor": 70.3, "power_conversion_efficiency": 13.1},
+    {"variant": "pc70bm_200_0_5", "pc70bm_thickness_nm": 200.0, "dopant_wt_percent": 0.5, "open_circuit_voltage": 0.91, "short_circuit_current_density": 19.4, "fill_factor": 63.0, "power_conversion_efficiency": 11.14},
+    {"variant": "pc70bm_200_0_7", "pc70bm_thickness_nm": 200.0, "dopant_wt_percent": 0.7, "open_circuit_voltage": 0.90, "short_circuit_current_density": 17.83, "fill_factor": 58.5, "power_conversion_efficiency": 9.45}
+  ]
+}

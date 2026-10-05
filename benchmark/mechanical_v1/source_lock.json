@@ -1,0 +1,12 @@
+{
+  "case_id": "MECH-GOLD-A",
+  "status": "locked_before_provider_run",
+  "source_file": "corpus_pdfs/metals-08-00393.pdf",
+  "source_sha256": "f349e98d13ec6bec84936287907db1e60d03f7f2fa5018eee3570adc7e650a24",
+  "source_url": "https://res.mdpi.com/d_attachment/metals/metals-08-00393/article_deploy/metals-08-00393.pdf",
+  "gold_file": "gold_a_contract.json",
+  "gold_sha256": "60f1ca1f1c2dc74c94cb33296011ea5651b738ac70c803dda66cddf817d5c9e0",
+  "selected_table": "Table 4",
+  "selected_page": 15,
+  "assertions": 18
+}

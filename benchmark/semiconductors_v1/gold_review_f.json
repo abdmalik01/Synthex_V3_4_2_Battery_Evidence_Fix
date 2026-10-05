@@ -1,0 +1,11 @@
+{
+  "case_id": "SEM-REVIEW-F",
+  "source_type": "review_article",
+  "focal_experiments": 0,
+  "focal_calculations": 0,
+  "canonical_outputs": 0,
+  "nonfocal_examples": [
+    {"page": 1, "property": "subthreshold_swing", "raw_value": "60", "unit": "mV/dec", "ownership": "review_summary"},
+    {"page": 2, "property": "subthreshold_swing", "raw_value": "100", "unit": "mV/dec", "ownership": "cited_prior_work"}
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "domain": "thermoelectrics",
+  "version": "1.0.0",
+  "freeze_status": "FROZEN_DETERMINISTIC_PROVIDER_EVALUATION_MODEL_SPECIFIC",
+  "freeze_statement": "Thermoelectrics V1 is scientifically closed for deterministic experimental series, reported-derived metrics, anisotropy, computational transport, review containment, negative routing, mixed-modality separation, evidence ownership, analytics safety, and archive/domain scoping. Provider evaluation remains model-specific and is not equivalent to deterministic Synthex recovery.",
+  "provider_architecture": {
+    "active_live_provider": "gemini",
+    "openai_state": "FUTURE_SUPPORTED_BUT_INACTIVE",
+    "provider_neutral_core_preserved": true,
+    "silent_fallback": false
+  },
+  "live_gate": {
+    "satisfied": true,
+    "qualifying_case": "TE-GOLD-A",
+    "provider_name": "gemini",
+    "model_id": "models/gemini-3.1-flash-lite",
+    "run_id": "20260929T071343442429Z-75e145dc16ef",
+    "payload_persisted_before_validation": true,
+    "scientifically_scored": true,
+    "canonical_admitted": false,
+    "raw_response_sha256": "3abc65ad620251917b2877c277c91003c17365e4b9b74387aaf12e750f9de77f",
+    "posthoc_score_artifact": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-6b089ac598\\20260929T071343442429Z-75e145dc16ef\\posthoc_scientific_score.json"
+  },
+  "closure": {
+    "cases_passed": 8,
+    "cases_total": 8,
+    "scientific_invariants": {
+      "all_passed": true,
+      "passed": 40,
+      "total": 40
+    },
+    "contamination": {
+      "analytics": 0,
+      "cross_record_leakage": 0,
+      "evidence_violations": 0,
+      "ownership": 0
+    },
+    "totals": {
+      "analytics_rows": 428,
+      "calculations": 6,
+      "canonical_outputs": 428,
+      "computational_outputs": 32,
+      "experimental_outputs": 396,
+      "experiments": 23,
+      "review_noncanonical_values": 21
+    }
+  },
+  "cases": [
+    {
+      "case_id": "TE-GOLD-A",
+      "offline_passed": true,
+      "materials": 1,
+      "processes": 1,
+      "experiments": 6,
+      "calculations": 0,
+      "outputs": 102,
+      "analytics_rows": 102,
+      "source_hashes": {
+        "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+        "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87"
+    },
+    {
+      "case_id": "TE-SERIES-B",
+      "offline_passed": true,
+      "materials": 3,
+      "processes": 1,
+      "experiments": 9,
+      "calculations": 0,
+      "outputs": 198,
+      "analytics_rows": 198,
+      "source_hashes": {
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "485a970d1e60a0e3b949fc7b0eef96c3b89c00968fb087cd9c78399bbbf8454b"
+    },
+    {
+      "case_id": "TE-DERIVED-C",
+      "offline_passed": true,
+      "materials": 1,
+      "processes": 0,
+      "experiments": 5,
+      "calculations": 0,
+      "outputs": 90,
+      "analytics_rows": 90,
+      "source_hashes": {
+        "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+        "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f"
+      },
+      "gold_sha256": "6973a49fe61a0df5256b35e767bc7e888eda09e39f3f2a5594fc50eb6cc5c09f"
+    },
+    {
+      "case_id": "TE-ANISO-D",
+      "offline_passed": true,
+      "materials": 1,
+      "processes": 0,
+      "experiments": 1,
+      "calculations": 0,
+      "outputs": 2,
+      "analytics_rows": 2,
+      "source_hashes": {
+        "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+        "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31"
+      },
+      "gold_sha256": "a96513a4ff37bb83623cc70b070e8c09fe7819bf83ecdc8c02ebd8bc75dac10b"
+    },
+    {
+      "case_id": "TE-COMPUTE-E",
+      "offline_passed": true,
+      "materials": 5,
+      "processes": 0,
+      "experiments": 0,
+      "calculations": 5,
+      "outputs": 30,
+      "analytics_rows": 30,
+      "source_hashes": {
+        "source_sha256": "fcf159660f8cb0134a4ce513d287035fceb457fd19e77110572e8cbcf897c452"
+      },
+      "gold_sha256": "d5df7e64b571580e7db84ff15c5aad8ee623c5ec0ffbae75e08b9461b6a66628"
+    },
+    {
+      "case_id": "TE-REVIEW-F",
+      "offline_passed": true,
+      "materials": 0,
+      "processes": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "outputs": 0,
+      "review_noncanonical_values": 21,
+      "analytics_rows": 0,
+      "source_hashes": {
+        "source_sha256": "aded4fe9c479ebdcf3a14e28c4c4f71f77b18482653363a19e7b26d353713153"
+      },
+      "gold_sha256": "2f51ae2d8c57a16fff155b08bbe7512da511c502e4b1c259ad3fe1396a13aece"
+    },
+    {
+      "case_id": "TE-NEG-G",
+      "offline_passed": true,
+      "materials": 0,
+      "processes": 0,
+      "experiments": 0,
+      "calculations": 0,
+      "outputs": 0,
+      "expected_route": "photovoltaics",
+      "analytics_rows": 0,
+      "source_hashes": {
+        "source_sha256": "826fb9bcb6ac1b6ffdb3eb1a0de6d2b7fb4dc2861516def207c97117a9ffa93e"
+      },
+      "gold_sha256": "26b718d8703c395e0a1c8318b0feef065604c5a63911cb03a283a3105db43faf"
+    },
+    {
+      "case_id": "TE-MIXED-H",
+      "offline_passed": true,
+      "materials": 1,
+      "processes": 0,
+      "experiments": 2,
+      "calculations": 1,
+      "outputs": 6,
+      "analytics_rows": 6,
+      "source_hashes": {
+        "article_file_sha256": "f25714e8401a816b7323b1b496387d19cd5b8f36c2813056aa674e6be36e1728",
+        "supplementary_file_sha256": "09fe19a715d267d79fe2f717c22a7ae1f955265b8ffdfcece770f9539df9ea31"
+      },
+      "gold_sha256": "da938c47ede1f3dc7497ae6e7490f91136dd4a186597e4ca0bee06dfe3d637b5"
+    }
+  ],
+  "provider_history": [
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-2.5-flash",
+      "run_id": "20260929T055556339464Z-40be68ae07ac",
+      "case_id": "TE-GOLD-A",
+      "status": "PROVIDER_ERROR_WITH_NO_PAYLOAD",
+      "attempts": 1,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-2.5-flash\\20260929T055556339464Z-40be68ae07ac\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.1-pro-preview",
+      "run_id": "20260929T043416310520Z-70953cbe064f",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": null,
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.1-pro-preview\\20260929T043416310520Z-70953cbe064f\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.5-flash",
+      "run_id": "20260929T055807539455Z-50e4a537b848",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.5-flash\\20260929T055807539455Z-50e4a537b848\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.6-flash",
+      "run_id": "20260929T071207103733Z-15d10945d7f3",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.6-flash\\20260929T071207103733Z-15d10945d7f3\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.7-flash",
+      "run_id": "20260928T223112932447Z-f9c8dc176277",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.7-flash\\20260928T223112932447Z-f9c8dc176277\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.8-flash",
+      "run_id": "20260928T222933756813Z-8f66dac99a8f",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.8-flash\\20260928T222933756813Z-8f66dac99a8f\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.8-flash",
+      "run_id": "20260929T055657383888Z-a85b26a2cd36",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-3.8-flash\\20260929T055657383888Z-a85b26a2cd36\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.1-flash-lite",
+      "run_id": "20260929T071343442429Z-75e145dc16ef",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "attempts": 1,
+      "payload_returned": true,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": {
+        "case_id": "TE-GOLD-A",
+        "series": {
+          "electrical_conductivity": {
+            "expected_points": 22,
+            "observed_points": 1,
+            "exact_points": 1,
+            "recall": 0.045454545454545456
+          },
+          "seebeck_coefficient": {
+            "expected_points": 22,
+            "observed_points": 1,
+            "exact_points": 1,
+            "recall": 0.045454545454545456
+          },
+          "power_factor": {
+            "expected_points": 22,
+            "observed_points": 0,
+            "exact_points": 0,
+            "recall": 0.0
+          },
+          "zt": {
+            "expected_points": 12,
+            "observed_points": 1,
+            "exact_points": 1,
+            "recall": 0.08333333333333333
+          },
+          "lattice_thermal_conductivity": {
+            "expected_points": 12,
+            "observed_points": 1,
+            "exact_points": 1,
+            "recall": 0.08333333333333333
+          },
+          "total_thermal_conductivity": {
+            "expected_points": 12,
+            "observed_points": 1,
+            "exact_points": 1,
+            "recall": 0.08333333333333333
+          }
+        },
+        "total_expected_points": 102,
+        "total_exact_points": 5,
+        "point_recall": 0.049019607843137254,
+        "material_match": false,
+        "process_parameter_matches": 4,
+        "process_parameter_total": 10,
+        "signed_seebeck_safe": false,
+        "raw_output_count": 5,
+        "flat_measurement_count": 5,
+        "sample_association_present": true,
+        "temperature_association_present": true,
+        "evidence_locations_present": true,
+        "scientific_type_explicit": false,
+        "canonical_admission_not_implied": true
+      },
+      "scientifically_scored": true,
+      "latency_ms": 6618.841,
+      "usage": {
+        "input_tokens": 25133,
+        "output_tokens": 1093,
+        "total_tokens": 26226,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-6b089ac598\\20260929T071343442429Z-75e145dc16ef\\report.json",
+      "preserved": true,
+      "posthoc_score_artifact": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-6b089ac598\\20260929T071343442429Z-75e145dc16ef\\posthoc_scientific_score.json",
+      "raw_response_sha256": "3abc65ad620251917b2877c277c91003c17365e4b9b74387aaf12e750f9de77f"
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.1-pro-preview",
+      "run_id": "20260929T043912095610Z-0b2bbddf7794",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-c9b7e2ca93\\20260929T043912095610Z-0b2bbddf7794\\report.json",
+      "preserved": true
+    },
+    {
+      "provider_name": "gemini",
+      "model_id": "models/gemini-3.1-pro-preview",
+      "run_id": "20260929T072149256952Z-f97563b4dc7b",
+      "case_id": "TE-GOLD-A",
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "attempts": 3,
+      "payload_returned": false,
+      "schema_valid": false,
+      "canonical_admitted": false,
+      "raw_scientific_score": null,
+      "scientifically_scored": false,
+      "latency_ms": null,
+      "usage": {
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "cached_tokens": null
+      },
+      "fallback_used": false,
+      "artifact_report": "output\\thermoelectrics_v1\\provider_runs\\TE-GOLD-A\\gemini\\models_gemini-c9b7e2ca93\\20260929T072149256952Z-f97563b4dc7b\\report.json",
+      "preserved": true
+    }
+  ],
+  "regression": {
+    "expected_post_freeze_tests": 601,
+    "allowed_warning": "google-genai uses a Python typing alias deprecated for removal in Python 3.17"
+  },
+  "reproduce": {
+    "offline_cases": ".\\.venv\\Scripts\\python.exe benchmark\\thermoelectrics_v1\\run_closure_offline.py",
+    "closure_audit": ".\\.venv\\Scripts\\python.exe benchmark\\thermoelectrics_v1\\run_closure_audit.py",
+    "full_suite": ".\\.venv\\Scripts\\python.exe -m pytest tests_v3 -q --basetemp=.pytest_tmp_te_closure"
+  },
+  "limitations": [
+    "The qualifying raw Gemini payload recovered only 5 of 102 exact points and was not canonically admitted.",
+    "The qualifying payload omitted explicit scientific-type labels and exact frozen composition identity.",
+    "No TE-SERIES-B live run was attempted after the third selected model reported zero available Pro input-token quota.",
+    "No OpenAI live discovery or call was performed."
+  ]
+}

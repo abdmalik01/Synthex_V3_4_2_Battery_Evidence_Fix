@@ -1,0 +1,19 @@
+{
+  "case_id": "TE-GOLD-A",
+  "doi": "10.1038/s41563-021-01064-6",
+  "article_file": "corpus_pdfs/TE-GOLD-A_article.pdf",
+  "article_file_sha256": "645f928681a63b9180b7e3bffe54367252287753ea0682874b14ac69e12de2b2",
+  "article_page_count": 9,
+  "supplementary_file": "corpus_pdfs/TE-GOLD-A_supplementary.pdf",
+  "supplementary_file_sha256": "7f3f950c6e2385622056cfd49481edca38cd0e40234f2dc3ef84dc112a9d05de",
+  "supplementary_page_count": 46,
+  "fig4_source_file": "corpus_data/TE-GOLD-A_Fig4_source_data.xlsx",
+  "fig4_source_file_sha256": "2041f66c4e5ef92e1ed71d98b0dfab3df9f239cb2f2994bf68708018c6434fb5",
+  "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+  "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+  "gold_file": "gold_a.json",
+  "gold_sha256": "26d722924bae9195f302fddabf0b503fa44c43c4c22b5da92bf9d17a38e0ee87",
+  "license": "CC BY 4.0",
+  "source_data_origin": "Springer Nature publisher source-data files for Figs. 4 and 5",
+  "locked_before_provider_run": true
+}

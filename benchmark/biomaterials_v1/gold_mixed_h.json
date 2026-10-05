@@ -1,0 +1,26 @@
+{
+  "case_id": "BIO-MIXED-H",
+  "doi": "10.1038/s41598-019-55034-9",
+  "source_pdf": "corpus_pdfs/BIO-MIXED-H.pdf",
+  "formulation": "sodium alginate and 4% w/v gelatin",
+  "alginate_wv_percent_by_sample": {"S1": 3.0, "S2": 3.25, "S3": 3.5, "S4": 3.75, "S5": 4.0},
+  "approximate_extrusion_pressure_kPa": [20, 35, 60, 90, 120],
+  "rheology": {
+    "temperature_C": 25,
+    "uncrosslinked": true,
+    "viscosity_Pa_s_at_1_per_s": [4.33, 12.10, 31.96, 26.57, 55.47],
+    "viscosity_Pa_s_at_100_per_s": [1.08, 1.55, 1.75, 1.71, 2.25]
+  },
+  "biology": {
+    "cell_line": "NSCLC patient-derived xenograft (PDX) cells",
+    "assay": "Live-dead assay",
+    "viability_percent_immediate": [89.47, 97.51, 95.98, 78.44, 65.79],
+    "viability_percent_day_4": [87.77, 98.23, 98.23, 84.17, 51.05],
+    "viability_percent_day_15": [57.13, 94.23, 93.55, 65.66, 45.65]
+  },
+  "gold_output_count": 25,
+  "expected_materials": 5,
+  "expected_hydrogels": 5,
+  "expected_scaffolds": 5,
+  "excluded": ["line-width values whose source unit is printed as mm and scientifically suspect", "approximate storage/loss modulus prose without explicit unit", "figure-only scaffold stiffness", "unrelated ratio formulations in Table 1", "degradation and swelling not reported as exact focal endpoints"]
+}

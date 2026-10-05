@@ -1,0 +1,12 @@
+{
+  "case_id": "TE-REVIEW-F",
+  "doi": "10.3390/en18082122",
+  "source_file": "corpus_pdfs/TE-REVIEW-F_article.pdf",
+  "source_sha256": "aded4fe9c479ebdcf3a14e28c4c4f71f77b18482653363a19e7b26d353713153",
+  "page_count": 24,
+  "gold_file": "gold_review_f.json",
+  "gold_sha256": "2f51ae2d8c57a16fff155b08bbe7512da511c502e4b1c259ad3fe1396a13aece",
+  "official_url": "https://www.mdpi.com/1996-1073/18/8/2122",
+  "license": "CC BY 4.0",
+  "locked_before_provider_run": true
+}

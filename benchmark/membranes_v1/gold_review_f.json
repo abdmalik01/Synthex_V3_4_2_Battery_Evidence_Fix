@@ -1,0 +1,23 @@
+{
+  "case_id": "MEM-REVIEW-F",
+  "source": {
+    "title": "Recent Advances of Polymeric Membranes in Tackling Plasticization and Aging for Practical Industrial CO2/CH4 Applications—A Review",
+    "doi": "10.3390/membranes12010071",
+    "url": "https://www.mdpi.com/2077-0375/12/1/71",
+    "year": 2022,
+    "authors": ["Farahdila Kadirkhan", "Pei Sean Goh", "Ahmad Fauzi Ismail", "Wan Nurul Ffazida Wan Mustapa", "Mohd Hanif Mohamad Halim", "Wei Kian Soh", "Siew Yean Yeo"]
+  },
+  "reviewed_noncanonical_example": {
+    "material": "PIM-1 with graphene-like fillers",
+    "pressure_bar": 2.0,
+    "temperature_C": 25.0,
+    "feed": "binary CO2/CH4 (50%, 50%)",
+    "co2_permeability_Barrer": 3500.0,
+    "co2_permeability_uncertainty_Barrer": 600.0,
+    "selectivity": 22.9,
+    "selectivity_uncertainty": 1.1,
+    "reference": "[134]"
+  },
+  "expected_noncanonical_outputs": 2,
+  "expected_outputs": 0
+}

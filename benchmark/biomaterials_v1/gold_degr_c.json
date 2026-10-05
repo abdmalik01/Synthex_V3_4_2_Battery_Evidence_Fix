@@ -1,0 +1,16 @@
+{
+  "case_id": "BIO-DEGR-C",
+  "doi": "10.1038/s41598-026-53640-y",
+  "source_pdf": "corpus_pdfs/BIO-DEGR-C.pdf",
+  "source_pages": [7, 8, 9],
+  "specimen": "freeze-dried, 3D-printed chitosan-carrageenan hydrogel scaffold",
+  "swelling": {"property": "swelling_ratio", "time_h": 72, "medium": "distilled water", "temperature_C": 37, "unit": "%", "replicates": 3},
+  "degradation": {"property": "mass_loss", "time_day": 28, "medium": "PBS", "temperature_C": 37, "unit": "%", "replicates": 3},
+  "variants": [
+    {"label": "Cs-Crg", "swelling_percent": 353.0, "mass_loss_percent": 36.6, "strut_diameter_um": 673.1, "pore_diameter_um": 361.1, "compressive_yield_strength_MPa": 0.81, "elastic_modulus_kPa": 1048.4},
+    {"label": "Cs-Crg/Kr", "swelling_percent": 387.5, "mass_loss_percent": 44.7, "strut_diameter_um": 488.2, "pore_diameter_um": 506.9, "compressive_yield_strength_MPa": 0.74, "elastic_modulus_kPa": 985.6},
+    {"label": "Cs-Crg/Kr-Mel", "swelling_percent": 391.6, "mass_loss_percent": 47.0, "strut_diameter_um": 509.8, "pore_diameter_um": 549.0, "compressive_yield_strength_MPa": 0.76, "elastic_modulus_kPa": 954.7}
+  ],
+  "gold_output_count": 18,
+  "excluded": ["unlabeled intermediate swelling and mass-loss graph points", "degradation-rate values inferred from cumulative mass loss", "unlabeled MTT graph values", "drug-release metrics outside V1 scope"]
+}

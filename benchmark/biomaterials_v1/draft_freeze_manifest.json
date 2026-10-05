@@ -1,0 +1,25 @@
+{
+  "domain": "biomaterials",
+  "version": "v1",
+  "status": "pending_live_gate",
+  "scientific_status": "deterministically_closed",
+  "freeze_status": "pending_live_provider_gate",
+  "provider_payload_received": false,
+  "DETERMINISTIC_BIOMATERIALS_V1_READY": true,
+  "BIO_LIVE_GATE_SATISFIED": false,
+  "closure_audit": "closure_audit.json",
+  "source_gold_locks": "source_locks.json",
+  "freeze_commit_created": false,
+  "historical_candidate_selection": "candidate_selection.json",
+  "provider_history": "../provider_audit/provider_history.json",
+  "reproduction": [
+    "python -m benchmark.biomaterials_v1.closure",
+    "python -m pytest tests_v3 -q --basetemp=.pytest_tmp"
+  ],
+  "known_limitations": [
+    "Frozen gold covers selected exact source values, not all figures or outcomes.",
+    "H source prints line-width unit as mm; those values are excluded, not silently corrected.",
+    "H source reports no exact degradation/swelling endpoint in the selected passages.",
+    "No Biomaterials provider payload exists; live scientific scoring remains N/A."
+  ]
+}

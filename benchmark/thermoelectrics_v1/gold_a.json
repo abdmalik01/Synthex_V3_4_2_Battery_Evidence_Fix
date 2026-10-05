@@ -1,0 +1,68 @@
+{
+  "case_id": "TE-GOLD-A",
+  "material": {
+    "name": "purified polycrystalline Na0.03Sn0.965Se",
+    "formula": "Na0.03Sn0.965Se",
+    "composition": {"Na": 0.03, "Sn": 0.965, "Se": 1.0},
+    "carrier_type": "p-type",
+    "measurement_orientation": "parallel to SPS direction"
+  },
+  "source": {
+    "title": "Polycrystalline SnSe with a thermoelectric figure of merit greater than the single crystal",
+    "doi": "10.1038/s41563-021-01064-6",
+    "url": "https://www.nature.com/articles/s41563-021-01064-6",
+    "year": 2021,
+    "authors": ["Chongjian Zhou", "Yong Kyu Lee", "Yuan Yu", "Sejin Byun", "Zhong-Zhen Luo", "In Chung"]
+  },
+  "series": {
+    "electrical_conductivity": {
+      "count": 22,
+      "unit": "S/cm",
+      "sha256": "7e4aec0b2d4255e41edeff4063fa4b887627969a7708d552e3d3c162c1aa238a",
+      "sentinels": [[311.74823, 85.05619], [573.39479, 91.86617], [783.21932, 117.95636]]
+    },
+    "seebeck_coefficient": {
+      "count": 22,
+      "unit": "uV/K",
+      "sha256": "d5e98c2596a3d606e893f6a705cee8ebcbefe3bc1e4dea32473c165a286e9d8e",
+      "sentinels": [[311.74823, 190.82817], [573.39479, 314.07832], [783.21932, 268.60032]]
+    },
+    "power_factor": {
+      "count": 22,
+      "unit": "uW/cm/K2",
+      "sha256": "f8b6ec39812678883b9d802ce568529e8726a88331532fd14764ab3b38833918",
+      "sentinels": [[311.74823, 3.09735], [573.39479, 9.06216], [783.21932, 8.5101]]
+    },
+    "zt": {
+      "count": 12,
+      "unit": "dimensionless",
+      "sha256": "6c0b9a65288f30210459b4bba59a5b4a51597336e50a9f9c9e8371d15d2296ef",
+      "sentinels": [[304.1, 0.15415], [573.7, 1.80188], [783.4, 3.08192]]
+    },
+    "lattice_thermal_conductivity": {
+      "count": 12,
+      "unit": "W/m/K",
+      "sha256": "329e8224d60472748ddafbc619a9c099085b3e5b7b47c7f2a20a6209214c4420",
+      "sentinels": [[304.1, 0.56474], [573.7, 0.21958], [783.4, 0.07805]]
+    },
+    "total_thermal_conductivity": {
+      "count": 12,
+      "unit": "W/m/K",
+      "sha256": "06ea6aad19900f7f32fce9123316ead47a7b595c5a0a3c76a9feb452ddd2fe13",
+      "sentinels": [[304.1, 0.61104], [573.7, 0.28853], [783.4, 0.21632]]
+    }
+  },
+  "process": {
+    "reaction_temperature": [1223.0, "K"],
+    "reaction_time": [12.0, "h"],
+    "annealing_temperature": [773.0, "K"],
+    "annealing_time": [48.0, "h"],
+    "purification_temperature": [613.0, "K"],
+    "purification_time": [6.0, "h"],
+    "sintering_temperature": [783.0, "K"],
+    "sintering_time": [5.0, "min"],
+    "sintering_pressure": [50.0, "MPa"],
+    "relative_density": [95.6, "%"]
+  },
+  "expected_outputs": 102
+}

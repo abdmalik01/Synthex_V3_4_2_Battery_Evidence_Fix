@@ -1,0 +1,12 @@
+{
+  "case_id": "MECH-CREEP-B",
+  "status": "locked_before_provider_run",
+  "source_file": "corpus_pdfs/metals-11-00830.pdf",
+  "source_sha256": "0e0b8d792564ac6050824486fe0ae099b4fec559459d40aa173ad990839bfb7c",
+  "source_url": "https://res.mdpi.com/d_attachment/metals/metals-11-00830/article_deploy/metals-11-00830.pdf",
+  "gold_file": "creep_b_gold.json",
+  "gold_sha256": "292dbed896a676148b92927551d4117adeb08bc59f452561bd17821ce471f711",
+  "selected_table": "Table 2",
+  "selected_page": 7,
+  "assertions": 24
+}

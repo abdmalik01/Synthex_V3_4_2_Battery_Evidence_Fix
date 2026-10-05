@@ -1,0 +1,11 @@
+{
+  "case_id": "AM-DENS-B",
+  "source_file": "corpus_pdfs/coatings-11-01562.pdf",
+  "source_sha256": "8f5b8663449be7870fc4cec1ca61d6aff04cc23bb5bf61eafb9ad20f7427af2e",
+  "gold_file": "dens_b_gold.json",
+  "gold_sha256": "aa3ea434596dc3f56017e7d0ea9d86efdf7fef4d083bfbcb6674b3217ca2e4ea",
+  "locked_filename": "coatings-11-01562.pdf",
+  "official_url": "https://mdpi-res.com/d_attachment/coatings/coatings-11-01562/article_deploy/coatings-11-01562.pdf",
+  "locked_before_provider_call": true,
+  "provider_calls": 0
+}

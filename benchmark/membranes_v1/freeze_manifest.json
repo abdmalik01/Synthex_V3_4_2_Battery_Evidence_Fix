@@ -1,0 +1,438 @@
+{
+  "domain": "membranes",
+  "version": "1.0.0",
+  "freeze_status": "FROZEN_DETERMINISTIC_PROVIDER_EVALUATION_MODEL_SPECIFIC",
+  "freeze_statement": "Membranes V1 is scientifically closed for deterministic extraction, membrane/specimen association, multilayer architecture, fabrication linkage, species and gas-pair identity, transport properties, separation metrics, stability/fouling semantics, computational separation, review containment, negative routing, evidence ownership, analytics safety, and archive/domain scoping. Raw provider extraction remains model-specific and is not automatically canonical.",
+  "provider_architecture": {
+    "active_live_provider": "gemini",
+    "openai_state": "FUTURE_SUPPORTED_BUT_INACTIVE",
+    "provider_neutral_core_preserved": true,
+    "silent_fallback": false
+  },
+  "live_gate": {
+    "satisfied": true,
+    "qualifying_case": "MEM-GOLD-A",
+    "provider_name": "gemini",
+    "model_id": "models/gemini-3.5-flash-lite",
+    "run_id": "20260929T191704632468Z-0081ced80d8a",
+    "payload_persisted_before_validation": true,
+    "scientifically_scored": true,
+    "canonical_admission": false,
+    "raw_response_sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935"
+  },
+  "closure": {
+    "cases_passed": 8,
+    "cases_total": 8,
+    "scientific_invariants": {
+      "all_passed": true,
+      "passed": 40,
+      "total": 40
+    },
+    "contamination": {
+      "analytics": 0,
+      "cross_record_leakage": 0,
+      "evidence": 0,
+      "graph": 0,
+      "ownership": 0
+    },
+    "totals": {
+      "canonical_outputs": 215,
+      "experimental_outputs": 183,
+      "computational_outputs": 32,
+      "analytics_rows": 215,
+      "experiments": 34,
+      "calculations": 16,
+      "review_noncanonical_outputs": 2
+    }
+  },
+  "cases": [
+    {
+      "case_id": "MEM-GOLD-A",
+      "offline_passed": true,
+      "analytics_rows": 12,
+      "calculations": 0,
+      "devices": 4,
+      "experiments": 4,
+      "materials": 4,
+      "outputs": 12,
+      "processes": 4,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "c65ebe3ad38fa416824e78a9fef47bda0baaddeae18b2a25690d4cc63496b015"
+      },
+      "gold_sha256": "433b0c034746e74cf35d86c37ba3435c2fd66f0bbbfa792cf0d1ffe0fd78e7d3"
+    },
+    {
+      "case_id": "MEM-SEP-B",
+      "offline_passed": true,
+      "analytics_rows": 98,
+      "calculations": 0,
+      "devices": 7,
+      "experiments": 14,
+      "materials": 7,
+      "outputs": 98,
+      "processes": 7,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "2293180864dcb187609a133766f8d47340098233cfa68b5a10ab25000dee757c"
+      },
+      "gold_sha256": "034350edab1cd931a12d58bd3e765a5a3e4dfeb873c6fd0e6faa240da33a6a9c"
+    },
+    {
+      "case_id": "MEM-STAB-C",
+      "offline_passed": true,
+      "analytics_rows": 25,
+      "calculations": 0,
+      "devices": 5,
+      "experiments": 5,
+      "materials": 5,
+      "outputs": 25,
+      "processes": 5,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "48c3f11b77dbe7cf8e6618f35b489c3558d73719fa635c2e4fde68bc3275592f"
+      },
+      "gold_sha256": "5aa1124cbf19d2fa2e4c9ed79683784025a830f084452396d9a1169b8588c779"
+    },
+    {
+      "case_id": "MEM-PROCESS-D",
+      "offline_passed": true,
+      "analytics_rows": 30,
+      "calculations": 0,
+      "devices": 2,
+      "experiments": 2,
+      "materials": 5,
+      "outputs": 30,
+      "processes": 2,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "bb2b633c5c66b7cbfe33c08b64b4073383223074c7d9ba3dedb1d7c0d39ce5c1"
+      },
+      "gold_sha256": "5fd71268eb37128031ccfd2ea0416964f585ecf244f57f709576131cdb9874bf"
+    },
+    {
+      "case_id": "MEM-COMPUTE-E",
+      "offline_passed": true,
+      "analytics_rows": 32,
+      "calculations": 16,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 16,
+      "outputs": 32,
+      "processes": 0,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "7882e1036fd9c2ef6cfd42c870c5ff73a7c1334bf16c7c6cd31daa690ce732d7"
+      },
+      "gold_sha256": "b94734c7679e3a9820c4dd70c99a21b0e73a37d3f872d601ce87302ca0e00996"
+    },
+    {
+      "case_id": "MEM-REVIEW-F",
+      "offline_passed": true,
+      "analytics_rows": 0,
+      "calculations": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "outputs": 0,
+      "processes": 0,
+      "quarantine": 3,
+      "source_hashes": {
+        "article_sha256": "82433ab21253a63b1ad77a02ff38fd0c2f722d75dd461f202ce0f6712f14adb1"
+      },
+      "gold_sha256": "b02965c6957b2bfa48e5fdda135827d53f5a184c49ab95015821ab07d5e07be5",
+      "review_noncanonical_candidate_count": 3,
+      "review_noncanonical_output_count": 2
+    },
+    {
+      "case_id": "MEM-NEG-G",
+      "offline_passed": true,
+      "analytics_rows": 0,
+      "calculations": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "outputs": 0,
+      "processes": 0,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "57b07b46ae0b4009a8447150970e58efaf1692bb7d041728b57e086ba18b222e"
+      },
+      "gold_sha256": "87e016b23e965e0671b429609586ac87d149a1024cee08103a615329e2e80814",
+      "expected_route": "batteries"
+    },
+    {
+      "case_id": "MEM-MIXED-H",
+      "offline_passed": true,
+      "analytics_rows": 18,
+      "calculations": 0,
+      "devices": 5,
+      "experiments": 9,
+      "materials": 3,
+      "outputs": 18,
+      "processes": 5,
+      "quarantine": 0,
+      "source_hashes": {
+        "article_sha256": "539220a731517215b84db3991fc80647d15a61fd03f04ffbf6b3810349734bc2"
+      },
+      "gold_sha256": "83348bfac12c9f9429092b95a35499204ee41af0d2b9fa371cd87658022f0501"
+    }
+  ],
+  "provider_history": [
+    {
+      "case_id": "MEM-GOLD-A",
+      "provider_name": "gemini",
+      "preserved": true,
+      "model_id": "models/gemini-3.8-flash",
+      "run_id": "20260929T191434496169Z-da67c49b7079",
+      "attempts": 3,
+      "payload_returned": false,
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "failure": "503 provider high demand on all attempts",
+      "raw_scientific_score": null,
+      "schema_valid": false,
+      "canonical_admission": false,
+      "raw_response_sha256": null
+    },
+    {
+      "case_id": "MEM-GOLD-A",
+      "provider_name": "gemini",
+      "preserved": true,
+      "model_id": "models/gemini-3.1-pro-preview",
+      "run_id": "20260929T191559785651Z-3e440f98acab",
+      "attempts": 3,
+      "payload_returned": false,
+      "status": "LIVE_UNAVAILABLE_AFTER_RETRIES",
+      "failure": "429 account quota with zero free-tier input-token capacity on all attempts",
+      "raw_scientific_score": null,
+      "schema_valid": false,
+      "canonical_admission": false,
+      "raw_response_sha256": null
+    },
+    {
+      "case_id": "MEM-GOLD-A",
+      "provider_name": "gemini",
+      "preserved": true,
+      "model_id": "models/gemini-3.5-flash-lite",
+      "run_id": "20260929T191704632468Z-0081ced80d8a",
+      "attempts": 1,
+      "payload_returned": true,
+      "status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED",
+      "failure": null,
+      "raw_scientific_score": {
+        "exact_points": 12,
+        "expected_points": 12,
+        "exact_variants": 4,
+        "expected_variants": 4,
+        "exact_filler_loading_associations": 4,
+        "expected_filler_loading_associations": 4,
+        "exact_species": 2,
+        "expected_species": 2,
+        "exact_gas_pairs": 1,
+        "expected_gas_pairs": 1,
+        "exact_condition_points": 12,
+        "exact_unit_points": 12,
+        "evidence_snippets": 12,
+        "table_or_cell_locators": 12,
+        "page_locators": 0,
+        "owned_objects": 25,
+        "focal_work_objects": 25,
+        "cited_prior_work_objects": 0
+      },
+      "schema_valid": false,
+      "canonical_admission": false,
+      "raw_response_sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935"
+    },
+    {
+      "case_id": "MEM-SEP-B",
+      "provider_name": "gemini",
+      "preserved": true,
+      "model_id": "models/gemini-3.5-flash-lite",
+      "run_id": "20260929T192342356949Z-2352ac4838da",
+      "attempts": 1,
+      "payload_returned": true,
+      "status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED",
+      "raw_scientific_score": {
+        "reported_records": 105,
+        "exact_points": 98,
+        "expected_points": 98,
+        "exact_variants": 7,
+        "expected_variants": 7,
+        "exact_filler_loading_associations": 7,
+        "expected_filler_loading_associations": 7,
+        "exact_thickness_associations": 7,
+        "expected_thickness_associations": 7,
+        "exact_species": 6,
+        "expected_species": 6,
+        "exact_gas_pairs": 8,
+        "expected_gas_pairs": 8,
+        "temperature_points": 98,
+        "test_mode_points": 98,
+        "strict_pressure_points": 0,
+        "pressure_value_present_points": 42,
+        "exact_unit_points": 98,
+        "evidence_snippets": 98,
+        "table_or_cell_locators": 0,
+        "page_locators": 0,
+        "owned_objects": 12,
+        "focal_work_objects": 12,
+        "cited_prior_work_objects": 0
+      },
+      "schema_valid": false,
+      "canonical_admission": false,
+      "raw_response_sha256": "a17f397e8ac413e6cdf2b290757910272f747c662e30bb751ce505dccca7c84d"
+    }
+  ],
+  "normalization": {
+    "MEM-GOLD-A": {
+      "normalizer_version": "membrane_provider_normalizer_v1",
+      "schema_valid": true,
+      "canonical_admission": false,
+      "canonical_outputs": 0,
+      "source_raw_sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935",
+      "raw_hash_still_matches": true,
+      "normalized_candidate_separate": true,
+      "safety": {
+        "calculated_selectivity": 0,
+        "invented_evidence_locators": 0,
+        "invented_ownership": 0,
+        "invented_pressure": 0,
+        "invented_values": 0
+      },
+      "scientific_score": {
+        "canonical_admission_not_implied": true,
+        "case_id": "MEM-GOLD-A",
+        "condition_association": {
+          "exact_condition_points": 12,
+          "feed_points": 12,
+          "identity_points": 12,
+          "pressure_value_present_points": 12,
+          "strict_pressure_points": 12,
+          "temperature_points": 12,
+          "test_mode_points": 12
+        },
+        "evidence": {
+          "identity_points": 12,
+          "with_evidence": 12,
+          "with_page_and_table_or_locator": 0,
+          "with_table_or_locator": 12
+        },
+        "membrane_association": {
+          "exact_filler_loading_associations": 4,
+          "exact_thickness_associations": 0,
+          "exact_variants": 4,
+          "expected_filler_loading_associations": 4,
+          "expected_thickness_associations": 0,
+          "expected_variants": 4
+        },
+        "ownership": {
+          "cited_prior_work": 0,
+          "focal_work": 17,
+          "objects_with_ownership": 17
+        },
+        "property_accuracy": {
+          "exact_point_recall": 1.0,
+          "exact_scientific_points": 12,
+          "exact_value_points": 12,
+          "expected_points": 12,
+          "identity_points": 12
+        },
+        "raw_output_count": 12,
+        "species_association": {
+          "exact_gas_pairs": 1,
+          "exact_species": 2,
+          "expected_gas_pairs": 1,
+          "expected_species": 2
+        },
+        "unit_accuracy": {
+          "exact_unit_points": 12,
+          "identity_points": 12
+        }
+      }
+    },
+    "MEM-SEP-B": {
+      "normalizer_version": "membrane_provider_normalizer_v1",
+      "schema_valid": true,
+      "canonical_admission": false,
+      "canonical_outputs": 0,
+      "source_raw_sha256": "a17f397e8ac413e6cdf2b290757910272f747c662e30bb751ce505dccca7c84d",
+      "raw_hash_still_matches": true,
+      "normalized_candidate_separate": true,
+      "safety": {
+        "calculated_selectivity": 0,
+        "invented_evidence_locators": 0,
+        "invented_ownership": 0,
+        "invented_pressure": 0,
+        "invented_values": 0
+      },
+      "scientific_score": {
+        "canonical_admission_not_implied": true,
+        "case_id": "MEM-SEP-B",
+        "condition_association": {
+          "exact_condition_points": 42,
+          "feed_points": 98,
+          "identity_points": 98,
+          "pressure_value_present_points": 42,
+          "strict_pressure_points": 42,
+          "temperature_points": 98,
+          "test_mode_points": 98
+        },
+        "evidence": {
+          "identity_points": 98,
+          "with_evidence": 98,
+          "with_page_and_table_or_locator": 0,
+          "with_table_or_locator": 0
+        },
+        "membrane_association": {
+          "exact_filler_loading_associations": 7,
+          "exact_thickness_associations": 7,
+          "exact_variants": 7,
+          "expected_filler_loading_associations": 7,
+          "expected_thickness_associations": 7,
+          "expected_variants": 7
+        },
+        "ownership": {
+          "cited_prior_work": 0,
+          "focal_work": 25,
+          "objects_with_ownership": 25
+        },
+        "property_accuracy": {
+          "exact_point_recall": 1.0,
+          "exact_scientific_points": 98,
+          "exact_value_points": 98,
+          "expected_points": 98,
+          "identity_points": 98
+        },
+        "raw_output_count": 98,
+        "species_association": {
+          "exact_gas_pairs": 8,
+          "exact_species": 6,
+          "expected_gas_pairs": 8,
+          "expected_species": 6
+        },
+        "unit_accuracy": {
+          "exact_unit_points": 98,
+          "identity_points": 98
+        }
+      }
+    }
+  },
+  "regression": {
+    "full_tests_v3_passed": true,
+    "passed_tests": 643,
+    "failures": 0,
+    "allowed_warning": "google-genai uses a Python typing alias deprecated for removal in Python 3.17"
+  },
+  "reproduce": {
+    "provider_normalization": ".\\.venv\\Scripts\\python.exe -m pytest tests_v3\\test_membrane_provider_normalization.py -q --basetemp=.pytest_tmp_mem_normalization",
+    "closure_audit": ".\\.venv\\Scripts\\python.exe -m benchmark.membranes_v1.closure_audit --write",
+    "full_suite": ".\\.venv\\Scripts\\python.exe -m pytest tests_v3 -q --basetemp=.pytest_tmp_membrane_closure",
+    "diff_check": "git diff --check"
+  },
+  "known_limitations": [
+    "Both persisted Gemini payloads normalize to schema-valid candidates but remain canonically inadmissible because page-verbatim source evidence is absent.",
+    "SEP-B pressure remains associated only with 42 permeability outputs; no pressure was propagated to 56 selectivity outputs.",
+    "The computational case covers molecular-dynamics lipid-bilayer gas transport and does not claim experimental separation performance.",
+    "No new Gemini or OpenAI call was made during closure."
+  ]
+}

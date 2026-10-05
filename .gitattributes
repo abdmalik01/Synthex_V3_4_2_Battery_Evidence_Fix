@@ -1,0 +1,4 @@
+*.pdf binary
+# Locked benchmark records are hashed from exact file bytes. Never perform
+# checkout-time line-ending conversion, including on Windows with autocrlf.
+benchmark/** -text

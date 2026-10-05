@@ -1,0 +1,47 @@
+{
+  "case_id": "AM-REVIEW-G",
+  "status": "locked_reviewed",
+  "source": {
+    "title": "Coated Metal Powders for Laser Powder Bed Fusion (L-PBF) Processing: A Review",
+    "authors": [
+      "Robert Bidulsky",
+      "Federico Simone Gobber",
+      "Jana Bidulska",
+      "Marta Ceroni",
+      "Tibor Kvackaj",
+      "Marco Actis Grande"
+    ],
+    "journal": "Metals",
+    "year": 2021,
+    "doi": "10.3390/met11111831",
+    "url": "https://www.mdpi.com/2075-4701/11/11/1831",
+    "page_count": 23
+  },
+  "reviewed_noncanonical_example": {
+    "page": 13,
+    "table": "Table 2",
+    "material": "Fe-based alloy with TiB2-coated powder",
+    "property": "relative_density",
+    "raw_value": "99.99%",
+    "value": 99.99,
+    "unit": "%",
+    "laser_power_w": 100,
+    "scan_speed_mm_s": 83.33,
+    "layer_thickness_um": 50,
+    "ownership": "cited_prior_work",
+    "citation_context": "Ref. [104]"
+  },
+  "assertions": [
+    "additive_manufacturing_route",
+    "review_paper_type",
+    "explicit_two_signal_review_detection",
+    "zero_focal_experiments",
+    "zero_focal_calculations",
+    "zero_canonical_measurements",
+    "cited_value_preserved_noncanonical",
+    "evidence_retained",
+    "zero_ownership_violations",
+    "zero_analytics_contamination",
+    "zero_graph_contamination"
+  ]
+}

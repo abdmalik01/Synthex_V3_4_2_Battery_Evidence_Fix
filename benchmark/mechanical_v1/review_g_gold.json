@@ -1,0 +1,38 @@
+{
+  "case_id": "MECH-REVIEW-G",
+  "status": "locked_reviewed",
+  "assertion_count": 11,
+  "source": {
+    "title": "Mechanical Properties of SLM-Printed Aluminium Alloys: A Review",
+    "authors": ["Panneer Ponnusamy", "Rizwan Abdul Rahman Rashid", "Syed Hasan Masood", "Dong Ruan", "Suresh Palanisamy"],
+    "journal": "Materials",
+    "year": 2020,
+    "doi": "10.3390/ma13194301",
+    "url": "https://www.mdpi.com/1996-1944/13/19/4301",
+    "sha256": "791df92c3afd42061d9518a9a9c23e73819827d195dda8dececb5c3669bac9a3",
+    "page_count": 51
+  },
+  "reviewed_noncanonical_example": {
+    "page": 42,
+    "material": "AA 6061",
+    "property": "vickers_hardness",
+    "raw_value": "54 HV",
+    "value": 54,
+    "unit": "HV",
+    "ownership": "review_summary",
+    "citation_context": "Uddin et al. [168]"
+  },
+  "assertions": [
+    "mechanical_route",
+    "review_paper_type",
+    "explicit_two_signal_review_detection",
+    "zero_focal_experiments",
+    "zero_focal_calculations",
+    "cited_value_preserved_noncanonical",
+    "evidence_retained",
+    "zero_ownership_violations",
+    "zero_analytics_contamination",
+    "zero_graph_contamination",
+    "provider_not_called"
+  ]
+}

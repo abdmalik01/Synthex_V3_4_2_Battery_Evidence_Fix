@@ -1,0 +1,25 @@
+{
+  "case_id": "TE-MIXED-H",
+  "source": {
+    "title": "Demonstration of valley anisotropy utilized to enhance the thermoelectric power factor",
+    "doi": "10.1038/s41467-021-25722-0",
+    "url": "https://www.nature.com/articles/s41467-021-25722-0",
+    "year": 2021,
+    "authors": ["Airan Li", "Chaoliang Hu", "Bin He", "Mengyu Yao", "Chenguang Fu", "Yuechu Wang", "Xinbing Zhao", "Claudia Felser", "Tiejun Zhu"]
+  },
+  "material": {"name": "p-type Mg3Sb2 single crystal", "formula": "Mg3Sb2", "composition": {"Mg": 3.0, "Sb": 2.0}},
+  "experimental": [
+    {"property": "carrier_effective_mass", "orientation": "Gamma-K", "temperature": 20.0, "value": 0.9, "unit": "m_e", "scientific_type": "reported_measurement", "method": "ARPES band-curvature estimate"},
+    {"property": "carrier_effective_mass", "orientation": "Gamma-A", "temperature": 20.0, "value": 0.16, "unit": "m_e", "scientific_type": "reported_measurement", "method": "ARPES band-curvature estimate"},
+    {"property": "lattice_thermal_conductivity", "orientation": "c-axis", "temperature": 300.0, "value": 1.6, "unit": "W/m/K", "scientific_type": "reported_derived_metric", "method": "steady-state thermal transport with Wiedemann-Franz subtraction"},
+    {"property": "lattice_thermal_conductivity", "orientation": "ab-plane", "temperature": 300.0, "value": 2.3, "unit": "W/m/K", "scientific_type": "reported_derived_metric", "method": "steady-state thermal transport with Wiedemann-Franz subtraction"}
+  ],
+  "computational": [
+    {"property": "carrier_effective_mass", "orientation": "Gamma-K", "value": 0.9, "unit": "m_e", "scientific_type": "calculated"},
+    {"property": "carrier_effective_mass", "orientation": "Gamma-A", "value": 0.11, "unit": "m_e", "scientific_type": "calculated"}
+  ],
+  "calculation_method": {"code": "VASP", "functional": "PBE-GGA", "energy_cutoff": "400 eV", "k_mesh": "k = 60/L", "force_convergence": "0.01 eV/A"},
+  "expected_experiments": 2,
+  "expected_calculations": 1,
+  "expected_outputs": 6
+}

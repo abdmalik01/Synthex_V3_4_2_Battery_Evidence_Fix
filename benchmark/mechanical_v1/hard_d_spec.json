@@ -1,0 +1,19 @@
+{
+  "case_id": "MECH-HARD-D",
+  "status": "locked_offline_validated_live_payload_scored",
+  "source_lock": "hard_d_source_lock.json",
+  "gold": "hard_d_gold.json",
+  "gold_assertions": 18,
+  "provider_calls": 1,
+  "paper_type": "hardness_testing",
+  "scientific_boundaries": [
+    "Vickers, Rockwell, Brinell and indentation hardness are not interchangeable",
+    "hardness values are not normalized to MPa",
+    "test load and indentation count remain conditions and are not inferred when absent",
+    "cooling rate is a processing condition, not a test temperature",
+    "printed uncertainty remains attached to its own sample and cooling-rate cell",
+    "source table cells require row and cell provenance"
+  ],
+  "offline_result": "18/18 reviewed cells with full association and cell provenance",
+  "live_result": "gemini-3.5-flash returned one alternate-schema payload: 18/18 raw values, 0/18 full assertions, zero canonical experiments after evidence/association admission"
+}

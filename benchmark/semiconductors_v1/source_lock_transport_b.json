@@ -1,0 +1,13 @@
+{
+  "case_id": "SEM-TRANSPORT-B",
+  "status": "gold_locked_before_recovery_and_provider_call",
+  "doi": "10.1186/s11671-015-0801-y",
+  "publisher_url": "https://link.springer.com/article/10.1186/s11671-015-0801-y",
+  "article_file": "corpus_pdfs/SEM-TRANSPORT-B.pdf",
+  "article_sha256": "7adeb607918e4cdce6a4a869436f68077a7b2b2590ab1f75a4fe3ffbe9e3a347",
+  "article_page_count": 10,
+  "gold_file": "gold_transport_b.json",
+  "gold_sha256": "3ca0014d2223801a70d04aa72e3594fcf7062671d59a4da69fac4efa62b67f66",
+  "decisive_tables": ["Table 2"],
+  "decisive_pages": [8]
+}

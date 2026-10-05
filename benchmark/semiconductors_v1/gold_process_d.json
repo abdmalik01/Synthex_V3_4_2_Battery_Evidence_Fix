@@ -1,0 +1,34 @@
+{
+  "case_id": "SEM-PROCESS-D",
+  "source": {
+    "title": "Reference of Temperature and Time during tempering process for non-stoichiometric FTO films",
+    "authors": ["J. K. Yang", "B. Liang", "M. J. Zhao", "Y. Gao", "F. C. Zhang", "H. L. Zhao"],
+    "journal": "Scientific Reports",
+    "year": 2015,
+    "doi": "10.1038/srep15001",
+    "url": "https://www.nature.com/articles/srep15001"
+  },
+  "source_table": "Table 1",
+  "source_page": 2,
+  "material": "fluorine-doped SnO2",
+  "substrate": "SiOxCy diffusion-barrier-coated glass",
+  "growth_method": "atmospheric-pressure chemical vapor deposition",
+  "growth_temperature_c": 650,
+  "hall_measurement_temperature_k": 300,
+  "table_units": {"hall_coefficient": "×10^-2 cm^3/C", "crystallite_size": "nm"},
+  "rows": [
+    {"series": "temperature_at_220_s", "tempering_temperature_c": 600, "tempering_time_s": 220, "hall_coefficient_scaled": -1.23, "crystallite_size_nm": 20.08},
+    {"series": "temperature_at_220_s", "tempering_temperature_c": 650, "tempering_time_s": 220, "hall_coefficient_scaled": -1.41, "crystallite_size_nm": 20.26},
+    {"series": "temperature_at_220_s", "tempering_temperature_c": 680, "tempering_time_s": 220, "hall_coefficient_scaled": -1.85, "crystallite_size_nm": 21.60},
+    {"series": "temperature_at_220_s", "tempering_temperature_c": 700, "tempering_time_s": 220, "hall_coefficient_scaled": -1.65, "crystallite_size_nm": 21.10},
+    {"series": "temperature_at_220_s", "tempering_temperature_c": 720, "tempering_time_s": 220, "hall_coefficient_scaled": -1.72, "crystallite_size_nm": 19.65},
+    {"series": "time_at_700_c", "tempering_temperature_c": 700, "tempering_time_s": 150, "hall_coefficient_scaled": -1.51, "crystallite_size_nm": 20.99},
+    {"series": "time_at_700_c", "tempering_temperature_c": 700, "tempering_time_s": 190, "hall_coefficient_scaled": -1.45, "crystallite_size_nm": 21.30},
+    {"series": "time_at_700_c", "tempering_temperature_c": 700, "tempering_time_s": 220, "hall_coefficient_scaled": -1.65, "crystallite_size_nm": 21.10},
+    {"series": "time_at_700_c", "tempering_temperature_c": 700, "tempering_time_s": 260, "hall_coefficient_scaled": -1.87, "crystallite_size_nm": 21.49},
+    {"series": "time_at_700_c", "tempering_temperature_c": 700, "tempering_time_s": 300, "hall_coefficient_scaled": -2.90, "crystallite_size_nm": 21.11}
+  ],
+  "canonical_result_count": 20,
+  "series_note": "The 700°C/220 s reference appears twice in Table 1, once in each process series, and both source rows are retained without cross-series deduplication.",
+  "quarantine": ["Mean free path and calculated emissivity are out of first-four-case result scope; resistivity and mobility are figure-only and not digitized."]
+}

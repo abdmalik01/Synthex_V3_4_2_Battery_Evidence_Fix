@@ -1,8 +1,4 @@
-"""Offline, fail-closed scoring of independently reviewed MECH-GOLD-A assertions.
-
-This module never extracts a paper or calls a provider. A source lock and human-reviewed
-assertions are prerequisites; the shipped contract deliberately has neither.
-"""
+"""Offline, fail-closed scoring of source-reviewed MECH-GOLD-A assertions."""
 
 from __future__ import annotations
 
@@ -23,13 +19,20 @@ def score_archive(archive: SynthexArchive, contract: dict[str, Any]) -> dict[str
     if archive.metadata.domain != "mechanical":
         raise ValueError("MECH-GOLD-A requires a Mechanical archive")
     if any(not all(key in item for key in (
-        "property", "value", "unit", "sample", "conditions", "scientific_type", "evidence_text"
+        "property", "value", "unit", "sample", "scientific_type", "evidence_text"
     )) for item in assertions):
         raise ValueError("Every gold assertion needs value, unit, sample, conditions, type, and evidence")
 
     rows = project_archives([archive])
     matched: list[dict[str, Any]] = []
     for assertion in assertions:
+        expected_conditions = assertion.get("conditions")
+        if expected_conditions is None:
+            expected_conditions = {
+                "heat_treatment": assertion["treatment"],
+                "overaging": assertion["overaging"],
+                "temperature": assertion["test_temperature"],
+            }
         property_rows = [row for row in rows if (
             row.modality == "experimental"
             and row.property_name == assertion["property"]
@@ -41,11 +44,15 @@ def score_archive(archive: SynthexArchive, contract: dict[str, Any]) -> dict[str
         )]
         association_rows = [row for row in value_rows if (
             row.material_label == assertion["sample"]
-            and all(row.conditions.get(key) == value for key, value in assertion["conditions"].items())
+            and all(row.conditions.get(key) == value for key, value in expected_conditions.items())
         )]
         type_rows = [row for row in association_rows if row.conditions.get("scientific_type") == assertion["scientific_type"]]
         evidence_rows = [row for row in type_rows if (
-            any(assertion["evidence_text"] in str(ref.get("text_snippet") or "") for ref in row.evidence_references)
+            any(
+                assertion["evidence_text"] in str(ref.get("text_snippet") or "")
+                and (not assertion.get("page") or ref.get("page") == assertion["page"])
+                for ref in row.evidence_references
+            )
         )]
         matched.append({
             "property": assertion["property"], "sample": assertion["sample"],
@@ -67,9 +74,17 @@ def score_archive(archive: SynthexArchive, contract: dict[str, Any]) -> dict[str
     return {
         "case_id": contract["case_id"], "passed": passed, "total": len(assertions),
         "recall": passed / len(assertions), "assertions": matched,
+        "value_accuracy": sum(item["value_unit_correct"] for item in matched) / len(assertions),
+        "association_accuracy": sum(item["association_correct"] for item in matched) / len(assertions),
+        "scientific_type_accuracy": sum(item["scientific_type_correct"] for item in matched) / len(assertions),
+        "source_tracking": sum(item["source_tracked"] for item in matched) / len(assertions),
         "routing_correct": archive.metadata.domain == "mechanical",
         "admitted_rows": len(rows), "quarantined_objects": len(quarantine),
         "quarantine_assertions": quarantine_checks,
+        "quarantine_correctness": (
+            sum(item["passed"] for item in quarantine_checks) / len(quarantine_checks)
+            if quarantine_checks else None
+        ),
     }
 
 

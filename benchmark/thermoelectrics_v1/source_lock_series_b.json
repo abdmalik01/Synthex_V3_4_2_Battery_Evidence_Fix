@@ -1,0 +1,11 @@
+{
+  "case_id": "TE-SERIES-B",
+  "doi": "10.1038/s41563-021-01064-6",
+  "fig5_source_file": "corpus_data/TE-GOLD-A_Fig5_source_data.xlsx",
+  "fig5_source_file_sha256": "4a19bde191147f20694dd0912bd429854768528e8ee819a7d37fc234ef1c1e4f",
+  "gold_file": "gold_series_b.json",
+  "gold_sha256": "485a970d1e60a0e3b949fc7b0eef96c3b89c00968fb087cd9c78399bbbf8454b",
+  "license": "CC BY 4.0",
+  "source_data_origin": "Springer Nature publisher source-data file for Fig. 5",
+  "locked_before_provider_run": true
+}

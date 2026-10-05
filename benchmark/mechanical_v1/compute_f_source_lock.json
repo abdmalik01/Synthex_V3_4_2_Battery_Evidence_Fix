@@ -1,0 +1,11 @@
+{
+  "case_id": "MECH-COMPUTE-F",
+  "source_file": "corpus_pdfs/metals-12-02121.pdf",
+  "source_sha256": "3aa748516b93d7cdbf416ea5db8330742b5c17af5fe3511e0c0dd5bc7089fdf3",
+  "gold_file": "compute_f_gold.json",
+  "gold_sha256": "e43e9c5aa43a91520e001854a88098a494c01bf7d033ee6ba22b3f6a38ed434f",
+  "assertions": 28,
+  "selected_pages": [3, 5],
+  "selected_tables": ["Table 2", "Table 3"],
+  "locked_before_provider_call": true
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "AM-REVIEW-G",
+  "source_file": "corpus_pdfs/metals-11-01831-v2.pdf",
+  "source_sha256": "c9fabb9b063758a92f6711bf2dbc5a762e8f4c44137f39d5dcac3a07b21ab003",
+  "gold_file": "review_g_gold.json",
+  "gold_sha256": "4b472ede91058638d229a076928cc9033f51b3de01b9aab1485e8649a12e71a3",
+  "official_url": "https://www.mdpi.com/2075-4701/11/11/1831",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0
+}

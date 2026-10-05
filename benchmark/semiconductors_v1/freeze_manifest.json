@@ -1,0 +1,948 @@
+{
+  "calculation_count": 13,
+  "canonical_output_total": 120,
+  "case_count": 8,
+  "cases": [
+    {
+      "article_url": "https://www.nature.com/articles/s41598-020-57532-7",
+      "case_id": "SEM-GOLD-A",
+      "counts": {
+        "analytics_rows": 20,
+        "calculations": 0,
+        "canonical_outputs": 20,
+        "devices": 4,
+        "experiments": 4,
+        "materials": 5,
+        "noncanonical_or_review": 0,
+        "processes": 4,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 20,
+        "expected_outputs": 20,
+        "negative_route_correct": null
+      },
+      "doi": "10.1038/s41598-020-57532-7",
+      "gold_path": "benchmark/semiconductors_v1/gold_a.json",
+      "gold_sha256": "36b4443b04e5b53a4fd15fe8ab1dbdeab0303ce3e75f0955c44b270ffbac3eba",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-GOLD-A.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_a.json",
+      "source_sha256": "d51abaaa1d11ccc128e050222b1f614420aafd4a2fe5a99d4c9f16a88ca538ee",
+      "source_title": "Highly conductive and transparent gallium doped zinc oxide thin films via chemical vapor deposition"
+    },
+    {
+      "article_url": "https://link.springer.com/article/10.1186/s11671-015-0801-y",
+      "case_id": "SEM-TRANSPORT-B",
+      "counts": {
+        "analytics_rows": 46,
+        "calculations": 0,
+        "canonical_outputs": 46,
+        "devices": 20,
+        "experiments": 20,
+        "materials": 21,
+        "noncanonical_or_review": 0,
+        "processes": 20,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 46,
+        "expected_outputs": 46,
+        "negative_route_correct": null
+      },
+      "doi": "10.1186/s11671-015-0801-y",
+      "gold_path": "benchmark/semiconductors_v1/gold_transport_b.json",
+      "gold_sha256": "3ca0014d2223801a70d04aa72e3594fcf7062671d59a4da69fac4efa62b67f66",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-TRANSPORT-B.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_transport_b.json",
+      "source_sha256": "7adeb607918e4cdce6a4a869436f68077a7b2b2590ab1f75a4fe3ffbe9e3a347",
+      "source_title": "Effects of doping and annealing on properties of ZnO films grown by atomic layer deposition"
+    },
+    {
+      "article_url": "https://www.mdpi.com/1996-1944/15/20/7373",
+      "case_id": "SEM-OPTICAL-C",
+      "counts": {
+        "analytics_rows": 13,
+        "calculations": 0,
+        "canonical_outputs": 13,
+        "devices": 9,
+        "experiments": 13,
+        "materials": 12,
+        "noncanonical_or_review": 0,
+        "processes": 9,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 13,
+        "expected_outputs": 13,
+        "negative_route_correct": null
+      },
+      "doi": "10.3390/ma15207373",
+      "gold_path": "benchmark/semiconductors_v1/gold_optical_c.json",
+      "gold_sha256": "f544ebf3f3d74d8463885ceef48d5709212902b1c88a676f7408d93b3fb87579",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-OPTICAL-C.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_optical_c.json",
+      "source_sha256": "ca41cc57dbc96d104139d71f10882b093f73489903966335793afaac921d6f02",
+      "source_title": "Comparison of the Material Quality of AlxIn1−xN (x—0–0.50) Films Deposited on Si(100) and Si(111) at Low Temperature by Reactive RF Sputtering"
+    },
+    {
+      "article_url": "https://www.nature.com/articles/srep15001",
+      "case_id": "SEM-PROCESS-D",
+      "counts": {
+        "analytics_rows": 20,
+        "calculations": 0,
+        "canonical_outputs": 20,
+        "devices": 10,
+        "experiments": 10,
+        "materials": 11,
+        "noncanonical_or_review": 0,
+        "processes": 10,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 20,
+        "expected_outputs": 20,
+        "negative_route_correct": null
+      },
+      "doi": "10.1038/srep15001",
+      "gold_path": "benchmark/semiconductors_v1/gold_process_d.json",
+      "gold_sha256": "a405fba78b474c0641632e7d3567867b77fe5dca2a828bcfc51f8653175dcd2a",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-PROCESS-D.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_process_d.json",
+      "source_sha256": "30ca6625ad6f37992dad2534dbf35ca8173c701e6847720b4b8616cb8e0839aa",
+      "source_title": "Reference of Temperature and Time during tempering process for non-stoichiometric FTO films"
+    },
+    {
+      "article_url": "https://www.nature.com/articles/s41598-023-37081-5",
+      "case_id": "SEM-COMPUTE-E",
+      "counts": {
+        "analytics_rows": 12,
+        "calculations": 12,
+        "canonical_outputs": 12,
+        "devices": 0,
+        "experiments": 0,
+        "materials": 1,
+        "noncanonical_or_review": 0,
+        "processes": 0,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 12,
+        "expected_outputs": 12,
+        "negative_route_correct": null
+      },
+      "doi": "10.1038/s41598-023-37081-5",
+      "gold_path": "benchmark/semiconductors_v1/gold_compute_e.json",
+      "gold_sha256": "e047661c8749bea2dfff10ac1ee98b5737e5164131ee152df8741ccbaf2d64f0",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-COMPUTE-E.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_compute_e.json",
+      "source_sha256": "41c2c0dda2b43ba11a1a7125d60ec4ef12777d185689383064f6d382af7d91c2",
+      "source_title": "First-principles study on the electronic and optical properties of AlSb monolayer"
+    },
+    {
+      "article_url": "https://www.nature.com/articles/s41699-022-00352-2",
+      "case_id": "SEM-REVIEW-F",
+      "counts": {
+        "analytics_rows": 0,
+        "calculations": 0,
+        "canonical_outputs": 0,
+        "devices": 0,
+        "experiments": 0,
+        "materials": 0,
+        "noncanonical_or_review": 2,
+        "processes": 0,
+        "quarantine": 2
+      },
+      "deterministic_score": {
+        "exact_outputs": 0,
+        "expected_outputs": 0,
+        "negative_route_correct": null
+      },
+      "doi": "10.1038/s41699-022-00352-2",
+      "gold_path": "benchmark/semiconductors_v1/gold_review_f.json",
+      "gold_sha256": "1594ff6492adca66284a3f7cdf9022eb9794996063808998f37616be63dc287b",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-REVIEW-F.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_review_f.json",
+      "source_sha256": "f0b051b3e28cf1047b437e782ed881d1c2978162bace5ffab43e9b30362b7cd9",
+      "source_title": "2D materials-based nanoscale tunneling field effect transistors: current developments and future prospects"
+    },
+    {
+      "article_url": "https://www.mdpi.com/1996-1073/13/3/585",
+      "case_id": "SEM-NEG-G",
+      "counts": {
+        "analytics_rows": 0,
+        "calculations": 0,
+        "canonical_outputs": 0,
+        "devices": 0,
+        "experiments": 0,
+        "materials": 0,
+        "noncanonical_or_review": 0,
+        "processes": 0,
+        "quarantine": 0,
+        "routed_domain": "photovoltaics"
+      },
+      "deterministic_score": {
+        "exact_outputs": 0,
+        "expected_outputs": 0,
+        "negative_route_correct": true
+      },
+      "doi": "10.3390/en13030585",
+      "gold_path": "benchmark/semiconductors_v1/gold_neg_g.json",
+      "gold_sha256": "3aad0a8257ed0c440dba450fb89f26fff18a17c55ab2914fc91185510030da02",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-NEG-G.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_neg_g.json",
+      "source_sha256": "8127fa8d495afd2d3563e0193fa8a148993451fafe4152c346418dd09e89220d",
+      "source_title": "Effect of Surface Treatment by Chemical-Mechanical Polishing for Transparent Electrode of Perovskite Solar Cells"
+    },
+    {
+      "article_url": "https://www.nature.com/articles/ncomms8383",
+      "case_id": "SEM-MIXED-H",
+      "counts": {
+        "analytics_rows": 9,
+        "calculations": 1,
+        "canonical_outputs": 9,
+        "devices": 1,
+        "experiments": 2,
+        "materials": 2,
+        "noncanonical_or_review": 0,
+        "processes": 1,
+        "quarantine": 0
+      },
+      "deterministic_score": {
+        "exact_outputs": 9,
+        "expected_outputs": 9,
+        "negative_route_correct": null
+      },
+      "doi": "10.1038/ncomms8383",
+      "gold_path": "benchmark/semiconductors_v1/gold_mixed_h.json",
+      "gold_sha256": "ab9f82e84b65ecd9fa1b9aadf35757a53e6da786f0b8312049379fa0b2507fc4",
+      "locked_source_path": "benchmark/semiconductors_v1/corpus_pdfs/SEM-MIXED-H.pdf",
+      "source_gold_parity": true,
+      "source_lock_path": "benchmark/semiconductors_v1/source_lock_mixed_h.json",
+      "source_sha256": "b55f428cc72bb09436644be1181ea913ead5098ea9894acc5d1218e78e784e47",
+      "source_title": "Lead iodide perovskite light-emitting field-effect transistor"
+    }
+  ],
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence": 0,
+    "graph": 0,
+    "ownership": 0
+  },
+  "experiment_count": 49,
+  "freeze_statement": "Semiconductors V1 is scientifically closed for deterministic extraction, specimen/device identity, doping semantics, process lineage, transport, optical and electronic properties, computational separation, review containment, negative routing, evidence ownership, analytics safety, graph integrity, and archive/domain scoping. Raw provider extraction remains model-specific and is not automatically canonical.",
+  "freeze_status": "FROZEN_OFFLINE_AND_LIVE_GATE_SATISFIED",
+  "invariants": [
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "electronic band gap != optical band gap",
+      "number": 1,
+      "passed": true
+    },
+    {
+      "evidence": "C source tables remain distinct.",
+      "name": "band gap != PL peak",
+      "number": 2,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "work function != electron affinity",
+      "number": 3,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "work function != ionization energy",
+      "number": 4,
+      "passed": true
+    },
+    {
+      "evidence": "Measured carriers not converted to dopant density.",
+      "name": "carrier concentration != dopant concentration",
+      "number": 5,
+      "passed": true
+    },
+    {
+      "evidence": "Separate canonical properties.",
+      "name": "electron concentration != hole concentration",
+      "number": 6,
+      "passed": true
+    },
+    {
+      "evidence": "Separate units and property families.",
+      "name": "mobility != conductivity",
+      "number": 7,
+      "passed": true
+    },
+    {
+      "evidence": "A Hall results retain method.",
+      "name": "Hall mobility retains Hall identity",
+      "number": 8,
+      "passed": true
+    },
+    {
+      "evidence": "Normalizer does not relabel generic mobility.",
+      "name": "generic mobility != Hall mobility without support",
+      "number": 9,
+      "passed": true
+    },
+    {
+      "evidence": "Separate families.",
+      "name": "conductivity != resistivity",
+      "number": 10,
+      "passed": true
+    },
+    {
+      "evidence": "A retains Ω/sq and Ω·cm.",
+      "name": "sheet resistance != bulk resistivity",
+      "number": 11,
+      "passed": true
+    },
+    {
+      "evidence": "Separate families.",
+      "name": "contact resistance != sheet resistance",
+      "number": 12,
+      "passed": true
+    },
+    {
+      "evidence": "Operating bias is not a threshold result.",
+      "name": "threshold voltage != operating voltage",
+      "number": 13,
+      "passed": true
+    },
+    {
+      "evidence": "Voltage and field separate.",
+      "name": "breakdown voltage != breakdown field",
+      "number": 14,
+      "passed": true
+    },
+    {
+      "evidence": "Current cannot be density without area.",
+      "name": "current != current density",
+      "number": 15,
+      "passed": true
+    },
+    {
+      "evidence": "Film thickness is a process/device parameter.",
+      "name": "film thickness != depletion width",
+      "number": 16,
+      "passed": true
+    },
+    {
+      "evidence": "Separate layer entities.",
+      "name": "substrate != semiconductor film",
+      "number": 17,
+      "passed": true
+    },
+    {
+      "evidence": "A source does not report Hall temperature.",
+      "name": "growth temperature != measurement temperature",
+      "number": 18,
+      "passed": true
+    },
+    {
+      "evidence": "B process and measurement conditions separate.",
+      "name": "annealing temperature != measurement temperature",
+      "number": 19,
+      "passed": true
+    },
+    {
+      "evidence": "A-D experimental, E computational, H five experimental/four computational results.",
+      "name": "measured != computational",
+      "number": 20,
+      "passed": true
+    },
+    {
+      "evidence": "E Table 1 band gaps are calculation-only.",
+      "name": "calculated band gap != measured band gap",
+      "number": 21,
+      "passed": true
+    },
+    {
+      "evidence": "H DFT masses and FET mobility separate.",
+      "name": "calculated effective mass != measured mobility",
+      "number": 22,
+      "passed": true
+    },
+    {
+      "evidence": "Synthetic contract probe: calculated evidence cannot be admitted as measured work function.",
+      "name": "calculated work function != measured work function",
+      "number": 23,
+      "passed": true
+    },
+    {
+      "evidence": "Distinct energy keys; a computational defect quantity cannot be admitted as an experimental result.",
+      "name": "defect formation energy != activation energy",
+      "number": 24,
+      "passed": true
+    },
+    {
+      "evidence": "Ga/Al/F remain source-specific.",
+      "name": "dopant identity retained",
+      "number": 25,
+      "passed": true
+    },
+    {
+      "evidence": "Nominal atomic percentages kept as supplied.",
+      "name": "dopant concentration retained",
+      "number": 26,
+      "passed": true
+    },
+    {
+      "evidence": "A n-type and H electron/hole labels retained.",
+      "name": "carrier type retained",
+      "number": 27,
+      "passed": true
+    },
+    {
+      "evidence": "Every output has specimen label and calculation material.",
+      "name": "specimen identity retained",
+      "number": 28,
+      "passed": true
+    },
+    {
+      "evidence": "Both H experiments refer to the LE-FET.",
+      "name": "device identity retained",
+      "number": 29,
+      "passed": true
+    },
+    {
+      "evidence": "A remains unreported; H is source-reported 78 K.",
+      "name": "missing conditions not inferred",
+      "number": 30,
+      "passed": true
+    },
+    {
+      "evidence": "B/E only source-present cells admitted.",
+      "name": "missing values not interpolated",
+      "number": 31,
+      "passed": true
+    },
+    {
+      "evidence": "B dash cells and E missing GW cells excluded.",
+      "name": "unavailable table cells remain unavailable",
+      "number": 32,
+      "passed": true
+    },
+    {
+      "evidence": "Caption-only A value rejected.",
+      "name": "caption-only evidence cannot admit",
+      "number": 33,
+      "passed": true
+    },
+    {
+      "evidence": "N/A raw token rejected.",
+      "name": "N/A cannot become numeric",
+      "number": 34,
+      "passed": true
+    },
+    {
+      "evidence": "E/H publisher units retained; normalized mobility separate.",
+      "name": "raw units retained",
+      "number": 35,
+      "passed": true
+    },
+    {
+      "evidence": "Review citations quarantined.",
+      "name": "review values remain non-focal",
+      "number": 36,
+      "passed": true
+    },
+    {
+      "evidence": "PV source routes to PV with page-8 metrics.",
+      "name": "negative control produces zero Semiconductor contamination",
+      "number": 37,
+      "passed": true
+    },
+    {
+      "evidence": "Four raw hashes and separate normalized artifacts verified.",
+      "name": "normalized provider artifacts remain separate from raw",
+      "number": 38,
+      "passed": true
+    },
+    {
+      "evidence": "All rows retain specimen/property/modality; H experimental analytics retain process lineage.",
+      "name": "analytics retain material/specimen/process/property/modality identity",
+      "number": 39,
+      "passed": true
+    },
+    {
+      "evidence": "Seven SEM archives; negative source remains PV.",
+      "name": "archive/domain scoping correct",
+      "number": 40,
+      "passed": true
+    }
+  ],
+  "known_limitations": [
+    "Provider payloads lack PDF-verified page-verbatim evidence and are not canonical despite normalized schema validity.",
+    "SEM-TRANSPORT-B live payload covers 3/20 states and 9/46 values; missing states/cells were not inferred.",
+    "SEM-OPTICAL-C source prints an absorption-coefficient cm^-2 header; that ambiguous value was excluded.",
+    "SEM-PROCESS-D figure-only transport values were not digitized.",
+    "SEM-COMPUTE-E Table 1 omits GW0/GW values with SOC; those cells remain absent.",
+    "SEM-REVIEW-F cited values are noncanonical; SEM-NEG-G is a photovoltaic control, not a semiconductor archive.",
+    "SEM-MIXED-H uses source-reported scaled mobility and DFT effective masses, not an inferred band gap or threshold voltage.",
+    "Provider raw/normalized audit files are local ignored output artifacts; this manifest records paths and hashes, not the payload bodies."
+  ],
+  "live_gate_satisfied": true,
+  "passed_invariants": 40,
+  "provider_discovery_history": [
+    {
+      "artifact_path": "output/semiconductors_v1/provider_runs/model_discovery/20261001T050243277588Z.json",
+      "artifact_sha256": "63924fe65aca7ad8ffd981f39467406a4ce2b496b31ccfe8b7f29de7cf65c73e",
+      "discovered_at": "2026-10-01T05:02:43.279896+00:00",
+      "exact_models_run": [
+        "models/gemini-3.5-flash",
+        "models/gemini-3.5-flash-lite",
+        "models/gemini-3.8-flash"
+      ],
+      "method": "configured_account_models_list",
+      "provider": "gemini"
+    }
+  ],
+  "provider_runs": [
+    {
+      "case_id": "SEM-GOLD-A",
+      "deliberately_not_normalized": [
+        "generic mobility to Hall mobility",
+        "electron concentration to carrier concentration",
+        "missing measurement temperature",
+        "missing table cells",
+        "missing page-verbatim evidence",
+        "missing specimen or process states",
+        "unreported calculations"
+      ],
+      "exact_model": "models/gemini-3.5-flash",
+      "normalization_applied_rules": [
+        "field_alias_formula_to_formula",
+        "field_alias_property_key_to_property",
+        "field_alias_canonical_key_to_property",
+        "field_alias_snippet_to_text_snippet",
+        "preserve_explicit_object_associations",
+        "no_semantic_property_aliasing",
+        "no_page_or_verbatim_evidence_invention"
+      ],
+      "normalization_artifact_hashes": {
+        "normalization_audit_v1.json": "00cea0a64ab0b5114c43039e353dab43581d9638bbfb68387865c6937a353bec",
+        "normalized_admission_v1.json": "2d9c75093b7e81e68b2377ea8ef0f67653df7e4ac0782f916ed10d0e5a612ee7",
+        "normalized_candidate_v1.json": "8334aa8cc341c7209d830883739702e70538937f4ee035f78350d137069281a8",
+        "normalized_scientific_score_v1.json": "e5b93b06f3c46ce75f3c50c7d84afd4b74f797c6f13e0a7f110e43a88398eaec",
+        "normalized_validation_v1.json": "e6f9179765bbcf6a5a11a6984ef85ddb016d957d8518983ff39929ff30cb6c60"
+      },
+      "normalization_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01/normalization_audit_v1.json",
+      "normalization_version": "semiconductor_provider_normalizer_v1",
+      "normalized_canonical_admission": false,
+      "normalized_quarantine_count": 7,
+      "normalized_schema_valid": true,
+      "normalized_scientific_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "primary_attempts": 1,
+      "provider": "gemini",
+      "provider_status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "raw_payload_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01/attempt-1/raw_response.txt",
+      "raw_schema_error_count": 13,
+      "raw_schema_failure_categories": {
+        "condition_representation": 0,
+        "evidence_representation": 0,
+        "measurement_grouping": 8,
+        "nesting": 11,
+        "ownership_placement": 0,
+        "process_association": 4,
+        "property_key_naming": 0,
+        "repair_specific_failure": 0,
+        "repeated_object_structure": 1,
+        "required_field_omission": 3,
+        "sample_association": 3,
+        "scientific_subtype_loss": 0,
+        "type_mismatch": 0
+      },
+      "raw_schema_valid": false,
+      "raw_scientific_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 20,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_sha256": "202c66482e20749edca94dd67d6e73f1520341c44ca44f375132e7f83812fac5",
+      "repair_replay": null,
+      "run_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.5-flash/20261001T051126601937Z-41945fe1ca01",
+      "run_id": "20261001T051126601937Z-41945fe1ca01",
+      "scientific_semantic_drifts": []
+    },
+    {
+      "case_id": "SEM-GOLD-A",
+      "deliberately_not_normalized": [
+        "generic mobility to Hall mobility",
+        "electron concentration to carrier concentration",
+        "missing measurement temperature",
+        "missing table cells",
+        "missing page-verbatim evidence",
+        "missing specimen or process states",
+        "unreported calculations"
+      ],
+      "exact_model": "models/gemini-3.8-flash",
+      "normalization_applied_rules": [
+        "field_alias_formula_to_formula",
+        "field_alias_property_key_to_property",
+        "field_alias_canonical_key_to_property",
+        "field_alias_snippet_to_text_snippet",
+        "preserve_explicit_object_associations",
+        "no_semantic_property_aliasing",
+        "no_page_or_verbatim_evidence_invention"
+      ],
+      "normalization_artifact_hashes": {
+        "normalization_audit_v1.json": "ada9d44230e480746bc717e01f54c8e5e51eca13e65cd953ccca1340929fb4eb",
+        "normalized_admission_v1.json": "71740871ef3c533814686fd146267346d7e1e6b7cb7a96a3fabb0cda347b52b7",
+        "normalized_candidate_v1.json": "d4b3fd547ca73b882705b40b8d2f3a92e45a65b62be8ecb6a4c611526ca3cac6",
+        "normalized_scientific_score_v1.json": "70827537686be574304a59e1038624de448b58755b9592f7232b46ae35da458a",
+        "normalized_validation_v1.json": "e6f9179765bbcf6a5a11a6984ef85ddb016d957d8518983ff39929ff30cb6c60"
+      },
+      "normalization_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f/normalization_audit_v1.json",
+      "normalization_version": "semiconductor_provider_normalizer_v1",
+      "normalized_canonical_admission": false,
+      "normalized_quarantine_count": 12,
+      "normalized_schema_valid": true,
+      "normalized_scientific_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20
+      },
+      "primary_attempts": 3,
+      "provider": "gemini",
+      "provider_status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "raw_payload_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f/attempt-3/raw_response.txt",
+      "raw_schema_error_count": 37,
+      "raw_schema_failure_categories": {
+        "condition_representation": 0,
+        "evidence_representation": 0,
+        "measurement_grouping": 12,
+        "nesting": 30,
+        "ownership_placement": 0,
+        "process_association": 12,
+        "property_key_naming": 0,
+        "repair_specific_failure": 0,
+        "repeated_object_structure": 1,
+        "required_field_omission": 8,
+        "sample_association": 12,
+        "scientific_subtype_loss": 0,
+        "type_mismatch": 0
+      },
+      "raw_schema_valid": false,
+      "raw_scientific_score": {
+        "direct_focal_ownership_points": 0,
+        "exact_property_key_points": 16,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 20
+      },
+      "raw_sha256": "707bc6e71021b58a8d297358828fd3a5010443f2dab81fe6e9d8c4890c506551",
+      "repair_replay": null,
+      "run_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-3.8-flash/20261001T051511898073Z-1449fc1a881f",
+      "run_id": "20261001T051511898073Z-1449fc1a881f",
+      "scientific_semantic_drifts": [
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "ZnO"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.99Ga0.01O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.95Ga0.05O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.92Ga0.08O"
+        }
+      ]
+    },
+    {
+      "case_id": "SEM-GOLD-A",
+      "deliberately_not_normalized": [
+        "generic mobility to Hall mobility",
+        "electron concentration to carrier concentration",
+        "missing measurement temperature",
+        "missing table cells",
+        "missing page-verbatim evidence",
+        "missing specimen or process states",
+        "unreported calculations"
+      ],
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "normalization_applied_rules": [
+        "field_alias_formula_to_formula",
+        "field_alias_property_key_to_property",
+        "field_alias_canonical_key_to_property",
+        "field_alias_snippet_to_text_snippet",
+        "preserve_explicit_object_associations",
+        "no_semantic_property_aliasing",
+        "no_page_or_verbatim_evidence_invention"
+      ],
+      "normalization_artifact_hashes": {
+        "normalization_audit_v1.json": "1362e7bbff1805749c23b1a13abbf6f4492c76dd92a7324be349c66011887729",
+        "normalized_admission_v1.json": "71740871ef3c533814686fd146267346d7e1e6b7cb7a96a3fabb0cda347b52b7",
+        "normalized_candidate_v1.json": "65c3bdc1b4ef9804a15ec0ee28ad327dfbc03820647192d13401ebdda3cb6c16",
+        "normalized_scientific_score_v1.json": "83e6073c09445cf5c951a1fbef6f1787e62e99966d090cb3f7581d6ab350f7c1",
+        "normalized_validation_v1.json": "e6f9179765bbcf6a5a11a6984ef85ddb016d957d8518983ff39929ff30cb6c60"
+      },
+      "normalization_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb/normalization_audit_v1.json",
+      "normalization_version": "semiconductor_provider_normalizer_v1",
+      "normalized_canonical_admission": false,
+      "normalized_quarantine_count": 12,
+      "normalized_schema_valid": true,
+      "normalized_scientific_score": {
+        "direct_focal_ownership_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "primary_attempts": 1,
+      "provider": "gemini",
+      "provider_status": "LIVE_PAYLOAD_SCHEMA_INVALID_REPAIR_FAILED",
+      "raw_payload_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb/attempt-1/raw_response.txt",
+      "raw_schema_error_count": 28,
+      "raw_schema_failure_categories": {
+        "condition_representation": 0,
+        "evidence_representation": 0,
+        "measurement_grouping": 12,
+        "nesting": 18,
+        "ownership_placement": 0,
+        "process_association": 11,
+        "property_key_naming": 7,
+        "repair_specific_failure": 0,
+        "repeated_object_structure": 1,
+        "required_field_omission": 11,
+        "sample_association": 4,
+        "scientific_subtype_loss": 0,
+        "type_mismatch": 0
+      },
+      "raw_schema_valid": false,
+      "raw_scientific_score": {
+        "direct_focal_ownership_points": 20,
+        "exact_property_key_points": 12,
+        "exact_sample_count": 4,
+        "exact_value_and_unit_points": 20,
+        "expected_points": 20,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 0
+      },
+      "raw_sha256": "6b493774be93a8a488f8e925593c50ee08de34f13f44199170f1a02fdf762307",
+      "repair_replay": null,
+      "run_artifact_path": "output/semiconductors_v1/provider_runs/SEM-GOLD-A/gemini/models_gemini-e561dfc327/20261001T050626828093Z-b0b13e7cb2fb",
+      "run_id": "20261001T050626828093Z-b0b13e7cb2fb",
+      "scientific_semantic_drifts": [
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "carrier_concentration",
+          "observed_property_key": "electron_concentration",
+          "sample": "ZnO"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "ZnO"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "carrier_concentration",
+          "observed_property_key": "electron_concentration",
+          "sample": "Zn0.99Ga0.01O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.99Ga0.01O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "carrier_concentration",
+          "observed_property_key": "electron_concentration",
+          "sample": "Zn0.95Ga0.05O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.95Ga0.05O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "carrier_concentration",
+          "observed_property_key": "electron_concentration",
+          "sample": "Zn0.92Ga0.08O"
+        },
+        {
+          "classification": "scientific_subtype_loss",
+          "expected_property_key": "hall_mobility",
+          "observed_property_key": "carrier_mobility",
+          "sample": "Zn0.92Ga0.08O"
+        }
+      ]
+    },
+    {
+      "case_id": "SEM-TRANSPORT-B",
+      "deliberately_not_normalized": [
+        "generic mobility to Hall mobility",
+        "electron concentration to carrier concentration",
+        "missing measurement temperature",
+        "missing table cells",
+        "missing page-verbatim evidence",
+        "missing specimen or process states",
+        "unreported calculations"
+      ],
+      "exact_model": "models/gemini-3.5-flash-lite",
+      "normalization_applied_rules": [
+        "field_alias_formula_to_formula",
+        "field_alias_property_key_to_property",
+        "field_alias_canonical_key_to_property",
+        "field_alias_snippet_to_text_snippet",
+        "preserve_explicit_object_associations",
+        "no_semantic_property_aliasing",
+        "no_page_or_verbatim_evidence_invention"
+      ],
+      "normalization_artifact_hashes": {
+        "normalization_audit_v1.json": "80907f091efb31992608aebd9912710b44ff70b13810726018f7b7a7e7d7f7c9",
+        "normalized_admission_v1.json": "71740871ef3c533814686fd146267346d7e1e6b7cb7a96a3fabb0cda347b52b7",
+        "normalized_candidate_v1.json": "bb2f8fdcf79c4148ca72c98fb3e9c7faa3f8e6bd23722e41c5eedb1cc8ccb203",
+        "normalized_scientific_score_v1.json": "5a421eaebbdbeb6068b14785bbaade8a9574249302a0008311ad33c1e7d2de7f",
+        "normalized_validation_v1.json": "e6f9179765bbcf6a5a11a6984ef85ddb016d957d8518983ff39929ff30cb6c60"
+      },
+      "normalization_artifact_path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e/normalization_audit_v1.json",
+      "normalization_version": "semiconductor_provider_normalizer_v1",
+      "normalized_canonical_admission": false,
+      "normalized_quarantine_count": 12,
+      "normalized_schema_valid": true,
+      "normalized_scientific_score": {
+        "direct_focal_ownership_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "exact_value_and_unit_points": 9,
+        "expected_points": 46,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9
+      },
+      "primary_attempts": 1,
+      "provider": "gemini",
+      "provider_status": "LIVE_PAYLOAD_REPAIR_UNAVAILABLE",
+      "raw_payload_path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e/attempt-1/raw_response.txt",
+      "raw_schema_error_count": 26,
+      "raw_schema_failure_categories": {
+        "condition_representation": 0,
+        "evidence_representation": 0,
+        "measurement_grouping": 3,
+        "nesting": 16,
+        "ownership_placement": 0,
+        "process_association": 15,
+        "property_key_naming": 10,
+        "repair_specific_failure": 0,
+        "repeated_object_structure": 1,
+        "required_field_omission": 11,
+        "sample_association": 6,
+        "scientific_subtype_loss": 0,
+        "type_mismatch": 0
+      },
+      "raw_schema_valid": false,
+      "raw_scientific_score": {
+        "direct_focal_ownership_points": 9,
+        "exact_property_key_points": 9,
+        "exact_sample_count": 3,
+        "exact_value_and_unit_points": 9,
+        "expected_points": 46,
+        "page_locator_points": 0,
+        "verbatim_snippet_points": 9
+      },
+      "raw_sha256": "80c63d5810e39c7e5ffda9a2c57d381796054ffc56398eb44b258d081d403e91",
+      "repair_replay": {
+        "artifact_path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e/repair_replay.json",
+        "artifact_sha256": "db993cfba8dd36f975961a1b0067edafe20967348aa9101dbbee34c1ae88f042",
+        "error_locations": [
+          [
+            "source",
+            "journal"
+          ],
+          [
+            "source",
+            "volume"
+          ],
+          [
+            "source",
+            "issue"
+          ],
+          [
+            "source",
+            "pages"
+          ],
+          [
+            "source",
+            "publisher"
+          ],
+          [
+            "source",
+            "evidence"
+          ],
+          [
+            "domain_values"
+          ]
+        ],
+        "schema_valid": false
+      },
+      "run_artifact_path": "output/semiconductors_v1/provider_runs/SEM-TRANSPORT-B/gemini/models_gemini-e561dfc327/20261001T050918805540Z-0af338d58f7e",
+      "run_id": "20261001T050918805540Z-0af338d58f7e",
+      "scientific_semantic_drifts": []
+    }
+  ],
+  "regression": {
+    "baseline_passed": 657,
+    "failures": 0,
+    "freeze_passed": 669,
+    "suite": "tests_v3",
+    "warnings": [
+      "unchanged google-genai typing DeprecationWarning"
+    ]
+  },
+  "reproduction_commands": [
+    ".\\.venv\\Scripts\\python.exe -m benchmark.semiconductors_v1.interim_audit",
+    ".\\.venv\\Scripts\\python.exe -m benchmark.semiconductors_v1.closure_audit --write",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests_v3 -q --basetemp=.pytest_tmp_semiconductor_closure",
+    "git diff --check"
+  ],
+  "schema": "synthex.semiconductors.freeze_manifest.v1",
+  "version": "Semiconductors V1"
+}

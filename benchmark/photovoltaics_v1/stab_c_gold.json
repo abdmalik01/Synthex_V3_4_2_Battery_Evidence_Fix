@@ -1,0 +1,19 @@
+{
+  "case_id": "PV-STAB-C",
+  "source": {
+    "title": "Thermal Stability of Encapsulated Carbon-Based Multiporous-Layered-Electrode Perovskite Solar Cells Extended to Over 5000 h at 85 °C",
+    "doi": "10.3390/ma17123002",
+    "url": "https://www.mdpi.com/1996-1944/17/12/3002",
+    "year": 2024,
+    "authors": ["Ryuki Tsuji", "Yuuma Nagano", "Kota Oishi", "Eiji Kobayashi", "Seigo Ito"]
+  },
+  "protocol": {"aging_protocol": "ISOS-D-2", "temperature": 85.0, "temperature_unit": "C", "atmosphere": "ambient air", "devices_per_variant": 5},
+  "variants": [
+    {"variant": "ma_unencapsulated", "absorber": "(5-AVA)0.05(MA)0.95PbI3", "encapsulation": "none", "t80": 16.0, "qualifier": "exact"},
+    {"variant": "ma_over_sealing", "absorber": "(5-AVA)0.05(MA)0.95PbI3", "encapsulation": "over-sealing", "t80": 5000.0, "qualifier": "lower_bound", "retained_efficiency": 91.2, "aging_time_h": 5072.0},
+    {"variant": "ma_side_sealing", "absorber": "(5-AVA)0.05(MA)0.95PbI3", "encapsulation": "side-sealing", "t80": 3580.0, "qualifier": "exact"},
+    {"variant": "facs_unencapsulated", "absorber": "FA0.9Cs0.1PbI3", "encapsulation": "none", "t80": 125.0, "qualifier": "exact"},
+    {"variant": "facs_over_sealing", "absorber": "FA0.9Cs0.1PbI3", "encapsulation": "over-sealing", "t80": 11.0, "qualifier": "exact"},
+    {"variant": "facs_side_sealing", "absorber": "FA0.9Cs0.1PbI3", "encapsulation": "side-sealing", "t80": 35.0, "qualifier": "exact"}
+  ]
+}

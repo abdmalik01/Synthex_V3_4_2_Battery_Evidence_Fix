@@ -1,0 +1,49 @@
+{
+  "case_id": "MEM-COMPUTE-E",
+  "source": {
+    "title": "Impact of Lipid Composition on Membrane Partitioning and Permeability of Gas Molecules",
+    "doi": "10.3390/membranes16010033",
+    "url": "https://www.mdpi.com/2077-0375/16/1/33",
+    "year": 2026,
+    "authors": ["Paween Mahinthichaichan", "Ahmad Raeisi Najafi", "Fraser J. Moss", "Ardeschir Vahedi-Faridi", "Walter F. Boron", "Emad Tajkhorshid"]
+  },
+  "method": {
+    "calculation_type": "molecular_dynamics_membrane_gas_transport",
+    "software": "NAMD2",
+    "force_field": "CHARMM36",
+    "ensemble": "NPT",
+    "temperature": 310.0,
+    "temperature_unit": "K",
+    "pressure": 1.0,
+    "pressure_unit": "atm",
+    "boundary_conditions": "periodic",
+    "time_step_fs": 2.0,
+    "electrostatics": "particle mesh Ewald with 1/Å3 grid density",
+    "thermostat": "Langevin dynamics with 1/ps damping coefficient",
+    "barostat": "modified Nose-Hoover Langevin piston with 200 fs period",
+    "hydrogen_bond_constraint": "SHAKE",
+    "van_der_waals_cutoff_A": 12.0,
+    "gas_copies": 125
+  },
+  "rows": [
+    {"family": "POPC:PSM:CHL", "species": "O2", "composition": "100:0:0", "duration_ns": 175, "bulk_concentration_mM": 54, "area_A2": 9486, "thickness_A": 44, "permeability": 12.0, "permeability_uncertainty": 0.4, "diffusion": 2.5, "diffusion_uncertainty": 0.1},
+    {"family": "POPC:PSM:CHL", "species": "O2", "composition": "50:0:50", "duration_ns": 250, "bulk_concentration_mM": 86, "area_A2": 8022, "thickness_A": 46, "permeability": 15.9, "permeability_uncertainty": 1.8, "diffusion": 3.4, "diffusion_uncertainty": 0.4},
+    {"family": "POPC:PSM:CHL", "species": "O2", "composition": "35:0:65", "duration_ns": 250, "bulk_concentration_mM": 77, "area_A2": 8967, "thickness_A": 44, "permeability": 10.9, "permeability_uncertainty": 1.0, "diffusion": 2.8, "diffusion_uncertainty": 0.3},
+    {"family": "POPC:PSM:CHL", "species": "O2", "composition": "0:100:0", "duration_ns": 400, "bulk_concentration_mM": 76, "area_A2": 9245, "thickness_A": 48, "permeability": 0.8, "permeability_uncertainty": 0.1, "diffusion": 0.4, "diffusion_uncertainty": 0.0},
+    {"family": "POPC:PSM:CHL", "species": "O2", "composition": "0:50:50", "duration_ns": 400, "bulk_concentration_mM": 115, "area_A2": 8346, "thickness_A": 50, "permeability": 2.1, "permeability_uncertainty": 0.4, "diffusion": 1.6, "diffusion_uncertainty": 0.3},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "100:0:0", "duration_ns": 175, "bulk_concentration_mM": 125, "area_A2": 9545, "thickness_A": 44, "permeability": 16.6, "permeability_uncertainty": 0.8, "diffusion": 3.5, "diffusion_uncertainty": 0.2},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "50:0:50", "duration_ns": 250, "bulk_concentration_mM": 182, "area_A2": 8017, "thickness_A": 46, "permeability": 9.8, "permeability_uncertainty": 0.3, "diffusion": 3.4, "diffusion_uncertainty": 0.1},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "35:0:65", "duration_ns": 250, "bulk_concentration_mM": 173, "area_A2": 8958, "thickness_A": 44, "permeability": 6.3, "permeability_uncertainty": 0.6, "diffusion": 3.5, "diffusion_uncertainty": 0.3},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "0:100:0", "duration_ns": 400, "bulk_concentration_mM": 165, "area_A2": 9154, "thickness_A": 48, "permeability": 1.0, "permeability_uncertainty": 0.1, "diffusion": 0.5, "diffusion_uncertainty": 0.0},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "0:50:50", "duration_ns": 400, "bulk_concentration_mM": 223, "area_A2": 8342, "thickness_A": 50, "permeability": 1.1, "permeability_uncertainty": 0.2, "diffusion": 1.7, "diffusion_uncertainty": 0.3},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "50:50:0", "duration_ns": 250, "bulk_concentration_mM": 117, "area_A2": 9473, "thickness_A": 46, "permeability": 8.4, "permeability_uncertainty": 0.1, "diffusion": 2.2, "diffusion_uncertainty": 0.0},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "33:33:33", "duration_ns": 250, "bulk_concentration_mM": 178, "area_A2": 8162, "thickness_A": 50, "permeability": 6.5, "permeability_uncertainty": 1.8, "diffusion": 2.8, "diffusion_uncertainty": 0.8},
+    {"family": "POPC:PSM:CHL", "species": "CO2", "composition": "25:25:50", "duration_ns": 250, "bulk_concentration_mM": 185, "area_A2": 8206, "thickness_A": 50, "permeability": 4.3, "permeability_uncertainty": 0.3, "diffusion": 2.7, "diffusion_uncertainty": 0.4},
+    {"family": "POPC:DPPC:CHL", "species": "CO2", "composition": "50:50:0", "duration_ns": 250, "bulk_concentration_mM": 122, "area_A2": 9572, "thickness_A": 44, "permeability": 14.3, "permeability_uncertainty": 0.1, "diffusion": 3.0, "diffusion_uncertainty": 0.0},
+    {"family": "POPC:DPPC:CHL", "species": "CO2", "composition": "33:33:33", "duration_ns": 250, "bulk_concentration_mM": 198, "area_A2": 7891, "thickness_A": 48, "permeability": 7.1, "permeability_uncertainty": 1.1, "diffusion": 3.3, "diffusion_uncertainty": 0.1},
+    {"family": "POPC:DPPC:CHL", "species": "CO2", "composition": "0:50:50", "duration_ns": 400, "bulk_concentration_mM": 241, "area_A2": 7828, "thickness_A": 50, "permeability": 3.1, "permeability_uncertainty": 0.1, "diffusion": 2.7, "diffusion_uncertainty": 0.4}
+  ],
+  "expected_materials": 16,
+  "expected_calculations": 16,
+  "expected_outputs": 32
+}

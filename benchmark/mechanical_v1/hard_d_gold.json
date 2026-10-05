@@ -1,0 +1,53 @@
+{
+  "case_id": "MECH-HARD-D",
+  "status": "locked_reviewed",
+  "gold_version": "1.0.0",
+  "source": {
+    "filename": "metals-11-01014.pdf",
+    "sha256": "a6b8238d176150f22b1daf25bf347202ad87d795074835b46db29d287074783a",
+    "title": "Determination of Critical Transformation Temperatures for the Optimisation of Spring Steel Heat Treatment Processes",
+    "authors": ["Velaphi Jeffrey Matjeke", "Josias Willem van der Merwe", "Nontuthuzelo Lindokuhle Vithi"],
+    "journal": "Metals",
+    "year": 2021,
+    "volume": 11,
+    "issue": 7,
+    "article": 1014,
+    "doi": "10.3390/met11071014",
+    "url": "https://res.mdpi.com/d_attachment/metals/metals-11-01014/article_deploy/metals-11-01014.pdf",
+    "page_count": 14
+  },
+  "gold_basis": {
+    "table": "Table 4",
+    "page": 12,
+    "method_page": 3,
+    "reviewed_from": "locked publisher PDF before any Hardness provider call",
+    "property": "vickers_hardness",
+    "hardness_scale": "Vickers",
+    "unit": "HV",
+    "test_load_kgf": 0.5,
+    "number_of_indents": 5,
+    "dwell_time": "not_reported",
+    "uncertainty_policy": "Preserve each printed mean and plus-minus uncertainty; do not convert hardness scales."
+  },
+  "assertion_count": 18,
+  "rows": [
+    {"table_row": 1, "cooling_rate_c_per_s": "100", "sample": "55Cr3", "raw_value": "810 ± 36", "value": 810, "uncertainty": 36},
+    {"table_row": 1, "cooling_rate_c_per_s": "100", "sample": "54SiCr6", "raw_value": "802 ± 16", "value": 802, "uncertainty": 16},
+    {"table_row": 1, "cooling_rate_c_per_s": "100", "sample": "52CrMoV4", "raw_value": "770 ± 11", "value": 770, "uncertainty": 11},
+    {"table_row": 2, "cooling_rate_c_per_s": "30", "sample": "55Cr3", "raw_value": "827 ± 7", "value": 827, "uncertainty": 7},
+    {"table_row": 2, "cooling_rate_c_per_s": "30", "sample": "54SiCr6", "raw_value": "791 ± 9", "value": 791, "uncertainty": 9},
+    {"table_row": 2, "cooling_rate_c_per_s": "30", "sample": "52CrMoV4", "raw_value": "770 ± 13", "value": 770, "uncertainty": 13},
+    {"table_row": 3, "cooling_rate_c_per_s": "20", "sample": "55Cr3", "raw_value": "821 ± 10", "value": 821, "uncertainty": 10},
+    {"table_row": 3, "cooling_rate_c_per_s": "20", "sample": "54SiCr6", "raw_value": "791 ± 17", "value": 791, "uncertainty": 17},
+    {"table_row": 3, "cooling_rate_c_per_s": "20", "sample": "52CrMoV4", "raw_value": "761 ± 41", "value": 761, "uncertainty": 41},
+    {"table_row": 4, "cooling_rate_c_per_s": "10", "sample": "55Cr3", "raw_value": "820 ± 6", "value": 820, "uncertainty": 6},
+    {"table_row": 4, "cooling_rate_c_per_s": "10", "sample": "54SiCr6", "raw_value": "762 ± 17", "value": 762, "uncertainty": 17},
+    {"table_row": 4, "cooling_rate_c_per_s": "10", "sample": "52CrMoV4", "raw_value": "739 ± 36", "value": 739, "uncertainty": 36},
+    {"table_row": 5, "cooling_rate_c_per_s": "1", "sample": "55Cr3", "raw_value": "547 ± 126", "value": 547, "uncertainty": 126},
+    {"table_row": 5, "cooling_rate_c_per_s": "1", "sample": "54SiCr6", "raw_value": "336 ± 11", "value": 336, "uncertainty": 11},
+    {"table_row": 5, "cooling_rate_c_per_s": "1", "sample": "52CrMoV4", "raw_value": "629 ± 137", "value": 629, "uncertainty": 137},
+    {"table_row": 6, "cooling_rate_c_per_s": "0.1", "sample": "55Cr3", "raw_value": "299 ± 6", "value": 299, "uncertainty": 6},
+    {"table_row": 6, "cooling_rate_c_per_s": "0.1", "sample": "54SiCr6", "raw_value": "285 ± 11", "value": 285, "uncertainty": 11},
+    {"table_row": 6, "cooling_rate_c_per_s": "0.1", "sample": "52CrMoV4", "raw_value": "296 ± 17", "value": 296, "uncertainty": 17}
+  ]
+}

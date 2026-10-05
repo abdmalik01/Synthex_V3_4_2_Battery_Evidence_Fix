@@ -1,0 +1,23 @@
+{
+  "case_id": "BIO-PROCESS-D",
+  "doi": "10.1038/s41598-024-67478-9",
+  "source_pdf": "corpus_pdfs/BIO-PROCESS-D.pdf",
+  "source_pages": [3, 4, 5, 10, 11],
+  "material": "PLA with nominal Mn loading",
+  "process": "filament extrusion followed by fused deposition modeling",
+  "specimen": "12 mm cube scaffold; designed porosity 47%; pore and strut size 0.8 mm",
+  "printing_parameters": {"printing_speed_mm_s": 30, "nozzle_temperature_C": 210, "bed_temperature_C": 60, "nozzle_diameter_mm": 0.4, "layer_height_mm": 0.2, "infill_density_percent": 100},
+  "filament_dsc_table2": [
+    {"label": "PLA-Pure", "mn_wt_percent": 0, "Tcc_C": 123.4, "enthalpy_J_g": 35.77, "crystallinity_percent": 38.17},
+    {"label": "PLA-1Mn", "mn_wt_percent": 1, "Tcc_C": 122.5, "enthalpy_J_g": 36.13, "crystallinity_percent": 38.95},
+    {"label": "PLA-3Mn", "mn_wt_percent": 3, "Tcc_C": 120.5, "enthalpy_J_g": 37.97, "crystallinity_percent": 41.78},
+    {"label": "PLA-5Mn", "mn_wt_percent": 5, "Tcc_C": 117.6, "enthalpy_J_g": 38.86, "crystallinity_percent": 43.65},
+    {"label": "PLA-7Mn", "mn_wt_percent": 7, "Tcc_C": 117.2, "enthalpy_J_g": 38.98, "crystallinity_percent": 44.73}
+  ],
+  "scaffold_results": [
+    {"label": "PLA-Pure", "deposited_layer_width_um": 837, "compressive_modulus_MPa": 457, "ultimate_compressive_strength_MPa": 15.67},
+    {"label": "PLA-7Mn", "deposited_layer_width_um": 912, "compressive_modulus_MPa": 611, "ultimate_compressive_strength_MPa": 33.13}
+  ],
+  "gold_output_count": 21,
+  "excluded": ["figure-only intermediate Mn mechanical values", "figure-only cell-viability percentages", "cited-comparison Table 3", "contact angle absent from focal numeric source passage"]
+}

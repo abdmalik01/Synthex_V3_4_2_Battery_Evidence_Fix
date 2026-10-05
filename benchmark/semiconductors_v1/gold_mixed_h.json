@@ -1,0 +1,19 @@
+{
+  "case_id": "SEM-MIXED-H",
+  "source_modality": "experimental_and_computational",
+  "specimen": "CH3NH3PbI3 film on p++ Si/SiO2",
+  "device": "bottom-gate bottom-contact light-emitting FET",
+  "experimental_outputs": [
+    {"property": "electron_mobility", "raw_value": "6.7", "unit": "×10^-2 cm^2/V/s", "value": 6.7, "temperature_k": 78, "page": 4},
+    {"property": "hole_mobility", "raw_value": "6.6", "unit": "×10^-3 cm^2/V/s", "value": 6.6, "temperature_k": 78, "page": 4},
+    {"property": "emission_wavelength", "raw_value": "750", "unit": "nm", "value": 750, "temperature_k": 78, "peak": 1, "page": 5},
+    {"property": "emission_wavelength", "raw_value": "780", "unit": "nm", "value": 780, "temperature_k": 78, "peak": 2, "page": 5},
+    {"property": "emission_wavelength", "raw_value": "800", "unit": "nm", "value": 800, "temperature_k": 78, "peak": 3, "page": 5}
+  ],
+  "computational_outputs": [
+    {"property": "calculated_effective_mass", "raw_value": "0.197", "unit": "m0", "value": 0.197, "carrier": "electron", "phase": "tetragonal", "page": 4},
+    {"property": "calculated_effective_mass", "raw_value": "0.239", "unit": "m0", "value": 0.239, "carrier": "electron", "phase": "orthorhombic", "page": 4},
+    {"property": "calculated_effective_mass", "raw_value": "0.340", "unit": "m0", "value": 0.340, "carrier": "hole", "phase": "tetragonal", "page": 4},
+    {"property": "calculated_effective_mass", "raw_value": "0.357", "unit": "m0", "value": 0.357, "carrier": "hole", "phase": "orthorhombic", "page": 4}
+  ]
+}

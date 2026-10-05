@@ -1,0 +1,10 @@
+{
+  "case_id": "AM-COMPUTE-F",
+  "source_file": "corpus_pdfs/metals-12-01853.pdf",
+  "source_sha256": "3a5df44beec34fcd180d3df13ed23d56862621a3ef603c0145ec1613f657d22a",
+  "gold_file": "compute_f_gold.json",
+  "gold_sha256": "18247ca6ee439ce9c2218f7243b2fc385ceda878b056c115b6439abc77a4397c",
+  "official_url": "https://www.mdpi.com/2075-4701/12/11/1853",
+  "locked_before_provider_call": true,
+  "provider_calls_at_lock": 0
+}

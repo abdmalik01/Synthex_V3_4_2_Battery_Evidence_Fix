@@ -1,0 +1,494 @@
+{
+  "canonical_output_total": 215,
+  "cases": {
+    "MEM-COMPUTE-E": {
+      "analytics_rows": 32,
+      "calculations": 16,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 16,
+      "outputs": 32,
+      "processes": 0,
+      "quarantine": 0
+    },
+    "MEM-GOLD-A": {
+      "analytics_rows": 12,
+      "calculations": 0,
+      "devices": 4,
+      "experiments": 4,
+      "materials": 4,
+      "outputs": 12,
+      "processes": 4,
+      "quarantine": 0
+    },
+    "MEM-MIXED-H": {
+      "analytics_rows": 18,
+      "calculations": 0,
+      "devices": 5,
+      "experiments": 9,
+      "materials": 3,
+      "outputs": 18,
+      "processes": 5,
+      "quarantine": 0
+    },
+    "MEM-NEG-G": {
+      "analytics_rows": 0,
+      "calculations": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "outputs": 0,
+      "processes": 0,
+      "quarantine": 0
+    },
+    "MEM-PROCESS-D": {
+      "analytics_rows": 30,
+      "calculations": 0,
+      "devices": 2,
+      "experiments": 2,
+      "materials": 5,
+      "outputs": 30,
+      "processes": 2,
+      "quarantine": 0
+    },
+    "MEM-REVIEW-F": {
+      "analytics_rows": 0,
+      "calculations": 0,
+      "devices": 0,
+      "experiments": 0,
+      "materials": 0,
+      "outputs": 0,
+      "processes": 0,
+      "quarantine": 3
+    },
+    "MEM-SEP-B": {
+      "analytics_rows": 98,
+      "calculations": 0,
+      "devices": 7,
+      "experiments": 14,
+      "materials": 7,
+      "outputs": 98,
+      "processes": 7,
+      "quarantine": 0
+    },
+    "MEM-STAB-C": {
+      "analytics_rows": 25,
+      "calculations": 0,
+      "devices": 5,
+      "experiments": 5,
+      "materials": 5,
+      "outputs": 25,
+      "processes": 5,
+      "quarantine": 0
+    }
+  },
+  "computational_outputs": 32,
+  "contamination": {
+    "analytics": 0,
+    "cross_record_leakage": 0,
+    "evidence": 0,
+    "graph": 0,
+    "ownership": 0
+  },
+  "experimental_outputs": 183,
+  "interim_audit_still_passes": true,
+  "invariants": [
+    {
+      "evidence": "Barrer permeability and source-scaled permeance retain distinct properties.",
+      "name": "permeability != permeance",
+      "number": 1,
+      "passed": true
+    },
+    {
+      "evidence": "Gas permeance is not represented by a flux property.",
+      "name": "permeance != flux",
+      "number": 2,
+      "passed": true
+    },
+    {
+      "evidence": "Selectivity keys remain distinct from rejection.",
+      "name": "selectivity != rejection",
+      "number": 3,
+      "passed": true
+    },
+    {
+      "evidence": "Test-mode semantics distinguish ideal and mixed-gas selectivity.",
+      "name": "ideal selectivity != mixed-gas selectivity",
+      "number": 4,
+      "passed": true
+    },
+    {
+      "evidence": "No source value was relabeled as pervaporation separation factor.",
+      "name": "separation factor retains source semantics",
+      "number": 5,
+      "passed": true
+    },
+    {
+      "evidence": "No Barrer/GPU conflation occurred.",
+      "name": "Barrer != GPU",
+      "number": 6,
+      "passed": true
+    },
+    {
+      "evidence": "Permeance rows preserve the publisher's scaled raw unit.",
+      "name": "permeability cannot convert to permeance without thickness",
+      "number": 7,
+      "passed": true
+    },
+    {
+      "evidence": "All gas-permeability rows retain gas identity.",
+      "name": "gas permeability != water permeability",
+      "number": 8,
+      "passed": true
+    },
+    {
+      "evidence": "Pressure kinds remain mutually explicit.",
+      "name": "feed pressure != transmembrane pressure",
+      "number": 9,
+      "passed": true
+    },
+    {
+      "evidence": "No feed concentration was copied into permeate concentration.",
+      "name": "feed concentration != permeate concentration",
+      "number": 10,
+      "passed": true
+    },
+    {
+      "evidence": "Whole-membrane and estimated selective-layer thickness remain scoped separately.",
+      "name": "membrane thickness != selective-layer thickness",
+      "number": 11,
+      "passed": true
+    },
+    {
+      "evidence": "Pore size is retained only as architecture context.",
+      "name": "pore size != MWCO",
+      "number": 12,
+      "passed": true
+    },
+    {
+      "evidence": "Neither structural term was fabricated as a performance output.",
+      "name": "porosity != pore size",
+      "number": 13,
+      "passed": true
+    },
+    {
+      "evidence": "MEM-STAB-C retains distinct flux stages.",
+      "name": "initial flux != fouled flux",
+      "number": 14,
+      "passed": true
+    },
+    {
+      "evidence": "Fouled and recovered flux remain separate measurements.",
+      "name": "fouled flux != recovered flux",
+      "number": 15,
+      "passed": true
+    },
+    {
+      "evidence": "FRR remains a fouling metric.",
+      "name": "FRR != rejection",
+      "number": 16,
+      "passed": true
+    },
+    {
+      "evidence": "RFR and FRR are separate canonical properties.",
+      "name": "RFR != FRR",
+      "number": 17,
+      "passed": true
+    },
+    {
+      "evidence": "Fouling conditions and stability context are retained without relabeling.",
+      "name": "stability != antifouling",
+      "number": 18,
+      "passed": true
+    },
+    {
+      "evidence": "Experimental and computational gas species remain explicit.",
+      "name": "species identity retained",
+      "number": 19,
+      "passed": true
+    },
+    {
+      "evidence": "Eight ideal pairs and the mixed CO2/CH4 pair are retained.",
+      "name": "gas-pair identity retained",
+      "number": 20,
+      "passed": true
+    },
+    {
+      "evidence": "Humic acid and both SiO2 sizes remain explicit.",
+      "name": "solute identity retained",
+      "number": 21,
+      "passed": true
+    },
+    {
+      "evidence": "Every experimental result has a specimen variant.",
+      "name": "membrane variant retained",
+      "number": 22,
+      "passed": true
+    },
+    {
+      "evidence": "Foundation fabrication coordinates retain filler loading.",
+      "name": "filler loading retained",
+      "number": 23,
+      "passed": true
+    },
+    {
+      "evidence": "Every fabrication case has canonical process records.",
+      "name": "fabrication process retained",
+      "number": 24,
+      "passed": true
+    },
+    {
+      "evidence": "Ordered multilayer and supported-ceramic roles remain explicit.",
+      "name": "support/selective-layer roles retained",
+      "number": 25,
+      "passed": true
+    },
+    {
+      "evidence": "No thickness was inferred; normalized SEP-B pressure remains limited to the 42 explicitly associated permeability points.",
+      "name": "missing conditions not inferred",
+      "number": 26,
+      "passed": true
+    },
+    {
+      "evidence": "All canonical values are exact source values.",
+      "name": "missing values not interpolated",
+      "number": 27,
+      "passed": true
+    },
+    {
+      "evidence": "Computational rows project only from calculations.",
+      "name": "measured != computational",
+      "number": 28,
+      "passed": true
+    },
+    {
+      "evidence": "Simulation permeability has a distinct canonical key and unit.",
+      "name": "predicted permeability != measured permeability",
+      "number": 29,
+      "passed": true
+    },
+    {
+      "evidence": "The computational source reports no selectivity and none was calculated.",
+      "name": "predicted selectivity != measured selectivity",
+      "number": 30,
+      "passed": true
+    },
+    {
+      "evidence": "Review candidates are preserved only in noncanonical ownership audit data.",
+      "name": "review values remain non-focal",
+      "number": 31,
+      "passed": true
+    },
+    {
+      "evidence": "Battery-separator control routes repeatably to Batteries.",
+      "name": "negative control creates zero membrane contamination",
+      "number": 32,
+      "passed": true
+    },
+    {
+      "evidence": "Figure captions alone fail membrane value admission.",
+      "name": "caption-only evidence cannot admit",
+      "number": 33,
+      "passed": true
+    },
+    {
+      "evidence": "Missing-value tokens fail numeric admission.",
+      "name": "N/A cannot become numeric",
+      "number": 34,
+      "passed": true
+    },
+    {
+      "evidence": "Every result retains a source unit and scaled permeance is flagged.",
+      "name": "raw unit retained",
+      "number": 35,
+      "passed": true
+    },
+    {
+      "evidence": "Every canonical result retains a controlled scientific type.",
+      "name": "scientific type retained",
+      "number": 36,
+      "passed": true
+    },
+    {
+      "evidence": "Both append-only normalization audits report zero inventions.",
+      "name": "normalization cannot invent pressure/evidence/ownership",
+      "number": 37,
+      "passed": true
+    },
+    {
+      "evidence": "Raw hashes still match and normalized candidates are separate files.",
+      "name": "normalized provider artifact remains separate from raw",
+      "number": 38,
+      "passed": true
+    },
+    {
+      "evidence": "One analytics row exists per canonical result with conditions and record modality.",
+      "name": "analytics retain membrane/species/condition/modality identity",
+      "number": 39,
+      "passed": true
+    },
+    {
+      "evidence": "All eight archives and projected rows remain Membranes-scoped.",
+      "name": "archive/domain scoping correct",
+      "number": 40,
+      "passed": true
+    }
+  ],
+  "live_gate": {
+    "case_id": "MEM-GOLD-A",
+    "model": "models/gemini-3.5-flash-lite",
+    "run_id": "20260929T191704632468Z-0081ced80d8a",
+    "satisfied": true
+  },
+  "normalization": {
+    "MEM-GOLD-A": {
+      "canonical_admission": false,
+      "canonical_outputs": 0,
+      "normalized_candidate_separate": true,
+      "normalizer_version": "membrane_provider_normalizer_v1",
+      "raw_hash_still_matches": true,
+      "run_directory": "output\\membranes_v1\\provider_runs\\MEM-GOLD-A\\gemini\\models_gemini-e561dfc327\\20260929T191704632468Z-0081ced80d8a",
+      "safety": {
+        "calculated_selectivity": 0,
+        "invented_evidence_locators": 0,
+        "invented_ownership": 0,
+        "invented_pressure": 0,
+        "invented_values": 0
+      },
+      "schema_valid": true,
+      "scientific_score": {
+        "normalized_at": "2026-09-30T00:16:30.930416+00:00",
+        "normalizer_version": "membrane_provider_normalizer_v1",
+        "schema": "synthex.membrane.normalized_scientific_score.v1",
+        "score": {
+          "canonical_admission_not_implied": true,
+          "case_id": "MEM-GOLD-A",
+          "condition_association": {
+            "exact_condition_points": 12,
+            "feed_points": 12,
+            "identity_points": 12,
+            "pressure_value_present_points": 12,
+            "strict_pressure_points": 12,
+            "temperature_points": 12,
+            "test_mode_points": 12
+          },
+          "evidence": {
+            "identity_points": 12,
+            "with_evidence": 12,
+            "with_page_and_table_or_locator": 0,
+            "with_table_or_locator": 12
+          },
+          "membrane_association": {
+            "exact_filler_loading_associations": 4,
+            "exact_thickness_associations": 0,
+            "exact_variants": 4,
+            "expected_filler_loading_associations": 4,
+            "expected_thickness_associations": 0,
+            "expected_variants": 4
+          },
+          "ownership": {
+            "cited_prior_work": 0,
+            "focal_work": 17,
+            "objects_with_ownership": 17
+          },
+          "property_accuracy": {
+            "exact_point_recall": 1.0,
+            "exact_scientific_points": 12,
+            "exact_value_points": 12,
+            "expected_points": 12,
+            "identity_points": 12
+          },
+          "raw_output_count": 12,
+          "species_association": {
+            "exact_gas_pairs": 1,
+            "exact_species": 2,
+            "expected_gas_pairs": 1,
+            "expected_species": 2
+          },
+          "unit_accuracy": {
+            "exact_unit_points": 12,
+            "identity_points": 12
+          }
+        },
+        "source_raw_sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935"
+      },
+      "source_raw_sha256": "ed9fbfdaac862efc0af1e32606babafc6e1970c380893c4b8a0c08604c796935"
+    },
+    "MEM-SEP-B": {
+      "canonical_admission": false,
+      "canonical_outputs": 0,
+      "normalized_candidate_separate": true,
+      "normalizer_version": "membrane_provider_normalizer_v1",
+      "raw_hash_still_matches": true,
+      "run_directory": "output\\membranes_v1\\provider_runs\\MEM-SEP-B\\gemini\\models_gemini-e561dfc327\\20260929T192342356949Z-2352ac4838da",
+      "safety": {
+        "calculated_selectivity": 0,
+        "invented_evidence_locators": 0,
+        "invented_ownership": 0,
+        "invented_pressure": 0,
+        "invented_values": 0
+      },
+      "schema_valid": true,
+      "scientific_score": {
+        "normalized_at": "2026-09-30T00:16:42.998188+00:00",
+        "normalizer_version": "membrane_provider_normalizer_v1",
+        "schema": "synthex.membrane.normalized_scientific_score.v1",
+        "score": {
+          "canonical_admission_not_implied": true,
+          "case_id": "MEM-SEP-B",
+          "condition_association": {
+            "exact_condition_points": 42,
+            "feed_points": 98,
+            "identity_points": 98,
+            "pressure_value_present_points": 42,
+            "strict_pressure_points": 42,
+            "temperature_points": 98,
+            "test_mode_points": 98
+          },
+          "evidence": {
+            "identity_points": 98,
+            "with_evidence": 98,
+            "with_page_and_table_or_locator": 0,
+            "with_table_or_locator": 0
+          },
+          "membrane_association": {
+            "exact_filler_loading_associations": 7,
+            "exact_thickness_associations": 7,
+            "exact_variants": 7,
+            "expected_filler_loading_associations": 7,
+            "expected_thickness_associations": 7,
+            "expected_variants": 7
+          },
+          "ownership": {
+            "cited_prior_work": 0,
+            "focal_work": 25,
+            "objects_with_ownership": 25
+          },
+          "property_accuracy": {
+            "exact_point_recall": 1.0,
+            "exact_scientific_points": 98,
+            "exact_value_points": 98,
+            "expected_points": 98,
+            "identity_points": 98
+          },
+          "raw_output_count": 98,
+          "species_association": {
+            "exact_gas_pairs": 8,
+            "exact_species": 6,
+            "expected_gas_pairs": 8,
+            "expected_species": 6
+          },
+          "unit_accuracy": {
+            "exact_unit_points": 98,
+            "identity_points": 98
+          }
+        },
+        "source_raw_sha256": "a17f397e8ac413e6cdf2b290757910272f747c662e30bb751ce505dccca7c84d"
+      },
+      "source_raw_sha256": "a17f397e8ac413e6cdf2b290757910272f747c662e30bb751ce505dccca7c84d"
+    }
+  },
+  "passed": true,
+  "passed_invariants": 40,
+  "schema": "synthex.membranes.closure_audit.v1"
+}
