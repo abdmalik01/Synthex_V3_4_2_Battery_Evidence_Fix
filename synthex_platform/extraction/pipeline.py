@@ -67,6 +67,7 @@ class SynthexExtractionPipeline:
         # persist a replay artifact before archive assembly. This is intentionally
         # in-memory only during normal production extraction.
         self.last_corrosion_document = None
+        self.last_corrosion_model_outputs = {}
 
     def route_text(self, text: str) -> DomainRoute:
         return self.router.route_text(text)
@@ -93,6 +94,7 @@ class SynthexExtractionPipeline:
         self.last_catalysis_candidate_inventory = []
         self.last_catalysis_candidate_coverage = []
         self.last_corrosion_document = None
+        self.last_corrosion_model_outputs = {}
         route = self.router.route_text(text) if domain == "auto" else DomainRoute(
             domain=domain,
             confidence=1.0,
@@ -234,6 +236,12 @@ class SynthexExtractionPipeline:
                 self.last_extraction_diagnostics.setdefault(
                     "schema_repair_calls", self.last_extraction_diagnostics.get("repair_calls", 0)
                 )
+                self.last_corrosion_model_outputs = {
+                    key: value for key, value in {
+                        "raw": getattr(extractor, "last_raw_output", None),
+                        "repaired": getattr(extractor, "last_repaired_output", None),
+                    }.items() if value
+                }
             if source_bundle is not None:
                 draft.source.pdf_text_parser = source_bundle.primary_native_parser()
             # ``extract_text`` has already run deterministic source-bundle evidence

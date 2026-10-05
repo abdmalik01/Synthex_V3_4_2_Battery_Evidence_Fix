@@ -144,6 +144,15 @@ def parse_corrosion_document_json(output_text: str) -> CorrosionDocument:
     return CorrosionDocument.model_validate(payload)
 
 
+def recover_corrosion_document_offline(document: CorrosionDocument, source_bundle: SourceBundle) -> CorrosionDocument:
+    """Apply the source-only recovery and evidence gates without a provider call."""
+    document = recover_corrosion_parameter_tables(document, source_bundle)
+    document = recover_corrosion_gravimetric_candidates(document, source_bundle)
+    document = recover_corrosion_computational_tables(document, source_bundle)
+    document = apply_corrosion_review_ownership_guard(document, source_bundle)
+    return verify_corrosion_document_evidence(document, source_bundle)
+
+
 class CorrosionGeminiExtractor:
     """Typed Corrosion V1 extraction boundary with one bounded schema-repair call."""
 
@@ -285,9 +294,5 @@ class CorrosionGeminiExtractor:
         except (ValidationError, ValueError) as exc:
             document = self._repair_invalid_output(response.text, exc, source_bundle)
         if source_bundle is not None:
-            document = recover_corrosion_parameter_tables(document, source_bundle)
-            document = recover_corrosion_gravimetric_candidates(document, source_bundle)
-            document = recover_corrosion_computational_tables(document, source_bundle)
-            document = apply_corrosion_review_ownership_guard(document, source_bundle)
-            document = verify_corrosion_document_evidence(document, source_bundle)
+            document = recover_corrosion_document_offline(document, source_bundle)
         return document

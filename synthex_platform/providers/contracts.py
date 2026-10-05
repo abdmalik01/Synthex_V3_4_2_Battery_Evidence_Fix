@@ -72,6 +72,8 @@ class ProviderUsage:
 class ProviderRequest:
     contents: Any
     response_mime_type: str | None = None
+    response_schema: dict[str, Any] | None = None
+    response_schema_name: str | None = None
     input_mode: str = "text"
     phase: Literal["primary", "schema_repair"] = "primary"
     metadata: dict[str, Any] = field(default_factory=dict)
@@ -119,8 +121,10 @@ _GOOGLE_API_KEY = re.compile(r"\bAIza[0-9A-Za-z_-]{20,}\b")
 
 def redact_secrets(value: str) -> str:
     """Redact common credential forms before diagnostic persistence."""
-    redacted = _NAMED_SECRET.sub(r"\1\2[REDACTED]", value)
-    redacted = _BEARER_SECRET.sub("Bearer [REDACTED]", redacted)
+    # Remove the complete bearer credential before the broader named-field
+    # pattern can consume only the word ``Bearer`` and leave its token behind.
+    redacted = _BEARER_SECRET.sub("Bearer [REDACTED]", value)
+    redacted = _NAMED_SECRET.sub(r"\1\2[REDACTED]", redacted)
     return _GOOGLE_API_KEY.sub("[REDACTED_GOOGLE_API_KEY]", redacted)
 
 

@@ -131,6 +131,8 @@ class GeminiAdapter(ProviderAdapter):
             request = ProviderRequest(
                 contents=request.contents,
                 response_mime_type=request.response_mime_type,
+                response_schema=request.response_schema,
+                response_schema_name=request.response_schema_name,
                 input_mode=request.input_mode,
                 phase="primary",
                 metadata=request.metadata,
@@ -142,6 +144,8 @@ class GeminiAdapter(ProviderAdapter):
             request = ProviderRequest(
                 contents=request.contents,
                 response_mime_type=request.response_mime_type,
+                response_schema=request.response_schema,
+                response_schema_name=request.response_schema_name,
                 input_mode=request.input_mode,
                 phase="schema_repair",
                 metadata=request.metadata,

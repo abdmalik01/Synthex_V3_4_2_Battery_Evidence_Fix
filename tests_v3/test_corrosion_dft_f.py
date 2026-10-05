@@ -124,6 +124,32 @@ def test_corr_dft_f_analytics_projects_calculations_as_computational_rows(dft_ca
     assert all(row.calculation_id for row in rows)
 
 
+def test_corr_dft_f_source_surface_survives_broad_canonical_material_name(dft_case):
+    bundle, verified, _, gold = dft_case
+    provider_like = verified.model_copy(deep=True)
+    provider_like.materials[0].canonical_name = "iron"
+    archive = assemble_corrosion_archive(provider_like, source_bundle=bundle)
+    score = score_corrosion_archive(archive, calculation_expectations_from_gold(gold))
+    assert score.matched_required == score.total_required == 24
+    assert any(material.name == "iron surface Fe(110)" for material in archive.materials)
+    assert any(material.structure.get("canonical_name") == "iron" for material in archive.materials)
+
+
+def test_corr_dft_f_swapped_adsorbate_associations_fail_gold(dft_case):
+    bundle, verified, _, gold = dft_case
+    swapped = verified.model_copy(deep=True)
+    ib = next(item for item in swapped.calculations if item.calculation_id == "recovered_dft_ib")
+    mb = next(item for item in swapped.calculations if item.calculation_id == "recovered_dft_mb")
+    ib.adsorbate_or_inhibitor, mb.adsorbate_or_inhibitor = (
+        mb.adsorbate_or_inhibitor, ib.adsorbate_or_inhibitor,
+    )
+    archive = assemble_corrosion_archive(swapped, source_bundle=bundle)
+    score = score_corrosion_archive(archive, calculation_expectations_from_gold(gold))
+    assert score.value_matches == 24
+    assert score.association_matches < 24
+    assert score.matched_required < 24
+
+
 @pytest.fixture(scope="module")
 def mixed_weight_case():
     case = load_live_case("CORR-WEIGHT-E", REPO_ROOT)

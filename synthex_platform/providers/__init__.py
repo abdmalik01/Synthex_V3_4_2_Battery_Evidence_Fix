@@ -13,6 +13,7 @@ from .contracts import (
     redact_secrets,
 )
 from .gemini_adapter import GeminiAdapter
+from .openai_adapter import OpenAIAdapter
 
 from .gemini_gateway import (
     DEFAULT_GEMINI_MODELS,
@@ -40,6 +41,7 @@ __all__ = [
     "normalize_provider_error",
     "redact_secrets",
     "GeminiAdapter",
+    "OpenAIAdapter",
     "DEFAULT_GEMINI_MODELS",
     "GeminiGateway",
     "GeminiModelsUnavailableError",

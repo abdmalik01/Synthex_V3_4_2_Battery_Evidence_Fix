@@ -165,12 +165,16 @@ def assemble_corrosion_archive(
         material_ids[item.local_id] = mid
         materials.append(MaterialEntity(
             material_id=mid,
-            name=item.canonical_name or item.reported_name or item.reported_formula,
+            # The source label can identify a facet or grade that a broad canonical
+            # name omits (for example a specific crystal surface versus its metal).
+            # Keep that specificity on the entity used by calculation associations.
+            name=item.reported_name or item.canonical_name or item.reported_formula,
             formula=item.reported_formula,
             structure={
                 "material_class": item.material_class,
                 "role": item.role,
                 "composition_raw": item.composition_raw,
+                "canonical_name": item.canonical_name,
             },
             tags=["corrosion", f"role:{item.role}", f"ownership:{item.ownership}"],
             evidence=_canonical_evidence(item.evidence, sid),

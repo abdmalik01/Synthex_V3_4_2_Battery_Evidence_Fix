@@ -28,6 +28,7 @@ from synthex_platform.extraction.corrosion_evidence import verify_corrosion_evid
 from synthex_platform.extraction.corrosion_evidence import verify_corrosion_document_evidence
 from synthex_platform.extraction.corrosion_gravimetric_recovery import recover_corrosion_gravimetric_candidates
 from synthex_platform.extraction.corrosion_models import CorrosionDocument, CorrosionEvidence
+from synthex_platform.extraction.corrosion_extractor import parse_corrosion_document_json
 from synthex_platform.extraction.corrosion_table_recovery import recover_corrosion_parameter_tables
 from synthex_platform.extraction.source_context import build_source_bundle
 from synthex_platform.visual.sidecar_store import VisualSidecarStore
@@ -503,6 +504,12 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
     bundle = pipeline.build_source_bundle(case.pdf_path, source_filename=case.filename)
     route, archive = pipeline.extract_source_bundle(bundle, domain="auto")
 
+    provider_output_paths: dict[str, str] = {}
+    for phase, output_text in pipeline.last_corrosion_model_outputs.items():
+        path = output_dir / f"provider_{phase}_response.json"
+        path.write_text(output_text, encoding="utf-8")
+        provider_output_paths[phase] = str(path.relative_to(repo_root))
+
     verified_document_path: Path | None = None
     if route.domain == "corrosion" and pipeline.last_corrosion_document is not None:
         verified_document_path = output_dir / "verified_document.json"
@@ -518,12 +525,29 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
     expectations: tuple[CorrosionExpectedObservation, ...] = ()
     quarantine_expectations: tuple[CorrosionExpectedQuarantine, ...] = ()
     score: CorrosionBenchmarkScore | None = None
+    raw_provider_score: CorrosionBenchmarkScore | None = None
+    raw_provider_score_status = "NO_VALID_PROVIDER_PAYLOAD"
     if case.gold_path is not None:
         gold = _read_json(case.gold_path)
         expectations = all_expectations_from_gold(gold)
         quarantine_expectations = quarantine_expectations_from_gold(gold)
         if route.domain == "corrosion" and expectations:
             score = score_corrosion_archive(archive, expectations, quarantine_expectations)
+            provider_text = (
+                pipeline.last_corrosion_model_outputs.get("repaired")
+                or pipeline.last_corrosion_model_outputs.get("raw")
+            )
+            if provider_text:
+                try:
+                    provider_document = parse_corrosion_document_json(provider_text)
+                    provider_verified = verify_corrosion_document_evidence(provider_document, bundle)
+                    provider_archive = assemble_corrosion_archive(provider_verified, source_bundle=bundle)
+                    raw_provider_score = score_corrosion_archive(
+                        provider_archive, expectations, quarantine_expectations,
+                    )
+                    raw_provider_score_status = "SCORED_WITH_EVIDENCE_VERIFICATION_NO_TABLE_RECOVERY"
+                except Exception as exc:
+                    raw_provider_score_status = f"RAW_SCORING_FAILED:{type(exc).__name__}"
 
     report: dict[str, Any] = {
         "case_id": case.case_id,
@@ -549,6 +573,9 @@ def run_live_corrosion_case(case_id: str, repo_root: str | Path) -> dict[str, An
         },
         "gold_assertions": len(expectations) + len(quarantine_expectations),
         "score": _score_payload(score),
+        "raw_provider_score": _score_payload(raw_provider_score),
+        "raw_provider_score_status": raw_provider_score_status,
+        "provider_output_paths": provider_output_paths,
         "extraction_diagnostics": pipeline.last_extraction_diagnostics,
         "provider_audit": pipeline.last_provider_audit,
         "verified_document_path": (
