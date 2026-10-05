@@ -70,6 +70,9 @@ def test_extractor_uses_local_validation_and_stage1_warnings_without_live_api():
     extractor = CatalysisGeminiExtractor.__new__(CatalysisGeminiExtractor)
     extractor.registry = DomainRegistry()
     extractor.model = "offline-fake"
+    extractor.requested_model = extractor.model
+    extractor.fallback_models = ()
+    extractor.provider_mode = "benchmark"
     extractor.client = SimpleNamespace(models=FakeModels())
     result = extractor.extract_text("HER source", source_bundle=_bundle())
     assert result.electrocatalysis_experiments[0].metrics[0].property == "overpotential"

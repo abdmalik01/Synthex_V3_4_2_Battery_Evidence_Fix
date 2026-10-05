@@ -14,6 +14,7 @@ PUBLIC_NAVIGATION = (
 
 DEVELOPER_NAVIGATION = (
     "Developer · Battery validation",
+    "Developer · System audit",
     "Developer · Benchmark catalog",
     "Developer · Diagnostics",
     "Developer · Domain registry",

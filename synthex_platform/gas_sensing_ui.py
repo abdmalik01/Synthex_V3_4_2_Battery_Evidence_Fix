@@ -4,12 +4,15 @@ import json
 import os
 import tempfile
 from pathlib import Path
+from typing import Callable
 
 import pandas as pd
 import streamlit as st
 
 from search import search_papers
 from synthex_platform.batch import MAX_BATCH_PAPERS, validate_batch_size
+from synthex_platform.deployment import PublicLimits, validate_public_uploads
+from synthex_platform.retrieval.serper_client import SerperClient
 from synthex_v2.batch import merge_records
 from synthex_v2.extractor import GeminiSensorExtractor
 from synthex_v2.exporters import flatten_record, to_json_bytes
@@ -47,7 +50,12 @@ def _ensure_state() -> None:
     st.session_state.setdefault(_WARNINGS_KEY, [])
 
 
-def render_gas_sensing_analytics() -> None:
+def render_gas_sensing_analytics(
+    *,
+    public_limits: PublicLimits | None = None,
+    reserve_action: Callable[[str], bool] | None = None,
+    search_cache_dir: Path | None = None,
+) -> None:
     """Render Synthex's native gas-sensing extraction and analytics workspace."""
     _ensure_state()
 
@@ -92,16 +100,20 @@ def render_gas_sensing_analytics() -> None:
                 key="synthex_gas_category",
             )
 
+        max_batch = public_limits.max_batch if public_limits else MAX_BATCH_PAPERS
         uploads = st.file_uploader(
-            f"Upload gas-sensing research PDFs — up to {MAX_BATCH_PAPERS} at once",
+            f"Upload gas-sensing research PDFs — up to {max_batch} at once",
             type=["pdf"],
             accept_multiple_files=True,
             key="synthex_gas_uploads",
+            **({"max_upload_size": public_limits.max_pdf_bytes // (1024 * 1024)} if public_limits else {}),
         )
         if uploads:
             st.caption(f"Selected {len(uploads)} paper(s): " + ", ".join(file.name for file in uploads))
             try:
                 validate_batch_size(len(uploads))
+                if public_limits:
+                    validate_public_uploads(uploads, public_limits)
             except ValueError as exc:
                 st.error(str(exc))
                 uploads = []
@@ -115,6 +127,9 @@ def render_gas_sensing_analytics() -> None:
                 extractor = GeminiSensorExtractor(model=os.getenv("GEMINI_MODEL", "gemini-3.5-flash"))
                 progress = st.progress(0, text="Starting gas-sensing extraction...")
                 for index, uploaded in enumerate(uploads, start=1):
+                    if reserve_action and not reserve_action("extract"):
+                        warnings.append("The daily extraction allowance is unavailable or exhausted.")
+                        break
                     progress.progress((index - 1) / len(uploads), text=f"Extracting {index}/{len(uploads)} · {uploaded.name}")
                     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
                         tmp.write(uploaded.getbuffer())
@@ -163,21 +178,25 @@ def render_gas_sensing_analytics() -> None:
         with c3:
             nres = st.number_input("Results", min_value=1, max_value=10, value=5, key="synthex_gas_search_n")
         if st.button("Search papers", key="synthex_gas_search"):
-            try:
-                found = search_papers(search_category, int(nres), focus or None)
-                if not found:
-                    st.info("No results returned.")
-                for item in found:
-                    title = item.get("title") or "Untitled paper"
-                    url = item.get("url")
-                    with st.container(border=True):
-                        st.write(title)
-                        if item.get("snippet"):
-                            st.caption(item["snippet"])
-                        if url:
-                            st.link_button("Open paper", url)
-            except Exception as exc:
-                st.error(str(exc))
+            if reserve_action and not reserve_action("search"):
+                st.warning("The daily search allowance is unavailable or exhausted.")
+            else:
+                try:
+                    client = SerperClient(cache_dir=search_cache_dir) if search_cache_dir else None
+                    found = search_papers(search_category, int(nres), focus or None, client=client)
+                    if not found:
+                        st.info("No results returned.")
+                    for item in found:
+                        title = item.get("title") or "Untitled paper"
+                        url = item.get("url")
+                        with st.container(border=True):
+                            st.write(title)
+                            if item.get("snippet"):
+                                st.caption(item["snippet"])
+                            if url:
+                                st.link_button("Open paper", url)
+                except Exception as exc:
+                    st.error(str(exc))
 
     with results:
         record = st.session_state.get(_RECORD_KEY)

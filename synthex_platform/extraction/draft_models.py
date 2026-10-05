@@ -39,11 +39,35 @@ class DraftMaterial(StrictDraftModel):
     evidence: list[Evidence] = Field(default_factory=list)
 
 
+class DraftDeviceLayer(StrictDraftModel):
+    sequence_index: int = Field(ge=0)
+    role: str
+    material_ref: str
+    thickness: Measurement | None = None
+    deposition_method: str | None = None
+    evidence: list[Evidence] = Field(default_factory=list)
+
+
+class DraftDevice(StrictDraftModel):
+    local_id: str
+    name: str | None = None
+    device_type: str
+    layer_stack: list[DraftDeviceLayer] = Field(default_factory=list)
+    configuration: dict[str, Any] = Field(default_factory=dict)
+    tags: list[str] = Field(default_factory=list)
+    ownership: GenericOwnership = "unknown"
+    evidence: list[Evidence] = Field(default_factory=list)
+
+
 class DraftProcess(StrictDraftModel):
     local_id: str
     name: str
     family: str | None = None
     material_refs: list[str] = Field(default_factory=list)
+    input_material_refs: list[str] = Field(default_factory=list)
+    output_material_refs: list[str] = Field(default_factory=list)
+    input_device_refs: list[str] = Field(default_factory=list)
+    output_device_refs: list[str] = Field(default_factory=list)
     parameters: list[Measurement] = Field(default_factory=list)
     atmosphere: str | None = None
     equipment: str | None = None
@@ -55,6 +79,7 @@ class DraftExperiment(StrictDraftModel):
     local_id: str
     experiment_type: str
     material_refs: list[str] = Field(default_factory=list)
+    device_refs: list[str] = Field(default_factory=list)
     target: str | None = None
     conditions: list[Measurement] = Field(default_factory=list)
     outputs: list[Measurement] = Field(default_factory=list)
@@ -80,6 +105,7 @@ class DraftCalculation(StrictDraftModel):
 class ExtractedDocument(StrictDraftModel):
     source: DraftSource = Field(default_factory=DraftSource)
     materials: list[DraftMaterial] = Field(default_factory=list)
+    devices: list[DraftDevice] = Field(default_factory=list)
     processes: list[DraftProcess] = Field(default_factory=list)
     experiments: list[DraftExperiment] = Field(default_factory=list)
     calculations: list[DraftCalculation] = Field(default_factory=list)

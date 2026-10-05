@@ -1,135 +1,82 @@
 slug: additive_manufacturing
 name: Additive Manufacturing
-version: 1.0.0
-description: Powder/feedstock, machine parameters, thermal history, defects, microstructure
-  and part properties.
-recommended_sections:
-- feedstock
-- machine setup
-- process parameters
-- build
-- post-processing
-- characterization
-- mechanical testing
+version: 1.2.0
+description: Process-centric AM records joining feedstock, build coordinates, post-processing,
+  defects, microstructure, and measured part properties without deriving unreported quantities.
+recommended_sections: [feedstock, machine setup, build context, process parameters,
+  post-processing, characterization, mechanical testing]
 process_vocabulary:
-- LPBF
-- SLM
-- EBM
-- DED
+- laser powder bed fusion (LPBF/PBF-LB/SLM/DMLS)
+- electron beam powder bed fusion (PBF-EB/EBM)
+- directed energy deposition (DED/LMD)
+- wire arc additive manufacturing (WAAM)
 - binder jetting
-- WAAM
-- HIP
+- hot isostatic pressing (HIP)
 - stress relief
 - solution treatment
+condition_vocabulary: [machine_model, atmosphere, shielding_gas, chamber_oxygen, substrate,
+  preheat_temperature, scan_strategy, rotation_angle, build_orientation, layer_thickness,
+  hatch_spacing, spot_size, beam_diameter, scientific_type, reported_term, data_kind]
+feedstock_vocabulary: [alloy_or_material, composition, powder_morphology, particle_size_d10,
+  particle_size_d50, particle_size_d90, powder_reuse_state, wire_diameter, supplier]
 properties:
-- key: laser_power
-  name: Laser power
-  kind: process
-  units:
-  - W
-  conditions:
-  - machine
-  aliases: []
-- key: scan_speed
-  name: Scan speed
-  kind: process
-  units:
-  - mm/s
-  conditions:
-  - strategy
-  aliases: []
-- key: hatch_spacing
-  name: Hatch spacing
-  kind: process
-  units:
-  - um
-  - mm
-  conditions: []
-  aliases: []
-- key: layer_thickness
-  name: Layer thickness
-  kind: process
-  units:
-  - um
-  conditions: []
-  aliases: []
-- key: volumetric_energy_density
-  name: Volumetric energy density
-  kind: derived
-  units:
-  - J/mm3
-  conditions:
-  - power
-  - speed
-  - hatch
-  - layer
-  aliases: []
-- key: relative_density
-  name: Relative density
-  kind: quality
-  units:
-  - '%'
-  conditions:
-  - process
-  aliases: []
-- key: porosity
-  name: Porosity
-  kind: quality
-  units:
-  - '%'
-  conditions:
-  - method
-  aliases: []
-- key: surface_roughness
-  name: Surface roughness
-  kind: quality
-  units:
-  - um
-  conditions:
-  - metric
-  aliases: []
-- key: melt_pool_width
-  name: Melt pool width
-  kind: process
-  units:
-  - um
-  conditions:
-  - power
-  - speed
-  aliases: []
-- key: melt_pool_depth
-  name: Melt pool depth
-  kind: process
-  units:
-  - um
-  conditions:
-  - power
-  - speed
-  aliases: []
+- {key: laser_power, name: Laser power, kind: process_parameter, units: [W, kW], aliases: [LP, beam power]}
+- {key: electron_beam_power, name: Electron beam power, kind: process_parameter, units: [W, kW], aliases: []}
+- {key: scan_speed, name: Scan speed, kind: process_parameter, units: [mm/s, m/s, mm/min, m/min], aliases: [scanning speed, SS]}
+- {key: hatch_spacing, name: Hatch spacing, kind: process_parameter, units: [um, µm, mm], aliases: [hatch distance, HS]}
+- {key: layer_thickness, name: Layer thickness, kind: process_parameter, units: [um, µm, mm], aliases: [LT]}
+- {key: spot_size, name: Laser spot size, kind: process_parameter, units: [um, µm, mm], aliases: [beam spot]}
+- {key: beam_diameter, name: Beam diameter, kind: process_parameter, units: [um, µm, mm], aliases: []}
+- {key: powder_feed_rate, name: Powder feed rate, kind: process_parameter, units: [g/s, g/min, kg/h], aliases: []}
+- {key: wire_feed_rate, name: Wire feed rate, kind: process_parameter, units: [mm/s, mm/min, m/min], aliases: []}
+- {key: preheat_temperature, name: Preheat temperature, kind: process_parameter, units: [K, °C], aliases: [substrate temperature, build plate temperature]}
+- {key: post_process_temperature, name: Post-process temperature, kind: process_parameter, units: [K, °C], aliases: []}
+- {key: post_process_time, name: Post-process time, kind: process_parameter, units: [s, min, h], aliases: []}
+- {key: chamber_oxygen, name: Chamber oxygen content, kind: process_parameter, units: [ppm, '%', vol%], aliases: [oxygen content]}
+- {key: rotation_angle, name: Inter-layer scan rotation, kind: process_parameter, units: [°, deg], aliases: [scan rotation]}
+- {key: scan_strategy, name: Scan strategy, kind: categorical_process_parameter, units: [], aliases: [scanning strategy]}
+- {key: build_orientation, name: Build orientation, kind: categorical_process_parameter, units: [], aliases: [specimen orientation]}
+- {key: shielding_gas, name: Shielding gas, kind: categorical_process_parameter, units: [], aliases: [protective gas]}
+- {key: machine_model, name: Machine model, kind: categorical_process_parameter, units: [], aliases: [equipment]}
+- {key: linear_energy_density, name: Linear energy density, kind: reported_derived_process_metric, units: [J/mm, J/m], aliases: [LED]}
+- {key: surface_energy_density, name: Surface energy density, kind: reported_derived_process_metric, units: [J/mm2, J/mm^2, J/m2, J/m^2], aliases: [areal energy density]}
+- {key: volumetric_energy_density, name: Volumetric energy density, kind: reported_derived_process_metric, units: [J/mm3, J/mm^3, J/cm3, J/cm^3], aliases: [VED]}
+- {key: relative_density, name: Relative density, kind: quality_result, units: ['%'], aliases: [RD, densification]}
+- {key: absolute_density, name: Absolute density, kind: quality_result, units: [kg/m3, kg/m^3, g/cm3, g/cm^3], aliases: [mass density]}
+- {key: porosity, name: Porosity, kind: defect_result, units: ['%', vol%], aliases: [pore fraction]}
+- {key: void_fraction, name: Void fraction, kind: defect_result, units: ['%', vol%], aliases: []}
+- {key: defect_fraction, name: Defect fraction, kind: defect_result, units: ['%', vol%], aliases: []}
+- {key: lack_of_fusion_fraction, name: Lack-of-fusion fraction, kind: defect_result, units: ['%', vol%], aliases: [LOF fraction]}
+- {key: keyhole_porosity, name: Keyhole porosity, kind: defect_result, units: ['%', vol%], aliases: []}
+- {key: surface_roughness_ra, name: Arithmetic mean surface roughness Ra, kind: surface_result, units: [um, µm, mm], aliases: [Ra]}
+- {key: surface_roughness_rz, name: Maximum profile height Rz, kind: surface_result, units: [um, µm, mm], aliases: [Rz]}
+- {key: melt_pool_width, name: Melt pool width, kind: geometry_result, units: [um, µm, mm], aliases: []}
+- {key: melt_pool_depth, name: Melt pool depth, kind: geometry_result, units: [um, µm, mm], aliases: []}
+- {key: grain_size, name: Grain size, kind: microstructure_result, units: [um, µm, mm], aliases: [average grain size]}
+- {key: cell_spacing, name: Cellular or dendrite spacing, kind: microstructure_result, units: [um, µm, mm], aliases: [cellular spacing, dendrite spacing]}
+- {key: phase_fraction, name: Phase fraction, kind: microstructure_result, units: ['%', vol%], aliases: []}
+- {key: texture_coefficient, name: Relative texture coefficient, kind: microstructure_result, units: ['', '1'], aliases: [RTC, relative texture coefficient]}
+- {key: dimensional_error, name: Dimensional error, kind: geometry_result, units: [um, µm, mm], aliases: [dimensional deviation]}
+- {key: build_rate, name: Build rate, kind: productivity_result, units: [mm3/s, mm^3/s, cm3/h, cm^3/h], aliases: [production rate]}
+mechanical_property_reuse:
+  contract: mechanical_v1
+  policy: Mechanical outcomes keep Mechanical property identities and unit-family checks.
+  examples: [yield_strength, ultimate_tensile_strength, elongation, vickers_hardness,
+    fatigue_life, fracture_toughness]
+scientific_type_policy:
+  process_parameters: [reported_process_parameter, reported_derived_metric]
+  experimental_results: [reported_measurement, reported_derived_metric]
+  forbidden_behavior:
+  - do not derive energy density when it is not explicitly reported
+  - do not convert relative density into porosity or porosity into relative density
+  - do not equate void fraction, lack-of-fusion fraction, keyhole porosity, or generic porosity
+  - do not equate powder particle size with final-part grain size or cell spacing
+  - do not equate build texture with surface texture or infer phase fraction from phase presence
+  - do not merge linear, surface, and volumetric energy-density identities
+  - do not admit review or cited-prior-work rows as focal records
 benchmarks:
-- id: additive_manufacturing.density_prediction
-  name: Density prediction
-  target: relative_density
-  group_by:
-  - alloy
-  - process
-- id: additive_manufacturing.porosity_prediction
-  name: Porosity prediction
-  target: porosity
-  group_by:
-  - alloy
-  - process
-- id: additive_manufacturing.melt_pool_geometry_prediction
-  name: Melt pool geometry prediction
-  target: melt_pool_depth
-  group_by:
-  - alloy
-  - process
-graph_relations:
-- derived_from
-- processed_by
-- tested_in
-- calculated_for
-- has_property
-- compared_with
-- reported_by
+- {id: additive_manufacturing.density_prediction, name: Density prediction, target: relative_density, group_by: [alloy, process_family]}
+- {id: additive_manufacturing.porosity_prediction, name: Porosity prediction, target: porosity, group_by: [alloy, process_family]}
+- {id: additive_manufacturing.process_property_comparison, name: Process-property comparison, target: reported_result, group_by: [feedstock, build_process, post_process]}
+graph_relations: [input_to, produces, processed_by, tested_in, calculated_for, has_property,
+  compared_with, reported_by]

@@ -1,0 +1,41 @@
+services:
+  synthex:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      SYNTHEX_PUBLIC_MODE: "true"
+      SYNTHEX_DATA_ROOT: /var/lib/synthex
+      SYNTHEX_DEVELOPER_MODE: "false"
+      SYNTHEX_OPERATOR_API_ENABLED: "false"
+      STREAMLIT_SERVER_MAX_UPLOAD_SIZE: ${SYNTHEX_PUBLIC_MAX_PDF_MB:-25}
+    expose:
+      - "8501"
+    volumes:
+      - synthex_data:/var/lib/synthex
+      - ./.streamlit/secrets.toml:/app/.streamlit/secrets.toml:ro
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      synthex:
+        condition: service_healthy
+    environment:
+      SYNTHEX_DOMAIN: ${SYNTHEX_DOMAIN:?Set a public domain in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  synthex_data:
+  caddy_data:
+  caddy_config:

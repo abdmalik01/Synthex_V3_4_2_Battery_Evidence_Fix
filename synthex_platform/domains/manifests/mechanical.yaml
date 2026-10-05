@@ -63,6 +63,10 @@ condition_vocabulary:
 - cycle_count
 - exposure_time
 - hold_time
+- proof_offset
+- phase
+- pressure
+- computational_method
 - scientific_type
 - reported_term
 - data_kind
@@ -75,7 +79,13 @@ properties:
   kind: tensile
   units: [Pa, kPa, MPa, GPa]
   conditions: [temperature, strain_rate, specimen_orientation, heat_treatment]
-  aliases: [yield stress, 0.2% proof stress]
+  aliases: [yield stress]
+- key: proof_stress
+  name: Proof stress as explicitly reported
+  kind: tensile
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [proof_offset, temperature, strain_rate, specimen_orientation, heat_treatment]
+  aliases: [0.2% proof stress, proof stress]
 - key: ultimate_tensile_strength
   name: Ultimate tensile strength
   kind: tensile
@@ -292,6 +302,54 @@ properties:
   units: [J, mJ, kJ]
   conditions: [temperature, notch_geometry, specimen_orientation]
   aliases: [Charpy impact energy]
+- key: elastic_constant_c11
+  name: Elastic constant C11
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C11]
+- key: elastic_constant_c12
+  name: Elastic constant C12
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C12]
+- key: elastic_constant_c13
+  name: Elastic constant C13
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C13]
+- key: elastic_constant_c33
+  name: Elastic constant C33
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C33]
+- key: elastic_constant_c44
+  name: Elastic constant C44
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C44]
+- key: elastic_constant_c66
+  name: Elastic constant C66
+  kind: elastic_constant
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [C66]
+- key: bulk_modulus
+  name: Bulk modulus
+  kind: elastic_modulus
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [B, K]
+- key: shear_modulus
+  name: Shear modulus
+  kind: elastic_modulus
+  units: [Pa, kPa, MPa, GPa]
+  conditions: [phase, temperature, pressure, computational_method]
+  aliases: [G]
 benchmarks:
 - id: mechanical.yield_strength_prediction
   name: Yield strength prediction

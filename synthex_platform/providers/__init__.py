@@ -1,5 +1,19 @@
 """Bounded provider gateways and optional health diagnostics."""
 
+from .contracts import (
+    ProviderAdapter,
+    ProviderCapabilities,
+    ProviderError,
+    ProviderErrorClass,
+    ProviderModelIdentity,
+    ProviderRequest,
+    ProviderResponse,
+    ProviderUsage,
+    normalize_provider_error,
+    redact_secrets,
+)
+from .gemini_adapter import GeminiAdapter
+
 from .gemini_gateway import (
     DEFAULT_GEMINI_MODELS,
     GeminiGateway,
@@ -8,11 +22,24 @@ from .gemini_gateway import (
     classify_provider_failure,
     configured_gemini_credential_slots,
     configured_gemini_models,
+    discover_gemini_models,
+    is_general_text_gemini_model,
     probe_configured_gemini,
     probe_gemini_models,
 )
 
 __all__ = [
+    "ProviderAdapter",
+    "ProviderCapabilities",
+    "ProviderError",
+    "ProviderErrorClass",
+    "ProviderModelIdentity",
+    "ProviderRequest",
+    "ProviderResponse",
+    "ProviderUsage",
+    "normalize_provider_error",
+    "redact_secrets",
+    "GeminiAdapter",
     "DEFAULT_GEMINI_MODELS",
     "GeminiGateway",
     "GeminiModelsUnavailableError",
@@ -20,6 +47,8 @@ __all__ = [
     "classify_provider_failure",
     "configured_gemini_credential_slots",
     "configured_gemini_models",
+    "discover_gemini_models",
+    "is_general_text_gemini_model",
     "probe_configured_gemini",
     "probe_gemini_models",
 ]

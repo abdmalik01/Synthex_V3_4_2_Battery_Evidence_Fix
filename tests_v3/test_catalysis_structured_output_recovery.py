@@ -136,6 +136,9 @@ def _extractor(outputs: list[str]) -> CatalysisGeminiExtractor:
     extractor.registry = DomainRegistry()
     extractor.api_key = "offline"
     extractor.model = "offline-catalysis"
+    extractor.requested_model = extractor.model
+    extractor.fallback_models = ()
+    extractor.provider_mode = "benchmark"
     extractor.client = SimpleNamespace(models=_FakeModels(outputs))
     return extractor
 

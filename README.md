@@ -1,25 +1,65 @@
-# Synthex V3.4.2 — Materials Intelligence Platform
+# Synthex — Materials Intelligence Platform
 
-Synthex is evolving from a nanomaterial parameter extractor into a literature-to-materials-data platform. It preserves the mature gas-sensing V2 workflow, adds automatic scientific-domain routing, and now includes a dedicated Batteries V1 extraction path that writes into a shared provenance-aware Synthex Archive.
+Synthex turns scientific PDFs into source-tracked materials data. Its deterministic
+pipeline, optional provider extraction, evidence checks, canonical archive, and
+durable jobs are separate concerns: a provider response is never automatically
+scientific truth. The legacy gas-sensing V2 workflow remains available.
 
-## Current scientific maturity
+## Scope of this deployment branch
 
-- **Gas sensing:** mature V2 vertical — synthesis/deposition + sensing performance + validation + visualizations.
-- **Batteries:** live V1 expansion — auto-routing, battery paper typing, charge/discharge/EIS protocol extraction, battery IDs/condition groups, performance points, universal archive assembly.
-- **Catalysis/electrocatalysis:** Stages 1–3 are implemented and the controlled seven-paper Stage 3 benchmark is historically complete. Its strict validation and safety gates pass, but demonstrated Gold A recall and Gold B association gaps remain; Stage 4/freeze has not begun.
-- **Corrosion, mechanical/creep/fatigue, additive manufacturing, photovoltaics, thermoelectrics, membranes, semiconductors, biomaterials:** domain manifests, canonical properties and benchmark tasks exist; these remain generic/scaffold extractors.
+`deployment-code-only` contains the application runtime, deployment configuration,
+and tests. It does **not** publish the newer benchmark corpus PDFs, third-party
+source data, gold locks, or system-audit snapshots from the separate local
+scientific release candidate. It can be built and tested as an app, but this
+branch alone is not a reproducible scientific benchmark release. File-level
+redistribution review is required before publishing that separate material.
 
-See `CURRENT_STATUS.md` for the plain-language project status.
+## First five minutes
+
+1. Create a Python 3.11+ environment and install `requirements.txt`.
+2. Run `python -m pytest tests_v3 -q --basetemp=.pytest_tmp_local` for the
+   versioned regression suite (on Windows, use the venv interpreter explicitly).
+3. Start the read-only/research UI with `streamlit run platform_app.py` or the
+   API with `uvicorn synthex_platform.api:app --reload`.
+4. For a public single-server deployment, follow `docs/PUBLIC_DEPLOYMENT.md`.
+
+For a public, signed-in single-server deployment, use
+[`docs/PUBLIC_DEPLOYMENT.md`](docs/PUBLIC_DEPLOYMENT.md). Do not publish the
+local research checkout or expose the FastAPI operator routes as a shortcut.
+
+No credential is needed for package imports, scientific lock checks, or offline
+audit inspection. Provider extraction and paper discovery require explicit
+configuration and can create external calls; do not run live benchmark scripts
+without case- and model-specific authorization.
+
+## Repository map
+
+| Path | Responsibility |
+| --- | --- |
+| `synthex_platform/` | Core models, routing, extraction, provider adapters, archive/storage, jobs, API, and read-only audit projection. |
+| `platform_app.py` | Research UI and developer-only system audit/operator controls. |
+| `benchmark/` | Only fixtures inherited from the existing remote baseline; the unpublished scientific corpus is deliberately absent. |
+| `tests_v3/` | Current versioned regression suite; `tests/` and `synthex_v2/` retain legacy coverage/workflows. |
+| `docs/` | Architecture, debugging, and feature contracts. |
+| `data/archive/`, `data/jobs/`, `output/`, `.pytest_*/` | Local runtime state or test output; not source code. |
+
+Do not casually edit source/gold locks, frozen manifests, raw provider audit
+artifacts, or scientific admission rules. Such edits require a separately
+reviewed scientific change with hash and closure validation.
+
+See `CURRENT_STATUS.md` for historical project notes; it is not a claim that
+the unpublished scientific corpus is part of this branch.
 Visual Intelligence V1 is complete: native tables, provenance sidecars, figure understanding, generated charts, explicit OCR fallback, and calibrated graph digitization. These visual products remain outside canonical admission by default; see `docs/VISUAL_INTELLIGENCE_V1_STATUS.md`.
 
 ## Run the platform dashboard
 
 ```bash
-pip install -r requirements.txt
-streamlit run platform_app.py
+python -m venv .venv
+.venv/Scripts/python -m pip install -r requirements.txt  # Windows
+.venv/Scripts/streamlit run platform_app.py
 ```
 
-Use **Analyze Paper → Auto Detect** to route an uploaded PDF. Battery and catalysis papers are sent to their dedicated extractors.
+Use **Analyze Papers → Auto Detect** to route an uploaded PDF. Battery and catalysis papers use their dedicated extractors.
 
 The primary UI is organized around the researcher workflow: **Home**, **Analyze Paper**,
 **Discover Papers**, **Explore Results**, and **Visualize Data**. Validation catalogs,
@@ -90,8 +130,13 @@ uvicorn synthex_platform.api:app --reload
 ## Tests
 
 ```bash
-pytest -q
+python -m pytest tests_v3 -q --basetemp=.pytest_tmp_local
 ```
+
+Use a fresh, ignored basetemp path per independent run. The legacy pytest
+output trees formerly tracked at repository root are not fixtures. For
+secret-free debugging, leave provider keys unset and avoid `smoke_battery.py`,
+`smoke_gemini.py`, discovery searches, and live benchmark runners.
 
 ## Platform outputs
 

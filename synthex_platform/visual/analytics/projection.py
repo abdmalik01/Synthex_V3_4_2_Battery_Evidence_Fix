@@ -119,6 +119,37 @@ def _lineage_conditions(archive: SynthexArchive, material_id: str | None) -> dic
     return _condition_mapping(material_lineage_context(archive, [material_id]))
 
 
+def _device_conditions(archive: SynthexArchive, device_id: str | None) -> dict[str, Any]:
+    """Retain canonical device architecture and unambiguous fabrication context."""
+    if not device_id:
+        return {}
+    device = next((item for item in archive.devices if item.device_id == device_id), None)
+    if device is None:
+        return {}
+    context: dict[str, Any] = {
+        "device_type": device.device_type,
+        "device_layer_stack": list(device.configuration.get("layer_stack", [])),
+    }
+    if device.name:
+        context["device_name"] = device.name
+    for key, value in device.configuration.items():
+        if key != "layer_stack":
+            context[f"device_{key}"] = value
+
+    fabrication = [process for process in archive.processes if device_id in process.outputs]
+    candidates: dict[str, list[Any]] = {}
+    for process in fabrication:
+        for key, value in _conditions(process.parameters).items():
+            candidates.setdefault(key, []).append(value)
+    for key, values in candidates.items():
+        unique = list(dict.fromkeys(str(value) for value in values))
+        if len(unique) == 1:
+            context[f"device_process_{key}"] = values[0]
+        else:
+            context.setdefault("device_process_conflicts", {})[key] = values
+    return context
+
+
 def _matches(row: AnalyticMeasurementRow, query: AnalyticQuery) -> bool:
     if query.property_name and row.property_name != query.property_name:
         return False
@@ -174,6 +205,7 @@ def project_archives(archives: Iterable[SynthexArchive], query: AnalyticQuery | 
                     row_conditions = {
                         **parent_conditions,
                         **_lineage_conditions(archive, material_id),
+                        **_device_conditions(archive, experiment.device_id),
                         **point_conditions,
                     }
                     value = measurement.normalized_value if _numeric(measurement.normalized_value) is not None else measurement.value

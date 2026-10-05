@@ -9,10 +9,16 @@ older Synthex code can keep importing search_papers().
 from synthex_platform.retrieval import SerperClient
 
 
-def search_papers(category: str, num_results: int = 5, sensor_focus: str | None = None) -> list[dict]:
+def search_papers(
+    category: str,
+    num_results: int = 5,
+    sensor_focus: str | None = None,
+    *,
+    client: SerperClient | None = None,
+) -> list[dict]:
     focus = f" {sensor_focus}" if sensor_focus else ""
     query = f"{category}{focus} materials science PDF research paper"
-    response = SerperClient().search(query, num=num_results)
+    response = (client or SerperClient()).search(query, num=num_results)
     results = []
     for item in (response.data.get("organic", []) or [])[:num_results]:
         results.append({

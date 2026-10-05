@@ -1,114 +1,156 @@
 slug: membranes
 name: Membranes
-version: 1.0.0
-description: Membrane material, fabrication, morphology and gas/liquid separation
-  or transport performance.
+version: 1.2.0
+description: Condition- and specimen-linked membrane fabrication, architecture, transport,
+  separation, filtration, fouling and stability data.
 recommended_sections:
-- materials
 - membrane fabrication
-- characterization
-- permeation
-- filtration
-- results
+- membrane architecture
+- gas permeation
+- liquid filtration
+- pervaporation
+- fouling and cleaning
 process_vocabulary:
 - phase inversion
+- nonsolvent induced phase separation
 - interfacial polymerization
 - solution casting
+- spin coating
+- dip coating
+- kiss coating
 - electrospinning
-- coating
+- sol-gel
+- chemical vapor deposition
 - crosslinking
 - annealing
+- drying
 properties:
-- key: permeability
-  name: Permeability
+- key: gas_permeability
+  name: Gas permeability
   kind: transport
-  units:
-  - Barrer
-  - L/m2/h/bar
-  conditions:
-  - species
-  - temperature
-  - pressure
+  units: [Barrer, mol*m/(m^2*s*Pa)]
+  conditions: [species, test_mode, temperature, pressure_kind]
+  aliases: [permeability coefficient]
+- key: gas_permeance
+  name: Gas permeance
+  kind: transport
+  units: [GPU, mol/(m^2*s*Pa), 10^2 m_STP^3 m^-2 h^-1 bar^-1]
+  conditions: [species, test_mode, temperature, pressure_kind]
   aliases: []
-- key: permeance
-  name: Permeance
-  kind: transport
-  units:
-  - GPU
-  conditions:
-  - species
-  - temperature
-  - pressure
+- key: ideal_selectivity
+  name: Ideal pure-gas selectivity
+  kind: performance
+  units: [dimensionless]
+  conditions: [species_pair, test_mode, temperature]
+  aliases: [ideal separation factor, permselectivity coefficient]
+- key: mixed_gas_selectivity
+  name: Mixed-gas selectivity
+  kind: performance
+  units: [dimensionless]
+  conditions: [species_pair, test_mode, feed_composition, temperature]
   aliases: []
 - key: separation_factor
-  name: Separation factor
+  name: Pervaporation separation factor
   kind: performance
-  units:
-  - dimensionless
-  conditions:
-  - species_A
-  - species_B
+  units: [dimensionless]
+  conditions: [species_pair, feed_composition, temperature]
   aliases: []
-- key: selectivity
-  name: Membrane selectivity
-  kind: performance
-  units:
-  - dimensionless
-  conditions:
-  - species_A
-  - species_B
-  aliases: []
-- key: flux
-  name: Flux
+- key: liquid_flux
+  name: Liquid permeation flux
   kind: transport
-  units:
-  - LMH
-  - kg/m2/h
-  conditions:
-  - feed
-  - pressure
-  aliases: []
-- key: rejection
-  name: Rejection
+  units: [LMH, L/m^2/h, kg/m^2/h, mol/m^2/s]
+  conditions: [feed, test_mode, transmembrane_pressure]
+  aliases: [water flux, permeation flux]
+- key: liquid_permeance
+  name: Liquid permeance
+  kind: transport
+  units: [L/m^2/h/bar, kg/m^2/h/bar]
+  conditions: [feed, test_mode, transmembrane_pressure]
+  aliases: [water permeance]
+- key: solute_rejection
+  name: Solute rejection
   kind: performance
-  units:
-  - '%'
-  conditions:
-  - solute
-  - pressure
+  units: ['%', fraction]
+  conditions: [solute, feed_concentration, test_mode, transmembrane_pressure]
+  aliases: [salt rejection]
+- key: retention
+  name: Source-reported retention
+  kind: performance
+  units: ['%', fraction]
+  conditions: [solute, feed_concentration, test_mode, transmembrane_pressure]
   aliases: []
-- key: water_contact_angle
-  name: Water contact angle
-  kind: surface
-  units:
-  - degree
-  conditions: []
-  aliases: []
-- key: thickness
-  name: Membrane thickness
+- key: initial_flux
+  name: Initial clean-water flux
+  kind: fouling
+  units: [g/m^2/s, kg/m^2/h]
+  conditions: [feed, test_mode, transmembrane_pressure]
+  aliases: [JWF]
+- key: fouled_flux
+  name: Flux under foulant feed
+  kind: fouling
+  units: [g/m^2/s, kg/m^2/h]
+  conditions: [feed, foulant, test_mode, transmembrane_pressure]
+  aliases: [JHA]
+- key: recovered_flux
+  name: Post-cleaning recovered flux
+  kind: fouling
+  units: [g/m^2/s, kg/m^2/h]
+  conditions: [feed, foulant, cleaning_method, transmembrane_pressure]
+  aliases: [JWF2]
+- key: flux_recovery_ratio
+  name: Flux recovery ratio
+  kind: fouling
+  units: ['%']
+  conditions: [foulant, cleaning_method]
+  aliases: [FRR]
+- key: relative_flux_reduction
+  name: Relative flux reduction
+  kind: fouling
+  units: ['%']
+  conditions: [foulant]
+  aliases: [RFR]
+- key: membrane_thickness
+  name: Whole membrane thickness
   kind: structure
-  units:
-  - um
-  conditions: []
+  units: [um, nm]
+  conditions: [thickness_scope]
   aliases: []
+- key: selective_layer_thickness
+  name: Selective-layer thickness
+  kind: structure
+  units: [um, nm]
+  conditions: [thickness_scope]
+  aliases: []
+- key: calculated_membrane_permeability_coefficient
+  name: Calculated membrane permeability coefficient
+  kind: computational_transport
+  units: [cm/s]
+  conditions: [species, temperature, simulation_method, lipid_composition]
+  aliases: [calculated pd,mem]
+- key: calculated_apparent_diffusion_coefficient
+  name: Calculated apparent diffusion coefficient
+  kind: computational_transport
+  units: [10^-6 cm^2/s]
+  conditions: [species, temperature, simulation_method, lipid_composition]
+  aliases: [calculated Dapp]
 benchmarks:
-- id: membranes.permeability-selectivity_prediction
-  name: Permeability-selectivity prediction
-  target: permeability
-  group_by:
-  - polymer
-  - gas
-- id: membranes.rejection_prediction
-  name: Rejection prediction
-  target: rejection
-  group_by:
-  - membrane
-  - solute
+- id: membranes.gas_transport
+  name: Specimen- and species-linked gas transport
+  target: gas_permeability
+  group_by: [membrane_specimen, species, test_mode, temperature, pressure]
+- id: membranes.liquid_separation
+  name: Solute-specific liquid separation
+  target: solute_rejection
+  group_by: [membrane_specimen, solute, feed_concentration, pressure]
+- id: membranes.fouling_recovery
+  name: Fouling and cleaning recovery
+  target: flux_recovery_ratio
+  group_by: [membrane_specimen, foulant, cleaning_method]
 graph_relations:
-- derived_from
+- input_to
+- produces
 - processed_by
 - tested_in
 - calculated_for
-- has_property
-- compared_with
+- layer_of
 - reported_by

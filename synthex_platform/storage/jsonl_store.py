@@ -1,28 +1,28 @@
 from __future__ import annotations
 
-import json
 from pathlib import Path
 from typing import Iterable
 from synthex_platform.core.archive import SynthexArchive
+from .atomic_jsonl import JsonlLog
 
 
 class JsonlArchiveStore:
     def __init__(self, path: str | Path):
         self.path = Path(path)
-        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.log = JsonlLog(self.path)
 
     def append(self, archive: SynthexArchive) -> None:
-        with self.path.open("a", encoding="utf-8") as f:
-            f.write(archive.model_dump_json(exclude_none=True) + "\n")
+        self.append_unique(archive)
+
+    def append_unique(self, archive: SynthexArchive) -> bool:
+        return self.log.append(
+            archive.model_dump(mode="json", exclude_none=True),
+            identity=lambda row: row["metadata"]["archive_id"],
+        )
 
     def iter_archives(self) -> Iterable[SynthexArchive]:
-        if not self.path.exists():
-            return
-        with self.path.open("r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    yield SynthexArchive.model_validate_json(line)
+        for row in self.log.read_all():
+            yield SynthexArchive.model_validate(row)
 
     def get(self, archive_id: str) -> SynthexArchive | None:
         for archive in self.iter_archives() or []:
@@ -32,3 +32,16 @@ class JsonlArchiveStore:
 
     def count(self) -> int:
         return sum(1 for _ in (self.iter_archives() or []))
+
+    def rebuild_index(self) -> dict[str, int]:
+        """Derived identity-to-ordinal index; the JSONL log stays authoritative."""
+        index: dict[str, int] = {}
+        for ordinal, archive in enumerate(self.iter_archives()):
+            identifier = archive.metadata.archive_id
+            if identifier in index:
+                raise ValueError(f"duplicate historical archive_id: {identifier}")
+            index[identifier] = ordinal
+        return index
+
+    def recover_trailing_partial(self) -> dict:
+        return self.log.recover_trailing_partial()

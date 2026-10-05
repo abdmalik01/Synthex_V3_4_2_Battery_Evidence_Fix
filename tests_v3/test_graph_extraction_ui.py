@@ -17,12 +17,18 @@ from synthex_platform.graph_extraction_ui import (
 )
 
 
-def test_home_hides_internal_saved_archive_counter():
+def test_home_keeps_product_workflow_and_hides_internal_audit():
     source = Path("platform_app.py").read_text(encoding="utf-8")
     home = source.split('elif page == "Discover Papers":', 1)[0]
     assert 'metric("Saved archives"' not in home
-    assert 'metric("Scientific domains"' in home
-    assert 'metric("Batch capacity"' in home
+    assert 'st.button("Analyze papers"' in home
+    assert 'st.button("Discover papers"' in home
+    for internal in (
+        'Scientific coverage', 'Audited domains', 'metric("Frozen"',
+        'Benchmark cases', 'Standardized outputs', 'Recent durable jobs',
+        'No durable jobs recorded yet', 'See the system audit for known limitations',
+    ):
+        assert internal not in home
 
 
 def test_graph_workspace_uses_researcher_facing_label_and_renderer():

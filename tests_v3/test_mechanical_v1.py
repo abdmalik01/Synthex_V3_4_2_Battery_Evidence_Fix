@@ -244,6 +244,17 @@ def test_mechanical_numeric_and_series_metadata_guards():
     assert mechanical_admission_decision(wrong_unit, modality="experimental").reason == "incompatible_unit"
 
 
+def test_mechanical_printed_grouped_cycles_and_scientific_creep_rate_are_numeric():
+    grouped = _measurement("cycles_to_failure", "1,727,054", 1727054, "cycles")
+    assert mechanical_admission_decision(grouped, modality="experimental").admitted
+    wrong_grouped = _measurement("cycles_to_failure", "1,727,054", 1727055, "cycles")
+    assert mechanical_admission_decision(wrong_grouped, modality="experimental").reason == "parsed_value_mismatch"
+    rate = _measurement("minimum_creep_rate", "1.1 × 10^-10 s^-1", 1.1e-10, "s^-1")
+    assert mechanical_admission_decision(rate, modality="experimental").admitted
+    wrong_rate = _measurement("minimum_creep_rate", "1.1 × 10^-10 s^-1", 1.1e-9, "s^-1")
+    assert mechanical_admission_decision(wrong_rate, modality="experimental").reason == "parsed_value_mismatch"
+
+
 def test_mechanical_missing_sample_association_is_quarantined():
     draft = _focal_draft(outputs=[_measurement("yield_strength", "512 MPa", 512, "MPa")])
     draft.experiments[0].material_refs = []

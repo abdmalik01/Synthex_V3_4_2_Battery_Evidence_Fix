@@ -1,0 +1,4 @@
+{$SYNTHEX_DOMAIN} {
+    encode zstd gzip
+    reverse_proxy synthex:8501
+}

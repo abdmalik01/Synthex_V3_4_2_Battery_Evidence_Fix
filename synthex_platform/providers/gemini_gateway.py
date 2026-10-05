@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 from collections import Counter
+from contextvars import ContextVar
 from datetime import datetime, timezone
 from enum import Enum
 import os
-import re
 from time import perf_counter
 from typing import Any, Iterable, Literal
+
+from .contracts import redact_secrets
 
 try:
     from google import genai
@@ -16,19 +18,13 @@ except ImportError:  # pragma: no cover - permits offline platform use
     genai = None
 
 
-# Production fallback order deliberately spans model families instead of relying only on
-# neighbouring Flash releases. Benchmark mode remains pinned to the requested model.
-DEFAULT_GEMINI_MODELS = (
-    "gemini-3.8-flash",
-    "gemini-3.7-flash",
-    "gemini-3.6-flash",
-    "gemini-3.5-flash",
-    "gemini-3.5-flash-lite",
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-2.5-pro",
-)
+# Models must be explicitly configured or obtained from ``models.list``. Synthex never
+# fabricates a provider model catalogue.
+DEFAULT_GEMINI_MODELS: tuple[str, ...] = ()
 MAX_GEMINI_CREDENTIAL_SLOTS = 10
+
+# Set only by the live-job coordinator. Benchmark and CLI paths remain unchanged.
+provider_attempt_observer: ContextVar[Any | None] = ContextVar("synthex_provider_attempt_observer", default=None)
 
 
 class ProviderFailureClass(str, Enum):
@@ -52,13 +48,8 @@ _CREDENTIAL_FAILOVER_ELIGIBLE = {
     ProviderFailureClass.quota,
     ProviderFailureClass.authentication,
 }
-_SECRET_PATTERN = re.compile(
-    r"(?i)(api[_ -]?key|key|credential|token)(\s*[=:]\s*)([^\s,;'\"}]+)"
-)
-
-
 def _safe_message(error: BaseException) -> str:
-    return _SECRET_PATTERN.sub(r"\1\2[REDACTED]", str(error))[:500]
+    return redact_secrets(str(error))[:500]
 
 
 def classify_provider_failure(error: BaseException) -> ProviderFailureClass:
@@ -99,10 +90,12 @@ def configured_gemini_models(
     fallback_models: Iterable[str] | None = None,
 ) -> tuple[str, ...]:
     """Resolve one preferred model followed by an approved deterministic fallback chain."""
-    preferred = preferred_model or os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+    preferred = preferred_model or os.getenv("GEMINI_MODEL")
+    if not preferred:
+        raise ValueError("GEMINI_MODEL must be explicitly configured or runtime-discovered.")
     if fallback_models is None:
         configured = os.getenv("GEMINI_FALLBACK_MODELS")
-        fallback_models = configured.split(",") if configured is not None else DEFAULT_GEMINI_MODELS
+        fallback_models = configured.split(",") if configured else DEFAULT_GEMINI_MODELS
     return _deduplicate_models((preferred, *fallback_models))
 
 
@@ -235,9 +228,14 @@ class GeminiGateway:
                 raise last_credential_error
             model_should_fallback = False
             for credential_slot, client in credentials:
+                observer = provider_attempt_observer.get()
+                replaying = observer is not None and hasattr(observer, "replay")
+                token = observer.before(model=model, phase="primary", contents=contents, config=config) if observer and not replaying else None
                 try:
-                    response = client.models.generate_content(model=model, contents=contents, config=config)
+                    response = observer.replay(model=model, phase="primary", contents=contents, config=config) if replaying else client.models.generate_content(model=model, contents=contents, config=config)
                 except Exception as error:
+                    if observer and not replaying:
+                        observer.failed(token, error)
                     failure_class = classify_provider_failure(error)
                     self._record(
                         model=model,
@@ -255,6 +253,8 @@ class GeminiGateway:
                         model_should_fallback = True
                         break
                     raise
+                if observer and not replaying:
+                    observer.succeeded(token, response)
                 self.actual_model = model
                 self.actual_credential_slot = credential_slot
                 self.client = client
@@ -279,9 +279,14 @@ class GeminiGateway:
         if not credentials and self.actual_credential_slot:
             credentials = tuple(item for item in self._credential_clients if item[0] == self.actual_credential_slot)
         for credential_slot, client in credentials:
+            observer = provider_attempt_observer.get()
+            replaying = observer is not None and hasattr(observer, "replay")
+            token = observer.before(model=model, phase=phase, contents=contents, config=config) if observer and not replaying else None
             try:
-                response = client.models.generate_content(model=model, contents=contents, config=config)
+                response = observer.replay(model=model, phase=phase, contents=contents, config=config) if replaying else client.models.generate_content(model=model, contents=contents, config=config)
             except Exception as error:
+                if observer and not replaying:
+                    observer.failed(token, error)
                 failure_class = classify_provider_failure(error)
                 self._record(
                     model=model,
@@ -296,6 +301,8 @@ class GeminiGateway:
                     last_credential_error = error
                     continue
                 raise
+            if observer and not replaying:
+                observer.succeeded(token, response)
             self.client = client
             self.actual_credential_slot = credential_slot
             self._record(
@@ -370,6 +377,41 @@ def probe_gemini_models(client: Any, models: Iterable[str]) -> tuple[dict[str, A
             "latency_seconds": round(perf_counter() - started, 3),
         })
     return tuple(results)
+
+
+def discover_gemini_models(client: Any) -> tuple[dict[str, Any], ...]:
+    """Return the exact model IDs and declared capabilities exposed by this account."""
+    discovered = []
+    for model in client.models.list():
+        name = getattr(model, "name", None)
+        if not name:
+            continue
+        actions = tuple(getattr(model, "supported_actions", None) or ())
+        discovered.append({
+            "model_id": name,
+            "display_name": getattr(model, "display_name", None),
+            "version": getattr(model, "version", None),
+            "supported_actions": list(actions),
+            "generate_content": any(
+                str(action).casefold().replace("_", "") == "generatecontent"
+                for action in actions
+            ),
+            "input_token_limit": getattr(model, "input_token_limit", None),
+            "output_token_limit": getattr(model, "output_token_limit", None),
+        })
+    return tuple(discovered)
+
+
+def is_general_text_gemini_model(model: dict[str, Any]) -> bool:
+    """Select discovered general-text Gemini candidates without inventing IDs."""
+    model_id = str(model.get("model_id") or "").casefold()
+    if not model_id.startswith("models/gemini-") or not model.get("generate_content"):
+        return False
+    specialized_markers = (
+        "-tts", "-image", "transcribe", "robotics", "computer-use",
+        "-live", "embedding", "native-audio",
+    )
+    return not any(marker in model_id for marker in specialized_markers)
 
 
 def probe_configured_gemini(

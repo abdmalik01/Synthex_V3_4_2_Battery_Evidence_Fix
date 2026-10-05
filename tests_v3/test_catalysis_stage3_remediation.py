@@ -243,6 +243,9 @@ def test_mocked_comparative_prose_preserves_both_catalyst_condition_metrics_end_
     extractor = CatalysisGeminiExtractor.__new__(CatalysisGeminiExtractor)
     extractor.registry = DomainRegistry()
     extractor.model = "offline-fake"
+    extractor.requested_model = extractor.model
+    extractor.fallback_models = ()
+    extractor.provider_mode = "benchmark"
     extractor.client = SimpleNamespace(models=FakeModels())
     document = extractor.extract_text(source_bundle.page_marked_text(), source_bundle=source_bundle)
 

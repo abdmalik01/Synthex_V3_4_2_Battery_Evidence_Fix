@@ -32,35 +32,25 @@ class _Response:
     text = "OK"
 
 
-def test_default_chain_spans_flash_lite_and_25_family(monkeypatch):
-    # The default-chain regression must not inherit a developer's local .env override.
-    # Environment overrides are tested separately by configured_gemini_models callers.
+def test_model_chain_requires_explicit_runtime_configuration(monkeypatch):
     monkeypatch.delenv("GEMINI_MODEL", raising=False)
     monkeypatch.delenv("GEMINI_FALLBACK_MODELS", raising=False)
 
-    assert DEFAULT_GEMINI_MODELS == (
-        "gemini-3.8-flash",
-        "gemini-3.7-flash",
-        "gemini-3.6-flash",
-        "gemini-3.5-flash",
-        "gemini-3.5-flash-lite",
-        "gemini-2.5-flash",
-        "gemini-2.5-flash-lite",
-        "gemini-2.5-pro",
-    )
-    assert configured_gemini_models()[0] == "gemini-3.8-flash"
+    assert DEFAULT_GEMINI_MODELS == ()
+    with pytest.raises(ValueError, match="explicitly configured"):
+        configured_gemini_models()
 
 
 def test_production_falls_back_once_per_model_until_success():
     client = _Client({
-        "gemini-3.8-flash": RuntimeError("503 provider unavailable"),
-        "gemini-3.7-flash": RuntimeError("model not found 404"),
-        "gemini-3.6-flash": _Response(),
+        "model-a": RuntimeError("503 provider unavailable"),
+        "model-b": RuntimeError("model not found 404"),
+        "model-c": _Response(),
     })
     gateway = GeminiGateway(
         client=client,
-        preferred_model="gemini-3.8-flash",
-        fallback_models=("gemini-3.7-flash", "gemini-3.6-flash"),
+        preferred_model="model-a",
+        fallback_models=("model-b", "model-c"),
         mode="production",
         credential_clients=(),
     )
@@ -68,8 +58,8 @@ def test_production_falls_back_once_per_model_until_success():
     result = gateway.generate_primary(contents="x", config={})
 
     assert isinstance(result, _Response)
-    assert client.models.calls == ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash"]
-    assert gateway.actual_model == "gemini-3.6-flash"
+    assert client.models.calls == ["model-a", "model-b", "model-c"]
+    assert gateway.actual_model == "model-c"
 
 
 def test_unavailable_error_exposes_secret_safe_per_model_diagnostics():

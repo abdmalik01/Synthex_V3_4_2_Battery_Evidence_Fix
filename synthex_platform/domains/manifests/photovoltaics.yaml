@@ -1,112 +1,265 @@
 slug: photovoltaics
 name: Photovoltaics
-version: 1.0.0
-description: Absorber/device fabrication, architecture, optoelectronic properties
-  and photovoltaic performance.
+version: 1.3.0
+description: Device-linked photovoltaic architecture, fabrication, performance,
+  spectral response, stability, and computational results.
 recommended_sections:
-- materials
+- materials and methods
 - device fabrication
-- characterization
-- photovoltaic measurements
-- stability
-- results
+- device architecture
+- photovoltaic characterization
+- spectral response
+- operational stability
+- results and discussion
 process_vocabulary:
+- chemical-mechanical polishing
 - spin coating
 - blade coating
-- evaporation
+- slot-die coating
+- thermal evaporation
 - sputtering
-- CVD
+- chemical vapor deposition
 - annealing
 - encapsulation
+device_types: [solar_cell, photovoltaic_module]
+layer_roles: [substrate, transparent_electrode, etl, absorber, htl, electrode, buffer, interconnect, encapsulation]
+scientific_contract:
+  performance_requires: [device association, illumination_spectrum, irradiance]
+  spectral_response_requires: [wavelength]
+  stability_retention_requires: [aging_time]
+  evidence_requires: [focal_work ownership, value-specific verbatim evidence, page or official source-data cell locator, locator or table identifier]
+  safeguards:
+  - do not infer active area from current and current density
+  - do not merge distinct devices or processing variants
+  - do not convert percent-valued properties into fractions
+  - preserve reported scan direction and measurement protocol
+  - preserve ordered layer roles independently of material identity
+  - computational outputs remain CalculationRecords and use computational property identities
+  - explicitly labelled reviews retain cited values only as noncanonical audit candidates
 properties:
 - key: power_conversion_efficiency
   name: Power conversion efficiency
   kind: performance
-  units:
-  - '%'
-  conditions:
-  - illumination
-  - scan_direction
-  - area
-  aliases: []
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance, scan_direction, active_area]
+  aliases: [PCE, efficiency]
 - key: open_circuit_voltage
   name: Open-circuit voltage
   kind: performance
-  units:
-  - V
-  conditions:
-  - illumination
-  aliases: []
+  units: [V, mV]
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [Voc, V_oc]
 - key: short_circuit_current_density
   name: Short-circuit current density
   kind: performance
-  units:
-  - mA/cm2
-  conditions:
-  - illumination
-  aliases: []
+  units: [mA/cm2, A/m2]
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [Jsc, J_sc]
+- key: short_circuit_current
+  name: Short-circuit current
+  kind: performance
+  units: [A, mA, uA]
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [Isc, I_sc]
 - key: fill_factor
   name: Fill factor
   kind: performance
-  units:
-  - '%'
-  conditions:
-  - illumination
-  aliases: []
-- key: band_gap
-  name: Band gap
-  kind: optoelectronic
-  units:
-  - eV
-  conditions:
-  - method
-  aliases: []
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [FF]
+- key: maximum_power
+  name: Maximum power
+  kind: performance
+  units: [W, mW, uW]
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [Pmax, P_max]
+- key: voltage_at_maximum_power
+  name: Voltage at maximum power point
+  kind: performance
+  units: [V, mV]
+  conditions: [illumination_spectrum, irradiance]
+  aliases: [Vmp, V_mpp]
+- key: stabilized_power_conversion_efficiency
+  name: Stabilized power conversion efficiency
+  kind: performance
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance, measurement_mode]
+  aliases: [stabilized PCE]
+- key: swept_power_conversion_efficiency
+  name: Swept current-voltage power conversion efficiency
+  kind: performance
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance, scan_direction]
+  aliases: [swept PCE]
+- key: initial_power_conversion_efficiency
+  name: Initial power conversion efficiency
+  kind: stability
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance, aging_state]
+  aliases: [initial PCE]
+- key: aged_power_conversion_efficiency
+  name: Aged power conversion efficiency
+  kind: stability
+  units: ['%']
+  conditions: [illumination_spectrum, irradiance, aging_time, aging_state]
+  aliases: [aged PCE, final PCE]
 - key: external_quantum_efficiency
   name: External quantum efficiency
-  kind: optoelectronic
-  units:
-  - '%'
-  conditions:
-  - wavelength
-  aliases: []
-- key: carrier_lifetime
-  name: Carrier lifetime
-  kind: transport
-  units:
-  - ns
-  - us
-  conditions:
-  - method
-  aliases: []
-- key: stability_retention
-  name: PCE retention
+  kind: spectral_response
+  units: ['%']
+  conditions: [wavelength]
+  aliases: [EQE]
+- key: incident_photon_to_current_efficiency
+  name: Incident photon-to-current efficiency
+  kind: spectral_response
+  units: ['%']
+  conditions: [wavelength]
+  aliases: [IPCE]
+- key: eqe_integrated_current_density
+  name: Current density integrated from an EQE spectrum
+  kind: spectral_summary
+  units: [mA/cm2, A/m2]
+  conditions: [spectral_range]
+  aliases: [integrated EQE current density]
+- key: retained_efficiency
+  name: Retained efficiency
   kind: stability
-  units:
-  - '%'
-  conditions:
-  - time
-  - temperature
-  - humidity
-  - illumination
+  units: ['%']
+  conditions: [aging_time, atmosphere, humidity, temperature, illumination_spectrum]
+  aliases: [PCE retention, efficiency retention]
+- key: degradation_rate
+  name: Degradation rate
+  kind: stability
+  units: ['%/h', '%/day', 1/h, 1/day]
+  conditions: [aging_protocol]
   aliases: []
+- key: t80
+  name: Time to 80 percent retained efficiency
+  kind: stability
+  units: [h, day]
+  conditions: [aging_protocol]
+  aliases: [T80]
+- key: t90
+  name: Time to 90 percent retained efficiency
+  kind: stability
+  units: [h, day]
+  conditions: [aging_protocol]
+  aliases: [T90]
+- key: active_area
+  name: Active device area
+  kind: measurement_context
+  units: [cm2, mm2, m2]
+  conditions: []
+  aliases: [active area]
+- key: aperture_area
+  name: Aperture area
+  kind: measurement_context
+  units: [cm2, mm2, m2]
+  conditions: []
+  aliases: [mask area]
+- key: irradiance
+  name: Irradiance
+  kind: measurement_context
+  units: [mW/cm2, W/m2]
+  conditions: [illumination_spectrum]
+  aliases: [light intensity]
+- key: measurement_temperature
+  name: Measurement temperature
+  kind: measurement_context
+  units: [K, C]
+  conditions: []
+  aliases: []
+- key: scan_rate
+  name: Voltage scan rate
+  kind: measurement_context
+  units: [V/s, mV/s]
+  conditions: [scan_direction]
+  aliases: []
+- key: processing_temperature
+  name: Processing temperature
+  kind: fabrication
+  units: [K, C]
+  conditions: [process_step]
+  aliases: [annealing temperature]
+- key: processing_time
+  name: Processing time
+  kind: fabrication
+  units: [s, min, h]
+  conditions: [process_step]
+  aliases: [treatment time]
+- key: film_thickness
+  name: Film thickness
+  kind: architecture
+  units: [nm, um, mm]
+  conditions: [layer_role]
+  aliases: [thickness]
+- key: solution_concentration
+  name: Solution concentration
+  kind: fabrication
+  units: [M, mM, mg/ml, 'wt%', '%']
+  conditions: [process_step]
+  aliases: [concentration]
+- key: spin_speed
+  name: Spin speed
+  kind: fabrication
+  units: [rpm]
+  conditions: [process_step]
+  aliases: [rotation speed]
+- key: calculated_bandgap
+  name: Calculated bandgap
+  kind: computational
+  units: [eV, meV]
+  conditions: [method]
+  aliases: [computed bandgap]
+- key: calculated_absorption_coefficient
+  name: Calculated absorption coefficient
+  kind: computational
+  units: [cm^-1, m^-1]
+  conditions: [method, photon_energy]
+  aliases: [computed absorption coefficient]
+- key: carrier_effective_mass
+  name: Calculated carrier effective mass
+  kind: computational
+  units: [m0, m_e, dimensionless]
+  conditions: [carrier, method]
+  aliases: [effective mass]
+- key: defect_formation_energy
+  name: Calculated defect formation energy
+  kind: computational
+  units: [eV]
+  conditions: [defect, method]
+  aliases: [defect energy]
+- key: simulated_power_conversion_efficiency
+  name: Simulated power conversion efficiency
+  kind: computational
+  units: ['%']
+  conditions: [simulation_model]
+  aliases: [simulated PCE]
+- key: simulated_open_circuit_voltage
+  name: Simulated open-circuit voltage
+  kind: computational
+  units: [V, mV]
+  conditions: [simulation_model]
+  aliases: [simulated Voc]
+- key: predicted_short_circuit_current_density
+  name: Predicted short-circuit current density
+  kind: computational
+  units: [mA/cm2, A/m2]
+  conditions: [simulation_model]
+  aliases: [predicted Jsc, simulated Jsc]
+- key: simulated_fill_factor
+  name: Simulated fill factor
+  kind: computational
+  units: ['%']
+  conditions: [simulation_model]
+  aliases: [simulated FF]
 benchmarks:
 - id: photovoltaics.pce_prediction
-  name: PCE prediction
+  name: Device-linked PCE prediction
   target: power_conversion_efficiency
-  group_by:
-  - absorber
-  - architecture
+  group_by: [device_id, absorber, architecture, illumination_spectrum]
 - id: photovoltaics.stability_prediction
-  name: Stability prediction
-  target: stability_retention
-  group_by:
-  - absorber
-  - encapsulation
-graph_relations:
-- derived_from
-- processed_by
-- tested_in
-- calculated_for
-- has_property
-- compared_with
-- reported_by
+  name: Device-linked stability prediction
+  target: retained_efficiency
+  group_by: [device_id, absorber, encapsulation, aging_protocol]
+graph_relations: [layer_of, input_to, produces, processed_by, tested_in, calculated_for, has_property, compared_with, reported_by]

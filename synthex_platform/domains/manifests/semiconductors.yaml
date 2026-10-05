@@ -1,129 +1,76 @@
 slug: semiconductors
 name: Semiconductors
-version: 1.0.0
-description: Electronic/optical materials, growth, doping, defects, transport and
-  device metrics.
+version: 1.1.0
+description: Specimen-linked bulk, film, wafer, heterostructure and device electronic, optical and transport evidence.
 recommended_sections:
-- growth
-- fabrication
-- structural characterization
-- electrical characterization
-- optical characterization
-- device results
-- DFT
+  - composition and doping
+  - growth and fabrication
+  - film wafer and device architecture
+  - electrical and Hall characterization
+  - optical and photoluminescence characterization
+  - computational electronic structure
 process_vocabulary:
-- MBE
-- MOCVD
-- CVD
-- sputtering
-- ALD
-- ion implantation
-- diffusion doping
-- annealing
-- lithography
+  - molecular beam epitaxy
+  - metal-organic chemical vapor deposition
+  - aerosol-assisted chemical vapor deposition
+  - atomic layer deposition
+  - reactive RF sputtering
+  - magnetron sputtering
+  - ion implantation
+  - diffusion doping
+  - annealing
+  - tempering
+  - lithography
 properties:
-- key: band_gap
-  name: Band gap
-  kind: electronic
-  units:
-  - eV
-  conditions:
-  - temperature
-  - method
-  aliases: []
-- key: electron_mobility
-  name: Electron mobility
-  kind: transport
-  units:
-  - cm2/V/s
-  conditions:
-  - temperature
-  - carrier_density
-  aliases: []
-- key: hole_mobility
-  name: Hole mobility
-  kind: transport
-  units:
-  - cm2/V/s
-  conditions:
-  - temperature
-  - carrier_density
-  aliases: []
-- key: carrier_concentration
-  name: Carrier concentration
-  kind: transport
-  units:
-  - 1/cm3
-  conditions:
-  - temperature
-  - carrier_type
-  aliases: []
-- key: resistivity
-  name: Resistivity
-  kind: transport
-  units:
-  - ohm*cm
-  conditions:
-  - temperature
-  aliases: []
-- key: breakdown_field
-  name: Breakdown field
-  kind: device
-  units:
-  - MV/cm
-  conditions:
-  - temperature
-  aliases: []
-- key: dielectric_constant
-  name: Dielectric constant
-  kind: electronic
-  units:
-  - dimensionless
-  conditions:
-  - frequency
-  aliases: []
-- key: defect_formation_energy
-  name: Defect formation energy
-  kind: calculation
-  units:
-  - eV
-  conditions:
-  - defect
-  - charge_state
-  - fermi_level
-  aliases: []
-- key: effective_mass
-  name: Effective mass
-  kind: calculation
-  units:
-  - m_e
-  conditions:
-  - carrier
-  - direction
-  aliases: []
+  - {key: band_gap, name: Source-reported generic band gap, kind: electronic, units: [eV], conditions: [method, measurement_temperature], aliases: []}
+  - {key: electronic_band_gap, name: Electronic band gap, kind: electronic, units: [eV], conditions: [method, measurement_temperature], aliases: []}
+  - {key: optical_band_gap, name: Optical band gap, kind: optical, units: [eV], conditions: [derivation_basis, measurement_temperature, substrate], aliases: [apparent optical band gap]}
+  - {key: work_function, name: Work function, kind: electronic, units: [eV], conditions: [method, surface], aliases: []}
+  - {key: electron_affinity, name: Electron affinity, kind: electronic, units: [eV], conditions: [method, surface], aliases: []}
+  - {key: ionization_energy, name: Ionization energy, kind: electronic, units: [eV], conditions: [method], aliases: []}
+  - {key: fermi_level, name: Fermi level, kind: electronic, units: [eV], conditions: [reference_energy, method], aliases: []}
+  - {key: effective_mass, name: Effective mass, kind: electronic, units: [m_e], conditions: [carrier_type, direction, method], aliases: []}
+  - {key: calculated_band_gap, name: Calculated band gap, kind: computation, units: [eV], conditions: [functional, method], aliases: []}
+  - {key: calculated_effective_mass, name: Calculated effective mass, kind: computation, units: [m_e], conditions: [carrier_type, direction, method], aliases: []}
+  - {key: defect_formation_energy, name: Defect formation energy, kind: computation, units: [eV], conditions: [defect, charge_state, fermi_level], aliases: []}
+  - {key: activation_energy, name: Activation energy, kind: transport, units: [eV], conditions: [method, temperature_range], aliases: []}
+  - {key: dopant_concentration, name: Dopant concentration, kind: composition, units: [cm^-3, m^-3], conditions: [dopant], aliases: []}
+  - {key: carrier_concentration, name: Carrier concentration, kind: transport, units: [cm^-3, m^-3, '×10^20 cm^-3'], conditions: [carrier_type, measurement_temperature], aliases: []}
+  - {key: activated_carrier_concentration, name: Activated carrier concentration, kind: transport, units: [cm^-3, m^-3], conditions: [carrier_type, activation_method], aliases: []}
+  - {key: electron_concentration, name: Electron concentration, kind: transport, units: [cm^-3, m^-3], conditions: [measurement_temperature], aliases: []}
+  - {key: hole_concentration, name: Hole concentration, kind: transport, units: [cm^-3, m^-3], conditions: [measurement_temperature], aliases: []}
+  - {key: carrier_mobility, name: Carrier mobility, kind: transport, units: [cm^2/V/s, m^2/V/s], conditions: [carrier_type, method, measurement_temperature], aliases: []}
+  - {key: electron_mobility, name: Electron mobility, kind: transport, units: [cm^2/V/s, m^2/V/s], conditions: [method, measurement_temperature], aliases: []}
+  - {key: hole_mobility, name: Hole mobility, kind: transport, units: [cm^2/V/s, m^2/V/s], conditions: [method, measurement_temperature], aliases: []}
+  - {key: hall_mobility, name: Hall mobility, kind: transport, units: [cm^2/V/s, m^2/V/s], conditions: [carrier_type, measurement_temperature], aliases: []}
+  - {key: conductivity, name: Electrical conductivity, kind: transport, units: [S/cm, S/m], conditions: [measurement_temperature], aliases: []}
+  - {key: resistivity, name: Bulk electrical resistivity, kind: transport, units: [Ω·cm, Ω·m, '×10^-3 Ω·cm'], conditions: [measurement_temperature], aliases: []}
+  - {key: sheet_resistance, name: Sheet resistance, kind: transport, units: [Ω/sq], conditions: [film_thickness, measurement_temperature], aliases: []}
+  - {key: hall_coefficient, name: Hall coefficient, kind: transport, units: [cm^3/C, m^3/C, '×10^-2 cm^3/C'], conditions: [measurement_temperature], aliases: []}
+  - {key: threshold_voltage, name: Transistor threshold voltage, kind: device, units: [V, mV], conditions: [device_id, sweep_direction], aliases: []}
+  - {key: on_off_ratio, name: On/off current ratio, kind: device, units: [dimensionless], conditions: [device_id, bias], aliases: []}
+  - {key: subthreshold_swing, name: Subthreshold swing, kind: device, units: [mV/dec, V/dec], conditions: [device_id], aliases: []}
+  - {key: contact_resistance, name: Contact resistance, kind: device, units: [Ω, Ω·cm, Ω·mm], conditions: [device_id, contact_geometry], aliases: []}
+  - {key: breakdown_voltage, name: Breakdown voltage, kind: device, units: [V], conditions: [device_id], aliases: []}
+  - {key: breakdown_field, name: Breakdown field, kind: device, units: [V/cm, kV/cm, MV/cm], conditions: [device_id, thickness], aliases: []}
+  - {key: current_density, name: Current density, kind: device, units: [A/cm^2, mA/cm^2], conditions: [device_id, bias], aliases: []}
+  - {key: absorption_coefficient, name: Absorption coefficient, kind: optical, units: [cm^-1, m^-1], conditions: [wavelength, method], aliases: []}
+  - {key: absorption_edge, name: Absorption edge, kind: optical, units: [nm, µm], conditions: [method], aliases: []}
+  - {key: photoluminescence_peak, name: Photoluminescence main peak, kind: optical, units: [eV, nm], conditions: [measurement_temperature, excitation_wavelength], aliases: [PL peak]}
+  - {key: emission_wavelength, name: Emission wavelength, kind: optical, units: [nm, µm], conditions: [method], aliases: []}
+  - {key: refractive_index, name: Refractive index, kind: optical, units: [dimensionless], conditions: [wavelength], aliases: []}
+  - {key: dielectric_constant, name: Dielectric constant, kind: electronic, units: [dimensionless], conditions: [frequency], aliases: []}
+  - {key: crystallite_size, name: Crystallite size, kind: structure, units: [nm], conditions: [method], aliases: []}
+  - {key: film_thickness, name: Film thickness, kind: process, units: [nm, µm, mm], conditions: [sample_label], aliases: []}
+  - {key: dopant_atomic_fraction, name: Nominal dopant atomic fraction, kind: process, units: ['%', at.%], conditions: [dopant, sample_label], aliases: []}
+  - {key: growth_temperature, name: Growth temperature, kind: process, units: [C, K], conditions: [sample_label], aliases: []}
+  - {key: substrate_temperature, name: Substrate temperature, kind: process, units: [C, K], conditions: [sample_label], aliases: []}
+  - {key: annealing_temperature, name: Annealing temperature, kind: process, units: [C, K], conditions: [sample_label], aliases: []}
+  - {key: annealing_time, name: Annealing time, kind: process, units: [s, min, h], conditions: [sample_label], aliases: []}
+  - {key: tempering_temperature, name: Tempering temperature, kind: process, units: [C, K], conditions: [sample_label], aliases: []}
+  - {key: tempering_time, name: Tempering time, kind: process, units: [s, min, h], conditions: [sample_label], aliases: []}
 benchmarks:
-- id: semiconductors.band_gap_prediction
-  name: Band gap prediction
-  target: band_gap
-  group_by:
-  - material
-- id: semiconductors.mobility_prediction
-  name: Mobility prediction
-  target: electron_mobility
-  group_by:
-  - material
-  - temperature
-- id: semiconductors.defect_formation_prediction
-  name: Defect formation prediction
-  target: defect_formation_energy
-  group_by:
-  - material
-  - defect
-graph_relations:
-- derived_from
-- processed_by
-- tested_in
-- calculated_for
-- has_property
-- compared_with
-- reported_by
+  - {id: semiconductors.band_gap_prediction, name: Source-method-specific band gap prediction, target: optical_band_gap, group_by: [material, specimen, method, substrate]}
+  - {id: semiconductors.mobility_prediction, name: Specimen-linked mobility prediction, target: hall_mobility, group_by: [material, specimen, measurement_temperature]}
+  - {id: semiconductors.process_transport, name: Process-conditioned transport, target: hall_coefficient, group_by: [material, specimen, processing_series]}
+graph_relations: [input_to, produces, processed_by, tested_in, calculated_for, layer_of, reported_by]

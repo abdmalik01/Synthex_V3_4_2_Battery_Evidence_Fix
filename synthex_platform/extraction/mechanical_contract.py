@@ -17,6 +17,8 @@ from typing import Any, Iterable, Literal
 from pydantic import BaseModel, ConfigDict, ValidationError
 
 from synthex_platform.core.models import Evidence, Measurement
+from synthex_platform.scientific_text import normalize_scientific_text
+from .mechanical_provider_normalization import is_missing_source_value
 
 
 class MechanicalScientificType(str, Enum):
@@ -61,6 +63,7 @@ class MechanicalAdmissionDecision:
 MECHANICAL_PROPERTIES: dict[str, MechanicalPropertySpec] = {
     # Tensile / direct mechanical response.
     "yield_strength": MechanicalPropertySpec("tensile", "stress"),
+    "proof_stress": MechanicalPropertySpec("tensile", "stress"),
     "ultimate_tensile_strength": MechanicalPropertySpec("tensile", "stress"),
     "fracture_strength": MechanicalPropertySpec("tensile", "stress"),
     "tensile_strength": MechanicalPropertySpec("tensile", "stress"),
@@ -101,6 +104,16 @@ MECHANICAL_PROPERTIES: dict[str, MechanicalPropertySpec] = {
     "j_integral": MechanicalPropertySpec("fracture", "energy_per_area"),
     "ctod": MechanicalPropertySpec("fracture", "length"),
     "impact_energy": MechanicalPropertySpec("fracture", "energy"),
+    # Computational elasticity. These may occur in experiments only when directly
+    # measured and in calculations only with model/simulation scientific types.
+    "elastic_constant_c11": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "elastic_constant_c12": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "elastic_constant_c13": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "elastic_constant_c33": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "elastic_constant_c44": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "elastic_constant_c66": MechanicalPropertySpec("elastic_constant", "modulus"),
+    "bulk_modulus": MechanicalPropertySpec("elastic_modulus", "modulus"),
+    "shear_modulus": MechanicalPropertySpec("elastic_modulus", "modulus"),
 }
 
 
@@ -112,7 +125,7 @@ _ALLOWED_UNITS: dict[str, frozenset[str]] = {
     "force": frozenset({"n", "kn", "mn"}),
     "time": frozenset({"s", "sec", "min", "h", "hr", "day", "days"}),
     "rate": frozenset({"s^-1", "1/s", "s-1", "h^-1", "1/h", "h-1"}),
-    "frequency": frozenset({"hz", "1/s", "s^-1"}),
+    "frequency": frozenset({"hz", "1/s", "s^-1", "rpm"}),
     "cycles": frozenset({"", "cycle", "cycles", "count", "dimensionless"}),
     "length_per_cycle": frozenset({"m/cycle", "mm/cycle", "um/cycle", "µm/cycle"}),
     "fracture_toughness": frozenset({
@@ -141,10 +154,29 @@ def _numeric(value: Any) -> bool:
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
+_NUMBER = re.compile(r"(?<![\w.])[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?")
+_GROUPED_NUMBER = re.compile(r"(?<!\d)\d{1,3}(?:,\d{3})+(?!\d)")
+_SCIENTIFIC_PRODUCT = re.compile(
+    r"(?<![\w.])([-+]?(?:\d+(?:\.\d*)?|\.\d+))\s*[×x*]\s*10\s*\^?\s*\{?\s*([-+]?\d+)\s*\}?"
+)
+
+
+def _reported_numbers(raw_value: str) -> list[float]:
+    """Parse printed scalars without converting units or deriving other metrics."""
+    text = normalize_scientific_text(raw_value, casefold=False)
+    text = _GROUPED_NUMBER.sub(lambda match: match.group().replace(",", ""), text)
+    numbers = [float(match.group()) for match in _NUMBER.finditer(text)]
+    numbers.extend(
+        float(match.group(1)) * 10 ** int(match.group(2))
+        for match in _SCIENTIFIC_PRODUCT.finditer(text)
+    )
+    return numbers
+
+
 def _evidence_supports_value(evidence: Iterable[Evidence], raw_value: str) -> bool:
     needle = re.sub(r"\s+", " ", raw_value).strip().casefold()
     for item in evidence:
-        if item.verbatim_match is False:
+        if item.verbatim_match is not True:
             continue
         snippet = re.sub(r"\s+", " ", item.text_snippet or "").strip().casefold()
         if needle and needle in snippet:
@@ -169,12 +201,14 @@ def mechanical_admission_decision(
         return MechanicalAdmissionDecision(False, "non_numeric_value")
     if not measurement.raw_value:
         return MechanicalAdmissionDecision(False, "missing_raw_value")
+    if is_missing_source_value(measurement.raw_value) or is_missing_source_value(measurement.value):
+        return MechanicalAdmissionDecision(False, "explicit_missing_source_value")
 
-    raw_numbers = re.findall(r"(?<![\w.])[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?", measurement.raw_value)
+    raw_numbers = _reported_numbers(measurement.raw_value)
     if not raw_numbers:
         return MechanicalAdmissionDecision(False, "raw_value_not_numeric")
     if measurement.value is not None and _numeric(measurement.value):
-        if not any(math.isclose(float(number), float(measurement.value), rel_tol=1e-8, abs_tol=1e-10) for number in raw_numbers):
+        if not any(math.isclose(number, float(measurement.value), rel_tol=1e-8, abs_tol=1e-20) for number in raw_numbers):
             return MechanicalAdmissionDecision(False, "parsed_value_mismatch")
 
     provided_units = [

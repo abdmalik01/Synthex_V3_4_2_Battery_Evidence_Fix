@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+from contextvars import ContextVar
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -13,11 +14,15 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 
+# Job-scoped observer only. Standalone discovery retains its existing behavior.
+search_action_observer: ContextVar[Any | None] = ContextVar("search_action_observer", default=None)
+
+
 @dataclass
 class SerperResponse:
     query: str
     data: dict[str, Any]
-    cache_hit: bool
+    cache_hit: bool | None
     network_query_number: int | None = None
 
 
@@ -73,12 +78,24 @@ class SerperClient:
         if not query:
             raise ValueError("Serper query cannot be empty.")
         num = max(1, min(int(num), 10))
-        cache_path = self.cache_dir / f"{self._cache_key(query, num)}.json"
+        request_hash = self._cache_key(query, num)
+        cache_path = self.cache_dir / f"{request_hash}.json"
+        observer = search_action_observer.get()
+        if observer is not None:
+            replay = observer.replay(request_hash=request_hash)
+            if replay is not None:
+                payload, original_cache_hit = replay
+                return SerperResponse(query=query, data=json.loads(payload.decode("utf-8")),
+                                      cache_hit=original_cache_hit)
 
         if use_cache and cache_path.exists():
+            payload = cache_path.read_bytes()
+            if observer is not None:
+                action_id = observer.before(request_hash=request_hash)
+                observer.succeeded(action_id, payload, cache_hit=True)
             return SerperResponse(
                 query=query,
-                data=json.loads(cache_path.read_text(encoding="utf-8")),
+                data=json.loads(payload.decode("utf-8")),
                 cache_hit=True,
             )
 
@@ -92,14 +109,24 @@ class SerperClient:
                 "Increase SERPER_QUERY_BUDGET only if your actual Serper plan permits it."
             )
 
+        action_id = observer.before(request_hash=request_hash) if observer is not None else None
         response = requests.post(
             self.endpoint,
             headers={"X-API-KEY": self.api_key, "Content-Type": "application/json"},
             json={"q": query, "num": num},
             timeout=self.timeout,
         )
-        response.raise_for_status()
-        data = response.json()
+        try:
+            response.raise_for_status()
+        except requests.HTTPError as exc:
+            if observer is not None:
+                observer.failed(action_id, exc)
+            raise
+        # Persist the exact HTTP body before JSON decoding or enrichment.
+        payload = response.content
+        if observer is not None:
+            observer.succeeded(action_id, payload, cache_hit=False)
+        data = json.loads(payload.decode("utf-8"))
         cache_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
         stats["network_queries"] += 1
         self._write_stats(stats)

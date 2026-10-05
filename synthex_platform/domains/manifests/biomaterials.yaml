@@ -3,6 +3,28 @@ name: Biomaterials
 version: 1.0.0
 description: Material composition, fabrication, biological assay conditions, mechanical
   properties and biocompatibility.
+scientific_entities:
+- material_formulation
+- fabrication_process
+- scaffold_or_hydrogel_specimen
+- biological_system
+- assay_experiment
+- measured_outcome
+- separate_computational_calculation
+v1_scope_exclusions:
+- drug_delivery_release_kinetics
+- figure_only_numeric_interpolation
+- inferred_bactericidal_classification
+scientific_contract:
+- A material formulation, fabrication process, and scaffold or hydrogel specimen are separate entities.
+- Link every result to exactly one specimen and its material formulation.
+- Retain cell line, assay identity, and exposure time for cell outcomes.
+- Retain organism and strain for antimicrobial outcomes; never invent an unreported incubation time.
+- Cell viability, proliferation, cytotoxicity, and metabolic activity are distinct endpoints.
+- Mass loss, degradation rate, swelling ratio, and water uptake are distinct endpoints.
+- Missing table cells are null, not zero; graph-only points are not exact values.
+- A computed prediction is a calculation, never an experimental biological assay.
+- Preserve FDM printing speed, nozzle and bed temperatures, nozzle diameter, layer height, and infill density as process parameters, not specimen results.
 recommended_sections:
 - materials
 - fabrication
@@ -40,12 +62,12 @@ properties:
   - cell_line
   - time
   aliases: []
-- key: proliferation
-  name: Cell proliferation
+- key: cell_proliferation_ratio
+  name: Cell proliferation ratio
   kind: biological
   units:
   - fold
-  - '%'
+  - '1'
   conditions:
   - cell_line
   - time
@@ -102,6 +124,186 @@ properties:
   units:
   - degree
   conditions: []
+  aliases: []
+- key: cytotoxicity
+  name: Cytotoxicity
+  kind: biological
+  units: ['%']
+  conditions: [cell_line, assay, exposure_time, specimen]
+  aliases: []
+- key: live_dead_fraction
+  name: Live/dead fraction
+  kind: biological
+  units: ['%']
+  conditions: [cell_line, assay, exposure_time, specimen]
+  aliases: []
+- key: platelet_adhesion
+  name: Platelet adhesion
+  kind: biological
+  units: [cells/cm2, '%']
+  conditions: [blood_source, assay, exposure_time, specimen]
+  aliases: []
+- key: alp_activity
+  name: Alkaline phosphatase activity
+  kind: biological
+  units: [U/L, U/mg, nmol/min/mg]
+  conditions: [cell_line, assay, exposure_time, specimen]
+  aliases: []
+- key: mineralization
+  name: Mineralization
+  kind: biological
+  units: ['%', mg/cm2]
+  conditions: [cell_line, assay, exposure_time, specimen]
+  aliases: []
+- key: apatite_formation
+  name: Apatite formation
+  kind: biological
+  units: ['%']
+  conditions: [medium, exposure_time, specimen]
+  aliases: []
+- key: metabolic_activity
+  name: Metabolic activity
+  kind: biological
+  units: ['%', fold, '1']
+  conditions: [cell_line, assay, exposure_time, specimen]
+  aliases: []
+- key: inhibition_zone
+  name: Antimicrobial inhibition-zone diameter
+  kind: biological
+  units: [mm]
+  conditions: [organism, strain, assay, dilution, specimen]
+  aliases: []
+- key: bacterial_viability
+  name: Bacterial viability
+  kind: biological
+  units: ['%']
+  conditions: [organism, strain, assay, exposure_time, specimen]
+  aliases: []
+- key: cfu_reduction
+  name: Colony-forming-unit reduction
+  kind: biological
+  units: ['%']
+  conditions: [organism, strain, assay, exposure_time, specimen]
+  aliases: []
+- key: log_reduction
+  name: Microbial log reduction
+  kind: biological
+  units: [log10]
+  conditions: [organism, strain, assay, exposure_time, specimen]
+  aliases: []
+- key: mass_loss
+  name: Cumulative mass loss
+  kind: performance
+  units: ['%']
+  conditions: [medium, exposure_time, temperature, specimen]
+  aliases: []
+- key: water_uptake
+  name: Water uptake
+  kind: performance
+  units: ['%']
+  conditions: [medium, exposure_time, specimen]
+  aliases: []
+- key: volume_porosity
+  name: Volume porosity
+  kind: structure
+  units: ['%']
+  conditions: [specimen]
+  aliases: []
+- key: porosity
+  name: Porosity
+  kind: structure
+  units: ['%']
+  conditions: [specimen, measurement_method]
+  aliases: []
+- key: pore_size
+  name: Pore size
+  kind: structure
+  units: [um, mm]
+  conditions: [specimen]
+  aliases: []
+- key: pore_diameter
+  name: Pore diameter
+  kind: structure
+  units: [um, mm]
+  conditions: [specimen]
+  aliases: []
+- key: fiber_diameter
+  name: Fiber diameter
+  kind: structure
+  units: [um, nm]
+  conditions: [specimen]
+  aliases: []
+- key: deposited_layer_width
+  name: Deposited layer width
+  kind: structure
+  units: [um, mm]
+  conditions: [specimen, fabrication_process]
+  aliases: []
+- key: strut_diameter
+  name: Strut diameter
+  kind: structure
+  units: [um, mm]
+  conditions: [specimen]
+  aliases: []
+- key: compressive_yield_strength
+  name: Compressive yield strength
+  kind: mechanical
+  units: [MPa, kPa]
+  conditions: [specimen]
+  aliases: []
+- key: elastic_modulus
+  name: Elastic modulus
+  kind: mechanical
+  units: [MPa, kPa]
+  conditions: [specimen, test_method]
+  aliases: []
+- key: ultimate_compressive_strength
+  name: Ultimate compressive strength
+  kind: mechanical
+  units: [MPa, kPa]
+  conditions: [specimen]
+  aliases: []
+- key: surface_roughness
+  name: Surface roughness
+  kind: surface
+  units: [nm, um]
+  conditions: [specimen, method]
+  aliases: []
+- key: cold_crystallization_temperature
+  name: Cold crystallization temperature
+  kind: thermal
+  units: [C, K]
+  conditions: [filament_specimen, DSC]
+  aliases: []
+- key: melting_enthalpy
+  name: Melting enthalpy
+  kind: thermal
+  units: [J/g]
+  conditions: [filament_specimen, DSC]
+  aliases: []
+- key: crystallinity
+  name: Crystallinity
+  kind: thermal
+  units: ['%']
+  conditions: [filament_specimen, DSC]
+  aliases: []
+- key: viscosity
+  name: Hydrogel viscosity
+  kind: rheological
+  units: [Pa.s]
+  conditions: [hydrogel_specimen, shear_rate, temperature]
+  aliases: []
+- key: interaction_energy
+  name: Molecular-dynamics interaction energy
+  kind: computational
+  units: [kcal/mol]
+  conditions: [surface_model, biomolecule, solvent]
+  aliases: []
+- key: electrostatic_interaction_energy
+  name: Molecular-dynamics electrostatic interaction energy
+  kind: computational
+  units: [kcal/mol]
+  conditions: [surface_model, biomolecule, solvent]
   aliases: []
 benchmarks:
 - id: biomaterials.cell_viability_prediction
