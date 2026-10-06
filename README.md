@@ -5,12 +5,12 @@ pipeline, optional provider extraction, evidence checks, canonical archive, and
 durable jobs are separate concerns: a provider response is never automatically
 scientific truth. The legacy gas-sensing V2 workflow remains available.
 
-## Scope of this research-metadata branch
+## Scope of the public `main` branch
 
-`research-metadata-only` builds on the deployed application code and publishes
+The reviewed public `main` builds on the deployed application code and publishes
 benchmark scripts, scientific gold/locks, audit summaries, and tests. It adds
 **no third-party corpus PDFs, publisher source-data workbooks, or ZIP files**.
-Those source bytes remain local or at their publishers; this branch alone
+Those source bytes remain local or at their publishers; this checkout alone
 cannot reproduce source-byte checks. See `docs/REPRODUCIBILITY.md` and
 `docs/SOURCES_AND_LICENSES.md` before interpreting benchmark results. The
 `benchmark/omitted_binary_manifest.json` records the path, size, and SHA-256
@@ -28,7 +28,8 @@ of 55 omitted local source files without redistributing their bytes.
 
 For a public, signed-in single-server deployment, use
 [`docs/PUBLIC_DEPLOYMENT.md`](docs/PUBLIC_DEPLOYMENT.md). Do not publish the
-local research checkout or expose the FastAPI operator routes as a shortcut.
+local PDF-bearing research history or expose the FastAPI operator routes as a
+shortcut.
 
 No credential is needed for package imports, scientific lock checks, or offline
 audit inspection. Provider extraction and paper discovery require explicit

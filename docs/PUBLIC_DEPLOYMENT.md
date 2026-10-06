@@ -70,10 +70,11 @@ and PDFs/artifacts to private object storage with tenant-scoped access.
 
 ## Release boundary
 
-Deploy only the reviewed `deployment-code-only` branch. It carries the app
-runtime and deployment files but adds no benchmark corpus PDFs or third-party
-source-data files to Git history. The separate local scientific release
-candidate and development `main` contain research material requiring a
-file-level redistribution review before either branch is published. Do not
-deploy or push those branches as a shortcut, and do not copy benchmark files
-into the public data volume.
+Deploy the reviewed public `main` branch, starting at commit `878dc88`. It
+contains the app runtime, deployment files, and research scripts/metadata, but
+its new commits add no benchmark corpus PDFs or third-party source-data files.
+The separate local `unpublished-corpus-history` and `release-link-only-rc`
+branches contain publisher-formatted research material requiring a file-level
+redistribution review; do not deploy or push them as a shortcut. Do not copy
+benchmark files into the public data volume. Full source-byte benchmark replay
+still requires independently obtained files matching the committed hashes.

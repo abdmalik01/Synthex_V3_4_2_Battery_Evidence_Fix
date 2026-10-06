@@ -54,6 +54,6 @@ SHA-256 values; publisher links provide independent retrieval where known.
 The `license: CC BY 4.0` value in the historical TE-GOLD-A source lock should
 be read as article metadata, **not** a redistribution grant for the separate
 supplement. The article's CC BY notice is not treated as permission to
-redistribute that supplement. The local development `main` history still
-contains its PDF and must **not** be pushed as-is. Public retrieval is not
-itself a redistribution license.
+redistribute that supplement. The preserved local-only
+`unpublished-corpus-history` branch still contains its PDF and must **not** be
+pushed as-is. Public retrieval is not itself a redistribution license.
